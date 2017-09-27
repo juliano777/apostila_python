@@ -1,0 +1,149 @@
+Sequências
+
+	Com sequências podemos fazer iteração, indexação, fatiamento (slice) e operações de list comprehension.
+
+Mútável:
+
+lista -> list -> [0,'string',7.0,1000L]
+
+Imutáveis:
+
+string -> str -> 'texto'
+tupla -> tuple -> (0,'string',7.0,1000L) # Funciona de forma idêntica à lista, porém, seus itens são imutáveis, consome menos recursos.
+
+
+Operações com Sequências
+
+- Índices
+
+	Toda sequência, seguindo a mesma idéia de vetores de outras linguagens, como C, por exemplo, começa com o índice 0 (zero).
+	Para se obter um índice, fazemos da seguinte forma:
+
+	sequencia[indice]  
+
+
+'Python'[1]
+'y'
+
+['foo', 'bar', 2.7, 80,  2 + 7j][0]
+'foo'
+
+('Python', 'C', 'C++', 2.7, 3.4)[3]
+2.7
+	
+
+- Iteráveis 
+
+	Sequências nos permite também fazer iteração sobre cada elemento.
+
+regiao_sudeste = ('SP', 'MG', 'ES', 'RJ')
+
+for i in regiao_sudeste:
+    print(i)
+
+SP
+MG
+ES
+RJ
+
+for i in 'Python':
+    print(i)
+
+P
+y
+t
+h
+o
+n
+
+for i in xrange(21):
+    if (i % 5 == 0):
+        print(i)
+
+0
+5
+10
+15
+20
+
+
+- Fatiamento / Slicing 
+
+Corte de sequência 
+
+[inicio:fim - 1:incremento]
+
+
+
+
+'Python Language'[::]
+'Python Language'
+
+'Python Language'[-1::]
+'e'
+
+'Python Language'[-3::]
+   'age'
+
+(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)[::4]
+(0, 4, 8)
+
+'Python Language'[::-1]
+'egaugnaL nohtyP'
+
+'Python Language'[0:]
+'Python Language'
+
+'Python Language'[0:1]
+'P'
+
+'Python Language'[0:6]
+'Python'
+
+'Python Language'[7:]
+'Language'
+
+linux_distros = (
+'Debian',
+'RedHat',
+'Slackware',
+'Ubuntu',
+'CentOS',
+'SuSE',
+)
+
+linux_distros[0:3]
+('Debian', 'RedHat', 'Slackware')
+
+List Comprehension
+
+	Ou em português, "Compreensão de Lista", fornece uma maneira concisa para criar listas.
+	Usos comuns são para fazer novas listas onde cada elemento é o resultado de algumas operações aplicadas para cada membro de outra sequência ou iterável, criar uma subsequência desses elementos que satisfaçam uma certa condição.
+	Sempre retornará uma lista.
+
+
+[i for i in range(21)]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+[i / 2.0 for i in xrange(10)]
+[0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
+
+[i for i in xrange(21) if (i % 5 == 0)]
+[0, 5, 10, 15, 20]
+
+
+
+
+
+.3.8 Dicionários
+
+dicionário -> dict -> {'chave1':'valor1',2:870,'chave3':1907,4:'valor4'}
+
+.3.9 Conjuntos
+
+conjunto -> set -> set([7, 7, 8, 9])
+conjunto congelado -> frozenset -> frozenset([7, 7, 8, 9])
+
+
+(03 - 18:50)
+

@@ -1,0 +1,175 @@
+Recursividade
+
+	De uma forma geral, recursividade é uma palavra cujo significado é a capacidade de um objeto fazer uma chamada a si mesmo em profundidade.
+	Como exemplo podemos citar aqui um espelho de frente para outro.
+	A palavra recursividade tem como origem o latim, do verbo "recurrere", cujo significado é algo como correr de volta. Essa característica de correr de volta é algo similar a um bumerangue, em que, obedecendo uma condição, ao chegar no fundo, esse "bumerangue" volta com o resultado desejado.
+	Em linguagem de programação, recursividade é a capacidade de uma função fazer uma chamada a si mesma dentro de sua definição. Uma função recursiva precisa de uma condição de término para não rodar em um loop infinito, o que causaria efeitos indesejados.
+
+
+
+
+# _*_ coding: utf-8 _*_
+
+
+
+# Fatoração
+
+
+def fatorial(n):
+    if (n == 1) or (n == 0):
+        return 1
+    else:
+        return n * fatorial(n - 1)
+
+
+'''
+
+Ida:
+
+n = 5 -> 5 * fatorial(4)
+
+n = 4 -> 4 * fatorial(3)
+
+n = 3 -> 3 * fatorial(2)
+
+n = 2 -> 2 * fatorial(1)
+
+
+Volta:
+
+fatorial(1) = 1
+
+fatorial(2) = 2 * 1 = 2
+
+fatorial(3) = 3 * 2 = 6
+
+fatorial(4) = 4 * 6 = 24
+
+fatorial(5) = 5 * 24 = 120
+
+
+'''
+
+
+print(fatorial(5))
+
+
+# Fibonacci
+
+
+def fibo(n):
+    if (n < 2):
+        return n
+    else:
+        return fibo(n - 1) + fibo(n - 2)
+
+
+'''
+
+Sequência de Fibonacci: | 0| 1| 1| 2| 3| 5| 8| 13| 21| 34| 55| ...
+Elemento (n):           | 0| 1| 2| 3| 4| 5| 6| 7 | 8 | 9 | 10| ...
+
+
+Ida:
+
+n = 7 -> fib(6) + fib(5)
+n = 6 -> fib(5) + fib(4)
+n = 5 -> fib(4) + fib(3)
+n = 4 -> fib(3) + fib(2)
+n = 3 -> fib(2) + fib(1)
+n = 2 -> fib(1) + fib(0)
+n = 1 -> fib(0)
+
+
+Volta:
+
+fib(0) = 0
+
+fib
+
+'''
+
+
+print(fib(7))
+
+
+Memoização
+
+	É uma técnica de otimização usada principalmente para acelerar aplicativos pelo armazenamento de resultados de chamadas de função que têm custo alto de processamento e retornando o resultado do cache quando as mesmas entradas acontecerem novamente.
+
+
+Para testarmos vamos criar o arquivo memoizacao.py com o seguinte conteúdo:
+
+#_*_ encoding: utf-8 _*_
+
+import time
+
+''' Fibonacci function '''
+def fibo(n):
+    if (n < 2): return n
+    else:
+        return fibo(n - 1) + fibo(n - 2)
+
+
+''' Memoize function '''
+def memoize(f):
+    # dictionary (cache)
+    mem = {}
+
+    ''' Helper function '''
+    def memoizer(*param):
+        key = repr(param)
+        if not key in mem:
+            mem[key] = f(*param)
+        return mem[key]
+
+    return memoizer
+
+# Start time
+t1 = time.time()
+
+# Loop 
+for i in xrange(35):
+    print('fib(%s) = %s' % (i, fibo(i)))
+
+# End time
+t2 = time.time()
+
+# Total time
+print('Tempo de execução: %.3fs' % (t2 - t1))
+
+# Take a pause
+raw_input('Pressione <ENTER> para continuar\n')
+
+# Memoization of fibo
+fibo = memoize(fibo)
+
+# Start time
+t1 = time.time()
+
+# loop after memoization
+for i in xrange(40):
+    print('fib(%s) = %s' % (i, fibo(i)))
+
+# End time
+t2 = time.time()
+
+# Total time
+print('Tempo de execução: %.3fs' % (t2 - t1))
+
+
+
+Execute da seguinte forma: 
+
+$ python memoizacao.py
+
+
+Antes da memoização:
+
+Tempo de execução: 5.107s
+
+Depois da memoização:
+
+Tempo de execução: 0.001s
+
+Podemos ver na prática como é eficiente e como agiliza na execução.

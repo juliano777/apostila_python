@@ -1,0 +1,36 @@
+assert
+
+	O comando assert auxilia a encontrar bugs.
+	Afirmações (assertions) é uma forma sistemática para verificar se o estado interno de uma aplicação  é como esperado pelo desenvolvedor, e então achar bugs.
+	Simplificando, uma afirmação é algo como "raise-if-not comando". Ou seja, se o comando retornar falso levante (raise) uma exceção.
+
+
+
+Teste para valor verdadeiro:
+
+>>> assert True, 'Se for falso'
+
+
+
+Teste para valor falso:
+
+>>> assert False, 'Se for falso'
+
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    assert False, 'Se for falso'
+AssertionError: Se for falso
+
+
+
+Testando se x é inteiro:
+
+>>> x = 10
+>>> assert type(x)  is int, 'x não é um inteiro'
+>>> x = '10'
+>>> assert type(x)  is int, 'x não é um inteiro'
+
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    assert type(x)  is int, 'x não é um inteiro'
+AssertionError: x não é um inteiro

@@ -1,0 +1,122 @@
+Booleanos
+
+Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. The following values are considered false:
+
+	Qualquer objeto pode ser testado como um valor verdadeiro, para uso como condição em um if ou um while ou como um operando de operações "booleanas". Os seguintes valores são considerados como False: 
+
+	False, 0, 0L, 0.0, 0j, [], (), {}, set([]), None, "" ou ''.
+
+	Instâncias de classes definidas por usuários, se a classe define um método __nonzero__() ou __len__(), quando este método retornar o inteiro zero ou um valor booleano False.
+	Todos outros valores são considerados verdadeiros, então objetos de muitos tipos são considerados como True.
+
+b = bool(1)
+
+b
+True
+
+b = bool(0)
+
+b
+False
+
+
+
+True | False
+True
+
+True & False
+False
+
+not True
+False
+
+not False
+True
+
+class Foo(object):
+    def __nonzero__(self):
+        return True
+
+class Bar(object):
+    def __nonzero__(self):
+        return False
+     
+
+foo = Foo()
+
+bar = Bar()
+
+
+bool(foo)
+True
+
+bool(bar)
+False
+
+bool(foo) & (not bool(bar))
+True
+
+bool(foo) & bool(bar)
+False
+
+class Spam(object):
+    def __len__(self):
+        return 0
+     
+
+spam = Spam()
+
+bool(spam)
+False
+
+class Spam(object):
+    def __len__(self):
+        return 7
+     
+
+spam = Spam()
+
+bool(spam)
+True
+
+class Spam(object):
+    def __nonzero__(self):
+        return True
+
+    def __len__(self):
+        return 0
+
+O método __nonzero__ retorna um valor verdadeiro e o método __len__ um falso.
+Com ambos declarados na mesma classe, um objeto dela o que retornará?
+
+spam = Spam()
+
+bool(spam)
+True
+
+O retorno foi verdadeiro.
+Será que isso é por causa do retorno do primeiro método ou foi feita uma lógica "OR"?
+Vamos então inverter a ordem dos métodos:
+
+class Spam(object):
+    def __len__(self):
+        return 0
+
+    def __nonzero__(self):
+        return True
+
+spam = Spam()
+
+bool(spam)
+False
+
+Conclusão: o que prevalece é o retorno do método declarado primeiro, ou __nonzero__ ou __len__.
+
+
+
+
+
+
+
+
+

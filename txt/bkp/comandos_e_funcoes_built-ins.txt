@@ -1,0 +1,1291 @@
+Comandos e Funções Importantes
+
+	Neste capítulo são abordados comandos e funções interessantes e / ou imprescindíveis para a linguagem.
+
+
+==============================================================================
+print
+
+Python2:
+
+print 'foo'
+foo
+
+Python3:
+
+print('foo')
+
+print('foo', 'bar', 'baz')
+foo bar baz
+
+print('%s %s %s' % ('foo', 'bar', 'baz'))
+foo bar baz
+
+help(print)
+
+Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+
+
+Tradução:
+
+Ajuda da função built-in print no módulo builtins:
+
+print(...)
+    print(valor, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+
+   Imprime os valores para um stream, ou para sys.stdout (saída padrão: normalmente a tela) por padrão.
+   Argumentos opcionais em palavras-chave:
+   file:    um objeto como um arquivo (stream); o padrão é sys.stdout
+   sep:    uma string inserida entre valores, por padrão é um espaço.     
+   end:    uma string inserida após o último valor, por padrão é uma novalinha ('\n').
+   flush:    se força a escrita (flush) do stream.
+
+
+print('foo', 'bar', 'baz', sep = '\n')
+foo
+bar
+baz
+
+
+	Mais detalhes sobre streams são vistos em open/file.
+
+==============================================================================
+
+range() e xrange()
+
+	São duas funções bem parecidas entre si.
+	A primeira, range, gera uma lista, que por omissão inicia por 0 (zero).
+	range() retorna uma lista.
+	xrange() retorna um iterador. 	
+
+range(10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+range(0, 10)
+Out[70]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+range(0, 10, 3)
+[0, 3, 6, 9]
+
+
+- range vs xrange
+
+	Há uma outra função muito parecida com range cujo nome é xrange.
+	A 
+
+
+touch range.py 
+
+chmod +x range.py 
+
+
+
+#!/usr/bin/env python
+#_*_ coding: utf-8 _*_
+
+import sys
+
+func = range
+
+# Tratamento de Exceção para o caso de não ter parâmetros
+try:
+    arg = sys.argv[1]
+
+    if arg == 'x':
+        func = xrange
+except:
+    pass
+
+print('Função escolhida: %s' % func.__name__)
+
+
+f = open('/dev/null', 'w')
+
+for i in func(30000000):
+    print >> f, i
+f.close()
+
+
+
+
+#!/usr/bin/env python3
+#_*_ coding: utf-8 _*_
+
+import sys
+
+func = range
+
+# Tratamento de Exceção para o caso de não ter parâmetros
+try:
+    arg = sys.argv[1]
+
+    if arg == 'x':
+        func = xrange
+except:
+    pass
+
+print('Função escolhida: %s' % func.__name__)
+
+
+f = open('/dev/null', 'w')
+
+for i in func(30000000):
+    print(i, file = f)
+f.close()
+
+
+
+
+time ./range.py 
+Função escolhida: range
+
+real	0m10.380s
+real	0m12.760s
+real	0m12.624s
+
+time ./range.py x
+Função escolhida: xrange
+
+real	0m8.853s
+real	0m10.289s
+real	0m8.995s
+
+python -m timeit 'for i in range(30000000): pass'
+
+10 loops, best of 3: 1.7 sec per loop
+
+python -m timeit 'for i in xrange(30000000): pass'
+
+10 loops, best of 3: 448 msec per loop
+
+
+	Qual devo usar?
+	Quando fazemos range(1000000), a função range cria uma lista com 1000000 (um milhão)
+de elementos. Isso faz com que o início seja demorado, além de utilizar muito mais memória.
+Enquanto que xrange gera um iterador, cujos elementos são buscados conforme a demanda.
+	Usamos o xrange para loops e quando precisamos gerar uma lista utilizamos range.
+
+
+==============================================================================
+
+if / elif / else
+
+	O comando if, que inglês significa "se" indica uma condição.
+
+
+x = 7
+
+In [2]: y = 5
+
+In [3]: if x > y: 
+    print('X é maior')
+    
+X é maior
+
+if x < y: 
+    print('X é maior')
+
+
+foo = True
+
+if foo:
+    print('foo é verdadeiro!')
+    
+foo é verdadeiro!
+
+
+if not bar:
+    print('bar é falso!')
+    
+bar é falso!
+
+
+
+texto = 'Python e PostgreSQL: uma dupla dinâmica!'
+
+if texto:
+    print('A string NÃO é vazia!')
+
+A string NÃO é vazia!
+
+
+texto = ''
+
+if not texto:
+    print('A string é vazia!')
+
+A string é vazia!
+
+
+x = 1
+
+y = 2
+
+
+
+if x > y:
+    print('X é maior')
+else:    
+    print('Y é maior')
+    
+Y é maior
+
+y = 1
+
+x = 1
+
+if x > y:
+    print('X é maior')
+elif x < y:    
+    print('Y é maior')
+else:    
+    print('Valores iguais')
+    
+Valores iguais
+
+
+
+
+x = 10
+
+if (x > 5):
+    y = 3
+else:
+    y = 0
+
+
+y = (50 if (x > 5) else 40)
+
+print(y)
+50
+
+
+
+
+
+
+==============================================================================
+
+while
+
+Executa em laço (loop) enquanto a condição for verdadeira.
+
+i = 0
+
+while i < 5:
+    print(i)
+    i += 1
+    
+0
+1
+2
+3
+4
+
+i = 0
+
+
+O else no loop while
+
+	Opcionalmente, pode-se adicionar um else ao while em Python.
+	A idéia é que se caso o loop seja executado sem interrupção, um break, por exemplo, o que estiver dentro do bloco else será executado.
+
+while i < 5:
+    print(i)
+    i += 1
+else:   
+    print('Fim')
+
+0
+1
+2
+3
+4
+Fim
+
+i = 0
+
+while i <= 10:
+    if i == 5: break       
+    print(i)
+    i += 1
+else:   
+    print('Fim')
+
+0
+1
+2
+3
+4
+
+i = 0
+
+while i <= 10:
+    if (i % 2 == 0): 
+        i += 1
+        continue
+    print(i)
+    i += 1        
+else:   
+    print('Fim')
+
+1
+3
+5
+7
+9
+Fim
+
+Loop Infinito
+
+while True:
+    print('x')
+
+x
+x
+x
+. . .
+
+==============================================================================
+
+for
+
+for i in xrange(5):
+    print(i)
+    
+0
+1
+2
+3
+4
+
+lor = ('Gandalf', 'Bilbo', 'Frodo', 'Sauron', 'Aragorn', 'Legolas')
+
+for i in lor:
+    print(i)
+    
+Gandalf
+Bilbo
+Frodo
+Sauron
+Aragorn
+Legolas
+
+
+for i, personagem in enumerate(lor):
+    print('%d - %s' % (i, personagem))
+    
+0 - Gandalf
+1 - Bilbo
+2 - Frodo
+3 - Sauron
+4 - Aragorn
+5 - Legolas
+
+list(enumerate(lor))
+[(0, 'Gandalf'), (1, 'Bilbo'), (2, 'Frodo'), (3, 'Sauron'), (4, 'Aragorn'), (5, 'Legolas')]
+
+
+dados =  [('Nome', 'Chiquinho'), ('Sobrenome', 'da Silva'), ('Idade', 50)]
+
+for k, v in dados:
+    print('%s: %s' % (k, v))
+
+Nome: Chiquinho
+Sobrenome: da Silva
+Idade: 50
+
+
+dados = {
+    'Nome': 'Chiquinho',
+    'Sobrenome': 'da Silva',
+    'Idade': 50
+}
+
+for k, v in dados.items():
+    print('%s: %s' % (k, v))
+
+Sobrenome: da Silva
+Idade: 50
+Nome: Chiquinho
+
+
+
+for i in xrange(5):
+    print(i)
+else:
+    print('Fim')
+    
+0
+1
+2
+3
+4
+Fim
+
+for i in xrange(10):
+    if i == 6:
+        break
+    print(i)
+else:
+    print('Fim')
+
+0
+1
+2
+3
+4
+5
+
+
+for i in xrange(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+else:
+    print('Fim')
+
+1
+3
+5
+7
+9
+Fim
+
+==============================================================================
+
+filter
+
+def impar(x):
+    return x % 2 != 0
+ 
+
+impar(7)
+True
+
+impar(6)
+False
+
+filter(impar, range(0, 20))
+[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+
+==============================================================================
+
+map 
+
+map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
+[4, 3, 3, 4, 6]
+
+map(type, ['foo', 1.4, 2 + 5j, 1000])
+[str, float, complex, int]
+
+map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
+[9, 7, 78125, 1000]
+
+==============================================================================
+
+reduce
+
+reduce(int.__add__, (2, 1, 4, 3))
+10
+
+
+
+
+==============================================================================
+
+open / file
+
+
+	É a forma nativa de Python para manipular arquivos (leitura e escrita).
+	A partir da versão 3 de Python use preferencialmente open, pois file foi removido.
+	Um arquivo é iterável, cujas iterações são por linha.
+
+Python 2:
+
+file(name[, mode[, buffering]])
+
+name = string que contém o nome do arquivo ou o caminho completo ou relativo para ele.
+mode = como o arquivo vai ser operado.
+buffering = 0 sem buffer, 1 utiliza buffer, valores maiores do que 1 indicam o tamanho em bytes.
+
+mode:
+
+'r' -> Leitura (padrão);
+'w' -> Escrita (novo arquivo, ou se o mesmo existir será truncado);
+'b' -> Modo binário;
+'a' -> Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente).
+
+
+
+(print)
+
+
+f = file('/tmp/foo.txt', 'w+')
+
+type(f)
+file
+
+print >> f, 'Teste de escrita em arquivo'
+
+print >> f, '' # Linha em branco
+
+print >> f, 'Uma linha qualquer'
+
+f.close()
+
+
+Python3:
+
+
+open(file, mode='r', buffering=-1, encoding=None,
+         errors=None, newline=None, closefd=True, opener=None) 
+
+
+Modos
+
+--------- ---------------------------------------------------------------
+'r'       Leitura (padrão);
+'w'       Escrita (novo arquivo, ou se o mesmo existir será truncado);
+'x'       Cria um novo arquivo e o abre para escrita;
+'a'       Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente);
+'b'       Modo binário;
+'t'       Modo de texto (padrão);
+'+'       Abre um arquivo em disco para a atualização (leitura e escrita).
+
+
+
+
+f = open('/tmp/foo.txt', 'w+')
+
+type(f)
+_io.TextIOWrapper
+
+print('Teste de escrita em arquivo', file = f)
+
+print(' ', file = f)
+
+print('Uma linha qualquer', file = f)
+
+f.close()
+
+
+
+
+f = open('/tmp/foo.txt', 'r')
+
+for line in f:
+    print(line.strip('\n'))
+
+Teste de escrita em arquivo
+
+Uma linha qualquer
+
+f.close()
+
+
+
+
+$ cat << EOF > /tmp/linhas.txt
+linha_1
+linha_2
+linha_3
+EOF
+
+$ cat /tmp/linhas.txt
+
+linha_1
+linha_2
+linha_3
+
+f = open('/tmp/linhas.txt')
+
+
+f.readline()
+'linha_1\n'
+
+f.readline().split()
+['linha_2']
+
+f.readline().split()
+['linha_3']
+
+f.readline().split()
+[]
+
+
+f.close()
+
+f = open('/tmp/linhas.txt')
+
+f.readlines()
+['linha_1\n', 'linha_2\n', 'linha_3\n']
+
+f.close()
+
+
+
+
+#!/usr/bin/env python3
+#_*_ encoding: utf8 _*_
+
+import sys
+
+file_open = sys.argv[1]
+
+
+file_open = open(file_open, 'r')
+
+for i in file_open:
+    print(i.strip())
+
+file_open.close()
+
+
+$ chmod +x teste.py 
+
+$ ./teste.py linhas.txt 
+
+linha_1
+linha_2
+linha_3
+
+
+O Método seek
+
+$ cat << EOF > /tmp/cores.txt
+1 - Verde
+2 - Preto
+3 - Branco
+EOF
+
+f = open('/tmp/cores.txt', 'r')
+
+for i in f:
+    print(i.strip())
+
+1 - Verde
+2 - Preto
+3 - Branco
+
+for i in f:
+    print(i.strip())
+ 
+
+f.seek(0)
+
+
+
+for i in f:
+    print(i.strip())
+
+1 - Verde
+2 - Preto
+3 - Branco
+
+
+f.seek(1)
+
+
+
+
+for i in f:
+    print(i.strip())
+
+- Verde
+2 - Preto
+3 - Branco
+
+f.seek(0)
+0
+
+f.read(7)
+'1 - Ver'
+
+
+f.read(7)
+'de\n2 - '
+
+f.read(7)
+'Preto\n3'
+
+f.read(7)
+' - Bran'
+
+
+f.close()
+
+f.closed
+True
+
+f = open('/tmp/cores.txt', 'w')
+
+f.closed
+False
+
+f.close()
+
+$ cat /tmp/cores.txt
+
+f = open('/tmp/cores.txt', 'w')
+
+f.write('1 - Verde\n')
+
+
+f.close()
+
+$ cat /tmp/cores.txt 
+1 - Verde
+
+
+print(f.name)
+/tmp/cores.txt
+
+
+f = open('/tmp/cores.txt', 'a')
+
+f.close()
+
+
+$ cat /tmp/cores.txt 
+
+1 - Verde
+
+
+f = open('/tmp/cores.txt', 'a')
+
+f.write('2 - Preto\n')
+
+
+f.write('3 - Branco\n')
+
+
+f.flush()
+
+$ cat /tmp/cores.txt
+
+1 - Verde
+2 - Preto
+3 - Branco
+
+f.close()
+
+f = open('/tmp/cores.txt', 'r')
+
+f.tell()
+0
+
+f.read()
+'1 - Verde\n2 - Preto\n3 - Branco\n'
+
+f.tell()
+31
+
+f.seek(0)
+0
+
+f.tell()
+0
+
+f.read(7)
+'1 - Ver'
+
+f.tell()
+7
+
+
+f.close()
+
+
+f = open('/tmp/planetas.txt', 'w')
+
+planetas = ('Saturno\n', 'Urano\n', 'Netuno\n')
+
+f.writelines(planetas)
+
+f.flush()
+
+$ cat /tmp/planetas.txt
+
+Saturno
+Urano
+Netuno
+
+
+planetas = ('Marte\n', 'Vênus\n', 'Plutão\n', 'Júpiter\n')
+
+f.writelines(planetas)
+
+f.close()
+
+
+$ cat /tmp/planetas.txt
+
+Saturno
+Urano
+Netuno
+Marte
+Vênus
+Plutão
+Júpiter
+
+
+
+==============================================================================
+
+del
+
+	Remove referência de um objeto.
+	Também apaga elemento de uma coleção.    
+
+lista = ['a', 'b', 'c']
+del lista[1]
+print(lista)
+['a', 'c']
+
+sogra = 'Edelbarina'
+print(sogra)
+Edelbarina
+del sogra
+print(sogra)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sogra' is not defined
+
+================================================================================
+
+http://stackoverflow.com/questions/4728073/what-is-the-difference-between-an-expression-and-a-statement-in-python
+
+http://stackoverflow.com/questions/2220699/whats-the-difference-between-eval-exec-and-compile-in-python
+
+
+Read and execute code from an object, which can be a string or a code object.
+
+exec is not an expression: a statement in Python 2.x, and a function in Python 3.x. It compiles and immediately evaluates a statement or set of statement contained in a string. Example:
+
+exec('print(5)')           # prints 5.
+# exec 'print 5'     if you use Python 2.x, nor the exec neither the print is a function there
+exec('print(5)\nprint(6)')  # prints 5{newline}6.
+exec('if True: print(6)')  # prints 6.
+exec('5')                 # does nothing and returns nothing.
+exec('x = 7')
+x
+7
+
+
+questão de segurança!!!
+
+Evaluate the source in the context of globals and locals.
+The source may be a string representing a Python expression or a code object as returned by compile().
+
+eval is a built-in function (not a statement), which evaluates an expression and returns the value that expression produces. Example:
+
+x = eval('5')              # x <- 5
+x = eval('%d + 6' % x)     # x <- 11
+x = eval('abs(%d)' % -100) # x <- 100
+x = eval('x = 5')          # INVALID; assignment is not an expression.
+x = eval('if 1: x = 4')    # INVALID; if is a statement, not an expression.
+
+compile is a lower level version of exec and eval. It does not execute or evaluate your statements or expressions, but returns a code object that can do it. The modes are as follows:
+
+    compile(string, '', 'eval') returns the code object that would have been executed had you done eval(string). Note that you cannot use statements in this mode; only a (single) expression is valid.
+    compile(string, '', 'exec') returns the code object that would have been executed had you done exec(string). You can use any number of statements here.
+    compile(string, '', 'single') is like the exec mode, but it will ignore everything except for the first statement. Note that an if/else statement with its results is considered a single statement.
+
+http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html
+
+================================================================================
+
+ord e chr
+
+ord('\n')
+10
+
+ord('\r')
+13
+
+chr(13)
+'\r'
+
+chr(10)
+'\n'
+
+chr(97)
+'a'
+
+ord('a')
+97
+
+
+================================================================================
+
+dir(obj)
+
+	Lista atributos e métodos de um elemento.
+
+dir(iter)
+
+['__call__', '__class__', '__cmp__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
+
+
+================================================================================
+
+pass
+
+
+================================================================================
+
+continue
+
+================================================================================
+break
+
+================================================================================
+assert
+
+================================================================================
+
+abs(x)
+
+abs(3)
+3
+
+abs(-3)
+3
+================================================================================
+
+divmod(x, y)
+
+divmod(11, 4)
+(2, 3)
+
+11 / 4, 11 % 4
+(2, 3)
+================================================================================
+
+round(x [, p]) 
+
+round(3.333333)
+3.0
+
+round(3.333333, 3)
+3.333
+
+
+================================================================================
+
+callable(obj)
+
+callable('foo')
+False
+
+def f():
+    print('hello')
+
+callable(f)
+True
+
+
+================================================================================
+
+chr(x)
+
+chr(120)
+'x'
+
+chr(13)
+'\r'
+
+================================================================================
+
+unichr(x)
+
+unichr(2000)
+u'\u07d0'
+
+In [181]: print(unichr(2000))
+
+================================================================================
+ord(x)
+
+ord('x')
+120
+
+ߐ
+ord(u'\u07d0')
+2000
+
+================================================================================
+oct(x)
+
+oct(9)
+'011'
+
+================================================================================
+
+execfile(file)
+
+$ cat << EOF > /tmp/foo.py
+print('hello, world!')
+EOF
+
+
+$ python /tmp/foo.py 
+hello, world!
+
+execfile('/tmp/foo.py')
+hello, world!
+
+
+================================================================================
+hash
+
+hash('foo')
+-4177197833195190597
+
+x = 'foo'
+
+hash(x)
+-4177197833195190597
+
+hash('bar')
+327024216814240868
+
+hash([1, 2, 3])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-204-0b995650570c> in <module>()
+----> 1 hash([1, 2, 3])
+
+TypeError: unhashable type: 'list'
+
+
+
+================================================================================
+
+id(obj)
+
+foo = ('x', 'y')
+
+bar = ('x', 'y')
+
+foo == bar
+True
+
+id(foo)
+139716355830632
+
+id(bar)
+139716327551272
+
+foo is bar
+False
+
+baz = bar
+
+baz
+('x', 'y')
+
+baz == bar
+True
+
+baz is bar
+True
+
+id(baz)
+139716327551272
+
+
+================================================================================
+len(obj)
+
+foo = ('x', 'y', 'z', 123, 5.7)
+
+len(foo)
+5
+
+
+len('Heavy Metal')
+11
+
+================================================================================
+
+raw_input vs input
+
+foo = raw_input('Digite uma string qualquer... ')
+Digite uma string qualquer... bla bla bla
+
+type(foo)
+str
+
+print(foo)
+bla bla bla
+
+x = 5
+
+y = 2
+
+numero = input('Digite um numero: ')
+Digite um numero: 9
+
+print(numero)
+9
+
+numero = input('Digite um numero: ')
+Digite um numero: x + y
+
+print(numero)
+7
+
+
+foo = input('Digite algo... ')
+Digite algo... 9.3
+
+type(foo)
+float
+
+foo = input('Digite algo... ')
+Digite algo... 777
+
+type(foo)
+int
+
+foo = input('Digite algo... ')
+Digite algo... 'Python is awesome!'
+
+type(foo)
+str
+
+foo = input('Digite algo... ')
+
+Digite algo... Python is awesome!
+  File "<string>", line 1
+    Python is awesome!
+                     ^
+SyntaxError: unexpected EOF while parsing
+
+================================================================================
+
+Funções globals(), locals() e vars() e Comando global
+
+	Cada uma das funções retornam dicionários de variáveis e seus respectivos valores.
+	globals(): Retorna variáveis globais (escopo do módulo);
+	locals(): Retorna variáveis locais (escopo local);
+	vars(obj): sem argumentos é equivalente a locals(), com um argumento, equivalente a objeto.__dict__
+
+
+foo = 'escopo global'
+
+
+def f():
+    foo = 'escopo local'
+    bar = 'uma variável qualquer...'
+    print(globals()['foo'])
+    print(locals()['foo'])
+
+f()
+escopo global
+escopo local
+
+class Spam(object):
+    foo = ''
+    bar = ''
+    
+
+vars(Spam)
+
+<dictproxy {'__dict__': <attribute '__dict__' of 'Spam' objects>,
+ '__doc__': None,
+ '__module__': '__main__',
+ '__weakref__': <attribute '__weakref__' of 'Spam' objects>,
+ 'bar': '',
+ 'foo': ''}>
+
+
+def f():
+    global x
+    x = 7
+    
+
+type(x)
+
+NameError: name 'x' is not defined
+
+f()
+
+type(x)
+int
+
+print(x)
+7
+
+================================================================================
+
+Funções min() e max()
+
+min(0, 2, -50, 7)
+-50
+
+max(0, 2, -50, 7)
+7
+
+================================================================================
+enumerate()
+
+x = ('verde', 'azul', 'amarelo')
+
+y = enumerate(x)
+
+for i, j in y:
+    print('%i - %s' % (i, j))
+
+0 - verde
+1 - azul
+2 - amarelo
+
+y = enumerate(x)
+
+type(y)
+enumerate
+
+y.next()
+(0, 'verde')
+
+y.next()
+(1, 'azul')
+
+y.next()
+(2, 'amarelo')
+
+================================================================================
+
+================================================================================
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

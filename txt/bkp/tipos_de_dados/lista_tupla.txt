@@ -1,0 +1,302 @@
+Lista
+
+l = list([1, 2, 3])
+
+l
+[1, 2, 3]
+
+- São mutáveis
+
+x = ['a', 'b', 3, 4.0]
+
+print(x[2])
+3
+
+x[2] = 30
+
+print(x[2])
+30
+
+7 in x
+False
+
+3 in x
+True
+
+x
+['a', 'b', 30, 4.0]
+
+
+x.append('Uma string qualquer...')
+
+x
+['a', 'b', 30, 4.0, 'Uma string qualquer...']
+
+
+extend / remove
+
+	Extend é fazer com que uma lista seja extendida adicionando a ela outra lista.
+
+y = x + ['abobrinha', '7', {'chave': 'valor'}, ('SP', 'MG', 'PR', 'RO')]
+
+y
+['a', 'b', 30, 4.0, 'Uma string qualquer...', 'abobrinha', '7', {'chave': 'valor'}, ('SP', 'MG', 'PR', 'RO')]
+
+x += ['xyz'] # += é um atalho para o método extend
+
+x
+['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz']
+
+
+foo = [3, 5, 7, 9]
+
+bar = [11, 13, 15]
+
+foo.extend(bar)
+
+foo
+[3, 5, 7, 9, 11, 13, 15]
+
+x.remove('xyz')
+
+x
+['a', 'b', 30, 4.0, 'Uma string qualquer...']
+
+x.extend(['xyz'])
+
+x
+['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz']
+
+x.extend('xyz')
+
+x
+['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z']
+
+x.append('xyz')
+
+x
+['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z', 'xyz']
+
+Para listas "+=" -> método extend
+
+x += 'String'
+
+x
+['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z', 'xyz', 'S', 't', 'r', 'i', 'n', 'g']
+
+
+x + 'bla bla bla'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate list (not "str") to list
+
+
+z = list('Hobbit')
+
+z
+['H', 'o', 'b', 'b', 'i', 't']
+
+z.append('Hobbit')
+
+z
+['H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
+
+
+len(z)
+7
+
+Tamanho 7, posições variam de 0 a 6.
+
+z
+['H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
+
+z.insert(0, 'Gandalf')
+
+z
+['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
+
+len(z)
+8
+
+
+z.__len__()
+8
+
+z.insert(8, 'Bilbo')
+
+z
+['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit', 'Bilbo']
+
+z.pop()
+'Bilbo'
+
+z
+['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
+
+livro = ('O %s' % z.pop())
+
+livro
+'O Hobbit'
+
+z
+['Gandalf', 'H', 'o', 'b', 'b', 'i', 't']
+
+
+z.pop(5)
+'i'
+
+z.sort()
+
+z
+['Gandalf', 'H', 'b', 'b', 'o', 't']
+
+z.reverse()
+
+z
+['t', 'o', 'b', 'b', 'H', 'Gandalf']
+
+sorted(z)
+['Gandalf', 'H', 'b', 'b', 'o', 't']
+
+w = sorted(z)
+
+w
+['Gandalf', 'H', 'b', 'b', 'o', 't']
+
+z
+['t', 'o', 'b', 'b', 'H', 'Gandalf']
+
+reversed(z) 
+<listreverseiterator object at 0x1653c10>
+
+A função reversed() sempre retorna um iterador.
+
+z = list(reversed(z))
+
+z
+['Gandalf', 'H', 'b', 'b', 'o', 't']
+
+sorted('aAcb')
+['A', 'a', 'b', 'c']
+
+list(reversed('aAcb'))
+['b', 'c', 'A', 'a']
+
+
+Tupla
+
+	Tupla têm sua estrutura muito similar à da lista, no entanto, ela é imutável.
+	Ela é mais recomendada para uso de dados estáticos, pois comparada à lista, tem um desempenho melhor devido à sua simplicidade e consome menos recursos.
+
+t = tuple([1, 2, 3])
+
+t
+(1, 2, 3)
+
+
+tupla = set(dir(tuple))
+
+lista = set(dir(list))
+
+tupla.intersection(lista)
+
+{'__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getslice__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rmul__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'count',
+ 'index'}
+
+Tuplas tem apenas os métodos count e index.
+
+
+
+regiao_sudeste = ('ES', 'MG', 'RJ', 'SP')
+
+Tupla de um único elemento:
+
+t = (1, )
+
+t
+(1,)
+
+type(t)
+tuple
+
+t = 2, 3, 4
+
+type(t)
+tuple
+
+t = (7, 14, 21)
+
+
+Trocando valores
+
+x = 0
+
+y = 1
+
+x, y = y, x
+
+x
+1
+
+y
+0
+
+
+def retorna_tupla():
+    return 1, 2, 3
+
+x, y, z = retorna_tupla()
+
+print(x)
+1
+
+print(y)
+2
+
+print(z)
+3
+
+Tuplas são imutáveis, mas seus elementos não necessariamente:
+
+t = ({}, [])
+
+t[0].update({'chave': 'valor'})
+
+t[1].append(7)
+
+t
+({'chave': 'valor'}, [7])
+
+
+
+
+

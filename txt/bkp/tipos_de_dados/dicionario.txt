@@ -1,0 +1,264 @@
+Dicionários
+
+d = dict(chave1 = 'valor2', chave2 = 1980)
+
+d = {
+    'nome': 'Chiquinho',
+    'sobrenome': 'da Silva',
+    'email': 'chiquinho.silva@zeninguem.com',
+}
+
+d['nome']
+'Chiquinho'
+
+for k in d:
+    print('%s = %s' % (k, d[k]))
+
+email = chiquinho.silva@zeninguem.com
+sobrenome = da Silva
+nome = Chiquinho
+
+
+for k in sorted(d):
+    print('%s = %s' % (k, d[k]))
+
+email = chiquinho.silva@zeninguem.com
+nome = Chiquinho
+sobrenome = da Silva
+
+
+d.items()
+
+[('email', 'chiquinho.silva@zeninguem.com'),
+ ('sobrenome', 'da Silva'),
+ ('nome', 'Chiquinho')]
+
+
+for k, v in d.items():
+    print('%s = %s' % (k, v))
+
+email = chiquinho.silva@zeninguem.com
+sobrenome = da Silva
+nome = Chiquinho
+
+d.keys()
+['email', 'sobrenome', 'nome']
+
+d.values()
+['chiquinho.silva@zeninguem.com', 'da Silva', 'Chiquinho']
+
+d.clear()
+
+d
+{}
+
+d.update({
+    'nome': 'Chiquinho',
+    'sobrenome': 'da Silva',
+    'email': 'chiquinho.silva@zeninguem.com',
+})
+
+d
+{'email': 'chiquinho.silva@zeninguem.com',
+ 'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva'}
+
+d.update({'data_nascimento': '28/02/1936'})
+
+d
+{'data_nascimento': '28/02/1936',
+ 'email': 'chiquinho.silva@zeninguem.com',
+ 'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva'}
+
+d['data_nascimento'] = '08/02/1936'
+
+d
+{'data_nascimento': '08/02/1936',
+ 'email': 'chiquinho.silva@zeninguem.com',
+ 'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva'}
+
+d['cidade_origem'] = 'Cascatinha'
+
+d
+{'cidade_origem': 'Cascatinha',
+ 'data_nascimento': '08/02/1936',
+ 'email': 'chiquinho.silva@zeninguem.com',
+ 'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva'}
+
+
+Como chave só são aceitos tipos que utilizam hash, listas não são aceitas, 
+mas instâncias de classes e tuplas são aceitas.
+
+
+l = [1, 2, 3]
+
+t = (5, 7)
+
+
+
+class Funcionario(object):
+    pass
+
+
+f1 = Funcionario()
+
+
+d[l] = 0
+TypeError: unhashable type: 'list'
+
+
+d[f1] = 'Funcionário 1'
+
+d
+
+{<__main__.Funcionario at 0x7fd96e582450>: 'Funcion\xc3\xa1rio 1',
+ 'cidade_origem': 'Cascatinha',
+ 'data_nascimento': '08/02/1936',
+ 'email': 'chiquinho.silva@zeninguem.com',
+ 'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva'}
+
+
+d[t] = 0
+
+d
+{<__main__.Funcionario at 0x7fd96e582450>: 'Funcion\xc3\xa1rio 1',
+ 'cidade_origem': 'Cascatinha',
+ 'data_nascimento': '08/02/1936',
+ 'email': 'chiquinho.silva@zeninguem.com',
+ 'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva',
+ (5, 7): 0}
+
+
+d[endereco]
+NameError: name 'endereco' is not defined
+
+d.get('nome')
+'Chiquinho'
+
+d.get('endereco')
+
+d.get('endereco', 'R. do Cafezal, 30')
+'R. do Cafezal, 30'
+
+d.get('nome', 'Zezinho')
+'Chiquinho'
+
+
+carro = {
+    'marca': 'Fiat',
+    'modelo': '147'
+}
+
+carro['cor']
+KeyError: 'cor'	
+
+carro.get('cor', 'amarelo')
+'amarelo'
+
+carro
+{'marca': 'Fiat', 'modelo': '147'}
+
+carro.setdefault('modelo', 'Topazio')
+'147'
+
+carro.setdefault('cor', 'verde')
+'verde'
+
+carro
+{'cor': 'verde', 'marca': 'Fiat', 'modelo': '147'}
+
+
+carro.update(modelo = 'Topazio', cor = 'cinza')
+
+carro
+{'cor': 'cinza', 'marca': 'Fiat', 'modelo': 'Topazio'}
+
+
+carro.pop('cor')
+'cinza'
+
+carro
+{'marca': 'Fiat', 'modelo': 'Topazio'}
+
+carro.pop('ano')
+KeyError: 'ano'
+
+carro.pop('ano', 1981)
+1981
+
+'marca' in carro
+True
+
+'cor' in carro
+False
+
+carro['cor'] = 'cinza'
+
+carro['ano'] = 1981
+
+
+#!/usr/bin/env python
+#_*_ encoding: utf8 _*_
+
+f_sal = {
+    u'Chiquinho da Silva': 5871.47,
+    u'Aldebarina Santos': 3989.23,
+    u'Chacorino Almeida': 3512,
+    u'Barbacena Moraes': 4214.25,
+    u'Tobertino Castro': 5112.98,
+}
+
+left_col = 30
+right_col = 12
+num_prec = 12.2
+
+head_foot = u'{0:%s}+{1:%s}' % (left_col, right_col)
+head = u'{0:%s}|{1:%s}' % (left_col, right_col)
+
+head_foot = head_foot.format('-' * left_col, '-' * right_col)
+head = head.format(u'Funcionário', u'Salário')
+
+print(head_foot)
+print(head)
+print(head_foot)
+
+total = 0.0
+count = 0
+
+for k, v in f_sal.items():
+    line = u'{0:%s}|{1:>%sf}' % (left_col, num_prec)
+    line = line.format(k, v)
+    print(line)
+    total += v
+    count += 1
+
+
+print(head_foot)
+
+foot = u'{0:%s}|{1:>%sf}' % (left_col, num_prec)
+foot = foot.format(u'Média', (total / count))
+
+print(foot)
+
+print(head_foot)
+
+
+
+------------------------------+------------
+Funcionário                   |Salário     
+------------------------------+------------
+Chacorino Almeida             |     3512.00
+Chiquinho da Silva            |     5871.47
+Tobertino Castro              |     5112.98
+Aldebarina Santos             |     3989.23
+Barbacena Moraes              |     4214.25
+------------------------------+------------
+Média                         |     4539.99
+------------------------------+------------
+
+

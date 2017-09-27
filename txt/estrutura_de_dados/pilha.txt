@@ -1,0 +1,86 @@
+stack (Stack)
+
+	Sempre insere ao final.
+	Last In First First Out (LIFO) ou First In Last Out (FILO).
+
+class Pilha(object):
+    def __init__(self):
+        self.stack = []
+        self.len_stack = 0
+
+    def push(self, x):
+        self.stack.append(x)
+        self.len_stack += 1
+
+    def is_empty(self):
+        if (self.len_stack == 0):
+            print('Aviso: stack vazia!')
+            return True
+        return False
+
+    def pop(self):
+        if not self.is_empty():
+            self.len_stack -= 1
+            return self.stack.pop()            
+        return None
+
+    def top(self):
+        if not self.is_empty():
+            return self.stack[-1]
+        return None
+
+    def bottom(self):
+        if not self.is_empty():
+            return self.stack[0]
+        return None
+
+    def erase(self):
+        self.stack = []
+        self.len_stack = 0
+
+    def elements(self):
+        return self.stack
+
+    def length(self):
+        return self.len_stack
+
+
+p = Pilha()
+
+for i in range(0, 9):
+    p.push(i)
+
+p.length()
+9
+
+p.elements()
+[0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+p.top()
+8
+
+p.bottom()
+0
+
+p.pop()
+8
+
+p.is_empty()
+False
+
+p.elements()
+[0, 1, 2, 3, 4, 5, 6, 7]
+
+p.erase()
+
+p.is_empty()
+Aviso: stack vazia!
+True
+
+p.pop()
+Aviso: stack vazia!
+
+p.push(777)
+
+p.elements()
+[777]

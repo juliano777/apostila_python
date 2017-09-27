@@ -1,0 +1,73 @@
+Iterator
+
+
+i = iter('bar')
+
+repr(i)
+'<iterator object at 0x7f123cd62c50>'
+
+dir(i)
+['__class__', '__delattr__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__length_hint__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'next']
+
+
+i.next()
+'b'
+
+i.next()
+'a'
+
+i.next()
+'r'
+
+i.next()
+---------------------------------------------------------------------------
+StopIteration                             Traceback (most recent call last)
+<ipython-input-139-e590fe0d22f8> in <module>()
+----> 1 i.next()
+
+
+
+
+Generator
+
+numeros = range(10)
+
+numeros
+range(10)
+
+rq = [ x ** 2 for x in numeros ]
+
+rq
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+type(rq)
+<type 'list'>
+
+
+rq = ( x ** 2 for x in numeros )
+
+type(rq)
+<type 'generator'>
+
+dir(rq)
+['__class__', '__delattr__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'close', 'gi_code', 'gi_frame', 'gi_running', 'next', 'send', 'throw']
+
+rq.next()
+0
+
+rq.next()
+1
+
+rq.next()
+4
+
+rq.next()
+9
+
+rq.next()
+16
+
+rq.next()
+
+
+
