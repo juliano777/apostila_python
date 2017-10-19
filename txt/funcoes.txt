@@ -402,6 +402,9 @@ PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
 do que uma função convencional. 
 	Por só aceitar expressões, o comando return não é permitido em sua estrutura.
 
+(lambda x, y: x + y)(5, 2)
+7
+
 foo = lambda x, y: x ** y
 
 print(foo(2, 5))
