@@ -5,6 +5,15 @@ set e frozenset
 Similarmente a list e tuple, a diferença entre eles é que frozenset é um tipo
 imutável.
 
+# Set vazio
+
+s = {*()} 
+
+ou 
+
+s = set()
+
+
 s = set([1, 1, 2, 3])
 
 s
@@ -27,3 +36,7 @@ a & b
 {2, 3}
 
 ==============================================================================
+
+# Frozenset vazio
+
+f = frozenset()

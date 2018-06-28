@@ -1,5 +1,8 @@
 Dicionários
 
+# Dicionário vazio
+d = {}
+
 d = dict(chave1 = 'valor2', chave2 = 1980)
 
 d = {

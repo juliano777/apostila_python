@@ -133,17 +133,20 @@ List Comprehension
 
 
 
+Tuple Comprehension
+
+x = (i for i in range(21))
+
+type(x)
+generator
 
 
-.3.8 Dicionários
+Dict Comprehension
 
-dicionário -> dict -> {'chave1':'valor1',2:870,'chave3':1907,4:'valor4'}
+d1 = {'a': 1, 'b':2, 'c': 3}
 
-.3.9 Conjuntos
+d2 = {k.upper(): v * 10 for k, v in d1.items()}
 
-conjunto -> set -> set([7, 7, 8, 9])
-conjunto congelado -> frozenset -> frozenset([7, 7, 8, 9])
-
-
-(03 - 18:50)
+print(d2)
+{'A': 10, 'B': 20, 'C': 30}
 
