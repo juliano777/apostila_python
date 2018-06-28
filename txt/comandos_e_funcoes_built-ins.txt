@@ -52,45 +52,8 @@ baz
 
 ==============================================================================
 
-range() e xrange()
+range()
 
-	São duas funções bem parecidas entre si.
-	A primeira, range, gera uma lista, que por omissão inicia por 0 (zero).
-	range() retorna uma lista.
-	xrange() retorna um iterador. 	
-
-range(10)
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
-
-range(0, 10)
-Out[70]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-range(0, 10, 3)
-[0, 3, 6, 9]
-
-
-- range vs xrange
-
-	Há uma outra função muito parecida com range cujo nome é xrange.
-	A 
-
-
-python -m timeit 'for i in range(30000000): pass'
-
-10 loops, best of 3: 1.7 sec per loop
-
-python -m timeit 'for i in xrange(30000000): pass'
-
-10 loops, best of 3: 448 msec per loop
-
-
-	Qual devo usar?
-	Quando fazemos range(1000000), a função range cria uma lista com 1000000 (um milhão)
-de elementos. Isso faz com que o início seja demorado, além de utilizar muito mais memória.
-Enquanto que xrange gera um iterador, cujos elementos são buscados conforme a demanda.
-	Usamos o xrange para loops e quando precisamos gerar uma lista utilizamos range.
 
 
 ==============================================================================
@@ -297,7 +260,7 @@ x
 
 for
 
-for i in xrange(5):
+for i in range(5):
     print(i)
     
 0
@@ -358,7 +321,7 @@ Nome: Chiquinho
 
 
 
-for i in xrange(5):
+for i in range(5):
     print(i)
 else:
     print('Fim')
@@ -370,7 +333,7 @@ else:
 4
 Fim
 
-for i in xrange(10):
+for i in range(10):
     if i == 6:
         break
     print(i)
@@ -385,7 +348,7 @@ else:
 5
 
 
-for i in xrange(10):
+for i in range(10):
     if i % 2 == 0:
         continue
     print(i)

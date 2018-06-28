@@ -1,8 +1,0 @@
-input
-
-
-raw_input
-
-
-pass
-

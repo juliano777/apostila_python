@@ -27,7 +27,7 @@ def memoize(f):
 t1 = time.time()
 
 # Loop 
-for i in xrange(35):
+for i in range(35):
     print('fib(%s) = %s' % (i, fibo(i)))
 
 # End time
@@ -46,7 +46,7 @@ fibo = memoize(fibo)
 t1 = time.time()
 
 # loop after memoization
-for i in xrange(40):
+for i in range(40):
     print('fib(%s) = %s' % (i, fibo(i)))
 
 # End time
