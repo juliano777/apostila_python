@@ -2,12 +2,11 @@ Funções
 
 Funções
 
-  Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente
-essas mesmas instruções reaproveitando o código ali escrito. 
-  No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.
-  Após definida a função, a mesma é invocada pelo seu nome e seus argumentos (se ela requerir).
-  Funções em Python são definidas a partir do comando def.
-  Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.
+	Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente essas mesmas instruções reaproveitando o código ali escrito.
+	No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.
+	Após definida a função, a mesma é invocada pelo seu nome e seus argumentos (se ela requerir).
+	Funções em Python são definidas a partir do comando def.
+	Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.
 
 
 =====================================================================================================================
@@ -27,15 +26,12 @@ O quardrado de 7 é 49
 
 - O Comando return
 
-  O comando return dá um retorno para a função.
-  Uma função pode retornar um ou mais valores (coleções).
-  Deve ser o último comando da função, pois se tiver algum código depois será ignorado.
-  Vale lembrar que return não é a mesma coisa que imprimir em tela. Quando se digita algo
-que retorne um valor dentro de um shell interativo, esse valor por conveniência é impresso em tela.
-Mas em um aplicativo ou script isso não acontecerá, portanto se deseja imprimir um valor em tela, isso
-deve ser explicitado, o que é mais comumente feito por print().
-  Quando uma função não tem um comando return, seu retorno é None implícito, o que para outras linguagens
-como C e Java é a mesma coisa que void.
+	O comando return dá um retorno para a função.
+	Uma função pode retornar um ou mais valores (coleções).
+	Deve ser o último comando da função, pois se tiver algum código depois será ignorado.
+	Vale lembrar que return não é a mesma coisa que imprimir em tela. Quando se digita algo que retorne um valor dentro de um shell interativo, esse valor por conveniência é impresso em tela.
+	Mas em um aplicativo ou script isso não acontecerá, portanto se deseja imprimir um valor em tela, isso deve ser explicitado, o que é mais comumente feito por print().
+	Quando uma função não tem um comando return, seu retorno é None implícito, o que para outras linguagens como C e Java é a mesma coisa que void.
 
 Definição da função
 
@@ -85,9 +81,8 @@ o valor de retorno da função.
 
 Argumentos Simples (Argumentos Não Nomeados)
 
-  Uma função pode ter um ou mais argumentos a serem pasados.
-  Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios
-têm um valor inicial.
+	Uma função pode ter um ou mais argumentos a serem pasados.
+	Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios têm um valor inicial.
 
 
 Definição de uma função
@@ -117,10 +112,8 @@ funcao(7)
 
 Argumentos Nomeados
 
-  Podemos definir uma função em que um ou mais argumentos tenham valores padrões de forma
-que ao invocar a função podemos omitir a declaração, pois será considerado 
-o padrão ou explicitando um valor.
-  Quando houver mais de um argumento, os argumentos obrigatórios devem vir
+	Podemos definir uma função em que um ou mais argumentos tenham valores padrões de forma que ao invocar a função podemos omitir a declaração, pois será considerado o padrão ou explicitando um valor.
+	Quando houver mais de um argumento, os argumentos obrigatórios devem vira primeiro.
 
 Definição de função com um argumento 
 
@@ -282,7 +275,6 @@ Nome = Chiquinho
 
 def funcao(**kargs):
     return kargs
-   ....: 
 
 eggs = {'a': 3, 'b': 5, 'c': 'x'}
 
@@ -318,9 +310,8 @@ Boas Práticas: Função Main
 
 	Evite execuções globais, quebre seu código em funções o que facilita o reúso e teste de código.
 	Crie uma função principal (main). Crie primeiro as outras funções e por último a ser definida a função principal.
-Na função principal serão feitas as chamadas às outras funções.
-	Outra coisa interessante a ser feita é colocar a função principal dentro de um if. Sendo que se for executado,
-terá a variável especial "__name__" como valor "__main__".
+	Na função principal serão feitas as chamadas às outras funções.
+	Outra coisa interessante a ser feita é colocar a função principal dentro de um if. Sendo que se for executado, terá a variável especial "__name__" como valor "__main__".
 
 
 vim hello.py
@@ -396,10 +387,8 @@ StopIteration:
 
 Funções Lambda
 
-	São funções anônimas, ou seja, que não são associadas a um nome. Um recurso similar às funções anônimas em
-PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
-	Sua estrutura é composta apenas por expressões, o que a torna muito limitada, no entanto consome menos recursos
-do que uma função convencional. 
+	São funções anônimas, ou seja, que não são associadas a um nome. Um recurso similar às funções anônimas em PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
+	Sua estrutura é composta apenas por expressões, o que a torna muito limitada, no entanto consome menos recursos do que uma função convencional. 
 	Por só aceitar expressões, o comando return não é permitido em sua estrutura.
 
 (lambda x, y: x + y)(5, 2)
@@ -413,61 +402,3 @@ print(foo(2, 5))
 
 =====================================================================================================================   
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
