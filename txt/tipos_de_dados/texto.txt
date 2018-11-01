@@ -5,20 +5,51 @@ Sobre Strings
     É um recurso muito caro em termos de recursos computacionais (processamento e memória) e que portanto deve ser utilizado com cuidado, pois escalabilidade é algo que deve ser sempre um fator a ser levado em conta.
 
 
-Tipos de Strings em Python
-	
+Strings em Python
 
+    Podemos usar usar tanto entre aspas como entre apóstrofos.
+
+
+
+Declaração de uma variável string utilizando apóstrofos:
+
+s1 = 'string'
+
+
+
+Declaração de uma variável string utilizando aspas:
+
+s2 = "string"
+
+
+
+Declaração de uma variável string utilizando a função str:
 
 s = str('foo')
 
+
+
+Apóstrofos ou aspas? Qual devo utilizar?
+
+
+    Se não tivessem essas duas opções, se fosse apenas aspas como em outras linguagens, em uma string que precisa ter aspas, seria preciso escapar com a contrabarra desta maneira: \". O que também funcionaria.
+    Fazer uso de contrabarra para escapar por muitas vezes pode ser um tanto confuso e tornar o código menos legível.
+    Com a facilidade de se poder utilizar ambos torna o escape desnecessário para a maioria dos casos em que aspas ou apóstrofos façam parte de uma string.
+
+
+
+Dois exemplos com print de strings com aspas e apóstrofos dentro:
+
+print('Uma string que contém "aspas" em si')
+Uma string que contém "aspas" em si
+
+print("Uma string que contém 'apóstrofos' em si")
+Uma string que contém 'apóstrofos' em si
+    
+    
+
 s
 'foo'
-
-
-	Uma string é envolta por apóstrofos ou aspas.
-
-s1 = 'string'
-s2 = "string"
 
 	É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:
 
@@ -43,6 +74,20 @@ linhas
 sql = "SELECT * FROM musica WHERE artista = 'Mozart';"
 
 	Um artifício muito útil para evitar ficar escapando caracteres.
+
+
+Tipos de Strings em Python
+
+    Em Python temos algumas variações de strings que são elas: bytes (b), format (f), raw (r) e unicode (u), sendo essa última a padrão.
+
+b
+f
+r
+u
+	
+
+
+
 
 
 Strings Unicode
