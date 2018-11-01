@@ -77,7 +77,7 @@ linhas
 
 
 
-weweewiui:
+Utilizando parênteses para um string longa sem quebrar linha:
 
 s3 = ('Um exemplo de string feito para não ultrapassar os setenta e nove '
       'caracteres da PEP8 (Python Enhancement Proposal), Proposta de '
