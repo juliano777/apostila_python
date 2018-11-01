@@ -45,13 +45,19 @@ Uma string que contém "aspas" em si
 
 print("Uma string que contém 'apóstrofos' em si")
 Uma string que contém 'apóstrofos' em si
-    
-    
 
-s
-'foo'
 
-	É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:
+
+Um caso clássico é em strings com um comando SQL:
+
+sql = "SELECT * FROM musica WHERE artista = 'Mozart';"
+
+
+
+Strings de Múltiplas Linhas
+
+    
+É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:
 
 s1 = '''
 Um 
@@ -69,11 +75,24 @@ de várias
 linhas
 """
 
-	Também pode-se fazer uso de ambas na mesma string, como por exemplo, uma string com um comando SQL:
 
-sql = "SELECT * FROM musica WHERE artista = 'Mozart';"
 
-	Um artifício muito útil para evitar ficar escapando caracteres.
+weweewiui:
+
+s3 = ('Um exemplo de string feito para não ultrapassar os setenta e nove '
+      'caracteres da PEP8 (Python Enhancement Proposal), Proposta de '
+      'aprimoramento do Python, que visa boas práticas de programação.')
+
+
+
+print(s3)
+Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da PEP8 (Python Enhancement Proposal), Proposta de aprimoramento do Python, que visa boas práticas de programação.
+
+
+
+
+
+	
 
 
 Tipos de Strings em Python
