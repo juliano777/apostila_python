@@ -104,39 +104,6 @@ f
 r
 u
 	
-
-
-
-
-
-Strings Unicode
-
-	Permite strings com caracteres acentuados.
-
-s1 = u'Ambulância'
-
-print(s1)
-Ambulância
-
-repr(s1)
-"u'Ambul\\xe2ncia'"
-
-
-Strings Regex
-
-s1 = 'foo\nbar'
-
-print(s1)
-foo
-bar
-
-s1 = r'foo\nbar'
-
-print(s1)
-foo\nbar
-
-
-
 Caracteres Especiais
 
 
