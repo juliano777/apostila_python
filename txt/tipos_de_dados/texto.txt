@@ -347,16 +347,6 @@ Preco: R$ 0.50
 Cód: 00123
 
 
-Strings Unicode
-
-x  = unicode('Produção', 'utf8')
-
-print(x)
-Produção
-
-repr(x)
-"u'Produ\\xe7\\xe3o'"
-
 Strings Regex
 
 	São strings que iniciam com um "r" antes de apóstrofos ou aspas.
