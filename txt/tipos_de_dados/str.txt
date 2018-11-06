@@ -13,19 +13,19 @@ Strings em Python
 
 Declaração de uma variável string utilizando apóstrofos:
 
-s1 = 'string'
+> s1 = 'string'
 
 
 
 Declaração de uma variável string utilizando aspas:
 
-s2 = "string"
+> s2 = "string"
 
 
 
 Declaração de uma variável string utilizando a função str:
 
-s = str('foo')
+> s = str('foo')
 
 
 
@@ -40,17 +40,19 @@ Apóstrofos ou aspas? Qual devo utilizar?
 
 Dois exemplos com print de strings com aspas e apóstrofos dentro:
 
-print('Uma string que contém "aspas" em si')
+> print('Uma string que contém "aspas" em si')
 Uma string que contém "aspas" em si
 
-print("Uma string que contém 'apóstrofos' em si")
+
+
+> print("Uma string que contém 'apóstrofos' em si")
 Uma string que contém 'apóstrofos' em si
 
 
 
 Um caso clássico é em strings com um comando SQL:
 
-sql = "SELECT * FROM musica WHERE artista = 'Mozart';"
+> sql = "SELECT * FROM musica WHERE artista = 'Mozart';"
 
 
 
@@ -59,7 +61,7 @@ Strings de Múltiplas Linhas
     
 É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:
 
-s1 = '''
+> s1 = '''
 Um 
 exemplo
 de string
@@ -67,7 +69,7 @@ de várias
 linhas
 '''
 
-s2 = """
+> s2 = """
 Um 
 exemplo
 de string
@@ -79,13 +81,13 @@ linhas
 
 Utilizando parênteses para um string longa sem quebrar linha:
 
-s3 = ('Um exemplo de string feito para não ultrapassar os setenta e nove '
+> s3 = ('Um exemplo de string feito para não ultrapassar os setenta e nove '
       'caracteres da PEP8 (Python Enhancement Proposal), Proposta de '
       'aprimoramento do Python, que visa boas práticas de programação.')
 
 
 
-print(s3)
+> print(s3)
 Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da PEP8 (Python Enhancement Proposal), Proposta de aprimoramento do Python, que visa boas práticas de programação.
 
 
@@ -97,12 +99,14 @@ Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da
 
 Tipos de Strings em Python
 
-    Em Python temos algumas variações de strings que são elas: bytes (b), format (f), raw (r) e unicode (u), sendo essa última a padrão.
+    Em Python temos algumas variações de strings, cada qual é designada por um prefixo, que é uma letra que representa o tipo de string e por omissão é unicode:
 
-b
-f
-r
-u
+    bytes (b): 
+    
+
+
+format (f), raw (r) e unicode (u), sendo essa última a padrão.
+
 	
 Caracteres Especiais
 
