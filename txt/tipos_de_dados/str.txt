@@ -263,13 +263,13 @@ Sequência de Escape | Descrição                         |
 \'                  | Imprime um apóstrofo              |
 \"                  | Imprime uma aspa                  |
 \a                  | ASCII bell (beep)                 |
-\b                  | ASCII backspace (BS) remove o caractere anterior previous character|
+\b                  | ASCII backspace (BS) remove o caractere anterior|
 \f                  | ASCII formfeed (FF)                      |
 \n                  | ASCII linefeed (LF)|
-\N{name}            | Imprime a character from the Unicode database|
-\r                  | ASCII carriage return (CR). Moves all characters after ( CR ) the the beginning of the line while overriding same number of characters moved.|
-\t                  | ASCII horizontal tab (TAB). Imprime TAB|
-\t                  | ASCII vertical tab (VT).|
+\N{name}            | Imprime um caractere da base de dados Unicode|
+\r                  | ASCII carriage return (CR)|
+\t                  | ASCII horizontal tab (TAB) Imprime TAB|
+\t                  | ASCII vertical tab (VT)|
 \uxxxx              | Imprime 16-bit hex value Unicode character|
 \Uxxxxxxxx          | Imprime 32-bit hex value Unicode character|
 \ooo                | Imprime character based on its octal value|
