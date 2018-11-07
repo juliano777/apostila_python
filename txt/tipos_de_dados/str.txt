@@ -280,19 +280,6 @@ Backslash notation Escape -  Sequence 	Meaning 	Notes
 
 
 
-
-Notes:
-
-    Individual code units which form parts of a surrogate pair can be encoded using this escape sequence.
-    Any Unicode character can be encoded this way, but characters outside the Basic Multilingual Plane (BMP) will be encoded using a surrogate pair if Python is compiled to use 16-bit code units (the default).
-    As in Standard C, up to three octal digits are accepted.
-    Unlike in Standard C, exactly two hex digits are required.
-    In a string literal, hexadecimal and octal escapes denote the byte with the given value; it is not necessary that the byte encodes a character in the source character set. In a Unicode literal, these escapes denote a Unicode character with the given value.
-
-
-
-
-
 Operações de Strings – help(str)
 
 .3.1 Concatenação
