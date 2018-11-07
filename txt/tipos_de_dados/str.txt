@@ -113,9 +113,11 @@ True
 
 
 
-bytes (b)
+Bytes (b)
 
     Strings de bytes utilizam o prefixo "b" e quando contém caracteres especiais, esses são representados pelo código hexadecimal da codificação utilizada.
+
+
 
 Criação de 3 (três) strings comuns:
 
