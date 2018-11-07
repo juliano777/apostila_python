@@ -210,10 +210,49 @@ Macarrão
 > print(sb3.decode('utf-8'))
 
 Ação
-    
 
 
-format (f), raw (r) e unicode (u), sendo essa última a padrão.
+
+Pode-se também criar um objeto bytes a partir da classe:
+
+> b = bytes('∑'.encode('utf-8'))
+
+
+
+Verificando o tipo:
+
+> print(type(b))
+
+<class 'bytes'>
+
+    Uma byte string tem um tipo específico, bytes.
+
+
+
+Exibindo a byte string:
+
+> print(b)
+
+b'\xe2\x88\x91'
+
+
+
+Decodificando para unicode:
+
+> print(b.decode('utf-8'))
+
+∑
+
+
+
+Verificando o tipo quando o objeto é decodificado:
+
+> type(b.decode('utf-8'))
+
+str
+
+    Ao ser decodificado passa a ser uma string.
+
 
 	
 Caracteres Especiais
