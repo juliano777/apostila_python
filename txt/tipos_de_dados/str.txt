@@ -259,7 +259,7 @@ Caracteres Especiais
 
 
 Backslash notation Escape -  Sequence 	Meaning 	Notes
-\newline 	Ignored 	 
+
 \\ 	Backslash (\) 	 
 \' 	Single quote (') 	 
 \" 	Double quote (") 	 
