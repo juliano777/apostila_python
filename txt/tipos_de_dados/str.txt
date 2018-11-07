@@ -298,7 +298,7 @@ Caracteres Especiais
 
 Operações de Strings – help(str)
 
-.3.1 Concatenação
+Concatenação
 
 print("Curso" + " de " + "Python")
 Curso de Python
@@ -321,7 +321,7 @@ print('<' + 'Python'.__mul__(3) + '>')
 '<PythonPythonPython>'
 
 
-.3.3 Split
+Split
 Quebra a string em palavras formando uma lista
 
 print('Curso de Python'.split())
@@ -331,7 +331,7 @@ print('Curso de Python'.split('de')) # Com passagem de parâmetro a função for
 ['Curso ', ' Python']
 
 
-.3.4 Slice
+Slice
 Corte de string 'string'[inicio:fim - 1:incremento]
 
 print("Curso de Python”[0])
@@ -359,7 +359,7 @@ print("Curso de Python"[::-1]) # String reversa
 sql = "SELECT campo1, campo2 FROM tabela WHERE campo3 = 'valor'"
 
 
-.3.5 Interpolação
+Interpolação
 
 	Na interpolação de strings o caractere de porcentagem “%” é utilizado para invocar um valor (seja ele texto ou numérico) dentro de uma string ou até mesmo pra fazer algum tipo de formatação.
 
@@ -413,7 +413,7 @@ print('%7s' % 'abcde')
 
 
 
-.3.6 Formatação
+Formatação
 
 Finally, the type determines how the data should be presented.
 
@@ -629,12 +629,6 @@ s
 	A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.
 
 
-	
-
-
-
-
-
 
 Métodos de Strings
 
@@ -705,4 +699,3 @@ foo.count('S')
 
 foo.count('ee')
 1
-
