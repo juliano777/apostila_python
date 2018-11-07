@@ -7,7 +7,7 @@ Sobre Strings
 
 Strings em Python
 
-    Podemos usar usar tanto entre aspas como entre apóstrofos.
+    Pode-se usar tanto entre aspas como entre apóstrofos.
 
 
 
