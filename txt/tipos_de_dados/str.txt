@@ -294,7 +294,6 @@ Caracteres Especiais
 | \xhh                | Imprime o character baseado em seu valor hexadecimal     | '1\xaa'         | 1ª         |
 +---------------------+----------------------------------------------------------+------------------------------+
 
-https://linuxconfig.org/list-of-python-escape-sequence-characters-with-examples
 
 
 
