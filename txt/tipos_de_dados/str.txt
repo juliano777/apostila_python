@@ -257,24 +257,25 @@ str
 	
 Caracteres Especiais
 
-
-Sequência de Escape | Descrição                         |
-\\                  | Imprime uma contrabarra           |
-\'                  | Imprime um apóstrofo              |
-\"                  | Imprime uma aspa                  |
-\a                  | ASCII bell (beep)                 |
-\b                  | ASCII backspace (BS) remove o caractere anterior|
-\f                  | ASCII formfeed (FF)                      |
-\n                  | ASCII linefeed (LF)|
-\N{name}            | Imprime um caractere da base de dados Unicode|
-\r                  | ASCII carriage return (CR)|
-\t                  | ASCII horizontal tab (TAB) Imprime TAB|
-\t                  | ASCII vertical tab (VT)|
-\uxxxx              | Imprime 16-bit hex value Unicode character|
-\Uxxxxxxxx          | Imprime 32-bit hex value Unicode character|
-\ooo                | Imprime character based on its octal value|
-\xhh                | Imprime character based on its hex value|
-
+--------------------+----------------------------------------------------------+-----------------+---------
+Sequência de Escape | Descrição                                                | Exemplo (print) | Saída
+--------------------+----------------------------------------------------------+-----------------+----------
+\\                  | Imprime uma contrabarra                                  |
+\'                  | Imprime um apóstrofo                                     |
+\"                  | Imprime uma aspa                                         |
+\a                  | ASCII bell (beep)                                        |
+\b                  | ASCII backspace (BS) remove o caractere anterior         |
+\f                  | ASCII formfeed (FF)                                      |
+\n                  | ASCII linefeed (LF)                                      |
+\N{name}            | Imprime um caractere da base de dados Unicode            |
+\r                  | ASCII carriage return (CR)                               |
+\t                  | ASCII horizontal tab (TAB) Imprime TAB                   |
+\t                  | ASCII vertical tab (VT)                                  |
+\uxxxx              | Imprime 16-bit valor hexadecimal de caractere Unicode    |
+\Uxxxxxxxx          | Imprime 32-bit valor hexadecimal de caractere Unicode    |
+\ooo                | Imprime o character baseado em seu valor octal           |
+\xhh                | Imprime o character baseado em seu valor hexadecimal     |
+--------------------+----------------------------------------------------------+---------------------------
 
 https://linuxconfig.org/list-of-python-escape-sequence-characters-with-examples
 
