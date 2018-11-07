@@ -258,25 +258,25 @@ str
 Caracteres Especiais
 
 
-Backslash notation Escape -  Sequence 	Meaning 	Notes
+Sequência de Escape | Descrição                         |
+\\                  | Imprime uma contrabarra           |
+\'                  | Imprime um apóstrofo              |
+\"                  | Imprime uma aspa                  |
+\a                  | ASCII bell (beep)                 |
+\b                  | ASCII backspace (BS) remove o caractere anterior previous character|
+\f                  | ASCII formfeed (FF)                      |
+\n                  | ASCII linefeed (LF)|
+\N{name}            | Imprime a character from the Unicode database|
+\r                  | ASCII carriage return (CR). Moves all characters after ( CR ) the the beginning of the line while overriding same number of characters moved.|
+\t                  | ASCII horizontal tab (TAB). Imprime TAB|
+\t                  | ASCII vertical tab (VT).|
+\uxxxx              | Imprime 16-bit hex value Unicode character|
+\Uxxxxxxxx          | Imprime 32-bit hex value Unicode character|
+\ooo                | Imprime character based on its octal value|
+\xhh                | Imprime character based on its hex value|
 
-\\ 	Backslash (\) 	 
-\' 	Single quote (') 	 
-\" 	Double quote (") 	 
-\a 	ASCII Bell (BEL) 	 
-\b 	ASCII Backspace (BS) 	 
-\f 	ASCII Formfeed (FF) 	 
-\n 	ASCII Linefeed (LF) 	 
-\N{name} 	Character named name in the Unicode database (Unicode only) 	 
-\r 	ASCII Carriage Return (CR) 	 
-\t 	ASCII Horizontal Tab (TAB) 	 
-\uxxxx 	Character with 16-bit hex value xxxx (Unicode only) 	(1)
-\Uxxxxxxxx 	Character with 32-bit hex value xxxxxxxx (Unicode only) 	(2)
-\v 	ASCII Vertical Tab (VT) 	 
-\ooo 	Character with octal value ooo 	(3,5)
-\xhh 	Character with hex value hh 	(4,5)
-\nnn 	  	Octal notation, where n is in the range 0.7
-\xnn 	  	Hexadecimal notation, where n is in the range 0.9, a.f, or A.F
+
+https://linuxconfig.org/list-of-python-escape-sequence-characters-with-examples
 
 
 
