@@ -99,7 +99,19 @@ Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da
 
 Tipos de Strings em Python
 
-    Em Python temos algumas variações de strings, cada qual é designada por um prefixo, que é uma letra que representa o tipo de string e por omissão é unicode
+    Em Python temos algumas variações de strings, cada qual é designada por um prefixo, que é uma letra que representa o tipo de string e por omissão é unicode.
+    Cada tipo de string tem um prefixo, que são "b" bytes, "f" format, "r" raw e "u" unicode.
+
+
+
+Como unicode é padrão, podemos omitir o prefixo:
+
+print(u'Foo' == 'Foo')
+
+True
+
+
+
 
 bytes (b)
 
