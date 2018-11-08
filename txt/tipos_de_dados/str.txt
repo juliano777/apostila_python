@@ -106,7 +106,7 @@ Tipos de Strings em Python
 
 Como unicode é padrão, podemos omitir o prefixo:
 
-print(u'Foo' == 'Foo')
+> print(u'Foo' == 'Foo')
 
 True
 
@@ -254,6 +254,11 @@ str
     Ao ser decodificado passa a ser uma string.
 
 
+Format Strings
+
+    Ou também conhecidas como "f strings" foi um recurso adicionado à versão 3.6 de Python.
+
+
 	
 Caracteres Especiais
 
@@ -296,7 +301,7 @@ Caracteres Especiais
 
 
 
-Operações de Strings – help(str)
+Operações de Strings
 
 Concatenação
 
@@ -488,7 +493,7 @@ Cód: 00123
 Strings Regex
 
 	São strings que iniciam com um "r" antes de apóstrofos ou aspas.
-	Todos caracteres detro da mesma são interpretados literalmente.
+	Todos caracteres dentro da mesma são interpretados literalmente.
 	Como o próprio nome sugere, esse tipo de string é utilizado para expressões regulares.
 
 r = r'\n'
