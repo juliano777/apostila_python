@@ -372,6 +372,27 @@ Exibir a mensagem:
 Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul
 
 
+Raw Strings (r)
+
+    É o tipo de string cujo conteúdo é interpretado literalmente.
+
+
+
+Exemplo de print com raw string:
+
+> print(r'foo\tbar')
+
+foo\tbar
+
+    É de se notar que a string não teve interpretação do caractere especial de tab (\t), ou seja, não houve qualquer interpretação.
+
+
+
+Unicode Strings (u)
+
+    
+
+
 	
 Caracteres Especiais
 
