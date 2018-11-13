@@ -134,13 +134,23 @@ Caracteres Especiais
 
 Formatação
 
-Finally, the type determines how the data should be presented.
+    Determina como os dados serão representados.
 
-The available string presentation types are:
+- String
 
-    Type 	Meaning
-    's' 	String format. This is the default type for strings and may be omitted.
-    None 	The same as 's'.
+    s - Padrão e pode ser omitido.
+
+
+
+wewe:
+
+> 
+
+
+
+
+
+
 
 The available integer presentation types are:
 
