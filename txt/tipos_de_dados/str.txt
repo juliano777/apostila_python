@@ -431,6 +431,18 @@ foo\tbar
 
 Unicode Strings (u)
 
+    É o padrão para uma string em Python, não há a necessidade de adicionar o sufixo "u" antes do apóstrofo ou aspas.
+
+
+
+Comparação de strings:
+
+> u'Foo' == 'Foo'
+
+True
+
+    Das duas strings, somente a primeira tem o sufixo "u".
+
 
 
 	
