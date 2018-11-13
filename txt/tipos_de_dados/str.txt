@@ -132,7 +132,76 @@ Caracteres Especiais
 +---------------------+----------------------------------------------------------+------------------------------+
 
 
+Formatação
 
+Finally, the type determines how the data should be presented.
+
+The available string presentation types are:
+
+    Type 	Meaning
+    's' 	String format. This is the default type for strings and may be omitted.
+    None 	The same as 's'.
+
+The available integer presentation types are:
+
+    Type 	Meaning
+    'b' 	Binary format. Outputs the number in base 2.
+    'c' 	Character. Converts the integer to the corresponding unicode character before printing.
+    'd' 	Decimal Integer. Outputs the number in base 10.
+    'o' 	Octal format. Outputs the number in base 8.
+    'x' 	Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9.
+    'X' 	Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9.
+    'n' 	Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters.
+    None 	The same as 'd'.
+
+In addition to the above presentation types, integers can be formatted with the floating point presentation types listed below (except 'n' and None). When doing so, float() is used to convert the integer to a floating point number before formatting.
+
+The available presentation types for floating point and decimal values are:
+
+    Type 	Meaning
+    'e' 	Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.
+    'E' 	Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.
+    'f' 	Fixed point. Displays the number as a fixed-point number. The default precision is 6.
+    'F' 	Fixed point. Same as 'f'.
+    'g' 	
+
+    General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude.
+
+    The precise rules are as follows: suppose that the result formatted with presentation type 'e' and precision p-1 would have exponent exp. Then if -4 <= exp < p, the number is formatted with presentation type 'f' and precision p-1-exp. Otherwise, the number is formatted with presentation type 'e' and precision p-1. In both cases insignificant trailing zeros are removed from the significand, and the decimal point is also removed if there are no remaining digits following it.
+
+    Positive and negative infinity, positive and negative zero, and nans, are formatted as inf, -inf, 0, -0 and nan respectively, regardless of the precision.
+
+    A precision of 0 is treated as equivalent to a precision of 1. The default precision is 6.
+    'G' 	General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too.
+    'n' 	Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters.
+    '%' 	Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.
+    None 	The same as 'g'.
+
+
+
+print('%(variavel)s' % {'variavel': 'valor'})
+valor
+
+# Variável que vai receber os valores formatados
+foo = '''Produto: %(prod)s
+Preco: R$ %(preco).2f
+Cód: %(cod)05d'
+'''
+
+#Dicionário com os valores pra passar à variável 
+bar = {
+'cod': 123, 
+'prod': 'pente para careca',
+'preco': .5,
+}
+
+#Criação de variável por interpolação
+foobar = foo % bar
+
+print(foobar)
+Produto: pente para careca
+Preco: R$ 0.50 
+Cód: 00123
 
 
 	
@@ -445,11 +514,6 @@ True
 
 
 
-	
-
-
-
-
 Operações de Strings
 
 Concatenação
@@ -565,90 +629,6 @@ Quantidade: 00197
 print('%7s' % 'abcde')
   abcde
 
-
-
-Formatação
-
-Finally, the type determines how the data should be presented.
-
-The available string presentation types are:
-
-    Type 	Meaning
-    's' 	String format. This is the default type for strings and may be omitted.
-    None 	The same as 's'.
-
-The available integer presentation types are:
-
-    Type 	Meaning
-    'b' 	Binary format. Outputs the number in base 2.
-    'c' 	Character. Converts the integer to the corresponding unicode character before printing.
-    'd' 	Decimal Integer. Outputs the number in base 10.
-    'o' 	Octal format. Outputs the number in base 8.
-    'x' 	Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9.
-    'X' 	Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9.
-    'n' 	Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters.
-    None 	The same as 'd'.
-
-In addition to the above presentation types, integers can be formatted with the floating point presentation types listed below (except 'n' and None). When doing so, float() is used to convert the integer to a floating point number before formatting.
-
-The available presentation types for floating point and decimal values are:
-
-    Type 	Meaning
-    'e' 	Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.
-    'E' 	Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.
-    'f' 	Fixed point. Displays the number as a fixed-point number. The default precision is 6.
-    'F' 	Fixed point. Same as 'f'.
-    'g' 	
-
-    General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude.
-
-    The precise rules are as follows: suppose that the result formatted with presentation type 'e' and precision p-1 would have exponent exp. Then if -4 <= exp < p, the number is formatted with presentation type 'f' and precision p-1-exp. Otherwise, the number is formatted with presentation type 'e' and precision p-1. In both cases insignificant trailing zeros are removed from the significand, and the decimal point is also removed if there are no remaining digits following it.
-
-    Positive and negative infinity, positive and negative zero, and nans, are formatted as inf, -inf, 0, -0 and nan respectively, regardless of the precision.
-
-    A precision of 0 is treated as equivalent to a precision of 1. The default precision is 6.
-    'G' 	General format. Same as 'g' except switches to 'E' if the number gets too large. The representations of infinity and NaN are uppercased, too.
-    'n' 	Number. This is the same as 'g', except that it uses the current locale setting to insert the appropriate number separator characters.
-    '%' 	Percentage. Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.
-    None 	The same as 'g'.
-
-
-
-print('%(variavel)s' % {'variavel': 'valor'})
-valor
-
-# Variável que vai receber os valores formatados
-foo = '''Produto: %(prod)s
-Preco: R$ %(preco).2f
-Cód: %(cod)05d'
-'''
-
-#Dicionário com os valores pra passar à variável 
-bar = {
-'cod': 123, 
-'prod': 'pente para careca',
-'preco': .5,
-}
-
-#Criação de variável por interpolação
-foobar = foo % bar
-
-print(foobar)
-Produto: pente para careca
-Preco: R$ 0.50 
-Cód: 00123
-
-
-Strings Regex
-
-	São strings que iniciam com um "r" antes de apóstrofos ou aspas.
-	Todos caracteres dentro da mesma são interpretados literalmente.
-	Como o próprio nome sugere, esse tipo de string é utilizado para expressões regulares.
-
-r = r'\n'
-
-print(r)
-\n
 
 Docstrings
 
