@@ -134,17 +134,43 @@ Caracteres Especiais
 
 Formatação
 
-    Determina como os dados serão representados.
 
-- String
-
-    s - Padrão e pode ser omitido.
+Formatação Básica
 
 
+Interpolação:
 
-wewe:
+> '%s %s' % ('foo', 'bar')
 
-> 
+'foo bar'
+
+
+
+Método format:
+
+> '{} {}'.format('foo', 'bar')
+
+'foo bar'
+
+
+
+Valores numéricos decimais:
+
+> '%d %d' % (70, 90)
+
+> '{} {}'.format(70, 90)
+
+'70 90'
+
+
+
+String com índice posicional:
+
+> '{1} só se faz {2} quando se {0}'.format('divide', 'Conhecimento', 'crescer')
+
+'Conhecimento só se faz crescer quando se divide'
+
+
 
 
 
