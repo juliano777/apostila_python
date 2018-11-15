@@ -174,7 +174,7 @@ String com índice posicional:
 
 Métodos String e de Representação
 
-    Em objetos temos os dunders str e repr ("__str__" e "__repr__").
+    Em objetos temos os dunders str e repr ("__str__" e "__repr__") que podem ser usados em uma string.
 
 
 
@@ -197,6 +197,16 @@ Valores dos métodos __str__ e __repr__ da classe Foo:
 > '{0!s} {0!r}'.format(Foo())
 
 'STRING REPRESENTAÇÃO'
+
+
+
+ewioeowieowo:
+
+> '%r %a' % (Foo(), Foo())
+
+> '{0!r} {0!a}'.format(Foo())
+
+'REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O'
 
 
 
