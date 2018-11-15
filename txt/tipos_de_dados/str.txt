@@ -212,7 +212,11 @@ Método de representação e em caracteres ASCII:
 
 Preenchimento (padding) e Alinhamento de Strings
 
-> In [30]: '%7s' % 'foo'
+
+
+Alinhamento à direita dentro de 7 colunas:
+
+> '%7s' % 'foo'
 
 > '{:>7}'.format('foo')
 
@@ -220,7 +224,7 @@ Preenchimento (padding) e Alinhamento de Strings
 
 
 
-dssdçdsçllsdçl;
+Alinhamento à esquerda dentro de 7 colunas:
 
 > '%-7s' % 'foo'
 
@@ -240,7 +244,7 @@ dklsdldskl:
 
 
 
-sldsdldlskl:
+Alinhamento à direita dentro de 7 colunas preenchendo com o caractere "_":
 
 > '{:_>7}'.format('foo')
 
@@ -248,7 +252,7 @@ sldsdldlskl:
 
 
 
-lsdklskdldsklk:
+Alinhamento centralizado dentro de 7 colunas:
 
 > '{:^7}'.format('foo')
 
