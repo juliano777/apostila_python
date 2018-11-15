@@ -172,6 +172,38 @@ String com índice posicional:
 
 
 
+Métodos String e de Representação
+
+    Em objetos temos os dunders str e repr ("__str__" e "__repr__").
+
+
+
+Criação de uma classe de exemplo:
+
+> class Foo(object):
+
+    def __str__(self):
+        return 'STRING'
+
+    def __repr__(self):
+        return 'REPRESENTAÇÃO'
+
+
+
+Valores dos métodos __str__ e __repr__ da classe Foo:
+
+> '%s %r' % (Foo(), Foo())
+
+> '{0!s} {0!r}'.format(Foo())
+
+'STRING REPRESENTAÇÃO'
+
+
+
+
+
+
+
 
 
 
