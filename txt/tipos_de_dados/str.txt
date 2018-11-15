@@ -200,7 +200,7 @@ Valores dos métodos __str__ e __repr__ da classe Foo:
 
 
 
-ewioeowieowo:
+Método de representação e em caracteres ASCII:
 
 > '%r %a' % (Foo(), Foo())
 
@@ -208,6 +208,25 @@ ewioeowieowo:
 
 'REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O'
 
+
+
+Preenchimento (padding) e Alinhamento de Strings
+
+> In [30]: '%7s' % 'foo'
+
+> '{:>7}'.format('foo')
+
+'    foo'
+
+
+
+dssdçdsçllsdçl;
+
+> '%-7s' % 'foo'
+
+> '{:7}'.format('foo')
+
+'foo    '
 
 
 
