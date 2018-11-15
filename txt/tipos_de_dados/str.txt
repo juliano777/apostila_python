@@ -166,9 +166,9 @@ Valores numéricos decimais:
 
 String com índice posicional:
 
-> 'O {1} {2} quando se {0}'.format('compartilha', 'Conhecimento', 'aumenta')
+> 'O {1} {2} quando é {0}.'.format('compartilhado', 'conhecimento', 'aumenta')
 
-'O Conhecimento aumenta quando se compartilha'
+'O Conhecimento aumenta quando se compartilhado'
 
 
 
