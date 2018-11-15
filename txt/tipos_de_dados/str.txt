@@ -236,7 +236,15 @@ Alinhamento à esquerda dentro de 7 colunas:
 
 
 
-dklsdldskl:
+Alinhamento centralizado dentro de 7 colunas:
+
+> '{:^7}'.format('foo')
+
+'  foo  '
+
+
+
+Alinhamento à esquerda dentro de 7 colunas preenchendo com o caractere "_":
 
 > '{:_<7}'.format('foo')
 
@@ -252,11 +260,16 @@ Alinhamento à direita dentro de 7 colunas preenchendo com o caractere "_":
 
 
 
-Alinhamento centralizado dentro de 7 colunas:
+Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere "_":
 
 > '{:^7}'.format('foo')
 
-'  foo  '
+'__foo__'
+
+
+
+
+
 
 
 
