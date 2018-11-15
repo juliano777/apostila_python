@@ -226,7 +226,33 @@ dssdçdsçllsdçl;
 
 > '{:7}'.format('foo')
 
+> '{:<7}'.format('foo')
+
 'foo    '
+
+
+
+dklsdldskl:
+
+> '{:_<7}'.format('foo')
+
+'foo____'
+
+
+
+sldsdldlskl:
+
+> '{:_>7}'.format('foo')
+
+'____foo'
+
+
+
+lsdklskdldsklk:
+
+> '{:^7}'.format('foo')
+
+'  foo  '
 
 
 
