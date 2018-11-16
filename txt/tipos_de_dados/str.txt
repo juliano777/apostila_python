@@ -3,6 +3,8 @@ Sobre Strings
     Em Ciências da Computação chamamos de string um texto, também conhecido como cadeia de caracteres.
     Strings representam textos, frases ou palavras.
     É um recurso muito caro em termos de recursos computacionais (processamento e memória) e que portanto deve ser utilizado com cuidado, pois escalabilidade é algo que deve ser sempre um fator a ser levado em conta.
+    
+    https://docs.python.org/3/library/string.html
 
 
 Strings em Python
