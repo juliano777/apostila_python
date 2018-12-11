@@ -336,9 +336,25 @@ The available presentation types for floating point and decimal values are:
 
     Type 	Meaning
     'e' 	Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.
+
+> format(1000, '.3e')
+
+'1.000e+03'
+
     'E' 	Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.
+
+> format(1000, '.3E')
+
+'1.000E+03'
+
     'f' 	Fixed point. Displays the number as a fixed-point number. The default precision is 6.
     'F' 	Fixed point. Same as 'f'.
+
+> format(1000, '10.2f')
+
+'   1000.00'
+
+    
     'g' 	
 
     General format. For a given precision p >= 1, this rounds the number to p significant digits and then formats the result in either fixed-point format or in scientific notation, depending on its magnitude.
