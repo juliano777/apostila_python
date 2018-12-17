@@ -1204,8 +1204,8 @@ Na frase em latim abaixo, quantas vezes aparece a letra "u"?:
 
 
 
-bla bla bla:
+Quantas vezes aparece a sequência de caracteres "foo"?:
 
-> foo.count('S')
+> 'XXXfooXXXfooXXXbar'.count('foo')
 
 2
