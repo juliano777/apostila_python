@@ -342,12 +342,21 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 '1.000E+03'
 
-    'f' 	Fixed point. Displays the number as a fixed-point number. The default precision is 6.
-    'F' 	Fixed point. Same as 'f'.
+
+
+"f" ou "F" faz exibição de número com ponto flutuante podendo determinar a precisão, cujo padrão é 6.
 
 > format(1000, '10.2f')
 
 '   1000.00'
+
+> format(1000, 'F')
+
+'1000.000000'
+
+
+
+
 
     
     'g' 	
