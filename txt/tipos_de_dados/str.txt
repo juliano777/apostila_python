@@ -1008,15 +1008,37 @@ bla bla bla:
 
 139876394136384
 
+
+
+bla bla bla:
+
 > s = 'Black'
 
-id(s)
+
+
+bla bla bla:
+
+> id(s)
+
 140159159537600
+
+
+
+bla bla bla:
 
 s += ' Sabbath'
 
-id(s)
+
+
+bla bla bla:
+
+> id(s)
+
 140159122296368
+
+
+
+bla bla bla:
 
 > print(s)
 
