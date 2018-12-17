@@ -356,6 +356,10 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 
 
+"g" ou "G"; formato geral. Para uma dada precisão, sendo essa precisão maior ou igual a ' (um)
+
+
+
 
 
     
