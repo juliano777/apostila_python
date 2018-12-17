@@ -166,6 +166,72 @@ Valores numéricos decimais:
 
 
 
+bla bla bla:
+
+> print('%(variavel)s' % {'variavel': 'valor'})
+
+valor
+
+
+
+bla bla bla:
+
+> # Variável que vai receber os valores formatados
+foo = '''Produto: %(prod)s
+Preco: R$ %(preco).2f
+Cód: %(cod)05d
+'''
+
+
+
+bla bla bla:
+
+> d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
+
+
+
+bla bla bla:
+
+>  print(foo % d)
+
+Produto: Pente
+Preco: R$ 3.50
+Cód: 00157
+
+
+
+bla bla bla:
+
+> # Variável que vai receber os valores formatados
+foo = '''Produto: {prod}
+Preco: R$ {preco:.2f}
+Cód: {cod:05d}
+'''
+
+
+
+bla bla bla:
+
+> print(foo.format(**d))
+
+Produto: Pente
+Preco: R$ 3.50
+Cód: 00157
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 String com índice posicional:
 
 > 'O {1} {2} quando é {0}.'.format('compartilhado', 'conhecimento', 'aumenta')
@@ -398,33 +464,6 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 '     1E+03'
 
-
-print('%(variavel)s' % {'variavel': 'valor'})
-valor
-
-# Variável que vai receber os valores formatados
-foo = '''Produto: %(prod)s
-Preco: R$ %(preco).2f
-Cód: %(cod)05d'
-'''
-
-#Dicionário com os valores pra passar à variável 
-bar = {
-'cod': 123, 
-'prod': 'pente para careca',
-'preco': .5,
-}
-
-#Criação de variável por interpolação
-foobar = foo % bar
-
-print(foobar)
-Produto: pente para careca
-Preco: R$ 0.50 
-Cód: 00123
-
-
-	
 
 
 Tipos de Strings em Python
