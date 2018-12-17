@@ -356,19 +356,22 @@ o) Formato Octal; saída numérica na base 8 (octal):
 
 '0o011'
 
-    'x' 	Hex format. Outputs the number in base 16, using lower- case letters for the digits above 9.
+
+
+x ou X) Formato Hexadecimal; saída numérica na base 16 (hexadecimal), a saída é conforme o "x" maiúsculo ou minúsculo:
 
 > format(200, '#05x')
 
 '0x0c8'
 
-    'X' 	Hex format. Outputs the number in base 16, using upper- case letters for the digits above 9.
+> format(200, '#05X')
 
-> format(200, '#05x')
+'0X0C8'
 
-'0x0c8'
 
-    'n' 	Number. This is the same as 'd', except that it uses the current locale setting to insert the appropriate number separator characters.
+
+n) Numérico; o mesmo que "d", exceto que ele usa as configurações de idioma (locale) para exibir caracteres:
+
 
 > format(31259.74, 'n')
 
@@ -379,7 +382,7 @@ o) Formato Octal; saída numérica na base 8 (octal):
 '31259.8'
 
 
-    None 	The same as 'd'.
+None) Nulo; o mesmo que "d":
 
 > format(0b111)
 
