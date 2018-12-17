@@ -47,39 +47,39 @@ True
 bar = Bar()
 
 
-bool(foo)
+> bool(foo)
 True
 
-bool(bar)
+> bool(bar)
 False
 
-bool(foo) & (not bool(bar))
+> bool(foo) & (not bool(bar))
 True
 
-bool(foo) & bool(bar)
+> bool(foo) & bool(bar)
 False
 
-class Spam(object):
+> class Spam(object):
     def __len__(self):
         return 0
      
 
-spam = Spam()
+> spam = Spam()
 
-bool(spam)
+> bool(spam)
 False
 
-class Spam(object):
+> class Spam(object):
     def __len__(self):
         return 7
      
 
-spam = Spam()
+> spam = Spam()
 
-bool(spam)
+> bool(spam)
 True
 
-class Spam(object):
+> class Spam(object):
     def __nonzero__(self):
         return True
 
@@ -89,9 +89,9 @@ class Spam(object):
 O método __nonzero__ retorna um valor verdadeiro e o método __len__ um falso.
 Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
-spam = Spam()
+> spam = Spam()
 
-bool(spam)
+> bool(spam)
 True
 
 O retorno foi verdadeiro.
@@ -105,9 +105,9 @@ class Spam(object):
     def __nonzero__(self):
         return True
 
-spam = Spam()
+> spam = Spam()
 
-bool(spam)
+> bool(spam)
 False
 
 Conclusão: o que prevalece é o retorno do método declarado primeiro, ou __nonzero__ ou __len__.
