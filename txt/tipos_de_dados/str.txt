@@ -808,72 +808,22 @@ Slice - Corte de string - 'string'[inicio:fim - 1:incremento]:
 'us'
 
 > print("Curso de Python"[9:])
+
 'Python'
 
-print("Curso de Python"[:5])
+> print("Curso de Python"[:5])
+
 'Curso'
 
-print("Curso de Python"[::])
+> print("Curso de Python"[::])
+
 'Curso de Python'
 
-print("Curso de Python"[::-1]) # String reversa
+> print("Curso de Python"[::-1]) # String reversa
+
 'nohtyP ed osruC'
 
 
-sql = "SELECT campo1, campo2 FROM tabela WHERE campo3 = 'valor'"
-
-
-Interpolação
-
-	Na interpolação de strings o caractere de porcentagem “%” é utilizado para invocar um valor (seja ele texto ou numérico) dentro de uma string ou até mesmo pra fazer algum tipo de formatação.
-
-<ver tabela em tmp.odt>
-
-a = "Total de itens: %d" # string que recebe um valor decimal 
-
-print(a % 10) 
-Total de itens: 10
-
-b = "Custo: %f" # string que recebe um valor de ponto flutuante 
-
-custo = 5.50
-
-print(b % custo)
-Custo: 5.500000
-
-print("Cliente: %s, Valor %f" % ("Organizações XYZ", 40.30))
-Cliente: Organizações XYZ, Valor 40.300000'
-
-'''
-Utiliza um número junto ao símbolo porcentagem para reservar um tamanho total à string:
-'''
-a = "Quantidade: %4d" 
-
-print(a % 3)
-Quantidade:    3
-
-print(a % 53)
-Quantidade:   53
-
-print(a % 120)
-Quantidade:  120
-
-print( a % 4587)
-Quantidade: 4587
-
-print(a % 25000)
-Quantidade: 25000
-
-x = "Quantidade: %.5d" # Usando a forma %.nd, preenche com até n zeros à esquerda
-
-print(x % 0)
-Quantidade: 00000
-
-print(x % 197)
-Quantidade: 00197
-
-print('%7s' % 'abcde')
-  abcde
 
 # ============================================================================
 
@@ -884,12 +834,16 @@ Docstrings
 	É muito útil para fins de documentação.
 	Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ ou a função help.
 
+
+
+Criação de uma função:
+
 > def foo():
     'Uma simples função'
 
 
 
-bla bla bla:
+Exibe a docstring da função:
 
 > print(foo.__doc__)
 
@@ -897,7 +851,7 @@ Uma simples função
 
 
 
-bla bla bla:
+Criação de função:
 
 > def bar():
     '''
@@ -909,7 +863,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Exibe a docstring da função:
 
 > print(bar.__doc__)
 
@@ -920,7 +874,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criação de uma classe:
 
 > class Foo(object):
     '''
@@ -930,7 +884,7 @@ bla bla bla:
 
 
 
-bla bla bla:    
+Exibe a docstring da classe:    
 
 > print(Foo.__doc__)
 
@@ -939,7 +893,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Help da classe:
 
 > help(Foo)
 
