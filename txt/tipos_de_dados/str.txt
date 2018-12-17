@@ -1045,21 +1045,28 @@ bla bla bla:
 Black Sabbath
 
 
+
 Concatenação de Strings em Loops
 
 
-Método 1 ineficaz:
+Método 1 - Ineficaz
 
-# Criação de uma string vazia
+Criação de uma string vazia:
 
 > s = ''
 
-# Loop de concatenação
+
+
+Loop de concatenação:
 > for i in range(50):
     s += str(i)
-     
-# String pronta
+
+
+
+String pronta:
+
 > s
+
 '012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
 
 	Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
@@ -1067,7 +1074,7 @@ Método 1 ineficaz:
 
 
 
-Método 2 eficaz:
+Método 2 Eficaz
 
 > s = []
 
