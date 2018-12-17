@@ -324,32 +324,33 @@ Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere "_":
 
 
 
+Representações de Inteiros 
 
-
-
-
-The available integer presentation types are:
-
-    Type 	Meaning
-    'b' 	Binary format. Outputs the number in base 2.
+b) Formato binário; número de saída na base 2:
 
 > format(10, '#05b')
 
 '0b1010'
 
-    'c' 	Character. Converts the integer to the corresponding unicode character before printing.
+
+
+c) Caractere; converte o inteiro para o caractere unicode correspondente:
 
 > format(93, 'c')
 
 ']'
 
-    'd' 	Decimal Integer. Outputs the number in base 10.
+
+
+d) Inteiro Decimal; saída numérica na base 10 (decimal):
 
 > format(0b111, '#05d')
 
 '00007'
 
-    'o' 	Octal format. Outputs the number in base 8.
+
+
+o)  	Octal format. Outputs the number in base 8.
 
 > format(9, '#05o')
 
