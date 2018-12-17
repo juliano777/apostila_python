@@ -762,48 +762,52 @@ Concatenação:
 
 Curso de Python
 
-> print('<' + 'Python' * 3 + '>')
-
-<PythonPythonPython>
-
 > spam = "Curso".__add__(" de ".__add__("Python"))
 
 > print(spam)
 
 Curso de Python
 
-Multiplicação
 
-print('<' + 'Python' * 3 + '>')
+
+Multiplicação:
+
+> print('<' + 'Python' * 3 + '>')
+
 <PythonPythonPython>
 
-print('<' + 'Python'.__mul__(3) + '>')
+> print('<' + 'Python'.__mul__(3) + '>')
+
 '<PythonPythonPython>'
 
 
-Split
-Quebra a string em palavras formando uma lista
 
-print('Curso de Python'.split())
+Split - Quebra a string em palavras formando uma lista:
+
+> print('Curso de Python'.split())
+
 ['Curso', 'de', 'Python']
 
-print('Curso de Python'.split('de')) # Com passagem de parâmetro a função formará a lista de palavras retirando a string de parâmetro
+> print('Curso de Python'.split('de'))
+
 ['Curso ', ' Python']
 
 
-Slice
-Corte de string 'string'[inicio:fim - 1:incremento]
+Slice - Corte de string - 'string'[inicio:fim - 1:incremento]:
 
-print("Curso de Python”[0])
+> print("Curso de Python”[0])
+
 'C'
 
-print("Curso de Python"[1:5])
+> print("Curso de Python"[1:5])
+
 'urso'
 
-print("Curso de Python"[1:5:2])
+> print("Curso de Python"[1:5:2])
+
 'us'
 
-print("Curso de Python"[9:])
+> print("Curso de Python"[9:])
 'Python'
 
 print("Curso de Python"[:5])
