@@ -1150,49 +1150,44 @@ Exibindo o valor da variável:
 Python
 
 
-- find & index (dif)
+- find & index (diferença entre ambos)
 
 
 
-bla bla bla:
+Dada a seguinte string:
 
 > foo = 'Python FreeBSD PostgreSQL'
+
+Temos seus caracteres e suas respectivas posições:
 
 P|y|t|h|o|n| |F|r|e|e |B |S |D |  |P |o |s |t |g |r |e |S |Q |L
 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24
 
 
 
-bla bla bla:
+A partir de qual posição aparece a string?:
 
 > foo.index('FreeBSD')
 
+> foo.find('FreeBSD')
+
 7
 
-
-
-bla bla bla:
-
-foo.find('FreeBSD')
-7
+    No exemplo dado o texto existe na string. E se não existisse?
 
 
 
-bla bla bla:
+Buscando um texto que não existe dentro da string:
 
 > foo.index('Linux')
 
 ValueError: substring not found
 
-Lembrando que...
-
-
-
-bla bla bla:
-
 > foo.find('Linux')
 
 -1
+
+    
 
 
 
