@@ -974,21 +974,13 @@ Bar
 
 
 
-bla bla bla:
-
-> id(foo)
-
-139876394136384
-
-
-
-bla bla bla:
+Criação de uma nova string:
 
 > s = 'Black'
 
 
 
-bla bla bla:
+Id da string:
 
 > id(s)
 
@@ -996,21 +988,23 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criando uma nova string com o mesmo nome da anterior via concatenação:
 
 s += ' Sabbath'
 
 
 
-bla bla bla:
+Id da nova variável:
 
 > id(s)
 
 140159122296368
 
+    Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.
 
 
-bla bla bla:
+
+Exibindo a string:
 
 > print(s)
 
