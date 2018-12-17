@@ -330,18 +330,13 @@ The available integer presentation types are:
 
 '7'
 
-In addition to the above presentation types, integers can be formatted with the floating point presentation types listed below (except 'n' and None). When doing so, float() is used to convert the integer to a floating point number before formatting.
 
-The available presentation types for floating point and decimal values are:
 
-    Type 	Meaning
-    'e' 	Exponent notation. Prints the number in scientific notation using the letter ‘e’ to indicate the exponent. The default precision is 6.
+Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precisão padrão é 6:
 
 > format(1000, '.3e')
 
 '1.000e+03'
-
-    'E' 	Exponent notation. Same as 'e' except it uses an upper case ‘E’ as the separator character.
 
 > format(1000, '.3E')
 
