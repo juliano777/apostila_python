@@ -74,6 +74,7 @@ SELECT * FROM musica WHERE artista = 'Mozart';
 Strings de Múltiplas Linhas
 
     
+
 É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:
 
 > s1 = '''
