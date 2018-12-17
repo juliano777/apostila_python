@@ -350,7 +350,7 @@ d) Inteiro Decimal; saída numérica na base 10 (decimal):
 
 
 
-o)  	Octal format. Outputs the number in base 8.
+o) Formato Octal; saída numérica na base 8 (octal):
 
 > format(9, '#05o')
 
