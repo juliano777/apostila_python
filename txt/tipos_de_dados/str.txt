@@ -331,6 +331,7 @@ Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere "_":
 '__foo__'
 
 
+# ============================================================================
 
 Representações de Inteiros 
 
@@ -449,6 +450,7 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 '     1E+03'
 
+# ============================================================================
 
 
 Tipos de Strings em Python
@@ -756,6 +758,8 @@ True
 
     Das duas strings, somente a primeira tem o sufixo "u".
 
+# ============================================================================
+
 
 
 Operações de Strings
@@ -873,6 +877,8 @@ Quantidade: 00197
 print('%7s' % 'abcde')
   abcde
 
+# ============================================================================
+
 
 Docstrings
 
@@ -952,6 +958,8 @@ class Foo(__builtin__.object)
  |  
  |  __weakref__
  |      list of weak references to the object (if defined)
+
+# ============================================================================
 
 
 
@@ -1123,6 +1131,8 @@ bla bla bla:
 	Foi criada uma lista de strings no loop em que a cada iteração é utilizado o método append da lista para adicionar o item atual.
 	No final é utilizado o método de string join que utiliza como separador uma string vazia ('') juntando em uma string (o novo s) todos os valores da lista.
 	A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.
+
+# ============================================================================
 
 
 
