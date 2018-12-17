@@ -550,13 +550,9 @@ A partir das strings de bytes obter o texto:
 
 Sem caracteres especiais
 
-
-
 > print(sb2.decode('utf-8'))
 
 Macarrão
-
-
 
 > print(sb3.decode('utf-8'))
 
