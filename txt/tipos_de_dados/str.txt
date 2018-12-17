@@ -872,40 +872,64 @@ Docstrings
 	É muito útil para fins de documentação.
 	Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ ou a função help.
 
-def foo():
-    'Uma simples função'	
+> def foo():
+    'Uma simples função'
 
-print(foo.__doc__)
+
+
+bla bla bla:
+
+> print(foo.__doc__)
+
 Uma simples função
 
-def bar():
+
+
+bla bla bla:
+
+> def bar():
     '''
     Mais outra
     função
     que não faz 
     nada
-    '''    
+    '''
 
-print(bar.__doc__)
+
+
+bla bla bla:
+
+> print(bar.__doc__)
 
     Mais outra
     função
     que não faz 
     nada
 
-class Foo(object):
+
+
+bla bla bla:
+
+> class Foo(object):
     '''
     Uma classe
     de teste
     '''
-    
 
-In [142]: print(Foo.__doc__)
+
+
+bla bla bla:    
+
+> print(Foo.__doc__)
 
     Uma classe
     de teste
 
-help(Foo)
+
+
+bla bla bla:
+
+> help(Foo)
 
 Help on class Foo in module __main__:
 
@@ -922,28 +946,67 @@ class Foo(__builtin__.object)
  |      list of weak references to the object (if defined)
 
 
+
 Imutabilidade
+
+
+
+bla bla bla:
 
 > foo = 'bar'
 
-foo[0]
+
+bla bla bla:
+
+> foo[0]
+
 'b'
+
+
+
+bla bla bla:
+
+foo[0] = 'B'
 
 TypeError: 'str' object does not support item assignment
 
+
+
+bla bla bla:
+
 > id(foo)
 
-140159160571104
+139876439773904
+
+
+
+bla bla bla:
 
 > foo = 'B' + foo[1:]
+
+
+
+bla bla bla:
 
 > id(foo)
 
 140159122071800
 
+
+
+bla bla bla:
+
 > print(foo)
 
 Bar
+
+
+
+bla bla bla:
+
+> id(foo)
+
+139876394136384
 
 > s = 'Black'
 
