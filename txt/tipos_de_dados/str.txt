@@ -1209,11 +1209,3 @@ bla bla bla:
 > foo.count('S')
 
 2
-
-
-
-bla bla bla:
-
-> foo.count('ee')
-
-1
