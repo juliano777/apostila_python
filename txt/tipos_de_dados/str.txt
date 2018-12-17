@@ -1187,33 +1187,8 @@ ValueError: substring not found
 
 -1
 
-    
-
-
-
-bla bla bla:
-
-> foo[-1]
-
-'L'
-
-????
-
-
-
-bla bla bla:
-
-> foo[foo.find('Linux')]
-
-'L'
-
-
-
-bla bla bla:
-
-> foo[foo.index('Linux')]
-
-ValueError: substring not found
+    Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.
+    O -1 não deve ser confundido como último elemento.
 
 
 
