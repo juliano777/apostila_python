@@ -719,6 +719,7 @@ Exibir a mensagem:
 Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul
 
 
+
 Raw Strings (r)
 
     É o tipo de string cujo conteúdo é interpretado literalmente.
@@ -755,21 +756,23 @@ True
 
 Operações de Strings
 
-Concatenação
+Concatenação:
 
-print("Curso" + " de " + "Python")
+> print("Curso" + " de " + "Python")
+
 Curso de Python
 
-print('<' + 'Python' * 3 + '>')
+> print('<' + 'Python' * 3 + '>')
+
 <PythonPythonPython>
 
+> spam = "Curso".__add__(" de ".__add__("Python"))
 
-spam = "Curso".__add__(" de ".__add__("Python"))
+> print(spam)
 
-print(spam)
 Curso de Python
 
-.3.2 Multiplicação
+Multiplicação
 
 print('<' + 'Python' * 3 + '>')
 <PythonPythonPython>
