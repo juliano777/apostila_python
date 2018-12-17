@@ -1091,17 +1091,17 @@ Exibindo o valor da variável:
 Métodos de Strings
 
 
-- join
+- join; junta elementos de uma lista ou tupla utlizando uma string.
 
 
 
-bla bla bla:
+Criação de uma lista:
 
 > foo = list('Python')
 
 
 
-bla bla bla:
+Exibe a lista:
 
 > print(foo)
 
@@ -1109,13 +1109,13 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criação de uma nova variável juntando os elementos da lista com uma string vazia:
 
 > bar = ''.join(foo)
 
 
 
-bla bla bla:
+Exibindo a nova string:
 
 > print(bar)
 
@@ -1123,13 +1123,13 @@ Python
 
 
 
-bla bla bla:
+Criando uma tupla:
 
 > foo = tuple('Python')
 
 
 
-bla bla bla:
+Exibindo os elementos da tupla:
 
 > print(foo)
 
@@ -1137,13 +1137,13 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criação de uma nova variável juntando os elementos da tupla com uma string vazia:
 
 > bar = ''.join(foo)
 
 
 
-bla bla bla:
+Exibindo o valor da variável:
 
 > print(bar)
 
