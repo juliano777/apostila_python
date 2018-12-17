@@ -153,8 +153,8 @@ Caracteres Especiais
 
 Formatação
 
-
-Formatação Básica
+    Há casos que é necessário fazer formatação de strings colocando uma string como um template.
+    Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), posteriormente foi adicionado o método format.
 
 
 Interpolação:
@@ -183,7 +183,7 @@ Valores numéricos decimais:
 
 
 
-bla bla bla:
+Interpolação pegando o valor de um dicionário:
 
 > print('%(variavel)s' % {'variavel': 'valor'})
 
@@ -191,25 +191,24 @@ valor
 
 
 
-bla bla bla:
+Variável que vai receber os valores formatados:
 
-> # Variável que vai receber os valores formatados
-foo = '''Produto: %(prod)s
+> foo = '''Produto: %(prod)s
 Preco: R$ %(preco).2f
 Cód: %(cod)05d
 '''
 
 
 
-bla bla bla:
+Declaraçãoi de um dicionário que conterá as chaves e valores desejados:
 
 > d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
 
 
 
-bla bla bla:
+Exibindo o resultado via interpolação:
 
->  print(foo % d)
+> print(foo % d)
 
 Produto: Pente
 Preco: R$ 3.50
@@ -217,17 +216,7 @@ Cód: 00157
 
 
 
-bla bla bla:
-
-> # Variável que vai receber os valores formatados
-foo = '''Produto: {prod}
-Preco: R$ {preco:.2f}
-Cód: {cod:05d}
-'''
-
-
-
-bla bla bla:
+Exibindo o resultado via método format:
 
 > print(foo.format(**d))
 
