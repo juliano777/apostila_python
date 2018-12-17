@@ -501,12 +501,9 @@ Exibir o conteúdo das strings de bytes:
 
 b'Sem caracteres especiais'
 
-
-
 > print(sb2)
 
 b'Macarr\xc3\xa3o'
-
 
 
 > print(sb3)
@@ -522,11 +519,11 @@ b'A\xc3\xa7\xc3\xa3o'
 Conversão de bytes:
 
 > print(b'\xc3\xa3'.decode('utf-8'))
+
 ã
 
-
-
 > print(b'\xc3\xa7'.decode('utf-8'))
+
 ç
 
 
