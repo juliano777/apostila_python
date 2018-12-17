@@ -356,7 +356,7 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 
 
-"g" ou "G"; formato geral. Para uma dada precisão, sendo essa precisão maior ou igual a ' (um)
+"g" ou "G"; formato geral. Para uma dada precisão, sendo essa precisão maior ou igual a ' (um), arredonda o número para p (precisão) de dígitos significantes.
 
 
 
@@ -378,7 +378,7 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 '     1E+03'
 
-> format(1000, '10.2g')
+> format(1000, '10.3G')
 
 '     1e+03'
 
@@ -389,6 +389,14 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 > format(1000000, 'g')
 
 '1e+06'
+
+> format(999.5, '10.4G')
+
+'     999.5'
+
+> format(999.5, '10.3G')
+
+'     1E+03'
 
 
 print('%(variavel)s' % {'variavel': 'valor'})
