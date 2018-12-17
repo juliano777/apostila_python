@@ -1017,6 +1017,8 @@ Concatenação de Strings em Loops
 
 Método 1 - Ineficaz
 
+
+
 Criação de uma string vazia:
 
 > s = ''
@@ -1044,7 +1046,7 @@ String pronta:
 Método 2 Eficaz
 
 
-Criação de uma string vazia:
+Criação de uma lista vazia:
 
 > s = []
 
@@ -1057,7 +1059,7 @@ Loop de concatenação:
 
 
 
-bla bla bla:
+Fazendo a junção de uma string vazia com a lista criada com seus elementos via método append:
 
 > ''.join(s)
 
@@ -1065,13 +1067,13 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criando uma string via método join da lista de mesmo nome:
 
 > s = ''.join(s)
 
 
 
-bla bla bla:
+Exibindo o valor da variável:
 
 > s
 
