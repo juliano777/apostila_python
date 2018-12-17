@@ -47,11 +47,11 @@ Apóstrofos ou aspas? Qual devo utilizar?
 Dois exemplos com print de strings com aspas e apóstrofos dentro:
 
 > print('Uma string que contém "aspas" em si')
+
 Uma string que contém "aspas" em si
 
-
-
 > print("Uma string que contém 'apóstrofos' em si")
+
 Uma string que contém 'apóstrofos' em si
 
 
@@ -59,6 +59,14 @@ Uma string que contém 'apóstrofos' em si
 Um caso clássico é em strings com um comando SQL:
 
 > sql = "SELECT * FROM musica WHERE artista = 'Mozart';"
+
+
+
+Exibindo o conteúdo da variável:
+
+> print(sql)
+
+SELECT * FROM musica WHERE artista = 'Mozart';
 
 # ============================================================================
 
