@@ -1196,9 +1196,9 @@ ValueError: substring not found
 
 
 
-bla bla bla:
+Na frase em latim abaixo, quantas vezes aparece a letra "u"?:
 
-> foo.count('e')
+> 'sic mundus creatus est'.count('u')
 
 3
 
