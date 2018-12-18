@@ -59,24 +59,25 @@ StopIteration:
 
 Generator
 
-numeros = range(10)
+> numeros = range(10)
 
-numeros
-range(10)
+> numeros
 
-rq = [ x ** 2 for x in numeros ]
+range(0, 10)
 
-rq
+> rq = [ x ** 2 for x in numeros ]
+
+> rq
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
-type(rq)
-<type 'list'>
+> type(rq)
+list
 
 
-rq = ( x ** 2 for x in numeros )
+> rq = ( x ** 2 for x in numeros )
 
-type(rq)
-<type 'generator'>
+> type(rq)
+generator
 
 dir(rq)
 ['__class__', '__delattr__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'close', 'gi_code', 'gi_frame', 'gi_running', 'next', 'send', 'throw']
