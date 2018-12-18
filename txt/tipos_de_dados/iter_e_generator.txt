@@ -1,11 +1,24 @@
 Iterator
 
+    Bla bla bla
+
+
+
+Bla bla bla:
 
 > it = iter('bar')
+
+
+
+Bla bla bla:
 
 > repr(it)
 
 '<iterator object at 0x7f123cd62c50>'
+
+
+
+Bla bla bla:
 
 > dir(it)
 
@@ -38,6 +51,9 @@ Iterator
  '__subclasshook__']
 
 
+
+Bla bla bla:
+
 > it.__next__()
 
 'b'
@@ -54,30 +70,66 @@ Iterator
 
 StopIteration:
 
-
+    Bla bla bla
 
 
 Generator
 
+    Bla bla bla:
+
+
+
+Bla bla bla:
+
 > numeros = range(10)
+
+
+
+Bla bla bla:
 
 > numeros
 
 range(0, 10)
 
+
+
+Bla bla bla:
+
 > rq = [ x ** 2 for x in numeros ]
 
+
+
+Bla bla bla:
+
 > rq
+
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
+
+
+Bla bla bla:
+
 > type(rq)
+
 list
 
 
-> rq = ( x ** 2 for x in numeros )
+
+Bla bla bla:
+
+> rq = (x ** 2 for x in numeros)
+
+
+
+Bla bla bla:
 
 > type(rq)
+
 generator
+
+
+
+Bla bla bla:
 
 > dir(rq)
 
@@ -116,6 +168,10 @@ generator
  'gi_yieldfrom',
  'send',
  'throw']
+
+
+
+Bla bla bla:
 
 > rq.__next__()
 
@@ -159,3 +215,5 @@ generator
 > rq.__next__()
 
 StopIteration:
+
+    Bla bla bla
