@@ -1,7 +1,12 @@
 Dicionários
 
-# Dicionário vazio
-d = {}
+    Em Python um dicionário é uma estrutura de dados envolta por chaves cujos elementos são compostos por chave:valor e separados por vírgula.
+
+
+
+Dicionário vazio:
+
+> d = {}
 
 d = dict(chave1 = 'valor2', chave2 = 1980)
 
@@ -243,7 +248,7 @@ for k, v in f_sal.items():
 
 print(head_foot)
 
-foot = u'{0:%s}|{1:>%sf}' % (left_col, num_prec)
+foot = '{0:%s}|{1:>%sf}' % (left_col, num_prec)
 foot = foot.format(u'Média', (total / count))
 
 print(foot)
