@@ -85,27 +85,19 @@ bla bla bla:
 
 
 
-bla bla bla:     
+Criação de objetos:
 
 > foo = Foo()
-
-
-
-bla bla bla:
 
 > bar = Bar()
 
 
 
-bla bla bla:
+Verificando o valor booleano dos objetos:
 
 > bool(foo)
 
 True
-
-
-
-bla bla bla:
 
 > bool(bar)
 
@@ -137,7 +129,7 @@ bla bla bla:
 
 
 
-Criação do objeto:
+Criação de objeto:
 
 > spam = Spam()
 
@@ -159,7 +151,7 @@ bla bla bla:
 
 
 
-Criação do objeto:
+Criação de objeto:
 
 > spam = Spam()
 
@@ -187,7 +179,7 @@ Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
 
 
-Criação do objeto:
+Criação de objeto:
 
 > spam = Spam()
 
@@ -214,7 +206,7 @@ Invertendo a ordem dos métodos:
 
 
 
-Criação do objeto:
+Criação de objeto:
 
 > spam = Spam()
 
