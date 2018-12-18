@@ -120,50 +120,6 @@ False
 bla bla bla:
 
 > class Spam(object):
-    def __len__(self):
-        return 0
-
-
-
-Criação de objeto:
-
-> spam = Spam()
-
-
-
-Verificando o valor booleano:
-
-> bool(spam)
-
-False
-
-
-
-bla bla bla:
-
-> class Spam(object):
-    def __len__(self):
-        return 7
-
-
-
-Criação de objeto:
-
-> spam = Spam()
-
-
-
-Verificando o valor booleano:
-
-> bool(spam)
-
-True
-
-
-
-bla bla bla:
-
-> class Spam(object):
     def __nonzero__(self):
         return True
 
