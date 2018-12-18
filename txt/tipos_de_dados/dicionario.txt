@@ -55,19 +55,20 @@ nome = Chiquinho
 sobrenome = da Silva
 
 
-d.items()
 
-[('email', 'chiquinho.silva@zeninguem.com'),
- ('sobrenome', 'da Silva'),
- ('nome', 'Chiquinho')]
+Itens do dicionário:
+
+> d.items()
+
+dict_items([('nome', 'Chiquinho'), ('sobrenome', 'da Silva'), ('email', 'chiquinho.silva@zeninguem.com')])
 
 
-for k, v in d.items():
-    print('%s = %s' % (k, v))
+> for k, v in d.items():
+    print(f'{k} = {v}')
 
-email = chiquinho.silva@zeninguem.com
-sobrenome = da Silva
 nome = Chiquinho
+sobrenome = da Silva
+email = chiquinho.silva@zeninguem.com
 
 d.keys()
 ['email', 'sobrenome', 'nome']
