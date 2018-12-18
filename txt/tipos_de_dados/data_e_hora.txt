@@ -223,11 +223,3 @@ Converte um tempo em segundos desde Epoch para uma string, se nenhum parâmetro 
 > ctime(1540000000)
 
 'Fri Oct 19 22:46:40 2018'
-
-
-
-sdoiosiosdio:
-
-> tzname
-
-('-03', '-02')
