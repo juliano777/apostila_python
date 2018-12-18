@@ -113,35 +113,67 @@ Método update para adicionar chaves e valores:
     'email': 'chiquinho.silva@zeninguem.com',
 })
 
-d
+
+
+Exibindo o conteúdo do dicionário:
+
+> d
+
 {'email': 'chiquinho.silva@zeninguem.com',
  'nome': 'Chiquinho',
  'sobrenome': 'da Silva'}
 
-d.update({'data_nascimento': '28/02/1936'})
 
-d
-{'data_nascimento': '28/02/1936',
+
+Adicionando uma chave e valor ao dicionário:
+
+> d.update({'data_nascimento': '28/02/1936'})
+
+
+
+Exibindo o conteúdo do dicionário:
+
+> d
+
+{'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva',
  'email': 'chiquinho.silva@zeninguem.com',
- 'nome': 'Chiquinho',
- 'sobrenome': 'da Silva'}
+ 'data_nascimento': '28/02/1936'}
 
-d['data_nascimento'] = '08/02/1936'
 
-d
-{'data_nascimento': '08/02/1936',
+
+Alterando uma chave do dicionário:
+
+> d['data_nascimento'] = '08/02/1936'
+
+
+
+Exibindo o conteúdo do dicionário:
+
+> d
+
+{'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva',
  'email': 'chiquinho.silva@zeninguem.com',
- 'nome': 'Chiquinho',
- 'sobrenome': 'da Silva'}
+ 'data_nascimento': '08/02/1936'}
 
-d['cidade_origem'] = 'Cascatinha'
 
-d
-{'cidade_origem': 'Cascatinha',
+
+Adicionando uma nova chave e valor:
+
+> d['cidade_origem'] = 'Cascatinha'
+
+
+
+Exibindo o conteúdo do dicionário:
+
+> d
+
+{'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva',
+ 'email': 'chiquinho.silva@zeninguem.com',
  'data_nascimento': '08/02/1936',
- 'email': 'chiquinho.silva@zeninguem.com',
- 'nome': 'Chiquinho',
- 'sobrenome': 'da Silva'}
+ 'cidade_origem': 'Cascatinha'}
 
 
 Como chave só são aceitos tipos que utilizam hash, listas não são aceitas, 
