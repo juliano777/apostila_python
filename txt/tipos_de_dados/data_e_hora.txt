@@ -13,24 +13,33 @@ Importação de tipo e função para os testes a seguir:
 
 
 
-dssd
+Inserir dados via teclado conforme sugere o modelo na mensagem:
 
 > dt_evento = input('Digite a data e hora do evento (AAAA-MM-DD HH:MM): ')
 
-Digite a data e hora do evento (AAAA-MM-DD HH:MM): 2015-11-18 09:00
+Digite a data e hora do evento (AAAA-MM-DD HH:MM):
 
 
 
+Verificando o tipo da variável:
 
+> type(dt_evento)
 
-type(dt_evento)
 str
+
+
+
+Quanto custa essa variável em bytes?
+
+> getsizeof(dt_evento)
+
+65
 
 
 strptime: str -> datetime
 
 datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
-datetime.datetime(2015, 11, 18, 9, 0)
+datetime(2015, 11, 18, 9, 0)
 
 type(datetime.strptime(dt_evento, '%Y-%m-%d %H:%M'))
 datetime.datetime
