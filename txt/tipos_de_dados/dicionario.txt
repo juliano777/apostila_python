@@ -32,6 +32,10 @@ Exibir o valor de uma chave do dicionário:
 
 'Chiquinho'
 
+
+
+Loop
+
 for k in d:
     print('%s = %s' % (k, d[k]))
 
