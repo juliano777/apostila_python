@@ -63,6 +63,9 @@ Itens do dicionário:
 dict_items([('nome', 'Chiquinho'), ('sobrenome', 'da Silva'), ('email', 'chiquinho.silva@zeninguem.com')])
 
 
+
+Loop sobre os itens do dicionário:
+
 > for k, v in d.items():
     print(f'{k} = {v}')
 
@@ -70,18 +73,41 @@ nome = Chiquinho
 sobrenome = da Silva
 email = chiquinho.silva@zeninguem.com
 
-d.keys()
-['email', 'sobrenome', 'nome']
 
-d.values()
-['chiquinho.silva@zeninguem.com', 'da Silva', 'Chiquinho']
 
-d.clear()
+Método para exibir as chaves do dicionário:
 
-d
+> d.keys()
+
+dict_keys(['nome', 'sobrenome', 'email'])
+
+
+
+Método para exibir as chaves do dicionário:
+
+> d.values()
+
+dict_values(['Chiquinho', 'da Silva', 'chiquinho.silva@zeninguem.com'])
+
+
+
+Método para limpar o dicionário:
+
+> d.clear()
+
+
+
+Dicionário após a execução do método clear:
+
+> d
+
 {}
 
-d.update({
+
+
+Método update para adicionar chaves e valores:
+
+> d.update({
     'nome': 'Chiquinho',
     'sobrenome': 'da Silva',
     'email': 'chiquinho.silva@zeninguem.com',
