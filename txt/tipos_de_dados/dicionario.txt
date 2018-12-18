@@ -34,18 +34,21 @@ Exibir o valor de uma chave do dicionário:
 
 
 
-Loop
+Loop para exibir cada par de chave e valor do dicionário:
 
-for k in d:
-    print('%s = %s' % (k, d[k]))
+> for k in d:
+    print(f'{k} = {d[k]}')
 
-email = chiquinho.silva@zeninguem.com
-sobrenome = da Silva
 nome = Chiquinho
+sobrenome = da Silva
+email = chiquinho.silva@zeninguem.com
 
 
-for k in sorted(d):
-    print('%s = %s' % (k, d[k]))
+
+Loop para exibir cada par de chave e valor do dicionário ordenado por chave:
+
+> for k in sorted(d):
+    print(f'{k} = {d[k]}')
 
 email = chiquinho.silva@zeninguem.com
 nome = Chiquinho
