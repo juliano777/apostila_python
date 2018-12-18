@@ -69,15 +69,11 @@ True
 
 
 
-bla bla bla:
+Criação de classes de teste:
 
 > class Foo(object):
     def __nonzero__(self):
         return True
-
-
-
-bla bla bla:
 
 > class Bar(object):
     def __nonzero__(self):
@@ -105,7 +101,7 @@ False
 
 
 
-bla bla bla:
+True AND (NOT False):
 
 > bool(foo) & (not bool(bar))
 
@@ -113,7 +109,7 @@ True
 
 
 
-bla bla bla:
+True AND False:
 
 > bool(foo) & bool(bar)
 
