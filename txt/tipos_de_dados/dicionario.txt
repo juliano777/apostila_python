@@ -302,9 +302,10 @@ KeyError: 'cor'
 
 
 
+Método get apenas para retorno:
 
+> carro.get('cor', 'amarelo')
 
-carro.get('cor', 'amarelo')
 'amarelo'
 
 carro
