@@ -9,13 +9,13 @@ Booleanos
 
 
 
-bla bla bla:
+Definindo a variável como True de forma indireta:
 
 > b = bool(1)
 
 
 
-bla bla bla:
+Verificando o valor da variável:
 
 > b
 
@@ -23,7 +23,7 @@ True
 
 
 
-bla bla bla:
+Definindo a variável como False de forma indireta:
 
 > b = bool(0)
 
