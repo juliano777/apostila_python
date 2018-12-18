@@ -80,44 +80,98 @@ bla bla bla:
 > class Bar(object):
     def __nonzero__(self):
         return False
-     
+
+
+
+bla bla bla:     
 
 > foo = Foo()
 
-bar = Bar()
 
+
+bla bla bla:
+
+> bar = Bar()
+
+
+
+bla bla bla:
 
 > bool(foo)
+
 True
+
+
+
+bla bla bla:
 
 > bool(bar)
+
 False
+
+
+
+bla bla bla:
 
 > bool(foo) & (not bool(bar))
+
 True
 
+
+
+bla bla bla:
+
 > bool(foo) & bool(bar)
+
 False
+
+
+
+bla bla bla:
 
 > class Spam(object):
     def __len__(self):
         return 0
-     
+
+
+
+bla bla bla:     
 
 > spam = Spam()
 
+
+
+bla bla bla:
+
 > bool(spam)
+
 False
+
+
+
+bla bla bla:
 
 > class Spam(object):
     def __len__(self):
         return 7
-     
+
+
+
+bla bla bla:    
 
 > spam = Spam()
 
+
+
+bla bla bla:
+
 > bool(spam)
+
 True
+
+
+
+bla bla bla:
 
 > class Spam(object):
     def __nonzero__(self):
@@ -129,14 +183,25 @@ True
 O método __nonzero__ retorna um valor verdadeiro e o método __len__ um falso.
 Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
+
+
+bla bla bla:
+
 > spam = Spam()
 
+
+
+bla bla bla:
+
 > bool(spam)
+
 True
 
 O retorno foi verdadeiro.
 Será que isso é por causa do retorno do primeiro método ou foi feita uma lógica "OR"?
-Vamos então inverter a ordem dos métodos:
+
+
+Invertendo a ordem dos métodos:
 
 class Spam(object):
     def __len__(self):
@@ -145,18 +210,17 @@ class Spam(object):
     def __nonzero__(self):
         return True
 
+
+
+bla bla bla:
+
 > spam = Spam()
+
+
+
+bla bla bla:
 
 > bool(spam)
 False
 
 Conclusão: o que prevalece é o retorno do método declarado primeiro, ou __nonzero__ ou __len__.
-
-
-
-
-
-
-
-
-
