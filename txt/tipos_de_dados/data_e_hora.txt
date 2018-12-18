@@ -18,6 +18,8 @@ Importação de tipo e função para os testes a seguir:
 
 > from time import sleep
 
+> from time import time
+
 > from time import tzname
 
 
@@ -204,11 +206,23 @@ Passaram-se 3 segundos
 
 
 
-osdosdioisdo:
+time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00):
+
+> time()
+
+1545143461.209795
+
+
+
+O método ctime retorna uma string:
 
 > ctime()
 
 'Tue Dec 18 12:14:49 2018'
+
+> ctime(1540000000)
+
+'Fri Oct 19 22:46:40 2018'
 
 
 
