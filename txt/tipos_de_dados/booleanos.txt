@@ -117,7 +117,7 @@ False
 
 
 
-bla bla bla:
+Classe para testar os métodos __bool__ e __len__:
 
 > class Spam(object):
     def __bool__(self):
