@@ -189,56 +189,99 @@ Criação de uma lista e uma tupla respectivamente:
 
 
 
+Criação de uma classe para teste:
 
-
-class Funcionario(object):
+> class Funcionario(object):
     pass
 
 
-f1 = Funcionario()
+
+Objeto da classe Funcionário:
+
+> f1 = Funcionario()
 
 
-d[l] = 0
+
+Tentativa de fazer uma lista ser chave do dicionário e atribuir um valor:
+
+> d[l] = 0
+
 TypeError: unhashable type: 'list'
 
-
-d[f1] = 'Funcionário 1'
-
-d
-
-{<__main__.Funcionario at 0x7fd96e582450>: 'Funcion\xc3\xa1rio 1',
- 'cidade_origem': 'Cascatinha',
- 'data_nascimento': '08/02/1936',
- 'email': 'chiquinho.silva@zeninguem.com',
- 'nome': 'Chiquinho',
- 'sobrenome': 'da Silva'}
+    Listas são "unhashable", portanto não podem ser chaves de um dicionário.
 
 
-d[t] = 0
 
-d
-{<__main__.Funcionario at 0x7fd96e582450>: 'Funcion\xc3\xa1rio 1',
- 'cidade_origem': 'Cascatinha',
- 'data_nascimento': '08/02/1936',
- 'email': 'chiquinho.silva@zeninguem.com',
- 'nome': 'Chiquinho',
+Objeto da classe Funcionário como chave do dicionário:
+
+> d[f1] = 'Funcionário 1'
+
+
+
+Exibir o conteúdo do dicionário:
+
+> d
+
+{'nome': 'Chiquinho',
  'sobrenome': 'da Silva',
+ 'email': 'chiquinho.silva@zeninguem.com',
+ 'data_nascimento': '08/02/1936',
+ 'cidade_origem': 'Cascatinha',
+ <__main__.Funcionario at 0x7f3769ca9c88>: 'Funcionário 1'}
+
+
+
+Tupla como chave do dicionário e atribuir um valor:
+
+> d[t] = 0
+
+
+
+Exibir o conteúdo do dicionário:
+
+> d
+
+{'nome': 'Chiquinho',
+ 'sobrenome': 'da Silva',
+ 'email': 'chiquinho.silva@zeninguem.com',
+ 'data_nascimento': '08/02/1936',
+ 'cidade_origem': 'Cascatinha',
+ <__main__.Funcionario at 0x7f3769ca9c88>: 'Funcionário 1',
  (5, 7): 0}
 
 
-d[endereco]
+
+Tentativa de acessar uma chave inexistente:
+
+> d[endereco]
+
 NameError: name 'endereco' is not defined
 
-d.get('nome')
+
+
+Método get:
+
+> d.get('nome')
+
 'Chiquinho'
 
-d.get('endereco')
+    Existe a chave "nome", então seu valor foi retornado.
 
-d.get('endereco', 'R. do Cafezal, 30')
+> d.get('endereco')
+
+    Não existe a chave "endereço", por isso nada foi retornado, no entanto, não foi lançada exceção.
+
+> d.get('endereco', 'R. do Cafezal, 30')
+
 'R. do Cafezal, 30'
 
-d.get('nome', 'Zezinho')
+    Não existe a chave "endereço", mas no método get foi passado um segundo parâmetro, o qual foi retornado, porém não houve modificação no dicionário.
+
+> d.get('nome', 'Zezinho')
+
 'Chiquinho'
+
+    A chave "nome" já existia, sendo um valor diferente do valor da mesma, foi retornado o valor que pertence à chave.
 
 
 carro = {
