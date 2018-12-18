@@ -1,12 +1,14 @@
 Iterator
 
 
-i = iter('bar')
+> it = iter('bar')
 
-repr(i)
+> repr(it)
+
 '<iterator object at 0x7f123cd62c50>'
 
-dir(i)
+> dir(it)
+
 ['__class__',
  '__delattr__',
  '__dir__',
@@ -36,20 +38,21 @@ dir(i)
  '__subclasshook__']
 
 
-i.next()
+> it.__next__()
+
 'b'
 
-i.next()
+> it.__next__()
+
 'a'
 
-i.next()
+> it.__next__()
+
 'r'
 
-i.next()
----------------------------------------------------------------------------
-StopIteration                             Traceback (most recent call last)
-<ipython-input-139-e590fe0d22f8> in <module>()
-----> 1 i.next()
+> it.__next__()
+
+StopIteration:
 
 
 
