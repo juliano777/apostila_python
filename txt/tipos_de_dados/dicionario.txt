@@ -292,8 +292,17 @@ Criação de um dicionário:
     'modelo': '147'
 }
 
-carro['cor']
-KeyError: 'cor'	
+
+
+Tentando acessar uma chave inexistente:
+
+> carro['cor']
+
+KeyError: 'cor'
+
+
+
+
 
 carro.get('cor', 'amarelo')
 'amarelo'
