@@ -6,13 +6,22 @@ datetime - Módulo que fornece classes para manipular datas e horas de maneiras 
 
 
 
-import sys
-from datetime import datetime
+Importação de tipo e função para os testes a seguir:
+
+> from datetime import datetime
+> from sys import getsizeof
 
 
-dt_evento = raw_input('Digite a data e hora do evento (AAAA-MM-DD HH:MM): ')
+
+dssd
+
+> dt_evento = input('Digite a data e hora do evento (AAAA-MM-DD HH:MM): ')
 
 Digite a data e hora do evento (AAAA-MM-DD HH:MM): 2015-11-18 09:00
+
+
+
+
 
 type(dt_evento)
 str
