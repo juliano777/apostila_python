@@ -4,7 +4,7 @@ Booleanos
 
 	False, 0, 0L, 0.0, 0j, [], (), {}, set([]), None, "" ou ''.
 
-	Instâncias de classes definidas por usuários, se a classe define um método __nonzero__() ou __len__(), quando este método retornar o inteiro zero ou um valor booleano False.
+	Instâncias de classes definidas por usuários, se a classe define um método __bool__() ou __len__(), quando este método retornar o inteiro zero ou um valor booleano False.
 	Todos outros valores são considerados verdadeiros, então objetos de muitos tipos são considerados como True.
 
 
@@ -147,27 +147,4 @@ O retorno foi verdadeiro.
 Será que isso é por causa do retorno do primeiro método ou foi feita uma lógica "OR"?
 
 
-Invertendo a ordem dos métodos:
 
-> class Spam(object):
-    def __len__(self):
-        return 0
-
-    def __nonzero__(self):
-        return True
-
-
-
-Criação de objeto:
-
-> spam = Spam()
-
-
-
-Verificando o valor booleano:
-
-> bool(spam)
-
-False
-
-Conclusão: o que prevalece é o retorno do método declarado primeiro, ou __nonzero__ ou __len__.
