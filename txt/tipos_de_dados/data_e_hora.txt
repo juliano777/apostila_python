@@ -214,7 +214,7 @@ time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00):
 
 
 
-O método ctime retorna uma string:
+Converte um tempo em segundos desde Epoch para uma string, se nenhum parâmetro for passado retorna string do momento atual:
 
 > ctime()
 
