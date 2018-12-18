@@ -14,6 +14,8 @@ Importação de tipo e função para os testes a seguir:
 
 > from sys import getsizeof
 
+> from time import sleep
+
 
 
 Inserir dados via teclado conforme sugere o modelo na mensagem:
@@ -175,21 +177,25 @@ Método isoweekday, em que segunda-feira = 1 e domingo = 7:
 2
 
 
+O Módulo time
+
+    Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
+    Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.
 
 
-time - Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
-Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.
+
+Criação de função que espera n segundos e exibe uma mensagem no final:
+
+> def espera(tempo):
+    sleep(tempo)
+    print(f'Passaram-se {tempo} segundos')
 
 
 
-import time
+Execução da função:
 
-def espera(tempo):
-    time.sleep(tempo)
-    print('Passou %s segundos' % (tempo))     
+> espera(3)
 
-
-espera(3)
 Passou 3 segundos
 
 
