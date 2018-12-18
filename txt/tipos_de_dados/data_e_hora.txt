@@ -14,7 +14,11 @@ Importação de tipo e função para os testes a seguir:
 
 > from sys import getsizeof
 
+> from time import ctime
+
 > from time import sleep
+
+> from time import tzname
 
 
 
@@ -196,11 +200,20 @@ Execução da função:
 
 > espera(3)
 
-Passou 3 segundos
+Passaram-se 3 segundos
 
 
-time.ctime()
-'Wed Nov 11 20:26:48 2015'
 
-time.tzname
-('BRT', 'BRST')
+osdosdioisdo:
+
+> ctime()
+
+'Tue Dec 18 12:14:49 2018'
+
+
+
+sdoiosiosdio:
+
+> tzname
+
+('-03', '-02')
