@@ -131,40 +131,48 @@ Formato ISO:
 '2018-12-18'
 
 
-Método toordinal; retorna a quantidade de dias passados desde 01/01/0001.
 
-hoje.toordinal()
+Método toordinal; retorna a quantidade de dias passados desde 01/01/0001:
 
-735913
+> hoje.toordinal()
+
+737046
 
 
-Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001.
 
-datetime.date.fromordinal(735913)
+Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001:
 
-datetime.date(2015, 11, 11)
+> date.fromordinal(737046)
+
+datetime.date(2018, 12, 18)
+
 
 
 Que dia será daqui a 40 dias?
 
-datetime.date.fromordinal(hoje.toordinal() + 40)
-datetime.date(2015, 12, 21)
+> date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date
 
-datetime.date.fromordinal(hoje.toordinal() + 40).isoformat()
-'2015-12-21'
+datetime.date(2019, 1, 27)
+
+> date.fromordinal(hoje.toordinal() + 40).isoformat() # formato ISO
+
+'2019-01-27'
 
 
 
-Método weekday, em que segunda-feira = 0 e domingo = 6:
+Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6:
 
-hoje.weekday()
-2
+> hoje.weekday()
+
+1
+
 
 
 Método isoweekday, em que segunda-feira = 1 e domingo = 7:
 
-hoje.isoweekday()
-3
+> hoje.isoweekday()
+
+2
 
 
 
@@ -190,21 +198,3 @@ time.ctime()
 
 time.tzname
 ('BRT', 'BRST')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
