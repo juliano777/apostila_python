@@ -180,9 +180,14 @@ Exibindo o conteúdo do dicionário:
     Como chave só são aceitos tipos que utilizam hash, listas não são aceitas, mas instâncias de classes e tuplas são aceitas.
 
 
-l = [1, 2, 3]
 
-t = (5, 7)
+Criação de uma lista e uma tupla respectivamente:
+
+> l = [1, 2, 3]
+
+> t = (5, 7)
+
+
 
 
 
