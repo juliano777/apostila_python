@@ -176,8 +176,8 @@ Exibindo o conteúdo do dicionário:
  'cidade_origem': 'Cascatinha'}
 
 
-Como chave só são aceitos tipos que utilizam hash, listas não são aceitas, 
-mas instâncias de classes e tuplas são aceitas.
+
+    Como chave só são aceitos tipos que utilizam hash, listas não são aceitas, mas instâncias de classes e tuplas são aceitas.
 
 
 l = [1, 2, 3]
