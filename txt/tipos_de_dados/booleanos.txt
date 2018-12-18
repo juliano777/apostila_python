@@ -29,14 +29,15 @@ Definindo a variável como False de forma indireta:
 
 
 
-bla bla bla:
+Verificando o valor da variável:
 
 > b
+
 False
 
 
 
-bla bla bla:
+Teste usando a lógica OR:
 
 > True | False
 
@@ -44,7 +45,7 @@ True
 
 
 
-bla bla bla:
+Teste usando a lógica AND:
 
 > True & False
 
@@ -52,14 +53,15 @@ False
 
 
 
-bla bla bla:
+Negação de True:
 
 > not True
+
 False
 
 
 
-bla bla bla:
+Negação de False:
 
 > not False
 
@@ -135,13 +137,13 @@ bla bla bla:
 
 
 
-bla bla bla:     
+Criação do objeto:
 
 > spam = Spam()
 
 
 
-bla bla bla:
+Verificando o valor booleano:
 
 > bool(spam)
 
@@ -157,13 +159,13 @@ bla bla bla:
 
 
 
-bla bla bla:    
+Criação do objeto:
 
 > spam = Spam()
 
 
 
-bla bla bla:
+Verificando o valor booleano:
 
 > bool(spam)
 
@@ -185,13 +187,13 @@ Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
 
 
-bla bla bla:
+Criação do objeto:
 
 > spam = Spam()
 
 
 
-bla bla bla:
+Verificando o valor booleano:
 
 > bool(spam)
 
@@ -203,7 +205,7 @@ Será que isso é por causa do retorno do primeiro método ou foi feita uma lóg
 
 Invertendo a ordem dos métodos:
 
-class Spam(object):
+> class Spam(object):
     def __len__(self):
         return 0
 
@@ -212,15 +214,16 @@ class Spam(object):
 
 
 
-bla bla bla:
+Criação do objeto:
 
 > spam = Spam()
 
 
 
-bla bla bla:
+Verificando o valor booleano:
 
 > bool(spam)
+
 False
 
 Conclusão: o que prevalece é o retorno do método declarado primeiro, ou __nonzero__ ou __len__.
