@@ -8,9 +8,17 @@ Dicionário vazio:
 
 > d = {}
 
-d = dict(chave1 = 'valor2', chave2 = 1980)
 
-d = {
+
+Criação de um dicionário utilizando a função dict:
+
+> d = dict(chave1 = 'valor2', chave2 = 1980)
+
+
+
+Criação de um dicionário utilizando chaves:
+
+> d = {
     'nome': 'Chiquinho',
     'sobrenome': 'da Silva',
     'email': 'chiquinho.silva@zeninguem.com',
