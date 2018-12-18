@@ -284,7 +284,10 @@ Método get:
     A chave "nome" já existia, sendo um valor diferente do valor da mesma, foi retornado o valor que pertence à chave.
 
 
-carro = {
+
+Criação de um dicionário:
+
+> carro = {
     'marca': 'Fiat',
     'modelo': '147'
 }
