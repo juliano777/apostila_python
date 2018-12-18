@@ -68,6 +68,3 @@ rq.next()
 16
 
 rq.next()
-
-
-
