@@ -120,14 +120,14 @@ False
 bla bla bla:
 
 > class Spam(object):
-    def __nonzero__(self):
+    def __bool__(self):
         return True
 
     def __len__(self):
         return 0
 
-O método __nonzero__ retorna um valor verdadeiro e o método __len__ um falso.
-Com ambos declarados na mesma classe, um objeto dela o que retornará?
+    O método __bool__ retorna um valor verdadeiro e o método __len__ um falso.
+    Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
 
 
@@ -143,8 +143,4 @@ Verificando o valor booleano:
 
 True
 
-O retorno foi verdadeiro.
-Será que isso é por causa do retorno do primeiro método ou foi feita uma lógica "OR"?
-
-
-
+    O retorno foi verdadeiro, o método __bool__ prevalece.
