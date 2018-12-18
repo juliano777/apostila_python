@@ -24,7 +24,12 @@ Criação de um dicionário utilizando chaves:
     'email': 'chiquinho.silva@zeninguem.com',
 }
 
-d['nome']
+
+
+Exibir o valor de uma chave do dicionário:
+
+> d['nome']
+
 'Chiquinho'
 
 for k in d:
