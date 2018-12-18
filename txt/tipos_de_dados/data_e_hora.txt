@@ -8,7 +8,10 @@ datetime - Módulo que fornece classes para manipular datas e horas de maneiras 
 
 Importação de tipo e função para os testes a seguir:
 
+> from datetime import date
+
 > from datetime import datetime
+
 > from sys import getsizeof
 
 
@@ -77,13 +80,13 @@ datetime.datetime
 
 
     Pode ser necessário também fazer o caminho inverso, para transformar um dado datetime para string.
-    Para isso podemos usar strftime:
+    Para isso pode-se usar strftime:
 
     strftime: datetime -> str
 
 
 
-sddssdd:
+Extrair como string de um dado datetime:
 
 > datetime.strftime(dt_evento, '%Y-%m-%d %H:%M')
 
@@ -91,24 +94,41 @@ sddssdd:
 
 
 
-from datetime import date
+Variável que contém apenas a data atual:
 
-hoje = date.today()
+> hoje = date.today()
 
-print(hoje)
-2015-11-11
 
-print(hoje.day)
-11
 
-print(hoje.month)
-11
+Exibindo o valor da variável:
 
-print(hoje.year)
-2015
+> print(hoje)
 
-hoje.isoformat()
-'2015-11-11'
+2018-12-18
+
+
+
+Exibindo apenas partes da data:
+
+> print(hoje.day)  # dia
+
+18
+
+> print(hoje.month)  # mês
+
+12
+
+> print(hoje.year)  # ano
+
+2018
+
+
+
+Formato ISO:
+
+> hoje.isoformat()
+
+'2018-12-18'
 
 
 Método toordinal; retorna a quantidade de dias passados desde 01/01/0001.
