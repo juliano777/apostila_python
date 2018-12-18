@@ -72,12 +72,12 @@ True
 Criação de classes de teste:
 
 > class Foo(object):
-    def __nonzero__(self):
-        return True
+    def __len__(self):
+        return 1
 
 > class Bar(object):
-    def __nonzero__(self):
-        return False
+    def __len__(self):
+        return 0
 
 
 
