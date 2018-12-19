@@ -217,3 +217,55 @@ Bla bla bla:
 StopIteration:
 
     Bla bla bla
+
+
+
+bla bla bla:
+
+> def gen():
+
+    i = 0
+
+    while i < 10:
+        yield i
+        i += 1
+
+
+
+bla bla bla:
+
+> x = gen()
+
+
+
+bla bla bla:
+
+> type(gen)
+
+function
+
+> type(x)
+
+generator
+
+
+
+bla bla bla:
+
+> x.__next__()
+
+0
+
+. . . 
+
+> x.__next__()
+
+9
+
+> x.__next__()
+
+StopIteration:
+
+
+
+
