@@ -87,6 +87,12 @@ Generator
 
 
 
+Criando um objeto range que vai de 0  a 9:
+
+> numeros = range(0, 10)
+
+
+
 Se for utilizado list comrprehension será gerada uma lista:
 
 > rq = [x ** 2 for x in numeros]
@@ -109,7 +115,7 @@ list
 
 
 
-Bla bla bla:
+Tuple comprehension é uma maneira de se criar um generator:
 
 > rq = (x ** 2 for x in numeros)
 
@@ -175,34 +181,7 @@ Bla bla bla:
 
 1
 
-> rq.__next__()
-4
-
-> rq.__next__()
-
-9
-
-> rq.__next__()
-
-16
-
-> rq.__next__()
-
-25
-
-> rq.__next__()
-
-36
-
-> rq.__next__()
-
-49
-
-> rq.__next__()
-
-64
-
-> rq.__next__()
+. . .
 
 81
 
