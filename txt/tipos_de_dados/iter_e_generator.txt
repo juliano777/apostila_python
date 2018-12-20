@@ -76,8 +76,7 @@ StopIteration:
 Generator
 
     Um generator é um objeto iterável assim como um iterator, mas nem todo iterator é um generator.
-
-    Generator functions allow you to declare a function that behaves like an iterator, i.e. it can be used in a for loop. 
+    Funções de generator permite declarar uma função que se comporta como um iterador, podendo ser usadas em loops.
 
 
 
