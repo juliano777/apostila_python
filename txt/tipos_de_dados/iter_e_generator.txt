@@ -193,7 +193,7 @@ StopIteration:
 
 
 
-bla bla bla:
+Criação de uma função generator:
 
 > def gen():
 
