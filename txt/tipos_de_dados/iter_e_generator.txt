@@ -75,13 +75,23 @@ StopIteration:
 
 Generator
 
-    Bla bla bla:
+    Um generator é um objeto iterável assim como um iterator, mas nem todo iterator é um generator.
+
+    Generator functions allow you to declare a function that behaves like an iterator, i.e. it can be used in a for loop. 
 
 
 
 Bla bla bla:
 
 > numeros = range(10)
+
+
+
+Bla bla bla:
+
+> type(numeros)
+
+range
 
 
 
@@ -95,7 +105,7 @@ range(0, 10)
 
 Bla bla bla:
 
-> rq = [ x ** 2 for x in numeros ]
+> rq = [x ** 2 for x in numeros]
 
 
 
