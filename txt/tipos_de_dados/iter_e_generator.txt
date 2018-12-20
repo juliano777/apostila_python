@@ -85,6 +85,17 @@ Generator
     Funções de generator permite declarar uma função que se comporta como um iterador, podendo ser usadas em loops.
     Um generator implementa o conceito de lazy evaluation, o que faz com que em determinadas situações economize-se recursos de processamento, pois cada elemento é processado conforme a demanda.
 
+Iterator vs Generator
+
+In creating a python generator, we use a function. But in creating an iterator in python, we use the iter() and next() functions.
+A generator in python makes use of the ‘yield’ keyword. A python iterator doesn’t.
+Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of local variables, all it needs is iterable to iterate on.
+A generator may have any number of ‘yield’ statements.
+You can implement your own iterator using a python class; a generator does not need a class in python.
+To write a python generator, you can either use a Python function or a comprehension. But for an iterator, you must use the iter() and next() functions.
+Generator in python let us write fast and compact code. This is an advantage over Python iterators. They are also simpler to code than do custom iterator.
+Python iterator is more memory-efficient. 
+
 
 
 Criando um objeto range que vai de 0  a 9:
@@ -193,6 +204,12 @@ StopIteration:
 
 
 
+Funções Generator
+
+    Uma função generator utiliza o comando yield em vez de return, o que faz com que retorne o próximo elemento da sequência.
+
+
+
 Criação de uma função generator:
 
 > def gen():
@@ -205,13 +222,13 @@ Criação de uma função generator:
 
 
 
-bla bla bla:
+Criação do gerador via execução da função:
 
 > x = gen()
 
 
 
-bla bla bla:
+Verificando os tipos:
 
 > type(gen)
 
@@ -223,7 +240,7 @@ generator
 
 
 
-bla bla bla:
+Execução do método __next__ até o fim:
 
 > x.__next__()
 
