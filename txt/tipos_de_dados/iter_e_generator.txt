@@ -87,8 +87,15 @@ Generator
 
 Iterator vs Generator
 
-In creating a python generator, we use a function. But in creating an iterator in python, we use the iter() and next() functions.
-A generator in python makes use of the ‘yield’ keyword. A python iterator doesn’t.
+    - Para criar um generator utilizamos ou uma função com yield no lugar de return ou tuple comprehension.
+    Para criar um iterador utilizamos a função iter();
+
+    - Generator utiliza yield, iterator não;
+
+    - 
+
+
+
 Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of local variables, all it needs is iterable to iterate on.
 A generator may have any number of ‘yield’ statements.
 You can implement your own iterator using a python class; a generator does not need a class in python.
