@@ -121,7 +121,7 @@ Tuple comprehension é uma maneira de se criar um generator:
 
 
 
-Bla bla bla:
+Verificando o tipo do objeto:
 
 > type(rq)
 
@@ -129,7 +129,7 @@ generator
 
 
 
-Bla bla bla:
+Listando atributos e métodos do objeto:
 
 > dir(rq)
 
@@ -171,7 +171,7 @@ Bla bla bla:
 
 
 
-Bla bla bla:
+Executando o método dunder next até o fim dos elementos:
 
 > rq.__next__()
 
