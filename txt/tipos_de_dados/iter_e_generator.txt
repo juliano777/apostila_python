@@ -92,11 +92,9 @@ Iterator vs Generator
 
     - Generator utiliza yield, iterator não;
 
-    - 
+    - Gerador salva o estado de variáveis locais a cada vez que o yield pausa o loop. Um iterador não faz uso de variáveis locais, tudo o que ele precisa é faz a iteração.
 
 
-
-Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of local variables, all it needs is iterable to iterate on.
 
 A generator may have any number of ‘yield’ statements.
 
