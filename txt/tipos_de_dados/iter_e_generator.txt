@@ -79,6 +79,45 @@ StopIteration:
 
 
 
+Classe Iterator
+
+    É possível também implementar um iterador como um objeto de uma classe personalizada.
+    É necessário implementar os métodos __iter__ e __next__.
+    __iter__ retorna o objeto iterador por si.
+    __next__ retorna o próximo item da coleção e ao alcançar o fim e se houver uma chamada sequente uma exceção é lançada (StopIteration).
+
+
+
+Criação da classe de iterador:
+
+> class FirstNumbers(object):
+
+    def __init__(self, n):
+        self.n = n
+        self.i = 0
+    
+    def __iter__(self):
+        return self
+    
+    
+    def __next__(self):
+        if self.i <= self.n:
+            cur = self.i
+            self.i += 1
+            return cur
+        else:
+            raise StopIteration()
+
+
+
+Somatória dos 10 primeiros números:
+
+> print(sum(FirstNumbers(10)))
+
+45
+
+
+
 Generator
 
     Um generator é um objeto iterável assim como um iterator, mas nem todo iterator é um generator.
