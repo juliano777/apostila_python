@@ -262,9 +262,3 @@ Cronometrando os códigos de iterador e gerador, respectivamente:
 > timeit(code_gen)
 
 53.58039242995437
-
-
-
-
-
-
