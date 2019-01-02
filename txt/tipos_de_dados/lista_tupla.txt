@@ -3,17 +3,25 @@ Lista
     Uma lista é uma estrutura de dados similar ao tradicional array que tem em outras linguagens, porém seus elementos podem ser de tipos diferentes.
     Uma lista é também uma coleção de dados mutável.
 
-# Lista vazia
-l = []
+
+
+Formas de criar uma lista vazia:
+
+> l = []
 
 ou 
 
-l = list()
+> l = list()
 
-l = list([1, 2, 3])
 
-l
-[1, 2, 3]
+
+Formas de criar uma lista com elementos:
+
+> l = list([1, 2, 3])
+
+ou
+
+> l = [1, 2, 3]
 
 - São mutáveis
 
