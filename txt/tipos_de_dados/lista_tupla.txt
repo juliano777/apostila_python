@@ -97,6 +97,10 @@ Exibindo os elementos da lista:
 
 
 
+O método extend faz com que os elementos de outra lista sejam adicionadas a uma lista atual:
+
+
+
 extend / remove
 
 	Extend é fazer com que uma lista seja extendida adicionando a ela outra lista.
