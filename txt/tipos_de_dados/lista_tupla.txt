@@ -23,32 +23,78 @@ ou
 
 > l = [1, 2, 3]
 
-- São mutáveis
 
-x = ['a', 'b', 3, 4.0]
 
-print(x[2])
+Mutabilidade
+
+    Listas são estruturas de dados mutáveis, ou seja, sua estrutura pode ser mudada.
+
+
+
+Exemplo de uma lista:
+
+> x = ['a', 'b', 3, 4.0]
+
+
+
+Exibindo o terceiro elemento da lista:
+
+> print(x[2])
+
 3
 
-x[2] = 30
 
-print(x[2])
+
+Alterando o terceiro elemento da lista:
+
+> x[2] = 30
+
+
+
+Exibindo o terceiro elemento da lista:
+
+> print(x[2])
+
 30
 
-7 in x
-False
 
-3 in x
-True
 
-x
+Exibindo os elementos da lista:
+
+> print(x)
+
 ['a', 'b', 30, 4.0]
 
 
-x.append('Uma string qualquer...')
 
-x
+Existe "7" na lista?:
+
+> 7 in x
+
+False
+
+
+
+Existe "3" na lista?:
+
+> 3 in x
+
+True
+
+
+
+O método append adiciona um elemento ao final da lista:
+
+> x.append('Uma string qualquer...')
+
+
+
+Exibindo os elementos da lista:
+
+> print(x)
+
 ['a', 'b', 30, 4.0, 'Uma string qualquer...']
+
 
 
 extend / remove
