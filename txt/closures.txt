@@ -81,7 +81,7 @@ O "x" será 3:
 
 
 
-bla bla bla:
+Exibindo o nome do objeto:
 
 > print(bar.__name__)
 
