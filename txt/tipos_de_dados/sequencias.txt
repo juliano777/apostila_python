@@ -246,7 +246,7 @@ Criação de um generator a partir de uma tuple comprehension:
 
 
 
-bla bla bla:
+Verificando o tipo do objeto:
 
 > type(x)
 
