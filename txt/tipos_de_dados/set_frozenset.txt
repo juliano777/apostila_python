@@ -41,19 +41,32 @@ Operação de união entre os conjuntos:
 
 > a | b
 
+ou
+
+> a.union(b)
+
 {1, 2, 3, 4}
 
 
 
 Operação de intersecção entre os conjuntos:
 
-Interserct
+> a & b
 
-a & b
+ou
+
+> a.intersection(b)
+
 {2, 3}
 
-==============================================================================
 
-# Frozenset vazio
+
+Frozenset vazio:
 
 f = frozenset()
+
+
+
+Frozenset não vazio:
+
+> f = frozenset((1, 2, 3))
