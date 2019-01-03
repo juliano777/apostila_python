@@ -29,7 +29,7 @@ Tipagem Dinâmica
 
 
 
-wewe:
+Criação de dois objetos de mesmo nome:
 
 > x = 3.7
 
@@ -50,3 +50,5 @@ float
 > type(x)
 
 str
+
+    
