@@ -214,19 +214,29 @@ Verificando seu valor e seu tipo:
 
 (1+0j)
 
-type(c)
+> type(c)
 
 complex
 
-c = complex(5, 3)
 
-In [324]: c
-Out[324]: (5+3j)
 
-c = complex(0, 3)
+Novo valor do número complexo com parte real e imaginária:
 
-In [326]: c
-Out[326]: 3j
+> c = complex(5, 3)
+
+> c  # Verificando o valor
+
+(5+3j)
+
+
+
+Número complexo somente com a parte imaginária:
+
+> c = complex(0, 3)
+
+> c  # Verificando seu valor
+
+3j
 
 c.imag
 Out[327]: 3.0
