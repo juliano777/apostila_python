@@ -108,10 +108,7 @@ print(sogra)
 Edelbarina
 del sogra
 print(sogra)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
 NameError: name 'sogra' is not defined
-
 
 
 http://stackoverflow.com/questions/4728073/what-is-the-difference-between-an-expression-and-a-statement-in-python
