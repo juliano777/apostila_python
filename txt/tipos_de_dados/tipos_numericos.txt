@@ -175,33 +175,22 @@ ou
 
 1.5
 
-3 // 2.0
+
+
+Divisão Inteira:
+
+> 3 // 2.0
+
 1.0
 
 
-Python 3
 
-3 / 2
-1.5
+Notação Científica:
 
-3 / 2.0
-1.5
+> 1e+2
 
-3 // 2.0
-1.0
-
-
-Notação Científica
-
-1e+2
 100.0
 
-1e-3
+> 1e-3
+
 0.001
-
-
-
-Divisões entre ints e floats
-
-5 / 2 = 2 # Divisão entre Inteiros retorna um inteiro
-5 / 2.0 = 2.5 # Resultado mais exato, pois envolve um float pelo menos na operação e retornará um float
