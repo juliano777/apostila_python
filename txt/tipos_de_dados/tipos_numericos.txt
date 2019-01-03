@@ -2,33 +2,33 @@ Tipos Numéricos - int, float e complex
 
 int
 
-	Para representação de números inteiros é o tipo int.
+	Para representação de todos números inteiros é o tipo int.
 	A princípio utilizamos para números inteiros o tipo int. O número máximo de int que é aceito pode variar de uma máquina para outra.
 	Para sabermos qual é o número máximo do tipo int fazemos:
 
 
-import sys
+Objeto inteiro:
 
-print(sys.maxint)
-9223372036854775807
+> i = int(7)
 
-	Para números superiores a esse utilizamos o tipo long, cuja representação é um número seguido da letra "L", mas prefira o uso do "L" maiúsculo, pois o minúsculo pode ser confundido com o algorismo "1".
+ou
 
-i = int(7)
+> i = 7
 
-i
+
+
+Verificando seu valor;
+
+> i
+
 7
 
-l = long(7)
-
-l
-7L
 
 
-x = 1
-y = 7L
+Verificando seu tipo:
 
-type(x)
+> type(i)
+
 int
 
 type(y)
