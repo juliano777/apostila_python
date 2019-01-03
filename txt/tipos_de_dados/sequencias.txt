@@ -4,12 +4,13 @@ Sequências
 
 Mútável:
 
-lista -> list -> [0,'string',7.0,1000L]
+lista -> list -> [0, 'string', 7.0, 1000L]
 
 Imutáveis:
 
 string -> str -> 'texto'
-tupla -> tuple -> (0,'string',7.0,1000L) # Funciona de forma idêntica à lista, porém, seus itens são imutáveis, consome menos recursos.
+
+tupla -> tuple -> (0, 'string', 7.0, 1000L) # Funciona de forma idêntica à lista, porém, seus itens são imutáveis, consome menos recursos.
 
 
 Operações com Sequências
