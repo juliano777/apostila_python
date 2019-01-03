@@ -226,7 +226,7 @@ Lista cujos elementos são a metade de cada elemento do range:
 
 
 
-bla bla bla:
+Lista com condição que seja 0 (zero) ou divisível por 5 (cinco):
 
 > [i for i in range(21) if (i % 5 == 0)]
 
