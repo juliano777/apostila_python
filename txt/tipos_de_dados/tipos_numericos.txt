@@ -172,40 +172,6 @@ Notação Científica
 
 
 
-.2.1 Conversões Numéricas
-
-I) Real para inteiro
-
-print int(3.14) 
-3
-
-II) Inteiro para Real
-
-print float(7)
-7.0
-
-III) Outras bases para decimal
-
-int(string_do_valor_de_outra_base, base)
-
-print int('1000',2)	# "1000" na base 2 (binário)
-8
-
-IV) Inteiro para binário
-
-print bin(10)
-'0b1010'
-
-V) Inteiro para octalx.real
-
-oct(10)
-'012'
-
-VI) Inteiro para hexadecimal
-
-hex(10)
-'0xa'
-
 Divisões entre ints e floats
 
 5 / 2 = 2 # Divisão entre Inteiros retorna um inteiro
