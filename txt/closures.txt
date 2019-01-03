@@ -20,9 +20,11 @@ Criação de uma variável foo e passando o valor x para a função principal:
 
 > foo = funcao_principal(2)
 
+    "foo" é uma nova função cujo o "x" de "função_principal" é 2.
 
 
-bla bla bla:
+
+Qual é o nome da função?:
 
 > print(foo.__name__)
 
