@@ -28,15 +28,24 @@ s
 {1, 2, 3}
 
 
-a = set([1,2,3])
 
-b = set([2,3,4])
+Definição de dois conjuntos:
+
+> a = set([1,2,3])
+
+> b = set([2,3,4])
 
 
-Union
 
-a | b
+Operação de união entre os conjuntos:
+
+> a | b
+
 {1, 2, 3, 4}
+
+
+
+Operação de intersecção entre os conjuntos:
 
 Interserct
 
