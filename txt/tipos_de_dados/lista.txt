@@ -327,11 +327,27 @@ O método reverse pega a atual posição dos elementos e reconstrói a lista na 
 
 
 
-A função sorted:
+A função sorted não altera a lista, apenas retorna o conteúdo pela ordem alfabética:
 
 > sorted(z)
 
 ['Gandalf', 'H', 'b', 'b', 'o', 't']
+
+> z
+
+['t', 'o', 'i', 'b', 'b', 'H', 'Gandalf']
+
+
+
+A função sorted também pode somente retornar o reverso de uma lista:
+
+> sorted([1, 2, 3], reverse=True)
+
+[3, 2, 1]
+
+
+
+Criação de uma lista a partir do retorno de sorted:
 
 > w = sorted(z)
 
@@ -343,17 +359,27 @@ A função sorted:
 
 ['t', 'o', 'b', 'b', 'H', 'Gandalf']
 
+
+
+A função reversed() sempre retorna um iterador:
+
 > reversed(z)
 
 <listreverseiterator object at 0x1653c10>
 
-A função reversed() sempre retorna um iterador.
+
+
+Convertendo para lista o iterador gerado pela função reversed:
 
 > z = list(reversed(z))
 
 > z
 
 ['Gandalf', 'H', 'b', 'b', 'o', 't']
+
+
+
+Função sorted transforma a string numa lista e organiza por ordem alfabética:
 
 > sorted('aAcb')
 
