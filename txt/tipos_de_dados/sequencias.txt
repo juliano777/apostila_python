@@ -173,7 +173,7 @@ Do primeiro ao sexto caractere:
 
 
 
-bla bla bla:
+Do oitavo caractere em diante:
 
 > 'Python Language'[7:]
 
