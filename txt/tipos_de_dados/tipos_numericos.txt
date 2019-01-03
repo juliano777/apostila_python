@@ -31,25 +31,6 @@ Verificando seu tipo:
 
 int
 
-type(y)
-long
-
-
-foo = sys.maxint
-
-foo
-9223372036854775807
-
-type(foo)
-int
-
-bar = foo + 1
-
-Promovido
-
-bar
-9223372036854775808L
-
 type(bar)
 long
 
