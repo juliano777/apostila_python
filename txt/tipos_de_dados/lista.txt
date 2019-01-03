@@ -208,18 +208,27 @@ Extendendo a lista com o operador "+=":
 
 
 
+Tentativa de utilizar o operador "+" em uma lista:
+
 > x + 'bla bla bla'
 
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
 TypeError: can only concatenate list (not "str") to list
 
+    Não se pode concatenar uma lista com uma string.
+
+
+
+Criação de uma nova lista a partir de uma string:
 
 > z = list('Hobbit')
 
 > z
 
 ['H', 'o', 'b', 'b', 'i', 't']
+
+
+
+Novamente o método append:
 
 > z.append('Hobbit')
 
@@ -228,15 +237,18 @@ TypeError: can only concatenate list (not "str") to list
 ['H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
 
 
+
+Qual o tamanho (quantos elementos) da lista?
+
 > len(z)
 
 7
 
-Tamanho 7, posições variam de 0 a 6:
+    Tamanho 7, posições variam de 0 a 6.
 
->  z
 
-['H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
+
+Método insert utilizando a priemira posição (0):
 
 > z.insert(0, 'Gandalf')
 
@@ -244,19 +256,28 @@ Tamanho 7, posições variam de 0 a 6:
 
 ['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
 
-> len(z)
 
-ou
+
+Pode-se também verificar o tamanho de uma lista com o dunder len:
 
 > z.__len__()
 
 8
+
+
+Dado que a lista tem 8 (oito) elementos, inserir num novo elemento na nona (8) posição:
 
 > z.insert(8, 'Bilbo')
 
 > z
 
 ['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit', 'Bilbo']
+
+    O efeito foi o mesmo que utilizar o método append.
+
+
+
+O método pop sem parâmetros retorna o último elemento e o apaga da lista:
 
 > z.pop()
 
@@ -266,31 +287,47 @@ ou
 
 ['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
 
-> livro = ('O %s' % z.pop())
 
-livro
+
+Como o método pop retorna o último elemento, o mesmo pode ser utilizado para atribuição:
+
+> livro = ('O {}'.format(z.pop()))
+
+> livro
+
 'O Hobbit'
 
-> z
 
-['Gandalf', 'H', 'o', 'b', 'b', 'i', 't']
 
+Retornando e apagando o sexto elemento:
 
 > z.pop(5)
 
 'i'
 
+
+
+Método sort, organiza a lista com seus elementos pela ordem alfabética:
+
 > z.sort()
 
 > z
 
-['Gandalf', 'H', 'b', 'b', 'o', 't']
+['Gandalf', 'H', 'b', 'b', 'i', 'o', 't']
+
+
+
+O método reverse pega a atual posição dos elementos e reconstrói a lista na ordem reversa:
 
 > z.reverse()
 
 > z
 
 ['t', 'o', 'b', 'b', 'H', 'Gandalf']
+
+
+
+A função sorted:
 
 > sorted(z)
 
