@@ -260,7 +260,7 @@ Dict Comprehension
 
 
 
-bla bla bla:
+Objeto dicionário a ser criado:
 
 > d1 = {'a': 1, 'b':2, 'c': 3}
 
