@@ -103,3 +103,7 @@ ou
 
 
 Exibindo o conteúdo do frozenset:
+
+> f
+
+frozenset({1, 2, 3})
