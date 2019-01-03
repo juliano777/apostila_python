@@ -66,7 +66,7 @@ Podemos também chamar a função principal passando o parâmetro da função au
 
 
 
-bla bla bla:
+id em hexadecimal da função principal:
 
 > hex(id(funcao_principal))
 
