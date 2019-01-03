@@ -118,27 +118,3 @@ Passando o parâmetro da função principal e de lambda:
 > funcao_principal(2)(5)
 
 32
-
-
-
-bla bla bla:
-
-> hex(id(funcao_principal))
-
-'0x7f9847b261e0'
-
-
-
-bla bla bla:
-
-> bar.__closure__
-
-(<cell at 0x7f9844a526a8: int object at 0xa67b00>,)
-
-
-
-bla bla bla:
-
-> bar.__closure__[0].cell_contents
-
-3
