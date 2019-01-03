@@ -240,7 +240,7 @@ Tuple Comprehension
 
 
 
-:
+Criação de um generator a partir de uma tuple comprehension:
 
 > x = (i for i in range(21))
 
