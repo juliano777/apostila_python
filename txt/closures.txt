@@ -50,7 +50,7 @@ Representação de "foo":
 
 Imprimindo o valor resultante ao passar agora o valor y:
 
-> print(foo(6))  # 2 elevado a 6
+> print(foo(6))
 
 64
 
