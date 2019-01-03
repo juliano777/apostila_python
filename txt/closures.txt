@@ -68,7 +68,7 @@ Podemos também chamar a função principal passando o parâmetro da função au
 
 Closures com Lambda
 
-Criação de uma função principal:
+Criação de uma função principal com lambda:
 
 > def funcao_principal(x):
     return lambda y: x ** y
