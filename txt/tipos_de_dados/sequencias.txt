@@ -165,7 +165,7 @@ Do primeiro ao primeiro caractere:
 
 
 
-bla bla bla:
+Do primeiro ao sexto caractere:
 
 > Python Language'[0:6]
 
