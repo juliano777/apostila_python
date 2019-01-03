@@ -32,7 +32,7 @@ funcao_auxiliadora
 
 
 
-bla bla bla:
+Tipo de "foo":
 
 > type(foo)
 
