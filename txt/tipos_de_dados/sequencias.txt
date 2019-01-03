@@ -149,7 +149,7 @@ Incremento negativo faz com que a string seja colocada em ordem reversa:
 'egaugnaL nohtyP'
 
 
-A partir do primeiro elemento:
+A partir do primeiro caractere:
 
 > 'Python Language'[0:]
 
@@ -157,7 +157,7 @@ A partir do primeiro elemento:
 
 
 
-bla bla bla:
+Do primeiro ao primeiro caractere:
 
 > 'Python Language'[0:1]
 
