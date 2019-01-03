@@ -136,6 +136,7 @@ float
 > x = 2.
 
 > x  # Verifica o valor
+
 2.0
  
 type(7 + 3.0)
