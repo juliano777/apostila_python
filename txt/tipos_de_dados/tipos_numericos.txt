@@ -107,7 +107,7 @@ ou
 
 > f = 3.0
 
-> f
+> f  # Veririca o valor
 
 3.0
 
