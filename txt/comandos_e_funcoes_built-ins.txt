@@ -209,10 +209,7 @@ pass
 
 
 
-continue
 
-
-break
 
 
 assert
@@ -327,9 +324,7 @@ hash('bar')
 
 hash([1, 2, 3])
 ---------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-204-0b995650570c> in <module>()
-----> 1 hash([1, 2, 3])
+
 
 TypeError: unhashable type: 'list'
 
