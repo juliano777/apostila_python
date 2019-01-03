@@ -76,6 +76,16 @@ Número 7 (sete) convertido para as bases binária, octal e hexadecimal:
 
 
 
+Descobrir o decimal dada uma base:
+
+> int('facada', base=16)
+
+16435930
+
+> 
+
+
+
 
 
 Ponto flutuante - float
