@@ -124,10 +124,20 @@ Fatiamento determinando apenas o início, que é o último elemento:
 
 'e'
 
-'Python Language'[-3::]
-   'age'
 
-(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)[::4]
+
+odsoiosdiosd:
+
+> 'Python Language'[-3::]
+
+'age'
+
+
+
+ewweweew:
+
+> (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)[::4]
+
 (0, 4, 8)
 
 'Python Language'[::-1]
