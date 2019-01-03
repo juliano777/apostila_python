@@ -202,24 +202,27 @@ Tamanho 7, posições variam de 0 a 6:
 
 > len(z)
 
+ou
+
+> z.__len__()
+
 8
 
+> z.insert(8, 'Bilbo')
 
-z.__len__()
-8
+> z
 
-z.insert(8, 'Bilbo')
-
-z
 ['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit', 'Bilbo']
 
-z.pop()
+> z.pop()
+
 'Bilbo'
 
-z
+> z
+
 ['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
 
-livro = ('O %s' % z.pop())
+> livro = ('O %s' % z.pop())
 
 livro
 'O Hobbit'
