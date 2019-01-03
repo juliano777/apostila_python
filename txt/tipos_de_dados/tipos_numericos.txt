@@ -1,4 +1,4 @@
-Tipos Numéricos
+Tipos Numéricos - int, float e complex
 
 
 
