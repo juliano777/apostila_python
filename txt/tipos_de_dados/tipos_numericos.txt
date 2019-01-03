@@ -1,6 +1,6 @@
 Tipos Numéricos
 
-<ver tabela em tmp.odt>
+
 
 Inteiros - int e long
 
