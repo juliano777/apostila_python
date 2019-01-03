@@ -227,76 +227,92 @@ ou
 livro
 'O Hobbit'
 
-z
+> z
+
 ['Gandalf', 'H', 'o', 'b', 'b', 'i', 't']
 
 
-z.pop(5)
+> z.pop(5)
+
 'i'
 
-z.sort()
+> z.sort()
 
-z
+> z
+
 ['Gandalf', 'H', 'b', 'b', 'o', 't']
 
-z.reverse()
+> z.reverse()
 
-z
+> z
+
 ['t', 'o', 'b', 'b', 'H', 'Gandalf']
 
-sorted(z)
+> sorted(z)
+
 ['Gandalf', 'H', 'b', 'b', 'o', 't']
 
-w = sorted(z)
+> w = sorted(z)
 
-w
+> w
+
 ['Gandalf', 'H', 'b', 'b', 'o', 't']
 
-z
+> z
+
 ['t', 'o', 'b', 'b', 'H', 'Gandalf']
 
-reversed(z) 
+> reversed(z)
+
 <listreverseiterator object at 0x1653c10>
 
 A função reversed() sempre retorna um iterador.
 
-z = list(reversed(z))
+> z = list(reversed(z))
 
-z
+> z
+
 ['Gandalf', 'H', 'b', 'b', 'o', 't']
 
-sorted('aAcb')
+> sorted('aAcb')
+
 ['A', 'a', 'b', 'c']
 
-list(reversed('aAcb'))
+> list(reversed('aAcb'))
+
 ['b', 'c', 'A', 'a']
 
 
-x = [1, 2, 3]
+> x = [1, 2, 3]
 
-a, b, c = x
+> a, b, c = x
 
-print(a)
+> print(a)
+
 1
 
-print(b)
+> print(b)
+
 2
 
-print(c)
+> print(c)
+
 3
 
-y, z, = x
+> y, z, = x
 
 Traceback (most recent call last):
   File "<input>", line 1, in <module>
 ValueError: too many values to unpack (expected 2)
 
-y, z, _ = x
+> y, z, _ = x
 
-print(y)
+> print(y)
+
 1
 
-print(z)
+> print(z)
+
 2
 
 
@@ -306,25 +322,47 @@ Tupla
 	Tupla têm sua estrutura muito similar à da lista, no entanto, ela é imutável.
 	Ela é mais recomendada para uso de dados estáticos, pois comparada à lista, tem um desempenho melhor devido à sua simplicidade e consome menos recursos.
 
-# Tupla vazia
 
-t = ()
+
+Tupla vazia:
+
+> t = ()
 
 ou 
 
 t = tuple()
 
-t = tuple([1, 2, 3])
 
-t
+
+bla bla bla:
+
+> t = tuple([1, 2, 3])
+
+
+
+bla bla bla:
+
+> t
+
 (1, 2, 3)
 
 
-tupla = set(dir(tuple))
 
-lista = set(dir(list))
+bla bla bla:
 
-tupla.intersection(lista)
+> tupla = set(dir(tuple))
+
+
+
+bla bla bla:
+
+> lista = set(dir(list))
+
+
+
+bla bla bla:
+
+> tupla.intersection(lista)
 
 {'__add__',
  '__class__',
@@ -362,62 +400,121 @@ Tuplas tem apenas os métodos count e index.
 
 
 
-regiao_sudeste = ('ES', 'MG', 'RJ', 'SP')
+bla bla bla:
+
+> regiao_sudeste = ('ES', 'MG', 'RJ', 'SP')
+
+
 
 Tupla de um único elemento:
 
-t = (1, )
+> t = (1, )
 
-t
+
+
+bla bla bla:
+
+> t
+
 (1,)
 
-type(t)
+
+
+bla bla bla:
+
+> type(t)
+
 tuple
 
-t = 2, 3, 4
 
-type(t)
+
+bla bla bla:
+
+> t = 2, 3, 4
+
+
+
+bla bla bla:
+
+> type(t)
+
 tuple
 
-t = (7, 14, 21)
 
 
-Trocando valores
+bla bla bla:
 
-x = 0
+> t = (7, 14, 21)
 
-y = 1
 
-x, y = y, x
 
-x
+Trocando valores:
+
+> x = 0
+
+> y = 1
+
+> x, y = y, x
+
+
+
+bla bla bla:
+
+> x
+
 1
 
-y
+> y
+
 0
 
 
-def retorna_tupla():
+
+bla bla bla:
+
+> def retorna_tupla():
     return 1, 2, 3
 
-x, y, z = retorna_tupla()
 
-print(x)
+
+bla bla bla:
+
+> x, y, z = retorna_tupla()
+
+
+
+bla bla bla:
+
+> print(x)
+
 1
 
-print(y)
+
+
+bla bla bla:
+
+> print(y)
+
 2
 
-print(z)
+
+
+bla bla bla:
+
+> print(z)
+
 3
+
+
 
 Tuplas são imutáveis, mas seus elementos não necessariamente:
 
-t = ({}, [])
+> t = ({}, [])
 
-t[0].update({'chave': 'valor'})
+> t[0].update({'chave': 'valor'})
 
-t[1].append(7)
+> t[1].append(7)
 
-t
+> t
+
 ({'chave': 'valor'}, [7])
