@@ -60,13 +60,26 @@ Representação binária de 14:
 
 
 
+Número 7 (sete) convertido para as bases binária, octal e hexadecimal:
+
+> 
+
+
+
 Ponto flutuante - float
 
 	Não tem precisão absoluta, sua precisão é relativa.
 	Para uma maior precisão com números que tenham ponto flutuante, utilizar o módulo decimal.
 
 
-f = float(3)
+
+Criação de um float:
+
+> f = float(3)
+
+ou
+
+f = 3.0
 
 f
 3.0
