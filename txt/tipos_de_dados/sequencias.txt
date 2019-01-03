@@ -140,22 +140,27 @@ ewweweew:
 
 (0, 4, 8)
 
-'Python Language'[::-1]
+> 'Python Language'[::-1]
+
 'egaugnaL nohtyP'
 
-'Python Language'[0:]
+> 'Python Language'[0:]
+
 'Python Language'
 
-'Python Language'[0:1]
+> 'Python Language'[0:1]
+
 'P'
 
-'Python Language'[0:6]
+> Python Language'[0:6]
+
 'Python'
 
-'Python Language'[7:]
+> 'Python Language'[7:]
+
 'Language'
 
-linux_distros = (
+> linux_distros = (
                  'Debian',
                  'RedHat',
                  'Slackware',
