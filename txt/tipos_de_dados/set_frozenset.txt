@@ -20,6 +20,10 @@ Criação de um conjunto (set) não vazio:
 
 > s = set([1, 1, 2, 3])
 
+ou
+
+> s = {1, 2, 3}
+
 s
 {1, 2, 3}
 
