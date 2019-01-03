@@ -125,7 +125,11 @@ Exibindo a nova lista:
  {'chave': 'valor'},
  ('SP', 'MG', 'PR', 'RO')]
 
-> x += ['xyz'] # += é um atalho para o método extend
+
+
+Utilizando "+=" como um atalho para o método extend:
+
+> x += ['xyz']
 
 > x
 
