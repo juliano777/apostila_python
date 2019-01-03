@@ -42,7 +42,12 @@ Representação hexadecimal de 178:
 
 178
 
-010
+
+
+Representação octal de 8:
+
+> 010
+
 8
 
 0b1110
