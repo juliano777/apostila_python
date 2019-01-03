@@ -58,4 +58,9 @@ str
 
 Tipagem Forte
 
-    
+    A tipagem em Python além de dinâmica ela é forte.
+    Em casos de operações matemáticas, por exemplo, é necessário fazer um cast para ser possível quando os tipos são incompatíveis.
+
+
+
+Tentativa de soma entre uma string e um inteiro.
