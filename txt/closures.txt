@@ -89,7 +89,7 @@ Exibindo o nome do objeto:
 
 
 
-bla bla bla:
+Tipo:
 
 > type(bar)
 
