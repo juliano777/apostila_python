@@ -75,7 +75,7 @@ Criação de uma closure com lambda:
 
 
 
-bla bla bla:
+O "x" será 3:
 
 > bar = funcao_principal(3)
 
