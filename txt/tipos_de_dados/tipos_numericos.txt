@@ -62,7 +62,9 @@ Representação binária de 14:
 
 Número 7 (sete) convertido para as bases binária, octal e hexadecimal:
 
-> 
+> bin(7)  # binário
+
+'0b111'
 
 
 
