@@ -108,6 +108,6 @@ bla bla bla:
 
 > getcontext().prec = 3
 
-Decimal('1.3897') * 2
+> Decimal('1.3897') * 2
 
 Decimal('2.78')
