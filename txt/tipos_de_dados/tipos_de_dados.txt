@@ -2,7 +2,15 @@ Tipos de Dados
 	Os tipos em Python podem ser mutáveis ou imutáveis, ou seja, permitem ou não alterar seu conteúdo.
 	Todos os tipos de dados são objetos, pois não existem tipos primitivos em Python.
 
+
+
 Variáveis
 
 	São criadas através de atribuição de valor e quando não existem mais referência a elas são destruídas pelo garbage colector.
 	Seus nomes devem começar por uma letra (não acentuadas) ou por underline "_".
+
+
+
+Tipagem Dinâmica
+
+    Os tipos em Python são determinados em 
