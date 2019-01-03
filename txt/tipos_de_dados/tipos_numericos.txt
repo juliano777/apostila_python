@@ -82,7 +82,9 @@ Descobrir o decimal dada uma base:
 
 16435930
 
-> 
+> int('25', base=8)
+
+21
 
 
 
