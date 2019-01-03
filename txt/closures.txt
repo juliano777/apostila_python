@@ -1,8 +1,7 @@
 Closures
 
-Funções são objetos também.
-Funções que constroem funções.
-É uma função que retorna outra função.
+    Funções são objetos também.
+    Closures são funções que constroem funções, retorna outra função.
 
 
 
