@@ -266,9 +266,11 @@ Objeto dicionário a ser criado:
 
 
 
-bla bla bla:
+Novo dicionário criado a partir de dict comprehension:
 
 > d2 = {k.upper(): v * 10 for k, v in d1.items()}
+
+    Cada chave é o caractere maiúsculo das chave correspondente ao dicionário original e seus valores são multiplicados por 10 (dez).
 
 
 
