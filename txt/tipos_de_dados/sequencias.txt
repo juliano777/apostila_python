@@ -134,7 +134,7 @@ Pelo sinal de subtração, os três últimos caracteres da string:
 
 
 
-bla bla bla:
+Determinando apenas o incremento de 4 (quatro) em 4:
 
 > (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)[::4]
 
