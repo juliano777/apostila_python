@@ -1,7 +1,7 @@
 Lista
 
     Uma lista é uma estrutura de dados similar ao tradicional array que tem em outras linguagens, porém seus elementos podem ser de tipos diferentes.
-    Uma lista é também uma coleção de dados mutável.
+    Uma lista é também uma coleção de dados mutável, pois sua estrutura pode ser mudada.
 
 
 
@@ -25,13 +25,7 @@ ou
 
 
 
-Mutabilidade
-
-    Listas são estruturas de dados mutáveis, ou seja, sua estrutura pode ser mudada.
-
-
-
-Exemplo de uma lista:
+Declaração de uma nova lista:
 
 > x = ['a', 'b', 3, 4.0]
 
