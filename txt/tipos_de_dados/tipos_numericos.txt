@@ -221,4 +221,16 @@ c = complex(0, 3)
 In [326]: c
 Out[326]: 3j
 
+c.imag
+Out[327]: 3.0
+
+In [328]: c.real
+Out[328]: 0.0
+
+c + 1
+Out[330]: (1+3j)
+
+c + complex('7j')
+Out[334]: 10j
+
     
