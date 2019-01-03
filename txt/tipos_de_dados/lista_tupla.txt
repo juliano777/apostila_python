@@ -99,11 +99,15 @@ Exibindo os elementos da lista:
 
 O método extend faz com que os elementos de outra lista sejam adicionadas a uma lista atual:
 
-> foo = ['a', 'b', 'c']  #
+> foo = ['a', 'b', 'c']  # Definição da primeira lista
 
-> bar = [1, 2]
+> bar = [1, 2]  # Definição da segunda lista
 
-> foo.extend(bar)
+> foo.extend(bar)  # Extendendo a primeira lista com os elementos da segunda
+
+
+
+sdjkdjsdkjdk:'
 
 
 
