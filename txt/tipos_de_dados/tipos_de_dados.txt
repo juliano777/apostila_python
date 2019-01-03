@@ -63,4 +63,24 @@ Tipagem Forte
 
 
 
+Soma entre um um número de ponto flutuante e um inteiro:
+
+> 5.0 + 2
+
+7.0
+
+
+
 Tentativa de soma entre uma string e um inteiro.
+
+> '5' + 2
+
+TypeError: must be str, not int
+
+
+Soma utilizando cast.
+
+> int('5') + 2
+
+7
+
