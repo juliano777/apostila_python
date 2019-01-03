@@ -385,12 +385,31 @@ Função sorted transforma a string numa lista e organiza por ordem alfabética:
 
 ['A', 'a', 'b', 'c']
 
+
+
+Função sorted transforma a string numa lista e organiza por ordem alfabética:
+
+> sorted('aAcb', reverse=True)
+
+['c', 'b', 'a', 'A']
+
+
+
+Função reversed transforma a string em uma lista com seus caracteres em ordem reversa:
+
 > list(reversed('aAcb'))
 
 ['b', 'c', 'A', 'a']
 
 
+
+Definição de lista com 3 (três) elementos:
+
 > x = [1, 2, 3]
+
+
+
+A partir da lista "x", atribuir respectivamente seus elementos como valores para as variáveis à esquerdae exibir seus valores:
 
 > a, b, c = x
 
@@ -406,11 +425,19 @@ Função sorted transforma a string numa lista e organiza por ordem alfabética:
 
 3
 
+
+
+E se a quantidade de variáveis que receberão os valores forem em menor número que a quantidade de elementos da lista?:
+
 > y, z, = x
 
-Traceback (most recent call last):
-  File "<input>", line 1, in <module>
 ValueError: too many values to unpack (expected 2)
+
+    Lista com três elementos não pode fazer atribuição respectiva a apenas duas variáveis.
+
+
+
+Utilização do caractere underscore como solução:
 
 > y, z, _ = x
 
