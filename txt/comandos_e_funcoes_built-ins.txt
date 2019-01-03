@@ -55,14 +55,6 @@ baz
 range()
 
 
-
-
-
-
-
-
-
-
 filter
 
 def impar(x):
@@ -98,12 +90,6 @@ reduce
 
 reduce(int.__add__, (2, 1, 4, 3))
 10
-
-
-
-
-
-
 
 
 
