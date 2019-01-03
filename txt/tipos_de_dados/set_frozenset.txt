@@ -6,11 +6,11 @@ set e frozenset
 
 Set vazio:
 
-s = {*()} 
+> s = {*()}
 
-ou 
+ou
 
-s = set()
+> s = set()
 
 
 s = set([1, 1, 2, 3])
