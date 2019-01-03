@@ -142,7 +142,7 @@ Determinando apenas o incremento de 4 (quatro) em 4:
 
 
 
-bla bla bla:
+Incremento negativo faz com que a string seja colocada em ordem reversa:
 
 > 'Python Language'[::-1]
 
