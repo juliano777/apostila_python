@@ -40,7 +40,7 @@ function
 
 
 
-bla bla bla:
+Representação de "foo":
 
 > repr(foo)
 
