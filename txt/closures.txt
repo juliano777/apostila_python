@@ -97,7 +97,7 @@ function
 
 
 
-bla bla bla:
+Representação:
 
 > repr(bar)
 
@@ -105,7 +105,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+3 elevado a 2:
 
 > print(bar(2))
 
