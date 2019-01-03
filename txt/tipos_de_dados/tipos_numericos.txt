@@ -92,11 +92,9 @@ Descobrir o decimal dada uma base:
 
 
 
+float
 
-
-Ponto flutuante - float
-
-	Não tem precisão absoluta, sua precisão é relativa.
+	Ponto flutuante; não tem precisão absoluta, sua precisão é relativa.
 	Para uma maior precisão com números que tenham ponto flutuante, utilizar o módulo decimal.
 
 
