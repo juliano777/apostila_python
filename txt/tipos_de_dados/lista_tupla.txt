@@ -324,7 +324,7 @@ Tupla
 
 
 
-Tupla vazia:
+Declaração de uma tupla vazia:
 
 > t = ()
 
@@ -334,13 +334,17 @@ t = tuple()
 
 
 
-bla bla bla:
+Declaração de uma tupla com três elementos:
 
 > t = tuple([1, 2, 3])
 
+ou
+
+> t = (1, 2, 3)
 
 
-bla bla bla:
+
+Exibindo o conteúdo da tupla:
 
 > t
 
@@ -348,19 +352,19 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criação de um conjunto (set) contendo todos atributos e métodos de uma tupla:
 
 > tupla = set(dir(tuple))
 
 
 
-bla bla bla:
+Criação de um conjunto (set) contendo todos atributos e métodos de uma lista:
 
 > lista = set(dir(list))
 
 
 
-bla bla bla:
+Via intersecção, o que há em comum entre lista e tupla?:
 
 > tupla.intersection(lista)
 
@@ -400,19 +404,13 @@ Tuplas tem apenas os métodos count e index.
 
 
 
-bla bla bla:
-
-> regiao_sudeste = ('ES', 'MG', 'RJ', 'SP')
-
-
-
 Tupla de um único elemento:
 
 > t = (1, )
 
 
 
-bla bla bla:
+Exibir o conteúdo da tupla:
 
 > t
 
@@ -420,31 +418,11 @@ bla bla bla:
 
 
 
-bla bla bla:
+Função type para verificar o tipo do objeto:
 
 > type(t)
 
 tuple
-
-
-
-bla bla bla:
-
-> t = 2, 3, 4
-
-
-
-bla bla bla:
-
-> type(t)
-
-tuple
-
-
-
-bla bla bla:
-
-> t = (7, 14, 21)
 
 
 
