@@ -210,7 +210,7 @@ List Comprehension
 
 
 
-bla bla bla:
+Lista criada a partir de uma list comprehension do range:
 
 > [i for i in range(21)]
 
