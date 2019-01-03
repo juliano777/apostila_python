@@ -34,7 +34,12 @@ int
 type(bar)
 long
 
-0xb2
+
+
+Representação hexadecimal de 178:
+
+> 0xb2
+
 178
 
 010
