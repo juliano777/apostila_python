@@ -194,7 +194,7 @@ Criação de uma tupla de exemplo:
 
 
 
-bla bla bla:
+Do primeiro:
 
 > linux_distros[0:3]
 
