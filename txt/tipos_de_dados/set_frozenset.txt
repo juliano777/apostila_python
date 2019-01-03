@@ -70,3 +70,11 @@ f = frozenset()
 Frozenset não vazio:
 
 > f = frozenset((1, 2, 3))
+
+ou
+
+> f = frozenset({1, 2, 3})
+
+ou
+
+> f = frozenset([1, 2, 3])
