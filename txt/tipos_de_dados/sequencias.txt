@@ -236,6 +236,8 @@ Lista com condição que seja 0 (zero) ou divisível por 5 (cinco):
 
 Tuple Comprehension
 
+    Ou em português "Compreenção de Tupla" é similar a uma list comprehension, no entanto resulta em um generator.
+
 
 
 bla bla bla:
