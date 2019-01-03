@@ -66,6 +66,16 @@ Número 7 (sete) convertido para as bases binária, octal e hexadecimal:
 
 '0b111'
 
+> oct(7)
+
+'0o7'
+
+> hex(7)
+
+'0x7'
+
+
+
 
 
 Ponto flutuante - float
