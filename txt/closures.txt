@@ -146,7 +146,7 @@ bla bla bla:
 
 > hex(id(funcao_principal))
 
-'0x7fa7c15a59b0'
+'0x7f9847b261e0'
 
 
 
@@ -154,7 +154,7 @@ bla bla bla:
 
 > bar.__closure__
 
-(<cell at 0x7fa7c15a8fd8: int object at 0x268a128>,)
+(<cell at 0x7f9844a526a8: int object at 0xa67b00>,)
 
 
 
