@@ -181,7 +181,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criação de uma tupla de exemplo:
 
 > linux_distros = (
                  'Debian',
