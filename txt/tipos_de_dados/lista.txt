@@ -127,7 +127,7 @@ Exibindo a nova lista:
 
 
 
-Utilizando "+=" como um atalho para o método extend:
+Utilizando "+=" como um atalho para o método extend e exibindo seu novo conteúdo:
 
 > x += ['xyz']
 
@@ -136,15 +136,8 @@ Utilizando "+=" como um atalho para o método extend:
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz']
 
 
-> foo = [3, 5, 7, 9]
 
-> bar = [11, 13, 15]
-
-> foo.extend(bar)
-
-> foo
-
-[3, 5, 7, 9, 11, 13, 15]
+Removendo um elemento da lista e exibindo seu novo conteúdo:
 
 > x.remove('xyz')
 
@@ -152,10 +145,19 @@ Utilizando "+=" como um atalho para o método extend:
 
 ['a', 'b', 30, 4.0, 'Uma string qualquer...']
 
+
+
+Método extend com uma lista como parâmetro:
+
 > x.extend(['xyz'])
 
 > x
+
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz']
+
+
+
+Método extend com uma string como parâmetro:
 
 x.extend('xyz')
 
@@ -163,11 +165,19 @@ x.extend('xyz')
 
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z']
 
+    Ao utilizarmos uma string como parâmetro do método extend, a string foi convertida em lista de forma a transformar cada caractere em elemento de uma lista.
+
+
+
+Método append:
+
 > x.append('xyz')
 
 > x
 
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z', 'xyz']
+
+    Aqui podemos ver claramente a diferença entre os métodos extend e append, que pode causar uma certa confusão inicial para quem está iniciando em Python. Nota-se que o método append adicionou a string inteira como um novo elemento da lista.
 
 Para listas "+=" -> método extend
 
