@@ -7,7 +7,7 @@ Closures
 
 
 
-bla bla bla:
+Criação de uma closure:
 
 > def funcao_principal(x):
     def funcao_auxiliadora(y):
