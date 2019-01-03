@@ -179,13 +179,33 @@ Método append:
 
     Aqui podemos ver claramente a diferença entre os métodos extend e append, que pode causar uma certa confusão inicial para quem está iniciando em Python. Nota-se que o método append adicionou a string inteira como um novo elemento da lista.
 
-Para listas "+=" -> método extend
+
+
+Extendendo a lista com o operador "+=":
 
 > x += 'String'
 
-> x
+> x  
 
-['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z', 'xyz', 'S', 't', 'r', 'i', 'n', 'g']
+['a',
+ 'b',
+ 30,
+ 4.0,
+ 'Uma string qualquer...',
+ 'xyz',
+ 'x',
+ 'y',
+ 'z',
+ 'xyz',
+ 'S',
+ 't',
+ 'r',
+ 'i',
+ 'n',
+ 'g']
+
+    Como o operador "+=" ser um atalho para o método extend ele transformou a string numa lista, uma lista cujos elementos são os caracteres da string.
+
 
 
 > x + 'bla bla bla'
