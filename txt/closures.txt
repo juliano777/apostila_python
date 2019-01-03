@@ -113,7 +113,7 @@ Representação:
 
 
 
-bla bla bla:
+Passando o parâmetro da função principal e de lambda:
 
 > funcao_principal(2)(5)
 
