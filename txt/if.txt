@@ -112,3 +112,11 @@ sinal = 'positivo' if num > 0 else 'negativo' if num < 0 else 'zero'
 
 print('O número é {}'.format(sinal))
 O número é negativo
+
+
+
+
+continue
+
+
+break
