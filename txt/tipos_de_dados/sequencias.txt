@@ -126,7 +126,7 @@ Fatiamento determinando apenas o início, que é o último elemento:
 
 
 
-odsoiosdiosd:
+Pelo sinal de subtração, os três últimos caracteres da string:
 
 > 'Python Language'[-3::]
 
