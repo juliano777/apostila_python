@@ -147,7 +147,12 @@ Que tipo resulta de da soma de um inteiro e um float?
 
 float
 
-7 + 3.0
+
+
+Resultado:
+
+> 7 + 3.0
+
 10.0
 
 
