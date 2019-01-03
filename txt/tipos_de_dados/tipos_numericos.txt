@@ -201,4 +201,10 @@ complex
 
     É o tipo de dados em Python que trata de números complexos, que são muito utilizados em engenharia elétrica.
 
+c = complex(1)
+
+c
+
+(1+0j)
+
     
