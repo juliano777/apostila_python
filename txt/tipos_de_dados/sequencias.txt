@@ -20,26 +20,49 @@ Operações com Sequências
 	Toda sequência, seguindo a mesma idéia de vetores de outras linguagens, como C, por exemplo, começa com o índice 0 (zero).
 	Para se obter um índice, fazemos da seguinte forma:
 
-	sequencia[indice]  
+	sequencia[indice]
 
 
-'Python'[1]
+
+Segundo elemento da string:
+
+> 'Python'[1]
+
 'y'
 
-['foo', 'bar', 2.7, 80,  2 + 7j][0]
+
+
+Primeiro elemento da lista:
+
+> ['foo', 'bar', 2.7, 80,  2 + 7j][0]
+
 'foo'
 
-('Python', 'C', 'C++', 2.7, 3.4)[3]
-2.7
-	
 
-- Iteráveis 
+
+Quarto elemento da tupla:
+
+> ('Python', 'C', 'C++', 2.7, 3.7)[3]
+
+2.7
+
+
+
+Iteráveis 
 
 	Sequências nos permite também fazer iteração sobre cada elemento.
 
-regiao_sudeste = ('SP', 'MG', 'ES', 'RJ')
 
-for i in regiao_sudeste:
+
+Definição de uma tupla:
+
+> regiao_sudeste = ('SP', 'MG', 'ES', 'RJ')
+
+
+
+Loop sobre a tupla e impressão em tela de cada elemento:
+
+> for i in regiao_sudeste:
     print(i)
 
 SP
@@ -47,7 +70,11 @@ MG
 ES
 RJ
 
-for i in 'Python':
+
+
+Loop sobre a string e impressão em tela de cada caractere:
+
+> for i in 'Python':
     print(i)
 
 P
@@ -57,7 +84,11 @@ h
 o
 n
 
-for i in range(21):
+
+
+Loop sobre um range de 0 (zero) a 20 (vinte) com a condição de exibir somente 0 (zero) e divisíveis por 5 (cinco):
+
+> for i in range(21):
     if (i % 5 == 0):
         print(i)
 
@@ -68,19 +99,29 @@ for i in range(21):
 20
 
 
-- Fatiamento / Slicing 
 
-Corte de sequência 
+Fatiamento / Slicing 
 
-[inicio:fim - 1:incremento]
+    É o corte de uma sequência.
+
+    [inicio:fim - 1:incremento]
 
 
 
+Fatiamento sem qualquer determinação:
 
-'Python Language'[::]
+> 'Python Language'[::]
+
 'Python Language'
 
-'Python Language'[-1::]
+    Não foram determinados início, fim e incremento.
+
+
+
+Fatiamento :
+
+> 'Python Language'[-1::]
+
 'e'
 
 'Python Language'[-3::]
@@ -105,15 +146,16 @@ Corte de sequência
 'Language'
 
 linux_distros = (
-'Debian',
-'RedHat',
-'Slackware',
-'Ubuntu',
-'CentOS',
-'SuSE',
-)
+                 'Debian',
+                 'RedHat',
+                 'Slackware',
+                 'Ubuntu',
+                 'CentOS',
+                 'SuSE',
+                )
 
-linux_distros[0:3]
+> linux_distros[0:3]
+
 ('Debian', 'RedHat', 'Slackware')
 
 List Comprehension
@@ -123,31 +165,36 @@ List Comprehension
 	Sempre retornará uma lista.
 
 
-[i for i in range(21)]
+> [i for i in range(21)]
+
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
-[i / 2.0 for i in range(10)]
+> [i / 2.0 for i in range(10)]
+
 [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
 
-[i for i in range(21) if (i % 5 == 0)]
+> [i for i in range(21) if (i % 5 == 0)]
+
 [0, 5, 10, 15, 20]
 
 
 
 Tuple Comprehension
 
-x = (i for i in range(21))
+> x = (i for i in range(21))
 
-type(x)
+> type(x)
+
 generator
 
 
 Dict Comprehension
 
-d1 = {'a': 1, 'b':2, 'c': 3}
+> d1 = {'a': 1, 'b':2, 'c': 3}
 
-d2 = {k.upper(): v * 10 for k, v in d1.items()}
+> d2 = {k.upper(): v * 10 for k, v in d1.items()}
 
-print(d2)
+> print(d2)
+
 {'A': 10, 'B': 20, 'C': 30}
 
