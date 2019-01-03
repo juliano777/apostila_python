@@ -99,3 +99,7 @@ ou
 ou
 
 > f = frozenset({1, 2, 3})
+
+
+
+Exibindo o conteúdo do frozenset:
