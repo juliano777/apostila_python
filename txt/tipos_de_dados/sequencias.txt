@@ -253,7 +253,10 @@ Verificando o tipo do objeto:
 generator
 
 
+
 Dict Comprehension
+
+    Ou também conhecido em português como "Compreenção de Dicionário"
 
 
 
