@@ -188,9 +188,15 @@ bla bla bla:
                  'SuSE',
                 )
 
+
+
+bla bla bla:
+
 > linux_distros[0:3]
 
 ('Debian', 'RedHat', 'Slackware')
+
+
 
 List Comprehension
 
@@ -199,13 +205,24 @@ List Comprehension
 	Sempre retornará uma lista.
 
 
+
+bla bla bla:
+
 > [i for i in range(21)]
 
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
+
+
+bla bla bla:
+
 > [i / 2.0 for i in range(10)]
 
 [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
+
+
+
+bla bla bla:
 
 > [i for i in range(21) if (i % 5 == 0)]
 
@@ -215,7 +232,15 @@ List Comprehension
 
 Tuple Comprehension
 
+
+
+bla bla bla:
+
 > x = (i for i in range(21))
+
+
+
+bla bla bla:
 
 > type(x)
 
@@ -224,9 +249,21 @@ generator
 
 Dict Comprehension
 
+
+
+bla bla bla:
+
 > d1 = {'a': 1, 'b':2, 'c': 3}
 
+
+
+bla bla bla:
+
 > d2 = {k.upper(): v * 10 for k, v in d1.items()}
+
+
+
+bla bla bla:
 
 > print(d2)
 
