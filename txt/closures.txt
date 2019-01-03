@@ -4,23 +4,42 @@ Funções são objetos também.
 Funções que constroem funções.
 É uma função que retorna outra função.
 
-def funcao_principal(x):
+
+
+bla bla bla:
+
+> def funcao_principal(x):
     def funcao_auxiliadora(y):
         return x ** y
     return funcao_auxiliadora
 
 
+
 Criação de uma variável foo e passando o valor x para a função principal:
 
-foo = funcao_principal(2)
+> foo = funcao_principal(2)
 
-print(foo.__name__)
+
+
+bla bla bla:
+
+> print(foo.__name__)
+
 funcao_auxiliadora
 
-type(foo)
+
+
+bla bla bla:
+
+> type(foo)
+
 <class 'function'>
 
-repr(foo)
+
+
+bla bla bla:
+
+> repr(foo)
 '<function funcao_principal.<locals>.funcao_auxiliadora at 0x7fda9c673ea0>'
 
 Imprimindo o valor resultante ao passar agora o valor y:
