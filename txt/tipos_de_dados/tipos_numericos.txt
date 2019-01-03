@@ -46,12 +46,18 @@ Representação hexadecimal de 178:
 
 Representação octal de 8:
 
-> 010
+> 0o10
 
 8
 
-0b1110
+
+
+Representação binária de 14:
+
+> 0b1110
+
 14
+
 
 
 Ponto flutuante - float
