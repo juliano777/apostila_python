@@ -99,15 +99,31 @@ O método extend faz com que os elementos de outra lista sejam adicionadas a uma
 
 > foo.extend(bar)  # Extendendo a primeira lista com os elementos da segunda
 
+> print(foo)  # Exibindo a lista extendida
+
+['a', 'b', 'c', 1, 2]
 
 
-Extend é fazer com que uma lista seja extendida adicionando a ela outra lista:
+
+O operador "+" sendo utilizado para criar uma nova lista a partir de outra somada à outra:
 
 > y = x + ['abobrinha', '7', {'chave': 'valor'}, ('SP', 'MG', 'PR', 'RO')]
 
+
+
+Exibindo a nova lista:
+
 > y
 
-['a', 'b', 30, 4.0, 'Uma string qualquer...', 'abobrinha', '7', {'chave': 'valor'}, ('SP', 'MG', 'PR', 'RO')]
+['a',
+ 'b',
+ 30,
+ 4.0,
+ 'Uma string qualquer...',
+ 'abobrinha',
+ '7',
+ {'chave': 'valor'},
+ ('SP', 'MG', 'PR', 'RO')]
 
 > x += ['xyz'] # += é um atalho para o método extend
 
