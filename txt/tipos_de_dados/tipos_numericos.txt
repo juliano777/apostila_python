@@ -207,4 +207,18 @@ c
 
 (1+0j)
 
+type(c)
+
+complex
+
+c = complex(5, 3)
+
+In [324]: c
+Out[324]: (5+3j)
+
+c = complex(0, 3)
+
+In [326]: c
+Out[326]: 3j
+
     
