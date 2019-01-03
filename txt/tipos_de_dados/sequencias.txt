@@ -118,7 +118,7 @@ Fatiamento sem qualquer determinação:
 
 
 
-Fatiamento :
+Fatiamento determinando apenas o início:
 
 > 'Python Language'[-1::]
 
