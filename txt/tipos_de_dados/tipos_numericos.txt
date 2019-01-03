@@ -238,14 +238,22 @@ Número complexo somente com a parte imaginária:
 
 3j
 
-c.imag
-Out[327]: 3.0
+> c.imag  # Extraindo somente a parte imaginária
 
-In [328]: c.real
-Out[328]: 0.0
+3.0
 
-c + 1
-Out[330]: (1+3j)
+> c.real  # Extraindo somente a parte real
 
-c + complex('7j')
-Out[334]: 10j
+0.0
+
+> c + 1  # Somando o número com a parte real
+
+(1+3j)
+
+> c + complex('7j')  # Somando o número com a parte imaginária
+
+10j
+
+> c + complex(2, 17)  # somando o número complexo com outro complexo
+
+(2+20j)
