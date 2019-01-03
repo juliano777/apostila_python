@@ -134,23 +134,38 @@ odsoiosdiosd:
 
 
 
-ewweweew:
+bla bla bla:
 
 > (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)[::4]
 
 (0, 4, 8)
 
+
+
+bla bla bla:
+
 > 'Python Language'[::-1]
 
 'egaugnaL nohtyP'
+
+
+bla bla bla:
 
 > 'Python Language'[0:]
 
 'Python Language'
 
+
+
+bla bla bla:
+
 > 'Python Language'[0:1]
 
 'P'
+
+
+
+bla bla bla:
 
 > Python Language'[0:6]
 
@@ -159,6 +174,10 @@ ewweweew:
 > 'Python Language'[7:]
 
 'Language'
+
+
+
+bla bla bla:
 
 > linux_distros = (
                  'Debian',
