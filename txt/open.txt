@@ -1,0 +1,334 @@
+open
+
+
+	É a forma nativa de Python para manipular arquivos (leitura e escrita).
+	A partir da versão 3 de Python use preferencialmente open, pois file foi removido.
+	Um arquivo é iterável, cujas iterações são por linha.
+
+Python 2:
+
+file(name[, mode[, buffering]])
+
+name = string que contém o nome do arquivo ou o caminho completo ou relativo para ele.
+mode = como o arquivo vai ser operado.
+buffering = 0 sem buffer, 1 utiliza buffer, valores maiores do que 1 indicam o tamanho em bytes.
+
+mode:
+
+'r' -> Leitura (padrão);
+'w' -> Escrita (novo arquivo, ou se o mesmo existir será truncado);
+'b' -> Modo binário;
+'a' -> Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente).
+
+
+
+(print)
+
+
+f = file('/tmp/foo.txt', 'w+')
+
+type(f)
+file
+
+print >> f, 'Teste de escrita em arquivo'
+
+print >> f, '' # Linha em branco
+
+print >> f, 'Uma linha qualquer'
+
+f.close()
+
+
+Python3:
+
+
+open(file, mode='r', buffering=-1, encoding=None,
+         errors=None, newline=None, closefd=True, opener=None) 
+
+
+Modos
+
+--------- ---------------------------------------------------------------
+'r'       Leitura (padrão);
+'w'       Escrita (novo arquivo, ou se o mesmo existir será truncado);
+'x'       Cria um novo arquivo e o abre para escrita;
+'a'       Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente);
+'b'       Modo binário;
+'t'       Modo de texto (padrão);
+'+'       Abre um arquivo em disco para a atualização (leitura e escrita).
+
+
+
+
+f = open('/tmp/foo.txt', 'w+')
+
+type(f)
+_io.TextIOWrapper
+
+print('Teste de escrita em arquivo', file = f)
+
+print(' ', file = f)
+
+print('Uma linha qualquer', file = f)
+
+f.close()
+
+
+
+
+f = open('/tmp/foo.txt', 'r')
+
+for line in f:
+    print(line.strip('\n'))
+
+Teste de escrita em arquivo
+
+Uma linha qualquer
+
+f.close()
+
+
+
+
+$ cat << EOF > /tmp/linhas.txt
+linha_1
+linha_2
+linha_3
+EOF
+
+$ cat /tmp/linhas.txt
+
+linha_1
+linha_2
+linha_3
+
+f = open('/tmp/linhas.txt')
+
+
+f.readline()
+'linha_1\n'
+
+f.readline().split()
+['linha_2']
+
+f.readline().split()
+['linha_3']
+
+f.readline().split()
+[]
+
+
+f.close()
+
+f = open('/tmp/linhas.txt')
+
+f.readlines()
+['linha_1\n', 'linha_2\n', 'linha_3\n']
+
+f.close()
+
+
+
+
+#!/usr/bin/env python3
+#_*_ encoding: utf8 _*_
+
+import sys
+
+file_open = sys.argv[1]
+
+
+file_open = open(file_open, 'r')
+
+for i in file_open:
+    print(i.strip())
+
+file_open.close()
+
+
+$ chmod +x teste.py 
+
+$ ./teste.py linhas.txt 
+
+linha_1
+linha_2
+linha_3
+
+
+O Método seek
+
+$ cat << EOF > /tmp/cores.txt
+1 - Verde
+2 - Preto
+3 - Branco
+EOF
+
+f = open('/tmp/cores.txt', 'r')
+
+for i in f:
+    print(i.strip())
+
+1 - Verde
+2 - Preto
+3 - Branco
+
+for i in f:
+    print(i.strip())
+ 
+
+f.seek(0)
+
+
+
+for i in f:
+    print(i.strip())
+
+1 - Verde
+2 - Preto
+3 - Branco
+
+
+f.seek(1)
+
+
+
+
+for i in f:
+    print(i.strip())
+
+- Verde
+2 - Preto
+3 - Branco
+
+f.seek(0)
+0
+
+f.read(7)
+'1 - Ver'
+
+
+f.read(7)
+'de\n2 - '
+
+f.read(7)
+'Preto\n3'
+
+f.read(7)
+' - Bran'
+
+
+f.close()
+
+f.closed
+True
+
+f = open('/tmp/cores.txt', 'w')
+
+f.closed
+False
+
+f.close()
+
+$ cat /tmp/cores.txt
+
+f = open('/tmp/cores.txt', 'w')
+
+f.write('1 - Verde\n')
+
+
+f.close()
+
+$ cat /tmp/cores.txt 
+1 - Verde
+
+
+print(f.name)
+/tmp/cores.txt
+
+
+f = open('/tmp/cores.txt', 'a')
+
+f.close()
+
+
+$ cat /tmp/cores.txt 
+
+1 - Verde
+
+
+f = open('/tmp/cores.txt', 'a')
+
+f.write('2 - Preto\n')
+
+
+f.write('3 - Branco\n')
+
+
+f.flush()
+
+$ cat /tmp/cores.txt
+
+1 - Verde
+2 - Preto
+3 - Branco
+
+f.close()
+
+f = open('/tmp/cores.txt', 'r')
+
+f.tell()
+0
+
+f.read()
+'1 - Verde\n2 - Preto\n3 - Branco\n'
+
+f.tell()
+31
+
+f.seek(0)
+0
+
+f.tell()
+0
+
+f.read(7)
+'1 - Ver'
+
+f.tell()
+7
+
+
+f.close()
+
+
+f = open('/tmp/planetas.txt', 'w')
+
+planetas = ('Saturno\n', 'Urano\n', 'Netuno\n')
+
+f.writelines(planetas)
+
+f.flush()
+
+$ cat /tmp/planetas.txt
+
+Saturno
+Urano
+Netuno
+
+
+planetas = ('Marte\n', 'Vênus\n', 'Plutão\n', 'Júpiter\n')
+
+f.writelines(planetas)
+
+f.close()
+
+
+$ cat /tmp/planetas.txt
+
+Saturno
+Urano
+Netuno
+Marte
+Vênus
+Plutão
+Júpiter
