@@ -133,9 +133,9 @@ ou
 
 float
 
-x = 2.
+> x = 2.
 
-x
+> x  # Verifica o valor
 2.0
  
 type(7 + 3.0)
