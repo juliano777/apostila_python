@@ -113,7 +113,7 @@ ou
 
 
 
-Mesmo valor...:
+Formas de se definir um float:
 
 > x = 0.5000000000
 
