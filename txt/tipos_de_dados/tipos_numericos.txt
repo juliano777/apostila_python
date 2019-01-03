@@ -129,12 +129,8 @@ ou
 
 0.5
 
-x = .5
+> type(x)  # Tipo
 
-x
-0.5
-
-type(x)
 float
 
 x = 2.
