@@ -274,9 +274,8 @@ Novo dicionário criado a partir de dict comprehension:
 
 
 
-bla bla bla:
+Exibindo o dicionário gerado a partir da dict comprehension:
 
 > print(d2)
 
 {'A': 10, 'B': 20, 'C': 30}
-
