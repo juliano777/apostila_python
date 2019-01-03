@@ -33,7 +33,7 @@ bla bla bla:
 
 > type(foo)
 
-<class 'function'>
+function
 
 
 
@@ -41,7 +41,7 @@ bla bla bla:
 
 > repr(foo)
 
-'<function funcao_principal.<locals>.funcao_auxiliadora at 0x7fda9c673ea0>'
+'<function funcao_principal.<locals>.funcao_auxiliadora at 0x7f9845369950>'
 
 
 
@@ -67,7 +67,7 @@ bla bla bla:
 
 > hex(id(funcao_principal))
 
-'0x8ee095c'
+'0x7f984406bea0'
 
 
 
@@ -75,7 +75,7 @@ bla bla bla:
 
 > foo.__closure__
 
-(<cell at 0x8ee53bc: int object at 0x8add0a4>,)
+(<cell at 0x7f9844588f18: int object at 0xa67ae0>,)
 
 
 
@@ -104,7 +104,7 @@ bla bla bla:
 
 bla bla bla:
 
-> print(bar.func_name)
+> print(bar.__name__)
 
 <lambda>
 
