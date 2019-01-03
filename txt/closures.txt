@@ -58,7 +58,7 @@ Imprimindo o valor resultante ao passar agora o valor y:
 
 
 
-bla bla bla:
+Podemos também chamar a função principal passando o parâmetro da função auxiliar:
 
 > funcao_principal(5)(2)
 
