@@ -10,7 +10,15 @@ O Módulo decimal
 	O módulo decimal incorpora a noção de posições (casas decimais) significantes em que 1.30 + 1.20 é 2.50. O zero no fim é mantido para indicar a significância. Esta é a apresentação habitual para aplicações monetárias. Para multiplicação, a abordagem do "livro de escola" usa todos os números nos multiplicandos. Por exemplo, 1.3 * 1.2 dá 1.56 enquanto que 1.30 * 1.20 dá 1.5600.
 	Ao contrário de hardware baseado em ponto flutuante binário, o módulo decimal tem uma precisão alterável (padrão 28 casas decimais).
 
-import decimal
+
+
+Importação do módulo:
+
+> import decimal
+
+
+
+
 
 d = decimal.Decimal('0.777')
 
