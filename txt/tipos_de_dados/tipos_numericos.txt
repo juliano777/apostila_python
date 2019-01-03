@@ -138,8 +138,13 @@ float
 > x  # Verifica o valor
 
 2.0
+
+
+
+Que tipo resulta de da soma de um inteiro e um float?
  
-type(7 + 3.0)
+> type(7 + 3.0)
+
 float
 
 7 + 3.0
