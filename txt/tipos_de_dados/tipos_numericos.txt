@@ -86,6 +86,10 @@ Descobrir o decimal dada uma base:
 
 21
 
+> int('1111', base=2)
+
+15
+
 
 
 
