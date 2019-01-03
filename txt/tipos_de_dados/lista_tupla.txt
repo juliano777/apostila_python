@@ -107,93 +107,101 @@ O método extend faz com que os elementos de outra lista sejam adicionadas a uma
 
 
 
-sdjkdjsdkjdk:'
+Extend é fazer com que uma lista seja extendida adicionando a ela outra lista:
 
+> y = x + ['abobrinha', '7', {'chave': 'valor'}, ('SP', 'MG', 'PR', 'RO')]
 
+> y
 
-extend / remove
-
-	Extend é fazer com que uma lista seja extendida adicionando a ela outra lista.
-
-y = x + ['abobrinha', '7', {'chave': 'valor'}, ('SP', 'MG', 'PR', 'RO')]
-
-y
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'abobrinha', '7', {'chave': 'valor'}, ('SP', 'MG', 'PR', 'RO')]
 
-x += ['xyz'] # += é um atalho para o método extend
+> x += ['xyz'] # += é um atalho para o método extend
 
-x
+> x
+
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz']
 
 
-foo = [3, 5, 7, 9]
+> foo = [3, 5, 7, 9]
 
-bar = [11, 13, 15]
+> bar = [11, 13, 15]
 
-foo.extend(bar)
+> foo.extend(bar)
 
-foo
+> foo
+
 [3, 5, 7, 9, 11, 13, 15]
 
-x.remove('xyz')
+> x.remove('xyz')
 
-x
+> x
+
 ['a', 'b', 30, 4.0, 'Uma string qualquer...']
 
-x.extend(['xyz'])
+> x.extend(['xyz'])
 
-x
+> x
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz']
 
 x.extend('xyz')
 
-x
+> x
+
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z']
 
-x.append('xyz')
+> x.append('xyz')
 
-x
+> x
+
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z', 'xyz']
 
 Para listas "+=" -> método extend
 
-x += 'String'
+> x += 'String'
 
-x
+> x
+
 ['a', 'b', 30, 4.0, 'Uma string qualquer...', 'xyz', 'x', 'y', 'z', 'xyz', 'S', 't', 'r', 'i', 'n', 'g']
 
 
-x + 'bla bla bla'
+> x + 'bla bla bla'
+
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: can only concatenate list (not "str") to list
 
 
-z = list('Hobbit')
+> z = list('Hobbit')
 
-z
+> z
+
 ['H', 'o', 'b', 'b', 'i', 't']
 
-z.append('Hobbit')
+> z.append('Hobbit')
 
-z
+> z
+
 ['H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
 
 
-len(z)
+> len(z)
+
 7
 
-Tamanho 7, posições variam de 0 a 6.
+Tamanho 7, posições variam de 0 a 6:
 
-z
+>  z
+
 ['H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
 
-z.insert(0, 'Gandalf')
+> z.insert(0, 'Gandalf')
 
-z
+> z
+
 ['Gandalf', 'H', 'o', 'b', 'b', 'i', 't', 'Hobbit']
 
-len(z)
+> len(z)
+
 8
 
 
