@@ -2,7 +2,7 @@ Tipos Numéricos - int, float e complex
 
 
 
-Inteiros - int e long
+Inteiros - int
 
 	Para representação de números inteiros podemos usar os tipos built-in int e long.
 	A princípio utilizamos para números inteiros o tipo int. O número máximo de int que é aceito pode variar de uma máquina para outra.
