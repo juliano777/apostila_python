@@ -240,7 +240,7 @@ Tuple Comprehension
 
 
 
-bla bla bla:
+:
 
 > x = (i for i in range(21))
 
