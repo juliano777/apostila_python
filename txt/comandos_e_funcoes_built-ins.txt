@@ -179,7 +179,7 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
 
 
 
-bla bla bla:
+Para cada item da lista, criar uma nova lista com seus respectivos tipos:
 
 > m = map(type, ['foo', 1.4, 2 + 5j, 1000])
 
