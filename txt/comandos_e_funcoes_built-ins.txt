@@ -263,9 +263,9 @@ Teste de del para desalocar um objeto criado:
 
 Edelbarina
 
-> del sogra  # 
+> del sogra  # Apagando o objeto string
 
-> print(sogra)
+> print(sogra)  # Tentativa de imprimir o valor do objeto desalocado
 
 NameError: name 'sogra' is not defined
 
