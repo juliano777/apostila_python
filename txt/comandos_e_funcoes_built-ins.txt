@@ -424,18 +424,25 @@ bla bla bla:
 (2, 3)
 
 
-round(x [, p]) 
 
-round(3.333333)
+bla bla bla:
+
+> round(3.333333)
+
 3.0
 
-round(3.333333, 3)
+
+
+bla bla bla:
+
+> round(3.333333, 3)
 3.333
 
 
 
+bla bla bla:
 
-callable(obj)
+> callable(obj)
 
 callable('foo')
 False
