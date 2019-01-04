@@ -64,6 +64,11 @@ Sintaxe:
     range(stop)
     range(start, stop[, step])
 
+    start: Valor inicial da sequência, por padrão é 0 (zero).
+    stop:  Valor final da sequẽncia - 1.
+    step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que stop, ou seja, para se fazer uma sequência regressiva é preciso um número negativo.
+    
+
 
 
 
