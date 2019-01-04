@@ -204,6 +204,25 @@ reduce
     Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.
 
 
+
+reererer:
+
+> soma = 0
+
+> for i in (2, 1, 4, 3):
+    soma += i
+
+
+> print(soma)
+
+10
+
+
+
+
+
+
+
 Importando reduce de functools;
 
 > from functools import reduce
