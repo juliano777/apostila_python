@@ -491,22 +491,33 @@ bla bla bla:
 
 u'\u07d0'
 
-In [181]: print(unichr(2000))
 
 
-ord(x)
+bla bla bla:
 
-ord('x')
+> print(unichr(2000))
+
+
+bla bla bla:
+
+> ord('x')
+
 120
 
-ߐ
-ord(u'\u07d0')
+
+
+bla bla bla:
+
+> ord(u'\u07d0')
+
 2000
 
 
-oct(x)
 
-oct(9)
+bla bla bla:
+
+> oct(9)
+
 '011'
 
 
