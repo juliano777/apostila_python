@@ -218,7 +218,7 @@ Via loop somar todos elementos de uma tupla:
 
 
 
-bla bla bla:
+Função reduce para executar a mesma tarefa anterior com apenas um comando:
 
 > reduce(int.__add__, (2, 1, 4, 3))
 
