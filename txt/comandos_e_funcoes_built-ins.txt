@@ -56,13 +56,15 @@ baz
 
 range()
 
-    É uma função que retorna um objeto com uma faixa de valores (range object).
+    É uma função que retorna um objeto com uma faixa inteiros (range object).
     Muito útil para uso em loops.
 
 Sintaxe:
 
     range(stop)
     range(start, stop[, step])
+
+
 
 
 
