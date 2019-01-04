@@ -177,6 +177,10 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
 
 [4, 3, 3, 4, 6]
 
+
+
+
+
 map(type, ['foo', 1.4, 2 + 5j, 1000])
 [str, float, complex, int]
 
