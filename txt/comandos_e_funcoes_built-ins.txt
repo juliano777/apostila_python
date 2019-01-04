@@ -130,7 +130,7 @@ sequẽncia regressiva:
 
 filter
 
-    Retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.
+    Função que retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.
 
 
 
