@@ -209,9 +209,16 @@ reererer:
 
 > soma = 0
 
+
+
+reererer:
+
 > for i in (2, 1, 4, 3):
     soma += i
 
+
+
+reererer:
 
 > print(soma)
 
