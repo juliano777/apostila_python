@@ -128,17 +128,13 @@ sequẽncia regressiva:
 
 
 
-
-    
-
-
-
-
-
-
 filter
 
-def impar(x):
+
+
+Criação de uma função que retorna True se o objeto for ímpar:
+
+> def impar(x):
     return x % 2 != 0
  
 
