@@ -386,7 +386,9 @@ assert
     bla bla bla
 
 
+abs
 
+    bla bla bla
 abs(x)
 
 abs(3)
