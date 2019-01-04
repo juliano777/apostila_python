@@ -201,7 +201,12 @@ Para cada item da primeira lista elevar (potência) ao elemento respectivo na se
 
 reduce
 
-    ewwepwepp
+    Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.
+
+
+Importando reduce de functools;
+
+> from functools import reduce
 
 
 
