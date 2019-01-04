@@ -167,10 +167,16 @@ Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente 
 
 
 
+map
 
-map 
+    Make an iterator that computes the function using arguments from each of the iterables.  Stops when the shortest iterable is exhausted.
 
-map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
+
+
+dssçdlsdlç:
+
+> map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
+
 [4, 3, 3, 4, 6]
 
 map(type, ['foo', 1.4, 2 + 5j, 1000])
