@@ -255,7 +255,7 @@ ou
 
 
 
-bla bla bla:
+Teste de del para desalocar um objeto criado:
 
 > sogra = 'Edelbarina'
 
