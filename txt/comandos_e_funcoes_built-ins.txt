@@ -442,15 +442,23 @@ bla bla bla:
 
 bla bla bla:
 
-> callable(obj)
+> callable('foo')
 
-callable('foo')
 False
 
-def f():
+
+
+bla bla bla:
+
+> def f():
     print('hello')
 
-callable(f)
+
+
+bla bla bla:
+
+> callable(f)
+
 True
 
 
