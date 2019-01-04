@@ -705,9 +705,16 @@ bla bla bla:
 
 
 
-raw_input vs input
+input
 
-foo = raw_input('Digite uma string qualquer... ')
+    bla bla bla
+
+
+
+bla bla bla:
+
+> foo = input('Digite uma string qualquer... ')
+
 Digite uma string qualquer... bla bla bla
 
 type(foo)
