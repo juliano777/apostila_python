@@ -171,7 +171,9 @@ map
 
 Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string respectivamente:
 
-> map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
+> m = map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
+
+> list(m)
 
 [4, 3, 3, 4, 6]
 
