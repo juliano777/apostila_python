@@ -327,7 +327,11 @@ bla bla bla:
 
 > x = eval('x = 5')          # INVALID; assignment is not an expression.
 
+SyntaxError: invalid syntax
+
 > x = eval('if 1: x = 4')    # INVALID; if is a statement, not an expression.
+
+SyntaxError: invalid syntax
 
 compile is a lower level version of exec and eval. It does not execute or evaluate your statements or expressions, but returns a code object that can do it. The modes are as follows:
 
