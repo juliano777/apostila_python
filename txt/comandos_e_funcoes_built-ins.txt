@@ -102,6 +102,33 @@ Dois parâmetros (start e stop):
 9
 
 
+
+Três parâmetros (start, stop e step):
+
+> for i in range(1, 10, 2):
+    print(i)
+
+1
+3
+5
+7
+9
+
+
+
+sequẽncia regressiva:
+
+> for i in range(20, 1, -5):
+    print(i)
+
+20
+15
+10
+5
+
+
+
+
     
 
 
