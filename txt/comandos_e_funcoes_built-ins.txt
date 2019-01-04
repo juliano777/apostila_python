@@ -189,7 +189,7 @@ Para cada item da lista, criar uma nova lista com seus respectivos tipos:
 
 
 
-Para cada item da primeira lista elevar (potência) ao elemento respectivo na segunda lista:
+Para cada item da primeira lista elevar (potência) ao elemento respectivo na segunda lista e criar uma nova lista com os resultados:
 
 > m = map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
 
