@@ -53,11 +53,10 @@ bar
 baz
 
 
-	
-
-
 
 range()
+
+    É uma fun
 
 
 filter
