@@ -257,13 +257,13 @@ ou
 
 Teste de del para desalocar um objeto criado:
 
-> sogra = 'Edelbarina'
+> sogra = 'Edelbarina'  # Objeto string criado
 
-> print(sogra)
+> print(sogra)  # Verificando o valor da string
 
 Edelbarina
 
-> del sogra
+> del sogra  # 
 
 > print(sogra)
 
