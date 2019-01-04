@@ -56,7 +56,8 @@ baz
 
 range()
 
-    É uma fun
+    É uma função que retorna um objeto com uma faixa de valores.
+    Muito útil para uso em loops.
 
 
 filter
