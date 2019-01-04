@@ -317,11 +317,17 @@ The source may be a string representing a Python expression or a code object as 
 
 eval is a built-in function (not a statement), which evaluates an expression and returns the value that expression produces. Example:
 
-x = eval('5')              # x <- 5
-x = eval('%d + 6' % x)     # x <- 11
-x = eval('abs(%d)' % -100) # x <- 100
-x = eval('x = 5')          # INVALID; assignment is not an expression.
-x = eval('if 1: x = 4')    # INVALID; if is a statement, not an expression.
+bla bla bla:
+
+> x = eval('5')  # x <- 5
+
+> x = eval('%d + 6' % x)     # x <- 11
+
+> x = eval('abs(%d)' % -100) # x <- 100
+
+> x = eval('x = 5')          # INVALID; assignment is not an expression.
+
+> x = eval('if 1: x = 4')    # INVALID; if is a statement, not an expression.
 
 compile is a lower level version of exec and eval. It does not execute or evaluate your statements or expressions, but returns a code object that can do it. The modes are as follows:
 
