@@ -205,22 +205,14 @@ reduce
 
 
 
-reererer:
+Via loop somar todos elementos de uma tupla:
 
-> soma = 0
+> soma = 0  # Variável que terá o valor da soma após o loop
 
-
-
-reererer:
-
-> for i in (2, 1, 4, 3):
+> for i in (2, 1, 4, 3):  # Loop e incrementação
     soma += i
 
-
-
-reererer:
-
-> print(soma)
+> print(soma)  # Exibe o resultado
 
 10
 
