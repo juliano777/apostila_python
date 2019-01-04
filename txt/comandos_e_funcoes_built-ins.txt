@@ -141,7 +141,7 @@ Criação de uma função que retorna True se o objeto for ímpar:
 
 
 
-testando a função:
+Testando a função:
 
 > impar(7)
 
