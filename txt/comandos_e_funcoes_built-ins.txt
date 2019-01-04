@@ -522,87 +522,185 @@ bla bla bla:
 
 
 
-execfile(file)
+bla bla bla:
+
+> execfile(file)
+
+
+
+bla bla bla:
 
 $ cat << EOF > /tmp/foo.py
 print('hello, world!')
 EOF
 
 
+
+bla bla bla:
+
 $ python /tmp/foo.py 
 hello, world!
 
-execfile('/tmp/foo.py')
+
+
+bla bla bla:
+
+> execfile('/tmp/foo.py')
+
 hello, world!
 
 
 
-hash
+bla bla bla:
 
-hash('foo')
+> hash('foo')
+
 -4177197833195190597
 
-x = 'foo'
 
-hash(x)
+
+bla bla bla:
+
+> x = 'foo'
+
+
+
+bla bla bla:
+
+> hash(x)
+
 -4177197833195190597
 
-hash('bar')
+
+
+bla bla bla:
+
+> hash('bar')
+
 327024216814240868
 
-hash([1, 2, 3])
----------------------------------------------------------------------------
 
+
+bla bla bla:
+
+> hash([1, 2, 3])
 
 TypeError: unhashable type: 'list'
 
 
 
+bla bla bla:
+
+> id(obj)
 
 
-id(obj)
 
-foo = ('x', 'y')
+bla bla bla:
 
-bar = ('x', 'y')
+> foo = ('x', 'y')
 
-foo == bar
+
+
+bla bla bla:
+
+> bar = ('x', 'y')
+
+
+
+bla bla bla:
+
+> foo == bar
+
 True
 
-id(foo)
+
+
+bla bla bla:
+
+> id(foo)
+
 139716355830632
 
-id(bar)
+
+
+bla bla bla:
+
+> id(bar)
+
 139716327551272
 
-foo is bar
+
+
+bla bla bla:
+
+> foo is bar
+
 False
 
-baz = bar
 
-baz
+
+bla bla bla:
+
+> baz = bar
+
+
+
+bla bla bla:
+
+> baz
+
 ('x', 'y')
 
-baz == bar
+
+
+bla bla bla:
+
+> baz == bar
+
 True
 
-baz is bar
+
+
+bla bla bla:
+
+> baz is bar
+
 True
 
-id(baz)
+
+
+bla bla bla:
+
+> id(baz)
+
 139716327551272
 
 
 
-len(obj)
+bla bla bla:
 
-foo = ('x', 'y', 'z', 123, 5.7)
+> len(obj)
 
-len(foo)
+
+
+bla bla bla:
+
+> foo = ('x', 'y', 'z', 123, 5.7)
+
+
+
+bla bla bla:
+
+> len(foo)
+
 5
 
 
-len('Heavy Metal')
+
+bla bla bla:
+
+> len('Heavy Metal')
+
 11
 
 
