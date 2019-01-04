@@ -287,7 +287,7 @@ Read and execute code from an object, which can be a string or a code object.
 exec is not an expression: a statement in Python 2.x, and a function in Python 3.x. It compiles and immediately evaluates a statement or set of statement contained in a string. Example:
 
 
-bla bla bla
+bla bla bla:
 
 > exec('print(5)')  # prints 5.
 
@@ -307,7 +307,10 @@ bla bla bla
 > exec('x = 7')  # does nothing and returns nothing.
 
 
-questão de segurança!!!
+
+eval
+
+    questão de segurança!!!
 
 Evaluate the source in the context of globals and locals.
 The source may be a string representing a Python expression or a code object as returned by compile().
