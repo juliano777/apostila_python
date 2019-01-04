@@ -247,7 +247,7 @@ Teste de del em um objeto mutável (lista):
 
 ou
 
-> del(lista[1])
+> del(lista[1])  # Equivalência ao comando anterior em forma de função
 
 > print(lista)
 
