@@ -20,50 +20,40 @@ Help de print:
     file:  um arquivo como um objeto (stream); o padrão é sys.stdout.
     sep:   String inserida entre valores, o padrão é um espaço.
     end:   String adicionada após o último valor, o pdarão é uma nova linha ('\n').
-    flush: Se força ou não o flush do stream, o padrão é False.
+    flush: Se força ou não o flush (escrita) do stream, o padrão é False.
 
 <Tradução>
 
-
-
- 
+    Mais detalhes sobre streams são vistos em open.
 
 
 
-print('foo')
+Um simples "Hello, world!":
 
-print('foo', 'bar', 'baz')
+> print('Hello, world!')
+
+Hello, world!
+
+
+
+Pode-se passar mais de uma string como parâmetro:
+
+> print('foo', 'bar', 'baz')
+
 foo bar baz
 
-print('%s %s %s' % ('foo', 'bar', 'baz'))
-foo bar baz
 
 
-    
+Colocando como separador uma nova linha para cada string passada como parâmetro:
 
+> print('foo', 'bar', 'baz', sep='\n')
 
-Tradução:
-
-Ajuda da função built-in print no módulo builtins:
-
-print(...)
-    print(valor, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
-
-   Imprime os valores para um stream, ou para sys.stdout (saída padrão: normalmente a tela) por padrão.
-   Argumentos opcionais em palavras-chave:
-   file:    um objeto como um arquivo (stream); o padrão é sys.stdout
-   sep:    uma string inserida entre valores, por padrão é um espaço.     
-   end:    uma string inserida após o último valor, por padrão é uma novalinha ('\n').
-   flush:    se força a escrita (flush) do stream.
-
-
-print('foo', 'bar', 'baz', sep = '\n')
 foo
 bar
 baz
 
 
-	Mais detalhes sobre streams são vistos em open.
+	
 
 
 
