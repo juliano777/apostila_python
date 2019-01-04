@@ -269,6 +269,7 @@ Edelbarina
 
 NameError: name 'sogra' is not defined
 
+    Nota-se que após o del não é possível mais fazer referência ao objeto.
 
 
 exec
