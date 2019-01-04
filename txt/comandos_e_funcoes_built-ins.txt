@@ -345,22 +345,32 @@ http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-kno
 
 ord e chr
 
-ord('\n')
+
+
+bla bla bla:
+
+> ord('\n')
+
 10
 
-ord('\r')
+> ord('\r')
+
 13
 
-chr(13)
+> chr(13)
+
 '\r'
 
-chr(10)
+> chr(10)
+
 '\n'
 
-chr(97)
+> chr(97)
+
 'a'
 
-ord('a')
+> ord('a')
+
 97
 
 
