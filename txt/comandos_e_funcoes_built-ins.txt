@@ -389,21 +389,38 @@ assert
 abs
 
     bla bla bla
-abs(x)
 
-abs(3)
+    abs(x)
+
+
+
+bla bla bla:
+
+> abs(3)
+
 3
 
-abs(-3)
+
+
+bla bla bla:
+
+> abs(-3)
+
 3
 
 
-divmod(x, y)
+bla bla bla:
 
-divmod(11, 4)
+> divmod(11, 4)
+
 (2, 3)
 
-11 / 4, 11 % 4
+
+
+bla bla bla:
+
+> 11 / 4, 11 % 4
+
 (2, 3)
 
 
