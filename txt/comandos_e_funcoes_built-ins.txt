@@ -253,11 +253,20 @@ ou
 
 ['a', 'c']
 
-sogra = 'Edelbarina'
-print(sogra)
+
+
+bla bla bla:
+
+> sogra = 'Edelbarina'
+
+> print(sogra)
+
 Edelbarina
-del sogra
-print(sogra)
+
+> del sogra
+
+> print(sogra)
+
 NameError: name 'sogra' is not defined
 
 
