@@ -715,56 +715,15 @@ bla bla bla:
 
 > foo = input('Digite uma string qualquer... ')
 
-Digite uma string qualquer... bla bla bla
-
-type(foo)
-str
-
-print(foo)
-bla bla bla
-
-x = 5
-
-y = 2
-
-numero = input('Digite um numero: ')
-Digite um numero: 9
-
-print(numero)
-9
-
-numero = input('Digite um numero: ')
-Digite um numero: x + y
-
-print(numero)
-7
+Digite uma string qualquer...
 
 
-foo = input('Digite algo... ')
-Digite algo... 9.3
 
-type(foo)
-float
+bla bla bla:
 
-foo = input('Digite algo... ')
-Digite algo... 777
+> print(foo)
 
-type(foo)
-int
-
-foo = input('Digite algo... ')
-Digite algo... 'Python is awesome!'
-
-type(foo)
-str
-
-foo = input('Digite algo... ')
-
-Digite algo... Python is awesome!
-  File "<string>", line 1
-    Python is awesome!
-                     ^
-SyntaxError: unexpected EOF while parsing
+. . .
 
 
 
@@ -776,25 +735,43 @@ Funções globals(), locals() e vars() e Comando global
 	vars(obj): sem argumentos é equivalente a locals(), com um argumento, equivalente a objeto.__dict__
 
 
-foo = 'escopo global'
+
+bla bla bla:
+
+> foo = 'escopo global'
 
 
-def f():
+
+bla bla bla:
+
+> def f():
     foo = 'escopo local'
     bar = 'uma variável qualquer...'
     print(globals()['foo'])
     print(locals()['foo'])
 
-f()
+
+
+bla bla bla:
+
+> f()
+
 escopo global
 escopo local
 
-class Spam(object):
+
+
+bla bla bla:
+
+> class Spam(object):
     foo = ''
     bar = ''
-    
 
-vars(Spam)
+
+
+bla bla bla:
+
+> vars(Spam)
 
 <dictproxy {'__dict__': <attribute '__dict__' of 'Spam' objects>,
  '__doc__': None,
