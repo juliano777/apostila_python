@@ -226,6 +226,14 @@ reererer:
 
 
 
+bla bla bla:
+
+> reduce(int.__add__, (2, 1, 4, 3))
+
+10
+
+
+
 
 
 
