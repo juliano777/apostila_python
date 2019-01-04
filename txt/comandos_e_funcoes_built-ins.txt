@@ -239,11 +239,11 @@ del
 
 
 
-bla bla bla:
+Teste de del em um objeto mutável (lista):
 
-> lista = ['a', 'b', 'c']
+> lista = ['a', 'b', 'c']  # Definição da lista
 
-> del lista[1]
+> del lista[1]  # Apaga o segundo elemento da lista
 
 ou
 
