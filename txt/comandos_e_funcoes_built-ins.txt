@@ -270,6 +270,12 @@ Edelbarina
 NameError: name 'sogra' is not defined
 
 
+
+exec
+
+    bla bla bla
+
+
 http://stackoverflow.com/questions/4728073/what-is-the-difference-between-an-expression-and-a-statement-in-python
 
 http://stackoverflow.com/questions/2220699/whats-the-difference-between-eval-exec-and-compile-in-python
