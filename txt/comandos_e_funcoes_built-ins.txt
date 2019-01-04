@@ -179,12 +179,21 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
 
 
 
+bla bla bla:
 
+> m = map(type, ['foo', 1.4, 2 + 5j, 1000])
 
-map(type, ['foo', 1.4, 2 + 5j, 1000])
+> list(m)
+
 [str, float, complex, int]
 
-map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
+
+
+bla bla bla:
+
+> m = map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
+
+> list(m)
 [9, 7, 78125, 1000]
 
 
