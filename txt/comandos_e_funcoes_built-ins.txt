@@ -463,20 +463,32 @@ True
 
 
 
+bla bla bla:
 
-chr(x)
+> chr(120)
 
-chr(120)
 'x'
 
-chr(13)
+
+
+bla bla bla:
+
+> chr(13)
+
 '\r'
 
 
 
-unichr(x)
+bla bla bla:
 
-unichr(2000)
+> unichr(x)
+
+
+
+bla bla bla:
+
+> unichr(2000)
+
 u'\u07d0'
 
 In [181]: print(unichr(2000))
