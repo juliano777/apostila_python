@@ -165,11 +165,11 @@ Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente 
 
 map
 
-    Make an iterator that computes the function using arguments from each of the iterables.  Stops when the shortest iterable is exhausted.
+    Cria um iterador que aplica uma função para cada elemento do iterável.
 
 
 
-dssçdlsdlç:
+Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string respectivamente:
 
 > map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
 
