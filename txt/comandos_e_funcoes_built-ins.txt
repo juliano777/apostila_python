@@ -151,12 +151,6 @@ False
 
 
 
-filter
-
-    Retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.
-
-
-
 Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente com os elementos ímpares e posteriormente ser convertido para lista:
 
 > f = filter(impar, range(0, 20))
