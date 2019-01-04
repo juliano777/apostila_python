@@ -249,7 +249,7 @@ ou
 
 > del(lista[1])  # Equivalência ao comando anterior em forma de função
 
-> print(lista)
+> print(lista)  # Exibe a lista após o elemento ser retirado da mesma
 
 ['a', 'c']
 
