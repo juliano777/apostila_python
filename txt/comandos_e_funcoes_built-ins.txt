@@ -781,57 +781,128 @@ bla bla bla:
  'foo': ''}>
 
 
-def f():
+
+bla bla bla:
+
+> def f():
     global x
     x = 7
-    
 
-type(x)
+
+
+bla bla bla:
+
+> type(x)
 
 NameError: name 'x' is not defined
 
-f()
 
-type(x)
+
+bla bla bla:
+
+> f()
+
+
+
+bla bla bla:
+
+> type(x)
+
 int
 
-print(x)
+
+
+bla bla bla:
+
+> print(x)
+
 7
 
 
 
 Funções min() e max()
 
-min(0, 2, -50, 7)
+    bla bla bla
+
+
+
+bla bla bla:
+
+> min(0, 2, -50, 7)
+
 -50
 
-max(0, 2, -50, 7)
+
+
+bla bla bla:
+
+> max(0, 2, -50, 7)
+
 7
 
 
-enumerate()
 
-x = ('verde', 'azul', 'amarelo')
+bla bla bla:
 
-y = enumerate(x)
+> enumerate()
 
-for i, j in y:
+
+
+bla bla bla:
+
+> x = ('verde', 'azul', 'amarelo')
+
+
+
+bla bla bla:
+
+> y = enumerate(x)
+
+
+
+bla bla bla:
+
+> for i, j in y:
     print('%i - %s' % (i, j))
 
 0 - verde
 1 - azul
 2 - amarelo
 
-y = enumerate(x)
 
-type(y)
+
+bla bla bla:
+
+> y = enumerate(x)
+
+
+
+bla bla bla:
+
+> type(y)
+
 enumerate
 
-y.next()
+
+
+bla bla bla:
+
+> y.next()
+
 (0, 'verde')
 
-y.next()
+
+
+bla bla bla:
+
+> y.next()
+
 (1, 'azul')
 
-y.next()
+
+
+bla bla bla:
+
+> y.next()
+
 (2, 'amarelo')
