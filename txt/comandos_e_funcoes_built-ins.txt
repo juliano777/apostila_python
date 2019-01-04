@@ -361,6 +361,9 @@ ord('a')
 
 
 
+dir
+
+    bla bla bla
 
 dir(obj)
 
