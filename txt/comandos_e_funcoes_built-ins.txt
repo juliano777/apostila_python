@@ -201,7 +201,14 @@ Para cada item da primeira lista elevar (potência) ao elemento respectivo na se
 
 reduce
 
-reduce(int.__add__, (2, 1, 4, 3))
+    ewwepwepp
+
+
+
+bla bla bla:
+
+> reduce(int.__add__, (2, 1, 4, 3))
+
 10
 
 
