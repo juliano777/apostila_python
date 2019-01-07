@@ -277,10 +277,8 @@ Expressões vs Statements
 
     Expressão: é algo que pode ser reduzido para um valor.
 
+    Statement:     
 
-
-
-An expression is something that can be reduced to a valu
 
 
 exec
