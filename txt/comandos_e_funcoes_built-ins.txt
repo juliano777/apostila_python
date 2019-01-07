@@ -275,6 +275,11 @@ NameError: name 'foo' is not defined
 
 Expressões vs Statements
 
+    Expressões: 
+
+
+An expression is something that can be reduced to a valu
+
 
 exec
 
