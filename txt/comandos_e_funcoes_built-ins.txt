@@ -334,6 +334,8 @@ SyntaxError: invalid syntax
 
 compile
 
+    
+
 compile is a lower level version of exec and eval. It does not execute or evaluate your statements or expressions, but returns a code object that can do it. The modes are as follows:
 
     compile(string, '', 'eval') returns the code object that would have been executed had you done eval(string). Note that you cannot use statements in this mode; only a (single) expression is valid.
