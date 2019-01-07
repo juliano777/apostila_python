@@ -310,12 +310,9 @@ bla bla bla:
 
 eval
 
-    questão de segurança!!!
+    É uma função que retorna o resultado de uma expressão.
 
-Evaluate the source in the context of globals and locals.
-The source may be a string representing a Python expression or a code object as returned by compile().
 
-eval is a built-in function (not a statement), which evaluates an expression and returns the value that expression produces. Example:
 
 bla bla bla:
 
