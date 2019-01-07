@@ -318,7 +318,7 @@ bla bla bla:
 
 > x = eval('5')  # x <- 5
 
-> x = eval('%d + 6' % x)     # x <- 11
+> x = eval('%d + 6' % x)  # x <- 11
 
 > x = eval('abs(%d)' % -100) # x <- 100
 
