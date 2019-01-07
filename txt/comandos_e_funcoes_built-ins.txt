@@ -322,7 +322,7 @@ bla bla bla:
 
 > x = eval('abs(%d)' % -100)  # x <- 100
 
-> x = eval('x = 5')          # INVALID; assignment is not an expression.
+> x = eval('x = 5')  # INVÁLIDO; atribuição não é uma expressão
 
 SyntaxError: invalid syntax
 
