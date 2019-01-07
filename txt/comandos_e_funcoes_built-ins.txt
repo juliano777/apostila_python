@@ -326,7 +326,7 @@ bla bla bla:
 
 SyntaxError: invalid syntax
 
-> x = eval('if 1: x = 4')  # INVALID; if is a statement, not an expression.
+> x = eval('if 1: x = 4')  # INVÁLIDO; if é um statement e não uma expressão
 
 SyntaxError: invalid syntax
 
