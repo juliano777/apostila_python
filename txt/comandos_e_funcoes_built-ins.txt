@@ -283,7 +283,7 @@ Expressões vs Statements
 
 exec
 
-    bla bla bla
+    É uma função que executa um comando (statement) passado como string.
 
 
 http://stackoverflow.com/questions/4728073/what-is-the-difference-between-an-expression-and-a-statement-in-python
