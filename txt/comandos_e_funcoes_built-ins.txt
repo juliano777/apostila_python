@@ -286,15 +286,6 @@ exec
     É uma função que executa um comando (statement) passado como string.
 
 
-http://stackoverflow.com/questions/4728073/what-is-the-difference-between-an-expression-and-a-statement-in-python
-
-http://stackoverflow.com/questions/2220699/whats-the-difference-between-eval-exec-and-compile-in-python
-
-
-Read and execute code from an object, which can be a string or a code object.
-
-exec is not an expression: a statement in Python 2.x, and a function in Python 3.x. It compiles and immediately evaluates a statement or set of statement contained in a string. Example:
-
 
 bla bla bla:
 
