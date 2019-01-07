@@ -272,6 +272,10 @@ NameError: name 'foo' is not defined
     Nota-se que após o del não é possível mais fazer referência ao objeto.
 
 
+
+Expressões vs Statements
+
+
 exec
 
     bla bla bla
