@@ -277,7 +277,7 @@ Expressões vs Statements
 
     Expressão: é algo que pode ser reduzido para um valor.
 
-    Statement:     
+    Statement: são comandos.
 
 
 
