@@ -320,7 +320,7 @@ bla bla bla:
 
 > x = eval('%d + 6' % x)  # x <- 11
 
-> x = eval('abs(%d)' % -100) # x <- 100
+> x = eval('abs(%d)' % -100)  # x <- 100
 
 > x = eval('x = 5')          # INVALID; assignment is not an expression.
 
