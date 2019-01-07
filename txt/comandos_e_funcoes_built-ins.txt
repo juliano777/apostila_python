@@ -257,17 +257,17 @@ ou
 
 Teste de del para desalocar um objeto criado:
 
-> sogra = 'Edelbarina'  # Objeto string criado
+> foo = 'bar'  # Objeto string criado
 
-> print(sogra)  # Verificando o valor da string
+> print(foo)  # Verificando o valor da string
 
-Edelbarina
+bar
 
-> del sogra  # Apagando o objeto string
+> del foo  # Apagando o objeto string
 
-> print(sogra)  # Tentativa de imprimir o valor do objeto desalocado
+> print(foo)  # Tentativa de imprimir o valor do objeto desalocado
 
-NameError: name 'sogra' is not defined
+NameError: name 'foo' is not defined
 
     Nota-se que após o del não é possível mais fazer referência ao objeto.
 
