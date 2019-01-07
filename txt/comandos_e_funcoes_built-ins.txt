@@ -275,7 +275,9 @@ NameError: name 'foo' is not defined
 
 Expressões vs Statements
 
-    Expressões: 
+    Expressão: é algo que pode ser reduzido para um valor.
+
+
 
 
 An expression is something that can be reduced to a valu
