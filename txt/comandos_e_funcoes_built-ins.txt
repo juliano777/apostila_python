@@ -330,6 +330,8 @@ SyntaxError: invalid syntax
 
 SyntaxError: invalid syntax
 
+# https://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html
+
 
 
 compile
