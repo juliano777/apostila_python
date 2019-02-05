@@ -512,15 +512,11 @@ abs
 
 
 
-bla bla bla:
+Exemplos:
 
 > abs(3)
 
 3
-
-
-
-bla bla bla:
 
 > abs(-3)
 
