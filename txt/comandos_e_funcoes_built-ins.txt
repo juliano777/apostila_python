@@ -329,7 +329,150 @@ dir
 
 	Função que lista atributos e métodos de um elemento.
 
+Definição de variáeis:
 
+> x = 0
+
+> y = 1
+
+> z = 2
+
+
+
+Execução da função dir sem parâmetros:
+
+> dir()
+
+['In',
+ 'Out',
+. . .
+ 'x',
+ 'y',
+ 'z']
+
+
+
+A variável foi declarada no escopo?:
+
+> 'x' and 'y' and 'y' and 'z' in dir()
+
+True
+
+> 'w' in dir()                                                                                                                                         
+
+False
+
+
+
+Criação de uma classe:
+
+> class Pessoa(object):
+    # Atributos
+
+    nome = '' 
+    rg = '' 
+    cpf = 0
+    email = ''
+    
+    # Métodos
+    def saudacao(self): 
+        print('Olá')
+
+    def dizer_nome(self):
+        print('Meu nome é {}'.format(self.nome))
+
+
+
+Verificando o conteúdo da classe (atributos e métodos):
+
+> dir(Pessoa)
+
+['__class__',
+ '__delattr__',
+ '__dict__',
+
+. . . 
+
+ 'cpf',
+ 'dizer_nome',
+ 'email',
+ 'nome',
+ 'rg',
+ 'saudacao']
+
+
+
+Criação de um objeto da classe e definição de atributos:
+
+> p = Pessoa()  # 
+
+> p.nome = 'Chiquinho'
+
+> p.rg = '00000000'
+
+> p.cpf = 12345678901                                                                                                                                  
+
+> p.email = 'chiquinho@chiquinhodasilva.xx'
+
+
+
+Atributo __dict__, que é um dicionário que contém os atributos do objeto:
+
+> p.__dict__                                                                                                                                           
+
+{'nome': 'Chiquinho',
+ 'rg': '00000000',
+ 'cpf': 12345678901,
+ 'email': 'chiquinho@chiquinhodasilva.xx'}
+
+
+
+Pegando o valor do atributo pelo dicionário:
+
+> p.__dict__['nome']                                                                                                                                   
+
+'Chiquinho'
+
+
+
+Com o auxílio de da função dir, listar todos os métodos do objeto:
+
+> def is_dunder(s):  # Função que servirá para a função principal
+    '''
+    Função que retorna True para dunder strings
+    '''
+
+    # Se começar e terminar com "__" retornar True
+    if s.startswith('__') and s.endswith('__'):
+        return True
+    else:
+        return False
+   
+
+
+> def mostra_metodos(objeto):
+    '''
+    Função que mostra em tela todos os nomes de métodos de um objeto
+    '''
+
+    # Generator que conterá os nomes dos métodos por tuple comprehension
+    metodos = (metodo for metodo in dir(objeto)  # Para cada item do objeto
+               if (not is_dunder(metodo)) and  # se não for um dunder
+               callable(getattr(objeto, metodo))  # e se for "chamável"
+              )
+
+    # Loop para exibir os nomes dos métodos
+    for i in metodos:
+        print(i)
+
+
+
+Chamando a função criada para imprimir em tela os nomes dos métodos:
+
+> mostra_metodos(p)                                                                                                                                   
+
+dizer_nome
+saudacao
 
 
 pass
