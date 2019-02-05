@@ -327,11 +327,7 @@ Exemplos de ord e chr:
 
 dir
 
-    
-
-dir(obj)
-
-	Lista atributos e métodos de um elemento.
+	Função que lista atributos e métodos de um elemento.
 
 dir(iter)
 
