@@ -328,6 +328,9 @@ Exemplos de ord e chr:
 dir
 
 	Função que lista atributos e métodos de um elemento.
+    Se chamada sem nenhum argumento retorna os nomes do escopo atual.
+    A chamada dessa função é correspondente ao executar o método __dir__.
+    
 
 Definição de variáeis:
 
