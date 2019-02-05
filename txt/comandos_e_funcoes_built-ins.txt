@@ -390,6 +390,10 @@ Verificando o conteúdo da classe (atributos e métodos):
 
 > dir(Pessoa)
 
+ou
+
+> p.__dir__()
+
 ['__class__',
  '__delattr__',
  '__dict__',
