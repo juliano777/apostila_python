@@ -273,9 +273,10 @@ NameError: name 'foo' is not defined
 
 
 
-
-
 ord e chr
+
+    A função ord retorna o código Unicode de um caractere.
+    A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode.     
 
 
 
