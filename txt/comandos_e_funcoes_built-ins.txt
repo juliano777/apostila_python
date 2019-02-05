@@ -280,6 +280,13 @@ ord e chr
 
 
 
+ord e chr
+
+    A função ord retorna o código Unicode de um caractere.
+    A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode. Em Python 2 chr era unichr.    
+
+
+
 bla bla bla:
 
 > ord('\n')  # Qual é o código Unicode para new line?
@@ -291,35 +298,28 @@ bla bla bla:
 
 '\n'
 
-> ord('\r')
+
+> ord('\r')  # bla bla bla
 
 13
 
-> chr(13)
+> chr(13)  # bla bla bla
 
 '\r'
 
-
-
-> chr(97)
+> chr(97)  # bla bla bla
 
 'a'
 
-> ord('a')
+> ord('a')  # bla bla bla
 
 97
 
-bla bla bla:
-
-> chr(120)
+> chr(120)  # bla bla bla
 
 'x'
 
-
-
-bla bla bla:
-
-> chr(13)
+> chr(13)  # bla bla bla
 
 '\r'
 
