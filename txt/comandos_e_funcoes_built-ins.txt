@@ -282,9 +282,14 @@ ord e chr
 
 bla bla bla:
 
-> ord('\n')
+> ord('\n')  # Qual é o código Unicode para new line?
 
 10
+
+
+> chr(10)  # Qual caractere Unicode corresponde ao código 10
+
+'\n'
 
 > ord('\r')
 
@@ -294,9 +299,7 @@ bla bla bla:
 
 '\r'
 
-> chr(10)
 
-'\n'
 
 > chr(97)
 
