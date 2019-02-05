@@ -502,7 +502,7 @@ Função que nada faz:
 assert
 
     Um statements assert é uma maneira conveniente para inserir asserções de debug.
-    O comando assert verifica em tempo de execução uma determinada condição e se a mesma não for verdadira uma exceção AssertionError é lançada e 
+    O comando assert verifica em tempo de execução uma determinada condição e se a mesma não for verdadira uma exceção AssertionError é lançada e se essa exceção não for tratada, o programa pára.
 
 
 
