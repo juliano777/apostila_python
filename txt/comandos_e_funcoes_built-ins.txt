@@ -309,6 +309,20 @@ bla bla bla:
 
 97
 
+bla bla bla:
+
+> chr(120)
+
+'x'
+
+
+
+bla bla bla:
+
+> chr(13)
+
+'\r'
+
 
 
 dir
@@ -415,13 +429,13 @@ True
 
 bla bla bla:
 
-> unichr(x)
+> chr(x)
 
 
 
 bla bla bla:
 
-> unichr(2000)
+> chr(2000)
 
 u'\u07d0'
 
@@ -429,7 +443,7 @@ u'\u07d0'
 
 bla bla bla:
 
-> print(unichr(2000))
+> print(chr(2000))
 
 
 bla bla bla:
