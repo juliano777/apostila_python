@@ -1,0 +1,4 @@
+python3.7 -mtimeit -s 'code = "a = 2; b = 3; c = a * b"' 'exec(code)'
+
+
+python3.7 -mtimeit -s 'code = compile("a = 2; b = 3; c = a * b", "<string>", "exec")' 'exec(code)'
