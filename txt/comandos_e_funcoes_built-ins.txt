@@ -506,7 +506,7 @@ assert
 
 abs
 
-    bla bla bla
+    Retorna o valor absoluto do argumento.
 
     abs(x)
 
