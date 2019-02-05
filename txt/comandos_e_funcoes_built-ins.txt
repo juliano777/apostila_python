@@ -521,11 +521,20 @@ EOF
 
 Execução:
 
-$ python3 /tmp/assert_sem_try.py
+$ python3.7 /tmp/assert_sem_try.py
+
+Começo
+Traceback (most recent call last):
+
+. . .
+
+AssertionError
+
+    Nota-se que a execução do script não chegou até o fim.
 
 
 
-bla bla bla:
+Criação do script com assert com tratamento de exceção:
 
 $ cat << EOF > /tmp/assert_com_try.py
 print('Começo')
@@ -545,7 +554,11 @@ EOF
 
 Execução:
 
-$ python3 /tmp/assert_com_try.py
+$ python3.7 /tmp/assert_com_try.py
+
+Começo
+Teve erro...
+Fim
 
 
 
