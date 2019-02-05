@@ -294,20 +294,20 @@ Exemplos de ord e chr:
 10
 
 
-> chr(10)  # Qual caractere Unicode corresponde ao código 10
+> chr(10)  # Qual caractere Unicode corresponde ao código 10?
 
 '\n'
 
 
-> ord('\r')  # bla bla bla
+> ord('\r')  # Qual é o código unicode para carriage return?
 
 13
 
-> chr(13)  # bla bla bla
+> chr(13)  # Qual caractere Unicode corresponde ao código 13?
 
 '\r'
 
-> chr(97)  # bla bla bla
+> chr(97)  # Qual caractere Unicode corresponde ao código 97?
 
 'a'
 
@@ -315,13 +315,13 @@ Exemplos de ord e chr:
 
 97
 
-> chr(120)  # bla bla bla
+> chr(120)  # Qual caractere Unicode corresponde ao código 120?
 
 'x'
 
-> chr(13)  # bla bla bla
+> chr(981)  # Qual caractere Unicode corresponde ao código 981?
 
-'\r'
+'ϕ'
 
 
 
