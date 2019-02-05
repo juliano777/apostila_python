@@ -12,6 +12,10 @@ http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-kno
 
 
 
+
+
+
+
 python3.7 -mtimeit -s 'code = "a = 2; b = 3; c = a * b"' 'exec(code)'
 
 
