@@ -311,7 +311,7 @@ Exemplos de ord e chr:
 
 'a'
 
-> ord('a')  # bla bla bla
+> ord('a')  # Qual é o código unicode para o caractere "a"?
 
 97
 
