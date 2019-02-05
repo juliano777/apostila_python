@@ -472,33 +472,6 @@ bla bla bla:
 
 
 
-bla bla bla:
-
-> execfile(file)
-
-
-
-bla bla bla:
-
-$ cat << EOF > /tmp/foo.py
-print('hello, world!')
-EOF
-
-
-
-bla bla bla:
-
-$ python /tmp/foo.py 
-hello, world!
-
-
-
-bla bla bla:
-
-> execfile('/tmp/foo.py')
-
-hello, world!
-
 
 
 bla bla bla:
