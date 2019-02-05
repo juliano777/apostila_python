@@ -503,7 +503,7 @@ assert
 
     Um statements assert é uma maneira conveniente para inserir asserções de debug.
 
-    Assert statements are a convenient way 
+
 
 
 abs
