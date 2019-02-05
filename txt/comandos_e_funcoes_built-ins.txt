@@ -506,7 +506,7 @@ assert
 
 
 
-bla bla bla:
+Criação do script com assert sem tratamento de exceção:
 
 $ cat << EOF > /tmp/assert_sem_try.py
 print('Começo')
