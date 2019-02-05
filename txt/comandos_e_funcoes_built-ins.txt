@@ -415,22 +415,6 @@ True
 
 bla bla bla:
 
-> chr(120)
-
-'x'
-
-
-
-bla bla bla:
-
-> chr(13)
-
-'\r'
-
-
-
-bla bla bla:
-
 > unichr(x)
 
 
