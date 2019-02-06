@@ -681,12 +681,10 @@ Instância da classe sem o método __call__():
 Instância da classe com o método __call__():
 
 > b = Bar()
- 
 
 
 
-
-bla bla bla:
+Execuções de callable:
 
 > callable('foo')
 
@@ -694,18 +692,6 @@ False
 
 
 
-bla bla bla:
-
-> def f():
-    print('hello')
-
-
-
-bla bla bla:
-
-> callable(f)
-
-True
 
 
 
