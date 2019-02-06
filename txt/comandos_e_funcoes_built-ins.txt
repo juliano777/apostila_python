@@ -659,7 +659,9 @@ Criação de uma função:
 
 Criação de uma classe sem o método __call__():
 
-> 
+> class Foo: 
+    pass
+ 
 
 
 
