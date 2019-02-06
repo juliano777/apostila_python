@@ -694,7 +694,13 @@ False
 
 True
 
-> 
+> callable(Foo)                                                                                                                                        
+
+True
+
+> callable(Bar)
+
+True
 
 
 
