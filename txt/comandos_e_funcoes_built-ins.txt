@@ -697,33 +697,6 @@ False
 
 bla bla bla:
 
-> chr(x)
-
-
-
-bla bla bla:
-
-> chr(2000)
-
-u'\u07d0'
-
-
-
-bla bla bla:
-
-> print(chr(2000))
-
-
-bla bla bla:
-
-> ord('x')
-
-120
-
-
-
-bla bla bla:
-
 > ord(u'\u07d0')
 
 2000
