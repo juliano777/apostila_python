@@ -581,19 +581,27 @@ Exemplos:
 3
 
 
-bla bla bla:
 
-> divmod(11, 4)
+divmod
+
+    Função que retorna uma tupla de dois elementos no formato (x//y, x%y), respectivamente resultado da divisão inteira e resto da divisão:
+
+
+
+Exemplos:
+
+> divmod(11, 4)  # Equivalente: 11 // 4, 11 % 4
 
 (2, 3)
 
 
 
-bla bla bla:
+round
 
-> 11 / 4, 11 % 4
 
-(2, 3)
+
+
+
 
 
 
