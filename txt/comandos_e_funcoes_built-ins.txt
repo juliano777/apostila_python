@@ -730,6 +730,10 @@ Exemplos:
 
 
 
+    hash
+
+
+
 bla bla bla:
 
 > hash('foo')
