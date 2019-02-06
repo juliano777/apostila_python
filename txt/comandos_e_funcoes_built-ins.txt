@@ -650,6 +650,13 @@ callable
 
 
 
+Criação de uma função:
+
+> def myfunction(): 
+    pass
+
+
+
 
 bla bla bla:
 
