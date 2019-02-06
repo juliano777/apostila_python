@@ -730,38 +730,40 @@ Exemplos:
 
 
 
-    hash
+hash
+
+    Função que retorna o valor hash de um dado objeto.
+    Dois objetos que são comparados também devem ter o mesmo valor de hash.
 
 
 
-bla bla bla:
-
-> hash('foo')
-
--4177197833195190597
 
 
 
-bla bla bla:
 
-> x = 'foo'
+hash(1)                                                                                                                                              
+Out[25]: 1
 
+In [26]: hash(2)                                                                                                                                              
+Out[26]: 2
 
+In [27]: x = 'foo'                                                                                                                                            
 
-bla bla bla:
+In [28]: hash(x)                                                                                                                                              
+Out[28]: 8540844669962366372
 
-> hash(x)
+In [29]: y = x                                                                                                                                                
 
--4177197833195190597
+In [30]: hash(y)                                                                                                                                              
+Out[30]: 8540844669962366372
 
+In [31]: z = 'foo'                                                                                                                                            
 
+In [32]: hash(z)                                                                                                                                              
+Out[32]: 8540844669962366372
 
-bla bla bla:
-
-> hash('bar')
-
-327024216814240868
-
+In [33]: x == y                                                                                                                                               
+Out[33]: True
 
 
 bla bla bla:
