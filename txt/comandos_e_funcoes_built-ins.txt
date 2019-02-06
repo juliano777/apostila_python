@@ -930,7 +930,7 @@ bla bla bla:
 
 
 
-Funções min() e max()
+min e max
 
     bla bla bla
 
