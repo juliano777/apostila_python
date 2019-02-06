@@ -643,29 +643,11 @@ Precisão variando de 1 a -3:
 
 
 
-    
+callable
+
+    sdsdklksdlkdksd
 
 
-
-  
-
-
-
-
-
-
-bla bla bla:
-
-> round(3.333333)
-
-3.0
-
-
-
-bla bla bla:
-
-> round(3.333333, 3)
-3.333
 
 
 
