@@ -598,7 +598,14 @@ Exemplos:
 
 round
 
+    Função que retorna um número de forma arredondada dada uma precisão em dígitos decimais.
+    O valor de retorno é um inteiro se o número de dígitos for omitido ou None.    
 
+
+
+    
+    The return value is an integer if ndigits is omitted or None.  Otherwise
+    the return value has the same type as the number.  ndigits may be negative.
 
 
 
