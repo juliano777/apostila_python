@@ -652,8 +652,14 @@ callable
 
 Criação de uma função:
 
-> def myfunction(): 
+> def myfunction():
     pass
+
+
+
+Criação de uma classe sem o método __call__():
+
+> 
 
 
 
