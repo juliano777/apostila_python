@@ -702,6 +702,14 @@ True
 
 True
 
+> callable(f)                                                                                                                                          
+
+False
+
+> callable(b)
+
+True 
+
 
 
 
