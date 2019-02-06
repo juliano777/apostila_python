@@ -232,3 +232,96 @@ global nome_variavel
 nome_variavel = valor
 
 
+
+# ==============================================================================
+
+Funções globals(), locals() e vars() e Comando global
+
+	Cada uma das funções retornam dicionários de variáveis e seus respectivos valores.
+	globals(): Retorna variáveis globais (escopo do módulo);
+	locals(): Retorna variáveis locais (escopo local);
+	vars(obj): sem argumentos é equivalente a locals(), com um argumento, equivalente a objeto.__dict__
+
+
+
+bla bla bla:
+
+> foo = 'escopo global'
+
+
+
+bla bla bla:
+
+> def f():
+    foo = 'escopo local'
+    bar = 'uma variável qualquer...'
+    print(globals()['foo'])
+    print(locals()['foo'])
+
+
+
+bla bla bla:
+
+> f()
+
+escopo global
+escopo local
+
+
+
+bla bla bla:
+
+> class Spam(object):
+    foo = ''
+    bar = ''
+
+
+
+bla bla bla:
+
+> vars(Spam)
+
+<dictproxy {'__dict__': <attribute '__dict__' of 'Spam' objects>,
+ '__doc__': None,
+ '__module__': '__main__',
+ '__weakref__': <attribute '__weakref__' of 'Spam' objects>,
+ 'bar': '',
+ 'foo': ''}>
+
+
+
+bla bla bla:
+
+> def f():
+    global x
+    x = 7
+
+
+
+bla bla bla:
+
+> type(x)
+
+NameError: name 'x' is not defined
+
+
+
+bla bla bla:
+
+> f()
+
+
+
+bla bla bla:
+
+> type(x)
+
+int
+
+
+
+bla bla bla:
+
+> print(x)
+
+7
