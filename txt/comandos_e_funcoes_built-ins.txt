@@ -611,7 +611,7 @@ Arredondamento sem especificar o número de dígitos (segundo parâmetro):
 
 
 
-bla bla bla:
+Arredondamento com quatro dígitos de precisão:
 
 > round(3.333333, 4)
 
