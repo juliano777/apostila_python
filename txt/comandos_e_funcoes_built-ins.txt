@@ -669,6 +669,18 @@ Criação de uma classe com o método __call__():
 > class Bar: 
     def __call__(self):
         pass
+
+
+
+Instância da classe sem o método __call__():
+
+> f = Foo()
+
+
+
+Instância da classe com o método __call__():
+
+> b = Bar()
  
 
 
