@@ -721,11 +721,7 @@ ord
 
 
 
-bla bla bla:
 
-> ord(u'\u07d0')
-
-2000
 
 
 
