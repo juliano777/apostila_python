@@ -661,6 +661,14 @@ Criação de uma classe sem o método __call__():
 
 > class Foo: 
     pass
+
+
+
+Criação de uma classe com o método __call__():
+
+> class Bar: 
+    def __call__(self):
+        pass
  
 
 
