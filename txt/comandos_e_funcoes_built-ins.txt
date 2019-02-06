@@ -858,11 +858,23 @@ True
 
 
 
+id
+
+    bla bla bla
+
+
+
 bla bla bla:
 
 > id(baz)
 
 139716327551272
+
+
+
+len
+
+    bla bla bla
 
 
 
