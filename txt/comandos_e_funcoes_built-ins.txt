@@ -708,7 +708,13 @@ False
 
 > callable(b)
 
-True 
+True
+
+
+
+ord
+
+    dfodfkldfkoldfk
 
 
 
