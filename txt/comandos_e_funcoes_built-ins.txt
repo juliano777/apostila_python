@@ -690,6 +690,12 @@ Execuções de callable:
 
 False
 
+> callable(myfunction)                                                                                                                                  
+
+True
+
+> 
+
 
 
 
