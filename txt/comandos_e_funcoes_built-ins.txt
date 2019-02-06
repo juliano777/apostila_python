@@ -714,22 +714,19 @@ True
 
 oct
 
-    dfodfkldfkoldfk
+    Função que retorna a representação octal de um inteiro.
 
 
 
-
-
-
-
-
-
-
-bla bla bla:
+Exemplos:
 
 > oct(9)
 
-'011'
+'0o11'
+
+> oct(10)                                                                                                                                              
+
+'0o12'
 
 
 
