@@ -849,12 +849,6 @@ len
 
 bla bla bla:
 
-> len(obj)
-
-
-
-bla bla bla:
-
 > foo = ('x', 'y', 'z', 123, 5.7)
 
 
