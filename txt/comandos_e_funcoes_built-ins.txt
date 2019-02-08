@@ -747,7 +747,7 @@ Testes com a função hash:
 
 2
 
-> x = 'foo'
+> x = 'foo'  # Hash de uma string
 
 > hash(x)
 
