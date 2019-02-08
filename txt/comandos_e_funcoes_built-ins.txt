@@ -759,7 +759,7 @@ Testes com a função hash:
                                                                                                                                   
 True
 
-> hash([1, 2, 3])
+> hash([1, 2, 3])  #  Alguns tipos como list, dict e set são unhashable
 
 TypeError: unhashable type: 'list'
 
