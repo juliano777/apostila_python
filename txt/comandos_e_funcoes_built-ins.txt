@@ -843,7 +843,7 @@ True
 
 len
 
-    bla bla bla
+    Função que retorna a quantidade de itens de um contêiner.
 
 
 
