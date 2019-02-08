@@ -766,7 +766,13 @@ TypeError: unhashable type: 'list'
 > # Quando um número é muito grande seu hash será diferente de seu valor
 > hash(9999999999999999999)
 
-776627963145224195 
+776627963145224195
+
+
+
+id
+
+    bla bla bla bla 
 
 
 
