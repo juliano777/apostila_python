@@ -772,7 +772,8 @@ TypeError: unhashable type: 'list'
 
 id
 
-    bla bla bla bla 
+    É uma função que retorna a identidade de um objeto.
+    É a garantia que o objeto será único dentre outros.
 
 
 
