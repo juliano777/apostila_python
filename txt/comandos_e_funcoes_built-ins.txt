@@ -753,21 +753,12 @@ Testes com a função hash:
 
 8540844669962366372
 
-> y = x
+> y = x  # Nova variável y igual a x
 
-> hash(y)
-
-8540844669962366372
-
-> z = 'foo'
-
-> hash(z)
-
-8540844669962366372
-
-> x == y
-
+> hash(x) == hash(y)  # Por terem o mesmo valor, o hash será igual
+                                                                                                                                  
 True
+
 
 
 bla bla bla:
