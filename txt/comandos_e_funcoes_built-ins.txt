@@ -777,13 +777,7 @@ id
 
 
 
-bla bla bla:
-
-> id(obj)
-
-
-
-bla bla bla:
+Criação de uma tupla:
 
 > foo = ('x', 'y')
 
