@@ -847,7 +847,7 @@ len
 
 
 
-bla bla bla:
+Criação de um objeto contêiner e verificação da quantidade de elementos:
 
 > foo = ('x', 'y', 'z', 123, 5.7)
 
