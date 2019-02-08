@@ -851,17 +851,13 @@ Criação de um objeto contêiner e verificação da quantidade de elementos:
 
 > foo = ('x', 'y', 'z', 123, 5.7)
 
-
-
-bla bla bla:
-
 > len(foo)
 
 5
 
 
 
-bla bla bla:
+Tamanho de uma string:
 
 > len('Heavy Metal')
 
