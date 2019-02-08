@@ -759,10 +759,6 @@ Testes com a função hash:
                                                                                                                                   
 True
 
-
-
-bla bla bla:
-
 > hash([1, 2, 3])
 
 TypeError: unhashable type: 'list'
