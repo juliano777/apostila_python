@@ -847,12 +847,6 @@ len
 
 
 
-len
-
-    bla bla bla
-
-
-
 bla bla bla:
 
 > len(obj)
