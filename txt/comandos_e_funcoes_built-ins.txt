@@ -793,23 +793,19 @@ True
 
 
 
-bla bla bla:
+Verificando o a identidade das tuplas criadas:
 
-> id(foo)
+> id(foo)                                                                                                                                             
 
-139716355830632
-
-
-
-bla bla bla:
+139651439554952
 
 > id(bar)
 
-139716327551272
+139651403802056
 
 
 
-bla bla bla:
+É o mesmo objeto?:
 
 > foo is bar
 
@@ -817,7 +813,7 @@ False
 
 
 
-bla bla bla:
+Criação de uma nova variável atribuindo com base em um objeto pré-existente:
 
 > baz = bar
 
