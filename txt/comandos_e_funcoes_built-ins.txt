@@ -739,7 +739,7 @@ hash
 
 Testes com a função hash:
 
-> hash(1)
+> hash(1)  # O hash de um inteiro vai ser seu próprio valor
 
 1
 
