@@ -827,7 +827,7 @@ True
 
 
 
-É o mesmo objeto:
+É o mesmo objeto?:
 
 > baz is bar
 
