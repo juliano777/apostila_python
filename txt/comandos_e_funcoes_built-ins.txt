@@ -777,19 +777,15 @@ id
 
 
 
-Criação de uma tupla:
+Criação de duas tuplas:
 
 > foo = ('x', 'y')
-
-
-
-bla bla bla:
 
 > bar = ('x', 'y')
 
 
 
-bla bla bla:
+Comparando as tuplas criadas:
 
 > foo == bar
 
