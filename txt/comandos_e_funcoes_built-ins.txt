@@ -819,15 +819,7 @@ Criação de uma nova variável atribuindo com base em um objeto pré-existente:
 
 
 
-bla bla bla:
-
-> baz
-
-('x', 'y')
-
-
-
-bla bla bla:
+Comparando as variáveis:
 
 > baz == bar
 
