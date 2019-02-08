@@ -827,15 +827,11 @@ True
 
 
 
-bla bla bla:
+É o mesmo objeto:
 
 > baz is bar
 
 True
-
-
-
-bla bla bla:
 
 > id(bar) == id(baz)                                                                                                                                  
 
