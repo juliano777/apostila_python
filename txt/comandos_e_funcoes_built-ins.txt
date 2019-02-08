@@ -737,7 +737,7 @@ hash
 
 
 
-bla:
+Testes com a função hash:
 
 > hash(1)
 
