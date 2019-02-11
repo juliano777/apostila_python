@@ -103,7 +103,14 @@ True
 import psycopg2
 
 
-str_con="dbname='postgres' user='postgres' host='192.168.1.177' password='123'"
+str_con="""
+        dbname='postgres'
+        user='postgres'
+        host='192.168.1.177'
+        password='123'
+        application_name='python'
+        """
+
 str_sql='SELECT version();'
 
 
