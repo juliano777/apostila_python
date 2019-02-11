@@ -124,7 +124,7 @@ pg_conn = pg_conn.format(
                          APPLICATION_NAME)
 
 
-class pgcon(object):
+class PgConnection(object):
     def __init__(self, str_con, str_sql):
         self.str_con = str_con
         self.str_sql = str_sql
