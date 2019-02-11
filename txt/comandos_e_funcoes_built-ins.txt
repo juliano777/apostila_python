@@ -936,7 +936,7 @@ Criação de uma tupla:
 
 
 
-Criação de um objeto iterável:
+Criação de um objeto iterável com base na tupla criada anteriormente:
 
 > y = enumerate(x)
 
