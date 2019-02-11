@@ -103,15 +103,19 @@ True
 import psycopg2
 
 
-str_con="""
-        dbname='postgres'
-        user='postgres'
-        host='192.168.1.177'
-        password='123'
-        application_name='python'
-        """
+# Parâmetros de conexão
+PGHOST = 'localhost'
+PGDB = 'postgres'
+PGPORT = 5432
+PGUSER = 'postgres'
+PGPASS = '123'
+APPLICATION_NAME = 'python'
 
-str_sql='SELECT version();'
+# Máscara da string de conexão
+pg_conn = 'host={} dbname={} port={} user={} password={}'
+
+# String de conexão formatada com os dados
+pg_conn = pg_conn.format(PGHOST, PGDB, PGPORT, PGUSER, PGPASS)
 
 
 class pgcon(object):
