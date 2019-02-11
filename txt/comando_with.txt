@@ -112,7 +112,7 @@ PGPASS = '123'
 APPLICATION_NAME = 'python'
 
 # Máscara da string de conexão
-pg_conn = 'host={} dbname={} port={} user={} password={}'
+pg_conn = 'host={} dbname={} port={} user={} password={} application_name'
 
 # String de conexão formatada com os dados
 pg_conn = pg_conn.format(PGHOST, PGDB, PGPORT, PGUSER, PGPASS)
