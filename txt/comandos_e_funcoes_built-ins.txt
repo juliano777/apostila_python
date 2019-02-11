@@ -942,24 +942,7 @@ Criação de um objeto iterável com base na tupla criada anteriormente:
 
 
 
-bla bla bla:
-
-> for i, j in y:
-    print('%i - %s' % (i, j))
-
-0 - verde
-1 - azul
-2 - amarelo
-
-
-
-bla bla bla:
-
-> y = enumerate(x)
-
-
-
-bla bla bla:
+Exibindo o tipo de y:
 
 > type(y)
 
@@ -967,24 +950,34 @@ enumerate
 
 
 
-bla bla bla:
+Loop sobre o iterável:
 
-> y.next()
+> for i, j in y:
+    print('{} - {}'.format(i, j))
+
+0 - verde
+1 - azul
+2 - amarelo
+
+
+
+Criar o iterável novamente:
+
+> y = enumerate(x)
+
+
+
+
+Método __next__() que traz uma tupla com o índice e o valor:
+
+> y. __next__()
 
 (0, 'verde')
 
-
-
-bla bla bla:
-
-> y.next()
+> y. __next__()
 
 (1, 'azul')
 
-
-
-bla bla bla:
-
-> y.next()
+> y. __next__()
 
 (2, 'amarelo')
