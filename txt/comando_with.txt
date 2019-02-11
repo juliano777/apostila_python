@@ -115,7 +115,7 @@ APPLICATION_NAME = 'python'
 pg_conn = 'host={} dbname={} port={} user={} password={} application_name={}'
 
 # String de conexão formatada com os dados
-pg_conn = pg_conn.format(
+str_con = pg_conn.format(
                          PGHOST,
                          PGDB,
                          PGPORT,
@@ -144,5 +144,5 @@ class PgConnection(object):
         return 0
 
 
-with pgcon(str_con, str_sql) as x:
+with PgConnection(str_con, str_sql) as x:
     print(x[0])
