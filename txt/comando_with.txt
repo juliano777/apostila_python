@@ -115,7 +115,7 @@ class pgcon(object):
 #        self.data = None
 
     def __enter__(self):
-        self.conn = conn = psycopg2.connect(str_con)
+        self.conn = psycopg2.connect(str_con)
         cursor = self.conn.cursor()
         cursor.execute(str_sql)
         self.data = cursor.fetchone()
