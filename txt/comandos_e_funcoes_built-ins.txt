@@ -886,7 +886,7 @@ Imprimindo o valor da variável:
 
 
 
-sdssd
+Entrada de dados com prompt:
 
 > foo = input('Digite uma string qualquer... ')
 
@@ -902,27 +902,25 @@ Imprimindo o valor da variável:
 
 
 
-
-
 min e max
 
-    bla bla bla
+    Dada uma coleção, seja ela uma lista, tupla, conjunto ou string, as funções min e max trazem, respectivamente, o valor mínimo e o máximo.
 
 
 
-bla bla bla:
+Exemplos:
 
-> min(0, 2, -50, 7)
+> min(0, 2, -50, 7)  # Valor mínimo entre inteiros
 
 -50
 
-
-
-bla bla bla:
-
-> max(0, 2, -50, 7)
+> max(0, 2, -50, 7)  # Valor máximo entre inteiros
 
 7
+
+> max('c', 'x', 'k')  # Para caracteres a ordem alfabética é levada em conta
+
+'x'
 
 
 
