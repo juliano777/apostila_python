@@ -926,23 +926,17 @@ Exemplos:
 
 enumerate
 
-    bla bla bla
+    Função que retorna um objeto iterável.
 
 
 
-bla bla bla:
-
-> enumerate()
-
-
-
-bla bla bla:
+Criação de uma tupla:
 
 > x = ('verde', 'azul', 'amarelo')
 
 
 
-bla bla bla:
+Criação de um objeto iterável:
 
 > y = enumerate(x)
 
