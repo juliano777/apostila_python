@@ -48,7 +48,7 @@ bla bla bla:
 
 bla bla bla:
 
-> print('Uma linha qualquer', file = f)
+> print('Uma linha qualquer', file=f)
 
 
 
