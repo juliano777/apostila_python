@@ -440,9 +440,14 @@ bla bla bla:
 bla bla bla:
 
 > f.read()
+
 '1 - Verde\n2 - Preto\n3 - Branco\n'
 
-f.tell()
+
+
+bla bla bla:
+
+> f.tell()
 31
 
 f.seek(0)
