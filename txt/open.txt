@@ -58,17 +58,26 @@ bla bla bla:
 
 
 
+bla bla bla:
 
-f = open('/tmp/foo.txt', 'r')
+> f = open('/tmp/foo.txt', 'r')
 
-for line in f:
+
+
+bla bla bla:
+
+> for line in f:
     print(line.strip('\n'))
 
-Teste de escrita em arquivo
 
-Uma linha qualquer
 
-f.close()
+Fechamento de arquivo:
+
+> f.close()
+
+
+
+
 
 
 
