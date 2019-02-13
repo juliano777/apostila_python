@@ -379,7 +379,7 @@ bla bla bla:
 
 bla bla bla:
 
-$ cat /tmp/cores.txt 
+$ cat /tmp/cores.txt
 
 1 - Verde
 
