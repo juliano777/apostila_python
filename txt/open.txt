@@ -448,9 +448,14 @@ bla bla bla:
 bla bla bla:
 
 > f.tell()
+
 31
 
-f.seek(0)
+
+
+bla bla bla:
+
+> f.seek(0)
 0
 
 f.tell()
