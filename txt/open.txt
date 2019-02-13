@@ -5,46 +5,7 @@ open
 	A partir da versão 3 de Python use preferencialmente open, pois file foi removido.
 	Um arquivo é iterável, cujas iterações são por linha.
 
-Python 2:
-
-file(name[, mode[, buffering]])
-
-name = string que contém o nome do arquivo ou o caminho completo ou relativo para ele.
-mode = como o arquivo vai ser operado.
-buffering = 0 sem buffer, 1 utiliza buffer, valores maiores do que 1 indicam o tamanho em bytes.
-
-mode:
-
-'r' -> Leitura (padrão);
-'w' -> Escrita (novo arquivo, ou se o mesmo existir será truncado);
-'b' -> Modo binário;
-'a' -> Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente).
-
-
-
-(print)
-
-
-f = file('/tmp/foo.txt', 'w+')
-
-type(f)
-file
-
-print >> f, 'Teste de escrita em arquivo'
-
-print >> f, '' # Linha em branco
-
-print >> f, 'Uma linha qualquer'
-
-f.close()
-
-
-Python3:
-
-
-open(file, mode='r', buffering=-1, encoding=None,
-         errors=None, newline=None, closefd=True, opener=None) 
-
+open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None) 
 
 Modos
 
@@ -59,15 +20,29 @@ Modos
 
 
 
+bla bla bla:
 
-f = open('/tmp/foo.txt', 'w+')
+> f = open('/tmp/foo.txt', 'w+')
 
-type(f)
+
+
+bla bla bla:
+
+> type(f)
+
 _io.TextIOWrapper
 
-print('Teste de escrita em arquivo', file = f)
 
-print(' ', file = f)
+
+bla bla bla:
+
+> print('Teste de escrita em arquivo', file = f)
+
+
+
+bla bla bla:
+
+> print(' ', file = f)
 
 print('Uma linha qualquer', file = f)
 
