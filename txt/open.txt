@@ -513,6 +513,10 @@ bla bla bla:
 
 > f.flush()
 
+
+
+bla bla bla:
+
 $ cat /tmp/planetas.txt
 
 Saturno
@@ -520,9 +524,16 @@ Urano
 Netuno
 
 
-planetas = ('Marte\n', 'Vênus\n', 'Plutão\n', 'Júpiter\n')
 
-f.writelines(planetas)
+bla bla bla:
+
+> planetas = ('Marte\n', 'Vênus\n', 'Plutão\n', 'Júpiter\n')
+
+
+
+bla bla bla:
+
+> f.writelines(planetas)
 
 f.close()
 
