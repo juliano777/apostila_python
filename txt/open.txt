@@ -163,6 +163,7 @@ bla bla bla:
 
 bla bla bla:
 
+$ cat << EOF > /tmp/teste.py
 #!/usr/bin/env python3
 #_*_ encoding: utf8 _*_
 
@@ -177,6 +178,7 @@ for i in file_open:
     print(i.strip())
 
 file_open.close()
+EOF
 
 
 
