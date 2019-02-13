@@ -36,13 +36,13 @@ _io.TextIOWrapper
 
 bla bla bla:
 
-> print('Teste de escrita em arquivo', file = f)
+> print('Teste de escrita em arquivo', file=f)
 
 
 
 bla bla bla:
 
-> print(' ', file = f)
+> print(' ', file=f)
 
 
 
