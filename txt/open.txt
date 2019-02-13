@@ -484,7 +484,10 @@ bla bla bla:
 7
 
 
-f.close()
+
+bla bla bla:
+
+> f.close()
 
 
 f = open('/tmp/planetas.txt', 'w')
