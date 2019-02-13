@@ -77,10 +77,7 @@ Fechamento de arquivo:
 
 
 
-
-
-
-
+bla bla bla:
 
 $ cat << EOF > /tmp/linhas.txt
 linha_1
@@ -88,13 +85,21 @@ linha_2
 linha_3
 EOF
 
+
+
+bla bla bla:
+
 $ cat /tmp/linhas.txt
 
 linha_1
 linha_2
 linha_3
 
-f = open('/tmp/linhas.txt')
+
+
+bla bla bla:
+
+> f = open('/tmp/linhas.txt')
 
 
 f.readline()
