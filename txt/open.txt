@@ -102,30 +102,66 @@ bla bla bla:
 > f = open('/tmp/linhas.txt')
 
 
-f.readline()
+
+bla bla bla:
+
+> f.readline()
+
 'linha_1\n'
 
-f.readline().split()
+
+
+bla bla bla:
+
+> f.readline().split()
+
 ['linha_2']
 
-f.readline().split()
+
+
+bla bla bla:
+
+> f.readline().split()
+
 ['linha_3']
 
-f.readline().split()
+
+
+bla bla bla:
+
+> f.readline().split()
+
 []
 
 
-f.close()
 
-f = open('/tmp/linhas.txt')
+bla bla bla:
 
-f.readlines()
+> f.close()
+
+
+
+bla bla bla:
+
+> f = open('/tmp/linhas.txt')
+
+
+
+bla bla bla:
+
+> f.readlines()
+
 ['linha_1\n', 'linha_2\n', 'linha_3\n']
 
-f.close()
+
+
+bla bla bla:
+
+> f.close()
 
 
 
+bla bla bla:
 
 #!/usr/bin/env python3
 #_*_ encoding: utf8 _*_
@@ -143,9 +179,16 @@ for i in file_open:
 file_open.close()
 
 
-$ chmod +x teste.py 
 
-$ ./teste.py linhas.txt 
+bla bla bla:
+
+$ chmod +x teste.py
+
+
+
+bla bla bla:
+
+$ ./teste.py linhas.txt
 
 linha_1
 linha_2
