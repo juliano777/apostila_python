@@ -490,13 +490,28 @@ bla bla bla:
 > f.close()
 
 
-f = open('/tmp/planetas.txt', 'w')
 
-planetas = ('Saturno\n', 'Urano\n', 'Netuno\n')
+bla bla bla:
 
-f.writelines(planetas)
+> f = open('/tmp/planetas.txt', 'w')
 
-f.flush()
+
+
+bla bla bla:
+
+> planetas = ('Saturno\n', 'Urano\n', 'Netuno\n')
+
+
+
+bla bla bla:
+
+> f.writelines(planetas)
+
+
+
+bla bla bla:
+
+> f.flush()
 
 $ cat /tmp/planetas.txt
 
