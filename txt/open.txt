@@ -400,7 +400,14 @@ bla bla bla:
 > f.write('3 - Branco\n')
 
 
-f.flush()
+
+bla bla bla:
+
+> f.flush()
+
+
+
+bla bla bla:
 
 $ cat /tmp/cores.txt
 
@@ -408,9 +415,17 @@ $ cat /tmp/cores.txt
 2 - Preto
 3 - Branco
 
-f.close()
 
-f = open('/tmp/cores.txt', 'r')
+
+bla bla bla:
+
+> f.close()
+
+
+
+bla bla bla:
+
+> f = open('/tmp/cores.txt', 'r')
 
 f.tell()
 0
