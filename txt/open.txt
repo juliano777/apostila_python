@@ -301,7 +301,11 @@ bla bla bla:
 
 True
 
-f = open('/tmp/cores.txt', 'w')
+
+
+bla bla bla:
+
+> f = open('/tmp/cores.txt', 'w')
 
 f.closed
 False
