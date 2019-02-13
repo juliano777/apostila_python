@@ -321,36 +321,77 @@ bla bla bla:
 
 > f.close()
 
+
+
+bla bla bla:
+
 $ cat /tmp/cores.txt
 
-f = open('/tmp/cores.txt', 'w')
-
-f.write('1 - Verde\n')
 
 
-f.close()
+bla bla bla:
 
-$ cat /tmp/cores.txt 
+> f = open('/tmp/cores.txt', 'w')
+
+
+
+bla bla bla:
+
+> f.write('1 - Verde\n')
+
+
+
+bla bla bla:
+
+> f.close()
+
+
+
+bla bla bla:
+
+$ cat /tmp/cores.txt
+
 1 - Verde
 
 
-print(f.name)
+
+bla bla bla:
+
+> print(f.name)
+
 /tmp/cores.txt
 
 
-f = open('/tmp/cores.txt', 'a')
 
-f.close()
+bla bla bla:
 
+> f = open('/tmp/cores.txt', 'a')
+
+
+
+bla bla bla:
+
+> f.close()
+
+
+
+bla bla bla:
 
 $ cat /tmp/cores.txt 
 
 1 - Verde
 
 
-f = open('/tmp/cores.txt', 'a')
 
-f.write('2 - Preto\n')
+bla bla bla:
+
+> f = open('/tmp/cores.txt', 'a')
+
+
+
+bla bla bla:
+
+> f.write('2 - Preto\n')
 
 
 f.write('3 - Branco\n')
