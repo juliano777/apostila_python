@@ -307,10 +307,19 @@ bla bla bla:
 
 > f = open('/tmp/cores.txt', 'w')
 
-f.closed
+
+
+bla bla bla:
+
+> f.closed
+
 False
 
-f.close()
+
+
+bla bla bla:
+
+> f.close()
 
 $ cat /tmp/cores.txt
 
