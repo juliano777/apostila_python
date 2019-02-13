@@ -293,7 +293,12 @@ bla bla bla:
 
 > f.close()
 
-f.closed
+
+
+bla bla bla:
+
+> f.closed
+
 True
 
 f = open('/tmp/cores.txt', 'w')
