@@ -184,7 +184,7 @@ EOF
 
 bla bla bla:
 
-$ chmod +x teste.py
+$ chmod +x /tmp/teste.py
 
 
 
