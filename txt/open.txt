@@ -394,7 +394,10 @@ bla bla bla:
 > f.write('2 - Preto\n')
 
 
-f.write('3 - Branco\n')
+
+bla bla bla:
+
+> f.write('3 - Branco\n')
 
 
 f.flush()
