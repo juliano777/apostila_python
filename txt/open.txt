@@ -537,7 +537,11 @@ bla bla bla:
 
 > f.writelines(planetas)
 
-f.close()
+
+
+bla bla bla:
+
+> f.close()
 
 
 
