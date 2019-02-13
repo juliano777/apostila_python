@@ -456,15 +456,31 @@ bla bla bla:
 bla bla bla:
 
 > f.seek(0)
+
 0
 
-f.tell()
+
+
+bla bla bla:
+
+> f.tell()
+
 0
 
-f.read(7)
+
+
+bla bla bla:
+
+> f.read(7)
+
 '1 - Ver'
 
-f.tell()
+
+
+bla bla bla:
+
+> f.tell()
+
 7
 
 
