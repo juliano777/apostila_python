@@ -44,9 +44,17 @@ bla bla bla:
 
 > print(' ', file = f)
 
-print('Uma linha qualquer', file = f)
 
-f.close()
+
+bla bla bla:
+
+> print('Uma linha qualquer', file = f)
+
+
+
+bla bla bla:
+
+> f.close()
 
 
 
