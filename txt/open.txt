@@ -427,10 +427,19 @@ bla bla bla:
 
 > f = open('/tmp/cores.txt', 'r')
 
-f.tell()
+
+
+bla bla bla:
+
+> f.tell()
+
 0
 
-f.read()
+
+
+bla bla bla:
+
+> f.read()
 '1 - Verde\n2 - Preto\n3 - Branco\n'
 
 f.tell()
