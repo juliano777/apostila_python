@@ -538,6 +538,9 @@ bla bla bla:
 f.close()
 
 
+
+bla bla bla:
+
 $ cat /tmp/planetas.txt
 
 Saturno
