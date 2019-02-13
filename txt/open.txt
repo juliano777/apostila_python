@@ -195,7 +195,8 @@ linha_2
 linha_3
 
 
-O Método seek
+
+O Método seek:
 
 $ cat << EOF > /tmp/cores.txt
 1 - Verde
@@ -203,24 +204,17 @@ $ cat << EOF > /tmp/cores.txt
 3 - Branco
 EOF
 
-f = open('/tmp/cores.txt', 'r')
 
-for i in f:
-    print(i.strip())
 
-1 - Verde
-2 - Preto
-3 - Branco
+bla bla bla:
 
-for i in f:
-    print(i.strip())
- 
-
-f.seek(0)
+> f = open('/tmp/cores.txt', 'r')
 
 
 
-for i in f:
+bla bla bla:
+
+> for i in f:
     print(i.strip())
 
 1 - Verde
@@ -228,36 +222,76 @@ for i in f:
 3 - Branco
 
 
-f.seek(1)
+
+bla bla bla:
+
+> for i in f:
+    print(i.strip())
 
 
 
+bla bla bla:
 
-for i in f:
+> f.seek(0)
+
+
+
+bla bla bla:
+
+> for i in f:
+    print(i.strip())
+
+1 - Verde
+2 - Preto
+3 - Branco
+
+
+
+bla bla bla:
+
+> f.seek(1)
+
+
+
+bla bla bla:
+
+> for i in f:
     print(i.strip())
 
 - Verde
 2 - Preto
 3 - Branco
 
-f.seek(0)
+
+
+bla bla bla:
+
+> f.seek(0)
+
 0
 
-f.read(7)
+> f.read(7)
+
 '1 - Ver'
 
 
-f.read(7)
+> f.read(7)
+
 'de\n2 - '
 
-f.read(7)
+> f.read(7)
+
 'Preto\n3'
 
-f.read(7)
+> f.read(7)
+
 ' - Bran'
 
 
-f.close()
+
+bla bla bla:
+
+> f.close()
 
 f.closed
 True
