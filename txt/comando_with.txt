@@ -125,7 +125,7 @@ str_con = pg_conn.format(
                         )
 
 
-str_sql = 'SELECT version();'
+str_sql = "SELECT 'Teste...';"
 
 
 > class PgConnection(object):
@@ -148,5 +148,5 @@ str_sql = 'SELECT version();'
         return 0
 
 
-with PgConnection(str_con, str_sql) as x:
+> with PgConnection(str_con, str_sql) as x:
     print(x[0])
