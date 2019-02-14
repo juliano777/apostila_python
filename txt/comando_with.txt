@@ -150,3 +150,9 @@ str_sql = "SELECT 'Teste...';"
 
 > with PgConnection(str_con, str_sql) as x:
     print(x[0])
+
+===== __enter__ =====
+
+Teste...
+
+===== __exit__ =====
