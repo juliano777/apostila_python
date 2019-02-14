@@ -121,7 +121,8 @@ str_con = pg_conn.format(
                          PGPORT,
                          PGUSER,
                          PGPASS,
-                         APPLICATION_NAME)
+                         APPLICATION_NAME
+                        )
 
 
 str_sql = 'SELECT version();'
