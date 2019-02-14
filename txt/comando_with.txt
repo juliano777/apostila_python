@@ -128,14 +128,14 @@ str_con = pg_conn.format(
 str_sql = 'SELECT version();'
 
 
-class PgConnection(object):
+> class PgConnection(object):
     def __init__(self, str_con, str_sql):
         self.str_con = str_con
         self.str_sql = str_sql
-#        self.conn = None
-#        self.data = None
+
 
     def __enter__(self):
+        print('===== __enter__ =====\n')
         self.conn = psycopg2.connect(str_con)
         cursor = self.conn.cursor()
         cursor.execute(str_sql)
@@ -143,7 +143,7 @@ class PgConnection(object):
         return self.data
 
     def __exit__(self, type, value, traceback):
-        print('saindo...')
+        print('\n===== __exit__ =====')
         self.conn.close()
         return 0
 
