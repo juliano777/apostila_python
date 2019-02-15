@@ -125,7 +125,7 @@ str_con = pg_conn.format(
                         )
 
 
-str_sql = "SELECT 'Teste...';"
+> str_sql = "SELECT 'Teste...';"
 
 
 > class PgConnection(object):
