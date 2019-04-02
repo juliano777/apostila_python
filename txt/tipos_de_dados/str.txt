@@ -329,6 +329,20 @@ Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere "_":
 '__foo__'
 
 
+
+Número decimal:
+
+> '{:.3f}'.format(93.85741)
+
+'93.857'
+
+
+
+> '{:.3f}'.format(70000)
+
+'70000.000'
+
+
 # ============================================================================
 
 Representações de Inteiros 
