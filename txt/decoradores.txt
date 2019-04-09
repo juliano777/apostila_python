@@ -88,7 +88,13 @@ Dentro da função
 
 Decorador com Argumentos
 
-class Decorador():
+    Para funções decoradas que têm argumentos.
+
+
+
+Criação da classe decoradora:
+
+> class Decorador():
 
     def __init__(self, f):
         print('Método __init__() do decorador')
