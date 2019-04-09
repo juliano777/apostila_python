@@ -108,17 +108,22 @@ Criação da classe decoradora:
 
 Definição da classe decorada:
 
-@Decorador
+> @Decorador
 def soma(x, y):
     return x + y
 
-print(soma(2, 5))
+
+
+Execução da classe decorada:
+
+> print(soma(2, 5))
+
 Método __call__() do decorador
 7
 
 
 
-- Função como decorador
+Função como decorador
 
 def funcao_decoradora(funcao):
   
