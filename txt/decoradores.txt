@@ -176,12 +176,20 @@ def to_bold(funcao):
         return '<b>' + funcao() + '</b>'
     return funcao_auxiliadora
 
-@to_italic
+
+
+Definição da função decorada com dois decoradores:
+
+> @to_italic
 @to_bold
 def hello_world():
     return 'Hello, World!'
-    
-hello_world()
+
+
+
+Execução da função decorada:
+
+> hello_world()
 '<i><b>Hello, World!</b></i>'
 
 
