@@ -195,8 +195,19 @@ Execução da função decorada:
 
 
 
-''' Memoize function (as decorator)'''
-def memoize(f):
+Memoização
+
+    Texto...
+
+
+
+Criação do decorador de memoização:
+
+> def memoize(f):
+    '''
+    Memoize function (as decorator)
+    '''
+
     # dictionary (cache)
     mem = {}
 
