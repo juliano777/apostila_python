@@ -1,12 +1,12 @@
 Decoradores em Python
 
-	É um conceito diferente do conceito decorator de design pattern.
-	Pode ser implementado como uma classe ou como uma função.
-	Modificam funções.
-	É identificado da seguinte forma: @nome_do_decorador.
-	Deve ser inserido na linha anterior da definição.
-	Um decorador deve ser executável, ou seja, deve ter o método __call__().	
-	São envelopes de função.
+    É um conceito diferente do conceito decorator de design pattern.
+    Pode ser implementado como uma classe ou como uma função.
+    Modificam funções.
+    É identificado da seguinte forma: @nome_do_decorador.
+    Deve ser inserido na linha anterior da definição.
+    Um decorador deve ser executável, ou seja, deve ter o método __call__().
+    São envelopes de função.
     Decoradores podem ser definidos como classes ou funções.
 
 
