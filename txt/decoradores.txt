@@ -8,33 +8,49 @@ Decoradores em Python
 	Um decorador deve ser executável, ou seja, deve ter o método __call__().	
 	São envelopes de função.
 
+
+
 Decoradores de Funções
 
-- Classe como decorador
+Classe como decorador:
 
-class decorador(object):
+> class Decorador(object):
     
     def __init__(self, funcao):
-        print('Método __init__() do decorador')
-        funcao()
+        '''        
+        O parâmetro "funcao" é a função que será decorada.
+        '''
+
+        print('Método __init__() do decorador')  # Mensagem ao instanciar
+        funcao()  # Executa a função ao instanciar
     
     def __call__(self):    
         print('Método __call__() do decorador')
+
+
+
+Definição da classe com decorador:
       
-@decorador
+> @Decorador
 def funcao_decorada():
-    print('Dentro da funcao')
+    print('Dentro da função decorada')
      
 Método __init__() do decorador
-Dentro da funcao
+Dentro da função decorada
 
-funcao_decorada()
+
+    O método construtor do decorador é invocado logo após da definição da função decorada.
+
+
+
+Execução da função decorada:
+
+> funcao_decorada()
+
 Método __call__() do decorador
 
-funcao_decorada()
-Método __call__() do decorador
-
-O método construtor do decorador é invocado logo após da definição da função decorada.
+    
+    
 No exemplo, a própria função, que é usada como parâmetro, é invocada pelo método cosntrutor __init__().
 
 class decorador(object):
