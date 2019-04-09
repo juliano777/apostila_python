@@ -134,6 +134,7 @@ Criação da função decoradora, o decorador em si:
 
 > def funcao_decoradora(funcao):
   
+    # Função auxiliar
     def funcao_auxiliar():
       print('Antes da função decorada')
       funcao()
