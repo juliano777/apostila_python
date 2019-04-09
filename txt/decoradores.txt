@@ -141,12 +141,20 @@ Criação da função decoradora, o decorador em si:
       print('Depois da função decorada')
       
     return funcao_auxiliar
-      
-@funcao_decoradora
+
+
+
+Definição da função decorada:
+
+> @funcao_decoradora
 def foo():
   print('Função decorada')
+
+
+
+Execução da função decorada:
   
-foo() 
+> foo() 
 
 Antes da função decorada
 Função decorada
