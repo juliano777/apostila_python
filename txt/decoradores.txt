@@ -182,14 +182,14 @@ Definição da função decorada com dois decoradores:
 
 > @to_italic
 @to_bold
-def hello_world():
-    return 'Hello, World!'
+def fc_msg(msg):
+    return msg
 
 
 
 Execução da função decorada:
 
-> hello_world()
+> fc_msg('Hello, World!')
 
 '<i><b>Hello, World!</b></i>'
 
