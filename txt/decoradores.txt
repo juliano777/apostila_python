@@ -221,7 +221,7 @@ Criação do decorador de memoização:
 
 
 
-sdsd
+Criação da função decorada com memoização aplicada para Fibonacci:
 
 > @memoize
 def fibo(n):
