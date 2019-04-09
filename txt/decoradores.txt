@@ -126,9 +126,13 @@ Método __call__() do decorador
 
 Função como decorador
 
+    Até então foram vistos exemplos de decoradores definidos como classes, agora serão vistos os definidos como função.
 
 
-def funcao_decoradora(funcao):
+
+Criação da função decoradora, o decorador em si:
+
+> def funcao_decoradora(funcao):
   
     def funcao_auxiliar():
       print('Antes da função decorada')
