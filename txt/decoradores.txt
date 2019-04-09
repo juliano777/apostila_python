@@ -167,13 +167,13 @@ Podemos também aplicar mais de um decorador a uma função:
 > # Função para itálico em HTML
 def to_italic(funcao):
     def funcao_auxiliadora():
-        return '<i>' + funcao() + '</i>'
+        return '<i>' + funcao(*args, **kargs) + '</i>'
     return funcao_auxiliadora
 
 # Função para negrito em HTML
 def to_bold(funcao):
     def funcao_auxiliadora():
-        return '<b>' + funcao() + '</b>'
+        return '<b>' + funcao(*args, **kargs) + '</b>'
     return funcao_auxiliadora
 
 
