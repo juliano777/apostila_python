@@ -105,6 +105,9 @@ Criação da classe decoradora:
          return self.f(*args, **kargs)
 
 
+
+Definição da classe decorada:
+
 @Decorador
 def soma(x, y):
     return x + y
