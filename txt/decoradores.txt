@@ -40,6 +40,7 @@ Dentro da função decorada
 
 
     O método construtor do decorador é invocado logo após da definição da função decorada.
+    No exemplo, a própria função, que é usada como parâmetro, é invocada pelo método construtor __init__().
 
 
 
@@ -51,7 +52,7 @@ Método __call__() do decorador
 
     
     
-No exemplo, a própria função, que é usada como parâmetro, é invocada pelo método cosntrutor __init__().
+
 
 class decorador(object):
      def __init__(self, funcao):
