@@ -190,6 +190,7 @@ def hello_world():
 Execução da função decorada:
 
 > hello_world()
+
 '<i><b>Hello, World!</b></i>'
 
 
