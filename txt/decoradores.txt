@@ -7,6 +7,7 @@ Decoradores em Python
 	Deve ser inserido na linha anterior da definição.
 	Um decorador deve ser executável, ou seja, deve ter o método __call__().	
 	São envelopes de função.
+    Decoradores podem ser definidos como classes ou funções.
 
 
 
@@ -124,6 +125,8 @@ Método __call__() do decorador
 
 
 Função como decorador
+
+
 
 def funcao_decoradora(funcao):
   
