@@ -50,11 +50,11 @@ Execução da função decorada:
 
 Método __call__() do decorador
 
-    
-    
 
 
-class Decorador(object):
+Recriação da classe decoradora:
+
+> class Decorador(object):
      def __init__(self, funcao):
         print('Método __init__() do decorador')
         self.funcao = funcao
