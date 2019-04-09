@@ -54,7 +54,7 @@ Método __call__() do decorador
     
 
 
-class decorador(object):
+class Decorador(object):
      def __init__(self, funcao):
         print('Método __init__() do decorador')
         self.funcao = funcao
