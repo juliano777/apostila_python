@@ -90,6 +90,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#strings-em-python">5.1. Strings em Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#apostrofos-ou-aspas-qual-devo-utilizar">5.2. Apóstrofos ou aspas? Qual devo utilizar?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#strings-de-multiplas-linhas">5.3. Strings de Múltiplas Linhas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#caracteres-especiais">5.4. Caracteres Especiais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formatacao">5.5. Formatação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#representacoes-de-inteiros">5.6. Representações de Inteiros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-de-strings-em-python">5.7. Tipos de Strings em Python</a></li>
 </ul>
 </li>
 </ul>
@@ -223,7 +227,9 @@ linhas
 <p>&gt; print(s3)
 Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da PEP8 (Python Enhancement Proposal), Proposta de aprimoramento do Python, que visa boas práticas de programação.</p>
 <p># ============================================================================</p>
-<p>Caracteres Especiais</p>
+</div>
+<div class="section" id="caracteres-especiais">
+<h2>5.4. Caracteres Especiais<a class="headerlink" href="#caracteres-especiais" title="Link permanente para este título">¶</a></h2>
 <p>———————-+———————————————————-+—————–+————+
 | \                  | Imprime uma contrabarra                                  | ‘'            |          |
 |                     |                                                          |                 |            |
@@ -259,7 +265,9 @@ Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da
 | xhh                | Imprime o character baseado em seu valor hexadecimal     | ‘1xaa’         | 1ª         |
 +———————+———————————————————-+——————————+</p>
 <p># ============================================================================</p>
-<p>Formatação</p>
+</div>
+<div class="section" id="formatacao">
+<h2>5.5. Formatação<a class="headerlink" href="#formatacao" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Há casos que é necessário fazer formatação de strings colocando uma string como um template.
 Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), posteriormente foi adicionado o método format.</p>
@@ -347,7 +355,9 @@ Cód: 00157</p>
 <p>&gt; ‘{:.3f}’.format(70000)</p>
 <p>‘70000.000’</p>
 <p># ============================================================================</p>
-<p>Representações de Inteiros</p>
+</div>
+<div class="section" id="representacoes-de-inteiros">
+<h2>5.6. Representações de Inteiros<a class="headerlink" href="#representacoes-de-inteiros" title="Link permanente para este título">¶</a></h2>
 <ol class="loweralpha simple" start="2">
 <li><p>Formato binário; número de saída na base 2:</p></li>
 </ol>
@@ -407,7 +417,9 @@ Cód: 00157</p>
 <p>&gt; format(999.5, ‘10.3G’)</p>
 <p>‘     1E+03’</p>
 <p># ============================================================================</p>
-<p>Tipos de Strings em Python</p>
+</div>
+<div class="section" id="tipos-de-strings-em-python">
+<h2>5.7. Tipos de Strings em Python<a class="headerlink" href="#tipos-de-strings-em-python" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Em Python temos algumas variações de strings, cada qual é designada por um prefixo, que é uma letra que representa o tipo de string e por omissão é unicode.
 Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r” raw e “u” unicode.</p>

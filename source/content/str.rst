@@ -115,6 +115,7 @@ Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da
 # ============================================================================
 
 Caracteres Especiais
+--------------------
 
 +---------------------+----------------------------------------------------------+-----------------+------------+
 | Sequência de Escape | Descrição                                                | Exemplo (print) | Saída      |
@@ -156,6 +157,7 @@ Caracteres Especiais
 # ============================================================================
 
 Formatação
+----------
 
     Há casos que é necessário fazer formatação de strings colocando uma string como um template.
     Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), posteriormente foi adicionado o método format.
@@ -350,6 +352,7 @@ Número decimal:
 # ============================================================================
 
 Representações de Inteiros 
+--------------------------
 
 b) Formato binário; número de saída na base 2:
 
@@ -470,6 +473,7 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 
 Tipos de Strings em Python
+--------------------------
 
     Em Python temos algumas variações de strings, cada qual é designada por um prefixo, que é uma letra que representa o tipo de string e por omissão é unicode.
     Cada tipo de string tem um prefixo, que são "b" bytes, "f" format, "r" raw e "u" unicode.
