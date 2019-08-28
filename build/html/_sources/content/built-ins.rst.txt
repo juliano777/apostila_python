@@ -1,4 +1,5 @@
 Comandos e Funções Importantes
+******************************
 
 	Neste capítulo são abordados comandos e funções interessantes e / ou imprescindíveis para a linguagem.
 
