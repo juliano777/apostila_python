@@ -15,29 +15,11 @@ Palavras Reservadas
     break   except    in       raise
 
 
-::
-
-    +--------+----------+---------+----------+---------+
-    | False  | class    | finally | is       | return  |
-    | None   | continue | for     | lambda   | try     |
-    | True   | def      | from    | nonlocal | while   |
-    | and    | del      | global  | not      | with    |
-    | as     | elif     | if      | or       | yield   |
-    | assert | else     | import  | pass     |         |
-    | break  | except   | in      | raise    |         |
-    +--------+----------+---------+----------+---------+
-
-
-
-2.1.2 Definição do Interpretador de Comandos
+Definição do Interpretador de Comandos
+--------------------------------------
 
 	Para scripts Python, na primeira linha podemos especificar o interpretador de comandos a ser utilizado, também conhecido como shebang;
 
-Para Python 2:
-
-#!/usr/bin/env python
-
-Para Python 3:
 
 #!/usr/bin/env python3
 
