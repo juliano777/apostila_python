@@ -33,17 +33,21 @@ Um comando por linha (podem ser colocados mais que um após um ";", mas não é 
 Possui modo interativo;
 Software Livre.
 
-1.1.2 Licença
+Licença
+~~~~~~~
 
 	Python utiliza uma licença similar à licença BSD, a PSF License (Python Software Foundation License).
 	É um tipo de licença muito permissiva e compatível com a licença GPL.
 	É tão permissiva que permite ao usuário escolher em manter ou não o código-fonte aberto.
 	Mesmo empresas que pegam o código-fonte de um projeto sob essa licença, quando o fecham e derivam então gerando um software proprietário, acabam colaborando com o projeto original firmando assim uma parceria em que ambos saem ganhando.
 	É o mesmo tipo de licença adotado por outros projetos de software livre como: PostgreSQL, FreeBSD, OpenBSD, NetBSD.
-1.2 O Interpretador Python
+
+O Interpretador Python
+----------------------
 	Como o próprio nome diz, é o interpretador que faz a análise sintática e executa as instruções Python.
 
-1.2.1 Modo Interativo do Interpretador Python
+Modo Interativo do Interpretador Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	O modo interativo de Python é um recurso interessante que facilita o trabalho do desenvolvedor de forma que se possa testar algo que esteja fazendo assim que o comando é finalizado.
 	É um recurso muito útil para debugging, quick hacking e testes.	
