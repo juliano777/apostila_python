@@ -154,8 +154,10 @@ vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
 
 vim /tmp/python/foo.py
 
-#!/usr/bin/env python
-#_*_ encoding _*_
+.. code-block:: python
+
+    #!/usr/bin/env python
+    #_*_ encoding: utf-8 _*_
 
 from PacoteA.Modulo1 import funcao
 from PacoteA.PacoteA1 import Modulo2
