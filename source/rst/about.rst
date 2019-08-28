@@ -1,4 +1,5 @@
-1 Sobre Python
+Sobre Python
+------------
 
 1.1 O que é Python
 

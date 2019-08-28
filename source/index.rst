@@ -11,7 +11,7 @@ Curso de Python
    :numbered:
    :caption: Contents:
 
-   sobre_python
+   rst/about
 
 
 
