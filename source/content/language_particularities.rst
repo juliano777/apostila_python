@@ -4,45 +4,13 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
-exec
-and
-as
-assert
-break
-class
-False
-print
-def
-del
-elif
-else
-except
-None
-
-finally
-continue
-from
-global
-if
-nonlocal
-
-import
-in
-is
-lambda
-not
-True
-
-or
-pass
-raise
-return
-try
-
-
-while
-with
-yield
+False      class      finally    is         return
+None       continue   for        lambda     try
+True       def        from       nonlocal   while
+and        del        global     not        with
+as         elif       if         or         yield
+assert     else       import     pass
+break      except     in         raise
 
 
 
