@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="prev" title="14. Iteratoradores e Geradores" href="iter_gen.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/functions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Funções</p>
+<p>Funções</p>
+<blockquote>
+<div><p>Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente essas mesmas instruções reaproveitando o código ali escrito.
+No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.
+Após definida a função, a mesma é invocada pelo seu nome e seus argumentos (se ela requerir).
+Funções em Python são definidas a partir do comando def.
+Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>Funções sem Argumentos</p>
+<p>Definição da função sem argumentos</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>numero = 7 ** 2
+msg = ‘O quardrado de 7 é %d’ % numero
+print(msg)</p>
+</dd>
+</dl>
+<p>funcao()
+O quardrado de 7 é 49</p>
+<ul>
+<li><p>O Comando return</p>
+<blockquote>
+<div><p>O comando return dá um retorno para a função.
+Uma função pode retornar um ou mais valores (coleções).
+Deve ser o último comando da função, pois se tiver algum código depois será ignorado.
+Vale lembrar que return não é a mesma coisa que imprimir em tela. Quando se digita algo que retorne um valor dentro de um shell interativo, esse valor por conveniência é impresso em tela.
+Mas em um aplicativo ou script isso não acontecerá, portanto se deseja imprimir um valor em tela, isso deve ser explicitado, o que é mais comumente feito por print().
+Quando uma função não tem um comando return, seu retorno é None implícito, o que para outras linguagens como C e Java é a mesma coisa que void.</p>
+</div></blockquote>
+</li>
+</ul>
+<p>Definição da função</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>return 7</p>
+</dd>
+</dl>
+<p>Utilizando print para imprimir em tela o valor retornado pela função multiplicado por 3</p>
+<p>print(funcao() * 3)
+21</p>
+<p>Definição de uma função que retorna mais de um valor</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>return 3, 9</p>
+</dd>
+</dl>
+<p>Atribuindo à variável o valor de retorno da função</p>
+<p>x = funcao()</p>
+<p>Imprimindo o valor da variável</p>
+<p>print(x)
+(3, 9)</p>
+<p>Verificando o tipo da variável</p>
+<p>type(x)
+tuple</p>
+<p>Definição de uma função com código após return</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>return 7
+print(‘Teste’)</p>
+</dd>
+</dl>
+<p>Execução da função</p>
+<p>funcao()
+7</p>
+<p>Como pode-se notar, o código inserido após return foi completamente ignorado.
+Devido ao fato de os comandos serem digitados no shell interativo foi impresso em tela
+o valor de retorno da função.</p>
+<hr class="docutils" />
+<p>Argumentos Simples (Argumentos Não Nomeados)</p>
+<blockquote>
+<div><p>Uma função pode ter um ou mais argumentos a serem pasados.
+Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios têm um valor inicial.</p>
+</div></blockquote>
+<p>Definição de uma função</p>
+<dl class="simple">
+<dt>def funcao(x):</dt><dd><p>return x</p>
+</dd>
+</dl>
+<p>Execução da função sem passar argumentos</p>
+<p>funcao()</p>
+<p>—-&gt; 1 funcao()</p>
+<p>TypeError: funcao() takes exactly 1 argument (0 given)</p>
+<p>Devido ao fato de a função exigir que seja passado um argumento</p>
+<p>Execução da função passando um argumento</p>
+<p>funcao(7)
+7</p>
+<hr class="docutils" />
+<p>Argumentos Nomeados</p>
+<blockquote>
+<div><p>Podemos definir uma função em que um ou mais argumentos tenham valores padrões de forma que ao invocar a função podemos omitir a declaração, pois será considerado o padrão ou explicitando um valor.
+Quando houver mais de um argumento, os argumentos obrigatórios devem vira primeiro.</p>
+</div></blockquote>
+<p>Definição de função com um argumento</p>
+<dl class="simple">
+<dt>def funcao(x = 7):</dt><dd><p>return x</p>
+</dd>
+</dl>
+<p>Chamando a função sem declarar valor de argumento</p>
+<p>funcao()
+7</p>
+<p>Chamando a função explicitando um valor de argumento
+funcao(9)
+9</p>
+<p>funcao(x = 9)
+9</p>
+<p>Definindo uma função mesclando argumentos padrão e obrigatórios</p>
+<dl class="simple">
+<dt>def funcao(x = 7, y):</dt><dd><p>return x + y</p>
+</dd>
+</dl>
+<p>SyntaxError: non-default argument follows default argument</p>
+<p>Houve um erro, pois primeiro são os argumentos não padrões.</p>
+<dl class="simple">
+<dt>def funcao(x, y = 7):</dt><dd><p>return x + y</p>
+</dd>
+</dl>
+<p>funcao(3)
+10</p>
+<p>funcao(2, 3)
+5</p>
+<p>funcao()</p>
+<p>TypeError: funcao() takes at least 1 argument (0 given)</p>
+<dl class="simple">
+<dt>def funcao(x, y = 1, z = 2):</dt><dd><p>return x + y + z</p>
+</dd>
+</dl>
+<p>funcao(0)
+3</p>
+<p>funcao(1, 2)
+5</p>
+<p>funcao(1, 2, 90)
+93</p>
+<p>funcao(10, z = 30, y = 50)
+90</p>
+<hr class="docutils" />
+<p>Argumentos em Lista Não Nomeados</p>
+<blockquote>
+<div><p>É possível passar uma lista de argumentos sem nomear cada um deles, ou seja, atribuir uma variável.
+Essa lista, internamente é interpretada como uma tupla (tuple).
+Tal recurso nos possibilita passar uma quantidade indeterminada de argumentos.
+O identificador da variável que representa esse tipo de argumento vem logo depois do caractere asterisco (*).</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def funcao(<a href="#id1"><span class="problematic" id="id2">*</span></a>args):</dt><dd><p>qtd = len(args)
+primeiro = args[0]
+ultimo = args[-1]
+print(‘Foram passados %d argumentos’ % qtd)
+print(‘O primeiro é “%s”’ % primeiro)
+print(‘O último é “%s”’ % ultimo)
+print(‘Os argumentos passados foram: %s’ % str(args))</p>
+</dd>
+</dl>
+<p>funcao(‘abacaxi’, 3, ‘p’, 8.3, 5 + 9j)
+Foram passados 5 argumentos
+O primeiro é “abacaxi”
+O último é “(5+9j)”
+Os argumentos passados foram: (‘abacaxi’, 3, ‘p’, 8.3, (5+9j))</p>
+<dl class="simple">
+<dt>def funcao(<a href="#id3"><span class="problematic" id="id4">*</span></a>args):</dt><dd><dl class="simple">
+<dt>for arg in args:</dt><dd><p>print(‘Argumento %d = %s’ % (args.index(arg), arg))</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>ou</p>
+<dl class="simple">
+<dt>def funcao(<a href="#id5"><span class="problematic" id="id6">*</span></a>args):</dt><dd><dl class="simple">
+<dt>for i, arg in enumerate(args):</dt><dd><p>print(‘Argumento %d = %s’ % (i, arg))</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>funcao(‘a’, 1.5, 7, 99)</p>
+<p>Argumento 0 = a
+Argumento 1 = 1.5
+Argumento 2 = 7
+Argumento 3 = 99</p>
+<dl class="simple">
+<dt>def funcao(x, <a href="#id7"><span class="problematic" id="id8">*</span></a>args):</dt><dd><p>return args</p>
+</dd>
+</dl>
+<p>spam = (1, 2, 3, 4)</p>
+<p>funcao(spam)
+()</p>
+<p>funcao(<a href="#id9"><span class="problematic" id="id10">*</span></a>spam)
+(2, 3, 4)</p>
+<dl class="simple">
+<dt>def funcao(<a href="#id11"><span class="problematic" id="id12">*</span></a>args):</dt><dd><p>return args</p>
+</dd>
+</dl>
+<p>funcao(spam)
+((1, 2, 3, 4),)</p>
+<p>funcao(<a href="#id13"><span class="problematic" id="id14">*</span></a>spam)
+(1, 2, 3, 4)</p>
+<p>Quando o caractere asterisco é posicionado antes de uma variável faz com que considere que aquela variável (coleções) seja
+“desempacotada”. Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência de valores estraídos separados
+por vírgulas.</p>
+<hr class="docutils" />
+<p>Argumentos em Lista Nomeados</p>
+<blockquote>
+<div><p>O identificador da variável desse tipo de argumento é precedido por dois asteriscos (**).
+É uma lista com quantidade indeterminada e cada elemento da lista tem um identificador próprio.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def funcao(<a href="#id15"><span class="problematic" id="id16">**</span></a>kargs):</dt><dd><p>return kargs</p>
+</dd>
+</dl>
+<p>funcao(a = 1, b = 2)
+{‘a’: 1, ‘b’: 2}</p>
+<dl>
+<dt>def funcao(<a href="#id17"><span class="problematic" id="id18">**</span></a>kargs):</dt><dd><dl class="simple">
+<dt>for k, v in kargs.items():</dt><dd><p>print(‘%s = %s’ % (k.capitalize(), v))</p>
+</dd>
+</dl>
+</dd>
+<dt>funcao(</dt><dd><blockquote>
+<div><p>nome = ‘Chiquinho’,
+sobrenome = ‘da Silva’,
+idade = 30,
+telefone = ‘(11) 99999-9999’,</p>
+</div></blockquote>
+<p>)</p>
+</dd>
+</dl>
+<p>Idade = 30
+Sobrenome = da Silva
+Telefone = (11) 99999-9999
+Nome = Chiquinho</p>
+<dl class="simple">
+<dt>def funcao(<a href="#id19"><span class="problematic" id="id20">**</span></a>kargs):</dt><dd><p>return kargs</p>
+</dd>
+</dl>
+<p>eggs = {‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
+<p>funcao(eggs)</p>
+<p>TypeError: funcao() takes exactly 0 arguments (1 given)</p>
+<p>funcao(<a href="#id21"><span class="problematic" id="id22">**</span></a>eggs)
+{‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
+<hr class="docutils" />
+<p>Funções com Argumentos Variados</p>
+<blockquote>
+<div><p>E se precisarmos fazer uma função que utilize tipos diferentes conforme visto anteriormente?
+A ordem dos tipos de argumentos é a seguinte:</p>
+<p>Simples, Nomeados, Lista de Não Nomeados e Lista de Nomeados</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def foo(a, b = 3, <a href="#id23"><span class="problematic" id="id24">*</span></a>c, <a href="#id25"><span class="problematic" id="id26">**</span></a>d):</dt><dd><p>print(a + b)
+print(c)
+print(d)</p>
+</dd>
+</dl>
+<p>foo(4, 5, ‘Alemanha’, ‘Holanda’, ‘Inglaterra’, continente = ‘Europa’, hemisferio = ‘Norte’)
+9
+(‘Alemanha’, ‘Holanda’, ‘Inglaterra’)
+{‘continente’: ‘Europa’, ‘hemisferio’: ‘Norte’}</p>
+<hr class="docutils" />
+<p>Estruturas de Dados como Parâmetro para Funções</p>
+<blockquote>
+<div><p>Em algumas situações pode ser útil utilizar uma estrutura de dados como tupla (tuple), lista (list), dicionário (dict) ou mesmo um conjunto (set / frozenset).</p>
+</div></blockquote>
+<p>Criação da função de teste:</p>
+<dl class="simple">
+<dt>&gt; def param_test(x, y):</dt><dd><p>return x + y</p>
+</dd>
+</dl>
+<p>Declaração das variáveis de estrutura de dados que serão utilizadas como parâmetro para a função:</p>
+<p>&gt; tupla = (5, 2)</p>
+<p>&gt; lista = [5, 2]</p>
+<p>&gt; dicio = {‘x’: 5, ‘y’: 2}</p>
+<p>&gt; conjunto = {2, 5, 2}</p>
+<p>Testes utilizando as estruturas de dados criadas:</p>
+<p>&gt; param_test(<a href="#id27"><span class="problematic" id="id28">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
+<p>&gt; param_test(<a href="#id29"><span class="problematic" id="id30">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
+<p>&gt; param_test(<a href="#id31"><span class="problematic" id="id32">*</span></a>lista)  # Lista (list) como parâmetro</p>
+<p>&gt; param_test(<a href="#id33"><span class="problematic" id="id34">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
+<p>7</p>
+<hr class="docutils" />
+<p>Boas Práticas: Função Main</p>
+<blockquote>
+<div><p>Evite execuções globais, quebre seu código em funções o que facilita o reúso e teste de código.
+Crie uma função principal (main). Crie primeiro as outras funções e por último a ser definida a função principal.
+Na função principal serão feitas as chamadas às outras funções.
+Outra coisa interessante a ser feita é colocar a função principal dentro de um if. Sendo que se for executado, terá a variável especial “__name__” como valor “__main__”.</p>
+</div></blockquote>
+<p>vim hello.py</p>
+<p>#!/usr/bin/env python
+#_*_ coding: utf-8 _*_</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>print(‘Função executada’)</p>
+</dd>
+<dt>def Main():</dt><dd><p>print(‘==== Início ====’)
+funcao()
+print(‘==== Fim ====’)</p>
+</dd>
+<dt>if __name__ == ‘__main__’:</dt><dd><p>Main()</p>
+</dd>
+</dl>
+<p>python hello.py</p>
+<p>==== Início ====
+Função executada
+==== Fim ====</p>
+<hr class="docutils" />
+<p>Funções Geradoras</p>
+<blockquote>
+<div><p>Uma função geradora ao invés de utilizar o comando return, utiliza o comando yield, que retorna um objeto generator.</p>
+</div></blockquote>
+<dl>
+<dt>def f_gen(var):</dt><dd><p>print(‘INÍCIO’)</p>
+<dl class="simple">
+<dt>for i in var:</dt><dd><p>yield i</p>
+</dd>
+</dl>
+<p>print(‘FIM’)</p>
+</dd>
+</dl>
+<p>g = f_gen(‘Python’)</p>
+<p>type(g)
+generator</p>
+<p>g.next()
+INÍCIO
+‘P’</p>
+<p>g.next()
+‘y’</p>
+<p>g.next()
+‘t’</p>
+<p>g.next()
+‘h’</p>
+<p>g.next()
+‘o’</p>
+<p>g.next()
+‘n’</p>
+<p>g.next()
+FIM</p>
+<p>StopIteration:</p>
+<hr class="docutils" />
+<p>Funções Lambda</p>
+<blockquote>
+<div><p>São funções anônimas, ou seja, que não são associadas a um nome. Um recurso similar às funções anônimas em PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
+Sua estrutura é composta apenas por expressões, o que a torna muito limitada, no entanto consome menos recursos do que uma função convencional.
+Por só aceitar expressões, o comando return não é permitido em sua estrutura.</p>
+</div></blockquote>
+<p>(lambda x, y: x + y)(5, 2)
+7</p>
+<p>foo = lambda x, y: x ** y</p>
+<p>print(foo(2, 5))
+32</p>
+<hr class="docutils" />
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="iter_gen.html" class="btn btn-neutral float-left" title="14. Iteratoradores e Geradores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

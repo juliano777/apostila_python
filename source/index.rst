@@ -26,6 +26,7 @@ Curso de Python
    content/set_frozenset
    content/dict
    content/iter_gen
+   content/functions
 
 
 
