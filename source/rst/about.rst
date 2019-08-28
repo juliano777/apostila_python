@@ -98,7 +98,7 @@ E então verá o seguinte texto:
 
 Tradução:
 
-::
+.. compound::
 
     O Zen de Python, por Tim Peters
 
