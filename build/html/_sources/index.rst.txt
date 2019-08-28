@@ -17,6 +17,7 @@ Curso de Python
    content/data_types
    content/str
    content/numeric_data_types
+   content/boolean
 
 
 

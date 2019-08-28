@@ -1,4 +1,5 @@
 Booleanos
+*********
 
     Qualquer objeto pode ser testado como um valor verdadeiro, para uso como condição em um if ou um while ou como um operando de operações "booleanas". Os seguintes valores são considerados como False: 
 
