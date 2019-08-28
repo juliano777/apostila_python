@@ -213,5 +213,10 @@ Quando um módulo é carregado pela primeira vez ou se seu código é mais novo 
 
     __init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc
 
-file /tmp/python/PacoteA/Modulo1.pyc
-/tmp/python/PacoteA/Modulo1.pyc: python 2.7 byte-compiled
+.. code-block:: bash
+
+    file /tmp/python/PacoteA/Modulo1.pyc
+
+.. code-block:: console
+
+    /tmp/python/PacoteA/Modulo1.pyc: python 2.7 byte-compiled
