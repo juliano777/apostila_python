@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="prev" title="28. Closures" href="closures.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">25. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">26. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/decorators.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Decoradores em Python</p>
+<blockquote>
+<div><p>É um conceito diferente do conceito decorator de design pattern.
+Pode ser implementado como uma classe ou como uma função.
+Modificam funções.
+É identificado da seguinte forma: &#64;nome_do_decorador.
+Deve ser inserido na linha anterior da definição.
+Um decorador deve ser executável, ou seja, deve ter o método __call__().
+São envelopes de função.
+Decoradores podem ser definidos como classes ou funções.</p>
+</div></blockquote>
+<p>Decoradores de Funções</p>
+<p>Classe como decorador:</p>
+<p>&gt; class Decorador(object):</p>
+<blockquote>
+<div><dl>
+<dt>def __init__(self, funcao):</dt><dd><p>‘’’
+O parâmetro “funcao” é a função que será decorada.
+‘’‘</p>
+<p>print(‘Método __init__() do decorador’)  # Mensagem ao instanciar
+funcao()  # Executa a função ao instanciar</p>
+</dd>
+<dt>def __call__(self):</dt><dd><p>print(‘Método __call__() do decorador’)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Definição da classe com decorador:</p>
+<p>&gt; &#64;Decorador
+def funcao_decorada():</p>
+<blockquote>
+<div><p>print(‘Dentro da função decorada’)</p>
+</div></blockquote>
+<p>Método __init__() do decorador
+Dentro da função decorada</p>
+<blockquote>
+<div><p>O método construtor do decorador é invocado logo após da definição da função decorada.
+No exemplo, a própria função, que é usada como parâmetro, é invocada pelo método construtor __init__().</p>
+</div></blockquote>
+<p>Execução da função decorada:</p>
+<p>&gt; funcao_decorada()</p>
+<p>Método __call__() do decorador</p>
+<p>Recriação da classe decoradora:</p>
+<dl>
+<dt>&gt; class Decorador(object):</dt><dd><blockquote>
+<div><dl class="simple">
+<dt>def __init__(self, funcao):</dt><dd><p>print(‘Método __init__() do decorador’)
+self.funcao = funcao</p>
+</dd>
+<dt>def __call__(self):</dt><dd><p>print(‘Método __call__() do decorador’)
+self.funcao()</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Diferente da criação da classe anteriormente, aqui a função não é chamada no método construtor, mas sim no método __call__.</p>
+</dd>
+</dl>
+<p>Definição da função decorada:</p>
+<p>&gt; &#64;Decorador
+def funcao_decorada():</p>
+<blockquote>
+<div><p>print(‘Dentro da função’)</p>
+</div></blockquote>
+<p>Método __init__() do decorador</p>
+<p>Execução da função decorada:</p>
+<p>&gt; funcao_decorada()</p>
+<p>Método __call__() do decorador
+Dentro da função</p>
+<p>Decorador com Argumentos</p>
+<blockquote>
+<div><p>Para funções decoradas que têm argumentos.</p>
+</div></blockquote>
+<p>Criação da classe decoradora:</p>
+<p>&gt; class Decorador():</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self, f):</dt><dd><p>print(‘Método __init__() do decorador’)
+self.f = f</p>
+</dd>
+<dt>def __call__(self, <a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kargs):</dt><dd><p>print(‘Método __call__() do decorador’)
+return self.f(<a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>kargs)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Definição da classe decorada:</p>
+<p>&gt; &#64;Decorador
+def soma(x, y):</p>
+<blockquote>
+<div><p>return x + y</p>
+</div></blockquote>
+<p>Execução da classe decorada:</p>
+<p>&gt; print(soma(2, 5))</p>
+<p>Método __call__() do decorador
+7</p>
+<p>Função como decorador</p>
+<blockquote>
+<div><p>Até então foram vistos exemplos de decoradores definidos como classes, agora serão vistos os definidos como função.</p>
+</div></blockquote>
+<p>Criação da função decoradora, o decorador em si:</p>
+<p>&gt; def funcao_decoradora(funcao):</p>
+<blockquote>
+<div><p># Função auxiliar
+def funcao_auxiliar():</p>
+<blockquote>
+<div><p>print(‘Antes da função decorada’)
+funcao()
+print(‘Depois da função decorada’)</p>
+</div></blockquote>
+<p>return funcao_auxiliar</p>
+</div></blockquote>
+<p>Definição da função decorada:</p>
+<p>&gt; &#64;funcao_decoradora
+def foo():</p>
+<blockquote>
+<div><p>print(‘Função decorada’)</p>
+</div></blockquote>
+<p>Execução da função decorada:</p>
+<p>&gt; foo()</p>
+<p>Antes da função decorada
+Função decorada
+Depois da função decorada</p>
+<p>Podemos também aplicar mais de um decorador a uma função:</p>
+<p>&gt; # Função para itálico em HTML
+def to_italic(funcao):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def funcao_auxiliadora(<a href="#id9"><span class="problematic" id="id10">*</span></a>args, <a href="#id11"><span class="problematic" id="id12">**</span></a>kargs):</dt><dd><p>return ‘&lt;i&gt;’ + funcao(<a href="#id13"><span class="problematic" id="id14">*</span></a>args, <a href="#id15"><span class="problematic" id="id16">**</span></a>kargs) + ‘&lt;/i&gt;’</p>
+</dd>
+</dl>
+<p>return funcao_auxiliadora</p>
+</div></blockquote>
+<p># Função para negrito em HTML
+def to_bold(funcao):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def funcao_auxiliadora(<a href="#id17"><span class="problematic" id="id18">*</span></a>args, <a href="#id19"><span class="problematic" id="id20">**</span></a>kargs):</dt><dd><p>return ‘&lt;b&gt;’ + funcao(<a href="#id21"><span class="problematic" id="id22">*</span></a>args, <a href="#id23"><span class="problematic" id="id24">**</span></a>kargs) + ‘&lt;/b&gt;’</p>
+</dd>
+</dl>
+<p>return funcao_auxiliadora</p>
+</div></blockquote>
+<p>Definição da função decorada com dois decoradores:</p>
+<p>&gt; &#64;to_italic
+&#64;to_bold
+def fc_msg(msg):</p>
+<blockquote>
+<div><p>return msg</p>
+</div></blockquote>
+<p>Execução da função decorada:</p>
+<p>&gt; fc_msg(‘Hello, World!’)</p>
+<p>‘&lt;i&gt;&lt;b&gt;Hello, World!&lt;/b&gt;&lt;/i&gt;’</p>
+<p>Memoização</p>
+<blockquote>
+<div><p>Texto…</p>
+</div></blockquote>
+<p>Criação do decorador de memoização:</p>
+<dl>
+<dt>&gt; def memoize(f):</dt><dd><p>‘’’
+Memoize function (as decorator)
+‘’‘</p>
+<p># dictionary (cache)
+mem = {}</p>
+<p>‘’’ Helper function ‘’’
+def memoizer(<a href="#id25"><span class="problematic" id="id26">*</span></a>param):</p>
+<blockquote>
+<div><p>key = repr(param)
+if not key in mem:</p>
+<blockquote>
+<div><p>mem[key] = f(<a href="#id27"><span class="problematic" id="id28">*</span></a>param)</p>
+</div></blockquote>
+<p>return mem[key]</p>
+</div></blockquote>
+<p>return memoizer</p>
+</dd>
+</dl>
+<p>Criação da função decorada com memoização aplicada para Fibonacci:</p>
+<p>&gt; &#64;memoize
+def fibo(n):</p>
+<blockquote>
+<div><p>if (n &lt; 2): return n
+else:</p>
+<blockquote>
+<div><p>return fibo(n - 1) + fibo(n - 2)</p>
+</div></blockquote>
+</div></blockquote>
+<p>Execução da função decorada:</p>
+<p>&gt; fibo(39)</p>
+<p>63245986</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="closures.html" class="btn btn-neutral float-left" title="28. Closures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

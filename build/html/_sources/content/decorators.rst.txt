@@ -1,0 +1,238 @@
+Decoradores em Python
+
+    É um conceito diferente do conceito decorator de design pattern.
+    Pode ser implementado como uma classe ou como uma função.
+    Modificam funções.
+    É identificado da seguinte forma: @nome_do_decorador.
+    Deve ser inserido na linha anterior da definição.
+    Um decorador deve ser executável, ou seja, deve ter o método __call__().
+    São envelopes de função.
+    Decoradores podem ser definidos como classes ou funções.
+
+
+
+Decoradores de Funções
+
+Classe como decorador:
+
+> class Decorador(object):
+    
+    def __init__(self, funcao):
+        '''        
+        O parâmetro "funcao" é a função que será decorada.
+        '''
+
+        print('Método __init__() do decorador')  # Mensagem ao instanciar
+        funcao()  # Executa a função ao instanciar
+    
+    def __call__(self):    
+        print('Método __call__() do decorador')
+
+
+
+Definição da classe com decorador:
+      
+> @Decorador
+def funcao_decorada():
+    print('Dentro da função decorada')
+     
+Método __init__() do decorador
+Dentro da função decorada
+
+
+    O método construtor do decorador é invocado logo após da definição da função decorada.
+    No exemplo, a própria função, que é usada como parâmetro, é invocada pelo método construtor __init__().
+
+
+
+Execução da função decorada:
+
+> funcao_decorada()
+
+Método __call__() do decorador
+
+
+
+Recriação da classe decoradora:
+
+> class Decorador(object):
+     def __init__(self, funcao):
+        print('Método __init__() do decorador')
+        self.funcao = funcao
+
+     def __call__(self):        
+         print('Método __call__() do decorador')
+         self.funcao()
+
+    Diferente da criação da classe anteriormente, aqui a função não é chamada no método construtor, mas sim no método __call__.
+
+
+
+Definição da função decorada:
+
+> @Decorador
+def funcao_decorada():
+    print('Dentro da função')
+    
+Método __init__() do decorador
+
+
+
+Execução da função decorada:
+
+> funcao_decorada()
+
+Método __call__() do decorador
+Dentro da função
+
+
+
+Decorador com Argumentos
+
+    Para funções decoradas que têm argumentos.
+
+
+
+Criação da classe decoradora:
+
+> class Decorador():
+
+    def __init__(self, f):
+        print('Método __init__() do decorador')
+        self.f = f
+
+    def __call__(self, *args, **kargs):        
+         print('Método __call__() do decorador')
+         return self.f(*args, **kargs)
+
+
+
+Definição da classe decorada:
+
+> @Decorador
+def soma(x, y):
+    return x + y
+
+
+
+Execução da classe decorada:
+
+> print(soma(2, 5))
+
+Método __call__() do decorador
+7
+
+
+
+Função como decorador
+
+    Até então foram vistos exemplos de decoradores definidos como classes, agora serão vistos os definidos como função.
+
+
+
+Criação da função decoradora, o decorador em si:
+
+> def funcao_decoradora(funcao):
+  
+    # Função auxiliar
+    def funcao_auxiliar():
+      print('Antes da função decorada')
+      funcao()
+      print('Depois da função decorada')
+      
+    return funcao_auxiliar
+
+
+
+Definição da função decorada:
+
+> @funcao_decoradora
+def foo():
+  print('Função decorada')
+
+
+
+Execução da função decorada:
+  
+> foo() 
+
+Antes da função decorada
+Função decorada
+Depois da função decorada
+
+
+
+Podemos também aplicar mais de um decorador a uma função:
+
+> # Função para itálico em HTML
+def to_italic(funcao):
+    def funcao_auxiliadora(*args, **kargs):
+        return '<i>' + funcao(*args, **kargs) + '</i>'
+    return funcao_auxiliadora
+
+# Função para negrito em HTML
+def to_bold(funcao):
+    def funcao_auxiliadora(*args, **kargs):
+        return '<b>' + funcao(*args, **kargs) + '</b>'
+    return funcao_auxiliadora
+
+
+
+Definição da função decorada com dois decoradores:
+
+> @to_italic
+@to_bold
+def fc_msg(msg):
+    return msg
+
+
+
+Execução da função decorada:
+
+> fc_msg('Hello, World!')
+
+'<i><b>Hello, World!</b></i>'
+
+
+
+Memoização
+
+    Texto...
+
+
+
+Criação do decorador de memoização:
+
+> def memoize(f):
+    '''
+    Memoize function (as decorator)
+    '''
+
+    # dictionary (cache)
+    mem = {}
+
+    ''' Helper function '''
+    def memoizer(*param):
+        key = repr(param)
+        if not key in mem:
+            mem[key] = f(*param)
+        return mem[key]
+    return memoizer
+
+
+
+Criação da função decorada com memoização aplicada para Fibonacci:
+
+> @memoize
+def fibo(n):
+    if (n < 2): return n
+    else:
+        return fibo(n - 1) + fibo(n - 2)
+
+
+
+Execução da função decorada:
+
+> fibo(39)
+
+63245986

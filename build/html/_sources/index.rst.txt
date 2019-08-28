@@ -39,6 +39,8 @@ Curso de Python
    content/packages
    content/except
    content/closures
+   content/decorators
+
 
 
 
