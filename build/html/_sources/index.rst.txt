@@ -40,6 +40,7 @@ Curso de Python
    content/except
    content/closures
    content/decorators
+   content/exec_eval_execfile_compile
 
 
 
