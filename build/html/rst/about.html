@@ -337,23 +337,23 @@ Para visualizar esse easter egg basta que no shell interativo dê o seguinte com
 <span class="go">27</span>
 </pre></div>
 </div>
-<p>Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o  arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.</p>
+<p>Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /tmp/python/PacoteA/
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Modulo1.py  PacoteA1  __pycache__</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /tmp/python/PacoteA/PacoteA1/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /tmp/python/PacoteA/__pycache__/
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Modulo2.py  __pycache__</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Modulo1.cpython-36.pyc</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>file /tmp/python/PacoteA/Modulo1.pyc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>file /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/tmp/python/PacoteA/Modulo1.pyc: python 2.7 byte-compiled</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc: python 3.6 byte-compiled</span>
 </pre></div>
 </div>
 </div>

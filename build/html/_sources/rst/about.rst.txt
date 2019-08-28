@@ -195,7 +195,7 @@ Execução do script:
     Hello World!!!
     27
 
-Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o  arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.
+Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.
 
 .. code-block:: bash
 
@@ -207,16 +207,16 @@ Quando um módulo é carregado pela primeira vez ou se seu código é mais novo 
 
 .. code-block:: bash
 
-    ls /tmp/python/PacoteA/PacoteA1/
+    ls /tmp/python/PacoteA/__pycache__/
 
 .. code-block:: console
 
-    Modulo2.py  __pycache__
+    Modulo1.cpython-36.pyc
 
 .. code-block:: bash
 
-    file /tmp/python/PacoteA/Modulo1.pyc
+    file /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc
 
 .. code-block:: console
 
-    /tmp/python/PacoteA/Modulo1.pyc: python 2.7 byte-compiled
+    /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc: python 3.6 byte-compiled
