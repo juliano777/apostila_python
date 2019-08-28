@@ -22,6 +22,7 @@ i = 0
 
 
 O else no loop while
+~~~~~~~~~~~~~~~~~~~~
 
 	Opcionalmente, pode-se adicionar um else ao while em Python.
 	A idéia é que se caso o loop seja executado sem interrupção, um break, por exemplo, o que estiver dentro do bloco else será executado.
