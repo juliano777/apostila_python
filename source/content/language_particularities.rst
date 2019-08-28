@@ -219,7 +219,8 @@ foobar = foo + bar
 print(foobar)
 7.0
 
-2.7 Bytecode 
+Bytecode
+--------
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 

@@ -176,7 +176,8 @@ foo = 7.0
 type(foo)
 float
 
-2.6 Tipagem Forte 
+Tipagem Forte 
+-------------
 
 	O interpretador verifica se a operação é válida e não faz coerção automática entre tipos incompatíveis. Caso haja operações de tipos incompatíveis é preciso fazer a conversão explícita da variável ou variáveis antes da operação.
 
@@ -218,7 +219,8 @@ foobar = foo + bar
 print(foobar)
 7.0
 
-2.7 Bytecode 
+Bytecode
+--------
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
