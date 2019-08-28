@@ -1,0 +1,651 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>raise Exception(‘Provocando uma exceção’) &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>raise Exception(‘Provocando uma exceção’)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/except.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Exceções</p>
+<p><a class="reference external" href="https://docs.python.org/2/tutorial/errors.html">https://docs.python.org/2/tutorial/errors.html</a>
+<a class="reference external" href="https://docs.python.org/2/library/exceptions.html">https://docs.python.org/2/library/exceptions.html</a></p>
+<p>Blocos de Comandos:</p>
+<p>try: Tenta executar o bloco de comandos.</p>
+<p>except: Em outras linguagens de programação é conhecido como “catch”, captura e trata a exceção.</p>
+<p>else: Só é executado se não tiver nenhuma exceção.</p>
+<p>finally: Tendo exceção ou não é executado de qualquer jeito.</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><dl>
+<dt>try:</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Deu erro? |
+/ </div>
+</div>
+</div></blockquote>
+<dl>
+<dt>sim  /   não</dt><dd><blockquote>
+<div><p>/     </p>
+</div></blockquote>
+<p>/       </p>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>else:         except:</dt><dd><dl>
+<dt>      /</dt><dd><dl class="simple">
+<dt>    /</dt><dd><dl class="simple">
+<dt>  /</dt><dd><p>/</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>finally:</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>raise</p>
+<p>The class hierarchy for built-in exceptions is:</p>
+<dl>
+<dt>BaseException</dt><dd><p>+– SystemExit
++– KeyboardInterrupt
++– GeneratorExit
++– Exception</p>
+<blockquote>
+<div><p>+– StopIteration
++– StandardError
+|    +– BufferError
+|    +– ArithmeticError
+|    |    +– FloatingPointError
+|    |    +– OverflowError
+|    |    +– ZeroDivisionError
+|    +– AssertionError
+|    +– AttributeError
+|    +– EnvironmentError
+|    |    +– IOError
+|    |    +– OSError
+|    |         +– WindowsError (Windows)
+|    |         +– VMSError (VMS)
+|    +– EOFError
+|    +– ImportError
+|    +– LookupError
+|    |    +– IndexError
+|    |    +– KeyError
+|    +– MemoryError
+|    +– NameError
+|    |    +– UnboundLocalError
+|    +– ReferenceError
+|    +– RuntimeError
+|    |    +– NotImplementedError
+|    +– SyntaxError
+|    |    +– IndentationError
+|    |         +– TabError
+|    +– SystemError
+|    +– TypeError
+|    +– ValueError
+|         +– UnicodeError
+|              +– UnicodeDecodeError
+|              +– UnicodeEncodeError
+|              +– UnicodeTranslateError
++– Warning</p>
+<blockquote>
+<div><p>+– DeprecationWarning
++– PendingDeprecationWarning
++– RuntimeWarning
++– SyntaxWarning
++– UserWarning
++– FutureWarning
++– ImportWarning
++– UnicodeWarning
++– BytesWarning</p>
+</div></blockquote>
+</div></blockquote>
+</dd>
+</dl>
+<p>print(1 / 0)</p>
+<p>—-&gt; 1 print(‘Resultado = %s’ % (x / y))</p>
+<p>ZeroDivisionError: integer division or modulo by zero</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>print(1 / 0)</p>
+</dd>
+</dl>
+<p># catch all exceptions
+except:</p>
+<blockquote>
+<div><p>print(‘nnErro: Não dividirás por zero!nn’)</p>
+</div></blockquote>
+<p>Erro: Não dividirás por zero!</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>print(1 / 0)</p>
+</dd>
+</dl>
+<p># specified exception
+except ZeroDivisionError:</p>
+<blockquote>
+<div><p>print(‘nnErro: Não dividirás por zero!nn’)</p>
+</div></blockquote>
+<p>Erro: Não dividirás por zero!</p>
+<p>numeros = (‘zero’, ‘um’, ‘dois’)</p>
+<dl class="simple">
+<dt>In [10]: try:</dt><dd><p>print(numeros[0])
+print(numeros[1])
+print(numeros[2])
+print(numeros[3])</p>
+</dd>
+<dt>except IndexError:</dt><dd><p>print(‘nnERRO: Índice não encontradonn’)</p>
+</dd>
+</dl>
+<p>zero
+um
+dois</p>
+<p>ERRO: Índice não encontrado</p>
+<dl>
+<dt>try:</dt><dd><p>print(numeros[0])
+print(numeros[1])
+print(numeros[2])
+print(numeros[3])</p>
+</dd>
+<dt>except IndexError, e:</dt><dd><blockquote>
+<div><p>print(‘nnERRO: Índice não encontradonn%s’ % e)</p>
+</div></blockquote>
+<p>….:</p>
+</dd>
+</dl>
+<p>zero
+um
+dois</p>
+<p>ERRO: Índice não encontrado</p>
+<p>tuple index out of range</p>
+<p>O “e” é a mensagem de erro “tuple index out of range”</p>
+<p>$ vim excecao.py</p>
+<p>#_*_ encoding: utf-8 _*_</p>
+<p>import sys</p>
+<p>numeros = (‘zero’, ‘um’, ‘dois’)</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>print(numeros[0])
+print(numeros[1])
+print(numeros[2])
+print(numeros[3])</p>
+</dd>
+<dt>except IndexError, e:</dt><dd><p>print &gt;&gt; sys.stderr, ‘nnERRO: Índice não encontradonn%s’ % e
+sys.exit(1)</p>
+</dd>
+</dl>
+<p>$ python excecao.py
+zero
+um
+dois</p>
+<p>ERRO: Índice não encontrado</p>
+<p>tuple index out of range</p>
+<p>$ echo $?
+1</p>
+<p>$ vim excecao3.py</p>
+<p>#_*_ encoding: utf-8 _*_</p>
+<p>import sys</p>
+<p>numeros = (‘zero’, ‘um’, ‘dois’)</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>print(numeros[0])
+print(numeros[1])
+print(numeros[2])
+print(numeros[3])</p>
+</dd>
+<dt>except IndexError as e:</dt><dd><p>print(‘nnERRO: Índice não encontradonn%s’ % e, file = sys.stderr)
+sys.exit(1)</p>
+</dd>
+</dl>
+<p>$ python3 excecao3.py</p>
+<p>zero
+um
+dois</p>
+<p>ERRO: Índice não encontrado</p>
+<p>tuple index out of range</p>
+<p>$ echo $?
+1</p>
+<p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
+<p>—-&gt; 1 f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
+<p>IOError: [Errno 2] No such file or directory: ‘/tmp/blablabla.txt’</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
+</dd>
+<dt>except IOError as e:</dt><dd><p>print(‘O arquivo não existe!’)</p>
+</dd>
+</dl>
+<p>O arquivo não existe!</p>
+<p>type(e)
+IOError</p>
+<p>dir(e)</p>
+<dl class="simple">
+<dt>[‘__class__’,</dt><dd><p>‘__delattr__’,
+‘__dict__’,
+‘__doc__’,
+‘__format__’,
+‘__getattribute__’,
+‘__getitem__’,
+‘__getslice__’,
+‘__hash__’,
+‘__init__’,
+‘__new__’,
+‘__reduce__’,
+‘__reduce_ex__’,
+‘__repr__’,
+‘__setattr__’,
+‘__setstate__’,
+‘__sizeof__’,
+‘__str__’,
+‘__subclasshook__’,
+‘__unicode__’,
+‘args’,
+‘errno’,
+‘filename’,
+‘message’,
+‘strerror’]</p>
+</dd>
+</dl>
+<p>repr(e)</p>
+<p>“IOError(2, ‘No such file or directory’)”</p>
+<p>e.&lt;TAB&gt;
+e.args      e.errno     e.filename  e.message   e.strerror</p>
+<p>print(e.errno)
+2</p>
+<p>$ vim excecao.py</p>
+<p>#_*_ encoding: utf-8 _*_</p>
+<p>import sys</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
+</dd>
+<dt>except IOError as e:</dt><dd><p>print &gt;&gt; sys.stderr, ‘nnERRO: Arquivo não encontradonn%s’ % e
+sys.exit(e.errno)</p>
+</dd>
+</dl>
+<p>$ python excecao.py</p>
+<p>ERRO: Arquivo não encontrado</p>
+<p>[Errno 2] No such file or directory: ‘/tmp/blablabla.txt’</p>
+<p>$ echo $?
+2</p>
+<p>$ vim excecao3.py</p>
+<p>#_*_ encoding: utf-8 _*_</p>
+<p>import sys</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
+</dd>
+<dt>except IOError as e:</dt><dd><p>print(‘nnERRO: Arquivo não encontradonn%s’ % e, file = sys.stderr)
+sys.exit(e.errno)</p>
+</dd>
+</dl>
+<p>$ python3 excecao3.py</p>
+<p>ERRO: Arquivo não encontrado</p>
+<p>[Errno 2] No such file or directory: ‘/tmp/blablabla.txt’</p>
+<p>$ echo $?
+2</p>
+<p>else</p>
+<p>$ vim excecao.py</p>
+<p>#_*_ encoding: utf-8 _*_</p>
+<p>import sys</p>
+<p>f = sys.argv[1]</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>f = open(f, ‘r’)</p>
+</dd>
+<dt>except IOError:</dt><dd><p>print(‘Não existe o arquivo’)</p>
+</dd>
+<dt>else:</dt><dd><p>print(‘Sim, o arquivo existe!’)
+f.close()</p>
+</dd>
+</dl>
+<p>$ python excecao.py /tmp/blablabla.txt
+Não existe o arquivo</p>
+<p>$ &gt; /tmp/blablabla.txt</p>
+<p>$ python excecao.py /tmp/blablabla.txt
+Sim, o arquivo existe!</p>
+<p>$ rm /tmp/blablabla.txt</p>
+<p>finally</p>
+<p>$ vim excecao.py</p>
+<p>#_*_ encoding: utf-8 _*_</p>
+<p>import sys</p>
+<p>f = sys.argv[1]</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>f = open(f, ‘r’)</p>
+</dd>
+<dt>except IOError:</dt><dd><p>print(‘Não existe o arquivo’)</p>
+</dd>
+<dt>else:</dt><dd><p>print(‘Sim, o arquivo existe!’)
+f.close()</p>
+</dd>
+<dt>finally:</dt><dd><p>print(‘Se deu certo ou errado, o programa termina aqui :/’)</p>
+</dd>
+</dl>
+<p>$ python excecao.py /tmp/blablabla.txt
+Não existe o arquivo
+Se deu certo ou errado, o programa termina aqui :/</p>
+<p>$ &gt; /tmp/blablabla.txt</p>
+<p>$ python excecao.py /tmp/blablabla.txt
+Sim, o arquivo existe!
+Se deu certo ou errado, o programa termina aqui :/</p>
+<p>raise</p>
+<div class="section" id="raise-exception-provocando-uma-excecao">
+<h1>raise Exception(‘Provocando uma exceção’)<a class="headerlink" href="#raise-exception-provocando-uma-excecao" title="Link permanente para este título">¶</a></h1>
+<p>Exception                                 Traceback (most recent call last)
+&lt;ipython-input-62-69ebfeaaf513&gt; in &lt;module&gt;()
+—-&gt; 1 raise Exception(‘Provocando uma exceção’)</p>
+<p>Exception: Provocando uma exceção</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>raise ZeroDivisionError()</p>
+</dd>
+<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
+</dd>
+<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
+</dd>
+<dt>except:</dt><dd><p>print(‘Exceção não declarada’)</p>
+</dd>
+</dl>
+<p>Exceção não declarada</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>raise ZeroDivisionError(‘Erro de divisão por zero’)</p>
+</dd>
+<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
+</dd>
+<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
+</dd>
+<dt>except ZeroDivisionError:</dt><dd><p>print(‘Exceção ZeroDivisionError’)</p>
+</dd>
+<dt>except:</dt><dd><p>print(‘Exceção não declarada’)</p>
+</dd>
+</dl>
+<p>Exceção ZeroDivisionError</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>raise ZeroDivisionError(‘Erro de divisão por zero’)</p>
+</dd>
+<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
+</dd>
+<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
+</dd>
+<dt>except ZeroDivisionError:</dt><dd><p>print(‘Exceção ZeroDivisionError’)</p>
+</dd>
+<dt>except Exception:</dt><dd><p>print(‘Exceção não declarada’)</p>
+</dd>
+</dl>
+<p>Exceção ZeroDivisionError</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>raise ZeroDivisionError(‘Erro de divisão por zero’)</p>
+</dd>
+<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
+</dd>
+<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
+</dd>
+<dt>except ZeroDivisionError:</dt><dd><p>print(‘Exceção ZeroDivisionError’)
+raise</p>
+</dd>
+<dt>except Exception:</dt><dd><p>print(‘Exceção não declarada’)</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="excecao-zerodivisionerror">
+<h1>Exceção ZeroDivisionError<a class="headerlink" href="#excecao-zerodivisionerror" title="Link permanente para este título">¶</a></h1>
+<p>ZeroDivisionError                         Traceback (most recent call last)
+&lt;ipython-input-77-be8b35cbd0cc&gt; in &lt;module&gt;()</p>
+<blockquote>
+<div><p>1 try:</p>
+</div></blockquote>
+<dl class="simple">
+<dt>—-&gt; 2     raise ZeroDivisionError(‘Erro de divisão por zero’)</dt><dd><p>3 except IOError:
+4     print(‘Exceção IOError’)
+5 except IndexError:</p>
+</dd>
+</dl>
+<p>ZeroDivisionError: Erro de divisão por zero</p>
+<p>Exceção Personalizada</p>
+<blockquote>
+<div><p>Para criarmos uma exceção personalizada preciamos criar uma classe que herde de uma outra classe de exceção, cuja raiz é Exception.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>class FooException(Exception):</dt><dd><p>pass</p>
+</dd>
+<dt>try:</dt><dd><p>raise FooException(‘Bla bla bla’)</p>
+</dd>
+<dt>except Exception as e:</dt><dd><p>print(‘Erro ——&gt; %s’ % e)</p>
+</dd>
+</dl>
+<p>Erro ——&gt; Bla bla bla</p>
+<dl class="simple">
+<dt>class EggsException(Exception):</dt><dd><dl class="simple">
+<dt>def __init__(self, value):</dt><dd><p>self.value = value</p>
+</dd>
+<dt>def __str__(self):</dt><dd><p>return self.value</p>
+</dd>
+</dl>
+</dd>
+<dt>try:</dt><dd><p>raise EggsException(50)</p>
+</dd>
+<dt>except EggsException as e:</dt><dd><p>print(‘Ocorreu um erro da minha exceção, cujo valor é %s’ % (e.value))</p>
+</dd>
+</dl>
+<p>Ocorreu um erro da minha exceção, cujo valor é 50</p>
+<p>raise EggsException(‘bla bla bla’)</p>
+<p>—-&gt; 1 raise EggsException(‘bla bla bla’)</p>
+<p>EggsException: bla bla bla</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
