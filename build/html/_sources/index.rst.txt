@@ -12,6 +12,7 @@ Curso de Python
    :caption: Contents:
 
    content/about
+   content/language_particularities
 
 
 
