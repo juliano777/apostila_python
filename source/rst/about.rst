@@ -146,9 +146,11 @@ Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
     def funcao():
         print('Hello World!!!')
 
-       
+Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
 
-vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
+.. code-block:: bash
+
+    vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
 
 
 .. code-block:: python
