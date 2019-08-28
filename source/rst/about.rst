@@ -187,6 +187,7 @@ Execução do script:
     python3 /tmp/python/foo.py
 
 .. code-block:: console
+
     Atenção!!!
 
     O teste vai começar...
