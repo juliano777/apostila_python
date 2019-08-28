@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>14. Iteratoradores e Geradores &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -81,7 +81,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
@@ -95,6 +95,10 @@
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Iteratoradores e Geradores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#iterator">14.1. Iterator</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -140,7 +144,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>14. Iteratoradores e Geradores</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -159,7 +163,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>Iterator</p>
+  <div class="section" id="iteratoradores-e-geradores">
+<h1>14. Iteratoradores e Geradores<a class="headerlink" href="#iteratoradores-e-geradores" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="iterator">
+<h2>14.1. Iterator<a class="headerlink" href="#iterator" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Um iterator (iterador) permite acessar elementos de uma coleção / sequência, retornando cada elemento sequencialmente.
 Todo objeto que tiver o método __next__() é um iterator.</p>
@@ -311,6 +318,8 @@ for i in ((x for x in range(1, 1001))):</p>
 <p>42.666774257901125</p>
 <p>&gt; timeit(code_gen)</p>
 <p>53.58039242995437</p>
+</div>
+</div>
 
 
            </div>

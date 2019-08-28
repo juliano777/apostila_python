@@ -1,4 +1,9 @@
+Iteratoradores e Geradores
+**************************
+
 Iterator
+--------
+
 
     Um iterator (iterador) permite acessar elementos de uma coleção / sequência, retornando cada elemento sequencialmente.
     Todo objeto que tiver o método __next__() é um iterator.
