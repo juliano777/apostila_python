@@ -14,12 +14,12 @@ O que é Python
 Características
 ~~~~~~~~~~~~~~~
 
-Linguagem de altíssimo nível;
-Fácil de aprender;
-Simples;
-Objetiva;
-Preza pela legibilidade;
-Case sensitive;
+- Linguagem de altíssimo nível;
+- Fácil de aprender;
+- Simples;
+- Objetiva;
+- Preza pela legibilidade;
+- Case sensitive;
 Mutiparadigma: orientada a objeto e procedural;
 Interpretada;
 Compilada (transparente ao usuário);
