@@ -1,4 +1,5 @@
 Método de Classe e Método Estático
+**********************************
 
 	Existem dois tipos de métodos que podem ser executados diretamente de uma classe, ou seja, sem precisar criar um objeto dela. Justamente por serem independentes de objetos não esperam um "self" como primeiro parâmetro.
 	A utilidade desses métodos é para processamento de dados de classes em vez de instâncias.
