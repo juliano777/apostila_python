@@ -71,7 +71,8 @@ A Filosofia de Python
 
 E então verá o seguinte texto (parte em inglês):
 
-*The Zen of Python, by Tim Peters*
+::
+The Zen of Python, by Tim Peters
 O Zen de Python, por Tim Peters
 
 Beautiful is better than ugly.
@@ -111,7 +112,7 @@ Se a implementação é difícil de explicar, é uma má idéia.
 If the implementation is easy to explain, it may be a good idea.
 Se a implementação é fácil de explicar, deve ser uma boa idéia.
 Namespaces are one honking great idea -- let's do more of those!
-Namespaces são uma idéia fantástica – vamos fazer mais desses!	
+Namespaces são uma idéia fantástica – vamos fazer mais desses!
 
 Bytecode
 --------
