@@ -490,6 +490,7 @@ True
 
 
 Bytes (b)
+~~~~~~~~~
 
     Strings de bytes utilizam o prefixo "b" e quando contém caracteres especiais, esses são representados pelo código hexadecimal da codificação utilizada.
 
@@ -624,6 +625,7 @@ str
 
 
 Format Strings
+~~~~~~~~~~~~~~
 
     Ou também conhecidas como "f strings" foi um recurso adicionado à versão 3.6 de Python.
 
@@ -777,6 +779,7 @@ True
 
 
 Operações de Strings
+--------------------
 
 Concatenação:
 

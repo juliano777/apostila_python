@@ -93,7 +93,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#caracteres-especiais">5.4. Caracteres Especiais</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#formatacao">5.5. Formatação</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#representacoes-de-inteiros">5.6. Representações de Inteiros</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tipos-de-strings-em-python">5.7. Tipos de Strings em Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-de-strings-em-python">5.7. Tipos de Strings em Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bytes-b">5.7.1. Bytes (b)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#format-strings">5.7.2. Format Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.8. Operações de Strings</a></li>
 </ul>
 </li>
 </ul>
@@ -427,7 +432,8 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <p>Como unicode é padrão, podemos omitir o prefixo:</p>
 <p>&gt; print(u’Foo’ == ‘Foo’)</p>
 <p>True</p>
-<p>Bytes (b)</p>
+<div class="section" id="bytes-b">
+<h3>5.7.1. Bytes (b)<a class="headerlink" href="#bytes-b" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>Strings de bytes utilizam o prefixo “b” e quando contém caracteres especiais, esses são representados pelo código hexadecimal da codificação utilizada.</p>
 </div></blockquote>
@@ -492,7 +498,9 @@ xc3xa7 -&gt; ç</p>
 <blockquote>
 <div><p>Ao ser decodificado passa a ser uma string.</p>
 </div></blockquote>
-<p>Format Strings</p>
+</div>
+<div class="section" id="format-strings">
+<h3>5.7.2. Format Strings<a class="headerlink" href="#format-strings" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>Ou também conhecidas como “f strings” foi um recurso adicionado à versão 3.6 de Python.</p>
 </div></blockquote>
@@ -582,7 +590,10 @@ f’Cor: {cor}’)</p>
 <div><p>Das duas strings, somente a primeira tem o sufixo “u”.</p>
 </div></blockquote>
 <p># ============================================================================</p>
-<p>Operações de Strings</p>
+</div>
+</div>
+<div class="section" id="operacoes-de-strings">
+<h2>5.8. Operações de Strings<a class="headerlink" href="#operacoes-de-strings" title="Link permanente para este título">¶</a></h2>
 <p>Concatenação:</p>
 <p>&gt; print(“Curso” + ” de ” + “Python”)</p>
 <p>Curso de Python</p>
