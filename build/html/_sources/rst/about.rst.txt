@@ -180,7 +180,11 @@ Edição de script de exemplo:
 
     Modulo2.funcao(3)
 
-$ python /tmp/python/foo.py
+Execução do script:
+
+.. code-block:: bash
+
+    python3 /tmp/python/foo.py
 
 .. code-block:: console
     Atenção!!!
