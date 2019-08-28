@@ -1,4 +1,5 @@
 Orientação a Objetos
+********************
 
 	Python suporta herança múltipla;
 	Tudo em Python é objeto (inclusive classes);
@@ -187,6 +188,7 @@ o.metodo_x(o)
 
 
 Objetos com Atributos Dinâmicos
+-------------------------------
 
 
 Criação da classe Carro:

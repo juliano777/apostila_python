@@ -1,4 +1,5 @@
 Orientação a Objetos
+********************
 
 	Python suporta herança múltipla;
 	Tudo em Python é objeto (inclusive classes);
