@@ -75,7 +75,6 @@ E então verá o seguinte texto:
 ::
 
     The Zen of Python, by Tim Peters
-    O Zen de Python, por Tim Peters
 
     Beautiful is better than ugly.
     Explicit is better than implicit.
@@ -101,7 +100,6 @@ Tradução:
 
 ::
 
-    The Zen of Python, by Tim Peters
     O Zen de Python, por Tim Peters
 
     Bonito é melhor do que feio.
@@ -130,6 +128,9 @@ Bytecode
 --------
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
+
+
+.. code-block:: bash
 
 mkdir -p /tmp/python/PacoteA/PacoteA1
 touch /tmp/python/PacoteA/__init__.py
