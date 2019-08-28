@@ -301,7 +301,7 @@ Para visualizar esse easter egg basta que no shell interativo dê o seguinte com
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!!!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Editar o módulo “Modulo1” que está dentro do pacote “PacoteA”:</p>
+<p>Editar o módulo “Modulo2” que está dentro do pacote “PacoteA”:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
 </pre></div>
 </div>
@@ -340,18 +340,21 @@ Para visualizar esse easter egg basta que no shell interativo dê o seguinte com
 </pre></div>
 </div>
 <p>Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.</p>
+<p>Listar o conteúdo de “PacoteA”:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /tmp/python/PacoteA/
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Modulo1.py  PacoteA1  __pycache__</span>
 </pre></div>
 </div>
+<p>Listar o conteúdo de __pycache__:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /tmp/python/PacoteA/__pycache__/
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Modulo1.cpython-36.pyc</span>
 </pre></div>
 </div>
+<p>Com o comando “file” verificar informações de tipo de arquivo:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>file /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc
 </pre></div>
 </div>

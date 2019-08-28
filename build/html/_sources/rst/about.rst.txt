@@ -146,7 +146,7 @@ Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
     def funcao():
         print('Hello World!!!')
 
-Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
+Editar o módulo "Modulo2" que está dentro do pacote "PacoteA":
 
 .. code-block:: bash
 
@@ -197,6 +197,8 @@ Execução do script:
 
 Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.
 
+Listar o conteúdo de "PacoteA":
+
 .. code-block:: bash
 
     ls /tmp/python/PacoteA/
@@ -205,6 +207,9 @@ Quando um módulo é carregado pela primeira vez ou se seu código é mais novo 
 
     Modulo1.py  PacoteA1  __pycache__
 
+
+Listar o conteúdo de __pycache__:
+
 .. code-block:: bash
 
     ls /tmp/python/PacoteA/__pycache__/
@@ -212,6 +217,9 @@ Quando um módulo é carregado pela primeira vez ou se seu código é mais novo 
 .. code-block:: console
 
     Modulo1.cpython-36.pyc
+
+
+Com o comando "file" verificar informações de tipo de arquivo:    
 
 .. code-block:: bash
 
