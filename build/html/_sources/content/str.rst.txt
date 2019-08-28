@@ -11,6 +11,7 @@ Strings
 
 
 Strings em Python
+-----------------
 
     Pode-se usar tanto entre aspas como entre apóstrofos.
 
@@ -37,6 +38,7 @@ Declaração de uma variável string utilizando a função str:
 
 
 Apóstrofos ou aspas? Qual devo utilizar?
+----------------------------------------
 
 
     Se não tivessem essas duas opções, se fosse apenas aspas como em outras linguagens, em uma string que precisa ter aspas, seria preciso escapar com a contrabarra desta maneira: \". O que também funcionaria.
@@ -73,6 +75,7 @@ SELECT * FROM musica WHERE artista = 'Mozart';
 
 
 Strings de Múltiplas Linhas
+---------------------------
 
     
 

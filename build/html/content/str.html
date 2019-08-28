@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Strings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Strings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#strings-em-python">5.1. Strings em Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apostrofos-ou-aspas-qual-devo-utilizar">5.2. Apóstrofos ou aspas? Qual devo utilizar?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strings-de-multiplas-linhas">5.3. Strings de Múltiplas Linhas</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -160,7 +165,8 @@ Strings representam textos, frases ou palavras.
 <p><a class="reference external" href="https://docs.python.org/3/library/string.html">https://docs.python.org/3/library/string.html</a></p>
 </div></blockquote>
 <p># ============================================================================</p>
-<p>Strings em Python</p>
+<div class="section" id="strings-em-python">
+<h2>5.1. Strings em Python<a class="headerlink" href="#strings-em-python" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Pode-se usar tanto entre aspas como entre apóstrofos.</p>
 </div></blockquote>
@@ -171,7 +177,9 @@ Strings representam textos, frases ou palavras.
 <p>Declaração de uma variável string utilizando a função str:</p>
 <p>&gt; s = str(‘foo’)</p>
 <p># ============================================================================</p>
-<p>Apóstrofos ou aspas? Qual devo utilizar?</p>
+</div>
+<div class="section" id="apostrofos-ou-aspas-qual-devo-utilizar">
+<h2>5.2. Apóstrofos ou aspas? Qual devo utilizar?<a class="headerlink" href="#apostrofos-ou-aspas-qual-devo-utilizar" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Se não tivessem essas duas opções, se fosse apenas aspas como em outras linguagens, em uma string que precisa ter aspas, seria preciso escapar com a contrabarra desta maneira: “. O que também funcionaria.
 Fazer uso de contrabarra para escapar por muitas vezes pode ser um tanto confuso e tornar o código menos legível.
@@ -188,7 +196,9 @@ Com a facilidade de se poder utilizar ambos torna o escape desnecessário para a
 <p>&gt; print(sql)</p>
 <p>SELECT * FROM musica WHERE artista = ‘Mozart’;</p>
 <p># ============================================================================</p>
-<p>Strings de Múltiplas Linhas</p>
+</div>
+<div class="section" id="strings-de-multiplas-linhas">
+<h2>5.3. Strings de Múltiplas Linhas<a class="headerlink" href="#strings-de-multiplas-linhas" title="Link permanente para este título">¶</a></h2>
 <p>É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:</p>
 <p>&gt; s1 = ‘’’
 Um
@@ -800,6 +810,7 @@ O -1 não deve ser confundido como último elemento.</p>
 <p>Quantas vezes aparece a sequência de caracteres “foo”?:</p>
 <p>&gt; ‘XXXfooXXXfooXXXbar’.count(‘foo’)</p>
 <p>2</p>
+</div>
 </div>
 
 
