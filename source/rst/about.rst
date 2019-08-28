@@ -72,7 +72,7 @@ A Filosofia de Python
 E então verá o seguinte texto:
 
 
-::
+.. code-block:: console
 
     The Zen of Python, by Tim Peters
 
