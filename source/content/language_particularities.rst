@@ -564,7 +564,8 @@ print(foo)
 bla bla bla
 
 
-2.13 - Referência de Identificadores
+Referência de Identificadores
+-----------------------------
 
 x = 7
 y = x
@@ -601,17 +602,3 @@ del z
 
 O contador de referências chegou a 0 (zero), ou seja, não há mais referência para o objeto.
 Então entra em ação o Garbage Collector para limpar a memória.
-
-
-
-
-
-
-
-
-
-
-
-
-
-

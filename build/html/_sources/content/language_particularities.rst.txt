@@ -486,9 +486,11 @@ In [2]: print('Teste')
 Teste
 
 	
-2.12 Atribuição de Valores
+Atribuição de Valores
+---------------------
 
-2.12.1 - Atribuição Simples
+Atribuição Simples
+~~~~~~~~~~~~~~~~~~
 
 foo = 0
 bar = 'bla bla bla'
@@ -527,7 +529,8 @@ print(y)
 10
 
 
-2.12.1 - Atribuição por Incremento ou Decremento
+Atribuição por Incremento ou Decremento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 x = 0
 x +=1
@@ -561,7 +564,8 @@ print(foo)
 bla bla bla
 
 
-2.13 - Referência de Identificadores
+Referência de Identificadores
+-----------------------------
 
 x = 7
 y = x
@@ -598,17 +602,3 @@ del z
 
 O contador de referências chegou a 0 (zero), ou seja, não há mais referência para o objeto.
 Então entra em ação o Garbage Collector para limpar a memória.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
