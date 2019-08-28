@@ -1,12 +1,9 @@
-2 Particularidades da Linguagem
+Particularidades da Linguagem
+*****************************
 
-2.1 Python 2 vs Python 3
+Palavras Reservadas
+-------------------
 
-2.1.1 Palavras Reservadas
-
-Python 2
-Python 2 e Python 3
-Python 3
 exec
 and
 as
