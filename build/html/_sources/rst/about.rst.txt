@@ -130,6 +130,10 @@ Bytecode
 .. code-block:: bash
 
     mkdir -p /tmp/python/PacoteA/PacoteA1
+
+
+.. code-block:: bash
+
     vim /tmp/python/PacoteA/Modulo1.py
     
 
