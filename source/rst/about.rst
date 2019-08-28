@@ -135,10 +135,7 @@ Bytecode
 
 .. highlight:: sql
 
-From here on no highlighting will be done.
-
-::
-   SELECT * FROM mytable
+    SELECT * FROM mytable
 
 
 
