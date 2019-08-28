@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>22. open &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="prev" title="21. Loops - Laços de Repetição" href="loops.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">22. open</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>22. open</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/open.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="open">
+<h1>22. open<a class="headerlink" href="#open" title="Link permanente para este título">¶</a></h1>
+<blockquote>
+<div><p>É a forma nativa de Python para manipular arquivos (leitura e escrita).
+A partir da versão 3 de Python use preferencialmente open, pois file foi removido.
+Um arquivo é iterável, cujas iterações são por linha.</p>
+</div></blockquote>
+<p>open(file, mode=’r’, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</p>
+<p>Modos</p>
+<p>——— —————————————————————
+‘r’       Leitura (padrão);
+‘w’       Escrita (novo arquivo, ou se o mesmo existir será truncado);
+‘x’       Cria um novo arquivo e o abre para escrita;
+‘a’       Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente);
+‘b’       Modo binário;
+‘t’       Modo de texto (padrão);
+‘+’       Abre um arquivo em disco para a atualização (leitura e escrita).</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/foo.txt’, ‘w+’)</p>
+<p>bla bla bla:</p>
+<p>&gt; type(f)</p>
+<p>_io.TextIOWrapper</p>
+<p>bla bla bla:</p>
+<p>&gt; print(‘Teste de escrita em arquivo’, file=f)</p>
+<p>bla bla bla:</p>
+<p>&gt; print(‘ ‘, file=f)</p>
+<p>bla bla bla:</p>
+<p>&gt; print(‘Uma linha qualquer’, file=f)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/foo.txt’, ‘r’)</p>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; for line in f:</dt><dd><p>print(line.strip(‘n’))</p>
+</dd>
+</dl>
+<p>Fechamento de arquivo:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>$ cat &lt;&lt; EOF &gt; /tmp/linhas.txt
+linha_1
+linha_2
+linha_3
+EOF</p>
+<p>bla bla bla:</p>
+<p>$ cat /tmp/linhas.txt</p>
+<p>linha_1
+linha_2
+linha_3</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/linhas.txt’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.readline()</p>
+<p>‘linha_1n’</p>
+<p>bla bla bla:</p>
+<p>&gt; f.readline().split()</p>
+<p>[‘linha_2’]</p>
+<p>bla bla bla:</p>
+<p>&gt; f.readline().split()</p>
+<p>[‘linha_3’]</p>
+<p>bla bla bla:</p>
+<p>&gt; f.readline().split()</p>
+<p>[]</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/linhas.txt’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.readlines()</p>
+<p>[‘linha_1n’, ‘linha_2n’, ‘linha_3n’]</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>$ cat &lt;&lt; EOF &gt; /tmp/teste.py
+#!/usr/bin/env python3
+#_*_ encoding: utf8 _*_</p>
+<p>import sys</p>
+<p>file_open = sys.argv[1]</p>
+<p>file_open = open(file_open, ‘r’)</p>
+<dl class="simple">
+<dt>for i in file_open:</dt><dd><p>print(i.strip())</p>
+</dd>
+</dl>
+<p>file_open.close()
+EOF</p>
+<p>bla bla bla:</p>
+<p>$ chmod +x /tmp/teste.py</p>
+<p>bla bla bla:</p>
+<p>$ ./teste.py linhas.txt</p>
+<p>linha_1
+linha_2
+linha_3</p>
+<p>O Método seek:</p>
+<p>$ cat &lt;&lt; EOF &gt; /tmp/cores.txt
+1 - Verde
+2 - Preto
+3 - Branco
+EOF</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/cores.txt’, ‘r’)</p>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
+</dd>
+</dl>
+<p>1 - Verde
+2 - Preto
+3 - Branco</p>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
+</dd>
+</dl>
+<p>bla bla bla:</p>
+<p>&gt; f.seek(0)</p>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
+</dd>
+</dl>
+<p>1 - Verde
+2 - Preto
+3 - Branco</p>
+<p>bla bla bla:</p>
+<p>&gt; f.seek(1)</p>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Verde</p></li>
+</ul>
+<p>2 - Preto
+3 - Branco</p>
+<p>bla bla bla:</p>
+<p>&gt; f.seek(0)</p>
+<p>0</p>
+<p>&gt; f.read(7)</p>
+<p>‘1 - Ver’</p>
+<p>&gt; f.read(7)</p>
+<p>‘den2 - ‘</p>
+<p>&gt; f.read(7)</p>
+<p>‘Preton3’</p>
+<p>&gt; f.read(7)</p>
+<p>‘ - Bran’</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>&gt; f.closed</p>
+<p>True</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/cores.txt’, ‘w’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.closed</p>
+<p>False</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>$ cat /tmp/cores.txt</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/cores.txt’, ‘w’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.write(‘1 - Verden’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>$ cat /tmp/cores.txt</p>
+<p>1 - Verde</p>
+<p>bla bla bla:</p>
+<p>&gt; print(f.name)</p>
+<p>/tmp/cores.txt</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/cores.txt’, ‘a’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>$ cat /tmp/cores.txt</p>
+<p>1 - Verde</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/cores.txt’, ‘a’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.write(‘2 - Preton’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.write(‘3 - Brancon’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.flush()</p>
+<p>bla bla bla:</p>
+<p>$ cat /tmp/cores.txt</p>
+<p>1 - Verde
+2 - Preto
+3 - Branco</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/cores.txt’, ‘r’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.tell()</p>
+<p>0</p>
+<p>bla bla bla:</p>
+<p>&gt; f.read()</p>
+<p>‘1 - Verden2 - Preton3 - Brancon’</p>
+<p>bla bla bla:</p>
+<p>&gt; f.tell()</p>
+<p>31</p>
+<p>bla bla bla:</p>
+<p>&gt; f.seek(0)</p>
+<p>0</p>
+<p>bla bla bla:</p>
+<p>&gt; f.tell()</p>
+<p>0</p>
+<p>bla bla bla:</p>
+<p>&gt; f.read(7)</p>
+<p>‘1 - Ver’</p>
+<p>bla bla bla:</p>
+<p>&gt; f.tell()</p>
+<p>7</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>&gt; f = open(‘/tmp/planetas.txt’, ‘w’)</p>
+<p>bla bla bla:</p>
+<p>&gt; planetas = (‘Saturnon’, ‘Uranon’, ‘Netunon’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.writelines(planetas)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.flush()</p>
+<p>bla bla bla:</p>
+<p>$ cat /tmp/planetas.txt</p>
+<p>Saturno
+Urano
+Netuno</p>
+<p>bla bla bla:</p>
+<p>&gt; planetas = (‘Marten’, ‘Vênusn’, ‘Plutãon’, ‘Júpitern’)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.writelines(planetas)</p>
+<p>bla bla bla:</p>
+<p>&gt; f.close()</p>
+<p>bla bla bla:</p>
+<p>$ cat /tmp/planetas.txt</p>
+<p>Saturno
+Urano
+Netuno
+Marte
+Vênus
+Plutão
+Júpiter</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="loops.html" class="btn btn-neutral float-left" title="21. Loops - Laços de Repetição" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

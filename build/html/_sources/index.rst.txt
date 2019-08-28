@@ -33,6 +33,7 @@ Curso de Python
    content/scope
    content/if
    content/loops
+   content/open
 
 
 
