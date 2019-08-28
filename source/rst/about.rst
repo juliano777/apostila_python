@@ -71,6 +71,27 @@ A Filosofia de Python
 
 E então verá o seguinte texto (parte em inglês):
 
+
+::
+
+    project
+    ├── demo.py
+    ├── LICENCE.txt
+    ├── processes          
+    │   ├── area.py
+    │   └── bboxinout.py
+    ├── pywps.cfg          
+    ├── requirements.txt
+    ├── server.py          
+    ├── setup.py
+    ├── static
+    ├── templates
+    └── tests
+
+
+
+
+
 |    The Zen of Python, by Tim Peters
 |    O Zen de Python, por Tim Peters
 
