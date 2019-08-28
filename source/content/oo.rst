@@ -184,9 +184,6 @@ o.metodo_x(o)
 'X'
 
 
-
-
-
 Objetos com Atributos Dinâmicos
 -------------------------------
 
@@ -276,18 +273,3 @@ class Filha(Mae):
 o = Filha()
 
 o.metodo()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

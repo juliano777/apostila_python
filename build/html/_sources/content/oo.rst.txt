@@ -184,10 +184,8 @@ o.metodo_x(o)
 'X'
 
 
-
-
-
 Objetos com Atributos Dinâmicos
+-------------------------------
 
 
 Criação da classe Carro:
@@ -275,18 +273,3 @@ class Filha(Mae):
 o = Filha()
 
 o.metodo()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
