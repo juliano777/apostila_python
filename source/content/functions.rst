@@ -8,10 +8,8 @@ Funções
 	Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.
 
 
-=====================================================================================================================
-
-
 Funções sem Argumentos
+----------------------
 
 Definição da função sem argumentos 
 
@@ -23,7 +21,8 @@ def funcao():
 funcao()
 O quardrado de 7 é 49
 
-- O Comando return
+O Comando return
+----------------
 
 	O comando return dá um retorno para a função.
 	Uma função pode retornar um ou mais valores (coleções).

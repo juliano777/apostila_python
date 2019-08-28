@@ -1,6 +1,5 @@
 Funções
-
-Funções
+*******
 
 	Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente essas mesmas instruções reaproveitando o código ali escrito.
 	No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.
@@ -9,10 +8,8 @@ Funções
 	Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.
 
 
-=====================================================================================================================
-
-
 Funções sem Argumentos
+----------------------
 
 Definição da função sem argumentos 
 
