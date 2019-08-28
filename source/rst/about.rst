@@ -129,8 +129,8 @@ Bytecode
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
-
-.. code-block:: python
+.. code-block:: bash
+    
     mkdir -p /tmp/python/PacoteA/PacoteA1
     touch /tmp/python/PacoteA/__init__.py
     touch /tmp/python/PacoteA/PacoteA1/__init__.py
