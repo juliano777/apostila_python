@@ -98,7 +98,8 @@ E então verá o seguinte texto:
 
 Tradução:
 
-.. compound::
+.. code-block:: console
+
 
     O Zen de Python, por Tim Peters
 
