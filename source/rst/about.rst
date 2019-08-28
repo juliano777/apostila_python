@@ -130,7 +130,7 @@ Bytecode
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
-.. highlight:: sh
+.. code-block:: bash
     
     mkdir -p /tmp/python/PacoteA/PacoteA1
     vim /tmp/python/PacoteA/Modulo1.py
