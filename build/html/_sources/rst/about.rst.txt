@@ -134,8 +134,13 @@ Bytecode
     mkdir -p /tmp/python/PacoteA/PacoteA1
     vim /tmp/python/PacoteA/Modulo1.py
 
-def funcao():
-    print('Hello World!!!')
+
+.. code-block:: python
+
+    def funcao():
+        print('Hello World!!!')
+
+       
 
 vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
 
