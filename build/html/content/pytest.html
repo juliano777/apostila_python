@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="prev" title="32. funcao2" href="threads.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">25. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">26. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">30. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">31. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">32. funcao2</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/pytest.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>$ vim /tmp/test_pytest.py</p>
+<p>#=============================================================================</p>
+<p># Função fatorial
+def fatorial(x):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if x == 0:</dt><dd><p>return 1</p>
+</dd>
+</dl>
+<p>return x * fatorial(x - 1)</p>
+</div></blockquote>
+<p># Função que testa se um número é par
+def e_par(x):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if x % 2 == 0:</dt><dd><p>return True</p>
+</dd>
+</dl>
+<p>return False</p>
+</div></blockquote>
+<p># Função para testar a função fatorial
+def test_fatorial():</p>
+<blockquote>
+<div><p>assert fatorial(0) == 1</p>
+</div></blockquote>
+<p># Função para testar a função e_par
+def test_par():</p>
+<blockquote>
+<div><p>assert e_par(8)</p>
+</div></blockquote>
+<p>#=============================================================================</p>
+<p>$ py.test /tmp/test_pytest.py</p>
+<p>================================================= test session starts =================================================
+platform linux – Python 3.4.3+, pytest-2.8.7, py-1.4.31, pluggy-0.3.1
+rootdir: /tmp, inifile:
+collected 2 items</p>
+<p>../../tmp/test_pytest.py .F</p>
+<p>====================================================== FAILURES =======================================================
+______________________________________________________ test_par _______________________________________________________</p>
+<blockquote>
+<div><p>def test_par():</p>
+</div></blockquote>
+<p>&gt;       assert e_par(8)
+E       assert e_par(8)</p>
+<p>/tmp/test_pytest.py:19: AssertionError
+========================================= 1 failed, 1 passed in 0.01 seconds ==========================================</p>
+<p>$ vim /tmp/test_pytest.py</p>
+<p>#=============================================================================</p>
+<p># Função fatorial
+def fatorial(x):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if x == 0:</dt><dd><p>return 1</p>
+</dd>
+</dl>
+<p>return x * fatorial(x - 1)</p>
+</div></blockquote>
+<p># Função que testa se um número é par
+def e_par(x):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if x % 2 == 0:</dt><dd><p>return True</p>
+</dd>
+</dl>
+<p>return False</p>
+</div></blockquote>
+<p># Função para testar a função fatorial
+def test_fatorial():</p>
+<blockquote>
+<div><p>assert fatorial(0) == 1</p>
+</div></blockquote>
+<p># Função para testar a função e_par
+def test_par():</p>
+<blockquote>
+<div><p>assert e_par(8)</p>
+</div></blockquote>
+<p>#=============================================================================</p>
+<p>$ py.test /tmp/test_pytest.py</p>
+<p>================================================= test session starts =================================================
+platform linux – Python 3.4.3+, pytest-2.8.7, py-1.4.31, pluggy-0.3.1
+rootdir: /tmp, inifile:
+collected 2 items</p>
+<p>../../tmp/test_pytest.py ..</p>
+<p>============================================== 2 passed in 0.00 seconds ===============================================</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="threads.html" class="btn btn-neutral float-left" title="32. funcao2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
