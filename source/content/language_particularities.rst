@@ -4,8 +4,7 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
-.. table::
-    :widths: auto
+::
 
     +--------+----------+---------+----------+---------+
     | False  | class    | finally | is       | return  |
