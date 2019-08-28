@@ -66,7 +66,9 @@ sys.setdefaultencoding('utf8')
 
 
 
-2.2 Case Sensitive
+Case Sensitive
+--------------
+
 	Python é case sensitive, ou seja, letras maiúsculas e minúsculas são interpretadas de formas diferentes.
 
 
@@ -102,7 +104,8 @@ TypeError: hello_world() takes exactly 1 argument (0 given)
 hello_world('foo')
 foo
 
-2.4 Orientada a Objetos
+Orientada a Objetos
+-------------------
 
 	Em Python tudo é objeto.
 	Ainda fazendo comparação com o mundo Java, em Python não existem tipos primitivos.
@@ -152,7 +155,9 @@ class Minotauro(Humano, Animal):
     pass
 
 
-2.5 Tipagem Dinâmica 
+Tipagem Dinâmica
+----------------
+
 	O interpretador define o tipo de acordo com o valor atribuído à variável.
 	A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo do código-fonte e em seu tempo de execução.
 

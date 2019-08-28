@@ -89,6 +89,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#codificacao-conjunto-de-caracteres-encoding">2.2.1. Codificação (Conjunto de Caracteres - Encoding)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#case-sensitive">2.3. Case Sensitive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orientada-a-objetos">2.4. Orientada a Objetos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tipagem-dinamica">2.5. Tipagem Dinâmica</a></li>
 </ul>
 </li>
 </ul>
@@ -203,10 +206,13 @@ Olá!</p>
 <p>import sys
 reload(sys)
 sys.setdefaultencoding(‘utf8’)</p>
-<dl class="simple">
-<dt>2.2 Case Sensitive</dt><dd><p>Python é case sensitive, ou seja, letras maiúsculas e minúsculas são interpretadas de formas diferentes.</p>
-</dd>
-</dl>
+</div>
+</div>
+<div class="section" id="case-sensitive">
+<h2>2.3. Case Sensitive<a class="headerlink" href="#case-sensitive" title="Link permanente para este título">¶</a></h2>
+<blockquote>
+<div><p>Python é case sensitive, ou seja, letras maiúsculas e minúsculas são interpretadas de formas diferentes.</p>
+</div></blockquote>
 <p>foo = ‘bar’</p>
 <p>Foo = ‘foo’</p>
 <p>print(foo)
@@ -229,7 +235,9 @@ Quando uma mesma função é escrita duas ou mais vezes, o que prevalece é a ú
 <p>TypeError: hello_world() takes exactly 1 argument (0 given)</p>
 <p>hello_world(‘foo’)
 foo</p>
-<p>2.4 Orientada a Objetos</p>
+</div>
+<div class="section" id="orientada-a-objetos">
+<h2>2.4. Orientada a Objetos<a class="headerlink" href="#orientada-a-objetos" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Em Python tudo é objeto.
 Ainda fazendo comparação com o mundo Java, em Python não existem tipos primitivos.
@@ -266,10 +274,14 @@ ano = 0</p>
 </dd>
 <dt>class Minotauro(Humano, Animal):</dt><dd><p>pass</p>
 </dd>
-<dt>2.5 Tipagem Dinâmica</dt><dd><p>O interpretador define o tipo de acordo com o valor atribuído à variável.
-A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo do código-fonte e em seu tempo de execução.</p>
-</dd>
 </dl>
+</div>
+<div class="section" id="tipagem-dinamica">
+<h2>2.5. Tipagem Dinâmica<a class="headerlink" href="#tipagem-dinamica" title="Link permanente para este título">¶</a></h2>
+<blockquote>
+<div><p>O interpretador define o tipo de acordo com o valor atribuído à variável.
+A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo do código-fonte e em seu tempo de execução.</p>
+</div></blockquote>
 <p>foo = ‘bar’</p>
 <p>type(foo)
 str</p>
@@ -578,7 +590,6 @@ z = x</p>
 <p>del z</p>
 <p>O contador de referências chegou a 0 (zero), ou seja, não há mais referência para o objeto.
 Então entra em ação o Garbage Collector para limpar a memória.</p>
-</div>
 </div>
 </div>
 

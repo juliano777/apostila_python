@@ -104,7 +104,8 @@ TypeError: hello_world() takes exactly 1 argument (0 given)
 hello_world('foo')
 foo
 
-2.4 Orientada a Objetos
+Orientada a Objetos
+-------------------
 
 	Em Python tudo é objeto.
 	Ainda fazendo comparação com o mundo Java, em Python não existem tipos primitivos.
@@ -154,7 +155,9 @@ class Minotauro(Humano, Animal):
     pass
 
 
-2.5 Tipagem Dinâmica 
+Tipagem Dinâmica
+----------------
+
 	O interpretador define o tipo de acordo com o valor atribuído à variável.
 	A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo do código-fonte e em seu tempo de execução.
 
@@ -173,7 +176,8 @@ foo = 7.0
 type(foo)
 float
 
-2.6 Tipagem Forte 
+Tipagem Forte 
+-------------
 
 	O interpretador verifica se a operação é válida e não faz coerção automática entre tipos incompatíveis. Caso haja operações de tipos incompatíveis é preciso fazer a conversão explícita da variável ou variáveis antes da operação.
 
