@@ -69,7 +69,7 @@ A Filosofia de Python
     
     import this
 
-E então verá o seguinte texto (parte em inglês):
+E então verá o seguinte texto:
 
 
 ::
@@ -78,43 +78,53 @@ E então verá o seguinte texto (parte em inglês):
     O Zen de Python, por Tim Peters
 
     Beautiful is better than ugly.
-    Bonito é melhor do que feio.
     Explicit is better than implicit.
-    Explícito é melhor do que implícito.
     Simple is better than complex.
-    Simples é melhor do que complexo.
     Complex is better than complicated.
-    Complexo é melhor do que complicado.
     Flat is better than nested.
-    Plano é melhor do que aninhado.
     Sparse is better than dense.
-    Disperso é melhor do que denso.
     Readability counts.
-    Legibilidade conta.
     Special cases aren't special enough to break the rules.
-    Casos especiais não são especiais o bastante para quebrar as regras.
     Although practicality beats purity.
+    Errors should never pass silently.
+    Unless explicitly silenced.
+    In the face of ambiguity, refuse the temptation to guess.
+    There should be one-- and preferably only one --obvious way to do it.
+    Although that way may not be obvious at first unless you're Dutch.
+    Now is better than never.
+    Although never is often better than *right* now.
+    If the implementation is hard to explain, it's a bad idea.
+    If the implementation is easy to explain, it may be a good idea.
+    Namespaces are one honking great idea -- let's do more of those!
+
+Tradução:
+
+::
+
+    The Zen of Python, by Tim Peters
+    O Zen de Python, por Tim Peters
+
+    Bonito é melhor do que feio.
+    Explícito é melhor do que implícito.
+    Simples é melhor do que complexo.
+    Complexo é melhor do que complicado.
+    Plano é melhor do que aninhado.
+    Disperso é melhor do que denso.
+    Legibilidade conta.
+    Casos especiais não são especiais o bastante para quebrar as regras.
     Embora a praticidade vença a pureza.
-Errors should never pass silently.
-Erros não devem passar silenciosamente.
-Unless explicitly silenced.
-A não ser que sejam explicitamente silenciados.
-In the face of ambiguity, refuse the temptation to guess.
-Diante a ambigüidade, recuse a tentação de adivinhar.
-There should be one-- and preferably only one --obvious way to do it.
-Deve haver um-- e preferencialmente apenas um --modo óbvio de fazer isso.
-Although that way may not be obvious at first unless you're Dutch.
-Embora a maneira não seja óbvia à primeira vista, a menos que seja holandês.
-Now is better than never.
-Agora é melhor do que nunca.
-Although never is often better than *right* now.
-Embora nunca é muitas vezes melhor do que *agora* mesmo
-If the implementation is hard to explain, it's a bad idea.
-Se a implementação é difícil de explicar, é uma má idéia.
-If the implementation is easy to explain, it may be a good idea.
-Se a implementação é fácil de explicar, deve ser uma boa idéia.
-Namespaces are one honking great idea -- let's do more of those!
-Namespaces são uma idéia fantástica – vamos fazer mais desses!
+    Erros não devem passar silenciosamente.
+    A não ser que sejam explicitamente silenciados.
+    Diante a ambigüidade, recuse a tentação de adivinhar.
+    Deve haver um-- e preferencialmente apenas um --modo óbvio de fazer isso.
+    Embora a maneira não seja óbvia à primeira vista, a menos que seja holandês.
+    Agora é melhor do que nunca.
+    Embora nunca é muitas vezes melhor do que *agora* mesmo
+    Se a implementação é difícil de explicar, é uma má idéia.
+    Se a implementação é fácil de explicar, deve ser uma boa idéia.
+    Namespaces são uma idéia fantástica – vamos fazer mais desses!
+
+
 
 Bytecode
 --------
