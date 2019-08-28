@@ -113,7 +113,8 @@ Se a implementação é fácil de explicar, deve ser uma boa idéia.
 Namespaces are one honking great idea -- let's do more of those!
 Namespaces são uma idéia fantástica – vamos fazer mais desses!	
 
-1.4 Bytecode 
+Bytecode
+--------
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 

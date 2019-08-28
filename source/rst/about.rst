@@ -69,7 +69,7 @@ A Filosofia de Python
     
     import this
 
-	E então verá o seguinte texto (parte em inglês):
+E então verá o seguinte texto (parte em inglês):
 
 The Zen of Python, by Tim Peters
 O Zen de Python, por Tim Peters
