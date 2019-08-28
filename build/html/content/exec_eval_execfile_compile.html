@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>30. Expressões vs Statements &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -81,7 +81,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
@@ -111,6 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
 <li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">30. Expressões vs Statements</a></li>
 </ul>
 
             
@@ -156,7 +157,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>30. Expressões vs Statements</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,7 +176,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>Expressões vs Statements</p>
+  <div class="section" id="expressoes-vs-statements">
+<h1>30. Expressões vs Statements<a class="headerlink" href="#expressoes-vs-statements" title="Link permanente para este título">¶</a></h1>
 <blockquote>
 <div><p>Expressão: é algo que pode ser reduzido para um valor.</p>
 <p>Statement: sinônimo de comando.</p>
@@ -229,6 +231,7 @@ compile(string, ‘’, ‘single’) is like the exec mode, but it will ignore 
 <p><a class="reference external" href="http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html">http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html</a></p>
 <p>python3.7 -mtimeit -s ‘code = “a = 2; b = 3; c = a * b”’ ‘exec(code)’</p>
 <p>python3.7 -mtimeit -s ‘code = compile(“a = 2; b = 3; c = a * b”, “&lt;string&gt;”, “exec”)’ ‘exec(code)’</p>
+</div>
 
 
            </div>
