@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>32. funcao2 &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>32. Threads &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="next" title="33. pytest" href="pytest.html" />
     <link rel="prev" title="31. Recursividade" href="recursive.html" /> 
 </head>
 
@@ -113,7 +114,11 @@
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">30. Expressões vs Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recursive.html">31. Recursividade</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">32. funcao2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">32. Threads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#funcao2">32.1. funcao2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">33. pytest</a></li>
 </ul>
 
             
@@ -159,7 +164,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>32. funcao2</li>
+      <li>32. Threads</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,7 +183,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>import threading
+  <div class="section" id="threads">
+<h1>32. Threads<a class="headerlink" href="#threads" title="Link permanente para este título">¶</a></h1>
+<p>import threading
 import time</p>
 <dl>
 <dt>def funcao1():</dt><dd><p>linha = (‘_’ * 79)
@@ -200,7 +207,7 @@ time.sleep(tempo)</p>
 <p>t1.start()</p>
 <p>t2.start()</p>
 <div class="section" id="funcao2">
-<h1>32. funcao2<a class="headerlink" href="#funcao2" title="Link permanente para este título">¶</a></h1>
+<h2>32.1. funcao2<a class="headerlink" href="#funcao2" title="Link permanente para este título">¶</a></h2>
 <p>…</p>
 <p>&gt; t1.getName()
 ‘primeira_thread’</p>
@@ -236,6 +243,7 @@ t.start()</p>
 <p>t.stop()</p>
 <p>print(‘fim’)</p>
 </div>
+</div>
 
 
            </div>
@@ -244,6 +252,8 @@ t.start()</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pytest.html" class="btn btn-neutral float-right" title="33. pytest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="recursive.html" class="btn btn-neutral float-left" title="31. Recursividade" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
