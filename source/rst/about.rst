@@ -129,6 +129,7 @@ Bytecode
 
 
 Criação de estrutura de diretórios para teste de pacote e bytecode:
+
 .. code-block:: bash
 
     mkdir -p /tmp/python/PacoteA/PacoteA1
