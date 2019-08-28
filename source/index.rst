@@ -11,7 +11,7 @@ Curso de Python
    :numbered:
    :caption: Contents:
 
-   rst/about
+   content/about
 
 
 
