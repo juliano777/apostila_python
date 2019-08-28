@@ -19,6 +19,7 @@ Curso de Python
    content/numeric_data_types
    content/boolean
    content/decimal_module
+   content/date_time
 
 
 
