@@ -15,6 +15,7 @@ Curso de Python
    content/language_particularities
    content/built-ins
    content/data_types
+   content/str
 
 
 
