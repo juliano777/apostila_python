@@ -4,7 +4,7 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
-+=====================================================+
++-----------------------------------------------------+
 | False      class      finally    is         return  |
 | None       continue   for        lambda     try     |
 | True       def        from       nonlocal   while   |
