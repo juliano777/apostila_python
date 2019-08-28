@@ -1,4 +1,5 @@
 Encapsulamento
+**************
 
 Modificador Private (__)
 
