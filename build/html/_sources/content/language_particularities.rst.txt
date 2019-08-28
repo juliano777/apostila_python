@@ -4,7 +4,7 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
-+-----------------------------------------------------+
++_____________________________________________________+
 | False      class      finally    is         return  |
 +                                                     +
 | None       continue   for        lambda     try     |
@@ -13,7 +13,7 @@ Palavras Reservadas
 | as         elif       if         or         yield   |
 | assert     else       import     pass               |
 | break      except     in         raise              |
-+-----------------------------------------------------+
++_____________________________________________________+
 
 
 
