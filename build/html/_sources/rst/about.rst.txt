@@ -158,6 +158,9 @@ Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
     def funcao(numero):
         print(numero ** 3)
 
+
+Edição de script de exemplo:
+
 vim /tmp/python/foo.py
 
 .. code-block:: python
