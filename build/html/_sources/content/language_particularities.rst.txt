@@ -4,7 +4,7 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
-:: none
+.. code-block:: text
 
     False   class     finally  is        return  
     None    continue  for      lambda    try     
