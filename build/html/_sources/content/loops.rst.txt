@@ -1,6 +1,3 @@
-Loops - Laços de Repetição
-**************************
-
 while
 
 Executa em laço (loop) enquanto a condição for verdadeira.
