@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="prev" title="18. Encapsulamento" href="property.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/scope.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Escopo</p>
+<blockquote>
+<div><blockquote>
+<div><p>Por escopo entende-se o contexto onde um identificador será considerado.
+Um identificador pode ser uma variável, um comando, uma função uma clase ou um objeto.
+A ordem de busca de um identificador em escopos é a seguinte:</p>
+</div></blockquote>
+<p>1º) Local ou dentro de função;
+2º) Função externa;
+3º) Global ou de módulo;
+4º) __builtins__</p>
+</div></blockquote>
+<ul>
+<li><p>Escopo Local ou Dentro de Função</p>
+<blockquote>
+<div><p>É o escopo que tem a maior prioridade.</p>
+</div></blockquote>
+</li>
+</ul>
+<p>Prática:</p>
+<p>Declaração de uma variável com seu valor</p>
+<p>foo = 7</p>
+<p>Exibindo na tela o valor da variável</p>
+<p>print(foo)
+7</p>
+<p>A função locals() retorna um dicionário com os identificadores locais e seus respectivos valores.
+Então é pedido o valor dada a chave que é o nome da variável local.</p>
+<p>locals()[‘foo’]
+7</p>
+<p>Dentro de função</p>
+<p>Declaração de uma variável externamente ao escopo da função</p>
+<p>foo = 7</p>
+<p>Definição de uma função</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>foo = 9
+print(id(foo))
+print(foo)</p>
+</dd>
+</dl>
+<p>Nota-se que dentro da função também há uma variável chamada “foo”.
+Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
+<p>Exibindo o ID de foo</p>
+<p>print(id(foo))
+162857064</p>
+<p>Exibindo o valor de foo</p>
+<p>print(foo)
+7</p>
+<p>Acionando a função</p>
+<p>funcao()
+162857040
+9</p>
+<p>Nota-se também que bem como o ID e o valor retornados pela função,
+da variável interna foo são diferentes da variável externa de mesmo nome.</p>
+<ul>
+<li><p>Escopo de Função Externa</p>
+<blockquote>
+<div><p>Ao se criar uma função dentro de outra, a função mais interna pode utilizar um</p>
+</div></blockquote>
+</li>
+</ul>
+<p>identificador que esteja no nível mais acima.</p>
+<p>Prática:</p>
+<p>Definição da funcao</p>
+<dl>
+<dt>def funcao_principal():</dt><dd><p>x = 1
+def funcao_secundaria():</p>
+<blockquote>
+<div><p>print(x)</p>
+</div></blockquote>
+<p>funcao_secundaria()</p>
+<p>A função principal tem uma variável x, cujo valor é impresso em tela</p>
+</dd>
+<dt>pela função secundária.</dt><dd><p>A função principal invoca a função secundária.</p>
+</dd>
+</dl>
+<p>Chamando a função
+funcao_principal()
+1</p>
+<p>Uma nova definição da função</p>
+<dl>
+<dt>def funcao_principal():</dt><dd><p>x = 1
+def funcao_secundaria():</p>
+<blockquote>
+<div><p>x = 2
+print(x)</p>
+</div></blockquote>
+<p>funcao_secundaria()</p>
+</dd>
+</dl>
+<p>Diferente do exemplo anterior, a função secundária declarou sua própria variável “x”.</p>
+<p>Testando a função
+funcao_principal()
+2</p>
+<p>Nota-se que o valor considerado foi o de “x”, que é o identificador mais interno.</p>
+<ul>
+<li><p>Escopo Global ou Escopo do Módulo</p>
+<p>É também conhecido como escopo de módulo devido ao fato de estar na endentação do mesmo.</p>
+</li>
+</ul>
+<p>Prática:</p>
+<p>Criação de variável</p>
+<p>foo = ‘bar’</p>
+<p>Criação de função</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>foo = ‘eggs’
+print(foo)</p>
+</dd>
+</dl>
+<p>A função criada tem uma variável com o mesmo nome que uma variável global, a ela dá um valor e
+imprime esse valor em tela.
+Será que isso altera o valor da variável global?</p>
+<p>Execução da função</p>
+<p>funcao()
+eggs</p>
+<p>Podemos notar que o valor impresso é igual ao da variável “foo” dentro da função.
+Pra saber se a variável global foi alterada, vamos testar com a função print.</p>
+<p>Imprimindo o valor da variável global</p>
+<p>print(foo)
+bar</p>
+<p>Pode-se concluir que a função criada não interferiu na variável global.
+Para alterar uma variável global em um contexto local precisamos utilizar o comando global.</p>
+<p>Criação de função que altera a variável global</p>
+<dl class="simple">
+<dt>def funcao():</dt><dd><p>global foo
+foo = ‘eggs’
+print(foo)</p>
+</dd>
+</dl>
+<p>Executar função</p>
+<p>funcao()
+eggs</p>
+<p>OK, a função imprimiu o valor local da função.
+Mas será que a variável global também foi alterada?</p>
+<p>Imprimir o valor da variável global</p>
+<p>print(foo)
+eggs</p>
+<p>Agora a função pôde alterar a variável global.
+Isso se deve ao fato do comando global ter sido empregado.
+A variável global a ser alterada deve ser declarada como global antes de sua
+atribuição.</p>
+<p>Escopo __builtins__</p>
+<blockquote>
+<div><p>O escopo __builtins__ abrange identificadores que já estão definidos antes mesmo do código a ser escrito.
+São funções, comandos e variáveis internas de Python.</p>
+</div></blockquote>
+<p>Prática:</p>
+<p>“str” é está em __builtins__?</p>
+<p>‘str’ in dir(__builtins__)
+True</p>
+<p>Resposta afirmativa (True), ou seja, “str” faz parte desse escopo.
+E se subscrevermos esse item localmente?</p>
+<p>Criando uma variável cujo identificador pertence ao escopo __builtins__
+str = 1</p>
+<p>Qual é o tipo?</p>
+<p>type(str)
+int</p>
+<p>“str” que inicialmente era um identificador para o tipo de strings em Python,
+aqui agora virou uma variável de inteiro.
+Mas e o tipo “str” deixou de existir?</p>
+<p>Qual o tipo?
+type(__builtins__.str)
+type</p>
+<p>É do tipo “tipo”</p>
+<p>Valor de str?</p>
+<p>str
+1</p>
+<p>__builtins__.str(str)
+‘1’</p>
+<p>del str</p>
+<p>str(7)
+‘7’</p>
+<p>dir(__builtins__)</p>
+<p>global nome_variavel
+nome_variavel = valor</p>
+<p># ==============================================================================</p>
+<p>Funções globals(), locals() e vars() e Comando global</p>
+<blockquote>
+<div><p>Cada uma das funções retornam dicionários de variáveis e seus respectivos valores.
+globals(): Retorna variáveis globais (escopo do módulo);
+locals(): Retorna variáveis locais (escopo local);
+vars(obj): sem argumentos é equivalente a locals(), com um argumento, equivalente a objeto.__dict__</p>
+</div></blockquote>
+<p>bla bla bla:</p>
+<p>&gt; foo = ‘escopo global’</p>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; def f():</dt><dd><p>foo = ‘escopo local’
+bar = ‘uma variável qualquer…’
+print(globals()[‘foo’])
+print(locals()[‘foo’])</p>
+</dd>
+</dl>
+<p>bla bla bla:</p>
+<p>&gt; f()</p>
+<p>escopo global
+escopo local</p>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; class Spam(object):</dt><dd><p>foo = ‘’
+bar = ‘’</p>
+</dd>
+</dl>
+<p>bla bla bla:</p>
+<p>&gt; vars(Spam)</p>
+<dl class="simple">
+<dt>&lt;dictproxy {‘__dict__’: &lt;attribute ‘__dict__’ of ‘Spam’ objects&gt;,</dt><dd><p>‘__doc__’: None,
+‘__module__’: ‘__main__’,
+‘__weakref__’: &lt;attribute ‘__weakref__’ of ‘Spam’ objects&gt;,
+‘bar’: ‘’,
+‘foo’: ‘’}&gt;</p>
+</dd>
+</dl>
+<p>bla bla bla:</p>
+<dl class="simple">
+<dt>&gt; def f():</dt><dd><p>global x
+x = 7</p>
+</dd>
+</dl>
+<p>bla bla bla:</p>
+<p>&gt; type(x)</p>
+<p>NameError: name ‘x’ is not defined</p>
+<p>bla bla bla:</p>
+<p>&gt; f()</p>
+<p>bla bla bla:</p>
+<p>&gt; type(x)</p>
+<p>int</p>
+<p>bla bla bla:</p>
+<p>&gt; print(x)</p>
+<p>7</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="property.html" class="btn btn-neutral float-left" title="18. Encapsulamento" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

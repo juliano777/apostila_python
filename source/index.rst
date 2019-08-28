@@ -30,6 +30,7 @@ Curso de Python
    content/oo
    content/staticmethod_classmethod
    content/property
+   content/scope
 
 
 
