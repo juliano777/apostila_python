@@ -131,12 +131,10 @@ Bytecode
 
 
 .. code-block:: bash
-
-mkdir -p /tmp/python/PacoteA/PacoteA1
-touch /tmp/python/PacoteA/__init__.py
-touch /tmp/python/PacoteA/PacoteA1/__init__.py
-
-vim /tmp/python/PacoteA/Modulo1.py
+    mkdir -p /tmp/python/PacoteA/PacoteA1
+    touch /tmp/python/PacoteA/__init__.py
+    touch /tmp/python/PacoteA/PacoteA1/__init__.py
+    vim /tmp/python/PacoteA/Modulo1.py
 
 def funcao():
     print('Hello World!!!')
