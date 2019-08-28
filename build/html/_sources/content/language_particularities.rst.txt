@@ -4,7 +4,7 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
-.. table:: Truth table for "not"
+.. table::
     :widths: auto
 
     +--------+----------+---------+----------+---------+
