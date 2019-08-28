@@ -16,6 +16,7 @@ Curso de Python
    content/built-ins
    content/data_types
    content/str
+   content/numeric_data_types
 
 
 
