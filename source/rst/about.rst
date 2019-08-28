@@ -72,27 +72,27 @@ A Filosofia de Python
 E então verá o seguinte texto (parte em inglês):
 
 ::
-The Zen of Python, by Tim Peters
-O Zen de Python, por Tim Peters
+    The Zen of Python, by Tim Peters
+    O Zen de Python, por Tim Peters
 
-Beautiful is better than ugly.
-Bonito é melhor do que feio.
-Explicit is better than implicit.
-Explícito é melhor do que implícito.
-Simple is better than complex.
-Simples é melhor do que complexo.
-Complex is better than complicated.
-Complexo é melhor do que complicado.
-Flat is better than nested.
-Plano é melhor do que aninhado.
-Sparse is better than dense.
-Disperso é melhor do que denso.
-Readability counts.
-Legibilidade conta.
-Special cases aren't special enough to break the rules.
-Casos especiais não são especiais o bastante para quebrar as regras.
-Although practicality beats purity.
-Embora a praticidade vença a pureza.
+    Beautiful is better than ugly.
+    Bonito é melhor do que feio.
+    Explicit is better than implicit.
+    Explícito é melhor do que implícito.
+    Simple is better than complex.
+    Simples é melhor do que complexo.
+    Complex is better than complicated.
+    Complexo é melhor do que complicado.
+    Flat is better than nested.
+    Plano é melhor do que aninhado.
+    Sparse is better than dense.
+    Disperso é melhor do que denso.
+    Readability counts.
+    Legibilidade conta.
+    Special cases aren't special enough to break the rules.
+    Casos especiais não são especiais o bastante para quebrar as regras.
+    Although practicality beats purity.
+    Embora a praticidade vença a pureza.
 Errors should never pass silently.
 Erros não devem passar silenciosamente.
 Unless explicitly silenced.
