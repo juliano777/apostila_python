@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>4. Tipos de Dados</title>
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tipos-de-dados">
+<h1>4. Tipos de Dados</h1>
+<blockquote>
+<div><blockquote>
+<div><p>Os tipos em Python podem ser mutáveis ou imutáveis, ou seja, permitem ou não alterar seu conteúdo.
+Todos os tipos de dados são objetos, pois não existem tipos primitivos em Python.</p>
+</div></blockquote>
+<p>O tipo de dado de um objeto é determinado em tempo de execução e não há uma declaração explícita como se vê em outras linguagens.</p>
+</div></blockquote>
+<p>Criação de um objeto e verificando seu tipo:</p>
+<p>&gt; x = 7</p>
+<p>&gt; type(x)</p>
+<p>int</p>
+<p>Variáveis</p>
+<blockquote>
+<div><p>São criadas através de atribuição de valor e quando não existem mais referência a elas são destruídas pelo garbage colector.
+Seus nomes devem começar por uma letra (não acentuadas) ou por underline “_”.</p>
+</div></blockquote>
+<p>Tipagem Dinâmica</p>
+<blockquote>
+<div><p>No mesmo código pode ter objetos diferentes com o mesmo nome.
+Como dito anteriormente, o tipo é determinado na execução e um mesmo nome pode ter tipos diferentes ao longo do código, porém na verdade será outro objeto.</p>
+</div></blockquote>
+<p>Criação de dois objetos de mesmo nome:</p>
+<p>&gt; x = 3.7</p>
+<p>&gt; id(x)</p>
+<p>140291958334736</p>
+<p>&gt; type(x)</p>
+<p>float</p>
+<p>&gt; x = ‘foo’</p>
+<p>&gt; id(x)</p>
+<p>140292017787768</p>
+<p>&gt; type(x)</p>
+<p>str</p>
+<blockquote>
+<div><p>Foram criados dois objetos “x”, sendo o primeiro float e o segundo uma string.
+Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.</p>
+</div></blockquote>
+<p>Tipagem Forte</p>
+<blockquote>
+<div><p>A tipagem em Python além de dinâmica ela é forte.
+Em casos de operações matemáticas, por exemplo, é necessário fazer um cast para ser possível quando os tipos são incompatíveis.</p>
+</div></blockquote>
+<p>Soma entre um um número de ponto flutuante e um inteiro:</p>
+<p>&gt; 5.0 + 2</p>
+<p>7.0</p>
+<p>Tentativa de soma entre uma string e um inteiro.</p>
+<p>&gt; ‘5’ + 2</p>
+<p>TypeError: must be str, not int</p>
+<p>Soma utilizando cast.</p>
+<p>&gt; int(‘5’) + 2</p>
+<p>7</p>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

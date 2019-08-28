@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>5. Strings</title>
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="strings">
+<h1>5. Strings</h1>
+<blockquote>
+<div><p>Em Ciências da Computação chamamos de string um texto, também conhecido como cadeia de caracteres.
+Strings representam textos, frases ou palavras.
+É um recurso muito caro em termos de recursos computacionais (processamento e memória) e que portanto deve ser utilizado com cuidado, pois escalabilidade é algo que deve ser sempre um fator a ser levado em conta.</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/string.html">https://docs.python.org/3/library/string.html</a></p>
+</div></blockquote>
+<p># ============================================================================</p>
+<div class="section" id="strings-em-python">
+<h2>5.1. Strings em Python</h2>
+<blockquote>
+<div><p>Pode-se usar tanto entre aspas como entre apóstrofos.</p>
+</div></blockquote>
+<p>Declaração de uma variável string utilizando apóstrofos:</p>
+<p>&gt; s1 = ‘string’</p>
+<p>Declaração de uma variável string utilizando aspas:</p>
+<p>&gt; s2 = “string”</p>
+<p>Declaração de uma variável string utilizando a função str:</p>
+<p>&gt; s = str(‘foo’)</p>
+<p># ============================================================================</p>
+</div>
+<div class="section" id="apostrofos-ou-aspas-qual-devo-utilizar">
+<h2>5.2. Apóstrofos ou aspas? Qual devo utilizar?</h2>
+<blockquote>
+<div><p>Se não tivessem essas duas opções, se fosse apenas aspas como em outras linguagens, em uma string que precisa ter aspas, seria preciso escapar com a contrabarra desta maneira: “. O que também funcionaria.
+Fazer uso de contrabarra para escapar por muitas vezes pode ser um tanto confuso e tornar o código menos legível.
+Com a facilidade de se poder utilizar ambos torna o escape desnecessário para a maioria dos casos em que aspas ou apóstrofos façam parte de uma string.</p>
+</div></blockquote>
+<p>Dois exemplos com print de strings com aspas e apóstrofos dentro:</p>
+<p>&gt; print(‘Uma string que contém “aspas” em si’)</p>
+<p>Uma string que contém “aspas” em si</p>
+<p>&gt; print(“Uma string que contém ‘apóstrofos’ em si”)</p>
+<p>Uma string que contém ‘apóstrofos’ em si</p>
+<p>Um caso clássico é em strings com um comando SQL:</p>
+<p>&gt; sql = “SELECT * FROM musica WHERE artista = ‘Mozart’;”</p>
+<p>Exibindo o conteúdo da variável:</p>
+<p>&gt; print(sql)</p>
+<p>SELECT * FROM musica WHERE artista = ‘Mozart’;</p>
+<p># ============================================================================</p>
+</div>
+<div class="section" id="strings-de-multiplas-linhas">
+<h2>5.3. Strings de Múltiplas Linhas</h2>
+<p>É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:</p>
+<p>&gt; s1 = ‘’’
+Um
+exemplo
+de string
+de várias
+linhas
+‘’‘</p>
+<p>&gt; s2 = “””
+Um
+exemplo
+de string
+de várias
+linhas
+“”“</p>
+<p>Utilizando parênteses para um string longa sem quebrar linha:</p>
+<dl class="simple">
+<dt>&gt; s3 = (‘Um exemplo de string feito para não ultrapassar os setenta e nove ‘</dt><dd><p>‘caracteres da PEP8 (Python Enhancement Proposal), Proposta de ‘
+‘aprimoramento do Python, que visa boas práticas de programação.’)</p>
+</dd>
+</dl>
+<p>&gt; print(s3)
+Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da PEP8 (Python Enhancement Proposal), Proposta de aprimoramento do Python, que visa boas práticas de programação.</p>
+<p># ============================================================================</p>
+</div>
+<div class="section" id="caracteres-especiais">
+<h2>5.4. Caracteres Especiais</h2>
+<p>———————-+———————————————————-+—————–+————+
+| \                  | Imprime uma contrabarra                                  | ‘'            |          |
+|                     |                                                          |                 |            |
+| ‘                  | Imprime um apóstrofo                                     | ‘’’            | ‘          |
+|                     |                                                          |                 |            |
+| ”                  | Imprime uma aspa                                         | ‘”’            | ”          |
+|                     |                                                          |                 |            |
+| a                  | ASCII bell (beep)                                        | ‘a’            |            |
+|                     |                                                          |                 |            |
+| b                  | ASCII backspace (BS) remove o caractere anterior         | ‘Casasb ‘      | Casa       |
+|                     |                                                          |                 |            |
+| f                  | ASCII formfeed (FF)                                      | ‘foofbar’      | foo        |
+|                     |                                                          |                 |    bar     |
+|                     |                                                          |                 |            |
+| n                  | ASCII linefeed (LF)                                      | ‘foonbar’      | foo        |
+|                     |                                                          |                 | bar        |
+|                     |                                                          |                 |            |
+| N{name}            | Imprime um caractere da base de dados Unicode            | ‘N{DAGGER}’    | †          |
+|                     |                                                          |                 |            |
+| r                  | ASCII carriage return (CR)                               | ‘foorbar’      | bar        |
+|                     |                                                          |                 |            |
+| t                  | ASCII horizontal tab (TAB) Imprime TAB                   | ‘footbar’      | foo    bar |
+|                     |                                                          |                 |            |
+| v                  | ASCII vertical tab (VT)                                  | ‘foovbar’      | foo        |
+|                     |                                                          |                 |    bar     |
+|                     |                                                          |                 |            |
+| uxxxx              | Imprime 16-bit valor hexadecimal de caractere Unicode    | ‘u041b’        | Л          |
+|                     |                                                          |                 |            |
+| Uxxxxxxxx          | Imprime 32-bit valor hexadecimal de caractere Unicode    | ‘U000001a9’    | Ʃ          |
+|                     |                                                          |                 |            |
+| ooo                | Imprime o character baseado em seu valor octal           | ‘077’          | ?          |
+|                     |                                                          |                 |            |
+| xhh                | Imprime o character baseado em seu valor hexadecimal     | ‘1xaa’         | 1ª         |
++———————+———————————————————-+——————————+</p>
+<p># ============================================================================</p>
+</div>
+<div class="section" id="formatacao">
+<h2>5.5. Formatação</h2>
+<blockquote>
+<div><p>Há casos que é necessário fazer formatação de strings colocando uma string como um template.
+Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), posteriormente foi adicionado o método format.</p>
+</div></blockquote>
+<p>Interpolação:</p>
+<p>&gt; ‘%s %s’ % (‘foo’, ‘bar’)</p>
+<p>‘foo bar’</p>
+<p>Método format:</p>
+<p>&gt; ‘{} {}’.format(‘foo’, ‘bar’)</p>
+<p>‘foo bar’</p>
+<p>Valores numéricos decimais:</p>
+<p>&gt; ‘%d %d’ % (70, 90)</p>
+<p>&gt; ‘{} {}’.format(70, 90)</p>
+<p>‘70 90’</p>
+<p>Interpolação pegando o valor de um dicionário:</p>
+<p>&gt; print(‘%(variavel)s’ % {‘variavel’: ‘valor’})</p>
+<p>valor</p>
+<p>Variável que vai receber os valores formatados:</p>
+<p>&gt; foo = ‘’‘Produto: %(prod)s
+Preco: R$ %(preco).2f
+Cód: %(cod)05d
+‘’‘</p>
+<p>Declaraçãoi de um dicionário que conterá as chaves e valores desejados:</p>
+<p>&gt; d = {‘prod’: ‘Pente’, ‘preco’: 3.5, ‘cod’: 157}</p>
+<p>Exibindo o resultado via interpolação:</p>
+<p>&gt; print(foo % d)</p>
+<p>Produto: Pente
+Preco: R$ 3.50
+Cód: 00157</p>
+<p>Exibindo o resultado via método format:</p>
+<p>&gt; print(foo.format(<a href="#id1"><span class="problematic" id="id2">**</span></a>d))</p>
+<p>Produto: Pente
+Preco: R$ 3.50
+Cód: 00157</p>
+<p>String com índice posicional:</p>
+<p>&gt; ‘O {1} {2} quando é {0}.’.format(‘compartilhado’, ‘conhecimento’, ‘aumenta’)</p>
+<p>‘O Conhecimento aumenta quando se compartilhado’</p>
+<p>Métodos String e de Representação</p>
+<blockquote>
+<div><p>Em objetos temos os dunders str e repr (“__str__” e “__repr__”) que podem ser usados em uma string.</p>
+</div></blockquote>
+<p>Criação de uma classe de exemplo:</p>
+<p>&gt; class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __str__(self):</dt><dd><p>return ‘STRING’</p>
+</dd>
+<dt>def __repr__(self):</dt><dd><p>return ‘REPRESENTAÇÃO’</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Valores dos métodos __str__ e __repr__ da classe Foo:</p>
+<p>&gt; ‘%s %r’ % (Foo(), Foo())</p>
+<p>&gt; ‘{0!s} {0!r}’.format(Foo())</p>
+<p>‘STRING REPRESENTAÇÃO’</p>
+<p>Método de representação e em caracteres ASCII:</p>
+<p>&gt; ‘%r %a’ % (Foo(), Foo())</p>
+<p>&gt; ‘{0!r} {0!a}’.format(Foo())</p>
+<p>‘REPRESENTAÇÃO REPRESENTA\xc7\xc3O’</p>
+<p>Preenchimento (padding) e Alinhamento de Strings</p>
+<p>Alinhamento à direita dentro de 7 colunas:</p>
+<p>&gt; ‘%7s’ % ‘foo’</p>
+<p>&gt; ‘{:&gt;7}’.format(‘foo’)</p>
+<p>‘    foo’</p>
+<p>Alinhamento à esquerda dentro de 7 colunas:</p>
+<p>&gt; ‘%-7s’ % ‘foo’</p>
+<p>&gt; ‘{:7}’.format(‘foo’)</p>
+<p>&gt; ‘{:&lt;7}’.format(‘foo’)</p>
+<p>‘foo    ‘</p>
+<p>Alinhamento centralizado dentro de 7 colunas:</p>
+<p>&gt; ‘{:^7}’.format(‘foo’)</p>
+<p>‘  foo  ‘</p>
+<p>Alinhamento à esquerda dentro de 7 colunas preenchendo com o caractere “_”:</p>
+<p>&gt; ‘{:_&lt;7}’.format(‘foo’)</p>
+<p>‘foo____’</p>
+<p>Alinhamento à direita dentro de 7 colunas preenchendo com o caractere “_”:</p>
+<p>&gt; ‘{:_&gt;7}’.format(‘foo’)</p>
+<p>‘____foo’</p>
+<p>Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere “_”:</p>
+<p>&gt; ‘{:^7}’.format(‘foo’)</p>
+<p>‘__foo__’</p>
+<p>Número decimal:</p>
+<p>&gt; ‘{:.3f}’.format(93.85741)</p>
+<p>‘93.857’</p>
+<p>&gt; ‘{:.3f}’.format(70000)</p>
+<p>‘70000.000’</p>
+<p># ============================================================================</p>
+</div>
+<div class="section" id="representacoes-de-inteiros">
+<h2>5.6. Representações de Inteiros</h2>
+<ol class="loweralpha simple" start="2">
+<li><p>Formato binário; número de saída na base 2:</p></li>
+</ol>
+<p>&gt; format(10, ‘#05b’)</p>
+<p>‘0b1010’</p>
+<ol class="loweralpha simple" start="3">
+<li><p>Caractere; converte o inteiro para o caractere unicode correspondente:</p></li>
+</ol>
+<p>&gt; format(93, ‘c’)</p>
+<p>‘]’</p>
+<ol class="loweralpha simple" start="4">
+<li><p>Inteiro Decimal; saída numérica na base 10 (decimal):</p></li>
+</ol>
+<p>&gt; format(0b111, ‘#05d’)</p>
+<p>‘00007’</p>
+<ol class="loweralpha simple" start="15">
+<li><p>Formato Octal; saída numérica na base 8 (octal):</p></li>
+</ol>
+<p>&gt; format(9, ‘#05o’)</p>
+<p>‘0o011’</p>
+<p>x ou X) Formato Hexadecimal; saída numérica na base 16 (hexadecimal), a saída é conforme o “x” maiúsculo ou minúsculo:</p>
+<p>&gt; format(200, ‘#05x’)</p>
+<p>‘0x0c8’</p>
+<p>&gt; format(200, ‘#05X’)</p>
+<p>‘0X0C8’</p>
+<ol class="loweralpha simple" start="14">
+<li><p>Numérico; o mesmo que “d”, exceto que ele usa as configurações de idioma (locale) para exibir caracteres:</p></li>
+</ol>
+<p>&gt; format(31259.74, ‘n’)</p>
+<p>‘31259.7’</p>
+<p>&gt; format(31259.75, ‘n’)</p>
+<p>‘31259.8’</p>
+<p>None) Nulo; o mesmo que “d”:</p>
+<p>&gt; format(0b111)</p>
+<p>‘7’</p>
+<p>Para representação exponencial pode-se utilizar tanto “e” ou “E”, cuja precisão padrão é 6:</p>
+<p>&gt; format(1000, ‘.3e’)</p>
+<p>‘1.000e+03’</p>
+<p>&gt; format(1000, ‘.3E’)</p>
+<p>‘1.000E+03’</p>
+<p>“f” ou “F” faz exibição de número com ponto flutuante podendo determinar a precisão, cujo padrão é 6.</p>
+<p>&gt; format(1000, ‘10.2f’)</p>
+<p>‘   1000.00’</p>
+<p>&gt; format(1000, ‘F’)</p>
+<p>‘1000.000000’</p>
+<p>“g” ou “G”; formato geral. Para uma dada precisão, sendo essa precisão maior ou igual a ‘ (um), arredonda o número para p (precisão) de dígitos significantes:</p>
+<p>&gt; format(1000, ‘10.2G’)</p>
+<p>‘     1E+03’</p>
+<p>&gt; format(1000, ‘10.3G’)</p>
+<p>‘     1e+03’</p>
+<p>&gt; format(100000, ‘g’)</p>
+<p>‘100000’</p>
+<p>&gt; format(1000000, ‘g’)</p>
+<p>‘1e+06’</p>
+<p>&gt; format(999.5, ‘10.4G’)</p>
+<p>‘     999.5’</p>
+<p>&gt; format(999.5, ‘10.3G’)</p>
+<p>‘     1E+03’</p>
+<p># ============================================================================</p>
+</div>
+<div class="section" id="tipos-de-strings-em-python">
+<h2>5.7. Tipos de Strings em Python</h2>
+<blockquote>
+<div><p>Em Python temos algumas variações de strings, cada qual é designada por um prefixo, que é uma letra que representa o tipo de string e por omissão é unicode.
+Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r” raw e “u” unicode.</p>
+</div></blockquote>
+<p>Como unicode é padrão, podemos omitir o prefixo:</p>
+<p>&gt; print(u’Foo’ == ‘Foo’)</p>
+<p>True</p>
+<div class="section" id="bytes-b">
+<h3>5.7.1. Bytes (b)</h3>
+<blockquote>
+<div><p>Strings de bytes utilizam o prefixo “b” e quando contém caracteres especiais, esses são representados pelo código hexadecimal da codificação utilizada.</p>
+</div></blockquote>
+<p>Criação de 3 (três) strings comuns:</p>
+<p>&gt; s1 = ‘Sem caracteres especiais’</p>
+<p>&gt; s2 = ‘Macarrão’</p>
+<p>&gt; s3 = ‘Ação’</p>
+<p>A partir das três strings criadas anteriormente, criar outras três strings, mas strings de bytes:</p>
+<p>&gt; sb1 = s1.encode(‘utf-8’)</p>
+<p>&gt; sb2 = s2.encode(‘utf-8’)</p>
+<p>&gt; sb3 = s3.encode(‘utf-8’)</p>
+<blockquote>
+<div><p>O método encode, utilizando a codificação UTF-8 faz a codificação de cada caractere para bytes.</p>
+</div></blockquote>
+<p>Exibir o conteúdo das strings de bytes:</p>
+<p>&gt; print(sb1)</p>
+<p>b’Sem caracteres especiais’</p>
+<p>&gt; print(sb2)</p>
+<p>b’Macarrxc3xa3o’</p>
+<p>&gt; print(sb3)</p>
+<p>b’Axc3xa7xc3xa3o’</p>
+<blockquote>
+<div><p>As strings que tinham caracteres especiais ficaram um tanto “estranhas”…
+xc3xa3 -&gt; ã
+xc3xa7 -&gt; ç</p>
+</div></blockquote>
+<p>Conversão de bytes:</p>
+<p>&gt; print(b’xc3xa3’.decode(‘utf-8’))</p>
+<p>ã</p>
+<p>&gt; print(b’xc3xa7’.decode(‘utf-8’))</p>
+<p>ç</p>
+<p>A letra grega sigma é considerada como um caractere especial:</p>
+<p>&gt; print(‘∑’.encode(‘utf-8’))</p>
+<p>b’xe2x88x91’</p>
+<p>Caminho reverso:</p>
+<p>&gt; print(b’xe2x88x91’.decode(‘utf-8’))</p>
+<p>∑</p>
+<p>A partir das strings de bytes obter o texto:</p>
+<p>&gt; print(sb1.decode(‘utf-8’))</p>
+<p>Sem caracteres especiais</p>
+<p>&gt; print(sb2.decode(‘utf-8’))</p>
+<p>Macarrão</p>
+<p>&gt; print(sb3.decode(‘utf-8’))</p>
+<p>Ação</p>
+<p>Pode-se também criar um objeto bytes a partir da classe:</p>
+<p>&gt; b = bytes(‘∑’.encode(‘utf-8’))</p>
+<p>Verificando o tipo:</p>
+<p>&gt; print(type(b))</p>
+<p>&lt;class ‘bytes’&gt;</p>
+<blockquote>
+<div><p>Uma byte string tem um tipo específico, bytes.</p>
+</div></blockquote>
+<p>Exibindo a byte string:</p>
+<p>&gt; print(b)</p>
+<p>b’xe2x88x91’</p>
+<p>Decodificando para unicode:</p>
+<p>&gt; print(b.decode(‘utf-8’))</p>
+<p>∑</p>
+<p>Verificando o tipo quando o objeto é decodificado:</p>
+<p>&gt; type(b.decode(‘utf-8’))</p>
+<p>str</p>
+<blockquote>
+<div><p>Ao ser decodificado passa a ser uma string.</p>
+</div></blockquote>
+</div>
+<div class="section" id="format-strings">
+<h3>5.7.2. Format Strings</h3>
+<blockquote>
+<div><p>Ou também conhecidas como “f strings” foi um recurso adicionado à versão 3.6 de Python.</p>
+</div></blockquote>
+<p>Definição de variáveis:</p>
+<p>&gt; marca = ‘Fiat’</p>
+<p>&gt; modelo = ‘147’</p>
+<p>&gt; ano = 1985</p>
+<p>&gt; cor = ‘azul’</p>
+<p>Exibir mensagem com uma f string:</p>
+<p>&gt; print(f’Comprei um {marca} {modelo} {cor} ano {ano}’)</p>
+<p>Comprei um Fiat 147 azul ano 1985</p>
+<p>Uma f string também permite que se use expressões:</p>
+<p>&gt; print(f’{5 + 2}’)</p>
+<p>7</p>
+<p>Métodos e funções também são permitidos:</p>
+<p>&gt; print(f’{cor.upper()}’)</p>
+<p>AZUL</p>
+<p>Criação de uma classe de exemplo que recebe quatro parâmetros:</p>
+<dl>
+<dt>&gt; class Carro(object):</dt><dd><p># Método de inicialização (construtor)
+def __init__(self, marca, modelo, ano, cor):</p>
+<blockquote>
+<div><p>self.marca = marca
+self.modelo = modelo
+self.ano = ano
+self.cor = cor</p>
+</div></blockquote>
+<p># Método string
+def __str__(self):</p>
+<blockquote>
+<div><p>return f’{marca} {modelo} / {cor} / {ano}’</p>
+</div></blockquote>
+<p># Método de representação
+def __repr__(self):</p>
+<blockquote>
+<div><p>return f’{marca} {modelo} | {cor} | {ano}’</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>Criação de um objeto Carro:</p>
+<p>&gt; c = Carro(marca, modelo, ano, cor)</p>
+<p>Print do método __str__ do objeto:</p>
+<p>&gt; print(f’{c}’)</p>
+<p>Fiat 147 / azul / 1985</p>
+<p>Print do método __repr__ do objeto:</p>
+<p>&gt; print(f’{c!r}’)</p>
+<p>Fiat 147 | azul | 1985</p>
+<p>f string de múltiplas linhas:</p>
+<dl class="simple">
+<dt>&gt; msg = f’Marca: {marca}n’</dt><dd><p>f’Modelo: {modelo}n’f’Ano: {ano}n’f’Cor: {cor}’</p>
+</dd>
+</dl>
+<p>Exibir a mensagem:</p>
+<p>&gt; print(msg)</p>
+<p>Marca: Fiat
+Modelo: 147
+Ano: 1985
+Cor: azul</p>
+<p>f String entre parênteses:</p>
+<dl class="simple">
+<dt>&gt; msg = (f’Marca: {marca} - ‘</dt><dd><p>f’Modelo: {modelo} - ‘
+f’Ano: {ano} - ‘
+f’Cor: {cor}’)</p>
+</dd>
+</dl>
+<p>Exibir a mensagem:</p>
+<p>&gt; print(msg)</p>
+<p>Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul</p>
+<p>Raw Strings (r)</p>
+<blockquote>
+<div><p>É o tipo de string cujo conteúdo é interpretado literalmente.</p>
+</div></blockquote>
+<p>Exemplo de print com raw string:</p>
+<p>&gt; print(r’footbar’)</p>
+<p>footbar</p>
+<blockquote>
+<div><p>É de se notar que a string não teve interpretação do caractere especial de tab (t), ou seja, não houve qualquer interpretação.</p>
+</div></blockquote>
+<p>Unicode Strings (u)</p>
+<blockquote>
+<div><p>É o padrão para uma string em Python, não há a necessidade de adicionar o sufixo “u” antes do apóstrofo ou aspas.</p>
+</div></blockquote>
+<p>Comparação de strings:</p>
+<p>&gt; u’Foo’ == ‘Foo’</p>
+<p>True</p>
+<blockquote>
+<div><p>Das duas strings, somente a primeira tem o sufixo “u”.</p>
+</div></blockquote>
+<p># ============================================================================</p>
+</div>
+</div>
+<div class="section" id="operacoes-de-strings">
+<h2>5.8. Operações de Strings</h2>
+<p>Concatenação:</p>
+<p>&gt; print(“Curso” + ” de ” + “Python”)</p>
+<p>Curso de Python</p>
+<p>&gt; spam = “Curso”.__add__(” de “.__add__(“Python”))</p>
+<p>&gt; print(spam)</p>
+<p>Curso de Python</p>
+<p>Multiplicação:</p>
+<p>&gt; print(‘&lt;’ + ‘Python’ * 3 + ‘&gt;’)</p>
+<p>&lt;PythonPythonPython&gt;</p>
+<p>&gt; print(‘&lt;’ + ‘Python’.__mul__(3) + ‘&gt;’)</p>
+<p>‘&lt;PythonPythonPython&gt;’</p>
+<p>Split - Quebra a string em palavras formando uma lista:</p>
+<p>&gt; print(‘Curso de Python’.split())</p>
+<p>[‘Curso’, ‘de’, ‘Python’]</p>
+<p>&gt; print(‘Curso de Python’.split(‘de’))</p>
+<p>[‘Curso ‘, ‘ Python’]</p>
+<p>Slice - Corte de string - ‘string’[inicio:fim - 1:incremento]:</p>
+<p>&gt; print(“Curso de Python”[0])</p>
+<p>‘C’</p>
+<p>&gt; print(“Curso de Python”[1:5])</p>
+<p>‘urso’</p>
+<p>&gt; print(“Curso de Python”[1:5:2])</p>
+<p>‘us’</p>
+<p>&gt; print(“Curso de Python”[9:])</p>
+<p>‘Python’</p>
+<p>&gt; print(“Curso de Python”[:5])</p>
+<p>‘Curso’</p>
+<p>&gt; print(“Curso de Python”[::])</p>
+<p>‘Curso de Python’</p>
+<p>&gt; print(“Curso de Python”[::-1]) # String reversa</p>
+<p>‘nohtyP ed osruC’</p>
+</div>
+<div class="section" id="docstrings">
+<h2>5.9. Docstrings</h2>
+<blockquote>
+<div><p>São strings que vêm logo após a definição de uma função, de um método ou de uma classe.
+É muito útil para fins de documentação.
+Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ ou a função help.</p>
+</div></blockquote>
+<p>Criação de uma função:</p>
+<dl class="simple">
+<dt>&gt; def foo():</dt><dd><p>‘Uma simples função’</p>
+</dd>
+</dl>
+<p>Exibe a docstring da função:</p>
+<p>&gt; print(foo.__doc__)</p>
+<p>Uma simples função</p>
+<p>Criação de função:</p>
+<dl class="simple">
+<dt>&gt; def bar():</dt><dd><p>‘’’
+Mais outra
+função
+que não faz
+nada
+‘’‘</p>
+</dd>
+</dl>
+<p>Exibe a docstring da função:</p>
+<p>&gt; print(bar.__doc__)</p>
+<blockquote>
+<div><p>Mais outra
+função
+que não faz
+nada</p>
+</div></blockquote>
+<p>Criação de uma classe:</p>
+<dl class="simple">
+<dt>&gt; class Foo(object):</dt><dd><p>‘’’
+Uma classe
+de teste
+‘’‘</p>
+</dd>
+</dl>
+<p>Exibe a docstring da classe:</p>
+<p>&gt; print(Foo.__doc__)</p>
+<blockquote>
+<div><p>Uma classe
+de teste</p>
+</div></blockquote>
+<p>Help da classe:</p>
+<p>&gt; help(Foo)</p>
+<p>Help on class Foo in module __main__:</p>
+<dl>
+<dt>class Foo(__builtin__.object)</dt><dd><div class="line-block">
+<div class="line">Uma classe</div>
+<div class="line">de teste</div>
+<div class="line"><br /></div>
+<div class="line">Data descriptors defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object (if defined)</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="imutabilidade">
+<h2>5.10. Imutabilidade</h2>
+<blockquote>
+<div><p>Strings em Python são imutáveis.</p>
+</div></blockquote>
+<p>Criação de uma string:</p>
+<p>&gt; foo = ‘bar’</p>
+<p>Primeiro elemento da string:</p>
+<p>&gt; foo[0]</p>
+<p>‘b’</p>
+<p>Tentativa de redefinição do primeiro elemento da string:</p>
+<p>&gt; foo[0] = ‘B’</p>
+<p>TypeError: ‘str’ object does not support item assignment</p>
+<p>Id da string:</p>
+<p>&gt; id(foo)</p>
+<p>139876439773904</p>
+<p>Criação de uma string com o mesmo nome da anterior utilizando concatenação e slice:</p>
+<p>&gt; foo = ‘B’ + foo[1:]</p>
+<p>Verificando o Id da variável:</p>
+<p>&gt; id(foo)</p>
+<p>140159122071800</p>
+<blockquote>
+<div><p>Nota-se que o Id é diferente, pois agora é outro objeto.</p>
+</div></blockquote>
+<p>Exibindo o valor da variável:</p>
+<p>&gt; print(foo)</p>
+<p>Bar</p>
+<p>Criação de uma nova string:</p>
+<p>&gt; s = ‘Black’</p>
+<p>Id da string:</p>
+<p>&gt; id(s)</p>
+<p>140159159537600</p>
+<p>Criando uma nova string com o mesmo nome da anterior via concatenação:</p>
+<p>s += ‘ Sabbath’</p>
+<p>Id da nova variável:</p>
+<p>&gt; id(s)</p>
+<p>140159122296368</p>
+<blockquote>
+<div><p>Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.</p>
+</div></blockquote>
+<p>Exibindo a string:</p>
+<p>&gt; print(s)</p>
+<p>Black Sabbath</p>
+<p>Concatenação de Strings em Loops</p>
+<p>Método 1 - Ineficaz</p>
+<p>Criação de uma string vazia:</p>
+<p>&gt; s = ‘’</p>
+<p>Loop de concatenação:</p>
+<dl class="simple">
+<dt>&gt; for i in range(50):</dt><dd><p>s += str(i)</p>
+</dd>
+</dl>
+<p>String pronta:</p>
+<p>&gt; s</p>
+<p>‘012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849’</p>
+<blockquote>
+<div><p>Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
+Isso faz muita alocação de memória, o que torna o desempenho horrível para coisas maiores.</p>
+</div></blockquote>
+<p>Método 2 Eficaz</p>
+<p>Criação de uma lista vazia:</p>
+<p>&gt; s = []</p>
+<p>Loop de concatenação:</p>
+<dl class="simple">
+<dt>&gt; for i in range(50):</dt><dd><p>s.append(str(i))</p>
+</dd>
+</dl>
+<p>Fazendo a junção de uma string vazia com a lista criada com seus elementos via método append:</p>
+<p>&gt; ‘’.join(s)</p>
+<p>012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849’</p>
+<p>Criando uma string via método join da lista de mesmo nome:</p>
+<p>&gt; s = ‘’.join(s)</p>
+<p>Exibindo o valor da variável:</p>
+<p>&gt; s</p>
+<p>‘012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849’</p>
+<blockquote>
+<div><p>Foi criada uma lista de strings no loop em que a cada iteração é utilizado o método append da lista para adicionar o item atual.
+No final é utilizado o método de string join que utiliza como separador uma string vazia (‘’) juntando em uma string (o novo s) todos os valores da lista.
+A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.</p>
+</div></blockquote>
+</div>
+<div class="section" id="metodos-de-strings">
+<h2>5.11. Métodos de Strings</h2>
+<ul class="simple">
+<li><p>join; junta elementos de uma lista ou tupla utlizando uma string.</p></li>
+</ul>
+<p>Criação de uma lista:</p>
+<p>&gt; foo = list(‘Python’)</p>
+<p>Exibe a lista:</p>
+<p>&gt; print(foo)</p>
+<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]</p>
+<p>Criação de uma nova variável juntando os elementos da lista com uma string vazia:</p>
+<p>&gt; bar = ‘’.join(foo)</p>
+<p>Exibindo a nova string:</p>
+<p>&gt; print(bar)</p>
+<p>Python</p>
+<p>Criando uma tupla:</p>
+<p>&gt; foo = tuple(‘Python’)</p>
+<p>Exibindo os elementos da tupla:</p>
+<p>&gt; print(foo)</p>
+<p>(‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’)</p>
+<p>Criação de uma nova variável juntando os elementos da tupla com uma string vazia:</p>
+<p>&gt; bar = ‘’.join(foo)</p>
+<p>Exibindo o valor da variável:</p>
+<p>&gt; print(bar)</p>
+<p>Python</p>
+<ul class="simple">
+<li><p>find &amp; index (diferença entre ambos)</p></li>
+</ul>
+<p>Dada a seguinte string:</p>
+<p>&gt; foo = ‘Python FreeBSD PostgreSQL’</p>
+<p>Temos seus caracteres e suas respectivas posições:</p>
+<p>P|y|t|h|o|n| <a href="#id3"><span class="problematic" id="id4">|</span></a>F|r|e|e <a href="#id5"><span class="problematic" id="id6">|</span></a>B <a href="#id7"><span class="problematic" id="id8">|</span></a>S <a href="#id9"><span class="problematic" id="id10">|</span></a>D |  <a href="#id11"><span class="problematic" id="id12">|</span></a>P <a href="#id13"><span class="problematic" id="id14">|</span></a>o <a href="#id15"><span class="problematic" id="id16">|</span></a>s <a href="#id17"><span class="problematic" id="id18">|</span></a>t <a href="#id19"><span class="problematic" id="id20">|</span></a>g <a href="#id21"><span class="problematic" id="id22">|</span></a>r <a href="#id23"><span class="problematic" id="id24">|</span></a>e <a href="#id25"><span class="problematic" id="id26">|</span></a>S <a href="#id27"><span class="problematic" id="id28">|</span></a>Q <a href="#id29"><span class="problematic" id="id30">|</span></a>L
+0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24</p>
+<p>A partir de qual posição aparece a string?:</p>
+<p>&gt; foo.index(‘FreeBSD’)</p>
+<p>&gt; foo.find(‘FreeBSD’)</p>
+<p>7</p>
+<blockquote>
+<div><p>No exemplo dado o texto existe na string. E se não existisse?</p>
+</div></blockquote>
+<p>Buscando um texto que não existe dentro da string:</p>
+<p>&gt; foo.index(‘Linux’)</p>
+<p>ValueError: substring not found</p>
+<p>&gt; foo.find(‘Linux’)</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-1</span></kbd></dt>
+<dd><p>Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.
+O -1 não deve ser confundido como último elemento.</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>count</p></li>
+</ul>
+<p>Na frase em latim abaixo, quantas vezes aparece a letra “u”?:</p>
+<p>&gt; ‘sic mundus creatus est’.count(‘u’)</p>
+<p>3</p>
+<p>Quantas vezes aparece a sequência de caracteres “foo”?:</p>
+<p>&gt; ‘XXXfooXXXfooXXXbar’.count(‘foo’)</p>
+<p>2</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

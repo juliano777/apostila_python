@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Comandos e Funções Importantes</title>
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="comandos-e-funcoes-importantes">
+<h1>3. Comandos e Funções Importantes</h1>
+<blockquote>
+<div><p>Neste capítulo são abordados comandos e funções interessantes e / ou imprescindíveis para a linguagem.</p>
+</div></blockquote>
+<p>print</p>
+<blockquote>
+<div><p>Em Python 2 era um comando e em Python 3 passou a ser exclusivamente uma função.
+Seu objetivo é imprimir uma mensagem que por padrão é STDOUT.</p>
+</div></blockquote>
+<p>Help de print:</p>
+<p>&gt; help(print)</p>
+<blockquote>
+<div><p>print(value, …, sep=’ ‘, end=’n’, file=sys.stdout, flush=False)</p>
+<p>Imprime para um stream, or to sys.stdout por padrão.
+Argumentos opcionais:
+file:  um arquivo como um objeto (stream); o padrão é sys.stdout.
+sep:   String inserida entre valores, o padrão é um espaço.
+end:   String adicionada após o último valor, o pdarão é uma nova linha (‘n’).
+flush: Se força ou não o flush (escrita) do stream, o padrão é False.</p>
+</div></blockquote>
+<p>&lt;Tradução&gt;</p>
+<blockquote>
+<div><p>Mais detalhes sobre streams são vistos em open.</p>
+</div></blockquote>
+<p>Um simples “Hello, world!”:</p>
+<p>&gt; print(‘Hello, world!’)</p>
+<p>Hello, world!</p>
+<p>Pode-se passar mais de uma string como parâmetro:</p>
+<p>&gt; print(‘foo’, ‘bar’, ‘baz’)</p>
+<p>foo bar baz</p>
+<p>Colocando como separador uma nova linha para cada string passada como parâmetro:</p>
+<p>&gt; print(‘foo’, ‘bar’, ‘baz’, sep=’n’)</p>
+<p>foo
+bar
+baz</p>
+<p>range()</p>
+<blockquote>
+<div><p>É uma função que retorna um objeto com uma faixa inteiros (range object).
+Muito útil para uso em loops.</p>
+</div></blockquote>
+<p>Sintaxe:</p>
+<blockquote>
+<div><p>range(stop)
+range(start, stop[, step])</p>
+<p>start: Valor inicial da sequência, por padrão é 0 (zero).
+stop:  Valor final da sequẽncia - 1.
+step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que stop, ou seja, para se fazer uma sequência regressiva é preciso um número negativo.</p>
+</div></blockquote>
+<p>Um parâmetro (stop):</p>
+<dl class="simple">
+<dt>&gt; for i in range(10):</dt><dd><p>print(i)</p>
+</dd>
+</dl>
+<p>0
+1
+2
+3
+4
+5
+6
+7
+8
+9</p>
+<p>Dois parâmetros (start e stop):</p>
+<dl class="simple">
+<dt>&gt; for i in range(3, 10):</dt><dd><p>print(i)</p>
+</dd>
+</dl>
+<p>3
+4
+5
+6
+7
+8
+9</p>
+<p>Três parâmetros (start, stop e step):</p>
+<dl class="simple">
+<dt>&gt; for i in range(1, 10, 2):</dt><dd><p>print(i)</p>
+</dd>
+</dl>
+<p>1
+3
+5
+7
+9</p>
+<p>sequẽncia regressiva:</p>
+<dl class="simple">
+<dt>&gt; for i in range(20, 1, -5):</dt><dd><p>print(i)</p>
+</dd>
+</dl>
+<p>20
+15
+10
+5</p>
+<p>filter</p>
+<blockquote>
+<div><p>Função que retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.</p>
+</div></blockquote>
+<p>Criação de uma função que retorna True se o objeto for ímpar:</p>
+<dl class="simple">
+<dt>&gt; def impar(x):</dt><dd><p>return x % 2 != 0</p>
+</dd>
+</dl>
+<p>Testando a função:</p>
+<p>&gt; impar(7)</p>
+<p>True</p>
+<p>&gt; impar(6)</p>
+<p>False</p>
+<p>Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente com os elementos ímpares e posteriormente ser convertido para lista:</p>
+<p>&gt; f = filter(impar, range(0, 20))</p>
+<p>&gt; list(f)</p>
+<p>[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]</p>
+<p>map</p>
+<blockquote>
+<div><p>Cria um iterador que aplica uma função para cada elemento do iterável.</p>
+</div></blockquote>
+<p>Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string respectivamente:</p>
+<p>&gt; m = map(len, (‘spam’, ‘foo’, ‘bar’, ‘eggs’, ‘Python’))</p>
+<p>&gt; list(m)</p>
+<p>[4, 3, 3, 4, 6]</p>
+<p>Para cada item da lista, criar uma nova lista com seus respectivos tipos:</p>
+<p>&gt; m = map(type, [‘foo’, 1.4, 2 + 5j, 1000])</p>
+<p>&gt; list(m)</p>
+<p>[str, float, complex, int]</p>
+<p>Para cada item da primeira lista elevar (potência) ao elemento respectivo na segunda lista e criar uma nova lista com os resultados:</p>
+<p>&gt; m = map(pow, [3, 7, 5, 10], [2, 1, 7, 3])</p>
+<p>&gt; list(m)</p>
+<p>[9, 7, 78125, 1000]</p>
+<p>reduce</p>
+<blockquote>
+<div><p>Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.</p>
+</div></blockquote>
+<p>Via loop somar todos elementos de uma tupla:</p>
+<p>&gt; soma = 0  # Variável que terá o valor da soma após o loop</p>
+<dl class="simple">
+<dt>&gt; for i in (2, 1, 4, 3):  # Loop e incrementação</dt><dd><p>soma += i</p>
+</dd>
+</dl>
+<p>&gt; print(soma)  # Exibe o resultado</p>
+<p>10</p>
+<p>Importando reduce de functools;</p>
+<p>&gt; from functools import reduce</p>
+<p>Função reduce para executar a mesma tarefa anterior com apenas um comando:</p>
+<p>&gt; reduce(int.__add__, (2, 1, 4, 3))</p>
+<p>10</p>
+<p>del</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Pode ser tanto um comando como uma função cuja finalidade é remover a referência de um objeto.</dt><dd><p>Também apaga elemento de uma coleção.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Teste de del em um objeto mutável (lista):</p>
+<p>&gt; lista = [‘a’, ‘b’, ‘c’]  # Definição da lista</p>
+<p>&gt; del lista[1]  # Apaga o segundo elemento da lista</p>
+<p>ou</p>
+<p>&gt; del(lista[1])  # Equivalência ao comando anterior em forma de função</p>
+<p>&gt; print(lista)  # Exibe a lista após o elemento ser retirado da mesma</p>
+<p>[‘a’, ‘c’]</p>
+<p>Teste de del para desalocar um objeto criado:</p>
+<p>&gt; foo = ‘bar’  # Objeto string criado</p>
+<p>&gt; print(foo)  # Verificando o valor da string</p>
+<p>bar</p>
+<p>&gt; del foo  # Apagando o objeto string</p>
+<p>&gt; print(foo)  # Tentativa de imprimir o valor do objeto desalocado</p>
+<p>NameError: name ‘foo’ is not defined</p>
+<blockquote>
+<div><p>Nota-se que após o del não é possível mais fazer referência ao objeto.</p>
+</div></blockquote>
+<p>ord e chr</p>
+<blockquote>
+<div><p>A função ord retorna o código Unicode de um caractere.
+A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode. Em Python 2 chr era unichr.</p>
+</div></blockquote>
+<p>ord e chr</p>
+<blockquote>
+<div><p>A função ord retorna o código Unicode de um caractere.
+A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode. Em Python 2 chr era unichr.</p>
+</div></blockquote>
+<p>Exemplos de ord e chr:</p>
+<p>&gt; ord(‘n’)  # Qual é o código Unicode para new line?</p>
+<p>10</p>
+<p>&gt; chr(10)  # Qual caractere Unicode corresponde ao código 10?</p>
+<p>‘n’</p>
+<p>&gt; ord(‘r’)  # Qual é o código unicode para carriage return?</p>
+<p>13</p>
+<p>&gt; chr(13)  # Qual caractere Unicode corresponde ao código 13?</p>
+<p>‘r’</p>
+<p>&gt; chr(97)  # Qual caractere Unicode corresponde ao código 97?</p>
+<p>‘a’</p>
+<p>&gt; ord(‘a’)  # Qual é o código unicode para o caractere “a”?</p>
+<p>97</p>
+<p>&gt; chr(120)  # Qual caractere Unicode corresponde ao código 120?</p>
+<p>‘x’</p>
+<p>&gt; chr(981)  # Qual caractere Unicode corresponde ao código 981?</p>
+<p>‘ϕ’</p>
+<p>dir</p>
+<blockquote>
+<div><blockquote>
+<div><p>Função que lista atributos e métodos de um elemento.</p>
+</div></blockquote>
+<p>Se chamada sem nenhum argumento retorna os nomes do escopo atual.
+A chamada dessa função é correspondente ao executar o método __dir__.</p>
+</div></blockquote>
+<p>Definição de variáeis:</p>
+<p>&gt; x = 0</p>
+<p>&gt; y = 1</p>
+<p>&gt; z = 2</p>
+<p>Execução da função dir sem parâmetros:</p>
+<p>&gt; dir()</p>
+<dl class="simple">
+<dt>[‘In’,</dt><dd><p>‘Out’,</p>
+</dd>
+<dt>…</dt><dd><p>‘x’,
+‘y’,
+‘z’]</p>
+</dd>
+</dl>
+<p>A variável foi declarada no escopo?:</p>
+<p>&gt; ‘x’ and ‘y’ and ‘y’ and ‘z’ in dir()</p>
+<p>True</p>
+<p>&gt; ‘w’ in dir()</p>
+<p>False</p>
+<p>Criação de uma classe:</p>
+<dl>
+<dt>&gt; class Pessoa(object):</dt><dd><p># Atributos</p>
+<p>nome = ‘’
+rg = ‘’
+cpf = 0
+email = ‘’</p>
+<p># Métodos
+def saudacao(self):</p>
+<blockquote>
+<div><p>print(‘Olá’)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def dizer_nome(self):</dt><dd><p>print(‘Meu nome é {}’.format(self.nome))</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Verificando o conteúdo da classe (atributos e métodos):</p>
+<p>&gt; dir(Pessoa)</p>
+<p>ou</p>
+<p>&gt; p.__dir__()</p>
+<dl class="simple">
+<dt>[‘__class__’,</dt><dd><p>‘__delattr__’,
+‘__dict__’,</p>
+</dd>
+</dl>
+<p>…</p>
+<blockquote>
+<div><p>‘cpf’,
+‘dizer_nome’,
+‘email’,
+‘nome’,
+‘rg’,
+‘saudacao’]</p>
+</div></blockquote>
+<p>Criação de um objeto da classe e definição de atributos:</p>
+<p>&gt; p = Pessoa()  #</p>
+<p>&gt; p.nome = ‘Chiquinho’</p>
+<p>&gt; p.rg = ‘00000000’</p>
+<p>&gt; p.cpf = 12345678901</p>
+<p>&gt; p.email = <a class="reference external" href="mailto:'chiquinho&#37;&#52;&#48;chiquinhodasilva&#46;xx">‘chiquinho<span>&#64;</span>chiquinhodasilva<span>&#46;</span>xx</a>’</p>
+<p>Atributo __dict__, que é um dicionário que contém os atributos do objeto:</p>
+<p>&gt; p.__dict__</p>
+<dl class="simple">
+<dt>{‘nome’: ‘Chiquinho’,</dt><dd><p>‘rg’: ‘00000000’,
+‘cpf’: 12345678901,
+‘email’: <a class="reference external" href="mailto:'chiquinho&#37;&#52;&#48;chiquinhodasilva&#46;xx">‘chiquinho<span>&#64;</span>chiquinhodasilva<span>&#46;</span>xx</a>’}</p>
+</dd>
+</dl>
+<p>Pegando o valor do atributo pelo dicionário:</p>
+<p>&gt; p.__dict__[‘nome’]</p>
+<p>‘Chiquinho’</p>
+<p>Com o auxílio de da função dir, listar todos os métodos do objeto:</p>
+<dl>
+<dt>&gt; def is_dunder(s):  # Função que servirá para a função principal</dt><dd><p>‘’’
+Função que retorna True para dunder strings
+‘’‘</p>
+<p># Se começar e terminar com “__” retornar True
+if s.startswith(‘__’) and s.endswith(‘__’):</p>
+<blockquote>
+<div><p>return True</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>return False</p>
+</dd>
+</dl>
+</dd>
+<dt>&gt; def mostra_metodos(objeto):</dt><dd><p>‘’’
+Função que mostra em tela todos os nomes de métodos de um objeto
+‘’‘</p>
+<p># Generator que conterá os nomes dos métodos por tuple comprehension
+metodos = (metodo for metodo in dir(objeto)  # Para cada item do objeto</p>
+<blockquote>
+<div><blockquote>
+<div><p>if (not is_dunder(metodo)) and  # se não for um dunder
+callable(getattr(objeto, metodo))  # e se for “chamável”</p>
+</div></blockquote>
+<p>)</p>
+</div></blockquote>
+<p># Loop para exibir os nomes dos métodos
+for i in metodos:</p>
+<blockquote>
+<div><p>print(i)</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>Chamando a função criada para imprimir em tela os nomes dos métodos:</p>
+<p>&gt; mostra_metodos(p)</p>
+<p>dizer_nome
+saudacao</p>
+<p>pass</p>
+<blockquote>
+<div><p>É um comando de  operação nula, ou seja, quando é executado nada acontece. É útil como um marcador quando um statement é requerido sintaticamente, mas não tem necessidade de um código a ser executado.</p>
+</div></blockquote>
+<p>Função que nada faz:</p>
+<dl class="simple">
+<dt>&gt; def nula():</dt><dd><p>‘’’
+Função sem utilidade
+‘’’
+pass</p>
+</dd>
+</dl>
+<p>assert</p>
+<blockquote>
+<div><p>Um statements assert é uma maneira conveniente para inserir asserções de debug.
+O comando assert verifica em tempo de execução uma determinada condição e se a mesma não for verdadira uma exceção AssertionError é lançada e se essa exceção não for tratada, o programa pára.</p>
+</div></blockquote>
+<p>Criação do script com assert sem tratamento de exceção:</p>
+<p>$ cat &lt;&lt; EOF &gt; /tmp/assert_sem_try.py
+print(‘Começo’)</p>
+<p>assert 1 == 1  # OK
+assert 2 == 1  # Ops…</p>
+<p>print(‘Fim’)
+EOF</p>
+<p>Execução:</p>
+<p>$ python3.7 /tmp/assert_sem_try.py</p>
+<p>Começo
+Traceback (most recent call last):</p>
+<p>…</p>
+<p>AssertionError</p>
+<blockquote>
+<div><p>Nota-se que a execução do script não chegou até o fim.</p>
+</div></blockquote>
+<p>Criação do script com assert com tratamento de exceção:</p>
+<p>$ cat &lt;&lt; EOF &gt; /tmp/assert_com_try.py
+print(‘Começo’)</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>assert 1 == 1  # OK
+assert 2 == 1  # Ops…</p>
+</dd>
+<dt>except AssertionError:</dt><dd><p>print(‘Teve erro…’)</p>
+</dd>
+</dl>
+<p>print(‘Fim’)
+EOF</p>
+<p>Execução:</p>
+<p>$ python3.7 /tmp/assert_com_try.py</p>
+<p>Começo
+Teve erro…
+Fim</p>
+<p>abs</p>
+<blockquote>
+<div><p>Retorna o valor absoluto do argumento.</p>
+<p>abs(x)</p>
+</div></blockquote>
+<p>Exemplos:</p>
+<p>&gt; abs(3)</p>
+<p>3</p>
+<p>&gt; abs(-3)</p>
+<p>3</p>
+<p>divmod</p>
+<blockquote>
+<div><p>Função que retorna uma tupla de dois elementos no formato (x//y, x%y), respectivamente resultado da divisão inteira e resto da divisão:</p>
+</div></blockquote>
+<p>Exemplos:</p>
+<p>&gt; divmod(11, 4)  # Equivalente: 11 // 4, 11 % 4</p>
+<p>(2, 3)</p>
+<p>round</p>
+<blockquote>
+<div><p>Função que retorna um número de forma arredondada dada uma precisão em dígitos decimais.
+O valor de retorno é um inteiro se o número de dígitos for omitido ou None. Caso contrário, o valor de retorno terá o mesmo tipo do número. O número de dígitos pode ser negativo.</p>
+</div></blockquote>
+<p>Arredondamento sem especificar o número de dígitos (segundo parâmetro):</p>
+<p>&gt; round(3.333333)</p>
+<p>3</p>
+<p>Arredondamento com quatro dígitos de precisão:</p>
+<p>&gt; round(3.333333, 4)</p>
+<p>3.3333</p>
+<p>Precisão variando de 1 a -3:</p>
+<p>&gt; round(1237.87431, 1)</p>
+<p>1237.9</p>
+<p>&gt; round(1237.87431, 0)</p>
+<p>1238.0</p>
+<p>&gt; round(1237.87431, -1)</p>
+<p>1240.0</p>
+<p>&gt; round(1237.87431, -2)</p>
+<p>1200.0</p>
+<p>&gt; round(1237.87431, -3)</p>
+<p>1000.0</p>
+<p>callable</p>
+<blockquote>
+<div><p>Função que retorna True se o objeto é “chamável” (callable) (i. e., algum tipo de função).
+Vale lembrar que classes também são chamáveis, bem como objetos de classes que implementam o método __call__().</p>
+</div></blockquote>
+<p>Criação de uma função:</p>
+<dl class="simple">
+<dt>&gt; def myfunction():</dt><dd><p>pass</p>
+</dd>
+</dl>
+<p>Criação de uma classe sem o método __call__():</p>
+<dl class="simple">
+<dt>&gt; class Foo:</dt><dd><p>pass</p>
+</dd>
+</dl>
+<p>Criação de uma classe com o método __call__():</p>
+<dl class="simple">
+<dt>&gt; class Bar:</dt><dd><dl class="simple">
+<dt>def __call__(self):</dt><dd><p>pass</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Instância da classe sem o método __call__():</p>
+<p>&gt; f = Foo()</p>
+<p>Instância da classe com o método __call__():</p>
+<p>&gt; b = Bar()</p>
+<p>Execuções de callable:</p>
+<p>&gt; callable(‘foo’)</p>
+<p>False</p>
+<p>&gt; callable(myfunction)</p>
+<p>True</p>
+<p>&gt; callable(Foo)</p>
+<p>True</p>
+<p>&gt; callable(Bar)</p>
+<p>True</p>
+<p>&gt; callable(f)</p>
+<p>False</p>
+<p>&gt; callable(b)</p>
+<p>True</p>
+<p>oct</p>
+<blockquote>
+<div><p>Função que retorna a representação octal de um inteiro.</p>
+</div></blockquote>
+<p>Exemplos:</p>
+<p>&gt; oct(9)</p>
+<p>‘0o11’</p>
+<p>&gt; oct(10)</p>
+<p>‘0o12’</p>
+<p>hash</p>
+<blockquote>
+<div><p>Função que retorna o valor hash de um dado objeto.
+Dois objetos que são comparados também devem ter o mesmo valor de hash.</p>
+</div></blockquote>
+<p>Testes com a função hash:</p>
+<p>&gt; hash(1)  # O hash de um inteiro vai ser seu próprio valor</p>
+<p>1</p>
+<p>&gt; hash(2)</p>
+<p>2</p>
+<p>&gt; x = ‘foo’  # Hash de uma string</p>
+<p>&gt; hash(x)</p>
+<p>8540844669962366372</p>
+<p>&gt; y = x  # Nova variável y igual a x</p>
+<p>&gt; hash(x) == hash(y)  # Por terem o mesmo valor, o hash será igual</p>
+<p>True</p>
+<p>&gt; hash([1, 2, 3])  #  Alguns tipos como list, dict e set são unhashable</p>
+<p>TypeError: unhashable type: ‘list’</p>
+<p>&gt; # Quando um número é muito grande seu hash será diferente de seu valor
+&gt; hash(9999999999999999999)</p>
+<p>776627963145224195</p>
+<p>id</p>
+<blockquote>
+<div><p>É uma função que retorna a identidade de um objeto.
+É a garantia que o objeto será único dentre outros.</p>
+</div></blockquote>
+<p>Criação de duas tuplas:</p>
+<p>&gt; foo = (‘x’, ‘y’)</p>
+<p>&gt; bar = (‘x’, ‘y’)</p>
+<p>Comparando as tuplas criadas:</p>
+<p>&gt; foo == bar</p>
+<p>True</p>
+<p>Verificando o a identidade das tuplas criadas:</p>
+<p>&gt; id(foo)</p>
+<p>139651439554952</p>
+<p>&gt; id(bar)</p>
+<p>139651403802056</p>
+<p>É o mesmo objeto?:</p>
+<p>&gt; foo is bar</p>
+<p>False</p>
+<p>Criação de uma nova variável atribuindo com base em um objeto pré-existente:</p>
+<p>&gt; baz = bar</p>
+<p>Comparando as variáveis:</p>
+<p>&gt; baz == bar</p>
+<p>True</p>
+<p>É o mesmo objeto?:</p>
+<p>&gt; baz is bar</p>
+<p>True</p>
+<p>&gt; id(bar) == id(baz)</p>
+<p>True</p>
+<blockquote>
+<div><p>Aqui fica demonstrado que quando se cria uma nova variável simplesmente por atribuição é na verdade a criação de uma nova referência (apontamento) para o mesmo objeto.</p>
+</div></blockquote>
+<p>len</p>
+<blockquote>
+<div><p>Função que retorna a quantidade de itens de um contêiner.</p>
+</div></blockquote>
+<p>Criação de um objeto contêiner e verificação da quantidade de elementos:</p>
+<p>&gt; foo = (‘x’, ‘y’, ‘z’, 123, 5.7)</p>
+<p>&gt; len(foo)</p>
+<p>5</p>
+<p>Tamanho de uma string:</p>
+<p>&gt; len(‘Heavy Metal’)</p>
+<p>11</p>
+<p>input</p>
+<blockquote>
+<div><p>É uma função de entrada de dados pelo teclado (STDIN), cujos dados são interpretados como string.
+Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p>
+</div></blockquote>
+<p>Entrada de dados sem prompt:</p>
+<p>&gt; foo = input()  # Digite algo…</p>
+<p>Imprimindo o valor da variável:</p>
+<p>&gt; print(foo)</p>
+<p>…</p>
+<p>Entrada de dados com prompt:</p>
+<p>&gt; foo = input(‘Digite uma string qualquer… ‘)</p>
+<p>Digite uma string qualquer…</p>
+<p>Imprimindo o valor da variável:</p>
+<p>&gt; print(foo)</p>
+<p>…</p>
+<p>min e max</p>
+<blockquote>
+<div><p>Dada uma coleção, seja ela uma lista, tupla, conjunto ou string, as funções min e max trazem, respectivamente, o valor mínimo e o máximo.</p>
+</div></blockquote>
+<p>Exemplos:</p>
+<p>&gt; min(0, 2, -50, 7)  # Valor mínimo entre inteiros</p>
+<p>-50</p>
+<p>&gt; max(0, 2, -50, 7)  # Valor máximo entre inteiros</p>
+<p>7</p>
+<p>&gt; max(‘c’, ‘x’, ‘k’)  # Para caracteres a ordem alfabética é levada em conta</p>
+<p>‘x’</p>
+<p>enumerate</p>
+<blockquote>
+<div><p>Função que retorna um objeto iterável.</p>
+</div></blockquote>
+<p>Criação de uma tupla:</p>
+<p>&gt; x = (‘verde’, ‘azul’, ‘amarelo’)</p>
+<p>Criação de um objeto iterável com base na tupla criada anteriormente:</p>
+<p>&gt; y = enumerate(x)</p>
+<p>Exibindo o tipo de y:</p>
+<p>&gt; type(y)</p>
+<p>enumerate</p>
+<p>Loop sobre o iterável:</p>
+<dl class="simple">
+<dt>&gt; for i, j in y:</dt><dd><p>print(‘{} - {}’.format(i, j))</p>
+</dd>
+</dl>
+<p>0 - verde
+1 - azul
+2 - amarelo</p>
+<p>Criar o iterável novamente:</p>
+<p>&gt; y = enumerate(x)</p>
+<p>Método __next__() que traz uma tupla com o índice e o valor:</p>
+<p>&gt; y. __next__()</p>
+<p>(0, ‘verde’)</p>
+<p>&gt; y. __next__()</p>
+<p>(1, ‘azul’)</p>
+<p>&gt; y. __next__()</p>
+<p>(2, ‘amarelo’)</p>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>
