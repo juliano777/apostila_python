@@ -211,7 +211,7 @@ Quando um módulo é carregado pela primeira vez ou se seu código é mais novo 
 
 .. code-block:: console
 
-    __init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc
+    Modulo2.py  __pycache__
 
 .. code-block:: bash
 
