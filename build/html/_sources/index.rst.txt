@@ -42,6 +42,8 @@ Curso de Python
    content/decorators
    content/exec_eval_execfile_compile
    content/recursive
+   content/threads
+   content/pytest
 
 
 
