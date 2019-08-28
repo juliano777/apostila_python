@@ -127,6 +127,8 @@ Bytecode
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
+
+Criação de diretórios que servirão como pacotes:
 .. code-block:: bash
 
     mkdir -p /tmp/python/PacoteA/PacoteA1
