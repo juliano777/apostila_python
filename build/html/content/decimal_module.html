@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="prev" title="7. Booleanos" href="boolean.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/decimal_module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>O Módulo decimal</p>
+<blockquote>
+<div><blockquote>
+<div><p>O módulo decimal fornece suporte para aritmética de ponto flutuante decimal.
+Ele oferece muitas vantagens sobre o tipo float.</p>
+</div></blockquote>
+<p>O módulo decimal “é baseado em um modelo de ponto flutuante que foi projetado com pessoas em mente e necessariamente tem um princípio orientador fundamental - computadores devem fornecer uma aritmética que funciona da mesma maneira que a aritmética que as pessoas aprendem na escola” - extraindo da especificação da aritmética decimal.
+Números decimais podem ser representados exatamente. Em contraste, números como 1.1 e 2.2 não têm representações exatas em ponto flutuante binário. Usuários finais não esperam que 1.1 + 2.2 seja exibido como 3.3000000000000003 como é feito como o ponto flutuante binário.</p>
+<blockquote>
+<div><p>A exatidão leva à aritmética. Com ponto flutuante decimal, 0.1 + 0.1 + 0.1 - 0.3 é exatamente igual a zero. Com ponto flutuante binário, o resultado é 5.5511151231257827e-017.</p>
+</div></blockquote>
+<p>Enquanto próximo a zero, as diferenças evitam testes de igualdade confiáveis e diferenças podem acumular. Por essa razão, decimal é preferido em aplicações de contabilidade que tem invariações de igualdade rigorosas.
+O módulo decimal incorpora a noção de posições (casas decimais) significantes em que 1.30 + 1.20 é 2.50. O zero no fim é mantido para indicar a significância. Esta é a apresentação habitual para aplicações monetárias. Para multiplicação, a abordagem do “livro de escola” usa todos os números nos multiplicandos. Por exemplo, 1.3 * 1.2 dá 1.56 enquanto que 1.30 * 1.20 dá 1.5600.
+Ao contrário de hardware baseado em ponto flutuante binário, o módulo decimal tem uma precisão alterável (padrão 28 casas decimais).</p>
+</div></blockquote>
+<p>Importação do módulo:</p>
+<p>&gt; import decimal</p>
+<p>Criação do objeto Decimal:</p>
+<p>&gt; d = decimal.Decimal(‘0.777’)</p>
+<p>Exibindo o valor do objeto decimal:</p>
+<p>&gt; d</p>
+<p>Decimal(‘0.777’)</p>
+<p>&gt; print(d)</p>
+<p>0.777</p>
+<p>Algumas coisas “estranhas”:</p>
+<p>&gt; 1.1 + 2.2</p>
+<p>3.3000000000000003</p>
+<p>&gt; 0.1 + 0.1 + 0.1 - 0.3
+5.551115123125783e-17</p>
+<p>Importando apenas a classe Decimal:</p>
+<p>&gt; from decimal import Decimal</p>
+<p>Fazendo as mesmas operações anteriores com o módulo decimal:</p>
+<p>&gt; Decimal(‘1.1’) + Decimal(‘2.2’)</p>
+<p>Decimal(‘3.3’)</p>
+<p>Importando a função getcontext:</p>
+<p>&gt; from decimal import getcontext</p>
+<p>Operações de multiplicação:</p>
+<p>&gt; Decimal(‘1.3’) * Decimal(‘1.2’)</p>
+<p>Decimal(‘1.56’)</p>
+<p>&gt; Decimal(‘1.30’) * Decimal(‘1.20’)</p>
+<p>Decimal(‘1.5600’)</p>
+<blockquote>
+<div><p>O último retorno foi com um número com 4 (quatro) casas decimais.</p>
+</div></blockquote>
+<p>A função getcontext, com o atributo “prec” (precision) ajusta a quantidade máxima de dígitos (antes e depois do ponto flutuante) para 3 (três):</p>
+<p>&gt; getcontext().prec = 3</p>
+<blockquote>
+<div><p>A precisão vai ser refletida em operações com o módulo decimal.
+Caso seja necessário o número será arredondado.</p>
+</div></blockquote>
+<p>Operação de multiplicação de números com ponto flutuante:</p>
+<p>&gt; Decimal(‘1.300’) * Decimal(‘1.200’)</p>
+<p>Decimal(‘1.56’)</p>
+<p>Ajustando a precisão para 10 (dez):</p>
+<p>&gt; getcontext().prec = 10</p>
+<p>&gt; Decimal(‘1.3897’) * 2</p>
+<p>Decimal(‘2.7794’)</p>
+<p>Ajustando a precisão para 3 (três):</p>
+<p>&gt; getcontext().prec = 3</p>
+<p>&gt; Decimal(‘1.3897’) * 2</p>
+<p>Decimal(‘2.78’)</p>
+<blockquote>
+<div><p>Nota-se que foi feito um arredondamento do número.</p>
+</div></blockquote>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="boolean.html" class="btn btn-neutral float-left" title="7. Booleanos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
