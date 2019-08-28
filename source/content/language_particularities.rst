@@ -486,9 +486,11 @@ In [2]: print('Teste')
 Teste
 
 	
-2.12 Atribuição de Valores
+Atribuição de Valores
+---------------------
 
-2.12.1 - Atribuição Simples
+Atribuição Simples
+~~~~~~~~~~~~~~~~~~
 
 foo = 0
 bar = 'bla bla bla'
@@ -527,7 +529,8 @@ print(y)
 10
 
 
-2.12.1 - Atribuição por Incremento ou Decremento
+Atribuição por Incremento ou Decremento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 x = 0
 x +=1

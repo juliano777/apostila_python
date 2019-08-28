@@ -469,11 +469,6 @@ print
 	Antes era somente um comando, a partir da série 3.X será apenas interpretado como função.
 
 
-Python 2.7:
-
-print 'Teste'
-Teste
-
 print('Teste')
 Teste
 
