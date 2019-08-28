@@ -71,7 +71,6 @@ A Filosofia de Python
 
 E então verá o seguinte texto (parte em inglês):
 
-::
 |    The Zen of Python, by Tim Peters
 |    O Zen de Python, por Tim Peters
 
