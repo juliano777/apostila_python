@@ -132,14 +132,6 @@ Bytecode
     mkdir -p /tmp/python/PacoteA/PacoteA1
     vim /tmp/python/PacoteA/Modulo1.py
     
-    
-
-
-.. highlight:: sql
-
-    SELECT * FROM mytable
-
-
 
 .. code-block:: python
 
@@ -150,8 +142,11 @@ Bytecode
 
 vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
 
-def funcao(numero):
-    print(numero ** 3)
+
+.. code-block:: python
+    
+    def funcao(numero):
+        print(numero ** 3)
 
 vim /tmp/python/foo.py
 
