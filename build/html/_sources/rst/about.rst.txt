@@ -66,14 +66,8 @@ A Filosofia de Python
 	Para visualizar esse easter egg basta que no shell interativo dê o seguinte comando:
 
 .. code-block:: python
-
-import this
-
-
-
-
-
-
+    
+    import this
 
 	E então verá o seguinte texto (parte em inglês):
 
