@@ -38,6 +38,7 @@ Curso de Python
    content/modules
    content/packages
    content/except
+   content/closures
 
 
 
