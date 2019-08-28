@@ -65,6 +65,12 @@ A Filosofia de Python
 	The Zen Of Python é a PEP 20, PEP que significa Python Enhancement Proposals (Propostas de Melhoria para Python).
 	Para visualizar esse easter egg basta que no shell interativo dê o seguinte comando:
 
+.. code-block:: python
+
+import this
+
+
+
 
 
 
