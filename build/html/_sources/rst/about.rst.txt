@@ -2,7 +2,7 @@ Sobre Python
 ************
 
 O que é Python
-**************
+--------------
 
 	Python é uma linguagem de programação criada pelo holandês Guido van Rossum no começo dos anos 90 na Stichting Mathematisch Centrum (http://www.cwi.nl/), na Holanda, com o objetivo de ser uma sucessora de uma linguagem chamada ABC.
 	O nome linguagem foi inspirado na série humorística Monty Python's Flying Circus, do grupo humorístico britânico Monty Python. 
@@ -11,7 +11,8 @@ O que é Python
 	Site oficial: www.python.org
 	Site da comunidade brasileira: www.python.org.br
 
-1.1.1 Características
+Características
+~~~~~~~~~~~~~~~
 
 Linguagem de altíssimo nível;
 Fácil de aprender;
