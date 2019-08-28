@@ -285,7 +285,8 @@ varTeste = 3 * 5 + \
 varLista = [7,14,25,
 81,121]
 
-2.9 Blocos 
+Blocos
+------
 
 	São delimitados por endentação e a linha anterior ao bloco sempre termina com dois pontos.
 
@@ -307,7 +308,8 @@ class Carro(object):
             print('Acendendo faróis')
             self.estado_farois = True
 
-2.10 Comentários 
+Comentários
+-----------
 
 	Inicia-se com o caractere "#" em cada linha.
 
