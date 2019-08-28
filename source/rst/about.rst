@@ -197,10 +197,20 @@ Execução do script:
 
 Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o  arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.
 
-ls /tmp/python/PacoteA/
-__init__.py  __init__.pyc  Modulo1.py  Modulo1.pyc  PacoteA1
+.. code-block:: bash
 
-ls /tmp/python/PacoteA/PacoteA1/
+    ls /tmp/python/PacoteA/
+
+.. code-block:: console
+
+    Modulo1.py  PacoteA1  __pycache__
+
+.. code-block:: bash
+
+    ls /tmp/python/PacoteA/PacoteA1/
+
+
+    
 __init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc
 
 file /tmp/python/PacoteA/Modulo1.pyc
