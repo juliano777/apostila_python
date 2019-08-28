@@ -1,4 +1,6 @@
 Tipos de Dados
+**************
+
 	Os tipos em Python podem ser mutáveis ou imutáveis, ou seja, permitem ou não alterar seu conteúdo.
 	Todos os tipos de dados são objetos, pois não existem tipos primitivos em Python.
     O tipo de dado de um objeto é determinado em tempo de execução e não há uma declaração explícita como se vê em outras linguagens.
