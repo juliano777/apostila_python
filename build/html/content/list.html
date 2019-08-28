@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/list.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Lista</p>
+<blockquote>
+<div><p>Uma lista é uma estrutura de dados similar ao tradicional array que tem em outras linguagens, porém seus elementos podem ser de tipos diferentes.
+Uma lista é também uma coleção de dados mutável, pois sua estrutura pode ser mudada.</p>
+</div></blockquote>
+<p>Formas de criar uma lista vazia:</p>
+<p>&gt; l = []</p>
+<p>ou</p>
+<p>&gt; l = list()</p>
+<p>Formas de criar uma lista com elementos:</p>
+<p>&gt; l = list([1, 2, 3])</p>
+<p>ou</p>
+<p>&gt; l = [1, 2, 3]</p>
+<p>Declaração de uma nova lista:</p>
+<p>&gt; x = [‘a’, ‘b’, 3, 4.0]</p>
+<p>Exibindo o terceiro elemento da lista:</p>
+<p>&gt; print(x[2])</p>
+<p>3</p>
+<p>Alterando o terceiro elemento da lista:</p>
+<p>&gt; x[2] = 30</p>
+<p>Exibindo o terceiro elemento da lista:</p>
+<p>&gt; print(x[2])</p>
+<p>30</p>
+<p>Exibindo os elementos da lista:</p>
+<p>&gt; print(x)</p>
+<p>[‘a’, ‘b’, 30, 4.0]</p>
+<p>Existe “7” na lista?:</p>
+<p>&gt; 7 in x</p>
+<p>False</p>
+<p>Existe “3” na lista?:</p>
+<p>&gt; 3 in x</p>
+<p>True</p>
+<p>O método append adiciona um elemento ao final da lista:</p>
+<p>&gt; x.append(‘Uma string qualquer…’)</p>
+<p>Exibindo os elementos da lista:</p>
+<p>&gt; print(x)</p>
+<p>[‘a’, ‘b’, 30, 4.0, ‘Uma string qualquer…’]</p>
+<p>O método extend faz com que os elementos de outra lista sejam adicionadas a uma lista atual:</p>
+<p>&gt; foo = [‘a’, ‘b’, ‘c’]  # Definição da primeira lista</p>
+<p>&gt; bar = [1, 2]  # Definição da segunda lista</p>
+<p>&gt; foo.extend(bar)  # Extendendo a primeira lista com os elementos da segunda</p>
+<p>&gt; print(foo)  # Exibindo a lista extendida</p>
+<p>[‘a’, ‘b’, ‘c’, 1, 2]</p>
+<p>O operador “+” sendo utilizado para criar uma nova lista a partir de outra somada à outra:</p>
+<p>&gt; y = x + [‘abobrinha’, ‘7’, {‘chave’: ‘valor’}, (‘SP’, ‘MG’, ‘PR’, ‘RO’)]</p>
+<p>Exibindo a nova lista:</p>
+<p>&gt; y</p>
+<dl class="simple">
+<dt>[‘a’,</dt><dd><p>‘b’,
+30,
+4.0,
+‘Uma string qualquer…’,
+‘abobrinha’,
+‘7’,
+{‘chave’: ‘valor’},
+(‘SP’, ‘MG’, ‘PR’, ‘RO’)]</p>
+</dd>
+</dl>
+<p>Utilizando “+=” como um atalho para o método extend e exibindo seu novo conteúdo:</p>
+<p>&gt; x += [‘xyz’]</p>
+<p>&gt; x</p>
+<p>[‘a’, ‘b’, 30, 4.0, ‘Uma string qualquer…’, ‘xyz’]</p>
+<p>Removendo um elemento da lista e exibindo seu novo conteúdo:</p>
+<p>&gt; x.remove(‘xyz’)</p>
+<p>&gt; x</p>
+<p>[‘a’, ‘b’, 30, 4.0, ‘Uma string qualquer…’]</p>
+<p>Método extend com uma lista como parâmetro:</p>
+<p>&gt; x.extend([‘xyz’])</p>
+<p>&gt; x</p>
+<p>[‘a’, ‘b’, 30, 4.0, ‘Uma string qualquer…’, ‘xyz’]</p>
+<p>Método extend com uma string como parâmetro:</p>
+<p>x.extend(‘xyz’)</p>
+<p>&gt; x</p>
+<p>[‘a’, ‘b’, 30, 4.0, ‘Uma string qualquer…’, ‘xyz’, ‘x’, ‘y’, ‘z’]</p>
+<blockquote>
+<div><p>Ao utilizarmos uma string como parâmetro do método extend, a string foi convertida em lista de forma a transformar cada caractere em elemento de uma lista.</p>
+</div></blockquote>
+<p>Método append:</p>
+<p>&gt; x.append(‘xyz’)</p>
+<p>&gt; x</p>
+<p>[‘a’, ‘b’, 30, 4.0, ‘Uma string qualquer…’, ‘xyz’, ‘x’, ‘y’, ‘z’, ‘xyz’]</p>
+<blockquote>
+<div><p>Aqui podemos ver claramente a diferença entre os métodos extend e append, que pode causar uma certa confusão inicial para quem está iniciando em Python. Nota-se que o método append adicionou a string inteira como um novo elemento da lista.</p>
+</div></blockquote>
+<p>Extendendo a lista com o operador “+=”:</p>
+<p>&gt; x += ‘String’</p>
+<p>&gt; x</p>
+<dl>
+<dt>[‘a’,</dt><dd><p>‘b’,
+30,
+4.0,
+‘Uma string qualquer…’,
+‘xyz’,
+‘x’,
+‘y’,
+‘z’,
+‘xyz’,
+‘S’,
+‘t’,
+‘r’,
+‘i’,
+‘n’,
+‘g’]</p>
+<blockquote>
+<div><p>Como o operador “+=” ser um atalho para o método extend ele transformou a string numa lista, uma lista cujos elementos são os caracteres da string.</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>Tentativa de utilizar o operador “+” em uma lista:</p>
+<p>&gt; x + ‘bla bla bla’</p>
+<p>TypeError: can only concatenate list (not “str”) to list</p>
+<blockquote>
+<div><p>Não se pode concatenar uma lista com uma string.</p>
+</div></blockquote>
+<p>Criação de uma nova lista a partir de uma string:</p>
+<p>&gt; z = list(‘Hobbit’)</p>
+<p>&gt; z</p>
+<p>[‘H’, ‘o’, ‘b’, ‘b’, ‘i’, ‘t’]</p>
+<p>Novamente o método append:</p>
+<p>&gt; z.append(‘Hobbit’)</p>
+<p>&gt; z</p>
+<p>[‘H’, ‘o’, ‘b’, ‘b’, ‘i’, ‘t’, ‘Hobbit’]</p>
+<p>Qual o tamanho (quantos elementos) da lista?</p>
+<p>&gt; len(z)</p>
+<p>7</p>
+<blockquote>
+<div><p>Tamanho 7, posições variam de 0 a 6.</p>
+</div></blockquote>
+<p>Método insert utilizando a priemira posição (0):</p>
+<p>&gt; z.insert(0, ‘Gandalf’)</p>
+<p>&gt; z</p>
+<p>[‘Gandalf’, ‘H’, ‘o’, ‘b’, ‘b’, ‘i’, ‘t’, ‘Hobbit’]</p>
+<p>Pode-se também verificar o tamanho de uma lista com o dunder len:</p>
+<p>&gt; z.__len__()</p>
+<p>8</p>
+<p>Dado que a lista tem 8 (oito) elementos, inserir num novo elemento na nona (8) posição:</p>
+<p>&gt; z.insert(8, ‘Bilbo’)</p>
+<p>&gt; z</p>
+<p>[‘Gandalf’, ‘H’, ‘o’, ‘b’, ‘b’, ‘i’, ‘t’, ‘Hobbit’, ‘Bilbo’]</p>
+<blockquote>
+<div><p>O efeito foi o mesmo que utilizar o método append.</p>
+</div></blockquote>
+<p>O método pop sem parâmetros retorna o último elemento e o apaga da lista:</p>
+<p>&gt; z.pop()</p>
+<p>‘Bilbo’</p>
+<p>&gt; z</p>
+<p>[‘Gandalf’, ‘H’, ‘o’, ‘b’, ‘b’, ‘i’, ‘t’, ‘Hobbit’]</p>
+<p>Como o método pop retorna o último elemento, o mesmo pode ser utilizado para atribuição:</p>
+<p>&gt; livro = (‘O {}’.format(z.pop()))</p>
+<p>&gt; livro</p>
+<p>‘O Hobbit’</p>
+<p>Retornando e apagando o sexto elemento:</p>
+<p>&gt; z.pop(5)</p>
+<p>‘i’</p>
+<p>Método sort, organiza a lista com seus elementos pela ordem alfabética:</p>
+<p>&gt; z.sort()</p>
+<p>&gt; z</p>
+<p>[‘Gandalf’, ‘H’, ‘b’, ‘b’, ‘i’, ‘o’, ‘t’]</p>
+<p>O método reverse pega a atual posição dos elementos e reconstrói a lista na ordem reversa:</p>
+<p>&gt; z.reverse()</p>
+<p>&gt; z</p>
+<p>[‘t’, ‘o’, ‘b’, ‘b’, ‘H’, ‘Gandalf’]</p>
+<p>A função sorted não altera a lista, apenas retorna o conteúdo pela ordem alfabética:</p>
+<p>&gt; sorted(z)</p>
+<p>[‘Gandalf’, ‘H’, ‘b’, ‘b’, ‘o’, ‘t’]</p>
+<p>&gt; z</p>
+<p>[‘t’, ‘o’, ‘i’, ‘b’, ‘b’, ‘H’, ‘Gandalf’]</p>
+<p>A função sorted também pode somente retornar o reverso de uma lista:</p>
+<p>&gt; sorted([1, 2, 3], reverse=True)</p>
+<p>[3, 2, 1]</p>
+<p>Criação de uma lista a partir do retorno de sorted:</p>
+<p>&gt; w = sorted(z)</p>
+<p>&gt; w</p>
+<p>[‘Gandalf’, ‘H’, ‘b’, ‘b’, ‘o’, ‘t’]</p>
+<p>&gt; z</p>
+<p>[‘t’, ‘o’, ‘b’, ‘b’, ‘H’, ‘Gandalf’]</p>
+<p>A função reversed() sempre retorna um iterador:</p>
+<p>&gt; reversed(z)</p>
+<p>&lt;listreverseiterator object at 0x1653c10&gt;</p>
+<p>Convertendo para lista o iterador gerado pela função reversed:</p>
+<p>&gt; z = list(reversed(z))</p>
+<p>&gt; z</p>
+<p>[‘Gandalf’, ‘H’, ‘b’, ‘b’, ‘o’, ‘t’]</p>
+<p>Função sorted transforma a string numa lista e organiza por ordem alfabética:</p>
+<p>&gt; sorted(‘aAcb’)</p>
+<p>[‘A’, ‘a’, ‘b’, ‘c’]</p>
+<p>Função sorted transforma a string numa lista e organiza por ordem alfabética:</p>
+<p>&gt; sorted(‘aAcb’, reverse=True)</p>
+<p>[‘c’, ‘b’, ‘a’, ‘A’]</p>
+<p>Função reversed transforma a string em uma lista com seus caracteres em ordem reversa:</p>
+<p>&gt; list(reversed(‘aAcb’))</p>
+<p>[‘b’, ‘c’, ‘A’, ‘a’]</p>
+<p>Definição de lista com 3 (três) elementos:</p>
+<p>&gt; x = [1, 2, 3]</p>
+<p>A partir da lista “x”, atribuir respectivamente seus elementos como valores para as variáveis à esquerdae exibir seus valores:</p>
+<p>&gt; a, b, c = x</p>
+<p>&gt; print(a)</p>
+<p>1</p>
+<p>&gt; print(b)</p>
+<p>2</p>
+<p>&gt; print(c)</p>
+<p>3</p>
+<p>E se a quantidade de variáveis que receberão os valores forem em menor número que a quantidade de elementos da lista?:</p>
+<p>&gt; y, z, = x</p>
+<p>ValueError: too many values to unpack (expected 2)</p>
+<blockquote>
+<div><p>Lista com três elementos não pode fazer atribuição respectiva a apenas duas variáveis.</p>
+</div></blockquote>
+<p>Utilização do caractere underscore como solução:</p>
+<p>&gt; y, z, _ = x</p>
+<p>&gt; print(y)</p>
+<p>1</p>
+<p>&gt; print(z)</p>
+<p>2</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
