@@ -5,6 +5,7 @@ Palavras Reservadas
 -------------------
 
 .. table:: Truth table for "not"
+    :widths: auto
 
     +--------+----------+---------+----------+---------+
     | False  | class    | finally | is       | return  |
