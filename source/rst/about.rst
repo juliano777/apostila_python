@@ -180,14 +180,15 @@ Edição de script de exemplo:
 
     Modulo2.funcao(3)
 
-$ python /tmp/python/foo.py 
+$ python /tmp/python/foo.py
 
-Atenção!!!
+.. code-block:: console
+    Atenção!!!
 
-O teste vai começar...
+    O teste vai começar...
 
-Hello World!!!
-27
+    Hello World!!!
+    27
 
 Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o  arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.
 
