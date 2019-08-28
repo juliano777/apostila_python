@@ -1,4 +1,5 @@
 Lista
+*****
 
     Uma lista é uma estrutura de dados similar ao tradicional array que tem em outras linguagens, porém seus elementos podem ser de tipos diferentes.
     Uma lista é também uma coleção de dados mutável, pois sua estrutura pode ser mudada.
