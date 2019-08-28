@@ -28,6 +28,7 @@ Curso de Python
    content/iter_gen
    content/functions
    content/oo
+   content/staticmethod_classmethod
 
 
 
