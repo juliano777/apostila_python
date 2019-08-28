@@ -21,7 +21,8 @@ def funcao():
 funcao()
 O quardrado de 7 é 49
 
-- O Comando return
+O Comando return
+----------------
 
 	O comando return dá um retorno para a função.
 	Uma função pode retornar um ou mais valores (coleções).
