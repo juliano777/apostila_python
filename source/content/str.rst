@@ -934,11 +934,9 @@ class Foo(__builtin__.object)
  |  __weakref__
  |      list of weak references to the object (if defined)
 
-# ============================================================================
-
-
 
 Imutabilidade
+-------------
 
     Strings em Python são imutáveis.
 
@@ -1107,11 +1105,10 @@ Exibindo o valor da variável:
 	No final é utilizado o método de string join que utiliza como separador uma string vazia ('') juntando em uma string (o novo s) todos os valores da lista.
 	A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.
 
-# ============================================================================
-
 
 
 Métodos de Strings
+------------------
 
 
 - join; junta elementos de uma lista ou tupla utlizando uma string.

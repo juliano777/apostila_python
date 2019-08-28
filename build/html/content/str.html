@@ -100,6 +100,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.8. Operações de Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#docstrings">5.9. Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imutabilidade">5.10. Imutabilidade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-de-strings">5.11. Métodos de Strings</a></li>
 </ul>
 </li>
 </ul>
@@ -696,8 +698,9 @@ de teste</p>
 </div>
 </dd>
 </dl>
-<p># ============================================================================</p>
-<p>Imutabilidade</p>
+</div>
+<div class="section" id="imutabilidade">
+<h2>5.10. Imutabilidade<a class="headerlink" href="#imutabilidade" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Strings em Python são imutáveis.</p>
 </div></blockquote>
@@ -776,8 +779,9 @@ Isso faz muita alocação de memória, o que torna o desempenho horrível para c
 No final é utilizado o método de string join que utiliza como separador uma string vazia (‘’) juntando em uma string (o novo s) todos os valores da lista.
 A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.</p>
 </div></blockquote>
-<p># ============================================================================</p>
-<p>Métodos de Strings</p>
+</div>
+<div class="section" id="metodos-de-strings">
+<h2>5.11. Métodos de Strings<a class="headerlink" href="#metodos-de-strings" title="Link permanente para este título">¶</a></h2>
 <ul class="simple">
 <li><p>join; junta elementos de uma lista ou tupla utlizando uma string.</p></li>
 </ul>
