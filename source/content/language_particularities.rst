@@ -351,7 +351,8 @@ funcao()
     Esta função não faz absolutamente nada
 
 
-2.11 Operadores
+Operadores
+----------
 
 Aritméticos
 
@@ -441,6 +442,7 @@ Potência
 **
 
 O Comando del
+-------------
 
 	Este comando tem como objetivo remover a referência de um objeto.
 	Se esse objeto não tiver outra referência, o garbage collector atuará liberando recursos.
@@ -466,11 +468,6 @@ print
 
 	Antes era somente um comando, a partir da série 3.X será apenas interpretado como função.
 
-
-Python 2.7:
-
-print 'Teste'
-Teste
 
 print('Teste')
 Teste
