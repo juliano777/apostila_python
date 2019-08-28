@@ -69,9 +69,6 @@ A Filosofia de Python
     
     import this
 
-E então verá o seguinte texto:
-
-
 .. code-block:: console
 
     The Zen of Python, by Tim Peters
