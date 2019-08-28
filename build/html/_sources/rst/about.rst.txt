@@ -133,6 +133,15 @@ Bytecode
     vim /tmp/python/PacoteA/Modulo1.py
 
 
+.. highlight:: sql
+
+From here on no highlighting will be done.
+
+::
+   SELECT * FROM mytable
+
+
+
 .. code-block:: python
 
     def funcao():
