@@ -159,15 +159,15 @@ vim /tmp/python/foo.py
     #!/usr/bin/env python
     #_*_ encoding: utf-8 _*_
 
-from PacoteA.Modulo1 import funcao
-from PacoteA.PacoteA1 import Modulo2
+    from PacoteA.Modulo1 import funcao
+    from PacoteA.PacoteA1 import Modulo2
 
-print('\nAtenção!!!\n')
-print('O teste vai começar...\n')
+    print('\nAtenção!!!\n')
+    print('O teste vai começar...\n')
 
-funcao()
+    funcao()
 
-Modulo2.funcao(3)
+    Modulo2.funcao(3)
 
 $ python /tmp/python/foo.py 
 

@@ -305,14 +305,18 @@ Para visualizar esse easter egg basta que no shell interativo dê o seguinte com
 <p>vim /tmp/python/foo.py</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1">#_*_ encoding: utf-8 _*_</span>
+
+<span class="kn">from</span> <span class="nn">PacoteA.Modulo1</span> <span class="kn">import</span> <span class="n">funcao</span>
+<span class="kn">from</span> <span class="nn">PacoteA.PacoteA1</span> <span class="kn">import</span> <span class="n">Modulo2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Atenção!!!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;O teste vai começar...</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">funcao</span><span class="p">()</span>
+
+<span class="n">Modulo2</span><span class="o">.</span><span class="n">funcao</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>from PacoteA.Modulo1 import funcao
-from PacoteA.PacoteA1 import Modulo2</p>
-<p>print(‘nAtenção!!!n’)
-print(‘O teste vai começar…n’)</p>
-<p>funcao()</p>
-<p>Modulo2.funcao(3)</p>
 <p>$ python /tmp/python/foo.py</p>
 <p>Atenção!!!</p>
 <p>O teste vai começar…</p>
