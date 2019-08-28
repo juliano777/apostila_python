@@ -338,10 +338,18 @@ Para visualizar esse easter egg basta que no shell interativo dê o seguinte com
 </pre></div>
 </div>
 <p>Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o  arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.</p>
-<p>ls /tmp/python/PacoteA/
-__init__.py  __init__.pyc  Modulo1.py  Modulo1.pyc  PacoteA1</p>
-<p>ls /tmp/python/PacoteA/PacoteA1/
-__init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /tmp/python/PacoteA/
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Modulo1.py  PacoteA1  __pycache__</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls /tmp/python/PacoteA/PacoteA1/
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">__init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc</span>
+</pre></div>
+</div>
 <p>file /tmp/python/PacoteA/Modulo1.pyc
 /tmp/python/PacoteA/Modulo1.pyc: python 2.7 byte-compiled</p>
 </div>

@@ -209,9 +209,9 @@ Quando um módulo é carregado pela primeira vez ou se seu código é mais novo 
 
     ls /tmp/python/PacoteA/PacoteA1/
 
+.. code-block:: console
 
-    
-__init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc
+    __init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc
 
 file /tmp/python/PacoteA/Modulo1.pyc
 /tmp/python/PacoteA/Modulo1.pyc: python 2.7 byte-compiled
