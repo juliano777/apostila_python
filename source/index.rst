@@ -20,6 +20,10 @@ Curso de Python
    content/boolean
    content/decimal_module
    content/date_time
+   content/sequences
+   content/list
+   content/tuple
+
 
 
 
