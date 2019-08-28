@@ -1,4 +1,6 @@
 Exceções
+Exceções
+********
 
 https://docs.python.org/2/tutorial/errors.html
 https://docs.python.org/2/library/exceptions.html
@@ -30,6 +32,7 @@ finally: Tendo exceção ou não é executado de qualquer jeito.
 
 
 raise
+-----
 
 
 

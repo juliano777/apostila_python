@@ -1,4 +1,7 @@
 Exceções
+Exceções
+********
+
 
 https://docs.python.org/2/tutorial/errors.html
 https://docs.python.org/2/library/exceptions.html
