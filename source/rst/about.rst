@@ -128,10 +128,12 @@ Bytecode
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
 
-Criação de diretórios que servirão como pacotes:
+Criação de estrutura de diretórios para teste de pacote e bytecode:
 .. code-block:: bash
 
     mkdir -p /tmp/python/PacoteA/PacoteA1
+
+ 
 
 
 .. code-block:: bash
