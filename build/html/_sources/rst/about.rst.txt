@@ -134,8 +134,7 @@ Criação de estrutura de diretórios para teste de pacote e bytecode:
 
     mkdir -p /tmp/python/PacoteA/PacoteA1
 
- 
-
+Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
 
 .. code-block:: bash
 
