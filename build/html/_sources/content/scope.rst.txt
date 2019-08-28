@@ -1,4 +1,5 @@
 Escopo
+******
 
     Por escopo entende-se o contexto onde um identificador será considerado.
     Um identificador pode ser uma variável, um comando, uma função uma clase ou um objeto.
