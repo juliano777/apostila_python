@@ -129,8 +129,6 @@ Bytecode
 
 .. highlight:: sh
 
-::
-
     mkdir -p /tmp/python/PacoteA/PacoteA1
     vim /tmp/python/PacoteA/Modulo1.py
 
