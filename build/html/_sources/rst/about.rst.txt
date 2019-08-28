@@ -132,8 +132,8 @@ Bytecode
 
 .. code-block:: bash
 
-    mkdir -p /tmp/python/PacoteA/PacoteA1
-    vim /tmp/python/PacoteA/Modulo1.py
+    $ mkdir -p /tmp/python/PacoteA/PacoteA1
+    $ vim /tmp/python/PacoteA/Modulo1.py
 
 
 .. code-block:: python
