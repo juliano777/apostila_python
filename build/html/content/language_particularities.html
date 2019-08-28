@@ -85,7 +85,10 @@
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Particularidades da Linguagem</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#palavras-reservadas">2.1. Palavras Reservadas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#definicao-do-interpretador-de-comandos">2.2. Definição do Interpretador de Comandos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definicao-do-interpretador-de-comandos">2.2. Definição do Interpretador de Comandos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#codificacao-conjunto-de-caracteres-encoding">2.2.1. Codificação (Conjunto de Caracteres - Encoding)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -175,7 +178,8 @@ break   except    in       raise
 <blockquote>
 <div><p>Obs.: Em ambientes Windows não é preciso espeficar, isso é pertinente a ambientes Unix.</p>
 </div></blockquote>
-<p>2.1.3 Codificação (Conjunto de Caracteres - Encoding)</p>
+<div class="section" id="codificacao-conjunto-de-caracteres-encoding">
+<h3>2.2.1. Codificação (Conjunto de Caracteres - Encoding)<a class="headerlink" href="#codificacao-conjunto-de-caracteres-encoding" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>É possível utilizar codificações diferentes de ASCII em arquivos de código-fonte.
 A melhor maneira de se fazer isso é colocar uma linha especial no começo do arquivo, se foi especificado o interpretador, deve vir logo depois dele:</p>
@@ -574,6 +578,7 @@ z = x</p>
 <p>del z</p>
 <p>O contador de referências chegou a 0 (zero), ou seja, não há mais referência para o objeto.
 Então entra em ação o Garbage Collector para limpar a memória.</p>
+</div>
 </div>
 </div>
 

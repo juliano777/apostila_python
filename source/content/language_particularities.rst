@@ -25,7 +25,8 @@ Definição do Interpretador de Comandos
 
 	Obs.: Em ambientes Windows não é preciso espeficar, isso é pertinente a ambientes Unix.
 
-2.1.3 Codificação (Conjunto de Caracteres - Encoding)
+Codificação (Conjunto de Caracteres - Encoding)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	É possível utilizar codificações diferentes de ASCII em arquivos de código-fonte.
 	A melhor maneira de se fazer isso é colocar uma linha especial no começo do arquivo, se foi especificado o interpretador, deve vir logo depois dele:
@@ -65,7 +66,9 @@ sys.setdefaultencoding('utf8')
 
 
 
-2.2 Case Sensitive
+Case Sensitive
+--------------
+
 	Python é case sensitive, ou seja, letras maiúsculas e minúsculas são interpretadas de formas diferentes.
 
 
