@@ -1,0 +1,86 @@
+Tipos de Dados
+	Os tipos em Python podem ser mutáveis ou imutáveis, ou seja, permitem ou não alterar seu conteúdo.
+	Todos os tipos de dados são objetos, pois não existem tipos primitivos em Python.
+    O tipo de dado de um objeto é determinado em tempo de execução e não há uma declaração explícita como se vê em outras linguagens.
+
+
+
+Criação de um objeto e verificando seu tipo:
+
+> x = 7
+
+> type(x)
+
+int
+
+
+
+Variáveis
+
+	São criadas através de atribuição de valor e quando não existem mais referência a elas são destruídas pelo garbage colector.
+	Seus nomes devem começar por uma letra (não acentuadas) ou por underline "_".
+
+
+
+Tipagem Dinâmica
+
+    No mesmo código pode ter objetos diferentes com o mesmo nome.
+    Como dito anteriormente, o tipo é determinado na execução e um mesmo nome pode ter tipos diferentes ao longo do código, porém na verdade será outro objeto.
+
+
+
+Criação de dois objetos de mesmo nome:
+
+> x = 3.7
+
+> id(x)
+
+140291958334736
+
+> type(x)
+
+float
+
+> x = 'foo'
+
+> id(x)
+
+140292017787768
+
+> type(x)
+
+str
+
+    Foram criados dois objetos "x", sendo o primeiro float e o segundo uma string.
+    Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.
+
+
+
+Tipagem Forte
+
+    A tipagem em Python além de dinâmica ela é forte.
+    Em casos de operações matemáticas, por exemplo, é necessário fazer um cast para ser possível quando os tipos são incompatíveis.
+
+
+
+Soma entre um um número de ponto flutuante e um inteiro:
+
+> 5.0 + 2
+
+7.0
+
+
+
+Tentativa de soma entre uma string e um inteiro.
+
+> '5' + 2
+
+TypeError: must be str, not int
+
+
+Soma utilizando cast.
+
+> int('5') + 2
+
+7
+
