@@ -32,6 +32,8 @@ Curso de Python
    content/property
    content/scope
    content/if
+   content/loops
+
 
 
 
