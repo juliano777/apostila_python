@@ -1,4 +1,5 @@
 Decoradores em Python
+*********************
 
     É um conceito diferente do conceito decorator de design pattern.
     Pode ser implementado como uma classe ou como uma função.
