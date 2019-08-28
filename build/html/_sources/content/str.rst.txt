@@ -850,10 +850,8 @@ Slice - Corte de string - 'string'[inicio:fim - 1:incremento]:
 
 
 
-# ============================================================================
-
-
 Docstrings
+----------
 
 	São strings que vêm logo após a definição de uma função, de um método ou de uma classe.
 	É muito útil para fins de documentação.
