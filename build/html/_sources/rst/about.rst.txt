@@ -52,20 +52,14 @@ Modo Interativo do Interpretador Python
 	O modo interativo de Python é um recurso interessante que facilita o trabalho do desenvolvedor de forma que se possa testar algo que esteja fazendo assim que o comando é finalizado.
 	É um recurso muito útil para debugging, quick hacking e testes.	
 
-1.2.1.1 Invocando o Modo Interativo do Interpretador
+Invocando o Modo Interativo do Interpretador
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	A maioria das distribuições Linux tem já o Python instalado, de forma que para ter acesso ao prompt interativo bastar digitar no terminal o comando python.
 	Para sair do interpretador basta digitar o caractere de fim de arquivo (EOF - End-Of-File) (<Ctrl + D> em Unix ou <Ctrl + Z> no Windows). Também pode-se usar as funções exit() ou quit().
 
-	
-
-
-
-
-	
-
-
-1.3 A Filosofia de Python
+A Filosofia de Python
+---------------------
 
 	Há um easter egg em Python bem divertido que exprime bem a filosofia de Python, que é conhecido como The Zen Of Python.
 	The Zen Of Python é a PEP 20, PEP que significa Python Enhancement Proposals (Propostas de Melhoria para Python).
