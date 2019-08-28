@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>o.metodo_x() &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>o.metodo_x()</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/oo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Orientação a Objetos</p>
+<blockquote>
+<div><p>Python suporta herança múltipla;
+Tudo em Python é objeto (inclusive classes);
+O método construtor é o método inicializador, o método mágico __init__;</p>
+</div></blockquote>
+<dl>
+<dt>class NomeClasse(ClasseMae):</dt><dd><p># Método construtor ou método inicializador (sem parâmetro)
+def __init__(self):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># Método comum com 1 (um) parâmetro
+def metodo(self, foo):</p>
+<blockquote>
+<div><p>return foo</p>
+<p>Em Python a definição de uma classe é bem simples. Usamos o comando class seguindo do nome da classe a ser criada, logo em seguida vindo entre parênteses os nomes das classes mãe separados por vírgulas, pois em Python é permitida herança múltipla.
+O método construtor, também chamado de método inicializador é o __init__.</p>
+</div></blockquote>
+</dd>
+<dt>class Foo(object):</dt><dd><p>nome = ‘’</p>
+</dd>
+<dt>class Bar(object):</dt><dd><p>idade = 0</p>
+<dl class="simple">
+<dt>def metodo_teste(self):</dt><dd><p>print(‘Teste’)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>class Baz(Foo, Bar):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self, nome):</dt><dd><p>self.nome = nome</p>
+</dd>
+</dl>
+<p>altura = 0.0</p>
+</div></blockquote>
+<p>o = Baz(‘Chiquinho da Silva’)</p>
+<p>o.idade = 51</p>
+<p>o.altura = 1.60</p>
+<p>print(‘%s tem %s anos e %.2fm de altura’ % (o.nome, o.idade, o.altura))</p>
+<p>Chiquinho da Silva tem 51 anos e 1.60m de altura</p>
+<p>Obs.: Em Python todos métodos e atributos são públicos.
+Há uma convenção que colocando um unerline como primeiro caractere no nome de um atributo ou um método o sinaliza como privado.
+Porém, isso é apenas uma convenção. Nada impede que sejam acessados externamente.
+Para que haja um bloqueio efetivo há um recurso na linguagem chamado “property”.</p>
+<dl>
+<dt>class Carro(object):</dt><dd><p>motor_ligado = False</p>
+<dl class="simple">
+<dt>def __init__(self, marca, modelo):</dt><dd><p>self.marca = marca
+self.modelo = modelo</p>
+</dd>
+<dt>def ignicao(self):</dt><dd><dl class="simple">
+<dt>if (self.motor_ligado):</dt><dd><p>self.motor_ligado = False
+print(‘Motor desligado!’)</p>
+</dd>
+<dt>else:</dt><dd><p>self.motor_ligado = True
+print(‘Motor ligado!’)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>c1 = Carro()</p>
+<p>TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-13-e2526cbd1648&gt; in &lt;module&gt;()</p>
+<blockquote>
+<div><p>15
+16</p>
+</div></blockquote>
+<p>—&gt; 17 c1 = Carro()</p>
+<p>TypeError: __init__() takes exactly 3 arguments (1 given)</p>
+<p>c1 = Carro(‘Fiat’, ‘147’)</p>
+<p>c1.ignicao()</p>
+<p>Motor ligado!</p>
+<p>c1.ignicao()</p>
+<p>Motor desligado!</p>
+<p>print(‘Marca: %snModelo: %s’ % (c1.marca, c1.modelo))</p>
+<p>Marca: Fiat
+Modelo: 147</p>
+<p>Método __str__</p>
+<p>print(c1)</p>
+<p>&lt;__main__.Carro object at 0x7f1f6313eed0&gt;</p>
+<p>repr(c1)</p>
+<p>‘&lt;__main__.Carro object at 0x7f1f6313eed0&gt;’</p>
+<dl>
+<dt>class Carro(object):</dt><dd><p>motor_ligado = False</p>
+<dl class="simple">
+<dt>def __init__(self, marca, modelo):</dt><dd><p>self.marca = marca
+self.modelo = modelo</p>
+</dd>
+<dt>def __str__(self):</dt><dd><p>return ‘%s - %s’ % (self.marca, self.modelo)</p>
+</dd>
+<dt>def ignicao(self):</dt><dd><dl class="simple">
+<dt>if (self.motor_ligado):</dt><dd><p>self.motor_ligado = False
+print(‘Motor desligado!’)</p>
+</dd>
+<dt>else:</dt><dd><p>self.motor_ligado = True
+print(‘Motor ligado!’)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>c1 = Carro(‘Fiat’, ‘147’)</p>
+<p>print(c1)</p>
+<p>Fiat - 147</p>
+<p>repr(c1)
+Out[32]: ‘&lt;__main__.Carro object at 0x7f1f631273d0&gt;’</p>
+<p>Método Definido Externamente à Classe</p>
+<dl class="simple">
+<dt>def metodo_externo(self, frase, numero):</dt><dd><p>self.numero = numero
+print(frase)</p>
+</dd>
+<dt>class MinhaClasse(object):</dt><dd><p>pass</p>
+</dd>
+</dl>
+<p>o = MinhaClasse()</p>
+<p>MinhaClasse.metodo = metodo_externo</p>
+<p>o.metodo(‘Bla bla bla’, 800)
+Bla bla bla</p>
+<p>print(o.numero)
+800</p>
+<p>Método Definido Externamente ao Objeto</p>
+<dl class="simple">
+<dt>def metodo_objeto(self):</dt><dd><p>return ‘X’</p>
+</dd>
+</dl>
+<p>o.metodo_x = metodo_objeto</p>
+<div class="section" id="o-metodo-x">
+<h1>o.metodo_x()<a class="headerlink" href="#o-metodo-x" title="Link permanente para este título">¶</a></h1>
+<p>TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-41-2f98daa957c2&gt; in &lt;module&gt;()
+—-&gt; 1 o.metodo_x()</p>
+<p>TypeError: metodo_objeto() takes exactly 1 argument (0 given)</p>
+<p>o.metodo_x(o)
+‘X’</p>
+<p>Objetos com Atributos Dinâmicos</p>
+<p>Criação da classe Carro:</p>
+<dl class="simple">
+<dt>class Carro(object):</dt><dd><p>marca = ‘’
+modelo = ‘’</p>
+</dd>
+</dl>
+<p>Criação de um objeto da classe Carro:</p>
+<p>c1 = Carro()</p>
+<p>Vejamos agora o dicionário de atributos com seus respectivos valores:</p>
+<p>print(c1.__dict__)</p>
+<p>{}</p>
+<p>O atributo especial __dict__, em um objeto, é um dicionário que é usado para guardar atributos e seus respectivos valores.
+O dicionário em questão apresentou um conjunto vazio.</p>
+<p>Agora vamos preencher os atributos:</p>
+<p>c1.marca = ‘Porsche’
+c1.modelo = ‘911’</p>
+<p>Consulta ao dicionário do objeto novamente:</p>
+<p>print(c1.__dict__)</p>
+<p>{‘modelo’: ‘911’, ‘marca’: ‘Porsche’}</p>
+<p>Com os atributos preenchidos com valores agora o dicionário não está mais vazio.
+Python é tão flexível que nos permite até criar um atributo “on the fly”:</p>
+<p>c1.ano = 1993</p>
+<p>print(c1.__dict__)</p>
+<p>{‘ano’: 1993, ‘modelo’: ‘911’, ‘marca’: ‘Porsche’}</p>
+<p>E que tal se pudermos no momento da criação do objeto, além de poder atribuir valores
+aos atributos existentes, também criar atributos que não existem na classe?</p>
+<p>Criação da classe Carro agora utilizando o método construtor (__init__()), o qual fará
+o trabalho de associar ao objeto instanciado cada par chave / valor declarado:</p>
+<dl>
+<dt>class Carro(object):</dt><dd><p>marca = ‘’
+modelo = ‘’</p>
+<p># Metodo construtor
+def __init__(self, <a href="#id1"><span class="problematic" id="id2">**</span></a>kargs):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>for chave,valor in kargs.items():</dt><dd><p>self.__dict__[chave] = valor</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+<p>Criação do objeto com atributos dinâmicos;</p>
+<p>c1 = Carro(marca = ‘Porsche’, modelo = ‘911’, cor = ‘verde’, ano = 1991)</p>
+<p>Verificando o dicionário do objeto:</p>
+<p>print(c1.__dict__)</p>
+<p>{‘ano’: 1991, ‘modelo’: ‘911’, ‘marca’: ‘Porsche’, ‘cor’: ‘verde’}</p>
+<p>O Método super()</p>
+<dl class="simple">
+<dt>class Mae(object):</dt><dd><dl class="simple">
+<dt>def metodo(self):</dt><dd><p>print(‘Método da classe Mae’)</p>
+</dd>
+</dl>
+</dd>
+<dt>class Filha(Mae):</dt><dd><dl class="simple">
+<dt>def metodo(self):</dt><dd><p>super().metodo() # Chamando o método da classe mãe
+print(‘Método da classe Filha’)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>o = Filha()</p>
+<p>o.metodo()</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
