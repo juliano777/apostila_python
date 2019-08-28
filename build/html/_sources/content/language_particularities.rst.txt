@@ -20,11 +20,6 @@ Definição do Interpretador de Comandos
 
 	Para scripts Python, na primeira linha podemos especificar o interpretador de comandos a ser utilizado, também conhecido como shebang;
 
-Para Python 2:
-
-#!/usr/bin/env python
-
-Para Python 3:
 
 #!/usr/bin/env python3
 
