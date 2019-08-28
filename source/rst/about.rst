@@ -127,12 +127,12 @@ Bytecode
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
-.. highlight:: bash
+.. highlight:: sh
 
 ::
 
-    $ mkdir -p /tmp/python/PacoteA/PacoteA1
-    $ vim /tmp/python/PacoteA/Modulo1.py
+    mkdir -p /tmp/python/PacoteA/PacoteA1
+    vim /tmp/python/PacoteA/Modulo1.py
 
 
 .. code-block:: python

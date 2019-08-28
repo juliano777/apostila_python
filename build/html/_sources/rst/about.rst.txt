@@ -127,7 +127,7 @@ Bytecode
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
-.. highlight:: bash
+.. highlight:: sh
 
 ::
 
