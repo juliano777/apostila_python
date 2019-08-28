@@ -24,6 +24,7 @@ Curso de Python
    content/list
    content/tuple
    content/set_frozenset
+   content/dict
 
 
 
