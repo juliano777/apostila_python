@@ -29,6 +29,7 @@ Curso de Python
    content/functions
    content/oo
    content/staticmethod_classmethod
+   content/property
 
 
 
