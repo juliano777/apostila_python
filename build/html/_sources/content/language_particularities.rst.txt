@@ -5,7 +5,7 @@ Palavras Reservadas
 -------------------
 
 
-+--------------------------------------------------+
++--------+----------+---------+----------+---------+
 | False  | class    | finally | is       | return  |
 | None   | continue | for     | lambda   | try     |
 | True   | def      | from    | nonlocal | while   |
@@ -13,7 +13,7 @@ Palavras Reservadas
 | as     | elif     | if      | or       | yield   |
 | assert | else     | import  | pass     |         |
 | break  | except   | in      | raise    |         |
-+--------------------------------------------------+
++--------+----------+---------+----------+---------+
 
 
 
