@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1a1818" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Curso de Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="str.html">5. Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="date_time.html">9. Data e Hora</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Curso de Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Módulos</p>
+<blockquote>
+<div><p>Módulos são as bibliotecas de Python.
+São simples arquivos de código Python (.py) e têm que estar dentro do PYTHONPATH.</p>
+</div></blockquote>
+<p>&gt; import sys</p>
+<p>&gt; dir(sys)
+[‘__displayhook__’, ‘__doc__’, ‘__excepthook__’, ‘__interactivehook__’, ‘__loader__’, ‘__name__’, ‘__package__’, ‘__spe
+<a href="#id1"><span class="problematic" id="id2">c__</span></a>’, ‘__stderr__’, ‘__stdin__’, ‘__stdout__’, ‘_clear_type_cache’, ‘_current_frames’, ‘_debugmallocstats’, ‘_getframe’
+, ‘_home’, ‘_mercurial’, ‘_xoptions’, ‘abiflags’, ‘api_version’, ‘argv’, ‘base_exec_prefix’, ‘base_prefix’, ‘builtin_mo
+dule_names’, ‘byteorder’, ‘call_tracing’, ‘callstats’, ‘copyright’, ‘displayhook’, ‘dont_write_bytecode’, ‘exc_info’, ‘
+excepthook’, ‘exec_prefix’, ‘executable’, ‘exit’, ‘flags’, ‘float_info’, ‘float_repr_style’, ‘getallocatedblocks’, ‘get
+checkinterval’, ‘getdefaultencoding’, ‘getdlopenflags’, ‘getfilesystemencoding’, ‘getprofile’, ‘getrecursionlimit’, ‘ge
+trefcount’, ‘getsizeof’, ‘getswitchinterval’, ‘gettrace’, ‘hash_info’, ‘hexversion’, ‘implementation’, ‘int_info’, ‘int
+ern’, ‘last_traceback’, ‘last_type’, ‘last_value’, ‘maxsize’, ‘maxunicode’, ‘meta_path’, ‘modules’, ‘path’, ‘path_hooks
+‘, ‘path_importer_cache’, ‘platform’, ‘prefix’, ‘setcheckinterval’, ‘setdlopenflags’, ‘setprofile’, ‘setrecursionlimit’
+, ‘setswitchinterval’, ‘settrace’, ‘stderr’, ‘stdin’, ‘stdout’, ‘thread_info’, ‘version’, ‘version_info’, ‘warnoptions’
+]</p>
+<p>&gt; print(sys.path)</p>
+<p>[‘’, ‘/usr/bin’, ‘/usr/lib/python3.4’, ‘/usr/lib/python3.4/plat-x86_64-linux-gnu’, ‘/usr/lib/python3.4/lib-dynload’, ‘/usr/local/lib/python3.4/dist-packages’, ‘/usr/lib/python3/dist-packages’]</p>
+<blockquote>
+<div><p>A primeira incidência é uma string vazia (‘’), o que significa ser o diretório corrente.</p>
+</div></blockquote>
+<p>$ vim foo.py</p>
+<p># _*_ encoding: utf-8 _*_</p>
+<p>print(‘Este arquivo, {} é um módulo!’.format(__file__))
+print(‘Seu nome é {}.’.format(__name__))</p>
+<p>&gt; import foo
+Este arquivo, /tmp/foo.py é um módulo!
+Seu nome é foo.</p>
+<p>$ python3 foo.py
+Este arquivo, foo.py é um módulo!
+Seu nome é __main__.</p>
+<p>$ vim foo.py</p>
+<p># _*_ encoding: utf-8 _*_</p>
+<dl class="simple">
+<dt>if __name__ == ‘__main__’:</dt><dd><p>print(‘Executado a partir da linha de comando.’)</p>
+</dd>
+<dt>else:</dt><dd><p>print(‘Módulo importado.’)</p>
+</dd>
+</dl>
+<p>&gt; import foo
+Módulo importado.</p>
+<p>&gt; type(foo)
+&lt;class ‘module’&gt;</p>
+<p>$ python3 foo.py
+Executado a partir da linha de comando.</p>
+<p>Recarregando um Módulo</p>
+<p>&gt; import importlib
+&gt; importlib.reload(foo)
+Módulo importado.
+&lt;module ‘foo’ from ‘/tmp/foo.py’&gt;</p>
+<p>$ vim foo.py</p>
+<p># _*_ encoding: utf-8 _*_</p>
+<dl>
+<dt>class Pessoa(object):</dt><dd><p>nome = ‘’
+idade = 0</p>
+<dl class="simple">
+<dt>def saudacao(self):</dt><dd><p>print(‘Olá, meu nome é {}’.format(self.nome))</p>
+</dd>
+</dl>
+</dd>
+<dt>class Funcionario(Pessoa):</dt><dd><p>matricula = ‘’</p>
+</dd>
+<dt>def cubo(x):</dt><dd><p>return x ** 3</p>
+</dd>
+</dl>
+<p>Recarregando um módulo</p>
+<p>&gt; importlib.reload(foo)
+&lt;module ‘foo’ from ‘/tmp/foo.py’&gt;</p>
+<p>&gt; f1 = foo.Funcionario()
+&gt; f1.nome = ‘Chiquinho’
+&gt; f1.saudacao()
+Olá, meu nome é Chiquinho</p>
+<p>&gt; print(foo.cubo(7))
+343</p>
+<p>import as …</p>
+<p>&gt; import foo as meu_modulo
+&gt; f1 = meu_modulo.Funcionario()
+&gt; f1.matricula = ‘xyz12345’
+&gt; print(f1.matricula)
+xyz12345</p>
+<p>from módulo import …</p>
+<p>&gt; from foo import Funcionario
+&gt; f1 = Funcionario()
+&gt; f1.nome = ‘Chiquinho’
+&gt; f1.saudacao()
+Olá, meu nome é Chiquinho</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Juliano Atanazio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
