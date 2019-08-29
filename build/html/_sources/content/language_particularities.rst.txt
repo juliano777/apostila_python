@@ -825,16 +825,23 @@ Agora são 2 (duas) referências...
 
     7
 
+.. code-block:: python
 
-del y
+    del y
 
 Resta apenas 1 (uma) referência...
 
-print(z)
-7
+.. code-block:: python
 
+    print(z)
 
-del z
+.. code-block:: console
+
+    7
+
+.. code-block:: python
+
+    del z
 
 O contador de referências chegou a 0 (zero), ou seja, não há mais referência para o objeto.
 Então entra em ação o Garbage Collector para limpar a memória.
