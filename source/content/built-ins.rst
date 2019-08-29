@@ -141,14 +141,16 @@ filter()
     False
 
 
-
 Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente com os elementos ímpares e posteriormente ser convertido para lista:
 
-> f = filter(impar, range(0, 20))
+.. code-block:: python
 
-> list(f)
+    f = filter(impar, range(0, 20))
+    print(list(f))
 
-[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+.. code-block:: python
+
+    [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
 
 
