@@ -152,7 +152,8 @@ Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente 
 
 
 
-map
+map()
+~~~~~
 
     Cria um iterador que aplica uma função para cada elemento do iterável.
 
