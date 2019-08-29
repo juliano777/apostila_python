@@ -455,14 +455,15 @@ Quebra de linhas
 
 Pode ser usada a barra invertida ou por vírgula.
 
-Exemplos:
+.. code-block:: python
 
-varTeste = 3 * 5 + \
-(10 + 7)
+    varTeste = 3 * 5 + \
+    (10 + 7)
 
-varLista = [7,14,25,
-81,121]
+    varLista = [7,14,25,
+                81,121]
 
+               
 Blocos
 ------
 
