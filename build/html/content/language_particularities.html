@@ -364,16 +364,19 @@ Até mesmo um número inteiro é uma instância de int e tem seus atributos e m�
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">O Porsche Carrera fabricado em 1995 estava estacionado.</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>class Animal(object):</dt><dd><p>peso = 0.0</p>
-</dd>
-<dt>class Humano(Animal):</dt><dd><p>quoficiente_inteligencia = 0.0</p>
-</dd>
-<dt>class Touro(Animal):</dt><dd><p>envergadura_chifre =       0.0</p>
-</dd>
-<dt>class Minotauro(Humano, Animal):</dt><dd><p>pass</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">peso</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="k">class</span> <span class="nc">Humano</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="n">quoficiente_inteligencia</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="k">class</span> <span class="nc">Touro</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="n">envergadura_chifre</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="k">class</span> <span class="nc">Minotauro</span><span class="p">(</span><span class="n">Humano</span><span class="p">,</span> <span class="n">Animal</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="tipagem-dinamica">
 <h2>2.6. Tipagem Dinâmica<a class="headerlink" href="#tipagem-dinamica" title="Link permanente para este título">¶</a></h2>
