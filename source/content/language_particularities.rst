@@ -145,14 +145,21 @@ Não Suporta Sobrecarga de Funções / Métodos
     
     hello_world()
 
-TypeError                                 Traceback (most recent call last)
-<ipython-input-3-2c5bb141a5c6> in <module>()
-----> 1 hello_world()
+.. code-block:: console
 
-TypeError: hello_world() takes exactly 1 argument (0 given)
+    Traceback (most recent call last):
+      File "<input>", line 1, in <module>
+        hello_world()
+    TypeError: hello_world() missing 1 required positional argument: 'string'
 
-hello_world('foo')
-foo
+
+.. code-block:: python
+
+    hello_world('foo')
+
+.. code-block:: console
+
+    foo
 
 Orientada a Objetos
 -------------------
