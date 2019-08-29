@@ -155,7 +155,7 @@ Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente 
 
 
 map()
-~~~~~
+-----
 
     Cria um iterador que aplica uma função para cada elemento do iterável.
 
@@ -192,7 +192,7 @@ Para cada item da primeira lista elevar (potência) ao elemento respectivo na se
 
 
 reduce()
-~~~~~~~~
+--------
 
     Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.
 
@@ -226,6 +226,7 @@ Função reduce para executar a mesma tarefa anterior com apenas um comando:
 
 
 del
+---
 
     Pode ser tanto um comando como uma função cuja finalidade é remover a referência de um objeto.
 	Também apaga elemento de uma coleção.
@@ -267,6 +268,7 @@ NameError: name 'foo' is not defined
 
 
 ord e chr
+---------
 
     A função ord retorna o código Unicode de um caractere.
     A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode. Em Python 2 chr era unichr.    
@@ -318,7 +320,8 @@ Exemplos de ord e chr:
 
 
 
-dir
+dir()
+-----
 
 	Função que lista atributos e métodos de um elemento.
     Se chamada sem nenhum argumento retorna os nomes do escopo atual.
@@ -477,6 +480,7 @@ saudacao
 
 
 pass
+----
 
     É um comando de  operação nula, ou seja, quando é executado nada acontece. É útil como um marcador quando um statement é requerido sintaticamente, mas não tem necessidade de um código a ser executado.
 
@@ -493,6 +497,7 @@ Função que nada faz:
 
 
 assert
+------
 
     Um statements assert é uma maneira conveniente para inserir asserções de debug.
     O comando assert verifica em tempo de execução uma determinada condição e se a mesma não for verdadira uma exceção AssertionError é lançada e se essa exceção não for tratada, o programa pára.
