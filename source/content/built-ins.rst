@@ -3,8 +3,8 @@ Comandos e Funções Importantes
 
 	Neste capítulo são abordados comandos e funções interessantes e / ou imprescindíveis para a linguagem.
 
-print
------
+print()
+-------
 
     Em Python 2 era um comando e em Python 3 passou a ser exclusivamente uma função.
     Seu objetivo é imprimir uma mensagem que por padrão é STDOUT.
