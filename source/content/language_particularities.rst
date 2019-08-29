@@ -503,6 +503,7 @@ Comentários
 
     print(x)  # Imprime o valor de x
 
+
 Docstrings ou Strings de Múltiplas Linhas
 -----------------------------------------
 
@@ -545,10 +546,8 @@ Operadores
 Aritméticos
 ~~~~~~~~~~~
 
-Lógicos
 
-Bit a Bit
-Soma 
+**Soma**
 
 +
 
