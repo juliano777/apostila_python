@@ -19,7 +19,6 @@ Palavras reservadas ou em inglês *keywords* são
 Podemos verificar as palavras reservdas de Python usando código:
 
 .. code-block:: python
-    :linenos:
 
     from keyword import kwlist as keywords
 
