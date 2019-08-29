@@ -214,17 +214,19 @@ Orientada a Objetos
     O Porsche Carrera fabricado em 1995 estava estacionado.
 
 
-class Animal(object):
-    peso = 0.0
+.. code-block:: python
+    
+    class Animal(object):
+        peso = 0.0
 
-class Humano(Animal):
-    quoficiente_inteligencia = 0.0
+    class Humano(Animal):
+        quoficiente_inteligencia = 0.0
 
-class Touro(Animal):
-     envergadura_chifre = 	0.0
+    class Touro(Animal):
+        envergadura_chifre = 0.0
 
-class Minotauro(Humano, Animal):
-    pass
+    class Minotauro(Humano, Animal):
+        pass
 
 
 Tipagem Dinâmica
