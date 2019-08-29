@@ -141,7 +141,9 @@ Não Suporta Sobrecarga de Funções / Métodos
     def hello_world(string):
         print(string)
 
-hello_world()
+.. code-block:: python
+    
+    hello_world()
 
 TypeError                                 Traceback (most recent call last)
 <ipython-input-3-2c5bb141a5c6> in <module>()
