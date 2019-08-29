@@ -780,15 +780,25 @@ bla bla bla
 Referência de Identificadores
 -----------------------------
 
-x = 7
-y = x
-z = x
+.. code-block:: python
 
-id(x)
-29786312
+    x = 7
+    y = x
+    z = x
 
-id(y)
-29786312
+    id(x)
+
+.. code-block:: console
+
+    29786312
+
+.. code-block:: python
+
+    id(y)
+
+.. code-block:: console
+
+    29786312
 
 id(z)
 29786312
