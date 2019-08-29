@@ -810,12 +810,20 @@ Referência de Identificadores
 
 3 (três) referências ao mesmo objeto
 
-del x
+
+.. code-block:: python
+
+    del x
 
 Agora são 2 (duas) referências...
 
-print(y)
-7
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    7
 
 
 del y
