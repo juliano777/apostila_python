@@ -741,14 +741,18 @@ Invertendo valores:
 Atribuição por Incremento ou Decremento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-x = 0
-x +=1
-x +=1
-x +=1
-x +=1
+.. code-block:: python
 
-print(x)
-4
+    x = 0
+    x +=1
+    x +=1
+    x +=1
+    x +=1
+    print(x)
+
+.. code-block:: console
+
+    4
 
 x /= 2
 
