@@ -691,15 +691,24 @@ Atribuição de Valores
 
     bla bla bla
 
-2.12.1 - Atribuição Composta ou Atribuição por Tupla
+.. code-block:: python
 
-x, y, z = (1, 2, 3)
+    # Atribuição Composta ou Atribuição por Tupla
+    x, y, z = (1, 2, 3)
 
-print(x)
-1
+    print(x)
 
-print(y)
-2
+.. code-block:: console
+
+    1
+
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    2
 
 print(z)
 3
