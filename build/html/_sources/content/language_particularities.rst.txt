@@ -708,8 +708,14 @@ Atribuição de Valores
 
     2
 
-print(z)
-3
+.. code-block:: python
+
+    print(z)
+
+
+.. code-block:: console
+
+    3
 
 Invertendo valores:
 
