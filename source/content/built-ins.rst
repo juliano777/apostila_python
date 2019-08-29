@@ -59,7 +59,6 @@ Sintaxe:
     .. code-block:: python
 
     # Um parâmetro (stop)
-
     for i in range(5):
         print(i)
 
@@ -74,7 +73,6 @@ Sintaxe:
 .. code-block:: python
 
     # Dois parâmetros (start e stop)
-
     for i in range(3, 10):
         print(i)
 
@@ -88,12 +86,11 @@ Sintaxe:
     8
     9
 
+.. code-block:: python
 
-
-Três parâmetros (start, stop e step):
-
-> for i in range(1, 10, 2):
-    print(i)
+    # Três parâmetros (start, stop e step)
+    for i in range(1, 10, 2):
+        print(i)
 
 1
 3

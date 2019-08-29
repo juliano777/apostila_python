@@ -71,20 +71,22 @@ Sintaxe:
     3
     4
 
+.. code-block:: python
 
+    # Dois parâmetros (start e stop)
 
-Dois parâmetros (start e stop):
+    for i in range(3, 10):
+        print(i)
 
-> for i in range(3, 10):
-    print(i)
+.. code-block:: console
 
-3
-4
-5
-6
-7
-8
-9
+    3
+    4
+    5
+    6
+    7
+    8
+    9
 
 
 
