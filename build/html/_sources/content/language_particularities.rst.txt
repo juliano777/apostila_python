@@ -61,18 +61,23 @@ Codificação (Conjunto de Caracteres - Encoding)
 
      vim /tmp/hello.py
 
-     
+.. code-block:: python
+    :linenos:
 
-#!/usr/bin/env python
+    #!/usr/bin/env python
 
+    print('Olá!')
 
-print('Olá!')
+.. code-block:: bash
 
+    $ python /tmp/hello.py
 
-$ python /tmp/hello.py 
+.. code-block:: console
 
-  File "/tmp/hello.py", line 4
-SyntaxError: Non-ASCII character '\xc3' in file /tmp/hello.py on line 4, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+    File "/tmp/hello.py", line 4
+    SyntaxError: Non-ASCII character '\xc3' in file /tmp/hello.py on line 4, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+
+    
 
 $ vim /tmp/hello.py
 

@@ -253,13 +253,20 @@ A melhor maneira de se fazer isso é colocar uma linha especial no começo do ar
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /tmp/hello.py
 </pre></div>
 </div>
-<p>#!/usr/bin/env python</p>
-<p>print(‘Olá!’)</p>
-<p>$ python /tmp/hello.py</p>
-<blockquote>
-<div><p>File “/tmp/hello.py”, line 4</p>
-</div></blockquote>
-<p>SyntaxError: Non-ASCII character ‘xc3’ in file /tmp/hello.py on line 4, but no encoding declared; see <a class="reference external" href="http://www.python.org/peps/pep-0263.html">http://www.python.org/peps/pep-0263.html</a> for details</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá!&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python /tmp/hello.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">File &quot;/tmp/hello.py&quot;, line 4</span>
+<span class="go">SyntaxError: Non-ASCII character &#39;\xc3&#39; in file /tmp/hello.py on line 4, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details</span>
+</pre></div>
+</div>
 <p>$ vim /tmp/hello.py</p>
 <p>#!/usr/bin/env python
 #_*_ coding: utf-8 _*_</p>
