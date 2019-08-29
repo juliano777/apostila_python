@@ -360,6 +360,7 @@ Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
     
 
 .. code-block:: python
+    :linenos:
 
     def funcao():
         print('Hello World!!!')
@@ -372,6 +373,7 @@ Editar o módulo "Modulo2" que está dentro do pacote "PacoteA":
 
 
 .. code-block:: python
+    :linenos:
     
     def funcao(numero):
         print(numero ** 3)
