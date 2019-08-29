@@ -135,9 +135,6 @@ Não Suporta Sobrecarga de Funções / Métodos
     def hello_world():
         print('Hello World')
 
-
-.. code-block:: python
-
     def hello_world(string):
         print(string)
 
