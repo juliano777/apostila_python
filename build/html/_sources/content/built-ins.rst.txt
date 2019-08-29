@@ -58,9 +58,9 @@ Sintaxe:
 
     .. code-block:: python
 
-    # Um parâmetro (stop)
-    for i in range(5):
-        print(i)
+        # Um parâmetro (stop)
+        for i in range(5):
+            print(i)
 
 .. code-block:: console
 
@@ -100,21 +100,22 @@ Sintaxe:
     7
     9
 
+.. code-block:: python
+
+    # Sequẽncia regressiva
+    for i in range(20, 1, -5):
+        print(i)
+
+.. code-block:: console
+
+    20
+    15
+    10
+    5
 
 
-sequẽncia regressiva:
-
-> for i in range(20, 1, -5):
-    print(i)
-
-20
-15
-10
-5
-
-
-
-filter
+filter()
+--------
 
     Função que retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.
 

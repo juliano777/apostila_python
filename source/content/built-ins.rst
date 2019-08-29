@@ -58,9 +58,9 @@ Sintaxe:
 
     .. code-block:: python
 
-    # Um parâmetro (stop)
-    for i in range(5):
-        print(i)
+        # Um parâmetro (stop)
+        for i in range(5):
+            print(i)
 
 .. code-block:: console
 
@@ -114,8 +114,8 @@ Sintaxe:
     5
 
 
-
-filter
+filter()
+--------
 
     Função que retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.
 

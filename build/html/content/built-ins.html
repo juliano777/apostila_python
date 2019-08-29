@@ -88,6 +88,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Comandos e Funções Importantes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#print">3.1. print()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#range">3.2. range()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter">3.3. filter()</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
@@ -235,14 +236,11 @@ range(start, stop[, step])</p>
 <p>start: Valor inicial da sequência, por padrão é 0 (zero).
 stop:  Valor final da sequẽncia - 1.
 step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que stop, ou seja, para se fazer uma sequência regressiva é preciso um número negativo.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Um parâmetro (stop)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
-<p># Um parâmetro (stop)
-for i in range(5):</p>
-<blockquote>
-<div><p>print(i)</p>
-</div></blockquote>
 </div></blockquote>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 <span class="go">1</span>
@@ -277,16 +275,20 @@ for i in range(5):</p>
 <span class="go">9</span>
 </pre></div>
 </div>
-<p>sequẽncia regressiva:</p>
-<dl class="simple">
-<dt>&gt; for i in range(20, 1, -5):</dt><dd><p>print(i)</p>
-</dd>
-</dl>
-<p>20
-15
-10
-5</p>
-<p>filter</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sequẽncia regressiva</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">20</span>
+<span class="go">15</span>
+<span class="go">10</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="filter">
+<h2>3.3. filter()<a class="headerlink" href="#filter" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Função que retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.</p>
 </div></blockquote>
