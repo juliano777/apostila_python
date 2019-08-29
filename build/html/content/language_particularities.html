@@ -427,10 +427,14 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 <blockquote>
 <div><p>O interpretador verifica se a operação é válida e não faz coerção automática entre tipos incompatíveis. Caso haja operações de tipos incompatíveis é preciso fazer a conversão explícita da variável ou variáveis antes da operação.</p>
 </div></blockquote>
-<p>foo = ‘2’</p>
-<p>bar = 5</p>
-<p>type(foo)
-str</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;2&#39;</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
+</pre></div>
+</div>
 <p>type(bar)
 int</p>
 <p>foobar = foo + bar</p>

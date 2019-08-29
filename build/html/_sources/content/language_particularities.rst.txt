@@ -273,12 +273,15 @@ Tipagem Forte
 
 	O interpretador verifica se a operação é válida e não faz coerção automática entre tipos incompatíveis. Caso haja operações de tipos incompatíveis é preciso fazer a conversão explícita da variável ou variáveis antes da operação.
 
-foo = '2'
+.. code-block:: python
 
-bar = 5
+    foo = '2'
+    bar = 5
+    type(foo)
 
-type(foo)
-str
+.. code-block:: console
+
+    str
 
 type(bar)
 int
