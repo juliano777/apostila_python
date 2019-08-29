@@ -510,15 +510,17 @@ Docstrings ou Strings de Múltiplas Linhas
 	São usados três pares de apóstrofos (') ou três pares de aspas ("), 3 (três) no início e 3 (três) no fim.
 
 
-Com apóstrofos:
+.. code-block:: python
 
-'''Esta função faz isso de forma
-x, y e z além de bla bla bla bla'''
+    # Com apóstrofos
 
-Com aspas:
+    '''Esta função faz isso de forma
+    x, y e z além de bla bla bla bla'''
 
-"""Esta função faz isso de forma
-x, y e z além de bla bla bla bla"""
+    # Com aspas
+
+    """Esta função faz isso de forma
+    x, y e z além de bla bla bla bla"""
 
 Recurso para criar documentação automaticamente:
 
