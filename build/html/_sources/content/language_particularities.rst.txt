@@ -800,8 +800,13 @@ Referência de Identificadores
 
     29786312
 
-id(z)
-29786312
+.. code-block:: python
+
+    id(z)
+
+.. code-block:: console
+
+    29786312
 
 3 (três) referências ao mesmo objeto
 
