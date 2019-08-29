@@ -4,7 +4,7 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
-Palavras reservadas ou em inglês 
+Palavras reservadas ou em inglês *keywords* são
 
 .. code-block:: text
 
