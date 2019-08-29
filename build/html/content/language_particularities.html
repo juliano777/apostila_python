@@ -719,20 +719,30 @@ Potência
 <div><p>Este comando tem como objetivo remover a referência de um objeto.
 Se esse objeto não tiver outra referência, o garbage collector atuará liberando recursos.</p>
 </div></blockquote>
-<p>sogra = ‘Edelbarina’
-print(sogra)
-Edelbarina
-del sogra
-print(sogra)
-Traceback (most recent call last):</p>
-<blockquote>
-<div><p>File “&lt;stdin&gt;”, line 1, in &lt;module&gt;</p>
-</div></blockquote>
-<p>NameError: name ‘sogra’ is not defined</p>
-<p>a = [‘Z’, 1, 5, ‘m’]</p>
-<p>del a[2]</p>
-<p>print(a)
-[‘Z’, 1, ‘m’]</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sogra</span> <span class="o">=</span> <span class="s1">&#39;Edelbarina&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sogra</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Edelbarina</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">sogra</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sogra</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Traceback (most recent call last):</span>
+<span class="go">    File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="go">NameError: name &#39;sogra&#39; is not defined</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;Z&#39;, 1, &#39;m&#39;]</span>
+</pre></div>
+</div>
 <p>print</p>
 <blockquote>
 <div><p>Antes era somente um comando, a partir da série 3.X será apenas interpretado como função.</p>

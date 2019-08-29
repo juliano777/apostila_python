@@ -645,14 +645,13 @@ O Comando del
 
 .. code-block:: python
 
-        
+    a = ['Z', 1, 5, 'm']
+    del a[2]
+    print(a)
 
-a = ['Z', 1, 5, 'm']
+.. code-block:: console
 
-del a[2]
-
-print(a)
-['Z', 1, 'm']
+    ['Z', 1, 'm']
 
 
 print
