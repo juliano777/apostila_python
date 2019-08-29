@@ -779,13 +779,11 @@ id()
     É uma função que retorna a identidade de um objeto.
     É a garantia que o objeto será único dentre outros.
 
+.. code-block:: python
 
-
-Criação de duas tuplas:
-
-> foo = ('x', 'y')
-
-> bar = ('x', 'y')
+    # Criação de duas tuplas
+    foo = ('x', 'y')
+    bar = ('x', 'y')
 
 
 
