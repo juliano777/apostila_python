@@ -283,8 +283,13 @@ Tipagem Forte
 
     str
 
-type(bar)
-int
+.. code-block:: python
+
+    type(bar)
+
+.. code-block:: console
+
+    int
 
 foobar = foo + bar
 

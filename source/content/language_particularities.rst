@@ -291,7 +291,9 @@ Tipagem Forte
 
     int
 
-foobar = foo + bar
+.. code-block:: python
+
+    foobar = foo + bar
 
 TypeError                                 Traceback (most recent call last)
 <ipython-input-28-36cb556c8cf9> in <module>()
