@@ -671,11 +671,12 @@ print
 Atribuição de Valores
 ---------------------
 
-Atribuição Simples
-~~~~~~~~~~~~~~~~~~
+.. code-block:: python
 
-foo = 0
-bar = 'bla bla bla'
+    # Atribuição Simples
+
+    foo = 0
+    bar = 'bla bla bla'
 
 print(foo)
 0

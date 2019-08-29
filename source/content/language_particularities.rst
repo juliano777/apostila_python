@@ -677,9 +677,11 @@ Atribuição de Valores
 
     foo = 0
     bar = 'bla bla bla'
+    print(foo)
 
-print(foo)
-0
+.. code-block:: console
+
+    0
 
 print(bar)
 bla bla bla
