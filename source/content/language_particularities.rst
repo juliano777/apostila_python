@@ -319,9 +319,12 @@ Tipagem Forte
 
 .. code-block:: console
 
-    float
+    <class 'float'>
 
-bar = 5
+
+.. code-block:: python
+
+    bar = 5
 
 type(bar)
 int
