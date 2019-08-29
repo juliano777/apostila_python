@@ -303,9 +303,14 @@ Tipagem Forte
             foobar = foo + bar
     TypeError: can only concatenate str (not "int") to str
 
-foobar = int(foo) + bar
+.. code-block:: python
 
-print(foobar)7
+    foobar = int(foo) + bar
+    print(foobar)
+
+.. code-block:: console
+
+    7
 
 
 foo = 2.0

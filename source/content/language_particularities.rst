@@ -312,11 +312,14 @@ Tipagem Forte
 
     7
 
+.. code-block:: python
 
-foo = 2.0
+    foo = 2.0
+    type(foo)
 
-type(foo)
-float
+.. code-block:: console
+
+    float
 
 bar = 5
 
