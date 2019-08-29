@@ -20,6 +20,7 @@ Podemos verificar as palavras reservdas de Python usando código:
 
 .. code-block:: python
     :alt: alternate text
+    :linenos:
 
     from keyword import kwlist as keywords
 
