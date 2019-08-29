@@ -106,12 +106,17 @@ Case Sensitive
 	Python é case sensitive, ou seja, letras maiúsculas e minúsculas são interpretadas de formas diferentes.
 
 
-foo = 'bar'
+.. code-block:: python
 
-Foo = 'foo'
+    foo = 'bar'
+    Foo = 'foo'
+    print(foo)
 
-print(foo)
-bar
+.. code-block:: console
+
+    bar
+
+.. code-block:: python    
 
 print(Foo)
 foo
