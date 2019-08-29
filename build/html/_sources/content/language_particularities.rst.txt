@@ -659,24 +659,15 @@ print
 
 	Antes era somente um comando, a partir da série 3.X será apenas interpretado como função.
 
+.. code-block:: python
 
-print('Teste')
-Teste
+    print('Teste')
 
+.. code-block:: console
 
-Python 3.X:
-
-print 'Teste'
-  File "<ipython-input-1-2957621f454d>", line 1
-    print 'Teste'
-                ^
-SyntaxError: invalid syntax
+    Teste
 
 
-In [2]: print('Teste')
-Teste
-
-	
 Atribuição de Valores
 ---------------------
 
