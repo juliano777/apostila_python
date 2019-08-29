@@ -4,6 +4,8 @@ Particularidades da Linguagem
 Palavras Reservadas
 -------------------
 
+Palavras reservadas ou em inglês 
+
 .. code-block:: text
 
     False   class     finally  is        return  
@@ -13,6 +15,19 @@ Palavras Reservadas
     as      elif      if       or        yield   
     assert  else      import   pass              
     break   except    in       raise
+
+
+.. code-block:: python
+
+    from keyword import kwlist as keywords
+
+    for i in keywords:
+        print(i)
+
+.. code-block:: console
+
+    . . .
+
 
 
 Definição do Interpretador de Comandos
