@@ -281,7 +281,7 @@ Tipagem Forte
 
 .. code-block:: console
 
-    str
+    <class 'str'>
 
 .. code-block:: python
 
@@ -289,17 +289,19 @@ Tipagem Forte
 
 .. code-block:: console
 
-    int
+    <class 'int'>
 
 .. code-block:: python
 
     foobar = foo + bar
 
-TypeError                                 Traceback (most recent call last)
-<ipython-input-28-36cb556c8cf9> in <module>()
-----> 1 foobar = foo + bar
 
-TypeError: cannot concatenate 'str' and 'int' objects
+.. code-block:: console
+
+    Traceback (most recent call last):
+        File "<input>", line 1, in <module>
+            foobar = foo + bar
+    TypeError: can only concatenate str (not "int") to str
 
 foobar = int(foo) + bar
 

@@ -432,22 +432,24 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 <span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;class &#39;str&#39;&gt;</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;class &#39;int&#39;&gt;</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foobar</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="n">bar</span>
 </pre></div>
 </div>
-<p>TypeError                                 Traceback (most recent call last)
-&lt;ipython-input-28-36cb556c8cf9&gt; in &lt;module&gt;()
-—-&gt; 1 foobar = foo + bar</p>
-<p>TypeError: cannot concatenate ‘str’ and ‘int’ objects</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Traceback (most recent call last):</span>
+<span class="go">    File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="go">        foobar = foo + bar</span>
+<span class="go">TypeError: can only concatenate str (not &quot;int&quot;) to str</span>
+</pre></div>
+</div>
 <p>foobar = int(foo) + bar</p>
 <p>print(foobar)7</p>
 <p>foo = 2.0</p>
