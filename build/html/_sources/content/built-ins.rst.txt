@@ -56,23 +56,20 @@ Sintaxe:
     stop:  Valor final da sequẽncia - 1.
     step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que stop, ou seja, para se fazer uma sequência regressiva é preciso um número negativo.
 
+    .. code-block:: python
 
+    # Um parâmetro (stop)
 
-Um parâmetro (stop):
+    for i in range(5):
+        print(i)
 
-> for i in range(10):
-    print(i)
+.. code-block:: console
 
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
+    0
+    1
+    2
+    3
+    4
 
 
 
