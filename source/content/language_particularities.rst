@@ -192,23 +192,26 @@ Orientada a Objetos
     0
 
 	A criação de classes em Python é extremamente simples, sendo que uma classe primária a herança é feita da classe object e cada classe pode herdar mais de uma. Ou seja, também é aceita herança múltipla.
-	
-class Carro(object):
-    marca = ''
-    modelo = ''
-    ano = 0
 
-c1 = Carro()
+.. code-block:: python
+    class Carro(object):
+        marca = ''
+        modelo = ''
+        ano = 0
 
-c1.marca = 'Porsche'
+    c1 = Carro()
 
-c1.modelo = 'Carrera'
+    c1.marca = 'Porsche'
 
-c1.ano = 1995
+    c1.modelo = 'Carrera'
 
-print('O %s %s fabricado em %i estava estacionado.' % (c1.marca, c1.modelo, c1.ano))
+    c1.ano = 1995
 
-O Porsche Carrera fabricado em 1995 estava estacionado.
+    print('O {} {} fabricado em {} estava estacionado.'.format(c1.marca, c1.modelo, c1.ano))
+
+.. code-block:: console
+
+    O Porsche Carrera fabricado em 1995 estava estacionado.
 
 
 class Animal(object):
