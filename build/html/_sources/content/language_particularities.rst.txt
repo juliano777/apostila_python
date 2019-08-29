@@ -702,8 +702,13 @@ Atribuição de Valores
 
     1
 
-print(y)
-2
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    2
 
 print(z)
 3
