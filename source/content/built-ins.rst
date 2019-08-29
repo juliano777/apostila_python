@@ -19,13 +19,15 @@ print
 
     Hello, world!
 
+.. code-block:: python
 
+    # Pode-se passar mais de uma string como parâmetro:
 
-Pode-se passar mais de uma string como parâmetro:
+    print('foo', 'bar', 'baz')
 
-> print('foo', 'bar', 'baz')
+.. code-block:: console
 
-foo bar baz
+    foo bar baz
 
 
 
