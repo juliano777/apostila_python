@@ -136,10 +136,11 @@ Não Suporta Sobrecarga de Funções / Métodos
     def hello_world():
         print('Hello World')
 
-    # Definição da função com um parâmetro
+    # (Re)Definição da função com um parâmetro
     def hello_world(string):
         print(string)
-    
+
+    # Tentativa de execução sem parâmetro    
     hello_world()
 
 .. code-block:: console
