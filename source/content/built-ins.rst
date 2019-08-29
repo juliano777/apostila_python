@@ -119,20 +119,18 @@ filter()
 
     Função que retorna um iterador produzindo os itens iteráveis para os quais a função(item) for True.
 
+.. code-block:: python
 
+    # Criação de uma função que retorna True se o objeto for ímpar
+    def impar(x):
+        return x % 2 != 0
 
-Criação de uma função que retorna True se o objeto for ímpar:
+    # Testando a função
+    impar(7)
 
-> def impar(x):
-    return x % 2 != 0
+.. code-block:: console
 
-
-
-Testando a função:
-
-> impar(7)
-
-True
+    True
 
 > impar(6)
 
