@@ -100,17 +100,18 @@ Sintaxe:
     7
     9
 
+.. code-block:: python
 
+    # Sequẽncia regressiva
+    for i in range(20, 1, -5):
+        print(i)
 
-sequẽncia regressiva:
+.. code-block:: console
 
-> for i in range(20, 1, -5):
-    print(i)
-
-20
-15
-10
-5
+    20
+    15
+    10
+    5
 
 
 
