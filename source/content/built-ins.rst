@@ -560,7 +560,8 @@ Fim
 
 
 
-abs
+abs()
+-----
 
     Retorna o valor absoluto do argumento.
 
@@ -580,7 +581,8 @@ Exemplos:
 
 
 
-divmod
+divmod()
+--------
 
     Função que retorna uma tupla de dois elementos no formato (x//y, x%y), respectivamente resultado da divisão inteira e resto da divisão:
 
@@ -594,7 +596,8 @@ Exemplos:
 
 
 
-round
+round()
+-------
 
     Função que retorna um número de forma arredondada dada uma precisão em dígitos decimais.
     O valor de retorno é um inteiro se o número de dígitos for omitido ou None. Caso contrário, o valor de retorno terá o mesmo tipo do número. O número de dígitos pode ser negativo.

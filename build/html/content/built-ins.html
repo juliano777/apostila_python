@@ -88,11 +88,14 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Comandos e Funções Importantes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#print">3.1. print()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#range">3.2. range()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#filter">3.3. filter()</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#map">3.3.1. map()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reduce">3.3.2. reduce()</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#filter">3.3. filter()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#map">3.4. map()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reduce">3.5. reduce()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#del">3.6. del</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ord-e-chr">3.7. ord e chr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dir">3.8. dir()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pass">3.9. pass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assert">3.10. assert</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
@@ -321,8 +324,9 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
 </pre></div>
 </div>
+</div>
 <div class="section" id="map">
-<h3>3.3.1. map()<a class="headerlink" href="#map" title="Link permanente para este título">¶</a></h3>
+<h2>3.4. map()<a class="headerlink" href="#map" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Cria um iterador que aplica uma função para cada elemento do iterável.</p>
 </div></blockquote>
@@ -340,7 +344,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <p>[9, 7, 78125, 1000]</p>
 </div>
 <div class="section" id="reduce">
-<h3>3.3.2. reduce()<a class="headerlink" href="#reduce" title="Link permanente para este título">¶</a></h3>
+<h2>3.5. reduce()<a class="headerlink" href="#reduce" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.</p>
 </div></blockquote>
@@ -357,7 +361,9 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <p>Função reduce para executar a mesma tarefa anterior com apenas um comando:</p>
 <p>&gt; reduce(int.__add__, (2, 1, 4, 3))</p>
 <p>10</p>
-<p>del</p>
+</div>
+<div class="section" id="del">
+<h2>3.6. del<a class="headerlink" href="#del" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>Pode ser tanto um comando como uma função cuja finalidade é remover a referência de um objeto.</dt><dd><p>Também apaga elemento de uma coleção.</p>
@@ -381,7 +387,9 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <blockquote>
 <div><p>Nota-se que após o del não é possível mais fazer referência ao objeto.</p>
 </div></blockquote>
-<p>ord e chr</p>
+</div>
+<div class="section" id="ord-e-chr">
+<h2>3.7. ord e chr<a class="headerlink" href="#ord-e-chr" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>A função ord retorna o código Unicode de um caractere.
 A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode. Em Python 2 chr era unichr.</p>
@@ -408,7 +416,9 @@ A função chr faz o caminho inverso, ou seja, retorna um caractere dado um cód
 <p>‘x’</p>
 <p>&gt; chr(981)  # Qual caractere Unicode corresponde ao código 981?</p>
 <p>‘ϕ’</p>
-<p>dir</p>
+</div>
+<div class="section" id="dir">
+<h2>3.8. dir()<a class="headerlink" href="#dir" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><blockquote>
 <div><p>Função que lista atributos e métodos de um elemento.</p>
@@ -526,7 +536,9 @@ for i in metodos:</p>
 <p>&gt; mostra_metodos(p)</p>
 <p>dizer_nome
 saudacao</p>
-<p>pass</p>
+</div>
+<div class="section" id="pass">
+<h2>3.9. pass<a class="headerlink" href="#pass" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>É um comando de  operação nula, ou seja, quando é executado nada acontece. É útil como um marcador quando um statement é requerido sintaticamente, mas não tem necessidade de um código a ser executado.</p>
 </div></blockquote>
@@ -538,7 +550,9 @@ Função sem utilidade
 pass</p>
 </dd>
 </dl>
-<p>assert</p>
+</div>
+<div class="section" id="assert">
+<h2>3.10. assert<a class="headerlink" href="#assert" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Um statements assert é uma maneira conveniente para inserir asserções de debug.
 O comando assert verifica em tempo de execução uma determinada condição e se a mesma não for verdadira uma exceção AssertionError é lançada e se essa exceção não for tratada, o programa pára.</p>
@@ -783,7 +797,6 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 <p>(1, ‘azul’)</p>
 <p>&gt; y. __next__()</p>
 <p>(2, ‘amarelo’)</p>
-</div>
 </div>
 </div>
 
