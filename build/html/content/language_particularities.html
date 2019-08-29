@@ -247,10 +247,12 @@ break   except    in       raise
 <div><p>É possível utilizar codificações diferentes de ASCII em arquivos de código-fonte.
 A melhor maneira de se fazer isso é colocar uma linha especial no começo do arquivo, se foi especificado o interpretador, deve vir logo depois dele:</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># _*_ encoding: utf-8 _*__hex__</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># _*_ encoding: utf-8 _*_</span>
 </pre></div>
 </td></tr></table></div>
-<p>$ vim /tmp/hello.py</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /tmp/hello.py
+</pre></div>
+</div>
 <p>#!/usr/bin/env python</p>
 <p>print(‘Olá!’)</p>
 <p>$ python /tmp/hello.py</p>

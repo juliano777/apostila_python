@@ -54,9 +54,14 @@ Codificação (Conjunto de Caracteres - Encoding)
 .. code-block:: python
     :linenos:
 
-    # _*_ encoding: utf-8 _*__hex__
+    # _*_ encoding: utf-8 _*_
 
-$ vim /tmp/hello.py
+
+.. code-block:: bash
+
+     vim /tmp/hello.py
+
+     
 
 #!/usr/bin/env python
 
