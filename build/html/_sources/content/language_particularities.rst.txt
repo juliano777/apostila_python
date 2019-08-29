@@ -531,7 +531,7 @@ Recurso para criar documentação automaticamente:
 
     help(funcao)
 
-.. code-block:: python
+.. code-block:: console
 
     Help on function funcao in module __main__:
 
@@ -544,6 +544,7 @@ Operadores
 ----------
 
 Aritméticos
+~~~~~~~~~~~
 
 Lógicos
 
