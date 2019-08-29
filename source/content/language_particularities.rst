@@ -529,20 +529,22 @@ Recurso para criar documentação automaticamente:
     def funcao():
         '''Esta função não faz absolutamente nada'''
 
-    
+    help(funcao)
 
-help(funcao)
+.. code-block:: console
 
-Help on function funcao in module __main__:
+    Help on function funcao in module __main__:
 
-funcao()
-    Esta função não faz absolutamente nada
+    funcao()
+
+        Esta função não faz absolutamente nada
 
 
 Operadores
 ----------
 
 Aritméticos
+~~~~~~~~~~~
 
 Lógicos
 
