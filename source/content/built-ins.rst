@@ -29,19 +29,20 @@ print
 
     foo bar baz
 
+.. code-block:: python
 
+    # Colocando como separador uma nova linha para cada string passada como parâmetro
 
-Colocando como separador uma nova linha para cada string passada como parâmetro:
+    print('foo', 'bar', 'baz', sep='\n')
 
-> print('foo', 'bar', 'baz', sep='\n')
+.. code-block:: console
 
-foo
-bar
-baz
-
-
+    foo
+    bar
+    baz
 
 range()
+-------
 
     É uma função que retorna um objeto com uma faixa inteiros (range object).
     Muito útil para uso em loops.

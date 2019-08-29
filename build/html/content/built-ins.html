@@ -210,11 +210,16 @@ Seu objetivo é imprimir uma mensagem que por padrão é STDOUT.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo bar baz</span>
 </pre></div>
 </div>
-<p>Colocando como separador uma nova linha para cada string passada como parâmetro:</p>
-<p>&gt; print(‘foo’, ‘bar’, ‘baz’, sep=’n’)</p>
-<p>foo
-bar
-baz</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Colocando como separador uma nova linha para cada string passada como parâmetro</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo</span>
+<span class="go">bar</span>
+<span class="go">baz</span>
+</pre></div>
+</div>
 <p>range()</p>
 <blockquote>
 <div><p>É uma função que retorna um objeto com uma faixa inteiros (range object).
