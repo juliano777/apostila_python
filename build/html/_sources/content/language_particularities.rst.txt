@@ -712,24 +712,30 @@ Atribuição de Valores
 
     print(z)
 
-
 .. code-block:: console
 
     3
 
 Invertendo valores:
 
-x = 10
+.. code-block:: python
 
-y = 20
+    x = 10
+    y = 20
+    x, y = y, x
+    print(x)
 
-x, y = y, x
+.. code-block:: console
 
-print(x)
-20
+    20
 
-print(y)
-10
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    10
 
 
 Atribuição por Incremento ou Decremento

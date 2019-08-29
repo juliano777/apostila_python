@@ -793,13 +793,21 @@ Se esse objeto não tiver outra referência, o garbage collector atuará liberan
 </pre></div>
 </div>
 <p>Invertendo valores:</p>
-<p>x = 10</p>
-<p>y = 20</p>
-<p>x, y = y, x</p>
-<p>print(x)
-20</p>
-<p>print(y)
-10</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">20</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
+</pre></div>
+</div>
 <div class="section" id="atribuicao-por-incremento-ou-decremento">
 <h3>2.16.1. Atribuição por Incremento ou Decremento<a class="headerlink" href="#atribuicao-por-incremento-ou-decremento" title="Link permanente para este título">¶</a></h3>
 <p>x = 0
