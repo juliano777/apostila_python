@@ -191,7 +191,8 @@ Para cada item da primeira lista elevar (potência) ao elemento respectivo na se
 
 
 
-reduce
+reduce()
+~~~~~~~~
 
     Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.
 
