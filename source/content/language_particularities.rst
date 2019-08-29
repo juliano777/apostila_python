@@ -683,8 +683,13 @@ Atribuição de Valores
 
     0
 
-print(bar)
-bla bla bla
+.. code-block:: python
+
+    print(bar)
+
+.. code-block:: console
+
+    bla bla bla
 
 2.12.1 - Atribuição Composta ou Atribuição por Tupla
 
