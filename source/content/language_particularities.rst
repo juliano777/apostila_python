@@ -166,16 +166,30 @@ Orientada a Objetos
 	Ainda fazendo comparação com o mundo Java, em Python não existem tipos primitivos.
 	Até mesmo um número inteiro é uma instância de int e tem seus atributos e métodos.
 
-x = 45
 
-x.__hex__()
-'0x2d'
+.. code-block:: python
+    x = 45
+    x.__hex__()
 
-x.real
-45
+.. code-block:: console
 
-x.imag
-0
+    '0x2d'
+
+.. code-block:: python
+
+    x.real
+
+.. code-block:: console
+
+    45
+
+.. code-block:: python
+
+    x.imag
+
+.. code-block:: console
+
+    0
 
 	A criação de classes em Python é extremamente simples, sendo que uma classe primária a herança é feita da classe object e cada classe pode herdar mais de uma. Ou seja, também é aceita herança múltipla.
 	
