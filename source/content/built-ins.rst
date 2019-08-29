@@ -644,7 +644,8 @@ Precisão variando de 1 a -3:
 
 
 
-callable
+callable()
+----------
 
     Função que retorna True se o objeto é "chamável" (callable) (i. e., algum tipo de função).
     Vale lembrar que classes também são chamáveis, bem como objetos de classes que implementam o método __call__().
@@ -713,7 +714,8 @@ True
 
 
 
-oct
+oct()
+-----
 
     Função que retorna a representação octal de um inteiro.
 
