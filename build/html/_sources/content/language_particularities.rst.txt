@@ -536,7 +536,6 @@ Recurso para criar documentação automaticamente:
     Help on function funcao in module __main__:
 
     funcao()
-
         Esta função não faz absolutamente nada
 
 
