@@ -517,10 +517,10 @@ Docstrings ou Strings de Múltiplas Linhas
     '''Esta função faz isso de forma
     x, y e z além de bla bla bla bla'''
 
-Com aspas:
+    # Com aspas
 
-"""Esta função faz isso de forma
-x, y e z além de bla bla bla bla"""
+    """Esta função faz isso de forma
+    x, y e z além de bla bla bla bla"""
 
 Recurso para criar documentação automaticamente:
 

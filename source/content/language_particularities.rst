@@ -501,7 +501,7 @@ Comentários
 
     x = 5 + 2
 
-    print(x) # Imprime o valor de x
+    print(x)  # Imprime o valor de x
 
 Docstrings ou Strings de Múltiplas Linhas
 -----------------------------------------
