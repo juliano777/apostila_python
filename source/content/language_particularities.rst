@@ -116,10 +116,13 @@ Case Sensitive
 
     bar
 
-.. code-block:: python    
+.. code-block:: python
 
-print(Foo)
-foo
+    print(Foo)
+
+.. code-block:: console
+
+    foo
 
 Não Suporta Sobrecarga de Funções / Métodos
 -------------------------------------------
