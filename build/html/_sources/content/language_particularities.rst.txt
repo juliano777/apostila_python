@@ -469,23 +469,24 @@ Blocos
 
 	São delimitados por endentação e a linha anterior ao bloco sempre termina com dois pontos.
 
-Exemplo:
 
-#Definição de uma classe
-class Carro(object):
-    ano = 0
-    marca = ''
-    estado_farois = False
+.. code-block:: python
 
-    #Definição de um método da classe
-    def interruptor_farois(self):
-        #Bloco if
-        if(self.estado_farois):
-            print('Apagando faróis')
-            self.estado_farois = False            
-        else:   
-            print('Acendendo faróis')
-            self.estado_farois = True
+    #Definição de uma classe
+    class Carro(object):
+        ano = 0
+        marca = ''
+        estado_farois = False
+
+        #Definição de um método da classe
+        def interruptor_farois(self):
+            #Bloco if
+                if(self.estado_farois):
+                    print('Apagando faróis')
+                    self.estado_farois = False
+                else:
+                    print('Acendendo faróis')
+                    self.estado_farois = True
 
 Comentários
 -----------

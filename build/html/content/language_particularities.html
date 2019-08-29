@@ -586,29 +586,23 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 <blockquote>
 <div><p>São delimitados por endentação e a linha anterior ao bloco sempre termina com dois pontos.</p>
 </div></blockquote>
-<p>Exemplo:</p>
-<p>#Definição de uma classe
-class Carro(object):</p>
-<blockquote>
-<div><p>ano = 0
-marca = ‘’
-estado_farois = False</p>
-<p>#Definição de um método da classe
-def interruptor_farois(self):</p>
-<blockquote>
-<div><p>#Bloco if
-if(self.estado_farois):</p>
-<blockquote>
-<div><p>print(‘Apagando faróis’)
-self.estado_farois = False</p>
-</div></blockquote>
-<dl class="simple">
-<dt>else:</dt><dd><p>print(‘Acendendo faróis’)
-self.estado_farois = True</p>
-</dd>
-</dl>
-</div></blockquote>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Definição de uma classe</span>
+<span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">ano</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">estado_farois</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="c1">#Definição de um método da classe</span>
+    <span class="k">def</span> <span class="nf">interruptor_farois</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#Bloco if</span>
+            <span class="k">if</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Apagando faróis&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Acendendo faróis&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="comentarios">
 <h2>2.11. Comentários<a class="headerlink" href="#comentarios" title="Link permanente para este título">¶</a></h2>
