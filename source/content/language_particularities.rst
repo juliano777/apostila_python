@@ -655,6 +655,7 @@ O Comando del
 
 
 print
+-----
 
 	Antes era somente um comando, a partir da série 3.X será apenas interpretado como função.
 
