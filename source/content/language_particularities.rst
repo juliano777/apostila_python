@@ -524,9 +524,12 @@ Docstrings ou Strings de Múltiplas Linhas
 
 Recurso para criar documentação automaticamente:
 
-def funcao():
-    '''Esta função não faz absolutamente nada'''
-    pass
+.. code-block:: python
+
+    def funcao():
+        '''Esta função não faz absolutamente nada'''
+
+    
 
 help(funcao)
 
