@@ -99,14 +99,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#quebra-de-linhas">2.9. Quebra de linhas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#blocos">2.10. Blocos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#comentarios">2.11. Comentários</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#operadores">2.12. Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#o-comando-del">2.13. O Comando del</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#atribuicao-de-valores">2.14. Atribuição de Valores</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#atribuicao-simples">2.14.1. Atribuição Simples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#atribuicao-por-incremento-ou-decremento">2.14.2. Atribuição por Incremento ou Decremento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docstrings-ou-strings-de-multiplas-linhas">2.12. Docstrings ou Strings de Múltiplas Linhas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores">2.13. Operadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#o-comando-del">2.14. O Comando del</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atribuicao-de-valores">2.15. Atribuição de Valores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#atribuicao-simples">2.15.1. Atribuição Simples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atribuicao-por-incremento-ou-decremento">2.15.2. Atribuição por Incremento ou Decremento</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#referencia-de-identificadores">2.15. Referência de Identificadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#referencia-de-identificadores">2.16. Referência de Identificadores</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
@@ -609,11 +610,18 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 <blockquote>
 <div><p>Inicia-se com o caractere “#” em cada linha.</p>
 </div></blockquote>
-<p># um simples comentário</p>
-<p># A seguir uma soma</p>
-<p>x = 5 + 2</p>
-<p>print(x) # Imprime o valor de x</p>
-<p>2.10.1 Docstrings ou Strings de Múltiplas Linhas</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># um simples comentário</span>
+
+<span class="c1"># A seguir uma soma</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># Imprime o valor de x</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="docstrings-ou-strings-de-multiplas-linhas">
+<h2>2.12. Docstrings ou Strings de Múltiplas Linhas<a class="headerlink" href="#docstrings-ou-strings-de-multiplas-linhas" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Feitos dentro de funções e classes, que geram documentação automaticamente que pode ser acessado pela função help().
 São usados três pares de apóstrofos (‘) ou três pares de aspas (“), 3 (três) no início e 3 (três) no fim.</p>
@@ -638,7 +646,7 @@ pass</p>
 </dl>
 </div>
 <div class="section" id="operadores">
-<h2>2.12. Operadores<a class="headerlink" href="#operadores" title="Link permanente para este título">¶</a></h2>
+<h2>2.13. Operadores<a class="headerlink" href="#operadores" title="Link permanente para este título">¶</a></h2>
 <p>Aritméticos</p>
 <p>Lógicos</p>
 <p>Bit a Bit
@@ -702,7 +710,7 @@ Potência
 **</p>
 </div>
 <div class="section" id="o-comando-del">
-<h2>2.13. O Comando del<a class="headerlink" href="#o-comando-del" title="Link permanente para este título">¶</a></h2>
+<h2>2.14. O Comando del<a class="headerlink" href="#o-comando-del" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Este comando tem como objetivo remover a referência de um objeto.
 Se esse objeto não tiver outra referência, o garbage collector atuará liberando recursos.</p>
@@ -743,9 +751,9 @@ Teste</p>
 Teste</p>
 </div>
 <div class="section" id="atribuicao-de-valores">
-<h2>2.14. Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h2>
+<h2>2.15. Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h2>
 <div class="section" id="atribuicao-simples">
-<h3>2.14.1. Atribuição Simples<a class="headerlink" href="#atribuicao-simples" title="Link permanente para este título">¶</a></h3>
+<h3>2.15.1. Atribuição Simples<a class="headerlink" href="#atribuicao-simples" title="Link permanente para este título">¶</a></h3>
 <p>foo = 0
 bar = ‘bla bla bla’</p>
 <p>print(foo)
@@ -770,7 +778,7 @@ bla bla bla</p>
 10</p>
 </div>
 <div class="section" id="atribuicao-por-incremento-ou-decremento">
-<h3>2.14.2. Atribuição por Incremento ou Decremento<a class="headerlink" href="#atribuicao-por-incremento-ou-decremento" title="Link permanente para este título">¶</a></h3>
+<h3>2.15.2. Atribuição por Incremento ou Decremento<a class="headerlink" href="#atribuicao-por-incremento-ou-decremento" title="Link permanente para este título">¶</a></h3>
 <p>x = 0
 x +=1
 x +=1
@@ -794,7 +802,7 @@ bla bla bla</p>
 </div>
 </div>
 <div class="section" id="referencia-de-identificadores">
-<h2>2.15. Referência de Identificadores<a class="headerlink" href="#referencia-de-identificadores" title="Link permanente para este título">¶</a></h2>
+<h2>2.16. Referência de Identificadores<a class="headerlink" href="#referencia-de-identificadores" title="Link permanente para este título">¶</a></h2>
 <p>x = 7
 y = x
 z = x</p>

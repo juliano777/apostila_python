@@ -493,15 +493,18 @@ Comentários
 
 	Inicia-se com o caractere "#" em cada linha.
 
-# um simples comentário
+.. code-block:: python
 
-# A seguir uma soma
+    # um simples comentário
 
-x = 5 + 2
+    # A seguir uma soma
 
-print(x) # Imprime o valor de x
+    x = 5 + 2
 
-2.10.1 Docstrings ou Strings de Múltiplas Linhas
+    print(x) # Imprime o valor de x
+
+Docstrings ou Strings de Múltiplas Linhas
+-----------------------------------------
 
 	Feitos dentro de funções e classes, que geram documentação automaticamente que pode ser acessado pela função help().
 	São usados três pares de apóstrofos (') ou três pares de aspas ("), 3 (três) no início e 3 (três) no fim.
