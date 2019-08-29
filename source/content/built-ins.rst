@@ -733,7 +733,8 @@ Exemplos:
 
 
 
-hash
+hash()
+------
 
     Função que retorna o valor hash de um dado objeto.
     Dois objetos que são comparados também devem ter o mesmo valor de hash.
@@ -772,8 +773,8 @@ TypeError: unhashable type: 'list'
 776627963145224195
 
 
-
-id
+id()
+----
 
     É uma função que retorna a identidade de um objeto.
     É a garantia que o objeto será único dentre outros.
