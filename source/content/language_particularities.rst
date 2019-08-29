@@ -129,13 +129,17 @@ Não Suporta Sobrecarga de Funções / Métodos
 
 	Àqueles que vêm de Java deve estranhar dentre outras coisas o fato de Python não suportar sobrecarga de funções e métodos.
 	Quando uma mesma função é escrita duas ou mais vezes, o que prevalece é a última definição.
-	
 
-def hello_world():
-    print('Hello World')
+.. code-block:: python
 
-def hello_world(string):
-    print(string)
+    def hello_world():
+        print('Hello World')
+
+
+.. code-block:: python
+
+    def hello_world(string):
+        print(string)
 
 hello_world()
 
