@@ -41,9 +41,9 @@ Definição do Interpretador de Comandos
 
     #!/usr/bin/env python3
 
-    .. note::
+.. note::
 
-        Em ambientes Windows não é preciso espeficar, isso é pertinente a ambientes Unix.
+    Em ambientes Windows não é preciso espeficar, isso é pertinente a ambientes Unix.
 
 Codificação (Conjunto de Caracteres - Encoding)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
