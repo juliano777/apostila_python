@@ -267,6 +267,8 @@ Tipagem Dinâmica
 
     float
 
+  
+
 Tipagem Forte 
 -------------
 
