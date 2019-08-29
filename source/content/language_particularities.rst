@@ -36,10 +36,14 @@ Definição do Interpretador de Comandos
 
 	Para scripts Python, na primeira linha podemos especificar o interpretador de comandos a ser utilizado, também conhecido como shebang;
 
+.. code-block:: python
+    :linenos:
 
-#!/usr/bin/env python3
+    #!/usr/bin/env python3
 
-	Obs.: Em ambientes Windows não é preciso espeficar, isso é pertinente a ambientes Unix.
+    .. note::
+
+        Em ambientes Windows não é preciso espeficar, isso é pertinente a ambientes Unix.
 
 Codificação (Conjunto de Caracteres - Encoding)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
