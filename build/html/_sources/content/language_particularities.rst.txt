@@ -386,6 +386,7 @@ Edição de script de exemplo:
     vim /tmp/python/foo.py
 
 .. code-block:: python
+    :linenos:
 
     #!/usr/bin/env python
     # _*_ encoding: utf-8 _*_
