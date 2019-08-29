@@ -51,7 +51,10 @@ Codificação (Conjunto de Caracteres - Encoding)
 	É possível utilizar codificações diferentes de ASCII em arquivos de código-fonte.
 	A melhor maneira de se fazer isso é colocar uma linha especial no começo do arquivo, se foi especificado o interpretador, deve vir logo depois dele:
 
-# -*- coding: encoding -*-
+.. code-block:: python
+    :linenos:
+
+    # _*_ encoding: utf-8 _*__hex__
 
 $ vim /tmp/hello.py
 
