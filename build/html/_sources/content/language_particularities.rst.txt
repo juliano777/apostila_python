@@ -32,7 +32,7 @@ Podemos verificar as palavras reservdas de Python usando código:
 
 
 
-.. DANGER::
+.. Bla::
    Beware killer rabbits!
 
 Definição do Interpretador de Comandos
