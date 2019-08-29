@@ -397,18 +397,33 @@ feita da classe object e cada classe pode herdar mais de uma. Ou seja, também �
 <div class="section" id="tipagem-dinamica">
 <h2>2.6. Tipagem Dinâmica<a class="headerlink" href="#tipagem-dinamica" title="Link permanente para este título">¶</a></h2>
 <blockquote>
+<div><blockquote>
 <div><p>O interpretador define o tipo de acordo com o valor atribuído à variável.
-A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo do código-fonte e em seu tempo de execução.</p>
+A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo</p>
 </div></blockquote>
-<p>foo = ‘bar’</p>
-<p>type(foo)
-str</p>
-<p>foo = 123</p>
-<p>type(foo)
-int</p>
-<p>foo = 7.0</p>
-<p>type(foo)
-float</p>
+<p>do código-fonte e em seu tempo de execução.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="mf">7.0</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">float</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="tipagem-forte">
 <h2>2.7. Tipagem Forte<a class="headerlink" href="#tipagem-forte" title="Link permanente para este título">¶</a></h2>

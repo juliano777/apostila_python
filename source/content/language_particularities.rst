@@ -255,12 +255,19 @@ Tipagem Dinâmica
     type(foo)
 
 .. code-block:: console
-int
 
-foo = 7.0
+    int
 
-type(foo)
-float
+.. code-block:: python
+
+    foo = 7.0
+    type(foo)
+
+.. code-block:: console
+
+    float
+
+  
 
 Tipagem Forte 
 -------------
