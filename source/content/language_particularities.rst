@@ -196,6 +196,7 @@ A criação de classes em Python é extremamente simples, sendo que uma classe p
 
 
 .. code-block:: python
+
     class Carro(object):
         marca = ''
         modelo = ''
