@@ -325,9 +325,11 @@ Tipagem Forte
 .. code-block:: python
 
     bar = 5
+    type(bar)
 
-type(bar)
-int
+.. code-block:: console
+
+    int
 
 foobar = foo + bar
 
