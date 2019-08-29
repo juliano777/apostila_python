@@ -329,12 +329,16 @@ Tipagem Forte
 
 .. code-block:: console
 
-    int
+    <class 'int'>
 
-foobar = foo + bar
+.. code-block:: python
 
-print(foobar)
-7.0
+    foobar = foo + bar
+    print(foobar)
+
+.. code-block:: console
+
+    7.0
 
 Bytecode
 --------
