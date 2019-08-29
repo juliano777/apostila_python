@@ -139,9 +139,9 @@ c1.modelo = 'Carrera'
 
 c1.ano = 1995
 
-print('O %s %s fabricado em %i estava estacionado' % (c1.marca, c1.modelo, c1.ano))
+print('O %s %s fabricado em %i estava estacionado.' % (c1.marca, c1.modelo, c1.ano))
 
-O Porsche Carrera fabricado em 1995 estava estacionado
+O Porsche Carrera fabricado em 1995 estava estacionado.
 
 
 class Animal(object):
