@@ -132,9 +132,13 @@ filter()
 
     True
 
-> impar(6)
+.. code-block:: python
 
-False
+    impar(6)
+
+.. code-block:: console
+
+    False
 
 
 
@@ -148,7 +152,8 @@ Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente 
 
 
 
-map
+map()
+~~~~~
 
     Cria um iterador que aplica uma função para cada elemento do iterável.
 

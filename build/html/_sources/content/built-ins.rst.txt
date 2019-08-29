@@ -132,9 +132,13 @@ filter()
 
     True
 
-> impar(6)
+.. code-block:: python
 
-False
+    impar(6)
+
+.. code-block:: console
+
+    False
 
 
 
