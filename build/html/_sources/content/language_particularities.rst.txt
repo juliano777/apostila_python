@@ -237,8 +237,7 @@ Tipagem Dinâmica
 ----------------
 
 	O interpretador define o tipo de acordo com o valor atribuído à variável.
-	A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo
-    do código-fonte e em seu tempo de execução.
+	A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuídos ao longo do código-fonte e em seu tempo de execução.
 
 .. code-block:: python
 
