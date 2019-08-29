@@ -268,12 +268,22 @@ A melhor maneira de se fazer isso é colocar uma linha especial no começo do ar
 </pre></div>
 </div>
 <p>Editar o script Python:</p>
-<p>$ vim /tmp/hello.py</p>
-<p>#!/usr/bin/env python
-#_*_ coding: utf-8 _*_</p>
-<p>print(‘Olá!’)</p>
-<p>$ python /tmp/hello.py
-Olá!</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#_*_ coding: utf-8 _*_</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá!&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Executar o script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python /tmp/hello.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Olá!</span>
+</pre></div>
+</div>
 <p>Também poderíamos fazer desta maneira (Python 2):</p>
 <p>import sys
 reload(sys)
