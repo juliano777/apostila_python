@@ -132,9 +132,11 @@ Não Suporta Sobrecarga de Funções / Métodos
 
 .. code-block:: python
 
+    # Definição da função sem parâmetro
     def hello_world():
         print('Hello World')
 
+    # Definição da função com um parâmetro
     def hello_world(string):
         print(string)
     
