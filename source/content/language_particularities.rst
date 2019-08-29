@@ -623,14 +623,29 @@ O Comando del
 	Este comando tem como objetivo remover a referência de um objeto.
 	Se esse objeto não tiver outra referência, o garbage collector atuará liberando recursos.
 
-sogra = 'Edelbarina'
-print(sogra)
-Edelbarina
-del sogra
-print(sogra)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'sogra' is not defined
+.. code-block:: python
+
+    sogra = 'Edelbarina'
+    print(sogra)
+
+.. code-block:: console
+
+    Edelbarina
+
+.. code-block:: python
+
+    del sogra
+    print(sogra)
+
+.. code-block:: console
+
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+    NameError: name 'sogra' is not defined
+
+.. code-block:: python
+
+        
 
 a = ['Z', 1, 5, 'm']
 
