@@ -359,7 +359,24 @@ Até mesmo um número inteiro é uma instância de int e tem seus atributos e m�
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<p>A criação de classes em Python é extremamente simples, sendo que uma classe primária a herança é feita da classe object e cada classe pode herdar mais de uma. Ou seja, também é aceita herança múltipla.</p>
+<p>A criação de classes em Python é extremamente simples, sendo que uma classe primária a herança é
+feita da classe object e cada classe pode herdar mais de uma. Ou seja, também é aceita herança múltipla.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">ano</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;Porsche&#39;</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;Carrera&#39;</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">ano</span> <span class="o">=</span> <span class="mi">1995</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;O {} {} fabricado em {} estava estacionado.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">ano</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">O Porsche Carrera fabricado em 1995 estava estacionado.</span>
 </pre></div>
 </div>

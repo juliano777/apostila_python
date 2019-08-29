@@ -192,10 +192,12 @@ Orientada a Objetos
     0
 
 
-A criação de classes em Python é extremamente simples, sendo que uma classe primária a herança é feita da classe object e cada classe pode herdar mais de uma. Ou seja, também é aceita herança múltipla.
+A criação de classes em Python é extremamente simples, sendo que uma classe primária a herança é 
+feita da classe object e cada classe pode herdar mais de uma. Ou seja, também é aceita herança múltipla.
 
 
 .. code-block:: python
+
     class Carro(object):
         marca = ''
         modelo = ''
