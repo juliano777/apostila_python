@@ -4,36 +4,20 @@ Comandos e Funções Importantes
 	Neste capítulo são abordados comandos e funções interessantes e / ou imprescindíveis para a linguagem.
 
 print
+-----
 
     Em Python 2 era um comando e em Python 3 passou a ser exclusivamente uma função.
     Seu objetivo é imprimir uma mensagem que por padrão é STDOUT.
 
+.. code-block:: python
 
+    # Um simples "Hello, world!":
 
-Help de print:
+    print('Hello, world!')
 
-> help(print)
+.. code-block:: console
 
-    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
-    
-    Imprime para um stream, or to sys.stdout por padrão.
-    Argumentos opcionais:
-    file:  um arquivo como um objeto (stream); o padrão é sys.stdout.
-    sep:   String inserida entre valores, o padrão é um espaço.
-    end:   String adicionada após o último valor, o pdarão é uma nova linha ('\n').
-    flush: Se força ou não o flush (escrita) do stream, o padrão é False.
-
-<Tradução>
-
-    Mais detalhes sobre streams são vistos em open.
-
-
-
-Um simples "Hello, world!":
-
-> print('Hello, world!')
-
-Hello, world!
+    Hello, world!
 
 
 
