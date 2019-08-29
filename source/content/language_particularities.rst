@@ -77,7 +77,7 @@ Codificação (Conjunto de Caracteres - Encoding)
     File "/tmp/hello.py", line 4
     SyntaxError: Non-ASCII character '\xc3' in file /tmp/hello.py on line 4, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
 
-    
+Editar o script Python:    
 
 $ vim /tmp/hello.py
 
