@@ -82,7 +82,9 @@ bar
 print(Foo)
 foo
 
-2.3 Não Suporta Sobrecarga de Funções / Métodos
+Não Suporta Sobrecarga de Funções / Métodos
+-------------------------------------------
+
 	Àqueles que vêm de Java deve estranhar dentre outras coisas o fato de Python não suportar sobrecarga de funções e métodos.
 	Quando uma mesma função é escrita duas ou mais vezes, o que prevalece é a última definição.
 	
@@ -224,56 +226,110 @@ Bytecode
 
 	Formato binário multiplataforma resultante da compilação de um código Python.
 
-mkdir -p /tmp/python/PacoteA/PacoteA1
-touch /tmp/python/PacoteA/__init__.py
-touch /tmp/python/PacoteA/PacoteA1/__init__.py
 
-vim /tmp/python/PacoteA/Modulo1.py
+Criação de estrutura de diretórios para teste de pacote e bytecode:
 
-def funcao():
-    print('Hello World!!!')
+.. code-block:: bash
 
-vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
+    mkdir -p /tmp/python/PacoteA/PacoteA1
 
-def funcao(numero):
-    print(numero ** 3)
+Editar o módulo "Modulo1" que está dentro do pacote "PacoteA":
 
-vim /tmp/python/foo.py
+.. code-block:: bash
 
-#!/usr/bin/env python
-#_*_ encoding _*_
+    vim /tmp/python/PacoteA/Modulo1.py
+    
 
-from PacoteA.Modulo1 import funcao
-from PacoteA.PacoteA1 import Modulo2
+.. code-block:: python
 
-print('\nAtenção!!!\n')
-print('O teste vai começar...\n')
+    def funcao():
+        print('Hello World!!!')
 
-funcao()
+Editar o módulo "Modulo2" que está dentro do pacote "PacoteA":
 
-Modulo2.funcao(3)
+.. code-block:: bash
 
-$ python /tmp/python/foo.py 
+    vim /tmp/python/PacoteA/PacoteA1/Modulo2.py
 
-Atenção!!!
 
-O teste vai começar...
+.. code-block:: python
+    
+    def funcao(numero):
+        print(numero ** 3)
 
-Hello World!!!
-27
 
-Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o  arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.
+Edição de script de exemplo:
 
-ls /tmp/python/PacoteA/
-__init__.py  __init__.pyc  Modulo1.py  Modulo1.pyc  PacoteA1
+.. code-block:: bash
 
-ls /tmp/python/PacoteA/PacoteA1/
-__init__.py  __init__.pyc  Modulo2.py  Modulo2.pyc
+    vim /tmp/python/foo.py
 
-file /tmp/python/PacoteA/Modulo1.pyc
-/tmp/python/PacoteA/Modulo1.pyc: python 2.7 byte-compiled
+.. code-block:: python
 
-2.8 Quebra de linhas
+    #!/usr/bin/env python
+    # _*_ encoding: utf-8 _*_
+
+    from PacoteA.Modulo1 import funcao
+    from PacoteA.PacoteA1 import Modulo2
+
+    print('\nAtenção!!!\n')
+    print('O teste vai começar...\n')
+
+    funcao()
+
+    Modulo2.funcao(3)
+
+Execução do script:
+
+.. code-block:: bash
+
+    python3 /tmp/python/foo.py
+
+.. code-block:: console
+
+    Atenção!!!
+
+    O teste vai começar...
+
+    Hello World!!!
+    27
+
+Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do que o arquivo binário ele é compilado e então gera ou gera novamente o arquivo binário .pyc.
+
+Listar o conteúdo de "PacoteA":
+
+.. code-block:: bash
+
+    ls /tmp/python/PacoteA/
+
+.. code-block:: console
+
+    Modulo1.py  PacoteA1  __pycache__
+
+
+Listar o conteúdo de __pycache__:
+
+.. code-block:: bash
+
+    ls /tmp/python/PacoteA/__pycache__/
+
+.. code-block:: console
+
+    Modulo1.cpython-36.pyc
+
+
+Com o comando "file" verificar informações de tipo de arquivo:    
+
+.. code-block:: bash
+
+    file /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc
+
+.. code-block:: console
+
+    /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc: python 3.6 byte-compiled
+
+Quebra de linhas
+----------------
 
 Pode ser usada a barra invertida ou por vírgula.
 
