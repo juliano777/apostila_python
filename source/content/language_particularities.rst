@@ -16,6 +16,7 @@ Palavras reservadas ou em inglês *keywords* são
     assert  else      import   pass              
     break   except    in       raise
 
+Podemos verificar as palavras reservdas de Python usando código:
 
 .. code-block:: python
 
