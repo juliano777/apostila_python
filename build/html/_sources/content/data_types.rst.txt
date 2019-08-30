@@ -84,4 +84,6 @@ Soma utilizando cast.
 
 > int('5') + 2
 
-7
+.. code-block:: console
+
+    7
