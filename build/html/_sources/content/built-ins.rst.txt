@@ -800,9 +800,13 @@ hash()
 
     1
 
-> hash(2)
+.. code-block:: python
 
-2
+    hash(2)
+
+.. code-block:: console
+
+    2
 
 > x = 'foo'  # Hash de uma string
 
