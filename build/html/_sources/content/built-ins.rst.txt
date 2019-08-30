@@ -810,11 +810,13 @@ hash()
 
 .. code-block:: python
 
-    x = 'foo'  # Hash de uma string
+    # Hash de uma string
+    x = 'foo'  
 
 .. code-block:: python
 
-    hash(x)  # 
+    # Hash de uma string
+    hash(x)
 
 8540844669962366372
 
