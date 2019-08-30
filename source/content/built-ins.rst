@@ -320,13 +320,21 @@ ord e chr
 
     '\r'
 
-> chr(97)  # Qual caractere Unicode corresponde ao código 97?
+.. code-block:: python
 
-'a'
+    chr(97)  # Qual caractere Unicode corresponde ao código 97?
 
-> ord('a')  # Qual é o código unicode para o caractere "a"?
+.. code-block:: console
 
-97
+    'a'
+
+.. code-block:: python
+
+    ord('a')  # Qual é o código unicode para o caractere "a"?
+
+.. code-block:: console
+
+    97
 
 > chr(120)  # Qual caractere Unicode corresponde ao código 120?
 
