@@ -105,6 +105,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id">3.17. id()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#len">3.18. len</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#input">3.19. input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#min-e-max">3.20. min e max</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_types.html">4. Tipos de Dados</a></li>
@@ -1041,13 +1042,19 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
 </pre></div>
 </div>
-<p>min e max</p>
+</div>
+<div class="section" id="min-e-max">
+<h2>3.20. min e max<a class="headerlink" href="#min-e-max" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Dada uma coleção, seja ela uma lista, tupla, conjunto ou string, as funções min e max trazem, respectivamente, o valor mínimo e o máximo.</p>
 </div></blockquote>
-<p>Exemplos:</p>
-<p>&gt; min(0, 2, -50, 7)  # Valor mínimo entre inteiros</p>
-<p>-50</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valor mínimo entre inteiros</span>
+<span class="nb">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-50</span>
+</pre></div>
+</div>
 <p>&gt; max(0, 2, -50, 7)  # Valor máximo entre inteiros</p>
 <p>7</p>
 <p>&gt; max(‘c’, ‘x’, ‘k’)  # Para caracteres a ordem alfabética é levada em conta</p>
