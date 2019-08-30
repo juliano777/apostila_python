@@ -1028,25 +1028,20 @@ enumerate
 
     Função que retorna um objeto iterável.
 
+.. code-block:: python
 
+    # Criação de uma tupla
+    x = ('verde', 'azul', 'amarelo')
 
-Criação de uma tupla:
+    # Criação de um objeto iterável com base na tupla criada anteriormente
+    y = enumerate(x)
 
-> x = ('verde', 'azul', 'amarelo')
+    # Exibindo o tipo de y
+    type(y)
 
+.. code-block:: console
 
-
-Criação de um objeto iterável com base na tupla criada anteriormente:
-
-> y = enumerate(x)
-
-
-
-Exibindo o tipo de y:
-
-> type(y)
-
-enumerate
+    enumerate
 
 
 
