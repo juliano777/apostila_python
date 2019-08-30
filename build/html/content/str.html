@@ -802,12 +802,14 @@ Isso faz muita alocação de memória, o que torna o desempenho horrível para c
 <p>&gt; s = ‘’.join(s)</p>
 <p>Exibindo o valor da variável:</p>
 <p>&gt; s</p>
-<p>‘012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849’</p>
-<blockquote>
-<div><p>Foi criada uma lista de strings no loop em que a cada iteração é utilizado o método append da lista para adicionar o item atual.
-No final é utilizado o método de string join que utiliza como separador uma string vazia (‘’) juntando em uma string (o novo s) todos os valores da lista.
-A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&#39;</span>
+
+
+<span class="go">    Foi criada uma lista de strings no loop em que a cada iteração é utilizado o método append da lista para adicionar o item atual.</span>
+<span class="go">    No final é utilizado o método de string join que utiliza como separador uma string vazia (&#39;&#39;) juntando em uma string (o novo s) todos os valores da lista.</span>
+<span class="go">    A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="metodos-de-strings">
 <h2>5.11. Métodos de Strings<a class="headerlink" href="#metodos-de-strings" title="Link permanente para este título">¶</a></h2>
@@ -818,22 +820,30 @@ A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o 
 <p>&gt; foo = list(‘Python’)</p>
 <p>Exibe a lista:</p>
 <p>&gt; print(foo)</p>
-<p>[‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’]</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;P&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;]</span>
+</pre></div>
+</div>
 <p>Criação de uma nova variável juntando os elementos da lista com uma string vazia:</p>
 <p>&gt; bar = ‘’.join(foo)</p>
 <p>Exibindo a nova string:</p>
 <p>&gt; print(bar)</p>
-<p>Python</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Python</span>
+</pre></div>
+</div>
 <p>Criando uma tupla:</p>
 <p>&gt; foo = tuple(‘Python’)</p>
 <p>Exibindo os elementos da tupla:</p>
 <p>&gt; print(foo)</p>
-<p>(‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(&#39;P&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;)</span>
+</pre></div>
+</div>
 <p>Criação de uma nova variável juntando os elementos da tupla com uma string vazia:</p>
 <p>&gt; bar = ‘’.join(foo)</p>
 <p>Exibindo o valor da variável:</p>
 <p>&gt; print(bar)</p>
-<p>Python</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Python</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>find &amp; index (diferença entre ambos)</p></li>
 </ul>
@@ -845,29 +855,36 @@ A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o 
 <p>A partir de qual posição aparece a string?:</p>
 <p>&gt; foo.index(‘FreeBSD’)</p>
 <p>&gt; foo.find(‘FreeBSD’)</p>
-<p>7</p>
-<blockquote>
-<div><p>No exemplo dado o texto existe na string. E se não existisse?</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+
+<span class="go">No exemplo dado o texto existe na string. E se não existisse?</span>
+</pre></div>
+</div>
 <p>Buscando um texto que não existe dentro da string:</p>
 <p>&gt; foo.index(‘Linux’)</p>
-<p>ValueError: substring not found</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ValueError: substring not found</span>
+</pre></div>
+</div>
 <p>&gt; foo.find(‘Linux’)</p>
-<dl class="option-list">
-<dt><kbd><span class="option">-1</span></kbd></dt>
-<dd><p>Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.
-O -1 não deve ser confundido como último elemento.</p>
-</dd>
-</dl>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-1</span>
+
+<span class="go">Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.</span>
+<span class="go">O -1 não deve ser confundido como último elemento.</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>count</p></li>
 </ul>
 <p>Na frase em latim abaixo, quantas vezes aparece a letra “u”?:</p>
 <p>&gt; ‘sic mundus creatus est’.count(‘u’)</p>
-<p>3</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
+</pre></div>
+</div>
 <p>Quantas vezes aparece a sequência de caracteres “foo”?:</p>
 <p>&gt; ‘XXXfooXXXfooXXXbar’.count(‘foo’)</p>
-<p>2</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
 </div>
 </div>
 
