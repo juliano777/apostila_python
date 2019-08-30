@@ -283,20 +283,14 @@ ord e chr
     A função ord retorna o código Unicode de um caractere.
     A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode. Em Python 2 chr era unichr.    
 
+.. code-block:: python
 
+    # Qual é o código Unicode para new line?
+    ord('\n')
 
-ord e chr
+.. code-block:: console
 
-    A função ord retorna o código Unicode de um caractere.
-    A função chr faz o caminho inverso, ou seja, retorna um caractere dado um código Unicode. Em Python 2 chr era unichr.    
-
-
-
-Exemplos de ord e chr:
-
-> ord('\n')  # Qual é o código Unicode para new line?
-
-10
+    10
 
 
 > chr(10)  # Qual caractere Unicode corresponde ao código 10?
