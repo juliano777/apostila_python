@@ -354,26 +354,26 @@ dir()
     Se chamada sem nenhum argumento retorna os nomes do escopo atual.
     A chamada dessa função é correspondente ao executar o método __dir__.
     
-Definição de variáeis:
+. code-block:: python
 
-> x = 0
+    # Definição de variáeis
+    x = 0
+    y = 1
+    z = 2
 
-> y = 1
+. code-block:: python
 
-> z = 2
+    # Execução da função dir sem parâmetros
+    dir()
 
+. code-block:: console
 
-
-Execução da função dir sem parâmetros:
-
-> dir()
-
-['In',
- 'Out',
-. . .
- 'x',
- 'y',
- 'z']
+    ['In',
+     'Out',
+     . . .
+     'x',
+     'y',
+     'z']
 
 
 

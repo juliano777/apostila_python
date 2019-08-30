@@ -495,20 +495,29 @@ A função chr faz o caminho inverso, ou seja, retorna um caractere dado um cód
 <p>Se chamada sem nenhum argumento retorna os nomes do escopo atual.
 A chamada dessa função é correspondente ao executar o método __dir__.</p>
 </div></blockquote>
-<p>Definição de variáeis:</p>
-<p>&gt; x = 0</p>
-<p>&gt; y = 1</p>
-<p>&gt; z = 2</p>
-<p>Execução da função dir sem parâmetros:</p>
-<p>&gt; dir()</p>
-<dl class="simple">
-<dt>[‘In’,</dt><dd><p>‘Out’,</p>
-</dd>
-<dt>…</dt><dd><p>‘x’,
+<p>. code-block:: python</p>
+<blockquote>
+<div><p># Definição de variáeis
+x = 0
+y = 1
+z = 2</p>
+</div></blockquote>
+<p>. code-block:: python</p>
+<blockquote>
+<div><p># Execução da função dir sem parâmetros
+dir()</p>
+</div></blockquote>
+<p>. code-block:: console</p>
+<blockquote>
+<div><dl class="simple">
+<dt>[‘In’,</dt><dd><p>‘Out’,
+…
+‘x’,
 ‘y’,
 ‘z’]</p>
 </dd>
 </dl>
+</div></blockquote>
 <p>A variável foi declarada no escopo?:</p>
 <p>&gt; ‘x’ and ‘y’ and ‘y’ and ‘z’ in dir()</p>
 <p>True</p>
