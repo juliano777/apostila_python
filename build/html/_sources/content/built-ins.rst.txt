@@ -1043,16 +1043,17 @@ enumerate
 
     enumerate
 
+.. code-block:: python
 
+    # Loop sobre o iterável
+    for i, j in y:
+        print('{} - {}'.format(i, j))
 
-Loop sobre o iterável:
+.. code-block:: console
 
-> for i, j in y:
-    print('{} - {}'.format(i, j))
-
-0 - verde
-1 - azul
-2 - amarelo
+    0 - verde
+    1 - azul
+    2 - amarelo
 
 
 

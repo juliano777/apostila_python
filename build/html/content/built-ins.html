@@ -1089,14 +1089,16 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">enumerate</span>
 </pre></div>
 </div>
-<p>Loop sobre o iterável:</p>
-<dl class="simple">
-<dt>&gt; for i, j in y:</dt><dd><p>print(‘{} - {}’.format(i, j))</p>
-</dd>
-</dl>
-<p>0 - verde
-1 - azul
-2 - amarelo</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop sobre o iterável</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{} - {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0 - verde</span>
+<span class="go">1 - azul</span>
+<span class="go">2 - amarelo</span>
+</pre></div>
+</div>
 <p>Criar o iterável novamente:</p>
 <p>&gt; y = enumerate(x)</p>
 <p>Método __next__() que traz uma tupla com o índice e o valor:</p>
