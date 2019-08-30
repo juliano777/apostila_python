@@ -801,15 +801,20 @@ Vale lembrar que classes também são chamáveis, bem como objetos de classes qu
 <span class="k">class</span> <span class="nc">Bar</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
+
+<span class="c1"># Instância da classe sem o método __call__()</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+
+<span class="c1"># Instância da classe com o método __call__()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">()</span>
+
+<span class="c1"># Execuções de callable</span>
+<span class="nb">callable</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Instância da classe sem o método __call__():</p>
-<p>&gt; f = Foo()</p>
-<p>Instância da classe com o método __call__():</p>
-<p>&gt; b = Bar()</p>
-<p>Execuções de callable:</p>
-<p>&gt; callable(‘foo’)</p>
-<p>False</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>&gt; callable(myfunction)</p>
 <p>True</p>
 <p>&gt; callable(Foo)</p>

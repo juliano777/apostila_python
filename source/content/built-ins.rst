@@ -703,25 +703,18 @@ callable()
         def __call__(self):
             pass
 
+    # Instância da classe sem o método __call__()
+    f = Foo()
 
+    # Instância da classe com o método __call__()
+    b = Bar()
 
-Instância da classe sem o método __call__():
+    # Execuções de callable
+    callable('foo')
 
-> f = Foo()
+.. code-block:: console
 
-
-
-Instância da classe com o método __call__():
-
-> b = Bar()
-
-
-
-Execuções de callable:
-
-> callable('foo')
-
-False
+    False
 
 > callable(myfunction)                                                                                                                                  
 
