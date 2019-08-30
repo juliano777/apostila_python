@@ -598,19 +598,18 @@ abs()
     3
 
 
-
 divmod()
 --------
 
     Função que retorna uma tupla de dois elementos no formato (x//y, x%y), respectivamente resultado da divisão inteira e resto da divisão:
 
+.. code-block:: python
 
+    divmod(11, 4)  # Equivalente: 11 // 4, 11 % 4
 
-Exemplos:
+.. code-block:: console
 
-> divmod(11, 4)  # Equivalente: 11 // 4, 11 % 4
-
-(2, 3)
+    (2, 3)
 
 
 
