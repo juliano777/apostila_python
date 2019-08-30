@@ -311,9 +311,14 @@ ord e chr
 
     13
 
-> chr(13)  # Qual caractere Unicode corresponde ao código 13?
+.. code-block:: python
 
-'\r'
+    # Qual caractere Unicode corresponde ao código 13?
+    chr(13)
+    
+.. code-block:: console
+
+    '\r'
 
 > chr(97)  # Qual caractere Unicode corresponde ao código 97?
 
