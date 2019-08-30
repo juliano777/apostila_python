@@ -927,11 +927,10 @@ id()
 
     True
 
-    Aqui fica demonstrado que quando se cria uma nova variável simplesmente por atribuição é na verdade a criação de uma nova referência (apontamento) para o mesmo objeto.
-
-
+Aqui fica demonstrado que quando se cria uma nova variável simplesmente por atribuição é na verdade a criação de uma nova referência (apontamento) para o mesmo objeto.
 
 len
+---
 
     Função que retorna a quantidade de itens de um contêiner.
 
