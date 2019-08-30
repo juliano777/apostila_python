@@ -619,13 +619,14 @@ round()
     Função que retorna um número de forma arredondada dada uma precisão em dígitos decimais.
     O valor de retorno é um inteiro se o número de dígitos for omitido ou None. Caso contrário, o valor de retorno terá o mesmo tipo do número. O número de dígitos pode ser negativo.
 
+.. code-block:: python
 
+    $ # Arredondamento sem especificar o número de dígitos (segundo parâmetro)
+    round(3.333333)
 
-Arredondamento sem especificar o número de dígitos (segundo parâmetro):
+    .. code-block:: console
 
-> round(3.333333)
-
-3
+    3
 
 
 

@@ -733,9 +733,14 @@ python3.7 /tmp/assert_com_try.py
 <div><p>Função que retorna um número de forma arredondada dada uma precisão em dígitos decimais.
 O valor de retorno é um inteiro se o número de dígitos for omitido ou None. Caso contrário, o valor de retorno terá o mesmo tipo do número. O número de dígitos pode ser negativo.</p>
 </div></blockquote>
-<p>Arredondamento sem especificar o número de dígitos (segundo parâmetro):</p>
-<p>&gt; round(3.333333)</p>
-<p>3</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>$ # Arredondamento sem especificar o número de dígitos (segundo parâmetro)
+round(3.333333)
+
+.. code-block:: console
+
+3
+</pre></div>
+</div>
 <p>Arredondamento com quatro dígitos de precisão:</p>
 <p>&gt; round(3.333333, 4)</p>
 <p>3.3333</p>
