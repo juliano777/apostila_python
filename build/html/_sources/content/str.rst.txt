@@ -155,8 +155,6 @@ Caracteres Especiais
 | \xhh                | Imprime o character baseado em seu valor hexadecimal     | '1\xaa'         | 1ª         |
 +---------------------+----------------------------------------------------------+------------------------------+
 
-# ============================================================================
-
 Formatação
 ----------
 
@@ -191,8 +189,6 @@ Valores numéricos decimais:
 .. code-block:: console
 
     '70 90'
-
-
 
 Interpolação pegando o valor de um dicionário:
 

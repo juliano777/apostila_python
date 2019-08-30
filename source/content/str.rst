@@ -155,8 +155,6 @@ Caracteres Especiais
 | \xhh                | Imprime o character baseado em seu valor hexadecimal     | '1\xaa'         | 1ª         |
 +---------------------+----------------------------------------------------------+------------------------------+
 
-# ============================================================================
-
 Formatação
 ----------
 
@@ -192,8 +190,6 @@ Valores numéricos decimais:
 
     '70 90'
 
-
-
 Interpolação pegando o valor de um dicionário:
 
 > print('%(variavel)s' % {'variavel': 'valor'})
@@ -209,9 +205,7 @@ Preco: R$ %(preco).2f
 Cód: %(cod)05d
 '''
 
-
-
-Declaraçãoi de um dicionário que conterá as chaves e valores desejados:
+Declaração de um dicionário que conterá as chaves e valores desejados:
 
 > d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
 
