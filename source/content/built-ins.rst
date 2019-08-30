@@ -567,15 +567,16 @@ Nota-se que a execução do script não chegou até o fim.
     print('Fim')
 
 
+.. code-block:: bash
 
+    $ # Execução
+    python3.7 /tmp/assert_com_try.py
 
-Execução:
+.. code-block:: console
 
-$ python3.7 /tmp/assert_com_try.py
-
-Começo
-Teve erro...
-Fim
+    Começo
+    Teve erro...
+    Fim
 
 
 
