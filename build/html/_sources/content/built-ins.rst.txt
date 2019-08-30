@@ -230,12 +230,14 @@ reduce()
 
     10
 
+
+
+
 del
 ---
 
-
     Pode ser tanto um comando como uma função cuja finalidade é remover a referência de um objeto.
-	Também apaga elemento de uma coleção.
+    Também apaga elemento de uma coleção.
 
 .. code-block:: python
 
