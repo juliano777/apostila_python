@@ -427,13 +427,13 @@ ou
     ['__class__',
      '__delattr__',
      '__dict__',
-    . . .
-    'cpf',
-    'dizer_nome',
-    'email',
-    'nome',
-    'rg',
-    'saudacao']
+     . . .
+     'cpf',
+     'dizer_nome',
+     'email',
+     'nome',
+     'rg',
+     'saudacao']
 
 
 
