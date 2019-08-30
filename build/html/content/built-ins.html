@@ -1099,15 +1099,30 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 <span class="go">2 - amarelo</span>
 </pre></div>
 </div>
-<p>Criar o iterável novamente:</p>
-<p>&gt; y = enumerate(x)</p>
-<p>Método __next__() que traz uma tupla com o índice e o valor:</p>
-<p>&gt; y. __next__()</p>
-<p>(0, ‘verde’)</p>
-<p>&gt; y. __next__()</p>
-<p>(1, ‘azul’)</p>
-<p>&gt; y. __next__()</p>
-<p>(2, ‘amarelo’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o iterável novamente</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Método __next__() que traz uma tupla com o índice e o valor</span>
+<span class="n">y</span><span class="o">.</span> <span class="n">__next__</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(0, &#39;verde&#39;)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">y</span><span class="o">.</span> <span class="n">__next__</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1, &#39;azul&#39;)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">y</span><span class="o">.</span> <span class="n">__next__</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(2, &#39;amarelo&#39;)</span>
+</pre></div>
+</div>
 </div>
 </div>
 

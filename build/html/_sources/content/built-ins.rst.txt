@@ -1055,25 +1055,32 @@ enumerate
     1 - azul
     2 - amarelo
 
+.. code-block:: python
 
+    # Criar o iterável novamente
+    y = enumerate(x)
 
-Criar o iterável novamente:
+    # Método __next__() que traz uma tupla com o índice e o valor
+    y. __next__()
 
-> y = enumerate(x)
+.. code-block:: console
 
+    (0, 'verde')
 
+.. code-block:: python
 
+    #
+    y. __next__()
 
-Método __next__() que traz uma tupla com o índice e o valor:
+.. code-block:: console
 
-> y. __next__()
+    (1, 'azul')
 
-(0, 'verde')
+.. code-block:: python
 
-> y. __next__()
+    # 
+    y. __next__()
 
-(1, 'azul')
+.. code-block:: console
 
-> y. __next__()
-
-(2, 'amarelo')
+    (2, 'amarelo')
