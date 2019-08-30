@@ -544,16 +544,18 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando o conteúdo da classe (atributos e métodos):</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">Pessoa</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>&gt; dir(Pessoa)</p>
 <p>ou</p>
-<p>&gt; p.__dir__()</p>
-<dl class="simple">
-<dt>[‘__class__’,</dt><dd><p>‘__delattr__’,
-‘__dict__’,</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">__dir__</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;__class__&#39;,</span>
+<span class="go"> &#39;__delattr__&#39;,</span>
+<span class="go"> &#39;__dict__&#39;,</span>
+</pre></div>
+</div>
 <p>…</p>
 <blockquote>
 <div><p>‘cpf’,

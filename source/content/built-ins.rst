@@ -420,22 +420,20 @@ ou
 
 .. code-block:: python
 
-    
+    p.__dir__()
 
-> p.__dir__()
+.. code-block:: console
 
-['__class__',
- '__delattr__',
- '__dict__',
-
-. . . 
-
- 'cpf',
- 'dizer_nome',
- 'email',
- 'nome',
- 'rg',
- 'saudacao']
+    ['__class__',
+     '__delattr__',
+     '__dict__',
+    . . .
+    'cpf',
+    'dizer_nome',
+    'email',
+    'nome',
+    'rg',
+    'saudacao']
 
 
 
