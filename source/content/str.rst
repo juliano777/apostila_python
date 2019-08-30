@@ -890,6 +890,8 @@ Exibe a docstring da função:
 
 > print(bar.__doc__)
 
+.. code-block:: console
+
     Mais outra
     função
     que não faz 
@@ -906,14 +908,14 @@ Criação de uma classe:
     '''
 
 
-
 Exibe a docstring da classe:    
 
 > print(Foo.__doc__)
 
+.. code-block:: console
+
     Uma classe
     de teste
-
 
 
 Help da classe:

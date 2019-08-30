@@ -701,32 +701,28 @@ de teste
 </dl>
 <p>Exibe a docstring da classe:</p>
 <p>&gt; print(Foo.__doc__)</p>
-<blockquote>
-<div><p>Uma classe
-de teste</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Uma classe</span>
+<span class="go">de teste</span>
+</pre></div>
+</div>
 <p>Help da classe:</p>
 <p>&gt; help(Foo)</p>
-<p>Help on class Foo in module __main__:</p>
-<dl>
-<dt>class Foo(__builtin__.object)</dt><dd><div class="line-block">
-<div class="line">Uma classe</div>
-<div class="line">de teste</div>
-<div class="line"><br /></div>
-<div class="line">Data descriptors defined here:</div>
-<div class="line"><br /></div>
-<div class="line">__dict__</div>
-<div class="line-block">
-<div class="line">dictionary for instance variables (if defined)</div>
-<div class="line"><br /></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Help on class Foo in module __main__:</span>
+
+<span class="go">class Foo(__builtin__.object)</span>
+
+<span class="go">|  Uma classe</span>
+<span class="go">|  de teste</span>
+<span class="go">|</span>
+<span class="go">|  Data descriptors defined here:</span>
+<span class="go">|</span>
+<span class="go">|  __dict__</span>
+<span class="go">|      dictionary for instance variables (if defined)</span>
+<span class="go">|</span>
+<span class="go">|  __weakref__</span>
+<span class="go">|      list of weak references to the object (if defined)</span>
+</pre></div>
 </div>
-<div class="line">__weakref__</div>
-<div class="line-block">
-<div class="line">list of weak references to the object (if defined)</div>
-</div>
-</div>
-</dd>
-</dl>
 </div>
 <div class="section" id="imutabilidade">
 <h2>5.10. Imutabilidade<a class="headerlink" href="#imutabilidade" title="Link permanente para este título">¶</a></h2>
@@ -737,13 +733,19 @@ de teste</p>
 <p>&gt; foo = ‘bar’</p>
 <p>Primeiro elemento da string:</p>
 <p>&gt; foo[0]</p>
-<p>‘b’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;b&#39;</span>
+</pre></div>
+</div>
 <p>Tentativa de redefinição do primeiro elemento da string:</p>
 <p>&gt; foo[0] = ‘B’</p>
-<p>TypeError: ‘str’ object does not support item assignment</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: &#39;str&#39; object does not support item assignment</span>
+</pre></div>
+</div>
 <p>Id da string:</p>
 <p>&gt; id(foo)</p>
-<p>139876439773904</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">139876439773904</span>
+</pre></div>
+</div>
 <p>Criação de uma string com o mesmo nome da anterior utilizando concatenação e slice:</p>
 <p>&gt; foo = ‘B’ + foo[1:]</p>
 <p>Verificando o Id da variável:</p>
