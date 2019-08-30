@@ -74,12 +74,12 @@ Tipagem Dinâmica
 
     str
 
-    Foram criados dois objetos "x", sendo o primeiro float e o segundo uma string.
-    Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.
-
+Foram criados dois objetos "x", sendo o primeiro float e o segundo uma string.
+Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.
 
 
 Tipagem Forte
+~~~~~~~~~~~~~
 
     A tipagem em Python além de dinâmica ela é forte.
     Em casos de operações matemáticas, por exemplo, é necessário fazer um cast para ser possível quando os tipos são incompatíveis.

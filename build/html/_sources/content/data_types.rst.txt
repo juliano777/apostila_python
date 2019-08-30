@@ -74,8 +74,8 @@ Tipagem Dinâmica
 
     str
 
-    Foram criados dois objetos "x", sendo o primeiro float e o segundo uma string.
-    Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.
+Foram criados dois objetos "x", sendo o primeiro float e o segundo uma string.
+Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.
 
 
 
