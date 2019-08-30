@@ -375,13 +375,14 @@ dir()
      'y',
      'z']
 
+.. code-block:: python
 
+    # A variável foi declarada no escopo?
+    'x' and 'y' and 'y' and 'z' in dir()
 
-A variável foi declarada no escopo?:
+.. code-block:: console
 
-> 'x' and 'y' and 'y' and 'z' in dir()
-
-True
+    True
 
 > 'w' in dir()                                                                                                                                         
 
