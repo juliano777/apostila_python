@@ -285,18 +285,15 @@ ord e chr
 
 .. code-block:: python
 
-    # Qual é o código Unicode para new line?
-    ord('\n')
+    ord('\n')  # Qual é o código Unicode para new line?
 
 .. code-block:: console
 
     10
 
-
 .. code-block:: python
 
-    # Qual caractere Unicode corresponde ao código 10?
-    chr(10)
+    chr(10)  # Qual caractere Unicode corresponde ao código 10?
 
 .. code-block:: console
 

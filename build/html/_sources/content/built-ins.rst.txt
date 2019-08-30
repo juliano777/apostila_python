@@ -344,11 +344,13 @@ ord e chr
 
     'x'
 
-> chr(981)  # Qual caractere Unicode corresponde ao código 981?
+.. code-block:: python
 
-'ϕ'
+    chr(981)  # Qual caractere Unicode corresponde ao código 981?
 
+.. code-block:: console
 
+    'ϕ'
 
 dir()
 -----
