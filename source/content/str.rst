@@ -17,39 +17,34 @@ Strings em Python
 
 
 
-Declaração de uma variável string utilizando apóstrofos:
+.. code-block:: python
 
-> s1 = 'string'
+    # Declaração de uma variável string utilizando apóstrofos
+    s1 = 'string'
 
+.. code-block:: python
 
+    # Declaração de uma variável string utilizando aspas
+    s2 = "string"
 
-Declaração de uma variável string utilizando aspas:
+.. code-block:: python
 
-> s2 = "string"
-
-
-
-Declaração de uma variável string utilizando a função str:
-
-> s = str('foo')
-
-# ============================================================================
-
-
+    # Declaração de uma variável string utilizando a função str
+    s = str('foo')
 
 Apóstrofos ou aspas? Qual devo utilizar?
 ----------------------------------------
-
 
     Se não tivessem essas duas opções, se fosse apenas aspas como em outras linguagens, em uma string que precisa ter aspas, seria preciso escapar com a contrabarra desta maneira: \". O que também funcionaria.
     Fazer uso de contrabarra para escapar por muitas vezes pode ser um tanto confuso e tornar o código menos legível.
     Com a facilidade de se poder utilizar ambos torna o escape desnecessário para a maioria dos casos em que aspas ou apóstrofos façam parte de uma string.
 
-
-
 Dois exemplos com print de strings com aspas e apóstrofos dentro:
 
-> print('Uma string que contém "aspas" em si')
+.. code-block:: python
+
+    # 
+    print('Uma string que contém "aspas" em si')
 
 .. code-block:: console
 

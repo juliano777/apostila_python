@@ -17,25 +17,20 @@ Strings em Python
 
 
 
-Declaração de uma variável string utilizando apóstrofos:
+.. code-block:: python
 
-> s1 = 'string'
+    # Declaração de uma variável string utilizando apóstrofos
+    s1 = 'string'
 
+.. code-block:: python
 
+    # Declaração de uma variável string utilizando aspas
+    s2 = "string"
 
-Declaração de uma variável string utilizando aspas:
+.. code-block:: python
 
-> s2 = "string"
-
-
-
-Declaração de uma variável string utilizando a função str:
-
-> s = str('foo')
-
-# ============================================================================
-
-
+    # Declaração de uma variável string utilizando a função str
+    s = str('foo')
 
 Apóstrofos ou aspas? Qual devo utilizar?
 ----------------------------------------
