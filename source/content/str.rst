@@ -164,13 +164,14 @@ Formatação
 
 Interpolação:
 
-> '%s %s' % ('foo', 'bar')
+.. code-block:: python
+
+    # 
+    '%s %s' % ('foo', 'bar')
 
 .. code-block:: console
 
     'foo bar'
-
-
 
 Método format:
 
