@@ -945,8 +945,6 @@ Imutabilidade
 
     Strings em Python são imutáveis.
 
-
-
 Criação de uma string:
 
 > foo = 'bar'
@@ -1011,8 +1009,6 @@ Criação de uma nova string:
 
 > s = 'Black'
 
-
-
 Id da string:
 
 > id(s)
@@ -1026,7 +1022,6 @@ Id da string:
 Criando uma nova string com o mesmo nome da anterior via concatenação:
 
 s += ' Sabbath'
-
 
 
 Id da nova variável:
