@@ -689,13 +689,13 @@ Criação de um objeto Carro:
 
 > c = Carro(marca, modelo, ano, cor)
 
-
-
 Print do método __str__ do objeto:
 
 > print(f'{c}')
 
-Fiat 147 / azul / 1985
+.. code-block:: console
+
+    Fiat 147 / azul / 1985
 
 
 
@@ -703,7 +703,9 @@ Print do método __repr__ do objeto:
 
 > print(f'{c!r}')
 
-Fiat 147 | azul | 1985
+.. code-block:: console
+
+    Fiat 147 | azul | 1985
 
 
 

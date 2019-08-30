@@ -689,8 +689,6 @@ Criação de um objeto Carro:
 
 > c = Carro(marca, modelo, ano, cor)
 
-
-
 Print do método __str__ do objeto:
 
 > print(f'{c}')
