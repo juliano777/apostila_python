@@ -253,15 +253,15 @@ ou
 
     ['a', 'c']
 
+.. code-block:: python
 
+    # Teste de del para desalocar um objeto criado
+    foo = 'bar'  # Objeto string criado
+    print(foo)  # Verificando o valor da string
 
-Teste de del para desalocar um objeto criado:
+.. code-block:: console
 
-> foo = 'bar'  # Objeto string criado
-
-> print(foo)  # Verificando o valor da string
-
-bar
+    bar
 
 > del foo  # Apagando o objeto string
 

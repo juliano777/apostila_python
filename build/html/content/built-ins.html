@@ -416,10 +416,14 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;a&#39;, &#39;c&#39;]</span>
 </pre></div>
 </div>
-<p>Teste de del para desalocar um objeto criado:</p>
-<p>&gt; foo = ‘bar’  # Objeto string criado</p>
-<p>&gt; print(foo)  # Verificando o valor da string</p>
-<p>bar</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Teste de del para desalocar um objeto criado</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span>  <span class="c1"># Objeto string criado</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Verificando o valor da string</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bar</span>
+</pre></div>
+</div>
 <p>&gt; del foo  # Apagando o objeto string</p>
 <p>&gt; print(foo)  # Tentativa de imprimir o valor do objeto desalocado</p>
 <p>NameError: name ‘foo’ is not defined</p>
