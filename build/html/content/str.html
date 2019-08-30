@@ -331,17 +331,23 @@ Cód: %(cod)05d
 <p>&gt; d = {‘prod’: ‘Pente’, ‘preco’: 3.5, ‘cod’: 157}</p>
 <p>Exibindo o resultado via interpolação:</p>
 <p>&gt; print(foo % d)</p>
-<p>Produto: Pente
-Preco: R$ 3.50
-Cód: 00157</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Produto: Pente</span>
+<span class="go">Preco: R$ 3.50</span>
+<span class="go">Cód: 00157</span>
+</pre></div>
+</div>
 <p>Exibindo o resultado via método format:</p>
 <p>&gt; print(foo.format(<a href="#id1"><span class="problematic" id="id2">**</span></a>d))</p>
-<p>Produto: Pente
-Preco: R$ 3.50
-Cód: 00157</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Produto: Pente</span>
+<span class="go">Preco: R$ 3.50</span>
+<span class="go">Cód: 00157</span>
+</pre></div>
+</div>
 <p>String com índice posicional:</p>
 <p>&gt; ‘O {1} {2} quando é {0}.’.format(‘compartilhado’, ‘conhecimento’, ‘aumenta’)</p>
-<p>‘O Conhecimento aumenta quando se compartilhado’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;O Conhecimento aumenta quando se compartilhado&#39;</span>
+</pre></div>
+</div>
 <p>Métodos String e de Representação</p>
 <blockquote>
 <div><p>Em objetos temos os dunders str e repr (“__str__” e “__repr__”) que podem ser usados em uma string.</p>
@@ -359,38 +365,58 @@ Cód: 00157</p>
 <p>Valores dos métodos __str__ e __repr__ da classe Foo:</p>
 <p>&gt; ‘%s %r’ % (Foo(), Foo())</p>
 <p>&gt; ‘{0!s} {0!r}’.format(Foo())</p>
-<p>‘STRING REPRESENTAÇÃO’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;STRING REPRESENTAÇÃO&#39;</span>
+</pre></div>
+</div>
 <p>Método de representação e em caracteres ASCII:</p>
 <p>&gt; ‘%r %a’ % (Foo(), Foo())</p>
 <p>&gt; ‘{0!r} {0!a}’.format(Foo())</p>
-<p>‘REPRESENTAÇÃO REPRESENTA\xc7\xc3O’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O&#39;</span>
+</pre></div>
+</div>
 <p>Preenchimento (padding) e Alinhamento de Strings</p>
 <p>Alinhamento à direita dentro de 7 colunas:</p>
 <p>&gt; ‘%7s’ % ‘foo’</p>
 <p>&gt; ‘{:&gt;7}’.format(‘foo’)</p>
-<p>‘    foo’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;    foo&#39;</span>
+</pre></div>
+</div>
 <p>Alinhamento à esquerda dentro de 7 colunas:</p>
 <p>&gt; ‘%-7s’ % ‘foo’</p>
 <p>&gt; ‘{:7}’.format(‘foo’)</p>
 <p>&gt; ‘{:&lt;7}’.format(‘foo’)</p>
-<p>‘foo    ‘</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;foo    &#39;</span>
+</pre></div>
+</div>
 <p>Alinhamento centralizado dentro de 7 colunas:</p>
 <p>&gt; ‘{:^7}’.format(‘foo’)</p>
-<p>‘  foo  ‘</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;  foo  &#39;</span>
+</pre></div>
+</div>
 <p>Alinhamento à esquerda dentro de 7 colunas preenchendo com o caractere “_”:</p>
 <p>&gt; ‘{:_&lt;7}’.format(‘foo’)</p>
-<p>‘foo____’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;foo____&#39;</span>
+</pre></div>
+</div>
 <p>Alinhamento à direita dentro de 7 colunas preenchendo com o caractere “_”:</p>
 <p>&gt; ‘{:_&gt;7}’.format(‘foo’)</p>
-<p>‘____foo’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;____foo&#39;</span>
+</pre></div>
+</div>
 <p>Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere “_”:</p>
 <p>&gt; ‘{:^7}’.format(‘foo’)</p>
-<p>‘__foo__’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;__foo__&#39;</span>
+</pre></div>
+</div>
 <p>Número decimal:</p>
 <p>&gt; ‘{:.3f}’.format(93.85741)</p>
-<p>‘93.857’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;93.857&#39;</span>
+</pre></div>
+</div>
 <p>&gt; ‘{:.3f}’.format(70000)</p>
-<p>‘70000.000’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;70000.000&#39;</span>
+</pre></div>
+</div>
 <p># ============================================================================</p>
 </div>
 <div class="section" id="representacoes-de-inteiros">

@@ -210,25 +210,25 @@ Declaraçãoi de um dicionário que conterá as chaves e valores desejados:
 
 > d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
 
-
-
 Exibindo o resultado via interpolação:
 
 > print(foo % d)
 
-Produto: Pente
-Preco: R$ 3.50
-Cód: 00157
+.. code-block:: console
 
-
+    Produto: Pente
+    Preco: R$ 3.50
+    Cód: 00157
 
 Exibindo o resultado via método format:
 
 > print(foo.format(**d))
 
-Produto: Pente
-Preco: R$ 3.50
-Cód: 00157
+.. code-block:: console
+
+    Produto: Pente
+    Preco: R$ 3.50
+    Cód: 00157
 
 
 
@@ -236,7 +236,9 @@ String com índice posicional:
 
 > 'O {1} {2} quando é {0}.'.format('compartilhado', 'conhecimento', 'aumenta')
 
-'O Conhecimento aumenta quando se compartilhado'
+.. code-block:: console
+
+    'O Conhecimento aumenta quando se compartilhado'
 
 
 
@@ -264,7 +266,9 @@ Valores dos métodos __str__ e __repr__ da classe Foo:
 
 > '{0!s} {0!r}'.format(Foo())
 
-'STRING REPRESENTAÇÃO'
+.. code-block:: console
+
+    'STRING REPRESENTAÇÃO'
 
 
 
@@ -274,7 +278,9 @@ Método de representação e em caracteres ASCII:
 
 > '{0!r} {0!a}'.format(Foo())
 
-'REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O'
+.. code-block:: console
+
+    'REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O'
 
 
 
@@ -288,7 +294,9 @@ Alinhamento à direita dentro de 7 colunas:
 
 > '{:>7}'.format('foo')
 
-'    foo'
+.. code-block:: console
+
+    '    foo'
 
 
 
@@ -300,7 +308,9 @@ Alinhamento à esquerda dentro de 7 colunas:
 
 > '{:<7}'.format('foo')
 
-'foo    '
+.. code-block:: console
+
+    'foo    '
 
 
 
@@ -308,7 +318,9 @@ Alinhamento centralizado dentro de 7 colunas:
 
 > '{:^7}'.format('foo')
 
-'  foo  '
+.. code-block:: console
+
+    '  foo  '
 
 
 
@@ -316,7 +328,9 @@ Alinhamento à esquerda dentro de 7 colunas preenchendo com o caractere "_":
 
 > '{:_<7}'.format('foo')
 
-'foo____'
+.. code-block:: console
+
+    'foo____'
 
 
 
@@ -324,7 +338,9 @@ Alinhamento à direita dentro de 7 colunas preenchendo com o caractere "_":
 
 > '{:_>7}'.format('foo')
 
-'____foo'
+.. code-block:: console
+
+    '____foo'
 
 
 
@@ -332,7 +348,9 @@ Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere "_":
 
 > '{:^7}'.format('foo')
 
-'__foo__'
+.. code-block:: console
+
+    '__foo__'
 
 
 
@@ -340,13 +358,17 @@ Número decimal:
 
 > '{:.3f}'.format(93.85741)
 
-'93.857'
+.. code-block:: console
+
+    '93.857'
 
 
 
 > '{:.3f}'.format(70000)
 
-'70000.000'
+.. code-block:: console
+
+    '70000.000'
 
 
 # ============================================================================
