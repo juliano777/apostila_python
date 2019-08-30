@@ -293,9 +293,14 @@ ord e chr
     10
 
 
-> chr(10)  # Qual caractere Unicode corresponde ao código 10?
+.. code-block:: python
 
-'\n'
+    # Qual caractere Unicode corresponde ao código 10?
+    chr(10)
+
+.. code-block:: console
+
+    '\n'
 
 
 > ord('\r')  # Qual é o código unicode para carriage return?
