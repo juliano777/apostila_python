@@ -834,19 +834,27 @@ Slice - Corte de string - 'string'[inicio:fim - 1:incremento]:
 
 > print("Curso de Python"[9:])
 
-'Python'
+.. code-block:: console
+
+    'Python'
 
 > print("Curso de Python"[:5])
 
-'Curso'
+.. code-block:: console
+
+    'Curso'
 
 > print("Curso de Python"[::])
 
-'Curso de Python'
+.. code-block:: console
+
+    'Curso de Python'
 
 > print("Curso de Python"[::-1]) # String reversa
 
-'nohtyP ed osruC'
+.. code-block:: console
+
+    'nohtyP ed osruC'
 
 
 
@@ -856,8 +864,6 @@ Docstrings
 	São strings que vêm logo após a definição de uma função, de um método ou de uma classe.
 	É muito útil para fins de documentação.
 	Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ ou a função help.
-
-
 
 Criação de uma função:
 
