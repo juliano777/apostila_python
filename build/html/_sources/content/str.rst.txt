@@ -588,7 +588,6 @@ Pode-se também criar um objeto bytes a partir da classe:
 > b = bytes('∑'.encode('utf-8'))
 
 
-
 Verificando o tipo:
 
 > print(type(b))
@@ -598,7 +597,6 @@ Verificando o tipo:
     <class 'bytes'>
 
 Uma byte string tem um tipo específico, bytes.
-
 
 
 Exibindo a byte string:
