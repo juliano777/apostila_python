@@ -945,17 +945,17 @@ len
 
     5
 
+.. code-block:: python
 
+    # Tamanho de uma string
+    len('Heavy Metal')
 
-Tamanho de uma string:
+.. code-block:: console
 
-> len('Heavy Metal')
-
-11
-
-
+    11
 
 input
+-----
 
     É uma função de entrada de dados pelo teclado (STDIN), cujos dados são interpretados como string.
     Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.

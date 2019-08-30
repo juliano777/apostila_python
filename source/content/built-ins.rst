@@ -954,9 +954,8 @@ len
 
     11
 
-
-
 input
+-----
 
     É uma função de entrada de dados pelo teclado (STDIN), cujos dados são interpretados como string.
     Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.
