@@ -909,13 +909,14 @@ id()
 
     True
 
+.. code-block:: python
 
+    # É o mesmo objeto?
+    baz is bar
 
-É o mesmo objeto?:
+.. code-block:: console
 
-> baz is bar
-
-True
+    True
 
 > id(bar) == id(baz)                                                                                                                                  
 

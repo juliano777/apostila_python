@@ -961,14 +961,23 @@ Dois objetos que são comparados também devem ter o mesmo valor de hash.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<p>Criação de uma nova variável atribuindo com base em um objeto pré-existente:</p>
-<p>&gt; baz = bar</p>
-<p>Comparando as variáveis:</p>
-<p>&gt; baz == bar</p>
-<p>True</p>
-<p>É o mesmo objeto?:</p>
-<p>&gt; baz is bar</p>
-<p>True</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma nova variável atribuindo com base em um objeto pré-existente</span>
+<span class="n">baz</span> <span class="o">=</span> <span class="n">bar</span>
+
+<span class="c1"># Comparando as variáveis</span>
+<span class="n">baz</span> <span class="o">==</span> <span class="n">bar</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># É o mesmo objeto?</span>
+<span class="n">baz</span> <span class="ow">is</span> <span class="n">bar</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>&gt; id(bar) == id(baz)</p>
 <p>True</p>
 <blockquote>
