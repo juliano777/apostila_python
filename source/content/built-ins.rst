@@ -354,8 +354,6 @@ dir()
     Se chamada sem nenhum argumento retorna os nomes do escopo atual.
     A chamada dessa função é correspondente ao executar o método __dir__.
     
-
-
 Definição de variáeis:
 
 > x = 0
