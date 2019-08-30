@@ -180,9 +180,9 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
     m = map(type, ['foo', 1.4, 2 + 5j, 1000])
     print(list(m))
 
-    
+.. code-block:: console
 
-[str, float, complex, int]
+    [str, float, complex, int]
 
 
 
