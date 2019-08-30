@@ -726,10 +726,14 @@ callable()
     True
 
 
+.. code-block:: python
 
-> callable(Foo)                                                                                                                                        
+    # 
+    callable(Foo)
+    
+.. code-block:: console
 
-True
+    True
 
 > callable(Bar)
 
