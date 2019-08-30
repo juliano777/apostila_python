@@ -934,23 +934,25 @@ len
 
     Função que retorna a quantidade de itens de um contêiner.
 
+.. code-block:: python
 
+    # Criação de um objeto contêiner e verificação da quantidade de elementos
+    foo = ('x', 'y', 'z', 123, 5.7)
 
-Criação de um objeto contêiner e verificação da quantidade de elementos:
+    # len(foo)
 
-> foo = ('x', 'y', 'z', 123, 5.7)
+.. code-block:: console
 
-> len(foo)
+    5
 
-5
+.. code-block:: python
 
+    # Tamanho de uma string
+    len('Heavy Metal')
 
+.. code-block:: console
 
-Tamanho de uma string:
-
-> len('Heavy Metal')
-
-11
+    11
 
 
 
