@@ -437,22 +437,38 @@ Cód: 00157</p>
 <p>‘1.000E+03’</p>
 <p>“f” ou “F” faz exibição de número com ponto flutuante podendo determinar a precisão, cujo padrão é 6.</p>
 <p>&gt; format(1000, ‘10.2f’)</p>
-<p>‘   1000.00’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;   1000.00&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(1000, ‘F’)</p>
-<p>‘1000.000000’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1000.000000&#39;</span>
+</pre></div>
+</div>
 <p>“g” ou “G”; formato geral. Para uma dada precisão, sendo essa precisão maior ou igual a ‘ (um), arredonda o número para p (precisão) de dígitos significantes:</p>
 <p>&gt; format(1000, ‘10.2G’)</p>
-<p>‘     1E+03’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;     1E+03&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(1000, ‘10.3G’)</p>
-<p>‘     1e+03’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;     1e+03&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(100000, ‘g’)</p>
-<p>‘100000’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;100000&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(1000000, ‘g’)</p>
-<p>‘1e+06’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1e+06&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(999.5, ‘10.4G’)</p>
-<p>‘     999.5’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;     999.5&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(999.5, ‘10.3G’)</p>
-<p>‘     1E+03’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;     1E+03&#39;</span>
+</pre></div>
+</div>
 <p># ============================================================================</p>
 </div>
 <div class="section" id="tipos-de-strings-em-python">

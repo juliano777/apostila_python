@@ -403,18 +403,24 @@ n) Numérico; o mesmo que "d", exceto que ele usa as configurações de idioma (
 
 > format(31259.74, 'n')
 
-'31259.7'
+.. code-block:: console
+
+    '31259.7'
 
 > format(31259.75, 'n')
 
-'31259.8'
+.. code-block:: console
+
+    '31259.8'
 
 
 None) Nulo; o mesmo que "d":
 
 > format(0b111)
 
-'7'
+.. code-block:: console
+
+    '7'
 
 
 
@@ -422,13 +428,15 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 > format(1000, '.3e')
 
-'1.000e+03'
+.. code-block:: console
+
+    '1.000e+03'
 
 > format(1000, '.3E')
 
-'1.000E+03'
+.. code-block:: console
 
-
+    '1.000E+03'
 
 "f" ou "F" faz exibição de número com ponto flutuante podendo determinar a precisão, cujo padrão é 6.
 

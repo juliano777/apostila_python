@@ -434,11 +434,15 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 > format(1000, '10.2f')
 
-'   1000.00'
+.. code-block:: console
+
+    '   1000.00'
 
 > format(1000, 'F')
 
-'1000.000000'
+.. code-block:: console
+
+    '1000.000000'
 
 
 
@@ -447,27 +451,39 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 
 > format(1000, '10.2G')
 
-'     1E+03'
+.. code-block:: console
+
+    '     1E+03'
 
 > format(1000, '10.3G')
 
-'     1e+03'
+.. code-block:: console
+
+    '     1e+03'
 
 > format(100000, 'g')
 
-'100000'
+.. code-block:: console
+
+    '100000'
 
 > format(1000000, 'g')
 
-'1e+06'
+.. code-block:: console
+
+    '1e+06'
 
 > format(999.5, '10.4G')
 
-'     999.5'
+.. code-block:: console
+
+    '     999.5'
 
 > format(999.5, '10.3G')
 
-'     1E+03'
+.. code-block:: console
+
+    '     1E+03'
 
 # ============================================================================
 
