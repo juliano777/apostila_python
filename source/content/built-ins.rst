@@ -960,17 +960,13 @@ input
     É uma função de entrada de dados pelo teclado (STDIN), cujos dados são interpretados como string.
     Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.
 
+.. code-block:: python
 
+    # Entrada de dados sem prompt
+    foo = input()  # Digite algo...
 
-Entrada de dados sem prompt:
-
-> foo = input()  # Digite algo...
-
-
-
-Imprimindo o valor da variável:
-
-> print(foo)
+    # Imprimindo o valor da variável
+    print(foo)
 
 . . .
 
