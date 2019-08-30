@@ -651,7 +651,9 @@ round()
     #
     round(1237.87431, 0)
 
-1238.0
+.. code-block:: console
+
+    1238.0
 
 > round(1237.87431, -1)
 
