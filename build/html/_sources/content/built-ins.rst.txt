@@ -188,13 +188,13 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
 
     # Para cada item da primeira lista elevar (potência)
     # ao elemento respectivo na segunda lista e criar uma 
-    # nova lista com os resultados:
+    # nova lista com os resultados
+    m = map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
+    print(list(m))
 
-> m = map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
+.. code-block:: console
 
-> list(m)
-
-[9, 7, 78125, 1000]
+    [9, 7, 78125, 1000]
 
 
 
