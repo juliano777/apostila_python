@@ -682,35 +682,26 @@ round()
 
     1000.0
 
-
-
 callable()
 ----------
 
     Função que retorna True se o objeto é "chamável" (callable) (i. e., algum tipo de função).
     Vale lembrar que classes também são chamáveis, bem como objetos de classes que implementam o método __call__().
 
+.. code-block:: python
 
-
-Criação de uma função:
-
-> def myfunction():
-    pass
-
-
-
-Criação de uma classe sem o método __call__():
-
-> class Foo: 
-    pass
-
-
-
-Criação de uma classe com o método __call__():
-
-> class Bar: 
-    def __call__(self):
+    # Criação de uma função
+    def myfunction():
         pass
+
+    # Criação de uma classe sem o método __call__()
+    class Foo:
+        pass
+
+    # Criação de uma classe com o método __call__()
+    class Bar:
+        def __call__(self):
+            pass
 
 
 

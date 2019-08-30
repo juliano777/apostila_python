@@ -789,24 +789,20 @@ O valor de retorno é um inteiro se o número de dígitos for omitido ou None. C
 <div><p>Função que retorna True se o objeto é “chamável” (callable) (i. e., algum tipo de função).
 Vale lembrar que classes também são chamáveis, bem como objetos de classes que implementam o método __call__().</p>
 </div></blockquote>
-<p>Criação de uma função:</p>
-<dl class="simple">
-<dt>&gt; def myfunction():</dt><dd><p>pass</p>
-</dd>
-</dl>
-<p>Criação de uma classe sem o método __call__():</p>
-<dl class="simple">
-<dt>&gt; class Foo:</dt><dd><p>pass</p>
-</dd>
-</dl>
-<p>Criação de uma classe com o método __call__():</p>
-<dl class="simple">
-<dt>&gt; class Bar:</dt><dd><dl class="simple">
-<dt>def __call__(self):</dt><dd><p>pass</p>
-</dd>
-</dl>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma função</span>
+<span class="k">def</span> <span class="nf">myfunction</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Criação de uma classe sem o método __call__()</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Criação de uma classe com o método __call__()</span>
+<span class="k">class</span> <span class="nc">Bar</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
 <p>Instância da classe sem o método __call__():</p>
 <p>&gt; f = Foo()</p>
 <p>Instância da classe com o método __call__():</p>
