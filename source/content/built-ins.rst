@@ -880,9 +880,13 @@ id()
 
     139651439554952
 
-> id(bar)
+.. code-block:: python
 
-139651403802056
+    # id(bar)
+
+.. code-block:: console
+
+    139651403802056
 
 
 

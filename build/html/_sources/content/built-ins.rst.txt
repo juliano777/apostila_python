@@ -871,13 +871,14 @@ id()
 
     True
 
+.. code-block:: python
 
+    # Verificando o a identidade das tuplas criadas
+    id(foo)
 
-Verificando o a identidade das tuplas criadas:
+.. code-block:: console
 
-> id(foo)                                                                                                                                             
-
-139651439554952
+    139651439554952
 
 > id(bar)
 
