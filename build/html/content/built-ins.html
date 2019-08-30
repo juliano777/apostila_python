@@ -916,9 +916,13 @@ Dois objetos que são comparados também devem ter o mesmo valor de hash.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: unhashable type: &#39;list&#39;</span>
 </pre></div>
 </div>
-<p>&gt; # Quando um número é muito grande seu hash será diferente de seu valor
-&gt; hash(9999999999999999999)</p>
-<p>776627963145224195</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quando um número é muito grande seu hash será diferente de seu valor</span>
+<span class="nb">hash</span><span class="p">(</span><span class="mi">9999999999999999999</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">776627963145224195</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id">
 <h2>3.17. id()<a class="headerlink" href="#id" title="Link permanente para este título">¶</a></h2>

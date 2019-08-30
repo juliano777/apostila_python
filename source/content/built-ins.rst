@@ -843,11 +843,14 @@ hash()
 
     TypeError: unhashable type: 'list'
 
-> # Quando um número é muito grande seu hash será diferente de seu valor
-> hash(9999999999999999999)
+.. code-block:: python
 
-776627963145224195
+    # Quando um número é muito grande seu hash será diferente de seu valor
+    hash(9999999999999999999)
 
+.. code-block:: console
+
+    776627963145224195
 
 id()
 ----
