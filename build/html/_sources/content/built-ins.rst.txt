@@ -735,9 +735,14 @@ callable()
 
     True
 
-> callable(Bar)
+.. code-block:: python
 
-True
+    #
+    callable(Bar)
+
+.. code-block:: console
+
+    True
 
 > callable(f)                                                                                                                                          
 
