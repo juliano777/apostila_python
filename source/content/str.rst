@@ -366,15 +366,17 @@ c) Caractere; converte o inteiro para o caractere unicode correspondente:
 
 > format(93, 'c')
 
-']'
+.. code-block:: console
 
-
+    ']'
 
 d) Inteiro Decimal; saída numérica na base 10 (decimal):
 
 > format(0b111, '#05d')
 
-'00007'
+.. code-block:: console
+
+    '00007'
 
 
 
@@ -382,21 +384,23 @@ o) Formato Octal; saída numérica na base 8 (octal):
 
 > format(9, '#05o')
 
-'0o011'
+.. code-block:: console
 
-
+    '0o011'
 
 x ou X) Formato Hexadecimal; saída numérica na base 16 (hexadecimal), a saída é conforme o "x" maiúsculo ou minúsculo:
 
 > format(200, '#05x')
 
-'0x0c8'
+.. code-block:: console
+
+    '0x0c8'
 
 > format(200, '#05X')
 
-'0X0C8'
+.. code-block:: console
 
-
+    '0X0C8'
 
 n) Numérico; o mesmo que "d", exceto que ele usa as configurações de idioma (locale) para exibir caracteres:
 

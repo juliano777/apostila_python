@@ -404,37 +404,57 @@ Cód: 00157</p>
 <li><p>Caractere; converte o inteiro para o caractere unicode correspondente:</p></li>
 </ol>
 <p>&gt; format(93, ‘c’)</p>
-<p>‘]’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;]&#39;</span>
+</pre></div>
+</div>
 <ol class="loweralpha simple" start="4">
 <li><p>Inteiro Decimal; saída numérica na base 10 (decimal):</p></li>
 </ol>
 <p>&gt; format(0b111, ‘#05d’)</p>
-<p>‘00007’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;00007&#39;</span>
+</pre></div>
+</div>
 <ol class="loweralpha simple" start="15">
 <li><p>Formato Octal; saída numérica na base 8 (octal):</p></li>
 </ol>
 <p>&gt; format(9, ‘#05o’)</p>
-<p>‘0o011’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0o011&#39;</span>
+</pre></div>
+</div>
 <p>x ou X) Formato Hexadecimal; saída numérica na base 16 (hexadecimal), a saída é conforme o “x” maiúsculo ou minúsculo:</p>
 <p>&gt; format(200, ‘#05x’)</p>
-<p>‘0x0c8’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0x0c8&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(200, ‘#05X’)</p>
-<p>‘0X0C8’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0X0C8&#39;</span>
+</pre></div>
+</div>
 <ol class="loweralpha simple" start="14">
 <li><p>Numérico; o mesmo que “d”, exceto que ele usa as configurações de idioma (locale) para exibir caracteres:</p></li>
 </ol>
 <p>&gt; format(31259.74, ‘n’)</p>
-<p>‘31259.7’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;31259.7&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(31259.75, ‘n’)</p>
-<p>‘31259.8’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;31259.8&#39;</span>
+</pre></div>
+</div>
 <p>None) Nulo; o mesmo que “d”:</p>
 <p>&gt; format(0b111)</p>
-<p>‘7’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;7&#39;</span>
+</pre></div>
+</div>
 <p>Para representação exponencial pode-se utilizar tanto “e” ou “E”, cuja precisão padrão é 6:</p>
 <p>&gt; format(1000, ‘.3e’)</p>
-<p>‘1.000e+03’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1.000e+03&#39;</span>
+</pre></div>
+</div>
 <p>&gt; format(1000, ‘.3E’)</p>
-<p>‘1.000E+03’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1.000E+03&#39;</span>
+</pre></div>
+</div>
 <p>“f” ou “F” faz exibição de número com ponto flutuante podendo determinar a precisão, cujo padrão é 6.</p>
 <p>&gt; format(1000, ‘10.2f’)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;   1000.00&#39;</span>
