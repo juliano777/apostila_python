@@ -1023,9 +1023,8 @@ min e max
 
     'x'
 
-
-
 enumerate
+---------
 
     Função que retorna um objeto iterável.
 
