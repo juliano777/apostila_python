@@ -159,10 +159,6 @@ map()
 
     Cria um iterador que aplica uma função para cada elemento do iterável.
 
-
-
-
-
 .. code-block:: python
 
     # Dada uma tupla com várias strings, criar uma lista 
