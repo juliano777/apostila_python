@@ -864,13 +864,13 @@ Criação de uma função:
 > def foo():
     'Uma simples função'
 
-
-
 Exibe a docstring da função:
 
 > print(foo.__doc__)
 
-Uma simples função
+.. code-block:: console
+
+    Uma simples função
 
 
 
