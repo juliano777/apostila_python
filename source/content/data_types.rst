@@ -85,4 +85,3 @@ Soma utilizando cast.
 > int('5') + 2
 
 7
-
