@@ -486,30 +486,44 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <p>&gt; print(sb2)</p>
 <p>b’Macarrxc3xa3o’</p>
 <p>&gt; print(sb3)</p>
-<p>b’Axc3xa7xc3xa3o’</p>
-<blockquote>
-<div><p>As strings que tinham caracteres especiais ficaram um tanto “estranhas”…
-xc3xa3 -&gt; ã
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;A\xc3\xa7\xc3\xa3o&#39;</span>
+</pre></div>
+</div>
+<p>As strings que tinham caracteres especiais ficaram um tanto “estranhas”…</p>
+<p>xc3xa3 -&gt; ã
 xc3xa7 -&gt; ç</p>
-</div></blockquote>
 <p>Conversão de bytes:</p>
 <p>&gt; print(b’xc3xa3’.decode(‘utf-8’))</p>
-<p>ã</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ã</span>
+</pre></div>
+</div>
 <p>&gt; print(b’xc3xa7’.decode(‘utf-8’))</p>
-<p>ç</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ç</span>
+</pre></div>
+</div>
 <p>A letra grega sigma é considerada como um caractere especial:</p>
 <p>&gt; print(‘∑’.encode(‘utf-8’))</p>
-<p>b’xe2x88x91’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;\xe2\x88\x91&#39;</span>
+</pre></div>
+</div>
 <p>Caminho reverso:</p>
 <p>&gt; print(b’xe2x88x91’.decode(‘utf-8’))</p>
-<p>∑</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">∑</span>
+</pre></div>
+</div>
 <p>A partir das strings de bytes obter o texto:</p>
 <p>&gt; print(sb1.decode(‘utf-8’))</p>
-<p>Sem caracteres especiais</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Sem caracteres especiais</span>
+</pre></div>
+</div>
 <p>&gt; print(sb2.decode(‘utf-8’))</p>
-<p>Macarrão</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Macarrão</span>
+</pre></div>
+</div>
 <p>&gt; print(sb3.decode(‘utf-8’))</p>
-<p>Ação</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Ação</span>
+</pre></div>
+</div>
 <p>Pode-se também criar um objeto bytes a partir da classe:</p>
 <p>&gt; b = bytes(‘∑’.encode(‘utf-8’))</p>
 <p>Verificando o tipo:</p>

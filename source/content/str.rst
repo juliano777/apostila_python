@@ -484,7 +484,9 @@ Como unicode é padrão, podemos omitir o prefixo:
 
 > print(u'Foo' == 'Foo')
 
-True
+.. code-block:: console
+
+    True
 
 
 
@@ -522,20 +524,27 @@ Exibir o conteúdo das strings de bytes:
 
 > print(sb1)
 
-b'Sem caracteres especiais'
+.. code-block:: console
+
+    b'Sem caracteres especiais'
 
 > print(sb2)
 
-b'Macarr\xc3\xa3o'
+.. code-block:: console
+
+    b'Macarr\xc3\xa3o'
 
 
 > print(sb3)
 
-b'A\xc3\xa7\xc3\xa3o'
+.. code-block:: console
 
-    As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
-    \xc3\xa3 -> ã
-    \xc3\xa7 -> ç
+    b'A\xc3\xa7\xc3\xa3o'
+
+As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
+
+\xc3\xa3 -> ã
+\xc3\xa7 -> ç
 
 
 
@@ -543,11 +552,15 @@ Conversão de bytes:
 
 > print(b'\xc3\xa3'.decode('utf-8'))
 
-ã
+.. code-block:: console
+
+    ã
 
 > print(b'\xc3\xa7'.decode('utf-8'))
 
-ç
+.. code-block:: console
+
+    ç
 
 
 
@@ -555,7 +568,9 @@ A letra grega sigma é considerada como um caractere especial:
 
 > print('∑'.encode('utf-8'))
 
-b'\xe2\x88\x91'
+.. code-block:: console
+
+    b'\xe2\x88\x91'
 
 
 
@@ -563,7 +578,9 @@ Caminho reverso:
 
 > print(b'\xe2\x88\x91'.decode('utf-8'))
 
-∑
+.. code-block:: console
+
+    ∑
 
 
 
@@ -571,15 +588,21 @@ A partir das strings de bytes obter o texto:
 
 > print(sb1.decode('utf-8'))
 
-Sem caracteres especiais
+.. code-block:: console
+
+    Sem caracteres especiais
 
 > print(sb2.decode('utf-8'))
 
-Macarrão
+.. code-block:: console
+
+    Macarrão
 
 > print(sb3.decode('utf-8'))
 
-Ação
+.. code-block:: console
+
+    Ação
 
 
 
