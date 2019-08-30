@@ -438,11 +438,9 @@ dir()
     p.rg = '00000000'
     p.cpf = 12345678901
     p.email = 'chiquinho@chiquinhodasilva.xx'
-    
 
 
-
-Atributo __dict__, que é um dicionário que contém os atributos do objeto:
+Atributo __dict__, é um dicionário que contém os atributos do objeto
 
 > p.__dict__                                                                                                                                           
 
