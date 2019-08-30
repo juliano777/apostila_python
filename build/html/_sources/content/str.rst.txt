@@ -488,9 +488,6 @@ Como unicode é padrão, podemos omitir o prefixo:
 
     True
 
-
-
-
 Bytes (b)
 ~~~~~~~~~
 
