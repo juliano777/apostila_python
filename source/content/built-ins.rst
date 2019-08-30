@@ -621,7 +621,7 @@ round()
 
 .. code-block:: python
 
-    $ # Arredondamento sem especificar o número de dígitos (segundo parâmetro)
+    # Arredondamento sem especificar o número de dígitos (segundo parâmetro)
     round(3.333333)
 
 .. code-block:: console
@@ -630,7 +630,7 @@ round()
 
 .. code-block:: python
 
-    $ # Arredondamento com quatro dígitos de precisão:
+    # Arredondamento com quatro dígitos de precisão:
     round(3.333333, 4)
 
 .. code-block:: console
@@ -639,14 +639,16 @@ round()
 
 .. code-block:: python
 
-    $ # Precisão variando de 1 a -3:
+    # Precisão variando de 1 a -3:
     round(1237.87431, 1)
 
 .. code-block:: console
 
     1237.9
+    
+.. code-block:: python
 
-> round(1237.87431, 0)
+    round(1237.87431, 0)
 
 1238.0
 
