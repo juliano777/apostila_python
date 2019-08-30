@@ -384,9 +384,13 @@ dir()
 
     True
 
-> 'w' in dir()                                                                                                                                         
+.. code-block:: python
 
-False
+    'w' in dir()
+
+.. code-block:: console
+
+    False
 
 
 
