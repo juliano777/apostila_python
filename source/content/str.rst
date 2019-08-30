@@ -920,19 +920,22 @@ Help da classe:
 
 > help(Foo)
 
-Help on class Foo in module __main__:
+.. code-block:: console
 
-class Foo(__builtin__.object)
- |  Uma classe
- |  de teste
- |  
- |  Data descriptors defined here:
- |  
- |  __dict__
- |      dictionary for instance variables (if defined)
- |  
- |  __weakref__
- |      list of weak references to the object (if defined)
+    Help on class Foo in module __main__:
+
+    class Foo(__builtin__.object)
+
+    |  Uma classe
+    |  de teste
+    |  
+    |  Data descriptors defined here:
+    |  
+    |  __dict__
+    |      dictionary for instance variables (if defined)
+    |  
+    |  __weakref__
+    |      list of weak references to the object (if defined)
 
 
 Imutabilidade
@@ -951,7 +954,9 @@ Primeiro elemento da string:
 
 > foo[0]
 
-'b'
+.. code-block:: console
+
+    'b'
 
 
 
@@ -959,7 +964,9 @@ Tentativa de redefinição do primeiro elemento da string:
 
 > foo[0] = 'B'
 
-TypeError: 'str' object does not support item assignment
+.. code-block:: console
+
+    TypeError: 'str' object does not support item assignment
 
 
 
@@ -967,14 +974,15 @@ Id da string:
 
 > id(foo)
 
-139876439773904
+.. code-block:: console
+
+    139876439773904
 
 
 
 Criação de uma string com o mesmo nome da anterior utilizando concatenação e slice:
 
 > foo = 'B' + foo[1:]
-
 
 
 Verificando o Id da variável:
