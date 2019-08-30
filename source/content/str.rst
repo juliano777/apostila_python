@@ -51,11 +51,15 @@ Dois exemplos com print de strings com aspas e apóstrofos dentro:
 
 > print('Uma string que contém "aspas" em si')
 
-Uma string que contém "aspas" em si
+.. code-block:: console
+
+    Uma string que contém "aspas" em si
 
 > print("Uma string que contém 'apóstrofos' em si")
 
-Uma string que contém 'apóstrofos' em si
+.. code-block:: console
+
+    Uma string que contém 'apóstrofos' em si
 
 
 
@@ -69,7 +73,9 @@ Exibindo o conteúdo da variável:
 
 > print(sql)
 
-SELECT * FROM musica WHERE artista = 'Mozart';
+.. code-block:: console
+
+    SELECT * FROM musica WHERE artista = 'Mozart';
 
 # ============================================================================
 
