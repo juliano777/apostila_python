@@ -184,15 +184,17 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
 
     [str, float, complex, int]
 
+.. code-block:: python
 
+    # Para cada item da primeira lista elevar (potência)
+    # ao elemento respectivo na segunda lista e criar uma 
+    # nova lista com os resultados
+    m = map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
+    print(list(m))
 
-Para cada item da primeira lista elevar (potência) ao elemento respectivo na segunda lista e criar uma nova lista com os resultados:
+.. code-block:: console
 
-> m = map(pow, [3, 7, 5, 10], [2, 1, 7, 3])
-
-> list(m)
-
-[9, 7, 78125, 1000]
+    [9, 7, 78125, 1000]
 
 
 
