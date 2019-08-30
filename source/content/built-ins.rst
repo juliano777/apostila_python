@@ -548,19 +548,17 @@ assert
 
 Nota-se que a execução do script não chegou até o fim.
 
+.. code-block:: bash
 
+    # Criação do script com assert com tratamento de exceção:
+    $ cat << EOF > /tmp/assert_com_try.py
+    print('Começo')
 
-Criação do script com assert com tratamento de exceção:
-
-$ cat << EOF > /tmp/assert_com_try.py
-print('Começo')
-
-try:
-    assert 1 == 1  # OK
-    assert 2 == 1  # Ops...
-
-except AssertionError:
-    print('Teve erro...')
+    try:
+        assert 1 == 1  # OK
+        assert 2 == 1  # Ops...
+    except AssertionError:
+        print('Teve erro...')
 
 
 print('Fim')

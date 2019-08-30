@@ -544,10 +544,9 @@ assert
     Começo
     Traceback (most recent call last):
     . . .
+    AssertionError
 
-AssertionError
-
-    Nota-se que a execução do script não chegou até o fim.
+Nota-se que a execução do script não chegou até o fim.
 
 
 
