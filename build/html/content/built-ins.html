@@ -664,18 +664,20 @@ $ python3 /tmp/assert_sem_try.py
 </pre></div>
 </div>
 <p>Nota-se que a execução do script não chegou até o fim.</p>
-<p>Criação do script com assert com tratamento de exceção:</p>
-<p>$ cat &lt;&lt; EOF &gt; /tmp/assert_com_try.py
-print(‘Começo’)</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>assert 1 == 1  # OK
-assert 2 == 1  # Ops…</p>
-</dd>
-<dt>except AssertionError:</dt><dd><p>print(‘Teve erro…’)</p>
-</dd>
-</dl>
-<p>print(‘Fim’)
-EOF</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do script com assert com tratamento de exceção:</span>
+$ cat <span class="s">&lt;&lt; EOF &gt; /tmp/assert_com_try.py</span>
+<span class="s">print(&#39;Começo&#39;)</span>
+
+<span class="s">try:</span>
+<span class="s">    assert 1 == 1  # OK</span>
+<span class="s">    assert 2 == 1  # Ops...</span>
+<span class="s">except AssertionError:</span>
+<span class="s">    print(&#39;Teve erro...&#39;)</span>
+
+<span class="s">print(&#39;Fim&#39;)</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
 <p>Execução:</p>
 <p>$ python3.7 /tmp/assert_com_try.py</p>
 <p>Começo

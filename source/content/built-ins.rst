@@ -560,9 +560,8 @@ Nota-se que a execução do script não chegou até o fim.
     except AssertionError:
         print('Teve erro...')
 
-
-print('Fim')
-EOF
+    print('Fim')
+    EOF
 
 
 
