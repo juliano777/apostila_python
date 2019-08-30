@@ -440,14 +440,15 @@ dir()
     p.email = 'chiquinho@chiquinhodasilva.xx'
 
 
-Atributo __dict__, é um dicionário que contém os atributos do objeto
+.. code-block:: python
 
-> p.__dict__                                                                                                                                           
+    # Atributo __dict__, é um dicionário que contém os atributos do objeto
+    p.__dict__
 
-{'nome': 'Chiquinho',
- 'rg': '00000000',
- 'cpf': 12345678901,
- 'email': 'chiquinho@chiquinhodasilva.xx'}
+.. code-block:: console
+
+    {'nome': 'Chiquinho', 'rg': '00000000', 'cpf': 12345678901, 'email': 'chiquinho@chiquinhodasilva.xx'}
+
 
 
 

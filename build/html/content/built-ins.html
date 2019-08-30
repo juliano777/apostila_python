@@ -567,14 +567,13 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="s1">&#39;chiquinho@chiquinhodasilva.xx&#39;</span>
 </pre></div>
 </div>
-<p>Atributo __dict__, é um dicionário que contém os atributos do objeto</p>
-<p>&gt; p.__dict__</p>
-<dl class="simple">
-<dt>{‘nome’: ‘Chiquinho’,</dt><dd><p>‘rg’: ‘00000000’,
-‘cpf’: 12345678901,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#37;&#52;&#48;chiquinhodasilva&#46;xx">‘chiquinho<span>&#64;</span>chiquinhodasilva<span>&#46;</span>xx</a>’}</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atributo __dict__, é um dicionário que contém os atributos do objeto</span>
+<span class="n">p</span><span class="o">.</span><span class="vm">__dict__</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;nome&#39;: &#39;Chiquinho&#39;, &#39;rg&#39;: &#39;00000000&#39;, &#39;cpf&#39;: 12345678901, &#39;email&#39;: &#39;chiquinho@chiquinhodasilva.xx&#39;}</span>
+</pre></div>
+</div>
 <p>Pegando o valor do atributo pelo dicionário:</p>
 <p>&gt; p.__dict__[‘nome’]</p>
 <p>‘Chiquinho’</p>

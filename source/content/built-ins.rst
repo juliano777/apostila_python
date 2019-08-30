@@ -445,7 +445,7 @@ dir()
     # Atributo __dict__, é um dicionário que contém os atributos do objeto
     p.__dict__
 
-.. code-block:: python
+.. code-block:: console
 
     {'nome': 'Chiquinho', 'rg': '00000000', 'cpf': 12345678901, 'email': 'chiquinho@chiquinhodasilva.xx'}
 
