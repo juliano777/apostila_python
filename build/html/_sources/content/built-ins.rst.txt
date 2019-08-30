@@ -981,13 +981,14 @@ input
 
     Digite uma string qualquer...
 
+.. code-block:: python
 
+    # Imprimindo o valor da variável
+    print(foo)
 
-Imprimindo o valor da variável:
+.. code-block:: console
 
-> print(foo)
-
-. . .
+    . . .
 
 
 
