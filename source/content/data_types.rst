@@ -9,11 +9,16 @@ Tipos de Dados
 
 Criação de um objeto e verificando seu tipo:
 
-> x = 7
+.. code-block:: python
+
+    # 
+    x = 7
 
 > type(x)
 
-int
+.. code-block:: console
+
+    int
 
 
 
@@ -37,21 +42,29 @@ Criação de dois objetos de mesmo nome:
 
 > id(x)
 
-140291958334736
+.. code-block:: console
+
+    140291958334736
 
 > type(x)
 
-float
+.. code-block:: console
+
+    float
 
 > x = 'foo'
 
 > id(x)
 
-140292017787768
+.. code-block:: console
+
+    140292017787768
 
 > type(x)
 
-str
+.. code-block:: console
+
+    str
 
     Foram criados dois objetos "x", sendo o primeiro float e o segundo uma string.
     Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.
@@ -69,7 +82,9 @@ Soma entre um um número de ponto flutuante e um inteiro:
 
 > 5.0 + 2
 
-7.0
+.. code-block:: console
+
+    7.0
 
 
 
@@ -77,7 +92,9 @@ Tentativa de soma entre uma string e um inteiro.
 
 > '5' + 2
 
-TypeError: must be str, not int
+.. code-block:: console
+
+    TypeError: must be str, not int
 
 
 Soma utilizando cast.

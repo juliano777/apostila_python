@@ -192,7 +192,9 @@ Todos os tipos de dados são objetos, pois não existem tipos primitivos em Pyth
 <p>Criação de um objeto e verificando seu tipo:</p>
 <p>&gt; x = 7</p>
 <p>&gt; type(x)</p>
-<p>int</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
+</pre></div>
+</div>
 <p>Variáveis</p>
 <blockquote>
 <div><p>São criadas através de atribuição de valor e quando não existem mais referência a elas são destruídas pelo garbage colector.
@@ -206,18 +208,25 @@ Como dito anteriormente, o tipo é determinado na execução e um mesmo nome pod
 <p>Criação de dois objetos de mesmo nome:</p>
 <p>&gt; x = 3.7</p>
 <p>&gt; id(x)</p>
-<p>140291958334736</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140291958334736</span>
+</pre></div>
+</div>
 <p>&gt; type(x)</p>
-<p>float</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">float</span>
+</pre></div>
+</div>
 <p>&gt; x = ‘foo’</p>
 <p>&gt; id(x)</p>
-<p>140292017787768</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140292017787768</span>
+</pre></div>
+</div>
 <p>&gt; type(x)</p>
-<p>str</p>
-<blockquote>
-<div><p>Foram criados dois objetos “x”, sendo o primeiro float e o segundo uma string.
-Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
+
+<span class="go">Foram criados dois objetos &quot;x&quot;, sendo o primeiro float e o segundo uma string.</span>
+<span class="go">Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem collector) criando um novo objeto.</span>
+</pre></div>
+</div>
 <p>Tipagem Forte</p>
 <blockquote>
 <div><p>A tipagem em Python além de dinâmica ela é forte.
@@ -225,10 +234,14 @@ Em casos de operações matemáticas, por exemplo, é necessário fazer um cast 
 </div></blockquote>
 <p>Soma entre um um número de ponto flutuante e um inteiro:</p>
 <p>&gt; 5.0 + 2</p>
-<p>7.0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7.0</span>
+</pre></div>
+</div>
 <p>Tentativa de soma entre uma string e um inteiro.</p>
 <p>&gt; ‘5’ + 2</p>
-<p>TypeError: must be str, not int</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: must be str, not int</span>
+</pre></div>
+</div>
 <p>Soma utilizando cast.</p>
 <p>&gt; int(‘5’) + 2</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
