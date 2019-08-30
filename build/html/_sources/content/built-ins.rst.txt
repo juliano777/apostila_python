@@ -420,7 +420,7 @@ ou
 
 .. code-block:: python
 
-    p.__dir__()
+    Pessoa.__dir__()
 
 .. code-block:: console
 
