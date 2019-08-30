@@ -550,8 +550,8 @@ Nota-se que a execução do script não chegou até o fim.
 
 .. code-block:: bash
 
-    # Criação do script com assert com tratamento de exceção:
-    $ cat << EOF > /tmp/assert_com_try.py
+    $ # Criação do script com assert com tratamento de exceção:
+    cat << EOF > /tmp/assert_com_try.py
     print('Começo')
 
     try:
