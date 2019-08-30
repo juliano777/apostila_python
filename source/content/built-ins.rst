@@ -489,12 +489,15 @@ dir()
         for i in metodos:
             print(i)
 
-Chamando a função criada para imprimir em tela os nomes dos métodos:
+.. code-block:: python
 
-> mostra_metodos(p)                                                                                                                                   
+    # Chamando a função criada para imprimir em tela os nomes dos métodos:
+    mostra_metodos(p)
+    
+.. code-block:: console
 
-dizer_nome
-saudacao
+    dizer_nome
+    saudacao
 
 
 pass
