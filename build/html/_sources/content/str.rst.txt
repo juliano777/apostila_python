@@ -167,7 +167,9 @@ Interpolação:
 
 > '%s %s' % ('foo', 'bar')
 
-'foo bar'
+.. code-block:: console
+
+    'foo bar'
 
 
 
@@ -175,9 +177,9 @@ Método format:
 
 > '{} {}'.format('foo', 'bar')
 
-'foo bar'
+.. code-block:: console
 
-
+    'foo bar'
 
 Valores numéricos decimais:
 
@@ -185,7 +187,9 @@ Valores numéricos decimais:
 
 > '{} {}'.format(70, 90)
 
-'70 90'
+.. code-block:: console
+
+    '70 90'
 
 
 
@@ -193,9 +197,9 @@ Interpolação pegando o valor de um dicionário:
 
 > print('%(variavel)s' % {'variavel': 'valor'})
 
-valor
+.. code-block:: console
 
-
+    valor
 
 Variável que vai receber os valores formatados:
 

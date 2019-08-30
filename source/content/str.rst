@@ -108,7 +108,10 @@ Utilizando parênteses para um string longa sem quebrar linha:
 
 
 > print(s3)
-Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da PEP8 (Python Enhancement Proposal), Proposta de aprimoramento do Python, que visa boas práticas de programação.
+
+.. code-block:: console
+
+    Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da PEP8 (Python Enhancement Proposal), Proposta de aprimoramento do Python, que visa boas práticas de programação.
 
 
 
@@ -167,7 +170,9 @@ Interpolação:
 
 > '%s %s' % ('foo', 'bar')
 
-'foo bar'
+.. code-block:: console
+
+    'foo bar'
 
 
 
@@ -175,9 +180,9 @@ Método format:
 
 > '{} {}'.format('foo', 'bar')
 
-'foo bar'
+.. code-block:: console
 
-
+    'foo bar'
 
 Valores numéricos decimais:
 
@@ -185,7 +190,9 @@ Valores numéricos decimais:
 
 > '{} {}'.format(70, 90)
 
-'70 90'
+.. code-block:: console
+
+    '70 90'
 
 
 
@@ -196,8 +203,6 @@ Interpolação pegando o valor de um dicionário:
 .. code-block:: console
 
     valor
-
-
 
 Variável que vai receber os valores formatados:
 
