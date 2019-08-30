@@ -534,14 +534,16 @@ assert
 
     print('Fim')
 
-Execução:
+.. code-block:: bash
 
-$ python3.7 /tmp/assert_sem_try.py
+    # Execução
+    python3 /tmp/assert_sem_try.py
 
-Começo
-Traceback (most recent call last):
+.. code-block:: console
 
-. . .
+    Começo
+    Traceback (most recent call last):
+    . . .
 
 AssertionError
 
