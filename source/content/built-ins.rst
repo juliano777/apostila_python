@@ -432,17 +432,12 @@ dir()
 
 .. code-block:: python
 
-    # Criação de um objeto da classe e definição de atributos:
-
-> p = Pessoa()  # 
-
-> p.nome = 'Chiquinho'
-
-> p.rg = '00000000'
-
-> p.cpf = 12345678901                                                                                                                                  
-
-> p.email = 'chiquinho@chiquinhodasilva.xx'
+    # Criação de um objeto da classe e definição de atributos
+    p = Pessoa()
+    p.nome = 'Chiquinho'
+    p.rg = '00000000'
+    p.cpf = 12345678901
+    p.email = 'chiquinho@chiquinhodasilva.xx'
 
 
 

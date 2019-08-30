@@ -430,9 +430,9 @@ dir()
      'rg',
      'saudacao']
 
+.. code-block:: python
 
-
-Criação de um objeto da classe e definição de atributos:
+    # Criação de um objeto da classe e definição de atributos:
 
 > p = Pessoa()  # 
 
