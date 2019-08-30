@@ -581,19 +581,21 @@ abs()
 
     Retorna o valor absoluto do argumento.
 
-    abs(x)
+.. code-block:: python
 
+    abs(3)
 
+.. code-block:: console
 
-Exemplos:
+    3
 
-> abs(3)
+.. code-block:: python
 
-3
+    abs(-3)
 
-> abs(-3)
+.. code-block:: console
 
-3
+    3
 
 
 

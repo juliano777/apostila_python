@@ -589,9 +589,13 @@ abs()
 
     3
 
-> abs(-3)
+.. code-block:: python
 
-3
+    abs(-3)
+
+.. code-block:: console
+
+    3
 
 
 
