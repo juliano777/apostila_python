@@ -84,30 +84,28 @@ Tipagem Forte
     A tipagem em Python além de dinâmica ela é forte.
     Em casos de operações matemáticas, por exemplo, é necessário fazer um cast para ser possível quando os tipos são incompatíveis.
 
+.. code-block:: python
 
-
-Soma entre um um número de ponto flutuante e um inteiro:
-
-> 5.0 + 2
+    # Soma entre um um número de ponto flutuante e um inteiro
+    5.0 + 2
 
 .. code-block:: console
 
     7.0
 
+.. code-block:: python
 
-
-Tentativa de soma entre uma string e um inteiro.
-
-> '5' + 2
+    # Tentativa de soma entre uma string e um inteiro
+    '5' + 2
 
 .. code-block:: console
 
     TypeError: must be str, not int
 
+.. code-block:: python
 
-Soma utilizando cast.
-
-> int('5') + 2
+    # Soma utilizando cast
+    int('5') + 2
 
 .. code-block:: console
 

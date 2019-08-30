@@ -259,18 +259,24 @@ Nota-se ao redefinir o valor do objeto o mesmo deixou de existir (garbagem colle
 <div><p>A tipagem em Python além de dinâmica ela é forte.
 Em casos de operações matemáticas, por exemplo, é necessário fazer um cast para ser possível quando os tipos são incompatíveis.</p>
 </div></blockquote>
-<p>Soma entre um um número de ponto flutuante e um inteiro:</p>
-<p>&gt; 5.0 + 2</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Soma entre um um número de ponto flutuante e um inteiro</span>
+<span class="mf">5.0</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7.0</span>
 </pre></div>
 </div>
-<p>Tentativa de soma entre uma string e um inteiro.</p>
-<p>&gt; ‘5’ + 2</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tentativa de soma entre uma string e um inteiro</span>
+<span class="s1">&#39;5&#39;</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: must be str, not int</span>
 </pre></div>
 </div>
-<p>Soma utilizando cast.</p>
-<p>&gt; int(‘5’) + 2</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Soma utilizando cast</span>
+<span class="nb">int</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
