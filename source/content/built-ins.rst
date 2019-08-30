@@ -628,13 +628,14 @@ round()
 
     3
 
+.. code-block:: python
 
+    $ # Arredondamento com quatro dígitos de precisão:
+    round(3.333333, 4)
 
-Arredondamento com quatro dígitos de precisão:
+.. code-block:: console
 
-> round(3.333333, 4)
-
-3.3333
+    3.3333
 
 
 
