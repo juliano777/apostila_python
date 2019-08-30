@@ -775,10 +775,14 @@ oct()
 
     '0o11'
 
-> oct(10)                                                                                                                                              
+.. code-block:: python
 
-'0o12'
+    # 
+    oct(10)
 
+.. code-block:: console
+
+    '0o12'
 
 
 hash()
