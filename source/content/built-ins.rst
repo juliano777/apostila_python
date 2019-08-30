@@ -449,14 +449,14 @@ dir()
 
     {'nome': 'Chiquinho', 'rg': '00000000', 'cpf': 12345678901, 'email': 'chiquinho@chiquinhodasilva.xx'}
 
+.. code-block:: python
 
+    # Pegando o valor do atributo pelo dicionário
+    p.__dict__['nome']
 
+.. code-block:: console
 
-Pegando o valor do atributo pelo dicionário:
-
-> p.__dict__['nome']                                                                                                                                   
-
-'Chiquinho'
+    'Chiquinho'
 
 
 
