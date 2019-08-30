@@ -166,10 +166,11 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
 .. code-block:: python
 
     m = map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
+    print(list(m))
 
-> list(m)
+.. code-block:: console
 
-[4, 3, 3, 4, 6]
+    [4, 3, 3, 4, 6]
 
 
 
