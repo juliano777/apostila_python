@@ -808,9 +808,15 @@ hash()
 
     2
 
-> x = 'foo'  # Hash de uma string
+.. code-block:: python
 
-> hash(x)
+    # Hash de uma string
+    x = 'foo'  
+
+.. code-block:: python
+
+    # Hash de uma string
+    hash(x)
 
 8540844669962366372
 
