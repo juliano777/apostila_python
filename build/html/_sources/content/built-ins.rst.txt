@@ -716,9 +716,16 @@ callable()
 
     False
 
-> callable(myfunction)                                                                                                                                  
+.. code-block:: python
 
-True
+    #
+    callable(myfunction)
+    
+.. code-block:: console
+
+    True
+
+
 
 > callable(Foo)                                                                                                                                        
 
