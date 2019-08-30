@@ -990,19 +990,19 @@ input
 
     . . .
 
-
-
 min e max
+---------
 
     Dada uma coleção, seja ela uma lista, tupla, conjunto ou string, as funções min e max trazem, respectivamente, o valor mínimo e o máximo.
 
+.. code-block:: python
 
+    # Valor mínimo entre inteiros
+    min(0, 2, -50, 7)
 
-Exemplos:
+.. code-block:: console
 
-> min(0, 2, -50, 7)  # Valor mínimo entre inteiros
-
--50
+    -50
 
 > max(0, 2, -50, 7)  # Valor máximo entre inteiros
 
