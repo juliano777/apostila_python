@@ -791,13 +791,14 @@ hash()
     Função que retorna o valor hash de um dado objeto.
     Dois objetos que são comparados também devem ter o mesmo valor de hash.
 
+.. code-block:: python
 
+    # Testes com a função hash
+    hash(1)  # O hash de um inteiro vai ser seu próprio valor
 
-Testes com a função hash:
+.. code-block:: console
 
-> hash(1)  # O hash de um inteiro vai ser seu próprio valor
-
-1
+    1
 
 > hash(2)
 
