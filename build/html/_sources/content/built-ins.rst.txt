@@ -396,24 +396,24 @@ dir()
 
     # Criação de uma classe
 
-> class Pessoa(object):
-    # Atributos
+    class Pessoa(object):
+        # Atributos
+        nome = ''
+        rg = ''
+        cpf = 0
+        email = ''
 
-    nome = '' 
-    rg = '' 
-    cpf = 0
-    email = ''
-    
-    # Métodos
-    def saudacao(self): 
-        print('Olá')
+        # Métodos
+        def saudacao(self):
+            print('Olá')
 
-    def dizer_nome(self):
-        print('Meu nome é {}'.format(self.nome))
-
+        def dizer_nome(self):
+            print('Meu nome é {}'.format(self.nome))
 
 
-Verificando o conteúdo da classe (atributos e métodos):
+.. code-block:: python
+
+    # Verificando o conteúdo da classe (atributos e métodos):
 
 > dir(Pessoa)
 

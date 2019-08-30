@@ -527,26 +527,25 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma classe</span>
+
+<span class="k">class</span> <span class="nc">Pessoa</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="c1"># Atributos</span>
+    <span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">rg</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">cpf</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+    <span class="c1"># Métodos</span>
+    <span class="k">def</span> <span class="nf">saudacao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">dizer_nome</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Meu nome é {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="p">))</span>
 </pre></div>
 </div>
-<dl>
-<dt>&gt; class Pessoa(object):</dt><dd><p># Atributos</p>
-<p>nome = ‘’
-rg = ‘’
-cpf = 0
-email = ‘’</p>
-<p># Métodos
-def saudacao(self):</p>
-<blockquote>
-<div><p>print(‘Olá’)</p>
-</div></blockquote>
-<dl class="simple">
-<dt>def dizer_nome(self):</dt><dd><p>print(‘Meu nome é {}’.format(self.nome))</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>Verificando o conteúdo da classe (atributos e métodos):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando o conteúdo da classe (atributos e métodos):</span>
+</pre></div>
+</div>
 <p>&gt; dir(Pessoa)</p>
 <p>ou</p>
 <p>&gt; p.__dir__()</p>
