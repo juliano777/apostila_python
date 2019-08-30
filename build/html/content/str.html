@@ -748,27 +748,30 @@ de teste</p>
 <p>&gt; foo = ‘B’ + foo[1:]</p>
 <p>Verificando o Id da variável:</p>
 <p>&gt; id(foo)</p>
-<p>140159122071800</p>
-<blockquote>
-<div><p>Nota-se que o Id é diferente, pois agora é outro objeto.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140159122071800</span>
+</pre></div>
+</div>
+<p>Nota-se que o Id é diferente, pois agora é outro objeto.</p>
 <p>Exibindo o valor da variável:</p>
 <p>&gt; print(foo)</p>
-<p>Bar</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Bar</span>
+</pre></div>
+</div>
 <p>Criação de uma nova string:</p>
 <p>&gt; s = ‘Black’</p>
 <p>Id da string:</p>
 <p>&gt; id(s)</p>
-<p>140159159537600</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140159159537600</span>
+</pre></div>
+</div>
 <p>Criando uma nova string com o mesmo nome da anterior via concatenação:</p>
 <p>s += ‘ Sabbath’</p>
 <p>Id da nova variável:</p>
 <p>&gt; id(s)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140159122296368</span>
-
-<span class="go">Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.</span>
 </pre></div>
 </div>
+<p>Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.</p>
 <p>Exibindo a string:</p>
 <p>&gt; print(s)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Black Sabbath</span>

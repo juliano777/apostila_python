@@ -981,17 +981,19 @@ Verificando o Id da variável:
 
 > id(foo)
 
-140159122071800
+.. code-block:: console
 
-    Nota-se que o Id é diferente, pois agora é outro objeto.
+    140159122071800
 
-
+Nota-se que o Id é diferente, pois agora é outro objeto.
 
 Exibindo o valor da variável:
 
 > print(foo)
 
-Bar
+.. code-block:: console
+
+    Bar
 
 
 
@@ -1005,7 +1007,9 @@ Id da string:
 
 > id(s)
 
-140159159537600
+.. code-block:: console
+
+    140159159537600
 
 
 
