@@ -818,7 +818,9 @@ hash()
     # Hash de uma string
     hash(x)
 
-8540844669962366372
+.. code-block:: console
+
+    8540844669962366372
 
 .. code-block:: python
 
