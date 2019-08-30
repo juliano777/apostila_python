@@ -968,15 +968,18 @@ input
     # Imprimindo o valor da variável
     print(foo)
 
-. . .
+.. code-block:: console
 
+    . . .
 
+.. code-block:: python
 
-Entrada de dados com prompt:
+    # Entrada de dados com prompt
+    foo = input('Digite uma string qualquer... ')
 
-> foo = input('Digite uma string qualquer... ')
+.. code-block:: console
 
-Digite uma string qualquer...
+    Digite uma string qualquer...
 
 
 

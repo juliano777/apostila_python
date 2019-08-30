@@ -972,21 +972,23 @@ input
 
     . . .
 
+.. code-block:: python
 
+    # Entrada de dados com prompt
+    foo = input('Digite uma string qualquer... ')
 
-Entrada de dados com prompt:
+.. code-block:: console
 
-> foo = input('Digite uma string qualquer... ')
+    Digite uma string qualquer...
 
-Digite uma string qualquer...
+.. code-block:: python
 
+    # Imprimindo o valor da variável
+    print(foo)
 
+.. code-block:: console
 
-Imprimindo o valor da variável:
-
-> print(foo)
-
-. . .
+    . . .
 
 
 
