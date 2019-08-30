@@ -302,10 +302,14 @@ ord e chr
 
     '\n'
 
+.. code-block:: python
 
-> ord('\r')  # Qual é o código unicode para carriage return?
+    # Qual é o código unicode para carriage return?
+    ord('\r')
 
-13
+.. code-block:: console
+
+    13
 
 > chr(13)  # Qual caractere Unicode corresponde ao código 13?
 
