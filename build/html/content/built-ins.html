@@ -897,9 +897,16 @@ Dois objetos que são comparados também devem ter o mesmo valor de hash.</p>
 </pre></div>
 </div>
 <p>8540844669962366372</p>
-<p>&gt; y = x  # Nova variável y igual a x</p>
-<p>&gt; hash(x) == hash(y)  # Por terem o mesmo valor, o hash será igual</p>
-<p>True</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nova variável y igual a x</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+
+<span class="c1"># Por terem o mesmo valor, o hash será igual</span>
+<span class="nb">hash</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">hash</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>&gt; hash([1, 2, 3])  #  Alguns tipos como list, dict e set são unhashable</p>
 <p>TypeError: unhashable type: ‘list’</p>
 <p>&gt; # Quando um número é muito grande seu hash será diferente de seu valor
