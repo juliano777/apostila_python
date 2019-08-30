@@ -897,19 +897,17 @@ id()
 
     False
 
+.. code-block:: python
 
+    # Criação de uma nova variável atribuindo com base em um objeto pré-existente
+    baz = bar
 
-Criação de uma nova variável atribuindo com base em um objeto pré-existente:
+    # Comparando as variáveis
+    baz == bar
 
-> baz = bar
+.. code-block:: console
 
-
-
-Comparando as variáveis:
-
-> baz == bar
-
-True
+    True
 
 
 
