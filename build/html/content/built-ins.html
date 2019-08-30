@@ -403,13 +403,19 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 </dd>
 </dl>
 </div></blockquote>
-<p>Teste de del em um objeto mutável (lista):</p>
-<p>&gt; lista = [‘a’, ‘b’, ‘c’]  # Definição da lista</p>
-<p>&gt; del lista[1]  # Apaga o segundo elemento da lista</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Teste de del em um objeto mutável (lista)</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>  <span class="c1"># Definição da lista</span>
+<span class="k">del</span> <span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Apaga o segundo elemento da lista</span>
+</pre></div>
+</div>
 <p>ou</p>
-<p>&gt; del(lista[1])  # Equivalência ao comando anterior em forma de função</p>
-<p>&gt; print(lista)  # Exibe a lista após o elemento ser retirado da mesma</p>
-<p>[‘a’, ‘c’]</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Equivalência ao comando anterior em forma de função</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Exibe a lista após o elemento ser retirado da mesma</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;a&#39;, &#39;c&#39;]</span>
+</pre></div>
+</div>
 <p>Teste de del para desalocar um objeto criado:</p>
 <p>&gt; foo = ‘bar’  # Objeto string criado</p>
 <p>&gt; print(foo)  # Verificando o valor da string</p>

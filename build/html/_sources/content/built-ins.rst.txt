@@ -236,21 +236,22 @@ del
     Pode ser tanto um comando como uma função cuja finalidade é remover a referência de um objeto.
 	Também apaga elemento de uma coleção.
 
+.. code-block:: python
 
-
-Teste de del em um objeto mutável (lista):
-
-> lista = ['a', 'b', 'c']  # Definição da lista
-
-> del lista[1]  # Apaga o segundo elemento da lista
+    # Teste de del em um objeto mutável (lista)
+    lista = ['a', 'b', 'c']  # Definição da lista
+    del lista[1]  # Apaga o segundo elemento da lista
 
 ou
 
-> del(lista[1])  # Equivalência ao comando anterior em forma de função
+.. code-block:: python
 
-> print(lista)  # Exibe a lista após o elemento ser retirado da mesma
+    del(lista[1])  # Equivalência ao comando anterior em forma de função
+    print(lista)  # Exibe a lista após o elemento ser retirado da mesma
 
-['a', 'c']
+.. code-block:: console
+
+    ['a', 'c']
 
 
 
