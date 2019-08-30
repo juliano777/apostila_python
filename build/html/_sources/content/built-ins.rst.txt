@@ -481,13 +481,14 @@ dir()
         '''
 
         # Generator que conterá os nomes dos métodos por tuple comprehension
-        metodos = (metodo for metodo in dir(objeto)  # Para cada item do objeto
-        # Se não for dunder e se for "chamável"
-        if (not is_dunder(metodo)) and callable(getattr(objeto, metodo))
-            
-            # Loop para exibir os nomes dos métodos
-            for i in metodos:
-                print(i)
+        dir_obj = (i for i in dir(objeto))
+        metodos = (metodo for metodo in dir_obj
+                   if callable(getattr(objeto, metodo))
+                   and (not is_dunder(metodo))
+                  )
+
+        for i in metodos:
+            print(i)
 
 
 
