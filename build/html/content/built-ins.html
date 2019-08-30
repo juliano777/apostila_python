@@ -422,12 +422,14 @@ Também apaga elemento de uma coleção.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bar</span>
 </pre></div>
 </div>
-<p>&gt; del foo  # Apagando o objeto string</p>
-<p>&gt; print(foo)  # Tentativa de imprimir o valor do objeto desalocado</p>
-<p>NameError: name ‘foo’ is not defined</p>
-<blockquote>
-<div><p>Nota-se que após o del não é possível mais fazer referência ao objeto.</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">foo</span>  <span class="c1"># Apagando o objeto string</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Tentativa de imprimir o valor do objeto desalocado</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">NameError: name &#39;foo&#39; is not defined</span>
+</pre></div>
+</div>
+<p>Nota-se que após o del não é possível mais fazer referência ao objeto.</p>
 </div>
 <div class="section" id="ord-e-chr">
 <h2>3.7. ord e chr<a class="headerlink" href="#ord-e-chr" title="Link permanente para este título">¶</a></h2>

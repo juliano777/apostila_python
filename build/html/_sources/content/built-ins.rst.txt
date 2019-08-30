@@ -266,15 +266,16 @@ ou
 
     bar
 
-> del foo  # Apagando o objeto string
+.. code-block:: python
 
-> print(foo)  # Tentativa de imprimir o valor do objeto desalocado
+    del foo  # Apagando o objeto string
+    print(foo)  # Tentativa de imprimir o valor do objeto desalocado
 
-NameError: name 'foo' is not defined
+.. code-block:: console
 
-    Nota-se que após o del não é possível mais fazer referência ao objeto.
+    NameError: name 'foo' is not defined
 
-
+Nota-se que após o del não é possível mais fazer referência ao objeto.
 
 ord e chr
 ---------
