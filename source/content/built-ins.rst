@@ -864,13 +864,12 @@ id()
     foo = ('x', 'y')
     bar = ('x', 'y')
 
+    # Comparando as tuplas criadas
+    foo == bar
 
+.. code-block:: console
 
-Comparando as tuplas criadas:
-
-> foo == bar
-
-True
+    True
 
 
 
