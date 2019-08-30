@@ -637,13 +637,14 @@ round()
 
     3.3333
 
+.. code-block:: python
 
+    $ # Precisão variando de 1 a -3:
+    round(1237.87431, 1)
 
-Precisão variando de 1 a -3:
+.. code-block:: console
 
-> round(1237.87431, 1)
-
-1237.9
+    1237.9
 
 > round(1237.87431, 0)
 
