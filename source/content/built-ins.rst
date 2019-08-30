@@ -336,9 +336,13 @@ ord e chr
 
     97
 
-> chr(120)  # Qual caractere Unicode corresponde ao código 120?
+.. code-block:: python
 
-'x'
+    chr(120)  # Qual caractere Unicode corresponde ao código 120?
+
+.. code-block:: console
+
+    'x'
 
 > chr(981)  # Qual caractere Unicode corresponde ao código 981?
 
