@@ -382,11 +382,17 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
 </pre></div>
 </div>
-<p>Importando reduce de functools;</p>
-<p>&gt; from functools import reduce</p>
-<p>Função reduce para executar a mesma tarefa anterior com apenas um comando:</p>
-<p>&gt; reduce(int.__add__, (2, 1, 4, 3))</p>
-<p>10</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importando reduce de functools</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+
+<span class="c1"># Função reduce para executar a mesma</span>
+<span class="c1"># tarefa anterior com apenas um comando</span>
+<span class="nb">reduce</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="del">
 <h2>3.6. del<a class="headerlink" href="#del" title="Link permanente para este título">¶</a></h2>

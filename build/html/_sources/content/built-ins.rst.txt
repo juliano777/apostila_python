@@ -215,21 +215,18 @@ reduce()
 
     10
 
+.. code-block:: python
 
+    # Importando reduce de functools
+    from functools import reduce
 
-Importando reduce de functools;
+    # Função reduce para executar a mesma
+    # tarefa anterior com apenas um comando
+    reduce(int.__add__, (2, 1, 4, 3))
 
-> from functools import reduce
+.. code-block:: console
 
-
-
-Função reduce para executar a mesma tarefa anterior com apenas um comando:
-
-> reduce(int.__add__, (2, 1, 4, 3))
-
-10
-
-
+    10
 
 del
 ---
