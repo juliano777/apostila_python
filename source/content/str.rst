@@ -695,7 +695,9 @@ Print do método __str__ do objeto:
 
 > print(f'{c}')
 
-Fiat 147 / azul / 1985
+.. code-block:: console
+
+    Fiat 147 / azul / 1985
 
 
 
@@ -703,7 +705,9 @@ Print do método __repr__ do objeto:
 
 > print(f'{c!r}')
 
-Fiat 147 | azul | 1985
+.. code-block:: console
+
+    Fiat 147 | azul | 1985
 
 
 
@@ -720,11 +724,12 @@ Exibir a mensagem:
 
 > print(msg)
 
-Marca: Fiat
-Modelo: 147
-Ano: 1985
-Cor: azul
+.. code-block:: console
 
+    Marca: Fiat
+    Modelo: 147
+    Ano: 1985
+    Cor: azul
 
 
 f String entre parênteses:
@@ -740,7 +745,9 @@ Exibir a mensagem:
 
 > print(msg)
 
-Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul
+.. code-block:: console
+
+    Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul
 
 
 
@@ -754,10 +761,11 @@ Exemplo de print com raw string:
 
 > print(r'foo\tbar')
 
-foo\tbar
+.. code-block:: console
 
-    É de se notar que a string não teve interpretação do caractere especial de tab (\t), ou seja, não houve qualquer interpretação.
+    foo\tbar
 
+É de se notar que a string não teve interpretação do caractere especial de tab (\t), ou seja, não houve qualquer interpretação.
 
 
 Unicode Strings (u)
@@ -770,7 +778,9 @@ Comparação de strings:
 
 > u'Foo' == 'Foo'
 
-True
+.. code-block:: console
+
+    True
 
     Das duas strings, somente a primeira tem o sufixo "u".
 
@@ -785,21 +795,25 @@ Concatenação:
 
 > print("Curso" + " de " + "Python")
 
-Curso de Python
+.. code-block:: console
+
+    Curso de Python
 
 > spam = "Curso".__add__(" de ".__add__("Python"))
 
 > print(spam)
 
-Curso de Python
+.. code-block:: console
 
-
+    Curso de Python
 
 Multiplicação:
 
 > print('<' + 'Python' * 3 + '>')
 
-<PythonPythonPython>
+.. code-block:: console
+
+    <PythonPythonPython>
 
 > print('<' + 'Python'.__mul__(3) + '>')
 

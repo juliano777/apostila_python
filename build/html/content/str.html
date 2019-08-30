@@ -587,10 +587,12 @@ def __repr__(self):</p>
 </dl>
 <p>Exibir a mensagem:</p>
 <p>&gt; print(msg)</p>
-<p>Marca: Fiat
-Modelo: 147
-Ano: 1985
-Cor: azul</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Marca: Fiat</span>
+<span class="go">Modelo: 147</span>
+<span class="go">Ano: 1985</span>
+<span class="go">Cor: azul</span>
+</pre></div>
+</div>
 <p>f String entre parênteses:</p>
 <dl class="simple">
 <dt>&gt; msg = (f’Marca: {marca} - ‘</dt><dd><p>f’Modelo: {modelo} - ‘
@@ -600,27 +602,30 @@ f’Cor: {cor}’)</p>
 </dl>
 <p>Exibir a mensagem:</p>
 <p>&gt; print(msg)</p>
-<p>Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul</span>
+</pre></div>
+</div>
 <p>Raw Strings (r)</p>
 <blockquote>
 <div><p>É o tipo de string cujo conteúdo é interpretado literalmente.</p>
 </div></blockquote>
 <p>Exemplo de print com raw string:</p>
 <p>&gt; print(r’footbar’)</p>
-<p>footbar</p>
-<blockquote>
-<div><p>É de se notar que a string não teve interpretação do caractere especial de tab (t), ou seja, não houve qualquer interpretação.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo\tbar</span>
+</pre></div>
+</div>
+<p>É de se notar que a string não teve interpretação do caractere especial de tab (t), ou seja, não houve qualquer interpretação.</p>
 <p>Unicode Strings (u)</p>
 <blockquote>
 <div><p>É o padrão para uma string em Python, não há a necessidade de adicionar o sufixo “u” antes do apóstrofo ou aspas.</p>
 </div></blockquote>
 <p>Comparação de strings:</p>
 <p>&gt; u’Foo’ == ‘Foo’</p>
-<p>True</p>
-<blockquote>
-<div><p>Das duas strings, somente a primeira tem o sufixo “u”.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+
+<span class="go">Das duas strings, somente a primeira tem o sufixo &quot;u&quot;.</span>
+</pre></div>
+</div>
 <p># ============================================================================</p>
 </div>
 </div>
@@ -628,13 +633,19 @@ f’Cor: {cor}’)</p>
 <h2>5.8. Operações de Strings<a class="headerlink" href="#operacoes-de-strings" title="Link permanente para este título">¶</a></h2>
 <p>Concatenação:</p>
 <p>&gt; print(“Curso” + ” de ” + “Python”)</p>
-<p>Curso de Python</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Curso de Python</span>
+</pre></div>
+</div>
 <p>&gt; spam = “Curso”.__add__(” de “.__add__(“Python”))</p>
 <p>&gt; print(spam)</p>
-<p>Curso de Python</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Curso de Python</span>
+</pre></div>
+</div>
 <p>Multiplicação:</p>
 <p>&gt; print(‘&lt;’ + ‘Python’ * 3 + ‘&gt;’)</p>
-<p>&lt;PythonPythonPython&gt;</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;PythonPythonPython&gt;</span>
+</pre></div>
+</div>
 <p>&gt; print(‘&lt;’ + ‘Python’.__mul__(3) + ‘&gt;’)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;PythonPythonPython&gt;&#39;</span>
 </pre></div>
