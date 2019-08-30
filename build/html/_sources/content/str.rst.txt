@@ -803,7 +803,9 @@ Multiplicação:
 
 > print('<' + 'Python'.__mul__(3) + '>')
 
-'<PythonPythonPython>'
+.. code-block:: console
+
+    '<PythonPythonPython>'
 
 
 
@@ -811,26 +813,36 @@ Split - Quebra a string em palavras formando uma lista:
 
 > print('Curso de Python'.split())
 
-['Curso', 'de', 'Python']
+.. code-block:: console
+
+    ['Curso', 'de', 'Python']
 
 > print('Curso de Python'.split('de'))
 
-['Curso ', ' Python']
+.. code-block:: console
+
+    ['Curso ', ' Python']
 
 
 Slice - Corte de string - 'string'[inicio:fim - 1:incremento]:
 
 > print("Curso de Python”[0])
 
-'C'
+.. code-block:: console
+
+    'C'
 
 > print("Curso de Python"[1:5])
 
-'urso'
+.. code-block:: console
+
+    'urso'
 
 > print("Curso de Python"[1:5:2])
 
-'us'
+.. code-block:: console
+
+    'us'
 
 > print("Curso de Python"[9:])
 
