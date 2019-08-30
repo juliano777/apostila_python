@@ -636,13 +636,23 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 <div><p>Um statements assert é uma maneira conveniente para inserir asserções de debug.
 O comando assert verifica em tempo de execução uma determinada condição e se a mesma não for verdadira uma exceção AssertionError é lançada e se essa exceção não for tratada, o programa pára.</p>
 </div></blockquote>
-<p>Criação do script com assert sem tratamento de exceção:</p>
-<p>$ cat &lt;&lt; EOF &gt; /tmp/assert_sem_try.py
-print(‘Começo’)</p>
-<p>assert 1 == 1  # OK
-assert 2 == 1  # Ops…</p>
-<p>print(‘Fim’)
-EOF</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do script com assert sem tratamento de exceção</span>
+vim /tmp/assert_sem_try.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Começo&#39;</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># OK</span>
+<span class="k">assert</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># Ops...</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
 <p>Execução:</p>
 <p>$ python3.7 /tmp/assert_sem_try.py</p>
 <p>Começo

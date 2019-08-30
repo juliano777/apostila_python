@@ -519,19 +519,20 @@ assert
     O comando assert verifica em tempo de execução uma determinada condição e se a mesma não for verdadira uma exceção AssertionError é lançada e se essa exceção não for tratada, o programa pára.
 
 
+.. code-block:: bash
 
-Criação do script com assert sem tratamento de exceção:
+    # Criação do script com assert sem tratamento de exceção
+    vim /tmp/assert_sem_try.py
 
-$ cat << EOF > /tmp/assert_sem_try.py
-print('Começo')
+.. code-block:: python
+    :linenos:
 
-assert 1 == 1  # OK
-assert 2 == 1  # Ops...
+    print('Começo')
 
-print('Fim')
-EOF
+    assert 1 == 1  # OK
+    assert 2 == 1  # Ops...
 
-
+    print('Fim')
 
 Execução:
 
