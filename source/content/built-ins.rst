@@ -148,7 +148,7 @@ Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente 
     f = filter(impar, range(0, 20))
     print(list(f))
 
-.. code-block:: python
+.. code-block:: console
 
     [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
@@ -163,7 +163,9 @@ map()
 
 Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string respectivamente:
 
-> m = map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
+.. code-block:: python
+
+    m = map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
 
 > list(m)
 
