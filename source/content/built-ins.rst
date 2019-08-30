@@ -173,12 +173,14 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
     [4, 3, 3, 4, 6]
 
 
+.. code-block:: python
 
-Para cada item da lista, criar uma nova lista com seus respectivos tipos:
+    # Para cada item da lista, criar uma nova lista
+    # com seus respectivos tipos
+    m = map(type, ['foo', 1.4, 2 + 5j, 1000])
+    print(list(m))
 
-> m = map(type, ['foo', 1.4, 2 + 5j, 1000])
-
-> list(m)
+    
 
 [str, float, complex, int]
 
