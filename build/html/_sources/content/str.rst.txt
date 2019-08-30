@@ -1236,9 +1236,9 @@ Exibindo o valor da variável:
     '012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
 
 
-	Foi criada uma lista de strings no loop em que a cada iteração é utilizado o método append da lista para adicionar o item atual.
-	No final é utilizado o método de string join que utiliza como separador uma string vazia ('') juntando em uma string (o novo s) todos os valores da lista.
-	A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.
+Foi criada uma lista de strings no loop em que a cada iteração é utilizado o método append da lista para adicionar o item atual.
+No final é utilizado o método de string join que utiliza como separador uma string vazia ('') juntando em uma string (o novo s) todos os valores da lista.
+A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.
 
 
 
