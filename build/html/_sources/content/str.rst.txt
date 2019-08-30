@@ -358,9 +358,9 @@ b) Formato binário; número de saída na base 2:
 
 > format(10, '#05b')
 
-'0b1010'
+.. code-block:: console
 
-
+    '0b1010'
 
 c) Caractere; converte o inteiro para o caractere unicode correspondente:
 
