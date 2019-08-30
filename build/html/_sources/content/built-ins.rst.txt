@@ -506,16 +506,11 @@ pass
     É um comando de  operação nula, ou seja, quando é executado nada acontece. É útil como um marcador quando um statement é requerido sintaticamente, mas não tem necessidade de um código a ser executado.
 
 
+.. code-block:: python
 
-Função que nada faz:
-
-> def nula():
-    '''
-    Função sem utilidade
-    '''
-    pass
-
-
+    # Função que nada faz:
+    def nula():
+        pass
 
 assert
 ------
