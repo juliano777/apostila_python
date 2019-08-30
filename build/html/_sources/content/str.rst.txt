@@ -484,7 +484,9 @@ Como unicode é padrão, podemos omitir o prefixo:
 
 > print(u'Foo' == 'Foo')
 
-True
+.. code-block:: console
+
+    True
 
 
 
@@ -522,11 +524,15 @@ Exibir o conteúdo das strings de bytes:
 
 > print(sb1)
 
-b'Sem caracteres especiais'
+.. code-block:: console
+
+    b'Sem caracteres especiais'
 
 > print(sb2)
 
-b'Macarr\xc3\xa3o'
+.. code-block:: console
+
+    b'Macarr\xc3\xa3o'
 
 
 > print(sb3)

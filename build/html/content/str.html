@@ -463,7 +463,9 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </div></blockquote>
 <p>Como unicode é padrão, podemos omitir o prefixo:</p>
 <p>&gt; print(u’Foo’ == ‘Foo’)</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <div class="section" id="bytes-b">
 <h3>5.7.1. Bytes (b)<a class="headerlink" href="#bytes-b" title="Link permanente para este título">¶</a></h3>
 <blockquote>
@@ -482,9 +484,13 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </div></blockquote>
 <p>Exibir o conteúdo das strings de bytes:</p>
 <p>&gt; print(sb1)</p>
-<p>b’Sem caracteres especiais’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;Sem caracteres especiais&#39;</span>
+</pre></div>
+</div>
 <p>&gt; print(sb2)</p>
-<p>b’Macarrxc3xa3o’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;Macarr\xc3\xa3o&#39;</span>
+</pre></div>
+</div>
 <p>&gt; print(sb3)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;A\xc3\xa7\xc3\xa3o&#39;</span>
 </pre></div>
