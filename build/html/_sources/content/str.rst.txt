@@ -69,9 +69,6 @@ Exibindo o conteúdo da variável:
 
     SELECT * FROM musica WHERE artista = 'Mozart';
 
-# ============================================================================
-
-
 Strings de Múltiplas Linhas
 ---------------------------
 
@@ -371,8 +368,6 @@ Número decimal:
     '70000.000'
 
 
-# ============================================================================
-
 Representações de Inteiros 
 --------------------------
 
@@ -518,9 +513,6 @@ Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precis�
 .. code-block:: console
 
     '     1E+03'
-
-# ============================================================================
-
 
 Tipos de Strings em Python
 --------------------------
@@ -863,10 +855,6 @@ Comparação de strings:
     True
 
     Das duas strings, somente a primeira tem o sufixo "u".
-
-# ============================================================================
-
-
 
 Operações de Strings
 --------------------
