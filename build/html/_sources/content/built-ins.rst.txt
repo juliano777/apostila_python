@@ -834,9 +834,14 @@ hash()
 
     True
 
-> hash([1, 2, 3])  #  Alguns tipos como list, dict e set são unhashable
+.. code-block:: python
 
-TypeError: unhashable type: 'list'
+    # Alguns tipos como list, dict e set são unhashable
+    hash([1, 2, 3])
+
+.. code-block:: console
+
+    TypeError: unhashable type: 'list'
 
 > # Quando um número é muito grande seu hash será diferente de seu valor
 > hash(9999999999999999999)

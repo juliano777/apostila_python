@@ -909,8 +909,13 @@ Dois objetos que são comparados também devem ter o mesmo valor de hash.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<p>&gt; hash([1, 2, 3])  #  Alguns tipos como list, dict e set são unhashable</p>
-<p>TypeError: unhashable type: ‘list’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alguns tipos como list, dict e set são unhashable</span>
+<span class="nb">hash</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: unhashable type: &#39;list&#39;</span>
+</pre></div>
+</div>
 <p>&gt; # Quando um número é muito grande seu hash será diferente de seu valor
 &gt; hash(9999999999999999999)</p>
 <p>776627963145224195</p>
