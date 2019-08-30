@@ -753,10 +753,12 @@ callable()
 
     False
 
-> callable(b)
+.. code-block:: python
+
+    # 
+    callable(b)
 
 True
-
 
 
 oct()
