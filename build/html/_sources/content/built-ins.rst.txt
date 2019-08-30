@@ -161,10 +161,12 @@ map()
 
 
 
-Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string respectivamente:
+
 
 .. code-block:: python
 
+    # Dada uma tupla com várias strings, criar uma lista 
+    # com o tamanho de cada string respectivamente
     m = map(len, ('spam', 'foo', 'bar', 'eggs', 'Python'))
     print(list(m))
 
