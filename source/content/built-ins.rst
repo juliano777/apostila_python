@@ -820,11 +820,17 @@ hash()
 
 8540844669962366372
 
-> y = x  # Nova variável y igual a x
+.. code-block:: python
 
-> hash(x) == hash(y)  # Por terem o mesmo valor, o hash será igual
-                                                                                                                                  
-True
+    # Nova variável y igual a x
+    y = x
+
+    # Por terem o mesmo valor, o hash será igual
+    hash(x) == hash(y)
+
+.. code-block:: console
+
+    True
 
 > hash([1, 2, 3])  #  Alguns tipos como list, dict e set são unhashable
 
