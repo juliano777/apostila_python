@@ -744,9 +744,14 @@ callable()
 
     True
 
-> callable(f)                                                                                                                                          
+.. code-block:: python
 
-False
+    #
+    callable(f)
+
+.. code-block:: console
+
+    False
 
 > callable(b)
 

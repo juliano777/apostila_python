@@ -744,15 +744,21 @@ callable()
 
     True
 
-> callable(f)                                                                                                                                          
+.. code-block:: python
 
-False
+    #
+    callable(f)
 
-> callable(b)
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    # 
+    callable(b)
 
 True
-
-
 
 oct()
 -----
