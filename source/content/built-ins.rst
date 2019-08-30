@@ -1014,9 +1014,14 @@ min e max
 
     7
 
-> max('c', 'x', 'k')  # Para caracteres a ordem alfabética é levada em conta
+.. code-block:: python
 
-'x'
+    # Para caracteres a ordem alfabética é levada em conta
+    max('c', 'x', 'k')
+
+.. code-block:: console
+
+    'x'
 
 
 
