@@ -370,14 +370,18 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <blockquote>
 <div><p>Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.</p>
 </div></blockquote>
-<p>Via loop somar todos elementos de uma tupla:</p>
-<p>&gt; soma = 0  # Variável que terá o valor da soma após o loop</p>
-<dl class="simple">
-<dt>&gt; for i in (2, 1, 4, 3):  # Loop e incrementação</dt><dd><p>soma += i</p>
-</dd>
-</dl>
-<p>&gt; print(soma)  # Exibe o resultado</p>
-<p>10</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Via loop somar todos elementos de uma tupla</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Variável que terá o valor da soma após o loop</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>  <span class="c1"># Loop e incrementação</span>
+    <span class="n">soma</span> <span class="o">+=</span> <span class="n">i</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">soma</span><span class="p">)</span>  <span class="c1"># Exibe o resultado</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
+</pre></div>
+</div>
 <p>Importando reduce de functools;</p>
 <p>&gt; from functools import reduce</p>
 <p>Função reduce para executar a mesma tarefa anterior com apenas um comando:</p>
