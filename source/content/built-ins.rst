@@ -537,17 +537,16 @@ assert
 .. code-block:: bash
 
     # Execução
-    python3 /tmp/assert_sem_try.py
+    $ python3 /tmp/assert_sem_try.py
 
 .. code-block:: console
 
     Começo
     Traceback (most recent call last):
     . . .
+    AssertionError
 
-AssertionError
-
-    Nota-se que a execução do script não chegou até o fim.
+Nota-se que a execução do script não chegou até o fim.
 
 
 
