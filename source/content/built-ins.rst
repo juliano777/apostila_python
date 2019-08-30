@@ -301,8 +301,7 @@ ord e chr
 
 .. code-block:: python
 
-    # Qual é o código unicode para carriage return?
-    ord('\r')
+    ord('\r')  # Qual é o código unicode para carriage return?
 
 .. code-block:: console
 
@@ -310,8 +309,7 @@ ord e chr
 
 .. code-block:: python
 
-    # Qual caractere Unicode corresponde ao código 13?
-    chr(13)
+    chr(13)  # Qual caractere Unicode corresponde ao código 13?
     
 .. code-block:: console
 
