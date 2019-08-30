@@ -1212,9 +1212,7 @@ A partir de qual posição aparece a string?:
 
     7
 
-    No exemplo dado o texto existe na string. E se não existisse?
-
-
+No exemplo dado o texto existe na string. E se não existisse?
 
 Buscando um texto que não existe dentro da string:
 
