@@ -514,22 +514,27 @@ xc3xa7 -&gt; ç</p>
 <p>&gt; b = bytes(‘∑’.encode(‘utf-8’))</p>
 <p>Verificando o tipo:</p>
 <p>&gt; print(type(b))</p>
-<p>&lt;class ‘bytes’&gt;</p>
-<blockquote>
-<div><p>Uma byte string tem um tipo específico, bytes.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;class &#39;bytes&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Uma byte string tem um tipo específico, bytes.</p>
 <p>Exibindo a byte string:</p>
 <p>&gt; print(b)</p>
-<p>b’xe2x88x91’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;\xe2\x88\x91&#39;</span>
+</pre></div>
+</div>
 <p>Decodificando para unicode:</p>
 <p>&gt; print(b.decode(‘utf-8’))</p>
-<p>∑</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">∑</span>
+</pre></div>
+</div>
 <p>Verificando o tipo quando o objeto é decodificado:</p>
 <p>&gt; type(b.decode(‘utf-8’))</p>
-<p>str</p>
-<blockquote>
-<div><p>Ao ser decodificado passa a ser uma string.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
+
+<span class="go">Ao ser decodificado passa a ser uma string.</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="format-strings">
 <h3>5.7.2. Format Strings<a class="headerlink" href="#format-strings" title="Link permanente para este título">¶</a></h3>
@@ -543,13 +548,19 @@ xc3xa7 -&gt; ç</p>
 <p>&gt; cor = ‘azul’</p>
 <p>Exibir mensagem com uma f string:</p>
 <p>&gt; print(f’Comprei um {marca} {modelo} {cor} ano {ano}’)</p>
-<p>Comprei um Fiat 147 azul ano 1985</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Comprei um Fiat 147 azul ano 1985</span>
+</pre></div>
+</div>
 <p>Uma f string também permite que se use expressões:</p>
 <p>&gt; print(f’{5 + 2}’)</p>
-<p>7</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 <p>Métodos e funções também são permitidos:</p>
 <p>&gt; print(f’{cor.upper()}’)</p>
-<p>AZUL</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">AZUL</span>
+</pre></div>
+</div>
 <p>Criação de uma classe de exemplo que recebe quatro parâmetros:</p>
 <dl>
 <dt>&gt; class Carro(object):</dt><dd><p># Método de inicialização (construtor)

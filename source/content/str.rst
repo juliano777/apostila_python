@@ -588,22 +588,24 @@ Pode-se também criar um objeto bytes a partir da classe:
 > b = bytes('∑'.encode('utf-8'))
 
 
-
 Verificando o tipo:
 
 > print(type(b))
 
-<class 'bytes'>
+.. code-block:: console
 
-    Uma byte string tem um tipo específico, bytes.
+    <class 'bytes'>
 
+Uma byte string tem um tipo específico, bytes.
 
 
 Exibindo a byte string:
 
 > print(b)
 
-b'\xe2\x88\x91'
+.. code-block:: console
+
+    b'\xe2\x88\x91'
 
 
 
@@ -611,7 +613,9 @@ Decodificando para unicode:
 
 > print(b.decode('utf-8'))
 
-∑
+.. code-block:: console
+
+    ∑
 
 
 
@@ -619,7 +623,9 @@ Verificando o tipo quando o objeto é decodificado:
 
 > type(b.decode('utf-8'))
 
-str
+.. code-block:: console
+
+    str
 
     Ao ser decodificado passa a ser uma string.
 
@@ -645,7 +651,9 @@ Exibir mensagem com uma f string:
 
 > print(f'Comprei um {marca} {modelo} {cor} ano {ano}')
 
-Comprei um Fiat 147 azul ano 1985
+.. code-block:: console
+
+    Comprei um Fiat 147 azul ano 1985
 
 
 
@@ -653,7 +661,9 @@ Uma f string também permite que se use expressões:
 
 > print(f'{5 + 2}')
 
-7
+.. code-block:: console
+
+    7
 
 
 
@@ -661,7 +671,9 @@ Métodos e funções também são permitidos:
 
 > print(f'{cor.upper()}')
 
-AZUL
+.. code-block:: console
+
+    AZUL
 
 
 
