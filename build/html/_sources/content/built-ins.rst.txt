@@ -918,9 +918,14 @@ id()
 
     True
 
-> id(bar) == id(baz)                                                                                                                                  
+.. code-block:: python
 
-True
+    # 
+    id(bar) == id(baz)
+    
+.. code-block:: console
+
+    True
 
     Aqui fica demonstrado que quando se cria uma nova variável simplesmente por atribuição é na verdade a criação de uma nova referência (apontamento) para o mesmo objeto.
 
