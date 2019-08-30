@@ -14,33 +14,33 @@ Criação de um objeto e verificando seu tipo:
     # 
     x = 7
 
-> type(x)
+    # type(x)
 
 .. code-block:: console
 
     int
 
 
-
 Variáveis
+---------
 
 	São criadas através de atribuição de valor e quando não existem mais referência a elas são destruídas pelo garbage colector.
 	Seus nomes devem começar por uma letra (não acentuadas) ou por underline "_".
 
-
-
 Tipagem Dinâmica
+~~~~~~~~~~~~~~~~
 
     No mesmo código pode ter objetos diferentes com o mesmo nome.
     Como dito anteriormente, o tipo é determinado na execução e um mesmo nome pode ter tipos diferentes ao longo do código, porém na verdade será outro objeto.
 
 
+.. code-block:: python
 
-Criação de dois objetos de mesmo nome:
+    # Criação de dois objetos de mesmo nome
+    x = 3.7
 
-> x = 3.7
-
-> id(x)
+    # 
+    id(x)
 
 .. code-block:: console
 
