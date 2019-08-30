@@ -574,9 +574,13 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;nome&#39;: &#39;Chiquinho&#39;, &#39;rg&#39;: &#39;00000000&#39;, &#39;cpf&#39;: 12345678901, &#39;email&#39;: &#39;chiquinho@chiquinhodasilva.xx&#39;}</span>
 </pre></div>
 </div>
-<p>Pegando o valor do atributo pelo dicionário:</p>
-<p>&gt; p.__dict__[‘nome’]</p>
-<p>‘Chiquinho’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pegando o valor do atributo pelo dicionário</span>
+<span class="n">p</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;nome&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Chiquinho&#39;</span>
+</pre></div>
+</div>
 <p>Com o auxílio de da função dir, listar todos os métodos do objeto:</p>
 <dl>
 <dt>&gt; def is_dunder(s):  # Função que servirá para a função principal</dt><dd><p>‘’’
