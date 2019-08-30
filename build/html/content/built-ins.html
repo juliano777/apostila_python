@@ -933,11 +933,14 @@ Dois objetos que são comparados também devem ter o mesmo valor de hash.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de duas tuplas</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
 <span class="n">bar</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
+
+<span class="c1"># Comparando as tuplas criadas</span>
+<span class="n">foo</span> <span class="o">==</span> <span class="n">bar</span>
 </pre></div>
 </div>
-<p>Comparando as tuplas criadas:</p>
-<p>&gt; foo == bar</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>Verificando o a identidade das tuplas criadas:</p>
 <p>&gt; id(foo)</p>
 <p>139651439554952</p>
