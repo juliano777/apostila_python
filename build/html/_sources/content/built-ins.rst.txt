@@ -766,13 +766,14 @@ oct()
 
     Função que retorna a representação octal de um inteiro.
 
+.. code-block:: python
 
+    # 
+    oct(9)
 
-Exemplos:
+.. code-block:: console
 
-> oct(9)
-
-'0o11'
+    '0o11'
 
 > oct(10)                                                                                                                                              
 
