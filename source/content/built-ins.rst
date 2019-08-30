@@ -196,25 +196,24 @@ Dada uma tupla com várias strings, criar uma lista com o tamanho de cada string
 
     [9, 7, 78125, 1000]
 
-
-
 reduce()
 --------
 
     Em Python 2 estava disponível sem a necessidade de fazer importação, hoje em Python 3 está no módulo functools.
 
+.. code-block:: python
 
+    # Via loop somar todos elementos de uma tupla
+    soma = 0  # Variável que terá o valor da soma após o loop
 
-Via loop somar todos elementos de uma tupla:
+    for i in (2, 1, 4, 3):  # Loop e incrementação
+        soma += i
 
-> soma = 0  # Variável que terá o valor da soma após o loop
+    print(soma)  # Exibe o resultado
 
-> for i in (2, 1, 4, 3):  # Loop e incrementação
-    soma += i
+.. code-block:: console
 
-> print(soma)  # Exibe o resultado
-
-10
+    10
 
 
 
