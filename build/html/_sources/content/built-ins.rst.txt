@@ -624,7 +624,7 @@ round()
     $ # Arredondamento sem especificar o número de dígitos (segundo parâmetro)
     round(3.333333)
 
-    .. code-block:: console
+.. code-block:: console
 
     3
 
