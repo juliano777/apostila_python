@@ -392,9 +392,9 @@ dir()
 
     False
 
+.. code-block:: python
 
-
-Criação de uma classe:
+    # Criação de uma classe
 
 > class Pessoa(object):
     # Atributos
