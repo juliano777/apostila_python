@@ -888,13 +888,14 @@ id()
 
     139651403802056
 
+.. code-block:: python
 
+    # É o mesmo objeto?
+    foo is bar
 
-É o mesmo objeto?:
+.. code-block:: console
 
-> foo is bar
-
-False
+    False
 
 
 
