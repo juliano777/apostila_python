@@ -1230,9 +1230,8 @@ Buscando um texto que não existe dentro da string:
 
     -1
 
-    Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.
-    O -1 não deve ser confundido como último elemento.
-
+Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.
+O -1 não deve ser confundido como último elemento.
 
 
 - count
