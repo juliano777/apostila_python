@@ -581,40 +581,35 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Chiquinho&#39;</span>
 </pre></div>
 </div>
-<p>Com o auxílio de da função dir, listar todos os métodos do objeto:</p>
-<dl>
-<dt>&gt; def is_dunder(s):  # Função que servirá para a função principal</dt><dd><p>‘’’
-Função que retorna True para dunder strings
-‘’‘</p>
-<p># Se começar e terminar com “__” retornar True
-if s.startswith(‘__’) and s.endswith(‘__’):</p>
-<blockquote>
-<div><p>return True</p>
-</div></blockquote>
-<dl class="simple">
-<dt>else:</dt><dd><p>return False</p>
-</dd>
-</dl>
-</dd>
-<dt>&gt; def mostra_metodos(objeto):</dt><dd><p>‘’’
-Função que mostra em tela todos os nomes de métodos de um objeto
-‘’‘</p>
-<p># Generator que conterá os nomes dos métodos por tuple comprehension
-metodos = (metodo for metodo in dir(objeto)  # Para cada item do objeto</p>
-<blockquote>
-<div><blockquote>
-<div><p>if (not is_dunder(metodo)) and  # se não for um dunder
-callable(getattr(objeto, metodo))  # e se for “chamável”</p>
-</div></blockquote>
-<p>)</p>
-</div></blockquote>
-<p># Loop para exibir os nomes dos métodos
-for i in metodos:</p>
-<blockquote>
-<div><p>print(i)</p>
-</div></blockquote>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Com o auxílio da função dir, listar todos os métodos do objeto</span>
+<span class="k">def</span> <span class="nf">is_dunder</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Função auxiliar que retorna True para dunder strings</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1"># Se começar e terminar com &quot;__&quot; retornar True</span>
+    <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Utilizando a função auxiliar criada criar uma nova função</span>
+<span class="k">def</span> <span class="nf">mostra_metodos</span><span class="p">(</span><span class="n">objeto</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Função que mostra em tela todos os nomes de métodos de um objeto</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1"># Generator que conterá os nomes dos métodos por tuple comprehension</span>
+    <span class="n">metodos</span> <span class="o">=</span> <span class="p">(</span><span class="n">metodo</span> <span class="k">for</span> <span class="n">metodo</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">objeto</span><span class="p">)</span>  <span class="c1"># Para cada item do objeto</span>
+    <span class="c1"># Se não for dunder e se for &quot;chamável&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">is_dunder</span><span class="p">(</span><span class="n">metodo</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">objeto</span><span class="p">,</span> <span class="n">metodo</span><span class="p">))</span>
+
+        <span class="c1"># Loop para exibir os nomes dos métodos</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">metodos</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Chamando a função criada para imprimir em tela os nomes dos métodos:</p>
 <p>&gt; mostra_metodos(p)</p>
 <p>dizer_nome

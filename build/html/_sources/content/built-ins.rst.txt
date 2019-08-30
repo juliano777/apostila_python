@@ -458,37 +458,36 @@ dir()
 
     'Chiquinho'
 
+.. code-block:: python
 
+    # Com o auxílio da função dir, listar todos os métodos do objeto
+    def is_dunder(s):
+        '''
+        Função auxiliar que retorna True para dunder strings
+        '''
 
-Com o auxílio de da função dir, listar todos os métodos do objeto:
+        # Se começar e terminar com "__" retornar True
+        if s.startswith('__') and s.endswith('__'):
+            return True
+        else:
+            return False
 
-> def is_dunder(s):  # Função que servirá para a função principal
-    '''
-    Função que retorna True para dunder strings
-    '''
+.. code-block:: python
 
-    # Se começar e terminar com "__" retornar True
-    if s.startswith('__') and s.endswith('__'):
-        return True
-    else:
-        return False
-   
+    # Utilizando a função auxiliar criada criar uma nova função
+    def mostra_metodos(objeto):
+        '''
+        Função que mostra em tela todos os nomes de métodos de um objeto
+        '''
 
-
-> def mostra_metodos(objeto):
-    '''
-    Função que mostra em tela todos os nomes de métodos de um objeto
-    '''
-
-    # Generator que conterá os nomes dos métodos por tuple comprehension
-    metodos = (metodo for metodo in dir(objeto)  # Para cada item do objeto
-               if (not is_dunder(metodo)) and  # se não for um dunder
-               callable(getattr(objeto, metodo))  # e se for "chamável"
-              )
-
-    # Loop para exibir os nomes dos métodos
-    for i in metodos:
-        print(i)
+        # Generator que conterá os nomes dos métodos por tuple comprehension
+        metodos = (metodo for metodo in dir(objeto)  # Para cada item do objeto
+        # Se não for dunder e se for "chamável"
+        if (not is_dunder(metodo)) and callable(getattr(objeto, metodo))
+            
+            # Loop para exibir os nomes dos métodos
+            for i in metodos:
+                print(i)
 
 
 
