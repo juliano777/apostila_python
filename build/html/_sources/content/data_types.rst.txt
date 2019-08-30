@@ -9,7 +9,10 @@ Tipos de Dados
 
 Criação de um objeto e verificando seu tipo:
 
-> x = 7
+.. code-block:: python
+
+    # 
+    x = 7
 
 > type(x)
 
