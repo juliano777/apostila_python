@@ -968,7 +968,9 @@ input
     # Imprimindo o valor da variável
     print(foo)
 
-. . .
+.. code-block:: console
+
+    . . .
 
 
 
