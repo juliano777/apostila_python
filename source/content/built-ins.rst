@@ -1004,9 +1004,15 @@ min e max
 
     -50
 
-> max(0, 2, -50, 7)  # Valor máximo entre inteiros
 
-7
+.. code-block:: python
+
+    # Valor máximo entre inteiros
+    max(0, 2, -50, 7)
+
+.. code-block:: console
+
+    7
 
 > max('c', 'x', 'k')  # Para caracteres a ordem alfabética é levada em conta
 
