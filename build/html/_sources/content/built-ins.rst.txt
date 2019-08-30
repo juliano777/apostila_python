@@ -414,12 +414,8 @@ dir()
 .. code-block:: python
 
     # Verificando o conteúdo da classe (atributos e métodos)
-    dir(Pessoa)
+     dir(Pessoa)
 
-
-.. code-block:: python
-
-    Pessoa.__dir__()
 
 .. code-block:: console
 
