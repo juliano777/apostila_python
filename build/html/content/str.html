@@ -764,29 +764,32 @@ de teste</p>
 <p>s += ‘ Sabbath’</p>
 <p>Id da nova variável:</p>
 <p>&gt; id(s)</p>
-<p>140159122296368</p>
-<blockquote>
-<div><p>Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140159122296368</span>
+
+<span class="go">Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.</span>
+</pre></div>
+</div>
 <p>Exibindo a string:</p>
 <p>&gt; print(s)</p>
-<p>Black Sabbath</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Black Sabbath</span>
+</pre></div>
+</div>
 <p>Concatenação de Strings em Loops</p>
 <p>Método 1 - Ineficaz</p>
 <p>Criação de uma string vazia:</p>
 <p>&gt; s = ‘’</p>
-<p>Loop de concatenação:</p>
+<p>Loop de concatenação</p>
 <dl class="simple">
 <dt>&gt; for i in range(50):</dt><dd><p>s += str(i)</p>
 </dd>
 </dl>
 <p>String pronta:</p>
 <p>&gt; s</p>
-<p>‘012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849’</p>
-<blockquote>
-<div><p>Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&#39;</span>
+</pre></div>
+</div>
+<p>Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
 Isso faz muita alocação de memória, o que torna o desempenho horrível para coisas maiores.</p>
-</div></blockquote>
 <p>Método 2 Eficaz</p>
 <p>Criação de uma lista vazia:</p>
 <p>&gt; s = []</p>
@@ -797,7 +800,9 @@ Isso faz muita alocação de memória, o que torna o desempenho horrível para c
 </dl>
 <p>Fazendo a junção de uma string vazia com a lista criada com seus elementos via método append:</p>
 <p>&gt; ‘’.join(s)</p>
-<p>012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&#39;</span>
+</pre></div>
+</div>
 <p>Criando uma string via método join da lista de mesmo nome:</p>
 <p>&gt; s = ‘’.join(s)</p>
 <p>Exibindo o valor da variável:</p>

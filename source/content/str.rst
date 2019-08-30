@@ -1019,18 +1019,20 @@ Id da nova variável:
 
 > id(s)
 
-140159122296368
+.. code-block:: console
 
-    Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.
+    140159122296368
 
+Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.
 
 
 Exibindo a string:
 
 > print(s)
 
-Black Sabbath
+.. code-block:: console
 
+    Black Sabbath
 
 
 Concatenação de Strings em Loops
@@ -1039,28 +1041,28 @@ Concatenação de Strings em Loops
 Método 1 - Ineficaz
 
 
-
 Criação de uma string vazia:
 
 > s = ''
 
 
 
-Loop de concatenação:
+Loop de concatenação
 
 > for i in range(50):
     s += str(i)
-
 
 
 String pronta:
 
 > s
 
-'012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
+.. code-block:: console
 
-	Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
-	Isso faz muita alocação de memória, o que torna o desempenho horrível para coisas maiores.
+    '012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
+
+Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
+Isso faz muita alocação de memória, o que torna o desempenho horrível para coisas maiores.
 
 
 
@@ -1072,27 +1074,24 @@ Criação de uma lista vazia:
 > s = []
 
 
-
 Loop de concatenação:
 
 > for i in range(50):
     s.append(str(i))
 
-
-
 Fazendo a junção de uma string vazia com a lista criada com seus elementos via método append:
 
 > ''.join(s)
 
-012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
+.. code-block:: console
+
+    012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
 
 
 
 Criando uma string via método join da lista de mesmo nome:
 
 > s = ''.join(s)
-
-
 
 Exibindo o valor da variável:
 
