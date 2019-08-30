@@ -46,21 +46,29 @@ Tipagem Dinâmica
 
     140291958334736
 
-> type(x)
+.. code-block:: python
+
+    # 
+    type(x)
 
 .. code-block:: console
 
     float
 
-> x = 'foo'
+.. code-block:: python
 
-> id(x)
+    # 
+    x = 'foo'
+    id(x)
 
 .. code-block:: console
 
     140292017787768
 
-> type(x)
+.. code-block:: python
+
+    # 
+    type(x)
 
 .. code-block:: console
 
