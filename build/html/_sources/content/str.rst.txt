@@ -205,9 +205,7 @@ Preco: R$ %(preco).2f
 Cód: %(cod)05d
 '''
 
-
-
-Declaraçãoi de um dicionário que conterá as chaves e valores desejados:
+Declaração de um dicionário que conterá as chaves e valores desejados:
 
 > d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
 
