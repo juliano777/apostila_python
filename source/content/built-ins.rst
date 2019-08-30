@@ -673,9 +673,14 @@ round()
 
     1200.0
 
-> round(1237.87431, -3)
+.. code-block:: python
 
-1000.0
+    # 
+    round(1237.87431, -3)
+
+.. code-block:: console
+
+    1000.0
 
 
 

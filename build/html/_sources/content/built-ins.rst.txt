@@ -664,9 +664,14 @@ round()
 
     1240.0
 
-> round(1237.87431, -2)
+.. code-block:: python
 
-1200.0
+    #
+    round(1237.87431, -2)
+
+.. code-block:: console
+
+    1200.0
 
 > round(1237.87431, -3)
 
