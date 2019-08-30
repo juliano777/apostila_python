@@ -601,10 +601,9 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 <span class="sd">    &#39;&#39;&#39;</span>
 
     <span class="c1"># Generator que conterá os nomes dos métodos por tuple comprehension</span>
-    <span class="n">dir_obj</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">objeto</span><span class="p">))</span>
-    <span class="n">metodos</span> <span class="o">=</span> <span class="p">(</span><span class="n">metodo</span> <span class="k">for</span> <span class="n">metodo</span> <span class="ow">in</span> <span class="n">dir_obj</span>
-               <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">objeto</span><span class="p">,</span> <span class="n">metodo</span><span class="p">))</span>
-               <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">is_dunder</span><span class="p">(</span><span class="n">metodo</span><span class="p">))</span>
+    <span class="n">metodos</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">objeto</span><span class="p">)</span>
+               <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">objeto</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+               <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">is_dunder</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
               <span class="p">)</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">metodos</span><span class="p">:</span>
