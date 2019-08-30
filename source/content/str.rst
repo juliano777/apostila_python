@@ -1098,7 +1098,9 @@ Exibindo o valor da variável:
 
 > s
 
-'012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
+.. code-block:: console
+
+    '012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
 
 
 	Foi criada uma lista de strings no loop em que a cada iteração é utilizado o método append da lista para adicionar o item atual.
@@ -1120,12 +1122,13 @@ Criação de uma lista:
 > foo = list('Python')
 
 
-
 Exibe a lista:
 
 > print(foo)
 
-['P', 'y', 't', 'h', 'o', 'n']
+.. code-block:: console
+
+    ['P', 'y', 't', 'h', 'o', 'n']
 
 
 
@@ -1134,13 +1137,13 @@ Criação de uma nova variável juntando os elementos da lista com uma string va
 > bar = ''.join(foo)
 
 
-
 Exibindo a nova string:
 
 > print(bar)
 
-Python
+.. code-block:: console
 
+    Python
 
 
 Criando uma tupla:
@@ -1148,12 +1151,13 @@ Criando uma tupla:
 > foo = tuple('Python')
 
 
-
 Exibindo os elementos da tupla:
 
 > print(foo)
 
-('P', 'y', 't', 'h', 'o', 'n')
+.. code-block:: console
+
+    ('P', 'y', 't', 'h', 'o', 'n')
 
 
 
@@ -1161,13 +1165,13 @@ Criação de uma nova variável juntando os elementos da tupla com uma string va
 
 > bar = ''.join(foo)
 
-
-
 Exibindo o valor da variável:
 
 > print(bar)
 
-Python
+.. code-block:: console
+
+    Python
 
 
 - find & index (diferença entre ambos)
@@ -1191,7 +1195,9 @@ A partir de qual posição aparece a string?:
 
 > foo.find('FreeBSD')
 
-7
+.. code-block:: console
+
+    7
 
     No exemplo dado o texto existe na string. E se não existisse?
 
@@ -1201,11 +1207,15 @@ Buscando um texto que não existe dentro da string:
 
 > foo.index('Linux')
 
-ValueError: substring not found
+.. code-block:: console
+
+    ValueError: substring not found
 
 > foo.find('Linux')
 
--1
+.. code-block:: console
+
+    -1
 
     Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.
     O -1 não deve ser confundido como último elemento.
@@ -1220,7 +1230,9 @@ Na frase em latim abaixo, quantas vezes aparece a letra "u"?:
 
 > 'sic mundus creatus est'.count('u')
 
-3
+.. code-block:: console
+
+    3
 
 
 
@@ -1228,4 +1240,6 @@ Quantas vezes aparece a sequência de caracteres "foo"?:
 
 > 'XXXfooXXXfooXXXbar'.count('foo')
 
-2
+.. code-block:: console
+
+    2
