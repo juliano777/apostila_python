@@ -323,8 +323,11 @@ linhas
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\f</span></code></p></td>
 <td><p>ASCII formfeed (FF)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">'foo\fbar'</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">foo</span></code>
-``    bar``</p></td>
+<td><dl class="simple">
+<dt><a href="#id1"><span class="problematic" id="id2">``</span></a>foo</dt><dd><p>bar``</p>
+</dd>
+</dl>
+</td>
 </tr>
 </tbody>
 </table>
@@ -389,7 +392,7 @@ Cód: %(cod)05d
 </pre></div>
 </div>
 <p>Exibindo o resultado via método format:</p>
-<p>&gt; print(foo.format(<a href="#id1"><span class="problematic" id="id2">**</span></a>d))</p>
+<p>&gt; print(foo.format(<a href="#id3"><span class="problematic" id="id4">**</span></a>d))</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Produto: Pente</span>
 <span class="go">Preco: R$ 3.50</span>
 <span class="go">Cód: 00157</span>
@@ -1039,7 +1042,7 @@ A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o 
 <p>Dada a seguinte string:</p>
 <p>&gt; foo = ‘Python FreeBSD PostgreSQL’</p>
 <p>Temos seus caracteres e suas respectivas posições:</p>
-<p>P|y|t|h|o|n| <a href="#id3"><span class="problematic" id="id4">|</span></a>F|r|e|e <a href="#id5"><span class="problematic" id="id6">|</span></a>B <a href="#id7"><span class="problematic" id="id8">|</span></a>S <a href="#id9"><span class="problematic" id="id10">|</span></a>D |  <a href="#id11"><span class="problematic" id="id12">|</span></a>P <a href="#id13"><span class="problematic" id="id14">|</span></a>o <a href="#id15"><span class="problematic" id="id16">|</span></a>s <a href="#id17"><span class="problematic" id="id18">|</span></a>t <a href="#id19"><span class="problematic" id="id20">|</span></a>g <a href="#id21"><span class="problematic" id="id22">|</span></a>r <a href="#id23"><span class="problematic" id="id24">|</span></a>e <a href="#id25"><span class="problematic" id="id26">|</span></a>S <a href="#id27"><span class="problematic" id="id28">|</span></a>Q <a href="#id29"><span class="problematic" id="id30">|</span></a>L
+<p>P|y|t|h|o|n| <a href="#id5"><span class="problematic" id="id6">|</span></a>F|r|e|e <a href="#id7"><span class="problematic" id="id8">|</span></a>B <a href="#id9"><span class="problematic" id="id10">|</span></a>S <a href="#id11"><span class="problematic" id="id12">|</span></a>D |  <a href="#id13"><span class="problematic" id="id14">|</span></a>P <a href="#id15"><span class="problematic" id="id16">|</span></a>o <a href="#id17"><span class="problematic" id="id18">|</span></a>s <a href="#id19"><span class="problematic" id="id20">|</span></a>t <a href="#id21"><span class="problematic" id="id22">|</span></a>g <a href="#id23"><span class="problematic" id="id24">|</span></a>r <a href="#id25"><span class="problematic" id="id26">|</span></a>e <a href="#id27"><span class="problematic" id="id28">|</span></a>S <a href="#id29"><span class="problematic" id="id30">|</span></a>Q <a href="#id31"><span class="problematic" id="id32">|</span></a>L
 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24</p>
 <p>A partir de qual posição aparece a string?:</p>
 <p>&gt; foo.index(‘FreeBSD’)</p>
