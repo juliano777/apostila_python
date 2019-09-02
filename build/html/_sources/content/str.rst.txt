@@ -119,36 +119,36 @@ Caracteres Especiais
 +======================+=======================================================+=========================+=============+
 | ``\\``               | Imprime uma contrabarra                               | ``'\\ \\'``             | ``\\``      |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \'                   | Imprime um apóstrofo                                  | '\''                    | '           |
+| ``\'``               | Imprime um apóstrofo                                  | ``'\''``                    | '           |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \"                   | Imprime uma aspa                                      | '\"'                    | "           |
+| ``\"``               | Imprime uma aspa                                      | ``'\"'``                    | "           |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \a                   | ASCII bell (beep)                                     | '\a'                    |             |
+| ``\a``               | ASCII bell (beep)                                     | ``'\a'``                    |             |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \b                   | ASCII backspace (BS) remove o caractere anterior      | 'Casas\\b '             | Casa        |
+| ``\b``               | ASCII backspace (BS) remove o caractere anterior      | ``'Casas\b'``             | Casa        |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \f                   | ASCII formfeed (FF)                                   | 'foo\fbar'              | foo         |
+| ``\f``               | ASCII formfeed (FF)                                   | ``'foo\fbar'``              | foo         |
 |                      |                                                       |                         |        bar  |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \n                   | ASCII linefeed (LF)                                   | 'foo\nbar'              | foo
+| ``\n``               | ASCII linefeed (LF)                                   | ``'foo\nbar'``              | foo
 bar     |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \N{name}             | Imprime um caractere da base de dados Unicode         | '\N{DAGGER}'            | †           |
+| ``\N{name}``             | Imprime um caractere da base de dados Unicode         | ``'\N{DAGGER}'``            | †           |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \r                   | ASCII carriage return (CR)                            | 'foo\rbar'              | bar         |
+| ``\r``                   | ASCII carriage return (CR)                            | ``'foo\rbar'``              | bar         |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \t                   | ASCII horizontal tab (TAB) Imprime TAB                | 'foo\tbar'              | foo    bar  |
+| ``\t``                   | ASCII horizontal tab (TAB) Imprime TAB                | ``'foo\tbar'``              | foo    bar  |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \v                   | ASCII vertical tab (VT)                               | 'foo\vbar'              | foo
+| ``\v``                   | ASCII vertical tab (VT)                               | ``'foo\vbar'``              | foo
    bar  |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \uxxxx               | Imprime 16-bit valor hexadecimal de caractere Unicode | '\u041b'                | Л           |
+| ``\uxxxx``               | Imprime 16-bit valor hexadecimal de caractere Unicode | ``'\u041b'``                | Л           |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \Uxxxxxxxx           | Imprime 32-bit valor hexadecimal de caractere Unicode | '\U000001a9'            | Ʃ           |
+| ``\Uxxxxxxxx``           | Imprime 32-bit valor hexadecimal de caractere Unicode | ``'\U000001a9'``            | Ʃ           |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \ooo                 | Imprime o character baseado em seu valor octal        | '\077'                  | ?           |
+| ``\ooo``                 | Imprime o character baseado em seu valor octal        | ``'\077'``                  | ?           |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
-| \xhh                 | Imprime o character baseado em seu valor hexadecimal  | '1\xaa'                 | 1ª          |
+| ``\xhh``                 | Imprime o character baseado em seu valor hexadecimal  | ``'1\xaa'``                 | 1ª          |
 +----------------------+-------------------------------------------------------+-------------------------+-------------+
 
 
