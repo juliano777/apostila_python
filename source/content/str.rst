@@ -579,9 +579,10 @@ Tipos de Strings em Python
 
 
 
-Como unicode é padrão, podemos omitir o prefixo:
+.. code-block:: python
 
-> print(u'Foo' == 'Foo')
+    # Como unicode é padrão, podemos omitir o prefixo
+    print(u'Foo' == 'Foo')
 
 .. code-block:: console
 
