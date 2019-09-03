@@ -476,11 +476,11 @@ Representações de Inteiros
 
     '7'
 
+.. code-block:: python
 
-
-Para representação exponencial pode-se utilizar tanto "e" ou "E", cuja precisão padrão é 6:
-
-> format(1000, '.3e')
+    # Para representação exponencial pode-se utilizar tanto "e" ou "E",
+    # cuja precisão padrão é 6
+    format(1000, '.3e')
 
 .. code-block:: console
 
