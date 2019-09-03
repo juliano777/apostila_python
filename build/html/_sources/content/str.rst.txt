@@ -265,19 +265,18 @@ ou
     Preco: R$ 3.50
     Cód: 00157
 
+.. code-block:: python
 
-
-String com índice posicional:
-
-> 'O {1} {2} quando é {0}.'.format('compartilhado', 'conhecimento', 'aumenta')
+    # String com índice posicional
+    'O {1} {2} quando é {0}.'.format('compartilhado', 'conhecimento', 'aumenta')
 
 .. code-block:: console
 
     'O Conhecimento aumenta quando se compartilhado'
 
 
-
 Métodos String e de Representação
+---------------------------------
 
     Em objetos temos os dunders str e repr ("__str__" e "__repr__") que podem ser usados em uma string.
 
