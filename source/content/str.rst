@@ -640,8 +640,8 @@ O método encode, utilizando a codificação UTF-8 faz a codificação de cada c
 
 As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
-``\xc3\xa3 -> ã``
-``\xc3\xa7 -> ç``
+| ``\xc3\xa3 -> ã``
+| ``\xc3\xa7 -> ç``
 
 
 
