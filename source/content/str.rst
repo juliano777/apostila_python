@@ -113,8 +113,6 @@ Utilizando parênteses para um string longa sem quebrar linha:
 Caracteres Especiais
 --------------------
 
-
-
 +----------------+-------------------------------------------------------+------------------+-----------------------+
 | | Sequência    | Descrição                                             | | Exemplo        | Saída                 |
 | | de Escape    |                                                       | | (print)        |                       |
