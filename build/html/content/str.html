@@ -1257,10 +1257,15 @@ Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ o
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">139876439773904</span>
 </pre></div>
 </div>
-<p>Criação de uma string com o mesmo nome da anterior utilizando concatenação e slice:</p>
-<p>&gt; foo = ‘B’ + foo[1:]</p>
-<p>Verificando o Id da variável:</p>
-<p>&gt; id(foo)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma string com o mesmo nome da anterior</span>
+<span class="c1"># utilizando concatenação e slice</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;B&#39;</span> <span class="o">+</span> <span class="n">foo</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando o Id da variável</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140159122071800</span>
 </pre></div>
 </div>

@@ -1170,16 +1170,16 @@ Imutabilidade
 
     139876439773904
 
+.. code-block:: python
 
+    # Criação de uma string com o mesmo nome da anterior
+    # utilizando concatenação e slice
+    foo = 'B' + foo[1:]
 
-Criação de uma string com o mesmo nome da anterior utilizando concatenação e slice:
+.. code-block:: python
 
-> foo = 'B' + foo[1:]
-
-
-Verificando o Id da variável:
-
-> id(foo)
+    # Verificando o Id da variável
+    id(foo)
 
 .. code-block:: console
 
