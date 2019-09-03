@@ -47,7 +47,10 @@ Dois exemplos com print de strings com aspas e apóstrofos dentro:
 
     Uma string que contém "aspas" em si
 
-> print("Uma string que contém 'apóstrofos' em si")
+.. code-block:: python
+
+    # 
+    print("Uma string que contém 'apóstrofos' em si")
 
 .. code-block:: console
 
