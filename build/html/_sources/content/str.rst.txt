@@ -1332,15 +1332,13 @@ Métodos de Strings
 
     Python
 
+.. code-block:: python
 
-Criando uma tupla:
+    # Criando uma tupla
+    foo = tuple('Python')
 
-> foo = tuple('Python')
-
-
-Exibindo os elementos da tupla:
-
-> print(foo)
+    # Exibindo os elementos da tupla
+    print(foo)
 
 .. code-block:: console
 
