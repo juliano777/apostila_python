@@ -94,16 +94,17 @@
 <li class="toctree-l2"><a class="reference internal" href="#caracteres-especiais">5.4. Caracteres Especiais</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#formatacao">5.5. Formatação</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#metodos-string-e-de-representacao">5.6. Métodos String e de Representação</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#representacoes-de-inteiros">5.7. Representações de Inteiros</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tipos-de-strings-em-python">5.8. Tipos de Strings em Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bytes-b">5.8.1. Bytes (b)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#format-strings">5.8.2. Format Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preenchimento-padding-e-alinhamento-de-strings">5.7. Preenchimento (padding) e Alinhamento de Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#representacoes-de-inteiros">5.8. Representações de Inteiros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-de-strings-em-python">5.9. Tipos de Strings em Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bytes-b">5.9.1. Bytes (b)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#format-strings">5.9.2. Format Strings</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.9. Operações de Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#docstrings">5.10. Docstrings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#imutabilidade">5.11. Imutabilidade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#metodos-de-strings">5.12. Métodos de Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.10. Operações de Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docstrings">5.11. Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imutabilidade">5.12. Imutabilidade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-de-strings">5.13. Métodos de Strings</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
@@ -555,7 +556,9 @@ Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), p
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O&#39;</span>
 </pre></div>
 </div>
-<p>Preenchimento (padding) e Alinhamento de Strings</p>
+</div>
+<div class="section" id="preenchimento-padding-e-alinhamento-de-strings">
+<h2>5.7. Preenchimento (padding) e Alinhamento de Strings<a class="headerlink" href="#preenchimento-padding-e-alinhamento-de-strings" title="Link permanente para este título">¶</a></h2>
 <p>Alinhamento à direita dentro de 7 colunas:</p>
 <p>&gt; ‘%7s’ % ‘foo’</p>
 <p>&gt; ‘{:&gt;7}’.format(‘foo’)</p>
@@ -600,7 +603,7 @@ Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), p
 </div>
 </div>
 <div class="section" id="representacoes-de-inteiros">
-<h2>5.7. Representações de Inteiros<a class="headerlink" href="#representacoes-de-inteiros" title="Link permanente para este título">¶</a></h2>
+<h2>5.8. Representações de Inteiros<a class="headerlink" href="#representacoes-de-inteiros" title="Link permanente para este título">¶</a></h2>
 <ol class="loweralpha simple" start="2">
 <li><p>Formato binário; número de saída na base 2:</p></li>
 </ol>
@@ -699,7 +702,7 @@ Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), p
 </div>
 </div>
 <div class="section" id="tipos-de-strings-em-python">
-<h2>5.8. Tipos de Strings em Python<a class="headerlink" href="#tipos-de-strings-em-python" title="Link permanente para este título">¶</a></h2>
+<h2>5.9. Tipos de Strings em Python<a class="headerlink" href="#tipos-de-strings-em-python" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Em Python temos algumas variações de strings, cada qual é designada por um prefixo, que é uma letra que representa o tipo de string e por omissão é unicode.
 Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r” raw e “u” unicode.</p>
@@ -710,7 +713,7 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </pre></div>
 </div>
 <div class="section" id="bytes-b">
-<h3>5.8.1. Bytes (b)<a class="headerlink" href="#bytes-b" title="Link permanente para este título">¶</a></h3>
+<h3>5.9.1. Bytes (b)<a class="headerlink" href="#bytes-b" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>Strings de bytes utilizam o prefixo “b” e quando contém caracteres especiais, esses são representados pelo código hexadecimal da codificação utilizada.</p>
 </div></blockquote>
@@ -800,7 +803,7 @@ xc3xa7 -&gt; ç</p>
 </div>
 </div>
 <div class="section" id="format-strings">
-<h3>5.8.2. Format Strings<a class="headerlink" href="#format-strings" title="Link permanente para este título">¶</a></h3>
+<h3>5.9.2. Format Strings<a class="headerlink" href="#format-strings" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>Ou também conhecidas como “f strings” foi um recurso adicionado à versão 3.6 de Python.</p>
 </div></blockquote>
@@ -907,7 +910,7 @@ f’Cor: {cor}’)</p>
 </div>
 </div>
 <div class="section" id="operacoes-de-strings">
-<h2>5.9. Operações de Strings<a class="headerlink" href="#operacoes-de-strings" title="Link permanente para este título">¶</a></h2>
+<h2>5.10. Operações de Strings<a class="headerlink" href="#operacoes-de-strings" title="Link permanente para este título">¶</a></h2>
 <p>Concatenação:</p>
 <p>&gt; print(“Curso” + ” de ” + “Python”)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Curso de Python</span>
@@ -967,7 +970,7 @@ f’Cor: {cor}’)</p>
 </div>
 </div>
 <div class="section" id="docstrings">
-<h2>5.10. Docstrings<a class="headerlink" href="#docstrings" title="Link permanente para este título">¶</a></h2>
+<h2>5.11. Docstrings<a class="headerlink" href="#docstrings" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>São strings que vêm logo após a definição de uma função, de um método ou de uma classe.
 É muito útil para fins de documentação.
@@ -1035,7 +1038,7 @@ de teste
 </div>
 </div>
 <div class="section" id="imutabilidade">
-<h2>5.11. Imutabilidade<a class="headerlink" href="#imutabilidade" title="Link permanente para este título">¶</a></h2>
+<h2>5.12. Imutabilidade<a class="headerlink" href="#imutabilidade" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Strings em Python são imutáveis.</p>
 </div></blockquote>
@@ -1130,7 +1133,7 @@ No final é utilizado o método de string join que utiliza como separador uma st
 A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.</p>
 </div>
 <div class="section" id="metodos-de-strings">
-<h2>5.12. Métodos de Strings<a class="headerlink" href="#metodos-de-strings" title="Link permanente para este título">¶</a></h2>
+<h2>5.13. Métodos de Strings<a class="headerlink" href="#metodos-de-strings" title="Link permanente para este título">¶</a></h2>
 <ul class="simple">
 <li><p>join; junta elementos de uma lista ou tupla utlizando uma string.</p></li>
 </ul>

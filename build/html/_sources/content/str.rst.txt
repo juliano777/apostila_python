@@ -310,9 +310,8 @@ Métodos String e de Representação
 
     'REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O'
 
-
-
 Preenchimento (padding) e Alinhamento de Strings
+------------------------------------------------
 
 
 
