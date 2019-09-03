@@ -904,7 +904,7 @@ Unicode Strings (u)
 
     True
 
-    Das duas strings, somente a primeira tem o sufixo "u".
+Das duas strings, somente a primeira tem o sufixo "u".
 
 Operações de Strings
 --------------------
