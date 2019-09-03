@@ -493,12 +493,14 @@ Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), p
 <span class="s1">      Preco: R$ </span><span class="si">%(preco).2f</span><span class="s1"></span>
 <span class="s1">      Cód: </span><span class="si">%(cod)05d</span><span class="s1"></span>
 <span class="s1">      &#39;&#39;&#39;</span>
-<span class="c1"># Declaração de um dicionário que conterá as chaves e valores desejados:</span>
+
+<span class="c1"># Declaração de um dicionário que conterá as chaves e valores desejados</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;prod&#39;</span><span class="p">:</span> <span class="s1">&#39;Pente&#39;</span><span class="p">,</span> <span class="s1">&#39;preco&#39;</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s1">&#39;cod&#39;</span><span class="p">:</span> <span class="mi">157</span><span class="p">}</span>
+
+<span class="c1"># Exibindo o resultado via interpolação</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span> <span class="o">%</span> <span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>&gt; d = {‘prod’: ‘Pente’, ‘preco’: 3.5, ‘cod’: 157}</p>
-<p>Exibindo o resultado via interpolação:</p>
-<p>&gt; print(foo % d)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Produto: Pente</span>
 <span class="go">Preco: R$ 3.50</span>
 <span class="go">Cód: 00157</span>

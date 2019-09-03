@@ -241,13 +241,12 @@ ou
           Preco: R$ %(preco).2f
           Cód: %(cod)05d
           '''
-    # Declaração de um dicionário que conterá as chaves e valores desejados:
 
-> d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
+    # Declaração de um dicionário que conterá as chaves e valores desejados
+    d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
 
-Exibindo o resultado via interpolação:
-
-> print(foo % d)
+    # Exibindo o resultado via interpolação
+    print(foo % d)
 
 .. code-block:: console
 
