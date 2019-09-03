@@ -798,21 +798,25 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;Sem caracteres especiais&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(sb2)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sb2</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;Macarr\xc3\xa3o&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(sb3)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sb3</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;A\xc3\xa7\xc3\xa3o&#39;</span>
 </pre></div>
 </div>
 <p>As strings que tinham caracteres especiais ficaram um tanto “estranhas”…</p>
-<p>xc3xa3 -&gt; ã
-xc3xa7 -&gt; ç</p>
+<div class="line-block">
+<div class="line">xc3xa3 -&gt; ã</div>
+<div class="line">xc3xa7 -&gt; ç</div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conversão de bytes</span>
 <span class="k">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xc3\xa3</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
 </pre></div>
@@ -820,30 +824,45 @@ xc3xa7 -&gt; ç</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ã</span>
 </pre></div>
 </div>
-<p>&gt; print(b’xc3xa7’.decode(‘utf-8’))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xc3\xa7</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ç</span>
 </pre></div>
 </div>
-<p>A letra grega sigma é considerada como um caractere especial:</p>
-<p>&gt; print(‘∑’.encode(‘utf-8’))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># A letra grega sigma é considerada como um caractere especial</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;∑&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;\xe2\x88\x91&#39;</span>
 </pre></div>
 </div>
-<p>Caminho reverso:</p>
-<p>&gt; print(b’xe2x88x91’.decode(‘utf-8’))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Caminho reverso</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xe2\x88\x91</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">∑</span>
 </pre></div>
 </div>
-<p>A partir das strings de bytes obter o texto:</p>
-<p>&gt; print(sb1.decode(‘utf-8’))</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Sem caracteres especiais</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># A partir das strings de bytes obter o texto</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sb1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>&gt; print(sb2.decode(‘utf-8’))</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sem caracteres especiais</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sb2</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Macarrão</span>
 </pre></div>
 </div>
-<p>&gt; print(sb3.decode(‘utf-8’))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sb3</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Ação</span>
 </pre></div>
 </div>

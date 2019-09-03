@@ -621,7 +621,8 @@ O método encode, utilizando a codificação UTF-8 faz a codificação de cada c
 
 .. code-block:: python
 
-    # print(sb2)
+    #
+    print(sb2)
 
 .. code-block:: console
 
@@ -630,7 +631,8 @@ O método encode, utilizando a codificação UTF-8 faz a codificação de cada c
 
 .. code-block:: python
 
-    # print(sb3)
+    #
+    print(sb3)
 
 .. code-block:: console
 
@@ -638,8 +640,8 @@ O método encode, utilizando a codificação UTF-8 faz a codificação de cada c
 
 As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
-\xc3\xa3 -> ã
-\xc3\xa7 -> ç
+| \xc3\xa3 -> ã
+| \xc3\xa7 -> ç
 
 
 
@@ -652,49 +654,54 @@ As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
     ã
 
-> print(b'\xc3\xa7'.decode('utf-8'))
+.. code-block:: python
+
+    #
+    print(b'\xc3\xa7'.decode('utf-8'))
 
 .. code-block:: console
 
     ç
 
+.. code-block:: python
 
-
-A letra grega sigma é considerada como um caractere especial:
-
-> print('∑'.encode('utf-8'))
+    # A letra grega sigma é considerada como um caractere especial
+    print('∑'.encode('utf-8'))
 
 .. code-block:: console
 
     b'\xe2\x88\x91'
 
+.. code-block:: python
 
-
-Caminho reverso:
-
-> print(b'\xe2\x88\x91'.decode('utf-8'))
+    # Caminho reverso
+    print(b'\xe2\x88\x91'.decode('utf-8'))
 
 .. code-block:: console
 
     ∑
 
+.. code-block:: python
 
-
-A partir das strings de bytes obter o texto:
-
-> print(sb1.decode('utf-8'))
+    # A partir das strings de bytes obter o texto
+    print(sb1.decode('utf-8'))
 
 .. code-block:: console
 
-    Sem caracteres especiais
+.. code-block:: python
 
-> print(sb2.decode('utf-8'))
+    # Sem caracteres especiais
+    print(sb2.decode('utf-8'))
 
 .. code-block:: console
 
     Macarrão
 
-> print(sb3.decode('utf-8'))
+
+.. code-block:: python
+
+    #
+    print(sb3.decode('utf-8'))
 
 .. code-block:: console
 
