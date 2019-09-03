@@ -1345,27 +1345,26 @@ Métodos de Strings
     ('P', 'y', 't', 'h', 'o', 'n')
 
 
+.. code-block:: python
 
-Criação de uma nova variável juntando os elementos da tupla com uma string vazia:
+    # Criação de uma nova variável juntando os elementos
+    # da tupla com uma string vazia
+    bar = ''.join(foo)
 
-> bar = ''.join(foo)
-
-Exibindo o valor da variável:
-
-> print(bar)
+    # Exibindo o valor da variável
+    print(bar)
 
 .. code-block:: console
 
     Python
 
 
-- find & index (diferença entre ambos)
+- find & index - Qual é a diferença entre eles?
 
+.. code-block:: python
 
-
-Dada a seguinte string:
-
-> foo = 'Python FreeBSD PostgreSQL'
+    # Dada a seguinte string
+    foo = 'Python FreeBSD PostgreSQL'
 
 Temos seus caracteres e suas respectivas posições:
 
