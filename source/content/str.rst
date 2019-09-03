@@ -300,13 +300,11 @@ Métodos String e de Representação
 
     'STRING REPRESENTAÇÃO'
 
+.. code-block:: python
 
-
-Método de representação e em caracteres ASCII:
-
-> '%r %a' % (Foo(), Foo())
-
-> '{0!r} {0!a}'.format(Foo())
+    # Método de representação e em caracteres ASCII
+    '%r %a' % (Foo(), Foo())  # interpolação
+    '{0!r} {0!a}'.format(Foo())  # format
 
 .. code-block:: console
 

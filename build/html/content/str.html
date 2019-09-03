@@ -547,9 +547,11 @@ Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), p
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;STRING REPRESENTAÇÃO&#39;</span>
 </pre></div>
 </div>
-<p>Método de representação e em caracteres ASCII:</p>
-<p>&gt; ‘%r %a’ % (Foo(), Foo())</p>
-<p>&gt; ‘{0!r} {0!a}’.format(Foo())</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método de representação e em caracteres ASCII</span>
+<span class="s1">&#39;</span><span class="si">%r</span><span class="s1"> %a&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">Foo</span><span class="p">(),</span> <span class="n">Foo</span><span class="p">())</span>  <span class="c1"># interpolação</span>
+<span class="s1">&#39;{0!r} {0!a}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Foo</span><span class="p">())</span>  <span class="c1"># format</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O&#39;</span>
 </pre></div>
 </div>
