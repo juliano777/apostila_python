@@ -963,18 +963,23 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat 147 / azul / 1985</span>
 </pre></div>
 </div>
-<p>Print do método __repr__ do objeto:</p>
-<p>&gt; print(f’{c!r}’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print do método __repr__ do objeto</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{c!r}&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat 147 | azul | 1985</span>
 </pre></div>
 </div>
-<p>f string de múltiplas linhas:</p>
-<dl class="simple">
-<dt>&gt; msg = f’Marca: {marca}n’</dt><dd><p>f’Modelo: {modelo}n’f’Ano: {ano}n’f’Cor: {cor}’</p>
-</dd>
-</dl>
-<p>Exibir a mensagem:</p>
-<p>&gt; print(msg)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># f string de múltiplas linhas</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;Marca: {marca}</span><span class="se">\n</span><span class="s1">&#39;</span>\
+    <span class="n">f</span><span class="s1">&#39;Modelo: {modelo}</span><span class="se">\n</span><span class="s1">&#39;</span>\
+    <span class="n">f</span><span class="s1">&#39;Ano: {ano}</span><span class="se">\n</span><span class="s1">&#39;</span>\
+    <span class="n">f</span><span class="s1">&#39;Cor: {cor}&#39;</span>
+
+<span class="c1"># Exibir a mensagem</span>
+<span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Marca: Fiat</span>
 <span class="go">Modelo: 147</span>
 <span class="go">Ano: 1985</span>

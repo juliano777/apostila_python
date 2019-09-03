@@ -830,29 +830,25 @@ Format Strings
     Fiat 147 / azul / 1985
 
 
+.. code-block:: python
 
-Print do método __repr__ do objeto:
-
-> print(f'{c!r}')
+    # Print do método __repr__ do objeto
+    print(f'{c!r}')
 
 .. code-block:: console
 
     Fiat 147 | azul | 1985
 
+.. code-block:: python
 
-
-f string de múltiplas linhas:
-
-> msg = f'Marca: {marca}\n'\
+    # f string de múltiplas linhas
+    msg = f'Marca: {marca}\n'\
         f'Modelo: {modelo}\n'\
         f'Ano: {ano}\n'\
         f'Cor: {cor}'
 
-
-
-Exibir a mensagem:
-
-> print(msg)
+    # Exibir a mensagem
+    print(msg)
 
 .. code-block:: console
 
