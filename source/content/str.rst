@@ -1196,23 +1196,22 @@ Nota-se que o Id é diferente, pois agora é outro objeto.
 
     Bar
 
+.. code-block:: python
 
+    # Criação de uma nova string
+    s = 'Black'
 
-Criação de uma nova string:
-
-> s = 'Black'
-
-Id da string:
-
-> id(s)
+    # Id da string
+     id(s)
 
 .. code-block:: console
 
     140159159537600
 
+.. code-block:: python
 
-
-Criando uma nova string com o mesmo nome da anterior via concatenação:
+    # Criando uma nova string com o mesmo nome 
+    # da anterior via concatenação
 
 s += ' Sabbath'
 
