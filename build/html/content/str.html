@@ -791,24 +791,32 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </pre></div>
 </div>
 <p>O método encode, utilizando a codificação UTF-8 faz a codificação de cada caractere para bytes.</p>
-<p>Exibir o conteúdo das strings de bytes:</p>
-<p>&gt; print(sb1)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibir o conteúdo das strings de bytes</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sb1</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;Sem caracteres especiais&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(sb2)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(sb2)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;Macarr\xc3\xa3o&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(sb3)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(sb3)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;A\xc3\xa7\xc3\xa3o&#39;</span>
 </pre></div>
 </div>
 <p>As strings que tinham caracteres especiais ficaram um tanto “estranhas”…</p>
 <p>xc3xa3 -&gt; ã
 xc3xa7 -&gt; ç</p>
-<p>Conversão de bytes:</p>
-<p>&gt; print(b’xc3xa3’.decode(‘utf-8’))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conversão de bytes</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xc3\xa3</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ã</span>
 </pre></div>
 </div>

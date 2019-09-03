@@ -610,24 +610,27 @@ Bytes (b)
 
 O método encode, utilizando a codificação UTF-8 faz a codificação de cada caractere para bytes.
 
+.. code-block:: python
 
-
-Exibir o conteúdo das strings de bytes:
-
-> print(sb1)
+    # Exibir o conteúdo das strings de bytes
+    print(sb1)
 
 .. code-block:: console
 
     b'Sem caracteres especiais'
 
-> print(sb2)
+.. code-block:: python
+
+    # print(sb2)
 
 .. code-block:: console
 
     b'Macarr\xc3\xa3o'
 
 
-> print(sb3)
+.. code-block:: python
+
+    # print(sb3)
 
 .. code-block:: console
 
@@ -640,9 +643,10 @@ As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
 
 
-Conversão de bytes:
+.. code-block:: python
 
-> print(b'\xc3\xa3'.decode('utf-8'))
+    # Conversão de bytes
+    print(b'\xc3\xa3'.decode('utf-8'))
 
 .. code-block:: console
 
