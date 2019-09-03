@@ -508,7 +508,10 @@ Representações de Inteiros
 
     '   1000.00'
 
-> format(1000, 'F')
+.. code-block:: python
+
+    # 
+    format(1000, 'F')
 
 .. code-block:: console
 
