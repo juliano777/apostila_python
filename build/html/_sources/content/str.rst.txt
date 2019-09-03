@@ -1409,20 +1409,19 @@ O -1 não deve ser confundido como último elemento.
 
 - count
 
+.. code-block:: python
 
-Na frase em latim abaixo, quantas vezes aparece a letra "u"?:
-
-> 'sic mundus creatus est'.count('u')
+    # Na frase em latim abaixo, quantas vezes aparece a letra "u"?
+    'sic mundus creatus est'.count('u')
 
 .. code-block:: console
 
     3
 
+.. code-block:: python
 
-
-Quantas vezes aparece a sequência de caracteres "foo"?:
-
-> 'XXXfooXXXfooXXXbar'.count('foo')
+    # Quantas vezes aparece a sequência de caracteres "foo"?
+    'XXXfooXXXfooXXXbar'.count('foo')
 
 .. code-block:: console
 

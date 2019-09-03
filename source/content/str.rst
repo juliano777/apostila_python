@@ -1418,11 +1418,10 @@ O -1 não deve ser confundido como último elemento.
 
     3
 
+.. code-block:: python
 
-
-Quantas vezes aparece a sequência de caracteres "foo"?:
-
-> 'XXXfooXXXfooXXXbar'.count('foo')
+    # Quantas vezes aparece a sequência de caracteres "foo"?
+    'XXXfooXXXfooXXXbar'.count('foo')
 
 .. code-block:: console
 
