@@ -68,22 +68,22 @@ Dois exemplos com print de strings com aspas e apóstrofos dentro:
 .. code-block:: console
 
     SELECT * FROM tb_musica WHERE artista = 'Mozart';
-    
+
 
 Strings de Múltiplas Linhas
 ---------------------------
 
-    
+É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas.
 
-É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas:
+.. code-block:: python
 
-> s1 = '''
-Um 
-exemplo
-de string
-de várias 
-linhas
-'''
+    # s1 = '''
+    Um 
+    exemplo
+    de string
+    de várias
+    linhas
+    '''
 
 > s2 = """
 Um 
