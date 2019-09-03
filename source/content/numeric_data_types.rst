@@ -220,42 +220,62 @@ Verificando seu valor e seu tipo:
 
 complex
 
+.. code-block:: python
 
+    # Novo valor do número complexo com parte real e imaginária
+	c = complex(5, 3)
 
-Novo valor do número complexo com parte real e imaginária:
+.. code-block:: python
 
-> c = complex(5, 3)
-
-> c  # Verificando o valor
+    # 
+	c  # Verificando o valor
 
 (5+3j)
 
 
+.. code-block:: python
 
-Número complexo somente com a parte imaginária:
+    # Número complexo somente com a parte imaginária
+	c = complex(0, 3)
 
-> c = complex(0, 3)
+.. code-block:: python
 
-> c  # Verificando seu valor
+    # 
+	c  # Verificando seu valor
 
 3j
 
-> c.imag  # Extraindo somente a parte imaginária
+.. code-block:: python
+
+    # 
+	c.imag  # Extraindo somente a parte imaginária
 
 3.0
 
-> c.real  # Extraindo somente a parte real
+.. code-block:: python
+
+    # 
+	c.real  # Extraindo somente a parte real
 
 0.0
 
-> c + 1  # Somando o número com a parte real
+.. code-block:: python
+
+    # 
+	c + 1  # Somando o número com a parte real
 
 (1+3j)
 
-> c + complex('7j')  # Somando o número com a parte imaginária
+.. code-block:: python
+
+    # 
+	c + complex('7j')  # Somando o número com a parte imaginária
 
 10j
 
-> c + complex(2, 17)  # somando o número complexo com outro complexo
+.. code-block:: python
+
+    # 
+	c + complex(2, 17)  # somando o número complexo com outro complexo
 
 (2+20j)
