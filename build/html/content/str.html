@@ -103,7 +103,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#unicode-strings-u">5.9.4. Unicode Strings (u)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.10. Operações de Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.10. Operações de Strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#concatenacao">5.10.1. Concatenação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiplicacao">5.10.2. Multiplicação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#split">5.10.3. Split</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#docstrings">5.11. Docstrings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#imutabilidade">5.12. Imutabilidade</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#metodos-de-strings">5.13. Métodos de Strings</a></li>
@@ -1033,26 +1038,48 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </div>
 <div class="section" id="operacoes-de-strings">
 <h2>5.10. Operações de Strings<a class="headerlink" href="#operacoes-de-strings" title="Link permanente para este título">¶</a></h2>
-<p>Concatenação:</p>
-<p>&gt; print(“Curso” + ” de ” + “Python”)</p>
+<div class="section" id="concatenacao">
+<h3>5.10.1. Concatenação<a class="headerlink" href="#concatenacao" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso&quot;</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="s2">&quot;Python&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Curso de Python</span>
 </pre></div>
 </div>
-<p>&gt; spam = “Curso”.__add__(” de “.__add__(“Python”))</p>
-<p>&gt; print(spam)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">spam</span> <span class="o">=</span> <span class="s2">&quot;Curso&quot;</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="s2">&quot; de &quot;</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">))</span>
+
+<span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="n">spam</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Curso de Python</span>
 </pre></div>
 </div>
-<p>Multiplicação:</p>
-<p>&gt; print(‘&lt;’ + ‘Python’ * 3 + ‘&gt;’)</p>
+</div>
+<div class="section" id="multiplicacao">
+<h3>5.10.2. Multiplicação<a class="headerlink" href="#multiplicacao" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;&#39;</span> <span class="o">+</span> <span class="s1">&#39;Python&#39;</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;PythonPythonPython&gt;</span>
 </pre></div>
 </div>
-<p>&gt; print(‘&lt;’ + ‘Python’.__mul__(3) + ‘&gt;’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;&#39;</span> <span class="o">+</span> <span class="s1">&#39;Python&#39;</span><span class="o">.</span><span class="fm">__mul__</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;PythonPythonPython&gt;&#39;</span>
 </pre></div>
 </div>
-<p>Split - Quebra a string em palavras formando uma lista:</p>
+</div>
+<div class="section" id="split">
+<h3>5.10.3. Split<a class="headerlink" href="#split" title="Link permanente para este título">¶</a></h3>
+<blockquote>
+<div><p>Quebra a string em palavras formando uma lista.</p>
+</div></blockquote>
 <p>&gt; print(‘Curso de Python’.split())</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;Curso&#39;, &#39;de&#39;, &#39;Python&#39;]</span>
 </pre></div>
@@ -1089,6 +1116,7 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <p>&gt; print(“Curso de Python”[::-1]) # String reversa</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;nohtyP ed osruC&#39;</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="docstrings">

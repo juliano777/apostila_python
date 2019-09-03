@@ -909,47 +909,70 @@ Das duas strings, somente a primeira tem o sufixo "u".
 Operações de Strings
 --------------------
 
-Concatenação:
+Concatenação
+~~~~~~~~~~~~
 
-> print("Curso" + " de " + "Python")
+.. code-block:: python
 
-.. code-block:: console
-
-    Curso de Python
-
-> spam = "Curso".__add__(" de ".__add__("Python"))
-
-> print(spam)
+    # 
+    print("Curso" + " de " + "Python")
 
 .. code-block:: console
 
     Curso de Python
 
-Multiplicação:
+.. code-block:: python
 
-> print('<' + 'Python' * 3 + '>')
+    #
+    spam = "Curso".__add__(" de ".__add__("Python"))
+
+    # 
+    print(spam)
+
+.. code-block:: console
+
+    Curso de Python
+
+Multiplicação
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    # 
+    print('<' + 'Python' * 3 + '>')
 
 .. code-block:: console
 
     <PythonPythonPython>
 
-> print('<' + 'Python'.__mul__(3) + '>')
+
+.. code-block:: python
+
+    #
+    print('<' + 'Python'.__mul__(3) + '>')
 
 .. code-block:: console
 
     '<PythonPythonPython>'
 
+Split
+~~~~~
 
+    Quebra a string em palavras formando uma lista.
 
-Split - Quebra a string em palavras formando uma lista:
+.. code-block:: python
 
-> print('Curso de Python'.split())
+    # 
+    print('Curso de Python'.split())
 
 .. code-block:: console
 
     ['Curso', 'de', 'Python']
 
-> print('Curso de Python'.split('de'))
+.. code-block:: python
+
+    # 
+    print('Curso de Python'.split('de'))
 
 .. code-block:: console
 
