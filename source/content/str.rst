@@ -761,75 +761,69 @@ Format Strings
 
     Ou também conhecidas como "f strings" foi um recurso adicionado à versão 3.6 de Python.
 
-Definição de variáveis:
+.. code-block:: python
 
-> marca = 'Fiat'
+    # Definição de variáveis
+    marca = 'Fiat'
+    modelo = '147'
+    ano = 1985
+    cor = 'azul'
 
-> modelo = '147'
+.. code-block:: python
 
-> ano = 1985
-
-> cor = 'azul'
-
-
-
-Exibir mensagem com uma f string:
-
-> print(f'Comprei um {marca} {modelo} {cor} ano {ano}')
+    # Exibir mensagem com uma f string
+    print(f'Comprei um {marca} {modelo} {cor} ano {ano}')
 
 .. code-block:: console
 
     Comprei um Fiat 147 azul ano 1985
 
+.. code-block:: python
 
-
-Uma f string também permite que se use expressões:
-
-> print(f'{5 + 2}')
+    # Uma f string também permite que se use expressões
+    print(f'{5 + 2}')
 
 .. code-block:: console
 
     7
 
+.. code-block:: python
 
-
-Métodos e funções também são permitidos:
-
-> print(f'{cor.upper()}')
+    # Métodos e funções também são permitidos
+    print(f'{cor.upper()}')
 
 .. code-block:: console
 
     AZUL
 
+.. code-block:: python
 
+    # Criação de uma classe de exemplo que recebe quatro parâmetros
+    class Carro(object):
+        # Método de inicialização (construtor)
+        def __init__(self, marca, modelo, ano, cor):
+            self.marca = marca
+            self.modelo = modelo
+            self.ano = ano
+            self.cor = cor
 
-Criação de uma classe de exemplo que recebe quatro parâmetros:
+        # Método string
+        def __str__(self):
+            return f'{marca} {modelo} / {cor} / {ano}'
 
-> class Carro(object):
-    # Método de inicialização (construtor)
-    def __init__(self, marca, modelo, ano, cor):
-        self.marca = marca
-        self.modelo = modelo
-        self.ano = ano
-        self.cor = cor
+        # Método de representação
+        def __repr__(self):
+            return f'{marca} {modelo} | {cor} | {ano}'
 
-    # Método string
-    def __str__(self):
-        return f'{marca} {modelo} / {cor} / {ano}'
+.. code-block:: python
 
-    # Método de representação    
-    def __repr__(self):
-        return f'{marca} {modelo} | {cor} | {ano}'
+    # Criação de um objeto Carro
+    c = Carro(marca, modelo, ano, cor)
 
+.. code-block:: python
 
-
-Criação de um objeto Carro:
-
-> c = Carro(marca, modelo, ano, cor)
-
-Print do método __str__ do objeto:
-
-> print(f'{c}')
+    # Print do método __str__ do objeto:
+    print(f'{c}')
 
 .. code-block:: console
 
