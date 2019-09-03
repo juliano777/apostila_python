@@ -102,6 +102,7 @@ Descobrir o decimal dada uma base:
 
 
 float
+-----
 
 	Ponto flutuante; não tem precisão absoluta, sua precisão é relativa.
 	Para uma maior precisão com números que tenham ponto flutuante, utilizar o módulo decimal.
@@ -213,6 +214,7 @@ ou
 
 
 complex
+-------
 
     É o tipo de dados em Python que trata de números complexos, que são muito utilizados em engenharia elétrica.
 
