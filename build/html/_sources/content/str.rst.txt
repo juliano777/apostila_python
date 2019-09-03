@@ -380,9 +380,9 @@ Preenchimento (padding) e Alinhamento de Strings
 
     '93.857'
 
+.. code-block:: python
 
-
-> '{:.3f}'.format(70000)
+    # '{:.3f}'.format(70000)
 
 .. code-block:: console
 

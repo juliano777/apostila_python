@@ -382,7 +382,8 @@ Preenchimento (padding) e Alinhamento de Strings
 
 .. code-block:: python
 
-    # '{:.3f}'.format(70000)
+    # 
+    '{:.3f}'.format(70000)
 
 .. code-block:: console
 
