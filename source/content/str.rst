@@ -891,14 +891,14 @@ Raw Strings (r)
 
 
 Unicode Strings (u)
+~~~~~~~~~~~~~~~~~~~
 
     É o padrão para uma string em Python, não há a necessidade de adicionar o sufixo "u" antes do apóstrofo ou aspas.
 
+.. code-block:: python
 
-
-Comparação de strings:
-
-> u'Foo' == 'Foo'
+    # Comparação de strings
+    u'Foo' == 'Foo'
 
 .. code-block:: console
 

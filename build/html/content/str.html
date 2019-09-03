@@ -100,6 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#bytes-b">5.9.1. Bytes (b)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#format-strings">5.9.2. Format Strings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#raw-strings-r">5.9.3. Raw Strings (r)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unicode-strings-u">5.9.4. Unicode Strings (u)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.10. Operações de Strings</a></li>
@@ -1006,18 +1007,24 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <blockquote>
 <div><p>É o tipo de string cujo conteúdo é interpretado literalmente.</p>
 </div></blockquote>
-<p>Exemplo de print com raw string:</p>
-<p>&gt; print(r’footbar’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemplo de print com raw string</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;foo\tbar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo\tbar</span>
 </pre></div>
 </div>
 <p>É de se notar que a string não teve interpretação do caractere especial de tab (t), ou seja, não houve qualquer interpretação.</p>
-<p>Unicode Strings (u)</p>
+</div>
+<div class="section" id="unicode-strings-u">
+<h3>5.9.4. Unicode Strings (u)<a class="headerlink" href="#unicode-strings-u" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>É o padrão para uma string em Python, não há a necessidade de adicionar o sufixo “u” antes do apóstrofo ou aspas.</p>
 </div></blockquote>
-<p>Comparação de strings:</p>
-<p>&gt; u’Foo’ == ‘Foo’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comparação de strings</span>
+<span class="sa">u</span><span class="s1">&#39;Foo&#39;</span> <span class="o">==</span> <span class="s1">&#39;Foo&#39;</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 
 <span class="go">Das duas strings, somente a primeira tem o sufixo &quot;u&quot;.</span>

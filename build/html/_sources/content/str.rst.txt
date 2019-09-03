@@ -878,11 +878,10 @@ Raw Strings (r)
 
     É o tipo de string cujo conteúdo é interpretado literalmente.
 
+.. code-block:: python
 
-
-Exemplo de print com raw string:
-
-> print(r'foo\tbar')
+    # Exemplo de print com raw string
+    print(r'foo\tbar')
 
 .. code-block:: console
 
@@ -892,14 +891,14 @@ Exemplo de print com raw string:
 
 
 Unicode Strings (u)
+~~~~~~~~~~~~~~~~~~~
 
     É o padrão para uma string em Python, não há a necessidade de adicionar o sufixo "u" antes do apóstrofo ou aspas.
 
+.. code-block:: python
 
-
-Comparação de strings:
-
-> u'Foo' == 'Foo'
+    # Comparação de strings
+    u'Foo' == 'Foo'
 
 .. code-block:: console
 
