@@ -527,31 +527,45 @@ Representações de Inteiros
 
     '     1E+03'
 
-> format(1000, '10.3G')
+.. code-block:: python
+
+    # 
+    format(1000, '10.3G')
 
 .. code-block:: console
 
     '     1e+03'
 
-> format(100000, 'g')
+.. code-block:: python
+
+    # 
+    format(100000, 'g')
 
 .. code-block:: console
 
     '100000'
 
-> format(1000000, 'g')
+.. code-block:: python
+
+    # 
+    format(1000000, 'g')
 
 .. code-block:: console
 
     '1e+06'
 
-> format(999.5, '10.4G')
+.. code-block:: python
+
+    # 
+    format(999.5, '10.4G')
 
 .. code-block:: console
 
     '     999.5'
 
-> format(999.5, '10.3G')
+.. code-block:: python
+
+    # format(999.5, '10.3G')
 
 .. code-block:: console
 
