@@ -27,7 +27,10 @@ O Módulo decimal
 
     Decimal('0.777')
 
-> print(d)
+.. code-block:: python
+
+    # 
+    print(d)
 
 .. code-block:: console
 
