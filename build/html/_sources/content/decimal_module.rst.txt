@@ -73,11 +73,8 @@ Algumas coisas "estranhas":
     # Importando a função getcontext
     from decimal import getcontext
 
-
-
-Operações de multiplicação:
-
-> Decimal('1.3') * Decimal('1.2')
+    # Operações de multiplicação
+    Decimal('1.3') * Decimal('1.2')
 
 .. code-block:: console
 
