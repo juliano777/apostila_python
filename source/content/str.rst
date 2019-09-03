@@ -1161,11 +1161,10 @@ Imutabilidade
 
     TypeError: 'str' object does not support item assignment
 
+.. code-block:: python
 
-
-Id da string:
-
-> id(foo)
+    # Id da string
+    id(foo)
 
 .. code-block:: console
 

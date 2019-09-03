@@ -1152,21 +1152,19 @@ Imutabilidade
 
     'b'
 
+.. code-block:: python
 
-
-Tentativa de redefinição do primeiro elemento da string:
-
-> foo[0] = 'B'
+    # Tentativa de redefinição do primeiro elemento da string
+    foo[0] = 'B'
 
 .. code-block:: console
 
     TypeError: 'str' object does not support item assignment
 
+.. code-block:: python
 
-
-Id da string:
-
-> id(foo)
+    # Id da string
+    id(foo)
 
 .. code-block:: console
 
