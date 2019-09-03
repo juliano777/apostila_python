@@ -783,15 +783,14 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;Sem caracteres especiais&#39;</span>
 <span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;Macarrão&#39;</span>
 <span class="n">s3</span> <span class="o">=</span> <span class="s1">&#39;Ação&#39;</span>
+
+<span class="c1"># A partir das três strings criadas anteriormente, criar outras três strings, mas strings de bytes</span>
+<span class="n">sb1</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">sb2</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">sb3</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>A partir das três strings criadas anteriormente, criar outras três strings, mas strings de bytes:</p>
-<p>&gt; sb1 = s1.encode(‘utf-8’)</p>
-<p>&gt; sb2 = s2.encode(‘utf-8’)</p>
-<p>&gt; sb3 = s3.encode(‘utf-8’)</p>
-<blockquote>
-<div><p>O método encode, utilizando a codificação UTF-8 faz a codificação de cada caractere para bytes.</p>
-</div></blockquote>
+<p>O método encode, utilizando a codificação UTF-8 faz a codificação de cada caractere para bytes.</p>
 <p>Exibir o conteúdo das strings de bytes:</p>
 <p>&gt; print(sb1)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;Sem caracteres especiais&#39;</span>

@@ -602,17 +602,13 @@ Bytes (b)
     s2 = 'Macarrão'
     s3 = 'Ação'
 
+    # A partir das três strings criadas anteriormente, criar outras três strings, mas strings de bytes
+    sb1 = s1.encode('utf-8')
+    sb2 = s2.encode('utf-8')
+    sb3 = s3.encode('utf-8')
 
 
-A partir das três strings criadas anteriormente, criar outras três strings, mas strings de bytes:
-
-> sb1 = s1.encode('utf-8')
-
-> sb2 = s2.encode('utf-8')
-
-> sb3 = s3.encode('utf-8')
-
-    O método encode, utilizando a codificação UTF-8 faz a codificação de cada caractere para bytes.
+O método encode, utilizando a codificação UTF-8 faz a codificação de cada caractere para bytes.
 
 
 
