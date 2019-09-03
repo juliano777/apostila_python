@@ -1407,14 +1407,12 @@ No exemplo dado o texto existe na string. E se não existisse?
 Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não encontrar o que foi pedido.
 O -1 não deve ser confundido como último elemento.
 
-
 - count
 
+.. code-block:: python
 
-
-Na frase em latim abaixo, quantas vezes aparece a letra "u"?:
-
-> 'sic mundus creatus est'.count('u')
+    # Na frase em latim abaixo, quantas vezes aparece a letra "u"?
+    'sic mundus creatus est'.count('u')
 
 .. code-block:: console
 
