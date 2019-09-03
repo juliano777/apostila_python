@@ -1140,24 +1140,22 @@ Imutabilidade
 
     Strings em Python são imutáveis.
 
-Criação de uma string:
+.. code-block:: python
 
-> foo = 'bar'
+    # Criação de uma string
+    foo = 'bar'
 
-
-Primeiro elemento da string:
-
-> foo[0]
+    # Primeiro elemento da string
+    foo[0]
 
 .. code-block:: console
 
     'b'
 
+.. code-block:: python
 
-
-Tentativa de redefinição do primeiro elemento da string:
-
-> foo[0] = 'B'
+    # Tentativa de redefinição do primeiro elemento da string
+    foo[0] = 'B'
 
 .. code-block:: console
 
