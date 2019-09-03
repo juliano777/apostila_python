@@ -429,9 +429,11 @@ Representações de Inteiros
 
     '0o011'
 
-x ou X) Formato Hexadecimal; saída numérica na base 16 (hexadecimal), a saída é conforme o "x" maiúsculo ou minúsculo:
+.. code-block:: python
 
-> format(200, '#05x')
+    # x ou X) Formato Hexadecimal; saída numérica na base 16 (hexadecimal),
+    # a saída é conforme o "x" maiúsculo ou minúsculo
+    format(200, '#05x')
 
 .. code-block:: console
 
