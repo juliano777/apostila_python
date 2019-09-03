@@ -404,7 +404,7 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # c) Caractere; converte o inteiro para o caractere unicode correspondente:
+    # c) Caractere; converte o inteiro para o caractere unicode correspondente
     format(93, 'c')
 
 .. code-block:: console
@@ -413,18 +413,17 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # d) Inteiro Decimal; saída numérica na base 10 (decimal):
+    # d) Inteiro Decimal; saída numérica na base 10 (decimal)
     format(0b111, '#05d')
 
 .. code-block:: console
 
     '00007'
 
+.. code-block:: python
 
-
-o) Formato Octal; saída numérica na base 8 (octal):
-
-> format(9, '#05o')
+    # o) Formato Octal; saída numérica na base 8 (octal)
+    format(9, '#05o')
 
 .. code-block:: console
 
