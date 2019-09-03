@@ -198,17 +198,24 @@ Formatação
     # Interpolação
     '%s %s' % ('foo', 'bar')
 
+ou
+
+.. code-block:: python
+
+    # Método format
+    '{} {}'.format('foo', 'bar')    
+
 .. code-block:: console
 
     'foo bar'
 
-Método format:
 
-> '{} {}'.format('foo', 'bar')
 
-.. code-block:: console
+  
 
-    'foo bar'
+
+
+
 
 Valores numéricos decimais:
 
