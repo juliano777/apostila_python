@@ -217,35 +217,18 @@ ou
 .. code-block:: python
 
     # Valores numéricos decimais (interpolação)
-    '%s %s' % ('foo', 'bar')
+    '%d %d' % (70, 90)
 
 ou
 
 .. code-block:: python
 
     # Valores numéricos decimais (método format)
-    '{} {}'.format('foo', 'bar')    
+    '{} {}'.format(70, 90)    
 
 .. code-block:: console
 
-    'foo bar'    
-
-
-
-  
-
-
-
-
-
-
-> '%d %d' % (70, 90)
-
-> '{} {}'.format(70, 90)
-
-.. code-block:: console
-
-    '70 90'
+    '70 90'    
 
 Interpolação pegando o valor de um dicionário:
 
