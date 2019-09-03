@@ -12,27 +12,27 @@ O Módulo decimal
 
 
 
-Importação do módulo:
+.. code-block:: python
 
-> import decimal
+    # Importação do módulo
+    import decimal
 
+    # Criação do objeto Decimal
+    d = decimal.Decimal('0.777')
 
-
-Criação do objeto Decimal:
-
-> d = decimal.Decimal('0.777')
-
-
-
-Exibindo o valor do objeto decimal:
+    # Exibindo o valor do objeto decimal:
 
 > d
 
-Decimal('0.777')
+.. code-block:: console
+
+    Decimal('0.777')
 
 > print(d)
 
-0.777
+.. code-block:: console
+
+    0.777
 
 
 
@@ -40,11 +40,15 @@ Algumas coisas "estranhas":
 
 > 1.1 + 2.2
 
-3.3000000000000003
+.. code-block:: console
+
+    3.3000000000000003
 
 
 > 0.1 + 0.1 + 0.1 - 0.3
-5.551115123125783e-17
+.. code-block:: console
+
+    5.551115123125783e-17
 
 
 
@@ -58,7 +62,9 @@ Fazendo as mesmas operações anteriores com o módulo decimal:
 
 > Decimal('1.1') + Decimal('2.2')
 
-Decimal('3.3')
+.. code-block:: console
+
+    Decimal('3.3')
 
 
 
@@ -72,11 +78,15 @@ Operações de multiplicação:
 
 > Decimal('1.3') * Decimal('1.2')
 
-Decimal('1.56')
+.. code-block:: console
+
+    Decimal('1.56')
 
 > Decimal('1.30') * Decimal('1.20')
 
-Decimal('1.5600')
+.. code-block:: console
+
+    Decimal('1.5600')
 
     O último retorno foi com um número com 4 (quatro) casas decimais.
 
@@ -95,7 +105,9 @@ Operação de multiplicação de números com ponto flutuante:
 
 > Decimal('1.300') * Decimal('1.200')
 
-Decimal('1.56')
+.. code-block:: console
+
+    Decimal('1.56')
 
 
 
@@ -105,7 +117,9 @@ Ajustando a precisão para 10 (dez):
 
 > Decimal('1.3897') * 2
 
-Decimal('2.7794')
+.. code-block:: console
+
+    Decimal('2.7794')
 
 
 
@@ -115,6 +129,8 @@ Ajustando a precisão para 3 (três):
 
 > Decimal('1.3897') * 2
 
-Decimal('2.78')
+.. code-block:: console
+
+    Decimal('2.78')
 
     Nota-se que foi feito um arredondamento do número.
