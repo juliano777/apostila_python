@@ -25,84 +25,108 @@ ou
     # Verificando seu valor
 	i
 
-7
+.. code-block:: console
+
+    7
 
 .. code-block:: python
 
     # Verificando seu tipo
 	type(i)
 
-int
+.. code-block:: console
+
+    int
 
 .. code-block:: python
 
     # 
 	type(bar)
 
-long
+.. code-block:: console
+
+    long
 
 .. code-block:: python
 
     # Representação hexadecimal de 178
 	0xb2
 
-178
+.. code-block:: console
+
+    178
 
 .. code-block:: python
 
     # Representação octal de 8
 	0o10
 
-8
+.. code-block:: console
+
+    8
 
 .. code-block:: python
 
     # Representação binária de 14
 	0b1110
 
-14
+.. code-block:: console
+
+    14
 
 .. code-block:: python
 
     # Número 7 (sete) convertido para as bases binária, octal e hexadecimal
 	bin(7)  # binário
 
-'0b111'
+.. code-block:: console
+
+    '0b111'
 
 .. code-block:: python
 
     # 
 	oct(7)
 
-'0o7'
+.. code-block:: console
+
+    '0o7'
 
 .. code-block:: python
 
     # 
 	hex(7)
 
-'0x7'
+.. code-block:: console
+
+    '0x7'
 
 .. code-block:: python
 
     # Descobrir o decimal dada uma base
 	int('facada', base=16)
 
-16435930
+.. code-block:: console
+
+    16435930
 
 .. code-block:: python
 
     # 
 	int('25', base=8)
 
-21
+.. code-block:: console
+
+    21
 
 .. code-block:: python
 
     # 
 	int('1111', base=2)
 
-15
+.. code-block:: console
+
+    15
 
 
 float
@@ -128,7 +152,9 @@ ou
 
     f  # Veririca o valor
 
-3.0
+.. code-block:: console
+
+    3.0
 
 Formas de se definir um float:
 
@@ -153,13 +179,17 @@ ou
 
 	x  # Exibe o valor
 
-0.5
+.. code-block:: console
+
+    0.5
 
 .. code-block:: python
 
     type(x)  # Tipo
 
-float
+.. code-block:: console
+
+    float
 
 .. code-block:: python
 
@@ -168,14 +198,18 @@ float
 
 	x  # Verifica o valor
 
-2.0
+.. code-block:: console
+
+    2.0
 
 .. code-block:: python
 
     # Que tipo resulta de da soma de um inteiro e um float?
 	type(7 + 3.0)
 
-float
+.. code-block:: console
+
+    float
 
 
 .. code-block:: python
@@ -183,7 +217,9 @@ float
     # Resultado
 	7 + 3.0
 
-10.0
+.. code-block:: console
+
+    10.0
 
 
 .. code-block:: python
@@ -209,30 +245,36 @@ ou
 
     3.0 / 2.0
 
-1.5
+.. code-block:: console
+
+    1.5
 
 .. code-block:: python
 
     # Divisão Inteira
 	3 // 2.0
 
-1.0
+.. code-block:: console
+
+    1.0
 
 .. code-block:: python
 
     # Notação Científica
 	1e+2
 
-100.0
+.. code-block:: console
+
+    100.0
 
 .. code-block:: python
 
     # 
 	1e-3
 
-0.001
+.. code-block:: console
 
-
+    0.001
 
 complex
 -------
