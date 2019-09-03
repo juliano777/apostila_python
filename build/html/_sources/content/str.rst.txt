@@ -981,7 +981,7 @@ Split
 
 Slice
 ~~~~~
-|    Corte de string - 'string'[inicio:fim - 1`:incremento]:`
+|    Corte de string - ``'string'[inicio:fim - 1:incremento]``
 
 .. code-block:: python
 
