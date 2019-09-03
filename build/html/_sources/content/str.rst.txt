@@ -334,11 +334,10 @@ Preenchimento (padding) e Alinhamento de Strings
 
     'foo    '
 
+.. code-block:: python
 
-
-Alinhamento centralizado dentro de 7 colunas:
-
-> '{:^7}'.format('foo')
+    # Alinhamento centralizado dentro de 7 colunas
+    '{:^7}'.format('foo')
 
 .. code-block:: console
 
