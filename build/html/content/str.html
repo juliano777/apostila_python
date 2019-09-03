@@ -1339,15 +1339,18 @@ Isso faz muita alocação de memória, o que torna o desempenho horrível para c
 </div>
 <div class="section" id="metodo-2-eficaz">
 <h3>5.13.2. Método 2 - Eficaz<a class="headerlink" href="#metodo-2-eficaz" title="Link permanente para este título">¶</a></h3>
-<p>Criação de uma lista vazia:</p>
-<p>&gt; s = []</p>
-<p>Loop de concatenação:</p>
-<dl class="simple">
-<dt>&gt; for i in range(50):</dt><dd><p>s.append(str(i))</p>
-</dd>
-</dl>
-<p>Fazendo a junção de uma string vazia com a lista criada com seus elementos via método append:</p>
-<p>&gt; ‘’.join(s)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma lista vazia</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Loop de concatenação</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+<span class="c1"># Fazendo a junção de uma string vazia com a lista criada</span>
+<span class="c1"># com seus elementos via método append</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&#39;</span>
 </pre></div>
 </div>

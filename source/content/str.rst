@@ -1267,20 +1267,18 @@ Isso faz muita alocação de memória, o que torna o desempenho horrível para c
 Método 2 - Eficaz
 ~~~~~~~~~~~~~~~~~
 
+.. code-block:: python
 
-Criação de uma lista vazia:
+    # Criação de uma lista vazia
+    s = []
 
-> s = []
+    # Loop de concatenação
+    for i in range(50):
+        s.append(str(i))
 
-
-Loop de concatenação:
-
-> for i in range(50):
-    s.append(str(i))
-
-Fazendo a junção de uma string vazia com a lista criada com seus elementos via método append:
-
-> ''.join(s)
+    # Fazendo a junção de uma string vazia com a lista criada 
+    # com seus elementos via método append
+    print(''.join(s))
 
 .. code-block:: console
 
