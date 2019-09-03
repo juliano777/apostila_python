@@ -595,13 +595,12 @@ Bytes (b)
 
 
 
-Criação de 3 (três) strings comuns:
+.. code-block:: python
 
-> s1 = 'Sem caracteres especiais'
-
-> s2 = 'Macarrão'
-
-> s3 = 'Ação'
+    # Criação de 3 (três) strings comuns
+    s1 = 'Sem caracteres especiais'
+    s2 = 'Macarrão'
+    s3 = 'Ação'
 
 
 

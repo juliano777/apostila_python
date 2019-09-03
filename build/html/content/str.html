@@ -779,10 +779,12 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <blockquote>
 <div><p>Strings de bytes utilizam o prefixo “b” e quando contém caracteres especiais, esses são representados pelo código hexadecimal da codificação utilizada.</p>
 </div></blockquote>
-<p>Criação de 3 (três) strings comuns:</p>
-<p>&gt; s1 = ‘Sem caracteres especiais’</p>
-<p>&gt; s2 = ‘Macarrão’</p>
-<p>&gt; s3 = ‘Ação’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de 3 (três) strings comuns</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;Sem caracteres especiais&#39;</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;Macarrão&#39;</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="s1">&#39;Ação&#39;</span>
+</pre></div>
+</div>
 <p>A partir das três strings criadas anteriormente, criar outras três strings, mas strings de bytes:</p>
 <p>&gt; sb1 = s1.encode(‘utf-8’)</p>
 <p>&gt; sb2 = s2.encode(‘utf-8’)</p>
