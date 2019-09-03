@@ -36,43 +36,42 @@ O Módulo decimal
 
     0.777
 
-
-
 Algumas coisas "estranhas":
 
-> 1.1 + 2.2
+.. code-block:: python
+
+    # 
+    1.1 + 2.2
 
 .. code-block:: console
 
     3.3000000000000003
 
+.. code-block:: python
 
-> 0.1 + 0.1 + 0.1 - 0.3
+    # 
+    0.1 + 0.1 + 0.1 - 0.3
+
 .. code-block:: console
 
     5.551115123125783e-17
 
+.. code-block:: python
 
+    # Importando apenas a classe Decimal
+    from decimal import Decimal
 
-Importando apenas a classe Decimal:
-
-> from decimal import Decimal
-
-
-
-Fazendo as mesmas operações anteriores com o módulo decimal:
-
-> Decimal('1.1') + Decimal('2.2')
+    # Fazendo as mesmas operações anteriores com o módulo decimal
+    Decimal('1.1') + Decimal('2.2')
 
 .. code-block:: console
 
     Decimal('3.3')
 
+.. code-block:: python
 
-
-Importando a função getcontext:
-
-> from decimal import getcontext
+    # Importando a função getcontext
+    from decimal import getcontext
 
 
 
