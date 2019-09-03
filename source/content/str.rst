@@ -178,27 +178,14 @@ Caracteres Especiais
 |                |                                                       |                  |                       |
 |                |                                                       |                  |    Ʃ                  |
 +----------------+-------------------------------------------------------+------------------+-----------------------+
-
-| ``\``          | Imprime 32-bit valor hexadecimal de caractere Unicode | ``'\U000001a9'`` |.. code-block:: console|
+| ``\ooo``       | Imprime o character baseado em seu valor octal        | ``'\077'``       |.. code-block:: console|
 |                |                                                       |                  |                       |
-|                |                                                       |                  |    Ʃ                  |
+|                |                                                       |                  |    ?                  |
 +----------------+-------------------------------------------------------+------------------+-----------------------+
-| ``\``          | Imprime 32-bit valor hexadecimal de caractere Unicode | ``'\U000001a9'`` |.. code-block:: console|
+| ``\xhh``       | Imprime o character baseado em seu valor hexadecimal  | ``'1\xaa'``      |.. code-block:: console|
 |                |                                                       |                  |                       |
-|                |                                                       |                  |    Ʃ                  |
+|                |                                                       |                  |    1ª                 |
 +----------------+-------------------------------------------------------+------------------+-----------------------+
-
-
-
-
-
-``\ooo`` Imprime o character baseado em seu valor octal        ``'\077'`` ?
-
-``\xhh`` Imprime o character baseado em seu valor hexadecimal  ``'1\xaa'`` 1ª
-
-
-
-
 
 
 Formatação
