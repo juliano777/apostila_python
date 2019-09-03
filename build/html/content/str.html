@@ -1428,19 +1428,26 @@ A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o 
 <span class="mi">0</span><span class="o">|</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="o">|</span><span class="mi">3</span><span class="o">|</span><span class="mi">4</span><span class="o">|</span><span class="mi">5</span><span class="o">|</span><span class="mi">6</span><span class="o">|</span><span class="mi">7</span><span class="o">|</span><span class="mi">8</span><span class="o">|</span><span class="mi">9</span><span class="o">|</span><span class="mi">10</span><span class="o">|</span><span class="mi">11</span><span class="o">|</span><span class="mi">12</span><span class="o">|</span><span class="mi">13</span><span class="o">|</span><span class="mi">14</span><span class="o">|</span><span class="mi">15</span><span class="o">|</span><span class="mi">16</span><span class="o">|</span><span class="mi">17</span><span class="o">|</span><span class="mi">18</span><span class="o">|</span><span class="mi">19</span><span class="o">|</span><span class="mi">20</span><span class="o">|</span><span class="mi">21</span><span class="o">|</span><span class="mi">22</span><span class="o">|</span><span class="mi">23</span><span class="o">|</span><span class="mi">24</span>
 </pre></div>
 </div>
-<p>A partir de qual posição aparece a string?:</p>
-<p>&gt; foo.index(‘FreeBSD’)</p>
-<p>&gt; foo.find(‘FreeBSD’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># A partir de qual posição aparece a string?</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;FreeBSD&#39;</span><span class="p">)</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;FreeBSD&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
 <p>No exemplo dado o texto existe na string. E se não existisse?</p>
-<p>Buscando um texto que não existe dentro da string:</p>
-<p>&gt; foo.index(‘Linux’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buscando um texto que não existe dentro da string</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Linux&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ValueError: substring not found</span>
 </pre></div>
 </div>
-<p>&gt; foo.find(‘Linux’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;Linux&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-1</span>
 </pre></div>
 </div>

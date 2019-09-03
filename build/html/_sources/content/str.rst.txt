@@ -1374,11 +1374,11 @@ Temos seus caracteres e suas respectivas posições:
 
 
 
-A partir de qual posição aparece a string?:
+.. code-block:: python
 
-> foo.index('FreeBSD')
-
-> foo.find('FreeBSD')
+    # A partir de qual posição aparece a string?
+    foo.index('FreeBSD')
+    foo.find('FreeBSD')
 
 .. code-block:: console
 
@@ -1386,15 +1386,19 @@ A partir de qual posição aparece a string?:
 
 No exemplo dado o texto existe na string. E se não existisse?
 
-Buscando um texto que não existe dentro da string:
+.. code-block:: python
 
-> foo.index('Linux')
+    # Buscando um texto que não existe dentro da string
+    foo.index('Linux')
 
 .. code-block:: console
 
     ValueError: substring not found
 
-> foo.find('Linux')
+.. code-block:: python
+
+    #
+    foo.find('Linux')
 
 .. code-block:: console
 
