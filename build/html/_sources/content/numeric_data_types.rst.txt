@@ -130,73 +130,86 @@ ou
 
 3.0
 
-
-
 Formas de se definir um float:
 
-> x = 0.5000000000
+.. code-block:: python
+
+    # 
+	x = 0.5000000000
 
 ou
 
-> x = 0.5
+.. code-block:: python
+
+    # 
+	x = 0.5
 
 ou
 
-> x = .5
+.. code-block:: python
 
-> x  # Exibe o valor
+    # 
+	x = .5
+
+	x  # Exibe o valor
 
 0.5
 
-> type(x)  # Tipo
+.. code-block:: python
+
+    type(x)  # Tipo
 
 float
 
-> x = 2.
+.. code-block:: python
 
-> x  # Verifica o valor
+    # 
+	x = 2.
+
+	x  # Verifica o valor
 
 2.0
 
+.. code-block:: python
 
-
-Que tipo resulta de da soma de um inteiro e um float?
- 
-> type(7 + 3.0)
+    # Que tipo resulta de da soma de um inteiro e um float?
+	type(7 + 3.0)
 
 float
 
 
+.. code-block:: python
 
-Resultado:
-
-> 7 + 3.0
+    # Resultado
+	7 + 3.0
 
 10.0
 
 
+.. code-block:: python
 
-Divisão
-
-> 3 / 2
-
-ou
-
-> 3 / 2.0
+    # Divisão
+	3 / 2
 
 ou
 
-> 3.0 / 2
+.. code-block:: python
+
+    3 / 2.0
 
 ou
 
-> 3.0 / 2.0
+.. code-block:: python
+
+    3.0 / 2
+
+ou
+
+.. code-block:: python
+
+    3.0 / 2.0
 
 1.5
-
-
-
-
 
 .. code-block:: python
 
@@ -204,7 +217,6 @@ ou
 	3 // 2.0
 
 1.0
-
 
 .. code-block:: python
 
@@ -302,4 +314,6 @@ complex
     # 
 	c + complex(2, 17)  # somando o número complexo com outro complexo
 
-(2+20j)
+.. code-block:: console
+
+    (2+20j)
