@@ -1367,9 +1367,10 @@ Métodos de Strings
     foo = 'Python FreeBSD PostgreSQL'
 
 Temos seus caracteres e suas respectivas posições:
+::
 
-P|y|t|h|o|n| |F|r|e|e |B |S |D |  |P |o |s |t |g |r |e |S |Q |L
-0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24
+    P|y|t|h|o|n| |F|r|e|e |B |S |D |  |P |o |s |t |g |r |e |S |Q |L
+    0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24
 
 
 
