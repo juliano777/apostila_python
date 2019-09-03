@@ -467,10 +467,10 @@ Representações de Inteiros
 
     '31259.8'
 
+.. code-block:: python
 
-None) Nulo; o mesmo que "d":
-
-> format(0b111)
+    # None) Nulo; o mesmo que "d"
+    format(0b111)
 
 .. code-block:: console
 
