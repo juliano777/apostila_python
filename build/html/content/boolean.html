@@ -219,39 +219,45 @@ Todos outros valores são considerados verdadeiros, então objetos de muitos tip
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<p>Teste usando a lógica AND:</p>
-<p>&gt; True &amp; False</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Teste usando a lógica AND</span>
+<span class="bp">True</span> <span class="o">&amp;</span> <span class="bp">False</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<p>Negação de True:</p>
-<p>&gt; not True</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Negação de True</span>
+<span class="ow">not</span> <span class="bp">True</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<p>Negação de False:</p>
-<p>&gt; not False</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Negação de False</span>
+<span class="ow">not</span> <span class="bp">False</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<p>Criação de classes de teste:</p>
-<dl class="simple">
-<dt>&gt; class Foo(object):</dt><dd><dl class="simple">
-<dt>def __len__(self):</dt><dd><p>return 1</p>
-</dd>
-</dl>
-</dd>
-<dt>&gt; class Bar(object):</dt><dd><dl class="simple">
-<dt>def __len__(self):</dt><dd><p>return 0</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>Criação de objetos:</p>
-<p>&gt; foo = Foo()</p>
-<p>&gt; bar = Bar()</p>
-<p>Verificando o valor booleano dos objetos:</p>
-<p>&gt; bool(foo)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de classes de teste</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+<span class="k">class</span> <span class="nc">Bar</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de objetos:</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">()</span>
+
+<span class="c1"># Verificando o valor booleano dos objetos</span>
+<span class="nb">bool</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>

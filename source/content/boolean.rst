@@ -43,59 +43,52 @@ Booleanos
 
     True
 
-Teste usando a lógica AND:
+.. code-block:: python
 
-> True & False
-
-.. code-block:: console
-
-    False
-
-
-
-Negação de True:
-
-> not True
+    # Teste usando a lógica AND
+    True & False
 
 .. code-block:: console
 
     False
 
+.. code-block:: python
 
+    # Negação de True
+    not True
 
-Negação de False:
+.. code-block:: console
 
-> not False
+    False
+
+.. code-block:: python
+
+    # Negação de False
+    not False
 
 .. code-block:: console
 
     True
 
+.. code-block:: python
 
+    # Criação de classes de teste
+    class Foo(object):
+        def __len__(self):
+            return 1
 
-Criação de classes de teste:
+    class Bar(object):
+        def __len__(self):
+            return 0
 
-> class Foo(object):
-    def __len__(self):
-        return 1
+.. code-block:: python
 
-> class Bar(object):
-    def __len__(self):
-        return 0
+    # Criação de objetos:
+    foo = Foo()
+    bar = Bar()
 
-
-
-Criação de objetos:
-
-> foo = Foo()
-
-> bar = Bar()
-
-
-
-Verificando o valor booleano dos objetos:
-
-> bool(foo)
+    # Verificando o valor booleano dos objetos
+    bool(foo)
 
 .. code-block:: console
 
