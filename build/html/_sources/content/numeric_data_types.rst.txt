@@ -9,19 +9,21 @@ int
 	Para sabermos qual é o número máximo do tipo int fazemos:
 
 
-Objeto inteiro:
+.. code-block:: python
 
-> i = int(7)
+    # Objeto inteiro
+	i = int(7)
 
 ou
 
-> i = 7
+.. code-block:: python
 
+    i = 7
 
+.. code-block:: python
 
-Verificando seu valor;
-
-> i
+    # Verificando seu valor
+	i
 
 7
 
