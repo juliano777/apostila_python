@@ -94,15 +94,19 @@ Booleanos
 
     True
 
-> bool(bar)
+.. code-block:: python
+
+    # 
+    bool(bar)
 
 .. code-block:: console
 
     False
 
-True AND (NOT False):
+.. code-block:: python
 
-> bool(foo) & (not bool(bar))
+    # True AND (NOT False)
+    bool(foo) & (not bool(bar))
 
 .. code-block:: console
 
