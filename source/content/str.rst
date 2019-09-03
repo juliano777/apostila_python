@@ -352,9 +352,9 @@ Preenchimento (padding) e Alinhamento de Strings
 
     'foo____'
 
+.. code-block:: python
 
-
-Alinhamento à direita dentro de 7 colunas preenchendo com o caractere "_":
+    # Alinhamento à direita dentro de 7 colunas preenchendo com o caractere "_"
 
 > '{:_>7}'.format('foo')
 

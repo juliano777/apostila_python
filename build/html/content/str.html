@@ -583,12 +583,16 @@ Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), p
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;  foo  &#39;</span>
 </pre></div>
 </div>
-<p>Alinhamento à esquerda dentro de 7 colunas preenchendo com o caractere “_”:</p>
-<p>&gt; ‘{:_&lt;7}’.format(‘foo’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alinhamento à esquerda dentro de 7 colunas preenchendo com o caractere &quot;_&quot;</span>
+<span class="s1">&#39;{:_&lt;7}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;foo____&#39;</span>
 </pre></div>
 </div>
-<p>Alinhamento à direita dentro de 7 colunas preenchendo com o caractere “_”:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alinhamento à direita dentro de 7 colunas preenchendo com o caractere &quot;_&quot;</span>
+</pre></div>
+</div>
 <p>&gt; ‘{:_&gt;7}’.format(‘foo’)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;____foo&#39;</span>
 </pre></div>
