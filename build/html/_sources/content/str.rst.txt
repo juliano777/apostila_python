@@ -858,26 +858,23 @@ Format Strings
     Cor: azul
 
 
-f String entre parênteses:
+.. code-block:: python
 
-> msg = (f'Marca: {marca} - '
+    # f String entre parênteses
+    msg = (f'Marca: {marca} - '
          f'Modelo: {modelo} - '
          f'Ano: {ano} - '
          f'Cor: {cor}')
 
-
-
-Exibir a mensagem:
-
-> print(msg)
+    # Exibir a mensagem
+    print(msg)
 
 .. code-block:: console
 
     Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul
 
-
-
 Raw Strings (r)
+~~~~~~~~~~~~~~
 
     É o tipo de string cujo conteúdo é interpretado literalmente.
 

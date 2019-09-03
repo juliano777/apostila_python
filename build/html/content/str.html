@@ -99,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#tipos-de-strings-em-python">5.9. Tipos de Strings em Python</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#bytes-b">5.9.1. Bytes (b)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#format-strings">5.9.2. Format Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raw-strings-r">5.9.3. Raw Strings (r)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#operacoes-de-strings">5.10. Operações de Strings</a></li>
@@ -986,19 +987,22 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <span class="go">Cor: azul</span>
 </pre></div>
 </div>
-<p>f String entre parênteses:</p>
-<dl class="simple">
-<dt>&gt; msg = (f’Marca: {marca} - ‘</dt><dd><p>f’Modelo: {modelo} - ‘
-f’Ano: {ano} - ‘
-f’Cor: {cor}’)</p>
-</dd>
-</dl>
-<p>Exibir a mensagem:</p>
-<p>&gt; print(msg)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># f String entre parênteses</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="s1">&#39;Marca: {marca} - &#39;</span>
+     <span class="n">f</span><span class="s1">&#39;Modelo: {modelo} - &#39;</span>
+     <span class="n">f</span><span class="s1">&#39;Ano: {ano} - &#39;</span>
+     <span class="n">f</span><span class="s1">&#39;Cor: {cor}&#39;</span><span class="p">)</span>
+
+<span class="c1"># Exibir a mensagem</span>
+<span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul</span>
 </pre></div>
 </div>
-<p>Raw Strings (r)</p>
+</div>
+<div class="section" id="raw-strings-r">
+<h3>5.9.3. Raw Strings (r)<a class="headerlink" href="#raw-strings-r" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>É o tipo de string cujo conteúdo é interpretado literalmente.</p>
 </div></blockquote>

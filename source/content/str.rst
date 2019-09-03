@@ -878,11 +878,10 @@ Raw Strings (r)
 
     É o tipo de string cujo conteúdo é interpretado literalmente.
 
+.. code-block:: python
 
-
-Exemplo de print com raw string:
-
-> print(r'foo\tbar')
+    # Exemplo de print com raw string
+    print(r'foo\tbar')
 
 .. code-block:: console
 
