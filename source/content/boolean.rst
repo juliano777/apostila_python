@@ -8,9 +8,9 @@ Booleanos
 	Instâncias de classes definidas por usuários, se a classe define um método __bool__() ou __len__(), quando este método retornar o inteiro zero ou um valor booleano False.
 	Todos outros valores são considerados verdadeiros, então objetos de muitos tipos são considerados como True.
 
+.. code-block:: python
 
-
-Definindo a variável como True de forma indireta:
+    # Definindo a variável como True de forma indireta:
 
 > b = bool(1)
 
@@ -20,7 +20,9 @@ Verificando o valor da variável:
 
 > b
 
-True
+.. code-block:: console
+
+    True
 
 
 
@@ -34,7 +36,9 @@ Verificando o valor da variável:
 
 > b
 
-False
+.. code-block:: console
+
+    False
 
 
 
@@ -42,15 +46,17 @@ Teste usando a lógica OR:
 
 > True | False
 
-True
+.. code-block:: console
 
-
+    True
 
 Teste usando a lógica AND:
 
 > True & False
 
-False
+.. code-block:: console
+
+    False
 
 
 
@@ -58,7 +64,9 @@ Negação de True:
 
 > not True
 
-False
+.. code-block:: console
+
+    False
 
 
 
@@ -66,7 +74,9 @@ Negação de False:
 
 > not False
 
-True
+.. code-block:: console
+
+    True
 
 
 
@@ -94,13 +104,15 @@ Verificando o valor booleano dos objetos:
 
 > bool(foo)
 
-True
+.. code-block:: console
+
+    True
 
 > bool(bar)
 
-False
+.. code-block:: console
 
-
+    False
 
 True AND (NOT False):
 

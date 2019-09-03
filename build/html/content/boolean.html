@@ -190,28 +190,42 @@
 Todos outros valores são considerados verdadeiros, então objetos de muitos tipos são considerados como True.</p>
 </div></blockquote>
 </div></blockquote>
-<p>Definindo a variável como True de forma indireta:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definindo a variável como True de forma indireta:</span>
+</pre></div>
+</div>
 <p>&gt; b = bool(1)</p>
 <p>Verificando o valor da variável:</p>
 <p>&gt; b</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>Definindo a variável como False de forma indireta:</p>
 <p>&gt; b = bool(0)</p>
 <p>Verificando o valor da variável:</p>
 <p>&gt; b</p>
-<p>False</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>Teste usando a lógica OR:</p>
 <p>&gt; True | False</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>Teste usando a lógica AND:</p>
 <p>&gt; True &amp; False</p>
-<p>False</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>Negação de True:</p>
 <p>&gt; not True</p>
-<p>False</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>Negação de False:</p>
 <p>&gt; not False</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>Criação de classes de teste:</p>
 <dl class="simple">
 <dt>&gt; class Foo(object):</dt><dd><dl class="simple">
@@ -230,9 +244,13 @@ Todos outros valores são considerados verdadeiros, então objetos de muitos tip
 <p>&gt; bar = Bar()</p>
 <p>Verificando o valor booleano dos objetos:</p>
 <p>&gt; bool(foo)</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>&gt; bool(bar)</p>
-<p>False</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>True AND (NOT False):</p>
 <p>&gt; bool(foo) &amp; (not bool(bar))</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
