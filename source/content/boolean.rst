@@ -10,15 +10,11 @@ Booleanos
 
 .. code-block:: python
 
-    # Definindo a variável como True de forma indireta:
-
-> b = bool(1)
-
-
-
-Verificando o valor da variável:
-
-> b
+    # Definindo a variável como True de forma indireta
+    b = bool(1)
+    
+    # Verificando o valor da variável
+    print(b)
 
 .. code-block:: console
 
