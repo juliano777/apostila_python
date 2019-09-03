@@ -146,4 +146,4 @@ Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
     True
 
-O retorno foi verdadeiro, o método __bool__ prevalece.
+O retorno foi verdadeiro, o método ``__bool__`` prevalece.
