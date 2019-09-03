@@ -234,16 +234,15 @@ ou
 
     valor
 
-Variável que vai receber os valores formatados:
+.. code-block:: python
 
-> foo = '''Produto: %(prod)s
-Preco: R$ %(preco).2f
-Cód: %(cod)05d
-'''
-
-Declaração de um dicionário que conterá as chaves e valores desejados:
-
-> d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
+    # Variável que vai receber os valores formatados
+    foo = '''Produto: %(prod)s
+          Preco: R$ %(preco).2f
+          Cód: %(cod)05d
+          '''
+    # Declaração de um dicionário que conterá as chaves e valores desejados
+    d = {'prod': 'Pente', 'preco': 3.5, 'cod': 157}
 
 Exibindo o resultado via interpolação:
 
