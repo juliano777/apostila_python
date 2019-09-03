@@ -193,11 +193,9 @@ Formatação
     Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), posteriormente foi adicionado o método format.
 
 
-Interpolação:
-
 .. code-block:: python
 
-    # 
+    # Interpolação
     '%s %s' % ('foo', 'bar')
 
 .. code-block:: console
