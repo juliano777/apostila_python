@@ -892,13 +892,14 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">∑</span>
 </pre></div>
 </div>
-<p>Verificando o tipo quando o objeto é decodificado:</p>
-<p>&gt; type(b.decode(‘utf-8’))</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
-
-<span class="go">Ao ser decodificado passa a ser uma string.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando o tipo quando o objeto é decodificado</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
+</pre></div>
+</div>
+<p>Ao ser decodificado passa a ser uma string.</p>
 </div>
 <div class="section" id="format-strings">
 <h3>5.9.2. Format Strings<a class="headerlink" href="#format-strings" title="Link permanente para este título">¶</a></h3>

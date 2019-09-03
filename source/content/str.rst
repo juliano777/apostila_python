@@ -744,17 +744,16 @@ Uma byte string tem um tipo específico, bytes.
 
     ∑
 
+.. code-block:: python
 
-
-Verificando o tipo quando o objeto é decodificado:
-
-> type(b.decode('utf-8'))
+    # Verificando o tipo quando o objeto é decodificado
+    type(b.decode('utf-8'))
 
 .. code-block:: console
 
     str
 
-    Ao ser decodificado passa a ser uma string.
+Ao ser decodificado passa a ser uma string.
 
 
 Format Strings
