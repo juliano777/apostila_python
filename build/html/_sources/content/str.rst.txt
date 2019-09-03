@@ -209,11 +209,6 @@ ou
 
     'foo bar'
 
-
-
-
-
-
 .. code-block:: python
 
     # Valores numéricos decimais (interpolação)
