@@ -517,12 +517,11 @@ Representações de Inteiros
 
     '1000.000000'
 
+.. code-block:: python
 
-
-"g" ou "G"; formato geral. Para uma dada precisão, sendo essa precisão maior ou igual a ' (um), arredonda o número para p (precisão) de dígitos significantes:
-
-
-> format(1000, '10.2G')
+    # "g" ou "G"; formato geral. Para uma dada precisão, sendo essa precisão
+    # maior ou igual a ' (um), arredonda o número para p (precisão) de dígitos significantes
+    format(1000, '10.2G')
 
 .. code-block:: console
 
