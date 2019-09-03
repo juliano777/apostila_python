@@ -960,13 +960,19 @@ Split
 
     Quebra a string em palavras formando uma lista.
 
-> print('Curso de Python'.split())
+.. code-block:: python
+
+    # 
+    print('Curso de Python'.split())
 
 .. code-block:: console
 
     ['Curso', 'de', 'Python']
 
-> print('Curso de Python'.split('de'))
+.. code-block:: python
+
+    # 
+    print('Curso de Python'.split('de'))
 
 .. code-block:: console
 
