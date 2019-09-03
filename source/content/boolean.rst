@@ -134,19 +134,16 @@ Booleanos
 O método __bool__ retorna um valor verdadeiro e o método __len__ um falso.
 Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
+.. code-block:: python
 
+    # Criação de objeto
+    spam = Spam()
 
-Criação de objeto:
-
-> spam = Spam()
-
-
-Verificando o valor booleano:
-
-> bool(spam)
+    # Verificando o valor booleano
+    bool(spam)
 
 .. code-block:: console
 
     True
 
-    O retorno foi verdadeiro, o método __bool__ prevalece.
+O retorno foi verdadeiro, o método __bool__ prevalece.

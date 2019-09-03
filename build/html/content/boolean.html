@@ -293,15 +293,17 @@ Todos outros valores são considerados verdadeiros, então objetos de muitos tip
 </div>
 <p>O método __bool__ retorna um valor verdadeiro e o método __len__ um falso.
 Com ambos declarados na mesma classe, um objeto dela o que retornará?</p>
-<p>Criação de objeto:</p>
-<p>&gt; spam = Spam()</p>
-<p>Verificando o valor booleano:</p>
-<p>&gt; bool(spam)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de objeto</span>
+<span class="n">spam</span> <span class="o">=</span> <span class="n">Spam</span><span class="p">()</span>
 
-<span class="go">O retorno foi verdadeiro, o método __bool__ prevalece.</span>
+<span class="c1"># Verificando o valor booleano</span>
+<span class="nb">bool</span><span class="p">(</span><span class="n">spam</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
+<p>O retorno foi verdadeiro, o método __bool__ prevalece.</p>
 </div>
 
 
