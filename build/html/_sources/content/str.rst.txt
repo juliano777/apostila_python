@@ -77,14 +77,16 @@ Strings de Múltiplas Linhas
 
 .. code-block:: python
 
-    # s1 = '''
+    # 
+    s1 = '''
     Um 
     exemplo
     de string
     de várias
     linhas
     '''
-
+    
+    # 
     s2 = """
     Um
     exemplo

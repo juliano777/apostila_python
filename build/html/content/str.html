@@ -259,29 +259,31 @@ Com a facilidade de se poder utilizar ambos torna o escape desnecessário para a
 <div class="section" id="strings-de-multiplas-linhas">
 <h2>5.3. Strings de Múltiplas Linhas<a class="headerlink" href="#strings-de-multiplas-linhas" title="Link permanente para este título">¶</a></h2>
 <p>É possível se fazer uma string de múltiplas linhas quando colocamos como fechamento e abertura três apóstrofos ou aspas.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># s1 = &#39;&#39;&#39;</span>
-<span class="n">Um</span>
-<span class="n">exemplo</span>
-<span class="n">de</span> <span class="n">string</span>
-<span class="n">de</span> <span class="n">várias</span>
-<span class="n">linhas</span>
-<span class="s1">&#39;&#39;&#39;</span>
-
-<span class="s1">s2 = &quot;&quot;&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">Um</span>
 <span class="s1">exemplo</span>
 <span class="s1">de string</span>
 <span class="s1">de várias</span>
 <span class="s1">linhas</span>
-<span class="s1">&quot;&quot;&quot;</span>
+<span class="s1">&#39;&#39;&#39;</span>
 
-<span class="s1"># Utilizando parênteses para um string longa sem quebrar linha</span>
-<span class="s1">s3 = (&#39;Um exemplo de string feito para não ultrapassar os setenta e nove &#39;</span>
-<span class="s1">      &#39;caracteres da PEP8 (Python Enhancement Proposal), Proposta de &#39;</span>
-<span class="s1">      &#39;aprimoramento do Python, que visa boas práticas de programação.&#39;)</span>
+<span class="c1">#</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Um</span>
+<span class="s2">exemplo</span>
+<span class="s2">de string</span>
+<span class="s2">de várias</span>
+<span class="s2">linhas</span>
+<span class="s2">&quot;&quot;&quot;</span>
 
-<span class="s1">#</span>
-<span class="s1">print(s3)</span>
+<span class="c1"># Utilizando parênteses para um string longa sem quebrar linha</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Um exemplo de string feito para não ultrapassar os setenta e nove &#39;</span>
+      <span class="s1">&#39;caracteres da PEP8 (Python Enhancement Proposal), Proposta de &#39;</span>
+      <span class="s1">&#39;aprimoramento do Python, que visa boas práticas de programação.&#39;</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Um exemplo de string feito para não ultrapassar os setenta e nove caracteres da PEP8 (Python Enhancement Proposal), Proposta de aprimoramento do Python, que visa boas práticas de programação.</span>
