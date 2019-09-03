@@ -439,22 +439,29 @@ Representações de Inteiros
 
     '0x0c8'
 
-> format(200, '#05X')
+.. code-block:: python
+
+    # 
+    format(200, '#05X')
 
 .. code-block:: console
 
     '0X0C8'
 
-n) Numérico; o mesmo que "d", exceto que ele usa as configurações de idioma (locale) para exibir caracteres:
+.. code-block:: python
 
-
-> format(31259.74, 'n')
+    # n) Numérico; o mesmo que "d", exceto que ele usa as configurações
+    # de idioma (locale) para exibir caracteres
+    format(31259.74, 'n')
 
 .. code-block:: console
 
     '31259.7'
 
-> format(31259.75, 'n')
+.. code-block:: python
+
+    # 
+    format(31259.75, 'n')
 
 .. code-block:: console
 
