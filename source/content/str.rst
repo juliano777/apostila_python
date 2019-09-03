@@ -486,15 +486,23 @@ Representações de Inteiros
 
     '1.000e+03'
 
-> format(1000, '.3E')
+.. code-block:: python
+
+    # 
+    format(1000, '.3E')
 
 .. code-block:: console
 
     '1.000E+03'
 
-"f" ou "F" faz exibição de número com ponto flutuante podendo determinar a precisão, cujo padrão é 6.
+.. code-block:: python
 
-> format(1000, '10.2f')
+    # "f" ou "F" faz exibição de número com ponto flutuante podendo determinar
+    # a precisão, cujo padrão é 6.
+
+.. code-block:: python
+
+    # format(1000, '10.2f')
 
 .. code-block:: console
 
