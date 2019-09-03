@@ -866,21 +866,29 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Ação</span>
 </pre></div>
 </div>
-<p>Pode-se também criar um objeto bytes a partir da classe:</p>
-<p>&gt; b = bytes(‘∑’.encode(‘utf-8’))</p>
-<p>Verificando o tipo:</p>
-<p>&gt; print(type(b))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pode-se também criar um objeto bytes a partir da classe</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="s1">&#39;∑&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando o tipo</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;class &#39;bytes&#39;&gt;</span>
 </pre></div>
 </div>
 <p>Uma byte string tem um tipo específico, bytes.</p>
-<p>Exibindo a byte string:</p>
-<p>&gt; print(b)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibindo a byte string</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">b&#39;\xe2\x88\x91&#39;</span>
 </pre></div>
 </div>
-<p>Decodificando para unicode:</p>
-<p>&gt; print(b.decode(‘utf-8’))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Decodificando para unicode</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">∑</span>
 </pre></div>
 </div>

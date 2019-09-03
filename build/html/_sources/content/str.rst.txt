@@ -709,16 +709,15 @@ As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
     Ação
 
+.. code-block:: python
 
+    # Pode-se também criar um objeto bytes a partir da classe
+    b = bytes('∑'.encode('utf-8'))
 
-Pode-se também criar um objeto bytes a partir da classe:
+.. code-block:: python
 
-> b = bytes('∑'.encode('utf-8'))
-
-
-Verificando o tipo:
-
-> print(type(b))
+    # Verificando o tipo
+    print(type(b))
 
 .. code-block:: console
 
@@ -727,19 +726,19 @@ Verificando o tipo:
 Uma byte string tem um tipo específico, bytes.
 
 
-Exibindo a byte string:
+.. code-block:: python
 
-> print(b)
+    # Exibindo a byte string
+    print(b)
 
 .. code-block:: console
 
     b'\xe2\x88\x91'
 
+.. code-block:: python
 
-
-Decodificando para unicode:
-
-> print(b.decode('utf-8'))
+    # Decodificando para unicode
+    print(b.decode('utf-8'))
 
 .. code-block:: console
 
