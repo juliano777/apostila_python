@@ -85,13 +85,13 @@ Strings de Múltiplas Linhas
     linhas
     '''
 
-> s2 = """
-Um 
-exemplo
-de string
-de várias 
-linhas
-"""
+    s2 = """
+    Um
+    exemplo
+    de string
+    de várias
+    linhas
+    """
 
 
 
