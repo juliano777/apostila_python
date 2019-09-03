@@ -1213,12 +1213,15 @@ Nota-se que o Id é diferente, pois agora é outro objeto.
     # Criando uma nova string com o mesmo nome 
     # da anterior via concatenação
 
-s += ' Sabbath'
+.. code-block:: python
 
+    # 
+    s += ' Sabbath'
 
-Id da nova variável:
+.. code-block:: python
 
-> id(s)
+    # Id da nova variável
+    id(s)
 
 .. code-block:: console
 
@@ -1226,10 +1229,10 @@ Id da nova variável:
 
 Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.
 
+.. code-block:: python
 
-Exibindo a string:
-
-> print(s)
+    # Exibindo a string
+    print(s)
 
 .. code-block:: console
 
@@ -1237,30 +1240,26 @@ Exibindo a string:
 
 
 Concatenação de Strings em Loops
-
+--------------------------------
 
 Método 1 - Ineficaz
+~~~~~~~~~~~~~~~~~~~
 
+.. code-block:: python
 
-Criação de uma string vazia:
+    # Criação de uma string vazia
+    s = ''
 
-> s = ''
+    # Loop de concatenação
+    for i in range(50):
+        s += str(i)
 
-
-
-Loop de concatenação
-
-> for i in range(50):
-    s += str(i)
-
-
-String pronta:
-
-> s
+    # String pronta
+    print(s)
 
 .. code-block:: console
 
-    '012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849'
+    012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849
 
 Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
 Isso faz muita alocação de memória, o que torna o desempenho horrível para coisas maiores.
