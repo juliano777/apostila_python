@@ -243,18 +243,20 @@ complex
 
     # Número complexo somente com a parte real
 	c = complex(1)
+	print(c)
 
+.. code-block:: console
 
-> c
-
-(1+0j)
+    (1+0j)
 
 .. code-block:: python
 
     # Verificando seu valor e seu tipo
 	type(c)
 
-complex
+.. code-block:: console
+
+    complex
 
 .. code-block:: python
 
@@ -266,7 +268,9 @@ complex
     # 
 	c  # Verificando o valor
 
-(5+3j)
+.. code-block:: console
+
+    (5+3j)
 
 
 .. code-block:: python
@@ -279,35 +283,45 @@ complex
     # 
 	c  # Verificando seu valor
 
-3j
+.. code-block:: console
+
+    3j
 
 .. code-block:: python
 
     # 
 	c.imag  # Extraindo somente a parte imaginária
 
-3.0
+.. code-block:: console
+
+    3.0
 
 .. code-block:: python
 
     # 
 	c.real  # Extraindo somente a parte real
 
-0.0
+.. code-block:: console
+
+    0.0
 
 .. code-block:: python
 
     # 
 	c + 1  # Somando o número com a parte real
 
-(1+3j)
+.. code-block:: console
+
+    (1+3j)
 
 .. code-block:: python
 
     # 
 	c + complex('7j')  # Somando o número com a parte imaginária
 
-10j
+.. code-block:: console
+
+    10j
 
 .. code-block:: python
 

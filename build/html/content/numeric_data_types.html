@@ -360,15 +360,19 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte real</span>
     <span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>&gt; c</p>
-<p>(1+0j)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1+0j)</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu valor e seu tipo</span>
     <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>complex</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">complex</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Novo valor do número complexo com parte real e imaginária</span>
     <span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -377,7 +381,9 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
     <span class="n">c</span>  <span class="c1"># Verificando o valor</span>
 </pre></div>
 </div>
-<p>(5+3j)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(5+3j)</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte imaginária</span>
     <span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -386,27 +392,37 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
     <span class="n">c</span>  <span class="c1"># Verificando seu valor</span>
 </pre></div>
 </div>
-<p>3j</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3j</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
     <span class="n">c</span><span class="o">.</span><span class="n">imag</span>  <span class="c1"># Extraindo somente a parte imaginária</span>
 </pre></div>
 </div>
-<p>3.0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.0</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
     <span class="n">c</span><span class="o">.</span><span class="n">real</span>  <span class="c1"># Extraindo somente a parte real</span>
 </pre></div>
 </div>
-<p>0.0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0.0</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
     <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Somando o número com a parte real</span>
 </pre></div>
 </div>
-<p>(1+3j)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1+3j)</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
     <span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;7j&#39;</span><span class="p">)</span>  <span class="c1"># Somando o número com a parte imaginária</span>
 </pre></div>
 </div>
-<p>10j</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10j</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
     <span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>  <span class="c1"># somando o número complexo com outro complexo</span>
 </pre></div>
