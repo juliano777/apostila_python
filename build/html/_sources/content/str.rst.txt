@@ -280,17 +280,16 @@ Métodos String e de Representação
 
     Em objetos temos os dunders str e repr ("__str__" e "__repr__") que podem ser usados em uma string.
 
+.. code-block:: python
 
+    # Criação de uma classe de exemplo
+    class Foo(object):
 
-Criação de uma classe de exemplo:
+        def __str__(self):
+            return 'STRING'
 
-> class Foo(object):
-
-    def __str__(self):
-        return 'STRING'
-
-    def __repr__(self):
-        return 'REPRESENTAÇÃO'
+        def __repr__(self):
+            return 'REPRESENTAÇÃO'
 
 
 

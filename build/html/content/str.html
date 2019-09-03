@@ -529,16 +529,16 @@ Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%), p
 <blockquote>
 <div><p>Em objetos temos os dunders str e repr (“__str__” e “__repr__”) que podem ser usados em uma string.</p>
 </div></blockquote>
-<p>Criação de uma classe de exemplo:</p>
-<p>&gt; class Foo(object):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def __str__(self):</dt><dd><p>return ‘STRING’</p>
-</dd>
-<dt>def __repr__(self):</dt><dd><p>return ‘REPRESENTAÇÃO’</p>
-</dd>
-</dl>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma classe de exemplo</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;STRING&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;REPRESENTAÇÃO&#39;</span>
+</pre></div>
+</div>
 <p>Valores dos métodos __str__ e __repr__ da classe Foo:</p>
 <p>&gt; ‘%s %r’ % (Foo(), Foo())</p>
 <p>&gt; ‘{0!s} {0!r}’.format(Foo())</p>
