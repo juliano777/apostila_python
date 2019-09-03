@@ -97,7 +97,8 @@ Strings de Múltiplas Linhas
 
     s3 = ('Um exemplo de string feito para não ultrapassar os setenta \n'
           'e nove caracteres da PEP8 (Python Enhancement Proposal), \n'
-          'Proposta de aprimoramento do Python, que visa boas práticas de programação.')
+          'Proposta de aprimoramento do Python, \n'
+          'que visa boas práticas de programação.')
 
     # 
     print(s3)
