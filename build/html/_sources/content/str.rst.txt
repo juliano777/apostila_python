@@ -688,6 +688,8 @@ As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
 .. code-block:: console
 
+    Sem caracteres especiais
+
 .. code-block:: python
 
     # Sem caracteres especiais
