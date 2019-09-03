@@ -136,7 +136,7 @@ Caracteres Especiais
 
 
 +----------------------+-------------------------------------------------------+-------------------------+------------------------+
-| ``\f``               | ASCII formfeed (FF)                                   | ``'foo\fbar'``          |.. code-block: console  |
+| ``\f``               | ASCII formfeed (FF)                                   | ``'foo\fbar'``          |.. code-block:: console |
 |                      |                                                       |                         |                        |
 |                      |                                                       |                         |    foo                 |
 |                      |                                                       |                         |       bar              |
