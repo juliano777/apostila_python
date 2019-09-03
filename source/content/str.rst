@@ -106,9 +106,8 @@ Strings de Múltiplas Linhas
 .. code-block:: console
 
     Um exemplo de string feito para não ultrapassar os setenta 
-e nove caracteres da PEP8 (Python Enhancement Proposal), 
-Proposta de aprimoramento do Python, que visa boas práticas de programação.
-
+    e nove caracteres da PEP8 (Python Enhancement Proposal), 
+    Proposta de aprimoramento do Python, que visa boas práticas de programação.
 
 
 Caracteres Especiais
