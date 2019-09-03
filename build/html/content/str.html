@@ -112,7 +112,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#docstrings">5.11. Docstrings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#imutabilidade">5.12. Imutabilidade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#metodos-de-strings">5.13. Métodos de Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concatenacao-de-strings-em-loops">5.13. Concatenação de Strings em Loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metodo-1-ineficaz">5.13.1. Método 1 - Ineficaz</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-de-strings">5.14. Métodos de Strings</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
@@ -1291,30 +1295,42 @@ Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ o
 <span class="c1"># da anterior via concatenação</span>
 </pre></div>
 </div>
-<p>s += ‘ Sabbath’</p>
-<p>Id da nova variável:</p>
-<p>&gt; id(s)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; Sabbath&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Id da nova variável</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">140159122296368</span>
 </pre></div>
 </div>
 <p>Novamente nota-se que o Id é diferente, pois é na verdade um novo objeto.</p>
-<p>Exibindo a string:</p>
-<p>&gt; print(s)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibindo a string</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Black Sabbath</span>
 </pre></div>
 </div>
-<p>Concatenação de Strings em Loops</p>
-<p>Método 1 - Ineficaz</p>
-<p>Criação de uma string vazia:</p>
-<p>&gt; s = ‘’</p>
-<p>Loop de concatenação</p>
-<dl class="simple">
-<dt>&gt; for i in range(50):</dt><dd><p>s += str(i)</p>
-</dd>
-</dl>
-<p>String pronta:</p>
-<p>&gt; s</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&#39;</span>
+</div>
+<div class="section" id="concatenacao-de-strings-em-loops">
+<h2>5.13. Concatenação de Strings em Loops<a class="headerlink" href="#concatenacao-de-strings-em-loops" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="metodo-1-ineficaz">
+<h3>5.13.1. Método 1 - Ineficaz<a class="headerlink" href="#metodo-1-ineficaz" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma string vazia</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Loop de concatenação</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># String pronta</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849</span>
 </pre></div>
 </div>
 <p>Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
@@ -1343,8 +1359,9 @@ Isso faz muita alocação de memória, o que torna o desempenho horrível para c
 No final é utilizado o método de string join que utiliza como separador uma string vazia (‘’) juntando em uma string (o novo s) todos os valores da lista.
 A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o método append apenas adiciona um novo elemento, de forma rápida e eficiente. O método join, que é escrito em C, que faz a junção de todos elementos concatenando em um único passo.Muito melhor do que o método anterior em que um novo objeto é criado a cada iteração.</p>
 </div>
+</div>
 <div class="section" id="metodos-de-strings">
-<h2>5.13. Métodos de Strings<a class="headerlink" href="#metodos-de-strings" title="Link permanente para este título">¶</a></h2>
+<h2>5.14. Métodos de Strings<a class="headerlink" href="#metodos-de-strings" title="Link permanente para este título">¶</a></h2>
 <ul class="simple">
 <li><p>join; junta elementos de uma lista ou tupla utlizando uma string.</p></li>
 </ul>
