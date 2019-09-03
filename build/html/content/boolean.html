@@ -275,23 +275,24 @@ Todos outros valores são considerados verdadeiros, então objetos de muitos tip
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<p>True AND False:</p>
-<p>&gt; bool(foo) &amp; bool(bar)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># True AND False</span>
+<span class="nb">bool</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<p>Classe para testar os métodos __bool__ e __len__:</p>
-<dl>
-<dt>&gt; class Spam(object):</dt><dd><dl class="simple">
-<dt>def __bool__(self):</dt><dd><p>return True</p>
-</dd>
-<dt>def __len__(self):</dt><dd><p>return 0</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classe para testar os métodos __bool__ e __len__</span>
+<span class="k">class</span> <span class="nc">Spam</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
 <p>O método __bool__ retorna um valor verdadeiro e o método __len__ um falso.
 Com ambos declarados na mesma classe, um objeto dela o que retornará?</p>
-</dd>
-</dl>
 <p>Criação de objeto:</p>
 <p>&gt; spam = Spam()</p>
 <p>Verificando o valor booleano:</p>

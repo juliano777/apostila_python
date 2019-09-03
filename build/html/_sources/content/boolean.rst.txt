@@ -112,27 +112,27 @@ Booleanos
 
     True
 
-True AND False:
+.. code-block:: python
 
-> bool(foo) & bool(bar)
+    # True AND False
+    bool(foo) & bool(bar)
 
 .. code-block:: console
 
     False
 
+.. code-block:: python
 
+    # Classe para testar os métodos __bool__ e __len__
+    class Spam(object):
+        def __bool__(self):
+            return True
 
-Classe para testar os métodos __bool__ e __len__:
+        def __len__(self):
+            return 0
 
-> class Spam(object):
-    def __bool__(self):
-        return True
-
-    def __len__(self):
-        return 0
-
-    O método __bool__ retorna um valor verdadeiro e o método __len__ um falso.
-    Com ambos declarados na mesma classe, um objeto dela o que retornará?
+O método __bool__ retorna um valor verdadeiro e o método __len__ um falso.
+Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
 
 
