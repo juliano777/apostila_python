@@ -813,8 +813,10 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </pre></div>
 </div>
 <p>As strings que tinham caracteres especiais ficaram um tanto “estranhas”…</p>
-<p><code class="docutils literal notranslate"><span class="pre">\xc3\xa3</span> <span class="pre">-&gt;</span> <span class="pre">ã</span></code>
-<code class="docutils literal notranslate"><span class="pre">\xc3\xa7</span> <span class="pre">-&gt;</span> <span class="pre">ç</span></code></p>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">\xc3\xa3</span> <span class="pre">-&gt;</span> <span class="pre">ã</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">\xc3\xa7</span> <span class="pre">-&gt;</span> <span class="pre">ç</span></code></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conversão de bytes</span>
 <span class="k">print</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xc3\xa3</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
 </pre></div>
