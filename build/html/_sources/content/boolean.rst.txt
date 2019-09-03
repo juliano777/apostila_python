@@ -106,15 +106,17 @@ True AND (NOT False):
 
 > bool(foo) & (not bool(bar))
 
-True
+.. code-block:: console
 
-
+    True
 
 True AND False:
 
 > bool(foo) & bool(bar)
 
-False
+.. code-block:: console
+
+    False
 
 
 
@@ -137,11 +139,12 @@ Criação de objeto:
 > spam = Spam()
 
 
-
 Verificando o valor booleano:
 
 > bool(spam)
 
-True
+.. code-block:: console
+
+    True
 
     O retorno foi verdadeiro, o método __bool__ prevalece.

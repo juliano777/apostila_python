@@ -235,10 +235,14 @@ Todos outros valores são considerados verdadeiros, então objetos de muitos tip
 <p>False</p>
 <p>True AND (NOT False):</p>
 <p>&gt; bool(foo) &amp; (not bool(bar))</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>True AND False:</p>
 <p>&gt; bool(foo) &amp; bool(bar)</p>
-<p>False</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>Classe para testar os métodos __bool__ e __len__:</p>
 <dl>
 <dt>&gt; class Spam(object):</dt><dd><dl class="simple">
@@ -255,10 +259,11 @@ Com ambos declarados na mesma classe, um objeto dela o que retornará?</p>
 <p>&gt; spam = Spam()</p>
 <p>Verificando o valor booleano:</p>
 <p>&gt; bool(spam)</p>
-<p>True</p>
-<blockquote>
-<div><p>O retorno foi verdadeiro, o método __bool__ prevalece.</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+
+<span class="go">O retorno foi verdadeiro, o método __bool__ prevalece.</span>
+</pre></div>
+</div>
 </div>
 
 
