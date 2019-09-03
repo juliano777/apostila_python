@@ -20,27 +20,24 @@ Booleanos
 
     True
 
+.. code-block:: python
 
+    # Definindo a variável como False de forma indireta
+    b = bool(0)
 
-Definindo a variável como False de forma indireta:
-
-> b = bool(0)
-
-
-
-Verificando o valor da variável:
-
-> b
-
+    # Verificando o valor da variável
+    print(b)
+    
 .. code-block:: console
 
     False
 
+.. code-block:: python
 
+    # Teste usando a lógica OR
+    .. code-block:: python
 
-Teste usando a lógica OR:
-
-> True | False
+    # True | False
 
 .. code-block:: console
 
