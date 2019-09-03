@@ -225,9 +225,10 @@ ou
 
     '70 90'    
 
-Interpolação pegando o valor de um dicionário:
+.. code-block:: python
 
-> print('%(variavel)s' % {'variavel': 'valor'})
+    # Interpolação pegando o valor de um dicionário
+    print('%(variavel)s' % {'variavel': 'valor'})
 
 .. code-block:: console
 
