@@ -203,20 +203,20 @@ complex
 
     É o tipo de dados em Python que trata de números complexos, que são muito utilizados em engenharia elétrica.
 
+.. code-block:: python
 
-Número complexo somente com a parte real:
+    # Número complexo somente com a parte real
+	c = complex(1)
 
-> c = complex(1)
-
-
-
-Verificando seu valor e seu tipo:
 
 > c
 
 (1+0j)
 
-> type(c)
+.. code-block:: python
+
+    # Verificando seu valor e seu tipo
+	type(c)
 
 complex
 
