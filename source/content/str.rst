@@ -254,9 +254,10 @@ ou
     Preco: R$ 3.50
     Cód: 00157
 
-Exibindo o resultado via método format:
+.. code-block:: python
 
-> print(foo.format(**d))
+    # Exibindo o resultado via método format
+    print(foo.format(**d))
 
 .. code-block:: console
 
