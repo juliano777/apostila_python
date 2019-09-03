@@ -1319,16 +1319,14 @@ Métodos de Strings
 
     ['P', 'y', 't', 'h', 'o', 'n']
 
+.. code-block:: python
 
+    # Criação de uma nova variável juntando os elementos
+    # da lista com uma string vazia
+    bar = ''.join(foo)
 
-Criação de uma nova variável juntando os elementos da lista com uma string vazia:
-
-> bar = ''.join(foo)
-
-
-Exibindo a nova string:
-
-> print(bar)
+    # Exibindo a nova string
+    print(bar)
 
 .. code-block:: console
 
