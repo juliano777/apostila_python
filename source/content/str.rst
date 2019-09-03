@@ -95,8 +95,7 @@ Strings de Múltiplas Linhas
     linhas
     """
 
-    # Utilizando parênteses para um string longa sem quebrar linha
-    s3 = ('Um exemplo de string feito para não ultrapassar os setenta e nove '
+    s3 = ('Um exemplo de string feito para não ultrapassar os setenta \ne nove '
           'caracteres da PEP8 \n(Python Enhancement Proposal), Proposta de '
           'aprimoramento do Python, que visa boas práticas de programação.')
 
