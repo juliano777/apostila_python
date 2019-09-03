@@ -1307,16 +1307,13 @@ Métodos de Strings
 
 - join; junta elementos de uma lista ou tupla utlizando uma string.
 
+.. code-block:: python
 
+    # Criação de uma lista
+    foo = list('Python')
 
-Criação de uma lista:
-
-> foo = list('Python')
-
-
-Exibe a lista:
-
-> print(foo)
+    # Exibe a lista
+    print(foo)
 
 .. code-block:: console
 
