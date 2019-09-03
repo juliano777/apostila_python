@@ -57,20 +57,18 @@ Dois exemplos com print de strings com aspas e apóstrofos dentro:
     Uma string que contém 'apóstrofos' em si
 
 
+.. code-block:: python
 
-Um caso clássico é em strings com um comando SQL:
+    # Um caso clássico é em strings com um comando SQL
+    sql = "SELECT * FROM tb_musica WHERE artista = 'Mozart';"
 
-> sql = "SELECT * FROM musica WHERE artista = 'Mozart';"
-
-
-
-Exibindo o conteúdo da variável:
-
-> print(sql)
+    # Exibindo o conteúdo da variável:
+    print(sql)
 
 .. code-block:: console
 
-    SELECT * FROM musica WHERE artista = 'Mozart';
+    SELECT * FROM tb_musica WHERE artista = 'Mozart';
+    
 
 Strings de Múltiplas Linhas
 ---------------------------

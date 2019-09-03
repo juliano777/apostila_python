@@ -245,11 +245,14 @@ Com a facilidade de se poder utilizar ambos torna o escape desnecessário para a
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Uma string que contém &#39;apóstrofos&#39; em si</span>
 </pre></div>
 </div>
-<p>Um caso clássico é em strings com um comando SQL:</p>
-<p>&gt; sql = “SELECT * FROM musica WHERE artista = ‘Mozart’;”</p>
-<p>Exibindo o conteúdo da variável:</p>
-<p>&gt; print(sql)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">SELECT * FROM musica WHERE artista = &#39;Mozart&#39;;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Um caso clássico é em strings com um comando SQL</span>
+<span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM tb_musica WHERE artista = &#39;Mozart&#39;;&quot;</span>
+
+<span class="c1"># Exibindo o conteúdo da variável:</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">SELECT * FROM tb_musica WHERE artista = &#39;Mozart&#39;;</span>
 </pre></div>
 </div>
 </div>
