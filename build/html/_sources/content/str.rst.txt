@@ -1055,36 +1055,36 @@ Docstrings
 	É muito útil para fins de documentação.
 	Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ ou a função help.
 
-Criação de uma função:
+.. code-block:: python
 
-> def foo():
-    'Uma simples função'
+    # Criação de uma função
+    def foo():
+        'Uma simples função'
 
-Exibe a docstring da função:
+.. code-block:: python
 
-> print(foo.__doc__)
+    # Exibe a docstring da função
+    print(foo.__doc__)
 
 .. code-block:: console
 
     Uma simples função
 
+.. code-block:: python
 
+    # Criação de função
+    def bar():
+        '''
+        Mais outra
+        função
+        que não faz
+        nada
+        '''
 
-Criação de função:
+.. code-block:: python
 
-> def bar():
-    '''
-    Mais outra
-    função
-    que não faz 
-    nada
-    '''
-
-
-
-Exibe a docstring da função:
-
-> print(bar.__doc__)
+    # Exibe a docstring da função
+    print(bar.__doc__)
 
 .. code-block:: console
 
@@ -1093,30 +1093,29 @@ Exibe a docstring da função:
     que não faz 
     nada
 
+.. code-block:: python
 
+    # Criação de uma classe
+    class Foo(object):
+        '''
+        Uma classe
+        de teste
+        '''
 
-Criação de uma classe:
+.. code-block:: python
 
-> class Foo(object):
-    '''
-    Uma classe
-    de teste
-    '''
-
-
-Exibe a docstring da classe:    
-
-> print(Foo.__doc__)
+    # Exibe a docstring da classe
+    print(Foo.__doc__)
 
 .. code-block:: console
 
     Uma classe
     de teste
 
+.. code-block:: python
 
-Help da classe:
-
-> help(Foo)
+    # Help da classe:
+    help(Foo)
 
 .. code-block:: console
 

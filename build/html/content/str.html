@@ -1159,50 +1159,58 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 É muito útil para fins de documentação.
 Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ ou a função help.</p>
 </div></blockquote>
-<p>Criação de uma função:</p>
-<dl class="simple">
-<dt>&gt; def foo():</dt><dd><p>‘Uma simples função’</p>
-</dd>
-</dl>
-<p>Exibe a docstring da função:</p>
-<p>&gt; print(foo.__doc__)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma função</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="s1">&#39;Uma simples função&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibe a docstring da função</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Uma simples função</span>
 </pre></div>
 </div>
-<p>Criação de função:</p>
-<dl class="simple">
-<dt>&gt; def bar():</dt><dd><p>‘’’
-Mais outra
-função
-que não faz
-nada
-‘’‘</p>
-</dd>
-</dl>
-<p>Exibe a docstring da função:</p>
-<p>&gt; print(bar.__doc__)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de função</span>
+<span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Mais outra</span>
+<span class="sd">    função</span>
+<span class="sd">    que não faz</span>
+<span class="sd">    nada</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibe a docstring da função</span>
+<span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Mais outra</span>
 <span class="go">função</span>
 <span class="go">que não faz</span>
 <span class="go">nada</span>
 </pre></div>
 </div>
-<p>Criação de uma classe:</p>
-<dl class="simple">
-<dt>&gt; class Foo(object):</dt><dd><p>‘’’
-Uma classe
-de teste
-‘’‘</p>
-</dd>
-</dl>
-<p>Exibe a docstring da classe:</p>
-<p>&gt; print(Foo.__doc__)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma classe</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Uma classe</span>
+<span class="sd">    de teste</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibe a docstring da classe</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Foo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Uma classe</span>
 <span class="go">de teste</span>
 </pre></div>
 </div>
-<p>Help da classe:</p>
-<p>&gt; help(Foo)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Help da classe:</span>
+<span class="n">help</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Help on class Foo in module __main__:</span>
 
 <span class="go">class Foo(__builtin__.object)</span>
