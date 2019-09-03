@@ -80,7 +80,10 @@ Algumas coisas "estranhas":
 
     Decimal('1.56')
 
-> Decimal('1.30') * Decimal('1.20')
+.. code-block:: python
+
+    # 
+    Decimal('1.30') * Decimal('1.20')
 
 .. code-block:: console
 
@@ -88,47 +91,47 @@ Algumas coisas "estranhas":
 
     O último retorno foi com um número com 4 (quatro) casas decimais.
 
-
-
 A função getcontext, com o atributo "prec" (precision) ajusta a quantidade máxima de dígitos (antes e depois do ponto flutuante) para 3 (três):
 
-> getcontext().prec = 3
+.. code-block:: python
 
-    A precisão vai ser refletida em operações com o módulo decimal.
-    Caso seja necessário o número será arredondado.
+    # 
+    getcontext().prec = 3
 
+A precisão vai ser refletida em operações com o módulo decimal.
+Caso seja necessário o número será arredondado.
 
+.. code-block:: python
 
-Operação de multiplicação de números com ponto flutuante:
-
-> Decimal('1.300') * Decimal('1.200')
+    # Operação de multiplicação de números com ponto flutuante
+    Decimal('1.300') * Decimal('1.200')
 
 .. code-block:: console
 
     Decimal('1.56')
 
+.. code-block:: python
 
+    # Ajustando a precisão para 10 (dez)
+    getcontext().prec = 10
 
-Ajustando a precisão para 10 (dez):
-
-> getcontext().prec = 10
-
-> Decimal('1.3897') * 2
+    # 
+    Decimal('1.3897') * 2
 
 .. code-block:: console
 
     Decimal('2.7794')
 
+.. code-block:: python
 
+    # Ajustando a precisão para 3 (três)
+    getcontext().prec = 3
 
-Ajustando a precisão para 3 (três):
-
-> getcontext().prec = 3
-
-> Decimal('1.3897') * 2
+    # 
+    Decimal('1.3897') * 2
 
 .. code-block:: console
 
     Decimal('2.78')
 
-    Nota-se que foi feito um arredondamento do número.
+Nota-se que foi feito um arredondamento do número.
