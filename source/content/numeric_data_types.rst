@@ -62,19 +62,24 @@ long
 
 14
 
+.. code-block:: python
 
-
-Número 7 (sete) convertido para as bases binária, octal e hexadecimal:
-
-> bin(7)  # binário
+    # Número 7 (sete) convertido para as bases binária, octal e hexadecimal
+	bin(7)  # binário
 
 '0b111'
 
-> oct(7)
+.. code-block:: python
+
+    # 
+	oct(7)
 
 '0o7'
 
-> hex(7)
+.. code-block:: python
+
+    # 
+	hex(7)
 
 '0x7'
 
