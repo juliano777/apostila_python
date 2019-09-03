@@ -1187,9 +1187,10 @@ Imutabilidade
 
 Nota-se que o Id é diferente, pois agora é outro objeto.
 
-Exibindo o valor da variável:
+.. code-block:: python
 
-> print(foo)
+    # Exibindo o valor da variável
+    print(foo)
 
 .. code-block:: console
 
