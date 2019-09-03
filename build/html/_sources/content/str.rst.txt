@@ -979,45 +979,68 @@ Split
     ['Curso ', ' Python']
 
 
-Slice - Corte de string - 'string'[inicio:fim - 1:incremento]:
+Slice
+~~~~~
+|    Corte de string - 'string'[inicio:fim - 1:incremento]:
 
-> print("Curso de Python”[0])
+.. code-block:: python
+
+    # 
+    print("Curso de Python”[0])
 
 .. code-block:: console
 
     'C'
 
-> print("Curso de Python"[1:5])
+.. code-block:: python
+
+    # 
+    print("Curso de Python"[1:5])
 
 .. code-block:: console
 
     'urso'
 
-> print("Curso de Python"[1:5:2])
+.. code-block:: python
+
+    # 
+    print("Curso de Python"[1:5:2])
 
 .. code-block:: console
 
     'us'
 
-> print("Curso de Python"[9:])
+.. code-block:: python
+
+    # 
+    print("Curso de Python"[9:])
 
 .. code-block:: console
 
     'Python'
 
-> print("Curso de Python"[:5])
+.. code-block:: python
+
+    # 
+    print("Curso de Python"[:5])
 
 .. code-block:: console
 
     'Curso'
 
-> print("Curso de Python"[::])
+.. code-block:: python
+
+    # 
+    print("Curso de Python"[::])
 
 .. code-block:: console
 
     'Curso de Python'
 
-> print("Curso de Python"[::-1]) # String reversa
+.. code-block:: python
+
+    # 
+    print("Curso de Python"[::-1]) # String reversa
 
 .. code-block:: console
 

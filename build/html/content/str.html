@@ -107,6 +107,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#concatenacao">5.10.1. Concatenação</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#multiplicacao">5.10.2. Multiplicação</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#split">5.10.3. Split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slice">5.10.4. Slice</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#docstrings">5.11. Docstrings</a></li>
@@ -1094,32 +1095,58 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;Curso &#39;, &#39; Python&#39;]</span>
 </pre></div>
 </div>
-<p>Slice - Corte de string - ‘string’[inicio:fim - 1:incremento]:</p>
-<p>&gt; print(“Curso de Python”[0])</p>
+</div>
+<div class="section" id="slice">
+<h3>5.10.4. Slice<a class="headerlink" href="#slice" title="Link permanente para este título">¶</a></h3>
+<div class="line-block">
+<div class="line">Corte de string - ‘string’[inicio:fim - 1:incremento]:</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso de Python”[0])</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;C&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(“Curso de Python”[1:5])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso de Python&quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;urso&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(“Curso de Python”[1:5:2])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso de Python&quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;us&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(“Curso de Python”[9:])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso de Python&quot;</span><span class="p">[</span><span class="mi">9</span><span class="p">:])</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Python&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(“Curso de Python”[:5])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso de Python&quot;</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Curso&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(“Curso de Python”[::])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso de Python&quot;</span><span class="p">[::])</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Curso de Python&#39;</span>
 </pre></div>
 </div>
-<p>&gt; print(“Curso de Python”[::-1]) # String reversa</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Curso de Python&quot;</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># String reversa</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;nohtyP ed osruC&#39;</span>
 </pre></div>
 </div>
