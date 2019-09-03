@@ -1264,9 +1264,8 @@ Método 1 - Ineficaz
 Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
 Isso faz muita alocação de memória, o que torna o desempenho horrível para coisas maiores.
 
-
-
-Método 2 Eficaz
+Método 2 - Eficaz
+~~~~~~~~~~~~~~~~~
 
 
 Criação de uma lista vazia:

@@ -114,6 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#imutabilidade">5.12. Imutabilidade</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#concatenacao-de-strings-em-loops">5.13. Concatenação de Strings em Loops</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#metodo-1-ineficaz">5.13.1. Método 1 - Ineficaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metodo-2-eficaz">5.13.2. Método 2 - Eficaz</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#metodos-de-strings">5.14. Métodos de Strings</a></li>
@@ -1335,7 +1336,9 @@ Para visualizar o conteúdo dessa string utiliza-se o atributo mágico __doc__ o
 </div>
 <p>Para cada iteração a referência do objeto antigo é retirada e sendo criado um novo a partir do resultado da concatenação do valor antigo com o valor de do atual e o garbage collector é acionado.
 Isso faz muita alocação de memória, o que torna o desempenho horrível para coisas maiores.</p>
-<p>Método 2 Eficaz</p>
+</div>
+<div class="section" id="metodo-2-eficaz">
+<h3>5.13.2. Método 2 - Eficaz<a class="headerlink" href="#metodo-2-eficaz" title="Link permanente para este título">¶</a></h3>
 <p>Criação de uma lista vazia:</p>
 <p>&gt; s = []</p>
 <p>Loop de concatenação:</p>
