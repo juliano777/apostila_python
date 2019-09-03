@@ -27,38 +27,38 @@ ou
 
 7
 
+.. code-block:: python
 
-
-Verificando seu tipo:
-
-> type(i)
+    # Verificando seu tipo
+	type(i)
 
 int
 
-type(bar)
+.. code-block:: python
+
+    # 
+	type(bar)
+
 long
 
+.. code-block:: python
 
-
-Representação hexadecimal de 178:
-
-> 0xb2
+    # Representação hexadecimal de 178
+	0xb2
 
 178
 
+.. code-block:: python
 
-
-Representação octal de 8:
-
-> 0o10
+    # Representação octal de 8
+	0o10
 
 8
 
+.. code-block:: python
 
-
-Representação binária de 14:
-
-> 0b1110
+    # Representação binária de 14
+	0b1110
 
 14
 
