@@ -323,15 +323,12 @@ Preenchimento (padding) e Alinhamento de Strings
 
     '    foo'
 
+.. code-block:: python
 
-
-Alinhamento à esquerda dentro de 7 colunas:
-
-> '%-7s' % 'foo'
-
-> '{:7}'.format('foo')
-
-> '{:<7}'.format('foo')
+    # Alinhamento à esquerda dentro de 7 colunas
+    '%-7s' % 'foo'  # interpolação
+    '{:7}'.format('foo')  # format
+    '{:<7}'.format('foo')
 
 .. code-block:: console
 
