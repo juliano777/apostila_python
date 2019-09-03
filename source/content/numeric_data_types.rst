@@ -179,21 +179,27 @@ ou
 
 
 
-Divisão Inteira:
 
-> 3 // 2.0
+
+.. code-block:: python
+
+    # Divisão Inteira
+	3 // 2.0
 
 1.0
 
 
+.. code-block:: python
 
-Notação Científica:
-
-> 1e+2
+    # Notação Científica
+	1e+2
 
 100.0
 
-> 1e-3
+.. code-block:: python
+
+    # 
+	1e-3
 
 0.001
 
