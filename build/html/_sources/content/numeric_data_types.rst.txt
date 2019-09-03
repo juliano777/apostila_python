@@ -83,22 +83,26 @@ long
 
 '0x7'
 
+.. code-block:: python
 
-
-Descobrir o decimal dada uma base:
-
-> int('facada', base=16)
+    # Descobrir o decimal dada uma base
+	int('facada', base=16)
 
 16435930
 
-> int('25', base=8)
+.. code-block:: python
+
+    # 
+	int('25', base=8)
 
 21
 
-> int('1111', base=2)
+.. code-block:: python
+
+    # 
+	int('1111', base=2)
 
 15
-
 
 
 float
@@ -109,15 +113,20 @@ float
 
 
 
-Criação de um float:
+.. code-block:: python
 
-> f = float(3)
+    # Criação de um float
+	f = float(3)
 
 ou
 
-> f = 3.0
+.. code-block:: python
 
-> f  # Veririca o valor
+    f = 3.0
+
+.. code-block:: python
+
+    f  # Veririca o valor
 
 3.0
 
