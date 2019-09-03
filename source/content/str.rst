@@ -211,13 +211,33 @@ ou
 
 
 
+
+
+
+.. code-block:: python
+
+    # Valores numéricos decimais (interpolação)
+    '%s %s' % ('foo', 'bar')
+
+ou
+
+.. code-block:: python
+
+    # Valores numéricos decimais (método format)
+    '{} {}'.format('foo', 'bar')    
+
+.. code-block:: console
+
+    'foo bar'    
+
+
+
   
 
 
 
 
 
-Valores numéricos decimais:
 
 > '%d %d' % (70, 90)
 
