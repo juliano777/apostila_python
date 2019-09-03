@@ -362,29 +362,27 @@ Preenchimento (padding) e Alinhamento de Strings
 
     '____foo'
 
+.. code-block:: python
 
-
-Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere "_":
-
-> '{:^7}'.format('foo')
+    # Alinhamento centralizado dentro de 7 colunas preenchendo com o caractere "_"
+    '{:^7}'.format('foo')
 
 .. code-block:: console
 
     '__foo__'
 
+.. code-block:: python
 
-
-Número decimal:
-
-> '{:.3f}'.format(93.85741)
+    # Número decimal
+    '{:.3f}'.format(93.85741)
 
 .. code-block:: console
 
     '93.857'
 
+.. code-block:: python
 
-
-> '{:.3f}'.format(70000)
+    # '{:.3f}'.format(70000)
 
 .. code-block:: console
 
