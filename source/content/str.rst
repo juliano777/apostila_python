@@ -291,13 +291,10 @@ Métodos String e de Representação
         def __repr__(self):
             return 'REPRESENTAÇÃO'
 
-
-
-Valores dos métodos __str__ e __repr__ da classe Foo:
-
-> '%s %r' % (Foo(), Foo())
-
-> '{0!s} {0!r}'.format(Foo())
+    
+    # Valores dos métodos __str__ e __repr__ da classe Foo
+    '%s %r' % (Foo(), Foo())  # interpolação
+    '{0!s} {0!r}'.format(Foo())  # format
 
 .. code-block:: console
 
