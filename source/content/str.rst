@@ -393,25 +393,28 @@ Preenchimento (padding) e Alinhamento de Strings
 Representações de Inteiros 
 --------------------------
 
-b) Formato binário; número de saída na base 2:
+.. code-block:: python
 
-> format(10, '#05b')
+    # b) Formato binário; número de saída na base 2
+    format(10, '#05b')
 
 .. code-block:: console
 
     '0b1010'
 
-c) Caractere; converte o inteiro para o caractere unicode correspondente:
+.. code-block:: python
 
-> format(93, 'c')
+    # c) Caractere; converte o inteiro para o caractere unicode correspondente:
+    format(93, 'c')
 
 .. code-block:: console
 
     ']'
 
-d) Inteiro Decimal; saída numérica na base 10 (decimal):
+.. code-block:: python
 
-> format(0b111, '#05d')
+    # d) Inteiro Decimal; saída numérica na base 10 (decimal):
+    format(0b111, '#05d')
 
 .. code-block:: console
 
