@@ -20,15 +20,17 @@ O Módulo decimal
     # Criação do objeto Decimal
     d = decimal.Decimal('0.777')
 
-    # Exibindo o valor do objeto decimal:
-
-> d
+    # Exibindo o valor do objeto decimal
+    d
 
 .. code-block:: console
 
     Decimal('0.777')
 
-> print(d)
+.. code-block:: python
+
+    # 
+    print(d)
 
 .. code-block:: console
 
