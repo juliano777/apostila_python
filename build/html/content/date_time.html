@@ -377,9 +377,13 @@ Fornece várias funções para manipular valores de hora. Não confundir com a c
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Passaram-se 3 segundos</span>
 </pre></div>
 </div>
-<p>time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00):</p>
-<p>&gt; time()</p>
-<p>1545143461.209795</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00)</span>
+<span class="n">time</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1545143461.209795</span>
+</pre></div>
+</div>
 <p>Converte um tempo em segundos desde Epoch para uma string, se nenhum parâmetro for passado retorna string do momento atual:</p>
 <p>&gt; ctime()</p>
 <p>‘Tue Dec 18 12:14:49 2018’</p>

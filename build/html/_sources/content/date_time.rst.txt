@@ -242,13 +242,14 @@ O Módulo time
 
     Passaram-se 3 segundos
 
+.. code-block:: python
 
+    # time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00)
+    time()
 
-time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00):
+.. code-block:: console
 
-> time()
-
-1545143461.209795
+    1545143461.209795
 
 
 
