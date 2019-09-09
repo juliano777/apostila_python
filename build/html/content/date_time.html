@@ -91,7 +91,10 @@
 <li class="toctree-l1"><a class="reference internal" href="numeric_data_types.html">6. Tipos Numéricos - int, float e complex</a></li>
 <li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Data e Hora</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Data e Hora</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#o-modulo-time">9.1. O Módulo time</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
@@ -337,13 +340,22 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2019-01-27&#39;</span>
 </pre></div>
 </div>
-<p>Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6:</p>
-<p>&gt; hoje.weekday()</p>
-<p>1</p>
-<p>Método isoweekday, em que segunda-feira = 1 e domingo = 7:</p>
-<p>&gt; hoje.isoweekday()</p>
-<p>2</p>
-<p>O Módulo time</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6</span>
+<span class="n">hoje</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método isoweekday, em que segunda-feira = 1 e domingo = 7</span>
+<span class="n">hoje</span><span class="o">.</span><span class="n">isoweekday</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
+<div class="section" id="o-modulo-time">
+<h2>9.1. O Módulo time<a class="headerlink" href="#o-modulo-time" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
 Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.</p>
@@ -365,6 +377,7 @@ print(f’Passaram-se {tempo} segundos’)</p>
 <p>‘Tue Dec 18 12:14:49 2018’</p>
 <p>&gt; ctime(1540000000)</p>
 <p>‘Fri Oct 19 22:46:40 2018’</p>
+</div>
 </div>
 
 

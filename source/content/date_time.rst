@@ -1,7 +1,10 @@
 Data e Hora
 ***********
 
-datetime - Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.
+datetime
+--------
+
+Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.
 
 
 Importação de tipo e função para os testes a seguir:
@@ -198,24 +201,27 @@ Exibindo apenas partes da data:
 
     '2019-01-27'
 
+.. code-block:: python
 
+    # Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6
+    hoje.weekday()
 
-Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6:
+.. code-block:: console
 
-> hoje.weekday()
+    1
 
-1
+.. code-block:: python
 
+    # Método isoweekday, em que segunda-feira = 1 e domingo = 7
+    hoje.isoweekday()
 
+.. code-block:: console
 
-Método isoweekday, em que segunda-feira = 1 e domingo = 7:
-
-> hoje.isoweekday()
-
-2
+    2
 
 
 O Módulo time
+-------------
 
     Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
     Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.
