@@ -35,15 +35,18 @@ Importação de tipo e função para os testes a seguir:
     # Inserir dados via teclado conforme sugere o modelo na mensagem
     dt_evento = input('Digite a data e hora do evento (AAAA-MM-DD HH:MM): ')
 
-Digite a data e hora do evento (AAAA-MM-DD HH:MM):
+.. code-block:: console
 
+    Digite a data e hora do evento (AAAA-MM-DD HH:MM):
 
+.. code-block:: python
 
-Verificando o tipo da variável:
+    # Verificando o tipo da variável
+    type(dt_evento)
 
-> type(dt_evento)
+.. code-block:: console
 
-str
+    str
 
 
 
