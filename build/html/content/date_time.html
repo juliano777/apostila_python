@@ -225,15 +225,13 @@
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">65</span>
-
-
-
-<span class="go">Strings não são adequadas para armazenar data e hora.</span>
-<span class="go">strptime transforma uma string para datetime conforme uma dada máscara:</span>
-
-<span class="go">strptime: str -&gt; datetime</span>
 </pre></div>
 </div>
+<p>Strings não são adequadas para armazenar data e hora.
+strptime transforma uma string para datetime conforme uma dada máscara:</p>
+<blockquote>
+<div><p>strptime: str -&gt; datetime</p>
+</div></blockquote>
 <p>Converter a string para datetime:</p>
 <p>&gt; datetime.strptime(dt_evento, ‘%Y-%m-%d %H:%M’)</p>
 <p>datetime.datetime(2018, 12, 21, 12, 15)</p>

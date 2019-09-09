@@ -64,20 +64,22 @@ strptime transforma uma string para datetime conforme uma dada máscara:
     strptime: str -> datetime
 
 
+.. code-block:: python
 
-Converter a string para datetime:
+    # Converter a string para datetime
+    datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
 
-> datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
+    # 
+    datetime.datetime(2018, 12, 21, 12, 15)
 
-datetime.datetime(2018, 12, 21, 12, 15)
+.. code-block:: python
 
+    # O tamanho em bytes do dado em datetime
+    getsizeof(datetime.strptime(dt_evento, '%Y-%m-%d %H:%M'))
 
+.. code-block:: console
 
-O tamanho em bytes do dado em datetime:
-
-> getsizeof(datetime.strptime(dt_evento, '%Y-%m-%d %H:%M'))
-
-48
+    48
 
     A mesma informação armazenada como datetime ocupa menos espaço que string.
 
