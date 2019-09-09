@@ -189,9 +189,14 @@ Exibindo apenas partes da data:
 
     datetime.date(2019, 1, 27)
 
-> date.fromordinal(hoje.toordinal() + 40).isoformat() # formato ISO
+.. code-block:: python
 
-'2019-01-27'
+    # Formato ISO
+    date.fromordinal(hoje.toordinal() + 40).isoformat()
+
+.. code-block:: console
+
+    '2019-01-27'
 
 
 

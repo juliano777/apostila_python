@@ -180,17 +180,23 @@ Exibindo apenas partes da data:
 
     datetime.date(2018, 12, 18)
 
+.. code-block:: python
 
+    # Que dia será daqui a 40 dias?
+    date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date
 
-Que dia será daqui a 40 dias?
+.. code-block:: console
 
-> date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date
+    datetime.date(2019, 1, 27)
 
-datetime.date(2019, 1, 27)
+.. code-block:: python
 
-> date.fromordinal(hoje.toordinal() + 40).isoformat() # formato ISO
+    # Formato ISO
+    date.fromordinal(hoje.toordinal() + 40).isoformat()
 
-'2019-01-27'
+.. code-block:: console
+
+    '2019-01-27'
 
 
 

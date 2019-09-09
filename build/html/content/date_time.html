@@ -323,11 +323,20 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.date(2018, 12, 18)</span>
 </pre></div>
 </div>
-<p>Que dia será daqui a 40 dias?</p>
-<p>&gt; date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date</p>
-<p>datetime.date(2019, 1, 27)</p>
-<p>&gt; date.fromordinal(hoje.toordinal() + 40).isoformat() # formato ISO</p>
-<p>‘2019-01-27’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Que dia será daqui a 40 dias?</span>
+<span class="n">date</span><span class="o">.</span><span class="n">fromordinal</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">toordinal</span><span class="p">()</span> <span class="o">+</span> <span class="mi">40</span><span class="p">)</span>   <span class="c1"># formato datetime.date</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.date(2019, 1, 27)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Formato ISO</span>
+<span class="n">date</span><span class="o">.</span><span class="n">fromordinal</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">toordinal</span><span class="p">()</span> <span class="o">+</span> <span class="mi">40</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2019-01-27&#39;</span>
+</pre></div>
+</div>
 <p>Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6:</p>
 <p>&gt; hoje.weekday()</p>
 <p>1</p>
