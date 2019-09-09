@@ -92,7 +92,8 @@
 <li class="toctree-l1"><a class="reference internal" href="boolean.html">7. Booleanos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decimal_module.html">8. O Módulo decimal</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">9. Data e Hora</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#o-modulo-time">9.1. O Módulo time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datetime">9.1. datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#o-modulo-time">9.2. O Módulo time</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
@@ -185,7 +186,9 @@
             
   <div class="section" id="data-e-hora">
 <h1>9. Data e Hora<a class="headerlink" href="#data-e-hora" title="Link permanente para este título">¶</a></h1>
-<p>datetime - Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.</p>
+<div class="section" id="datetime">
+<h2>9.1. datetime<a class="headerlink" href="#datetime" title="Link permanente para este título">¶</a></h2>
+<p>Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.</p>
 <p>Importação de tipo e função para os testes a seguir:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
@@ -354,21 +357,26 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
 </pre></div>
 </div>
+</div>
 <div class="section" id="o-modulo-time">
-<h2>9.1. O Módulo time<a class="headerlink" href="#o-modulo-time" title="Link permanente para este título">¶</a></h2>
+<h2>9.2. O Módulo time<a class="headerlink" href="#o-modulo-time" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
 Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.</p>
 </div></blockquote>
-<p>Criação de função que espera n segundos e exibe uma mensagem no final:</p>
-<dl class="simple">
-<dt>&gt; def espera(tempo):</dt><dd><p>sleep(tempo)
-print(f’Passaram-se {tempo} segundos’)</p>
-</dd>
-</dl>
-<p>Execução da função:</p>
-<p>&gt; espera(3)</p>
-<p>Passaram-se 3 segundos</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de função que espera n segundos e exibe uma mensagem no final</span>
+<span class="k">def</span> <span class="nf">espera</span><span class="p">(</span><span class="n">tempo</span><span class="p">):</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="n">tempo</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Passaram-se {tempo} segundos&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execução da função</span>
+<span class="n">espera</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Passaram-se 3 segundos</span>
+</pre></div>
+</div>
 <p>time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00):</p>
 <p>&gt; time()</p>
 <p>1545143461.209795</p>

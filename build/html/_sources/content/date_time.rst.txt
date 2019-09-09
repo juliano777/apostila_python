@@ -1,7 +1,10 @@
 Data e Hora
 ***********
 
-datetime - Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.
+datetime
+--------
+
+Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.
 
 
 Importação de tipo e função para os testes a seguir:
@@ -223,21 +226,21 @@ O Módulo time
     Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
     Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.
 
+.. code-block:: python
 
+    # Criação de função que espera n segundos e exibe uma mensagem no final
+    def espera(tempo):
+        sleep(tempo)
+        print(f'Passaram-se {tempo} segundos')
 
-Criação de função que espera n segundos e exibe uma mensagem no final:
+.. code-block:: python
 
-> def espera(tempo):
-    sleep(tempo)
-    print(f'Passaram-se {tempo} segundos')
+    # Execução da função
+    espera(3)
 
+.. code-block:: console
 
-
-Execução da função:
-
-> espera(3)
-
-Passaram-se 3 segundos
+    Passaram-se 3 segundos
 
 
 

@@ -226,29 +226,30 @@ O Módulo time
     Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
     Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.
 
+.. code-block:: python
 
+    # Criação de função que espera n segundos e exibe uma mensagem no final
+    def espera(tempo):
+        sleep(tempo)
+        print(f'Passaram-se {tempo} segundos')
 
-Criação de função que espera n segundos e exibe uma mensagem no final:
+.. code-block:: python
 
-> def espera(tempo):
-    sleep(tempo)
-    print(f'Passaram-se {tempo} segundos')
+    # Execução da função
+    espera(3)
 
+.. code-block:: console
 
+    Passaram-se 3 segundos
 
-Execução da função:
+.. code-block:: python
 
-> espera(3)
+    # time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00)
+    time()
 
-Passaram-se 3 segundos
+.. code-block:: console
 
-
-
-time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00):
-
-> time()
-
-1545143461.209795
+    1545143461.209795
 
 
 
