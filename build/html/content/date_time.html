@@ -309,12 +309,20 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2018-12-18&#39;</span>
 </pre></div>
 </div>
-<p>Método toordinal; retorna a quantidade de dias passados desde 01/01/0001:</p>
-<p>&gt; hoje.toordinal()</p>
-<p>737046</p>
-<p>Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001:</p>
-<p>&gt; date.fromordinal(737046)</p>
-<p>datetime.date(2018, 12, 18)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método toordinal; retorna a quantidade de dias passados desde 01/01/0001</span>
+<span class="n">hoje</span><span class="o">.</span><span class="n">toordinal</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">737046</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001</span>
+<span class="n">date</span><span class="o">.</span><span class="n">fromordinal</span><span class="p">(</span><span class="mi">737046</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.date(2018, 12, 18)</span>
+</pre></div>
+</div>
 <p>Que dia será daqui a 40 dias?</p>
 <p>&gt; date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date</p>
 <p>datetime.date(2019, 1, 27)</p>

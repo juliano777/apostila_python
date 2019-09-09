@@ -171,21 +171,23 @@ Exibindo apenas partes da data:
 
     737046
 
+.. code-block:: python
 
+    # Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001
+    date.fromordinal(737046)
 
-Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001:
+.. code-block:: console
 
-> date.fromordinal(737046)
+    datetime.date(2018, 12, 18)
 
-datetime.date(2018, 12, 18)
+.. code-block:: python
 
+    # Que dia será daqui a 40 dias?
+    date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date
 
+.. code-block:: console
 
-Que dia será daqui a 40 dias?
-
-> date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date
-
-datetime.date(2019, 1, 27)
+    datetime.date(2019, 1, 27)
 
 > date.fromordinal(hoje.toordinal() + 40).isoformat() # formato ISO
 

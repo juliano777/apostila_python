@@ -162,21 +162,23 @@ Exibindo apenas partes da data:
 
     '2018-12-18'
 
+.. code-block:: python
 
+    # Método toordinal; retorna a quantidade de dias passados desde 01/01/0001
+    hoje.toordinal()
 
-Método toordinal; retorna a quantidade de dias passados desde 01/01/0001:
+.. code-block:: console
 
-> hoje.toordinal()
+    737046
 
-737046
+.. code-block:: python
 
+    # Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001
+    date.fromordinal(737046)
 
+.. code-block:: console
 
-Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001:
-
-> date.fromordinal(737046)
-
-datetime.date(2018, 12, 18)
+    datetime.date(2018, 12, 18)
 
 
 
