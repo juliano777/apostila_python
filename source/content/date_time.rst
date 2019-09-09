@@ -124,17 +124,25 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 
     2018-12-18
 
+Exibindo apenas partes da data:    
 
+.. code-block:: python
 
-Exibindo apenas partes da data:
+    # dia
+    print(hoje.day)
 
-> print(hoje.day)  # dia
+.. code-block:: console
 
-18
+    18
 
-> print(hoje.month)  # mês
+.. code-block:: python
 
-12
+    # mês
+    print(hoje.month)
+
+.. code-block:: console
+
+    12
 
 > print(hoje.year)  # ano
 
