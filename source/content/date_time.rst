@@ -4,23 +4,30 @@ Data e Hora
 datetime - Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.
 
 
-
-
 Importação de tipo e função para os testes a seguir:
 
-> from datetime import date
+.. code-block:: python
 
-> from datetime import datetime
+    # 
+    from datetime import date
 
-> from sys import getsizeof
+    #
+    from datetime import datetime
 
-> from time import ctime
+    # 
+    from sys import getsizeof
 
-> from time import sleep
+    # 
+    from time import ctime
 
-> from time import time
+    #
+    from time import sleep
 
-> from time import tzname
+    # 
+    from time import time
+
+    # 
+    from time import tzname
 
 
 
