@@ -97,19 +97,20 @@ A mesma informação armazenada como datetime ocupa menos espaço que string.
     datetime.datetime
 
 
+Pode ser necessário também fazer o caminho inverso, para transformar um dado datetime para string.
 
-    Pode ser necessário também fazer o caminho inverso, para transformar um dado datetime para string.
     Para isso pode-se usar strftime:
 
     strftime: datetime -> str
 
+.. code-block:: python
 
+    # Extrair como string de um dado datetime
+    datetime.strftime(dt_evento, '%Y-%m-%d %H:%M')
 
-Extrair como string de um dado datetime:
+.. code-block:: console
 
-> datetime.strftime(dt_evento, '%Y-%m-%d %H:%M')
-
-'2018-12-21 12:15'
+    '2018-12-21 12:15'
 
 
 

@@ -256,18 +256,20 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
 <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span>
-
-
-
-<span class="n">Pode</span> <span class="n">ser</span> <span class="n">necessário</span> <span class="n">também</span> <span class="n">fazer</span> <span class="n">o</span> <span class="n">caminho</span> <span class="n">inverso</span><span class="p">,</span> <span class="n">para</span> <span class="n">transformar</span> <span class="n">um</span> <span class="n">dado</span> <span class="n">datetime</span> <span class="n">para</span> <span class="n">string</span><span class="o">.</span>
-<span class="n">Para</span> <span class="n">isso</span> <span class="n">pode</span><span class="o">-</span><span class="n">se</span> <span class="n">usar</span> <span class="n">strftime</span><span class="p">:</span>
-
-<span class="n">strftime</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </pre></div>
 </div>
-<p>Extrair como string de um dado datetime:</p>
-<p>&gt; datetime.strftime(dt_evento, ‘%Y-%m-%d %H:%M’)</p>
-<p>‘2018-12-21 12:15’</p>
+<p>Pode ser necessário também fazer o caminho inverso, para transformar um dado datetime para string.</p>
+<blockquote>
+<div><p>Para isso pode-se usar strftime:</p>
+<p>strftime: datetime -&gt; str</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extrair como string de um dado datetime</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2018-12-21 12:15&#39;</span>
+</pre></div>
+</div>
 <p>Variável que contém apenas a data atual:</p>
 <p>&gt; hoje = date.today()</p>
 <p>Exibindo o valor da variável:</p>
