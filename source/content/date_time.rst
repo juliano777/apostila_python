@@ -144,25 +144,32 @@ Exibindo apenas partes da data:
 
     12
 
-> print(hoje.year)  # ano
+.. code-block:: python
 
-2018
+    # ano
+    print(hoje.year)
 
+.. code-block:: console
 
+    2018
 
-Formato ISO:
+.. code-block:: python
 
-> hoje.isoformat()
+    # Formato ISO
+    hoje.isoformat()
 
-'2018-12-18'
+.. code-block:: console
 
+    '2018-12-18'
 
+.. code-block:: python
 
-Método toordinal; retorna a quantidade de dias passados desde 01/01/0001:
+    # Método toordinal; retorna a quantidade de dias passados desde 01/01/0001
+    hoje.toordinal()
 
-> hoje.toordinal()
+.. code-block:: console
 
-737046
+    737046
 
 
 

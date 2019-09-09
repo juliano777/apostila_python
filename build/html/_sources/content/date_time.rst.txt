@@ -135,21 +135,32 @@ Exibindo apenas partes da data:
 
     18
 
-> print(hoje.month)  # mês
+.. code-block:: python
 
-12
+    # mês
+    print(hoje.month)
 
-> print(hoje.year)  # ano
+.. code-block:: console
 
-2018
+    12
 
+.. code-block:: python
 
+    # ano
+    print(hoje.year)
 
-Formato ISO:
+.. code-block:: console
 
-> hoje.isoformat()
+    2018
 
-'2018-12-18'
+.. code-block:: python
+
+    # Formato ISO
+    hoje.isoformat()
+
+.. code-block:: console
+
+    '2018-12-18'
 
 
 
