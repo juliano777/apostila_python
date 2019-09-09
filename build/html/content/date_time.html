@@ -232,25 +232,39 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <blockquote>
 <div><p>strptime: str -&gt; datetime</p>
 </div></blockquote>
-<p>Converter a string para datetime:</p>
-<p>&gt; datetime.strptime(dt_evento, ‘%Y-%m-%d %H:%M’)</p>
-<p>datetime.datetime(2018, 12, 21, 12, 15)</p>
-<p>O tamanho em bytes do dado em datetime:</p>
-<p>&gt; getsizeof(datetime.strptime(dt_evento, ‘%Y-%m-%d %H:%M’))</p>
-<p>48</p>
-<blockquote>
-<div><p>A mesma informação armazenada como datetime ocupa menos espaço que string.</p>
-</div></blockquote>
-<p>Recriar a variável como datetime utilizando seu valor antigo de string:</p>
-<p>&gt; dt_evento = datetime.strptime(dt_evento, ‘%Y-%m-%d %H:%M’)</p>
-<p>Verificando o tipo:</p>
-<p>&gt; type(dt_evento)</p>
-<p>datetime.datetime</p>
-<blockquote>
-<div><p>Pode ser necessário também fazer o caminho inverso, para transformar um dado datetime para string.
-Para isso pode-se usar strftime:</p>
-<p>strftime: datetime -&gt; str</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Converter a string para datetime</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># O tamanho em bytes do dado em datetime</span>
+<span class="n">getsizeof</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">48</span>
+</pre></div>
+</div>
+<p>A mesma informação armazenada como datetime ocupa menos espaço que string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recriar a variável como datetime utilizando seu valor antigo de string</span>
+<span class="n">dt_evento</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
+
+<span class="c1"># Verificando o tipo</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span>
+
+
+
+<span class="n">Pode</span> <span class="n">ser</span> <span class="n">necessário</span> <span class="n">também</span> <span class="n">fazer</span> <span class="n">o</span> <span class="n">caminho</span> <span class="n">inverso</span><span class="p">,</span> <span class="n">para</span> <span class="n">transformar</span> <span class="n">um</span> <span class="n">dado</span> <span class="n">datetime</span> <span class="n">para</span> <span class="n">string</span><span class="o">.</span>
+<span class="n">Para</span> <span class="n">isso</span> <span class="n">pode</span><span class="o">-</span><span class="n">se</span> <span class="n">usar</span> <span class="n">strftime</span><span class="p">:</span>
+
+<span class="n">strftime</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</pre></div>
+</div>
 <p>Extrair como string de um dado datetime:</p>
 <p>&gt; datetime.strftime(dt_evento, ‘%Y-%m-%d %H:%M’)</p>
 <p>‘2018-12-21 12:15’</p>
