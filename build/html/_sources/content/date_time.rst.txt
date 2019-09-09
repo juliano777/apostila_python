@@ -30,10 +30,10 @@ Importação de tipo e função para os testes a seguir:
     from time import tzname
 
 
+.. code-block:: python
 
-Inserir dados via teclado conforme sugere o modelo na mensagem:
-
-> dt_evento = input('Digite a data e hora do evento (AAAA-MM-DD HH:MM): ')
+    # Inserir dados via teclado conforme sugere o modelo na mensagem
+    dt_evento = input('Digite a data e hora do evento (AAAA-MM-DD HH:MM): ')
 
 Digite a data e hora do evento (AAAA-MM-DD HH:MM):
 
