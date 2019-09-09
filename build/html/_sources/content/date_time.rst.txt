@@ -112,19 +112,17 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 
     '2018-12-21 12:15'
 
+.. code-block:: python
 
+    # Variável que contém apenas a data atual
+    hoje = date.today()
 
-Variável que contém apenas a data atual:
+    # Exibindo o valor da variável
+    print(hoje)
 
-> hoje = date.today()
+.. code-block:: console
 
-
-
-Exibindo o valor da variável:
-
-> print(hoje)
-
-2018-12-18
+    2018-12-18
 
 
 
