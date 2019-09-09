@@ -251,14 +251,25 @@ O Módulo time
 
     1545143461.209795
 
+.. code-block:: python
 
+    # Converte um tempo em segundos desde Epoch para uma string, 
+    # se nenhum parâmetro for passado retorna string do momento atual
 
-Converte um tempo em segundos desde Epoch para uma string, se nenhum parâmetro for passado retorna string do momento atual:
+.. code-block:: python
 
-> ctime()
+    # 
+    ctime()
 
-'Tue Dec 18 12:14:49 2018'
+.. code-block:: console
 
-> ctime(1540000000)
+    'Tue Dec 18 12:14:49 2018'
 
-'Fri Oct 19 22:46:40 2018'
+.. code-block:: python
+
+    # 
+    ctime(1540000000)
+
+.. code-block:: console
+
+    'Fri Oct 19 22:46:40 2018'
