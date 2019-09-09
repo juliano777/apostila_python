@@ -48,18 +48,18 @@ Importação de tipo e função para os testes a seguir:
 
     str
 
+.. code-block:: python
+
+    # Quanto custa essa variável em bytes?
+    getsizeof(dt_evento)
+
+.. code-block:: console
+
+    65
 
 
-Quanto custa essa variável em bytes?
-
-> getsizeof(dt_evento)
-
-65
-
-
-
-    Strings não são adequadas para armazenar data e hora.
-    strptime transforma uma string para datetime conforme uma dada máscara:
+Strings não são adequadas para armazenar data e hora.
+strptime transforma uma string para datetime conforme uma dada máscara:
 
     strptime: str -> datetime
 

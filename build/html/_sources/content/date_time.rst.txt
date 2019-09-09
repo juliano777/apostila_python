@@ -48,13 +48,14 @@ Importação de tipo e função para os testes a seguir:
 
     str
 
+.. code-block:: python
 
+    # Quanto custa essa variável em bytes?
+    getsizeof(dt_evento)
 
-Quanto custa essa variável em bytes?
+.. code-block:: console
 
-> getsizeof(dt_evento)
-
-65
+    65
 
 
 

@@ -220,14 +220,20 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">str</span>
 </pre></div>
 </div>
-<p>Quanto custa essa variável em bytes?</p>
-<p>&gt; getsizeof(dt_evento)</p>
-<p>65</p>
-<blockquote>
-<div><p>Strings não são adequadas para armazenar data e hora.
-strptime transforma uma string para datetime conforme uma dada máscara:</p>
-<p>strptime: str -&gt; datetime</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quanto custa essa variável em bytes?</span>
+<span class="n">getsizeof</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">65</span>
+
+
+
+<span class="go">Strings não são adequadas para armazenar data e hora.</span>
+<span class="go">strptime transforma uma string para datetime conforme uma dada máscara:</span>
+
+<span class="go">strptime: str -&gt; datetime</span>
+</pre></div>
+</div>
 <p>Converter a string para datetime:</p>
 <p>&gt; datetime.strptime(dt_evento, ‘%Y-%m-%d %H:%M’)</p>
 <p>datetime.datetime(2018, 12, 21, 12, 15)</p>
