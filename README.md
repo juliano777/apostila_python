@@ -1,2 +1,4 @@
-# apostila_python
-Apostila de Python
+# Apostila de Python
+
+Curso de programação em Python.
+Teoria e prática.
