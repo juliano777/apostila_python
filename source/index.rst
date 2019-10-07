@@ -25,6 +25,7 @@ Curso de Python
    content/tuple
    content/set_frozenset
    content/dict
+   content/operators
    content/iter_gen
    content/functions
    content/oo
