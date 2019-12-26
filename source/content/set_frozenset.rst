@@ -58,25 +58,27 @@ ou
 
     {1, 2, 3}
 
+.. code-block:: python
+
+    # Definição de dois conjuntos:
+    a = set([1,2,3])
+    b = set([2,3,4])
 
 
-Definição de dois conjuntos:
+.. code-block:: python
 
-> a = set([1,2,3])
-
-> b = set([2,3,4])
-
-
-
-Operação de união entre os conjuntos:
-
-> a | b
+    # Operação de união entre os conjuntos:
+    a | b
 
 ou
 
-> a.union(b)
+.. code-block:: python
 
-{1, 2, 3, 4}
+    a.union(b)
+
+.. code-block:: console
+
+    {1, 2, 3, 4}
 
 
 
