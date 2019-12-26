@@ -120,27 +120,26 @@ if / elif / else
         y = 0
 
 
+if Ternário
+~~~~~~~~~~~
+
 .. code-block:: python
 
-    # 
+    x = 10  # Variável int
+
+    # Atribuição de valor condicional:
     y = (50 if (x > 5) else 40)
 
-    # 
+    # Exibe o valor de "y":
     print(y)
 
 .. code-block:: console
 
     50
 
-
-
-
-if Ternário
-~~~~~~~~~~~
-
 .. code-block:: python
 
-    # 
+    # Variável float para receber a nota:
     nota = float(input('Digite a nota do aluno: '))
 
 .. code-block:: console
@@ -149,12 +148,12 @@ if Ternário
 
 .. code-block:: python
 
-    # 
+    # Atribuição condicional:
     estado = 'aprovado' if nota >= 7 else 'reprovado'
 
 .. code-block:: python
 
-    # 
+    # Exibe a mensagem:
     print('Aluno {}!'.format(estado))
 
 .. code-block:: console
@@ -163,7 +162,7 @@ if Ternário
 
 .. code-block:: python
 
-    # 
+    # Variável int:
     num = int(input('Digite um número: '))
 
 .. code-block:: console
@@ -172,10 +171,10 @@ if Ternário
 
 .. code-block:: python
 
-    # 
+    # Atribuição condicional:
     sinal = 'positivo' if num > 0 else 'negativo' if num < 0 else 'zero'
 
-    # 
+    # Exibe mensagem:
     print('O número é {}'.format(sinal))
 
 .. code-block:: console

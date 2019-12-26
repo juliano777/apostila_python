@@ -289,47 +289,49 @@
     <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<div class="section" id="if-ternario">
+<h2><span class="section-number">22.1. </span>if Ternário<a class="headerlink" href="#if-ternario" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Variável int</span>
+
+<span class="c1"># Atribuição de valor condicional:</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="k">else</span> <span class="mi">40</span><span class="p">)</span>
 
-<span class="c1">#</span>
+<span class="c1"># Exibe o valor de &quot;y&quot;:</span>
 <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">50</span>
 </pre></div>
 </div>
-<div class="section" id="if-ternario">
-<h2><span class="section-number">22.1. </span>if Ternário<a class="headerlink" href="#if-ternario" title="Link permanente para este título">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variável float para receber a nota:</span>
 <span class="n">nota</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite a nota do aluno: &#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Digite a nota do aluno: 8</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição condicional:</span>
 <span class="n">estado</span> <span class="o">=</span> <span class="s1">&#39;aprovado&#39;</span> <span class="k">if</span> <span class="n">nota</span> <span class="o">&gt;=</span> <span class="mi">7</span> <span class="k">else</span> <span class="s1">&#39;reprovado&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibe a mensagem:</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Aluno {}!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">estado</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Aluno aprovado!</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variável int:</span>
 <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite um número: &#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Digite um número: -2</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição condicional:</span>
 <span class="n">sinal</span> <span class="o">=</span> <span class="s1">&#39;positivo&#39;</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;negativo&#39;</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;zero&#39;</span>
 
-<span class="c1">#</span>
+<span class="c1"># Exibe mensagem:</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;O número é {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sinal</span><span class="p">))</span>
 </pre></div>
 </div>
