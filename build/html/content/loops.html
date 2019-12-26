@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>21. Loops - Laços de Repetição &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>22. Loops - Laços de Repetição &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="22. open" href="open.html" />
-    <link rel="prev" title="20. if / elif / else" href="if.html" /> 
+    <link rel="next" title="23. open" href="open.html" />
+    <link rel="prev" title="21. if / elif / else" href="if.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,32 +96,33 @@
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">21. Loops - Laços de Repetição</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#while">21.1. while</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#o-else-no-loop-while">21.1.1. O else no loop while</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">14. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">15. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">16. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">17. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">18. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">19. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">20. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">21. if / elif / else</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">22. Loops - Laços de Repetição</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#while">22.1. while</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#o-else-no-loop-while">22.1.1. O else no loop while</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">25. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">26. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">30. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">31. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">32. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">33. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">23. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">24. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">25. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">26. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">27. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">28. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -167,7 +168,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>21. Loops - Laços de Repetição</li>
+      <li><span class="section-number">22. </span>Loops - Laços de Repetição</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,9 +188,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="loops-lacos-de-repeticao">
-<h1>21. Loops - Laços de Repetição<a class="headerlink" href="#loops-lacos-de-repeticao" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">22. </span>Loops - Laços de Repetição<a class="headerlink" href="#loops-lacos-de-repeticao" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="while">
-<h2>21.1. while<a class="headerlink" href="#while" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">22.1. </span>while<a class="headerlink" href="#while" title="Link permanente para este título">¶</a></h2>
 <p>Executa em laço (loop) enquanto a condição for verdadeira.</p>
 <p>i = 0</p>
 <dl class="simple">
@@ -204,7 +205,7 @@ i += 1</p>
 4</p>
 <p>i = 0</p>
 <div class="section" id="o-else-no-loop-while">
-<h3>21.1.1. O else no loop while<a class="headerlink" href="#o-else-no-loop-while" title="Link permanente para este título">¶</a></h3>
+<h3><span class="section-number">22.1.1. </span>O else no loop while<a class="headerlink" href="#o-else-no-loop-while" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>Opcionalmente, pode-se adicionar um else ao while em Python.
 A idéia é que se caso o loop seja executado sem interrupção, um break, por exemplo, o que estiver dentro do bloco else será executado.</p>
@@ -375,10 +376,10 @@ Fim</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="open.html" class="btn btn-neutral float-right" title="22. open" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="open.html" class="btn btn-neutral float-right" title="23. open" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="if.html" class="btn btn-neutral float-left" title="20. if / elif / else" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="if.html" class="btn btn-neutral float-left" title="21. if / elif / else" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -543,77 +543,17 @@ Recurso para criar documentação automaticamente:
 Operadores
 ----------
 
-Aritméticos
-~~~~~~~~~~~
+Python suporta operadores dos tipos:
 
+* Aritiméticos: +, -, *, /, //, **, %;
+* Relacionais: >, <, >=, >=, ==, !=;
+* Atribuição: =, +=, +=, -=, /=, *=, %=, **=, //=;
+* Lógicos: and, or, not;
+* Associação: in, not in;
+* Identidade: is, is not;
+* Bitwise: &, |, ^, ~, <<, >>.
 
-**Soma**
-
-+
-
-Menor
-<
-
-Deslocamento para esquerda
-<<
-Subtração
--
-
-Maior
->
-
-Deslocamento para direita
->>
-Multiplicação
-*
-
-Menor ou igual
-<=
-
-E bit-a-bit (AND)
-&
-
-Divisão
-/
-
-Divisão Inteira
-//
-
-
->>> 7 / 2
-3.5
->>> 7 / 2.0
-3.5
->>> 7 // 2.0
-3.0
->>> 7 // 2
-3
-
-
-
-
-Maior ou igual
->=
-
-Ou bit-a-bit (OR)
-|
-
-
-Igual
-==
-
-Ou exclusivo bit-a-bit (XOR)
-^
-Módulo
-%
-
-Diferente
-!=
-
-Inversão (NOT) 
-~
-Potência
-**
+Operadores serão discutidos em mais detalhes em um capítulo posterior.
 
 O Comando del
 -------------
@@ -736,46 +676,6 @@ Invertendo valores:
 .. code-block:: console
 
     10
-
-
-Atribuição por Incremento ou Decremento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: python
-
-    x = 0
-    x +=1
-    x +=1
-    x +=1
-    x +=1
-    print(x)
-
-.. code-block:: console
-
-    4
-
-x /= 2
-
-print(x)
-2
-
-x -= 1
-
-print(x)
-1
-
-x *= 7
-
-print(x)
-7
-
-foo ='bla '
-
-foo *= 3
-
-print(foo)
-bla bla bla
-
 
 Referência de Identificadores
 -----------------------------

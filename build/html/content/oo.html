@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>16. Orientação a Objetos &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>17. Orientação a Objetos &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="17. Método de Classe e Método Estático" href="staticmethod_classmethod.html" />
-    <link rel="prev" title="15. Funções" href="functions.html" /> 
+    <link rel="next" title="18. Método de Classe e Método Estático" href="staticmethod_classmethod.html" />
+    <link rel="prev" title="16. Funções" href="functions.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,30 +96,31 @@
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">16. Orientação a Objetos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#o-metodo-x">16.1. o.metodo_x()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">16.2. Objetos com Atributos Dinâmicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">14. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">15. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">16. Funções</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">17. Orientação a Objetos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#o-metodo-x">17.1. o.metodo_x()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">17.2. Objetos com Atributos Dinâmicos</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
-<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">25. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">26. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">30. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">31. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">32. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">33. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">18. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">19. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">20. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">21. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">22. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">23. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">24. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">25. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">26. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">27. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">28. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -165,7 +166,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>16. Orientação a Objetos</li>
+      <li><span class="section-number">17. </span>Orientação a Objetos</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,7 +186,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="orientacao-a-objetos">
-<h1>16. Orientação a Objetos<a class="headerlink" href="#orientacao-a-objetos" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">17. </span>Orientação a Objetos<a class="headerlink" href="#orientacao-a-objetos" title="Link permanente para este título">¶</a></h1>
 <blockquote>
 <div><p>Python suporta herança múltipla;
 Tudo em Python é objeto (inclusive classes);
@@ -317,7 +318,7 @@ Bla bla bla</p>
 </dl>
 <p>o.metodo_x = metodo_objeto</p>
 <div class="section" id="o-metodo-x">
-<h2>16.1. o.metodo_x()<a class="headerlink" href="#o-metodo-x" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">17.1. </span>o.metodo_x()<a class="headerlink" href="#o-metodo-x" title="Link permanente para este título">¶</a></h2>
 <p>TypeError                                 Traceback (most recent call last)
 &lt;ipython-input-41-2f98daa957c2&gt; in &lt;module&gt;()
 —-&gt; 1 o.metodo_x()</p>
@@ -326,7 +327,7 @@ Bla bla bla</p>
 ‘X’</p>
 </div>
 <div class="section" id="objetos-com-atributos-dinamicos">
-<h2>16.2. Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">17.2. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
 <p>Criação da classe Carro:</p>
 <dl class="simple">
 <dt>class Carro(object):</dt><dd><p>marca = ‘’
@@ -400,10 +401,10 @@ print(‘Método da classe Filha’)</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="staticmethod_classmethod.html" class="btn btn-neutral float-right" title="17. Método de Classe e Método Estático" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="staticmethod_classmethod.html" class="btn btn-neutral float-right" title="18. Método de Classe e Método Estático" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="functions.html" class="btn btn-neutral float-left" title="15. Funções" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="functions.html" class="btn btn-neutral float-left" title="16. Funções" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

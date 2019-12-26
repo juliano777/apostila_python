@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>33. Threads &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>14. Aritméticos &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="34. pytest" href="pytest.html" />
-    <link rel="prev" title="32. Recursividade" href="recursive.html" /> 
+    <link rel="next" title="15. Iteratoradores e Geradores" href="iter_gen.html" />
+    <link rel="prev" title="13. Dicionários" href="dict.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">14. Aritméticos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Aritméticos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">15. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">16. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">17. Orientação a Objetos</a></li>
@@ -115,10 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">33. Threads</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#funcao2">33.1. funcao2</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
@@ -165,13 +162,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">33. </span>Threads</li>
+      <li><span class="section-number">14. </span>Aritméticos</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/content/threads.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/content/operators.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,66 +181,181 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="threads">
-<h1><span class="section-number">33. </span>Threads<a class="headerlink" href="#threads" title="Link permanente para este título">¶</a></h1>
-<p>import threading
-import time</p>
-<dl>
-<dt>def funcao1():</dt><dd><p>linha = (‘_’ * 79)
-while (True):</p>
-<blockquote>
-<div><p>print(linha)
-time.sleep(10)</p>
-</div></blockquote>
-</dd>
-<dt>def funcao2(tempo):</dt><dd><dl class="simple">
-<dt>while (True):</dt><dd><p>print(‘funcao2’)
-time.sleep(tempo)</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>t1 = threading.Thread(target=funcao1, name=’primeira_thread’)</p>
-<p>t2 = threading.Thread(target=funcao2, name=’segunda_thread’, args=(3,))</p>
-<p>t1.start()</p>
-<p>t2.start()</p>
-<div class="section" id="funcao2">
-<h2><span class="section-number">33.1. </span>funcao2<a class="headerlink" href="#funcao2" title="Link permanente para este título">¶</a></h2>
-<p>…</p>
-<p>&gt; t1.getName()
-‘primeira_thread’</p>
-<p>E se quisermos parar uma thread?</p>
-<p>import threading
-import os
-import time</p>
-<dl>
-<dt>class FileChecker(threading.Thread):</dt><dd><dl>
-<dt>def __init__(self, file_path):</dt><dd><p>super(FileChecker, self).__init__()
-self._kill = False
-self._file_path = file_path</p>
-</dd>
-<dt>def run(self):</dt><dd><dl>
-<dt>while (not os.path.isfile(self._file_path)):</dt><dd><p>print(“File {} not found!”.format(self._file_path))
-time.sleep(5)
-if self._kill:</p>
-<blockquote>
-<div><p>break</p>
-</div></blockquote>
-</dd>
-</dl>
-</dd>
-<dt>def stop(self):</dt><dd><p>self._kill = True
-self.join()</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>t = FileChecker(‘/tmp/teste.txt’)
-t.start()</p>
-<p>time.sleep(10)</p>
-<p>t.stop()</p>
-<p>print(‘fim’)</p>
+  <p># <a class="reference external" href="https://data-flair.training/blogs/python-operator/">https://data-flair.training/blogs/python-operator/</a>
+# <a class="reference external" href="https://www.tutorialspoint.com/python/bitwise_operators_example">https://www.tutorialspoint.com/python/bitwise_operators_example</a></p>
+<div class="section" id="aritmeticos">
+<h1><span class="section-number">14. </span>Aritméticos<a class="headerlink" href="#aritmeticos" title="Link permanente para este título">¶</a></h1>
+<div class="line-block">
+<div class="line">Descrição       | Operador | Exemplo | Saída |</div>
 </div>
+<p><a href="#id1"><span class="problematic" id="id2">|-----------------|</span></a>———-<a href="#id3"><span class="problematic" id="id4">|---------|</span></a>——-|
+| Soma            | +        |  5 + 2  |  7    |
+|  Subtração      | -        | 13 - 3  | 10    |
+| Multiplicação   | *        | 5 * 3   | 15    |
+| Divisão         | /        | 7 / 2   | 3.5   |
+| Divisão Inteira | //       | 7 // 2  | 3     |
+| Potenciação     | **       | 2 ** 9  | 512   |</p>
+<p><strong>Soma</strong></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Menor
+&lt;</p>
+<p>Deslocamento para esquerda
+&lt;&lt;
+Subtração
+-</p>
+<p>Maior
+&gt;</p>
+<p>Deslocamento para direita
+&gt;&gt;
+Multiplicação
+*</p>
+<p>Menor ou igual
+&lt;=</p>
+<p>E bit-a-bit (AND)
+&amp;</p>
+<p>Divisão
+/</p>
+<p>Divisão Inteira
+//</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="go">3.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">/</span> <span class="mf">2.0</span>
+<span class="go">3.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">//</span> <span class="mf">2.0</span>
+<span class="go">3.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>Maior ou igual
+&gt;=</p>
+<p>Ou bit-a-bit (OR)
+|</p>
+<p>Igual
+==</p>
+<p>Ou exclusivo bit-a-bit (XOR)
+^
+Módulo
+%</p>
+<p>Diferente
+!=</p>
+<p>Inversão (NOT)
+~
+Potência
+**</p>
+<p># Operadores bit a bit / Python Bitwise</p>
+<p># Operadores Lógicos OR (|) e AND (&amp;)</p>
+<dl class="simple">
+<dt>‘’’</dt><dd><p>Pipe (|) e ampersand (&amp;) são operadores lógicos, utilizados respectivamente para as lógicas or e and.</p>
+</dd>
+</dl>
+<p>‘’’</p>
+<p># Operador pipe “|”: Ou Binário / Binary Or</p>
+<dl>
+<dt>‘’’</dt><dd><p>O operador pipe faz a lógica “or” binária, em português “ou”.</p>
+<p>Dada a seguinte tabela da verdade em que;</p>
+<p>0 = False
+1 = True</p>
+<p>Observe os resultados e em seguida via statements Python:</p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>OR</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>‘’’</p>
+<p>False | False
+False</p>
+<p>False | True
+True</p>
+<p>True | False
+True</p>
+<p>True | True
+True</p>
+<p># 0010 | 0001 = 0011 -&gt; 2 | 1 = 3</p>
+<p>2 | 1
+3</p>
+<p>‘’’
+0010
+ou
+0001
+——-
+0011
+‘’’</p>
+<p># 1010 | 0011 = 1011 -&gt; 10 | 3 = 11</p>
+<p>10 | 3
+11</p>
+<p># Operador ampersand “&amp;”: E Binário / Binary And</p>
+<dl>
+<dt>‘’’</dt><dd><p>O operador ampersand faz a lógica “and” binária, em português “e”.</p>
+<p>Como vimos nos exemplos anteriores, mas agora com a lógica and, observe os resultados e em seguida via statements Python:</p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>AND</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>‘’’</p>
+<p>False &amp; False
+False</p>
+<p>False &amp; True
+False</p>
+<p>True &amp; False
+False</p>
+<p>True &amp; True
+True</p>
+<p># 0010 &amp; 0001 = 0000 -&gt; 2 &amp; 1 = 0</p>
+<p>2 &amp; 1
+0</p>
+<p># 1010 &amp; 0011 = 0010 -&gt; 10 &amp; 3 = 2</p>
+<p>10 &amp; 3
+2</p>
+<p>## Operador ampersand “^”: Ou Exclusivo Binário / Binary XOr</p>
+<p># Deslocamento de Bits / Bit Shift</p>
+<p>False &gt;&gt; False
+0</p>
+<p>False &gt;&gt; True
+0</p>
+<p>True &gt;&gt; False
+1</p>
+<p>True &gt;&gt; True
+0</p>
 </div>
 
 
@@ -254,10 +366,10 @@ t.start()</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pytest.html" class="btn btn-neutral float-right" title="34. pytest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="iter_gen.html" class="btn btn-neutral float-right" title="15. Iteratoradores e Geradores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="recursive.html" class="btn btn-neutral float-left" title="32. Recursividade" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dict.html" class="btn btn-neutral float-left" title="13. Dicionários" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
