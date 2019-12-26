@@ -81,11 +81,16 @@ Modificador Private (__)
 
     Velocidade = 200 km/h
 
-c.velocidade = 301
+.. code-block:: python
 
-. . .
+    # Tentativa de atribuir um valor não permitido;
+    c.velocidade = 301
 
-ValueError: A velocidade máxima permitida é de 300 km/h
+
+.. code-block:: python
+
+    . . .
+    ValueError: A velocidade máxima permitida é de 300 km/h
 
 
 

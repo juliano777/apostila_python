@@ -260,9 +260,14 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Velocidade = 200 km/h</span>
 </pre></div>
 </div>
-<p>c.velocidade = 301</p>
-<p>…</p>
-<p>ValueError: A velocidade máxima permitida é de 300 km/h</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tentativa de atribuir um valor não permitido;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">301</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>. . .
+ValueError: A velocidade máxima permitida é de 300 km/h
+</pre></div>
+</div>
 <p>del c.velocidade
 Removendo a propriedade de velocidade</p>
 <p>c.velocidade</p>
