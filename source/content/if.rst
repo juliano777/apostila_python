@@ -138,24 +138,49 @@ if / elif / else
 if Ternário
 ~~~~~~~~~~~
 
-nota = float(input('Digite a nota do aluno: '))
-Digite a nota do aluno: 8
+.. code-block:: python
 
-estado = 'aprovado' if nota >= 7 else 'reprovado'
+    # 
+    nota = float(input('Digite a nota do aluno: '))
 
-print('Aluno {}!'.format(estado))
-Aluno aprovado!
+.. code-block:: console
 
+    Digite a nota do aluno: 8
 
+.. code-block:: python
 
+    # 
+    estado = 'aprovado' if nota >= 7 else 'reprovado'
 
-num = int(input('Digite um número: '))
-Digite um número: -2
+.. code-block:: python
 
-sinal = 'positivo' if num > 0 else 'negativo' if num < 0 else 'zero'
+    # 
+    print('Aluno {}!'.format(estado))
 
-print('O número é {}'.format(sinal))
-O número é negativo
+.. code-block:: console
+
+    Aluno aprovado!
+
+.. code-block:: python
+
+    # 
+    num = int(input('Digite um número: '))
+
+.. code-block:: console
+
+    Digite um número: -2
+
+.. code-block:: python
+
+    # 
+    sinal = 'positivo' if num > 0 else 'negativo' if num < 0 else 'zero'
+
+    # 
+    print('O número é {}'.format(sinal))
+
+.. code-block:: console
+
+    O número é negativo
 
 
 

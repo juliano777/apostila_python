@@ -301,16 +301,41 @@
 </div>
 <div class="section" id="if-ternario">
 <h2><span class="section-number">22.1. </span>if Ternário<a class="headerlink" href="#if-ternario" title="Link permanente para este título">¶</a></h2>
-<p>nota = float(input(‘Digite a nota do aluno: ‘))
-Digite a nota do aluno: 8</p>
-<p>estado = ‘aprovado’ if nota &gt;= 7 else ‘reprovado’</p>
-<p>print(‘Aluno {}!’.format(estado))
-Aluno aprovado!</p>
-<p>num = int(input(‘Digite um número: ‘))
-Digite um número: -2</p>
-<p>sinal = ‘positivo’ if num &gt; 0 else ‘negativo’ if num &lt; 0 else ‘zero’</p>
-<p>print(‘O número é {}’.format(sinal))
-O número é negativo</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">nota</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite a nota do aluno: &#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Digite a nota do aluno: 8</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">estado</span> <span class="o">=</span> <span class="s1">&#39;aprovado&#39;</span> <span class="k">if</span> <span class="n">nota</span> <span class="o">&gt;=</span> <span class="mi">7</span> <span class="k">else</span> <span class="s1">&#39;reprovado&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Aluno {}!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">estado</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Aluno aprovado!</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite um número: &#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Digite um número: -2</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">sinal</span> <span class="o">=</span> <span class="s1">&#39;positivo&#39;</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;negativo&#39;</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;zero&#39;</span>
+
+<span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;O número é {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sinal</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">O número é negativo</span>
+</pre></div>
+</div>
 <p>continue</p>
 <p>break</p>
 </div>
