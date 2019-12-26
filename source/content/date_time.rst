@@ -90,8 +90,6 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 
     Para isso pode-se usar strftime:
 
-    strftime: datetime -> str
-
 .. code-block:: python
 
     # Extrair como string de um dado datetime:
@@ -100,6 +98,8 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 .. code-block:: console
 
     '2019-12-27 19:00'
+
+**strftime: datetime -> str**    
 
 .. code-block:: python
 

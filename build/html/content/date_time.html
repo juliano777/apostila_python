@@ -250,7 +250,6 @@
 <p>Pode ser necessário também fazer o caminho inverso, para transformar um dado datetime para string.</p>
 <blockquote>
 <div><p>Para isso pode-se usar strftime:</p>
-<p>strftime: datetime -&gt; str</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extrair como string de um dado datetime:</span>
 <span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
@@ -259,6 +258,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2019-12-27 19:00&#39;</span>
 </pre></div>
 </div>
+<p><strong>strftime: datetime -&gt; str</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variável que contém apenas a data atual:</span>
 <span class="n">hoje</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 
