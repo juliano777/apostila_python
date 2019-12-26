@@ -99,7 +99,7 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 
 .. code-block:: console
 
-    '2018-12-21 12:15'
+    '2019-12-27 19:00'
 
 .. code-block:: python
 
@@ -111,7 +111,7 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 
 .. code-block:: console
 
-    2018-12-18
+    2019-12-26
 
 Exibindo apenas partes da data:    
 
@@ -122,7 +122,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    18
+    26
 
 .. code-block:: python
 
@@ -140,7 +140,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    2018
+    2019
 
 .. code-block:: python
 
@@ -149,7 +149,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    '2018-12-18'
+    '2019-12-26'
 
 .. code-block:: python
 
@@ -159,17 +159,17 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    737046
+    737419
 
 .. code-block:: python
 
     # Método fromordinal; retorna a data a partir da quantidade 
     # de dias passados desde 01/01/0001:
-    date.fromordinal(737046)
+    date.fromordinal(737419)
 
 .. code-block:: console
 
-    datetime.date(2018, 12, 18)
+    datetime.date(2019, 12, 26)
 
 .. code-block:: python
 
@@ -178,7 +178,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    datetime.date(2019, 1, 27)
+    datetime.date(2020, 2, 4)
 
 .. code-block:: python
 
@@ -187,7 +187,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    '2019-01-27'
+    '2020-02-04'
 
 .. code-block:: python
 
@@ -196,7 +196,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    1
+    3
 
 .. code-block:: python
 
@@ -205,7 +205,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: console
 
-    2
+    4
 
 
 O Módulo time

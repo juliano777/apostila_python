@@ -257,7 +257,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2018-12-21 12:15&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2019-12-27 19:00&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variável que contém apenas a data atual:</span>
@@ -267,7 +267,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <span class="k">print</span><span class="p">(</span><span class="n">hoje</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2018-12-18</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2019-12-26</span>
 </pre></div>
 </div>
 <p>Exibindo apenas partes da data:</p>
@@ -275,7 +275,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <span class="k">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">18</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">26</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mês:</span>
@@ -289,14 +289,14 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <span class="k">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2018</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2019</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Formato ISO:</span>
 <span class="n">hoje</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2018-12-18&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2019-12-26&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método toordinal; retorna a quantidade de dias</span>
@@ -304,43 +304,43 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <span class="n">hoje</span><span class="o">.</span><span class="n">toordinal</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">737046</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">737419</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método fromordinal; retorna a data a partir da quantidade</span>
 <span class="c1"># de dias passados desde 01/01/0001:</span>
-<span class="n">date</span><span class="o">.</span><span class="n">fromordinal</span><span class="p">(</span><span class="mi">737046</span><span class="p">)</span>
+<span class="n">date</span><span class="o">.</span><span class="n">fromordinal</span><span class="p">(</span><span class="mi">737419</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.date(2018, 12, 18)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.date(2019, 12, 26)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Que dia será daqui a 40 dias?:</span>
 <span class="n">date</span><span class="o">.</span><span class="n">fromordinal</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">toordinal</span><span class="p">()</span> <span class="o">+</span> <span class="mi">40</span><span class="p">)</span>   <span class="c1"># formato datetime.date</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.date(2019, 1, 27)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.date(2020, 2, 4)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Formato ISO:</span>
 <span class="n">date</span><span class="o">.</span><span class="n">fromordinal</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">toordinal</span><span class="p">()</span> <span class="o">+</span> <span class="mi">40</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2019-01-27&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;2020-02-04&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6:</span>
 <span class="n">hoje</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Método isoweekday, em que segunda-feira = 1 e domingo = 7</span>
 <span class="n">hoje</span><span class="o">.</span><span class="n">isoweekday</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">4</span>
 </pre></div>
 </div>
 </div>
