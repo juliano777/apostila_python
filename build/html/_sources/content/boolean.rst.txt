@@ -10,10 +10,10 @@ Booleanos
 
 .. code-block:: python
 
-    # Definindo a variável como True de forma indireta
+    # Definindo a variável como True de forma indireta:
     b = bool(1)
     
-    # Verificando o valor da variável
+    # Verificando o valor da variável:
     print(b)
 
 .. code-block:: console
@@ -22,10 +22,10 @@ Booleanos
 
 .. code-block:: python
 
-    # Definindo a variável como False de forma indireta
+    # Definindo a variável como False de forma indireta:
     b = bool(0)
 
-    # Verificando o valor da variável
+    # Verificando o valor da variável:
     print(b)
     
 .. code-block:: console
@@ -34,10 +34,8 @@ Booleanos
 
 .. code-block:: python
 
-    # Teste usando a lógica OR
-    .. code-block:: python
-
-    # True | False
+    # Teste usando a lógica OR:
+    True | False
 
 .. code-block:: console
 
@@ -45,7 +43,7 @@ Booleanos
 
 .. code-block:: python
 
-    # Teste usando a lógica AND
+    # Teste usando a lógica AND:
     True & False
 
 .. code-block:: console
@@ -54,7 +52,7 @@ Booleanos
 
 .. code-block:: python
 
-    # Negação de True
+    # Negação de True:
     not True
 
 .. code-block:: console
@@ -63,7 +61,7 @@ Booleanos
 
 .. code-block:: python
 
-    # Negação de False
+    # Negação de False:
     not False
 
 .. code-block:: console
@@ -72,7 +70,7 @@ Booleanos
 
 .. code-block:: python
 
-    # Criação de classes de teste
+    # Criação de classes de teste:
     class Foo(object):
         def __len__(self):
             return 1
@@ -87,7 +85,7 @@ Booleanos
     foo = Foo()
     bar = Bar()
 
-    # Verificando o valor booleano dos objetos
+    # Verificando o valor booleano dos objetos:
     bool(foo)
 
 .. code-block:: console
@@ -96,7 +94,6 @@ Booleanos
 
 .. code-block:: python
 
-    # 
     bool(bar)
 
 .. code-block:: console
@@ -105,7 +102,7 @@ Booleanos
 
 .. code-block:: python
 
-    # True AND (NOT False)
+    # True AND (NOT False):
     bool(foo) & (not bool(bar))
 
 .. code-block:: console
@@ -114,7 +111,7 @@ Booleanos
 
 .. code-block:: python
 
-    # True AND False
+    # True AND False:
     bool(foo) & bool(bar)
 
 .. code-block:: console
@@ -123,7 +120,7 @@ Booleanos
 
 .. code-block:: python
 
-    # Classe para testar os métodos __bool__ e __len__
+    # Classe para testar os métodos __bool__ e __len__:
     class Spam(object):
         def __bool__(self):
             return True
@@ -136,10 +133,10 @@ Com ambos declarados na mesma classe, um objeto dela o que retornará?
 
 .. code-block:: python
 
-    # Criação de objeto
+    # Criação de objeto:
     spam = Spam()
 
-    # Verificando o valor booleano
+    # Verificando o valor booleano:
     bool(spam)
 
 .. code-block:: console
