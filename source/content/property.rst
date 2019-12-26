@@ -45,6 +45,7 @@ Modificador Private (__)
             print('Removendo a propriedade de velocidade')
             del self.__velocidade
         
+        # Definição da property velocidade
         velocidade = property(_get__velocidade, _set__velocidade, _del__velocidade,
                             'Velocidade máxima do carro')
 
@@ -52,7 +53,7 @@ Modificador Private (__)
     # Instância da classe:
     c = Carro()
 
-    # 
+    # Tentativa de acesso ao atributo privado:
     c.__velocidade
 
 
@@ -61,13 +62,24 @@ Modificador Private (__)
     .  .  .
     AttributeError: 'Carro' object has no attribute '__velocidade'
 
+.. code-block:: python
 
-c.velocidade
-Velocidade: 0 km/h
-0
+    # Acessando a property "velocidade":
+    c.velocidade
 
-c.velocidade = 200
-Velocidade = 200 km/h
+.. code-block:: console
+
+    Velocidade: 0 km/h
+    0
+
+.. code-block:: python
+
+    # Atribuindo um valor para a property:
+    c.velocidade = 200
+
+.. code-block:: console
+
+    Velocidade = 200 km/h
 
 c.velocidade = 301
 
