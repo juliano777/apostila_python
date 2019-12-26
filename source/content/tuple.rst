@@ -35,38 +35,44 @@ ou
 
     t = 1, 2, 3
 
+.. code-block:: python
+
+    # Exibindo o conteúdo da tupla:
+	t
+
+.. code-block:: console
+
+    (1, 2, 3)
 
 
-Exibindo o conteúdo da tupla:
+.. code-block:: python
 
-> t
-
-(1, 2, 3)
-
-
-
-Criação de um conjunto (set) contendo todos atributos e métodos de uma tupla:
-
-> tupla = set(dir(tuple))
+	# Criação de um conjunto (set) contendo todos atributos e 
+	# métodos de uma tupla:
+	tupla = set(dir(tuple))
 
 
+.. code-block:: python
 
-Criação de um conjunto (set) contendo todos atributos e métodos de uma lista:
-
-> lista = set(dir(list))
+    # Criação de um conjunto (set) contendo todos atributos e 
+	# métodos de uma lista:
+	lista = set(dir(list))
 
 
 
-Via intersecção, o que há em comum entre lista e tupla?:
+.. code-block:: python
 
-> tupla.intersection(lista)
+    # Via intersecção, o que há em comum entre lista e tupla?:
+	tupla.intersection(lista)
 
-{'__add__',
- '__class__',
- '__contains__',
- '__delattr__',
- '__doc__',
- '__eq__',
+.. code-block:: console
+
+    {'__add__',
+	 '__class__',
+	 '__contains__',
+	 '__delattr__',
+	 '__doc__',
+	 '__eq__',
  '__format__',
  '__ge__',
  '__getattribute__',
