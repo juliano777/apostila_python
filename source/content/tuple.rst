@@ -65,14 +65,14 @@ ou
     # Via intersecção, o que há em comum entre lista e tupla?:
 	tupla.intersection(lista)
 
-.. code-block:: console
-
-    {'__add__',
-	 '__class__',
-	 '__contains__',
-	 '__delattr__',
-	 '__doc__',
-	 '__eq__',
+.. code-block:: python
+	    
+{'__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__doc__',
+ '__eq__',
  '__format__',
  '__ge__',
  '__getattribute__',
