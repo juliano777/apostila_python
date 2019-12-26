@@ -14,13 +14,13 @@ O Módulo decimal
 
 .. code-block:: python
 
-    # Importação do módulo
+    # Importação do módulo:
     import decimal
 
-    # Criação do objeto Decimal
+    # Criação do objeto Decimal:
     d = decimal.Decimal('0.777')
 
-    # Exibindo o valor do objeto decimal
+    # Exibindo o valor do objeto decimal:
     d
 
 .. code-block:: console
@@ -29,7 +29,7 @@ O Módulo decimal
 
 .. code-block:: python
 
-    # 
+    # Exibe o valor de "d":
     print(d)
 
 .. code-block:: console
@@ -40,7 +40,7 @@ Algumas coisas "estranhas":
 
 .. code-block:: python
 
-    # 
+    # Somando dois floats:
     1.1 + 2.2
 
 .. code-block:: console
@@ -49,7 +49,7 @@ Algumas coisas "estranhas":
 
 .. code-block:: python
 
-    # 
+    # Outra operação com floats:
     0.1 + 0.1 + 0.1 - 0.3
 
 .. code-block:: console
@@ -58,10 +58,10 @@ Algumas coisas "estranhas":
 
 .. code-block:: python
 
-    # Importando apenas a classe Decimal
+    # Importando apenas a classe Decimal:
     from decimal import Decimal
 
-    # Fazendo as mesmas operações anteriores com o módulo decimal
+    # Fazendo as mesmas operações anteriores com o módulo decimal:
     Decimal('1.1') + Decimal('2.2')
 
 .. code-block:: console
@@ -70,10 +70,10 @@ Algumas coisas "estranhas":
 
 .. code-block:: python
 
-    # Importando a função getcontext
+    # Importando a função getcontext:
     from decimal import getcontext
 
-    # Operações de multiplicação
+    # Operações de multiplicação:
     Decimal('1.3') * Decimal('1.2')
 
 .. code-block:: console
@@ -82,7 +82,7 @@ Algumas coisas "estranhas":
 
 .. code-block:: python
 
-    # 
+    # Multiplicação de decimais:
     Decimal('1.30') * Decimal('1.20')
 
 .. code-block:: console
@@ -95,7 +95,7 @@ A função getcontext, com o atributo "prec" (precision) ajusta a quantidade má
 
 .. code-block:: python
 
-    # 
+    # Alterar o nível de precisão para 3:
     getcontext().prec = 3
 
 A precisão vai ser refletida em operações com o módulo decimal.
@@ -115,7 +115,7 @@ Caso seja necessário o número será arredondado.
     # Ajustando a precisão para 10 (dez)
     getcontext().prec = 10
 
-    # 
+    # Multiplicação:
     Decimal('1.3897') * 2
 
 .. code-block:: console
@@ -124,10 +124,10 @@ Caso seja necessário o número será arredondado.
 
 .. code-block:: python
 
-    # Ajustando a precisão para 3 (três)
+    # Ajustando a precisão para 3 (três):
     getcontext().prec = 3
 
-    # 
+    # Multiplicação:
     Decimal('1.3897') * 2
 
 .. code-block:: console
