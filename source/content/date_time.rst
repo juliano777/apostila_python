@@ -65,12 +65,6 @@ strptime transforma uma string para datetime conforme uma dada máscara:
     datetime.datetime(2019, 12, 27, 18, 30)    
 
 
-
-.. code-block:: python
-
-    # 
-    datetime.strptime(2018, 12, 21, 12, 15)
-datetime parsed from a string
 .. code-block:: python
 
     # O tamanho em bytes do dado em datetime
