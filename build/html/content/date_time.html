@@ -228,7 +228,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <div><p>strptime: str -&gt; datetime</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Converter a string para datetime:</span>
-<span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
 
 <span class="c1">#</span>
 <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
@@ -355,20 +355,21 @@ getsizeof(datetime.strptime(dt_evento, ‘%Y-%m-%d %H:%M’))</p>
 <div><p>Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
 Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de função que espera n segundos e exibe uma mensagem no final</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de função que espera n segundos e exibe uma mensagem no final:</span>
 <span class="k">def</span> <span class="nf">espera</span><span class="p">(</span><span class="n">tempo</span><span class="p">):</span>
     <span class="n">sleep</span><span class="p">(</span><span class="n">tempo</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Passaram-se {tempo} segundos&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execução da função</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execução da função:</span>
 <span class="n">espera</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Passaram-se 3 segundos</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># time.time retorna o tempo atual em segundos</span>
+<span class="c1"># desde Epoch (01/01/1970 00:00:00):</span>
 <span class="n">time</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -376,7 +377,7 @@ Fornece várias funções para manipular valores de hora. Não confundir com a c
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Converte um tempo em segundos desde Epoch para uma string,</span>
-<span class="c1"># se nenhum parâmetro for passado retorna string do momento atual</span>
+<span class="c1"># se nenhum parâmetro for passado retorna string do momento atual:</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
