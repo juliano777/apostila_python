@@ -15,10 +15,6 @@ Importação de tipo e função para os testes a seguir:
     from datetime import date
     from datetime import datetime
     from sys import getsizeof
-    from time import ctime
-    from time import sleep
-    from time import time
-    from time import tzname
 
 
 .. code-block:: python
@@ -217,6 +213,14 @@ O Módulo time
 
     Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
     Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.
+
+.. code-block:: python
+
+    # Imports:
+    from time import ctime
+    from time import sleep
+    from time import time
+    from time import tzname    
 
 .. code-block:: python
 
