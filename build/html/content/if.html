@@ -104,7 +104,10 @@
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property.html">20. Encapsulamento</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scope.html">21. Escopo</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">22. if / elif / else</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">22. if / elif / else</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#if-ternario">22.1. if Ternário</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="loops.html">23. Loops - Laços de Repetição</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open.html">24. open</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">25. Módulos</a></li>
@@ -257,29 +260,47 @@
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Y é maior&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Y é maior</p>
-<p>y = 1</p>
-<p>x = 1</p>
-<dl class="simple">
-<dt>if x &gt; y:</dt><dd><p>print(‘X é maior’)</p>
-</dd>
-<dt>elif x &lt; y:</dt><dd><p>print(‘Y é maior’)</p>
-</dd>
-<dt>else:</dt><dd><p>print(‘Valores iguais’)</p>
-</dd>
-</dl>
-<p>Valores iguais</p>
-<p>x = 10</p>
-<dl class="simple">
-<dt>if (x &gt; 5):</dt><dd><p>y = 3</p>
-</dd>
-<dt>else:</dt><dd><p>y = 0</p>
-</dd>
-</dl>
-<p>y = (50 if (x &gt; 5) else 40)</p>
-<p>print(y)
-50</p>
-<p>if Ternário</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Y é maior
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Objetos int:</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Bloco if:</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;X é maior&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Y é maior&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Valores iguais&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Valores iguais</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Objeto int:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Bloco if:</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="k">else</span> <span class="mi">40</span><span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">50</span>
+</pre></div>
+</div>
+<div class="section" id="if-ternario">
+<h2><span class="section-number">22.1. </span>if Ternário<a class="headerlink" href="#if-ternario" title="Link permanente para este título">¶</a></h2>
 <p>nota = float(input(‘Digite a nota do aluno: ‘))
 Digite a nota do aluno: 8</p>
 <p>estado = ‘aprovado’ if nota &gt;= 7 else ‘reprovado’</p>
@@ -292,6 +313,7 @@ Digite um número: -2</p>
 O número é negativo</p>
 <p>continue</p>
 <p>break</p>
+</div>
 </div>
 
 

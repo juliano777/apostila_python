@@ -85,42 +85,58 @@ if / elif / else
         print('X é maior')
     else:
         print('Y é maior')
-    
-Y é maior
 
-y = 1
+.. code-block:: python
 
-x = 1
+    Y é maior
 
-if x > y:
-    print('X é maior')
-elif x < y:    
-    print('Y é maior')
-else:    
-    print('Valores iguais')
-    
-Valores iguais
+.. code-block:: python
+
+    # Objetos int:
+    y = 1
+    x = 1
+
+    # Bloco if:
+    if x > y:
+        print('X é maior')
+    elif x < y:    
+        print('Y é maior')
+    else:    
+        print('Valores iguais')
+
+.. code-block:: console
+
+    Valores iguais
+
+.. code-block:: python
+
+    # Objeto int:
+    x = 10
+
+    # Bloco if:    
+    if (x > 5):
+        y = 3
+    else:
+        y = 0
 
 
+.. code-block:: python
 
+    # 
+    y = (50 if (x > 5) else 40)
 
-x = 10
+    # 
+    print(y)
 
-if (x > 5):
-    y = 3
-else:
-    y = 0
+.. code-block:: console
 
-
-y = (50 if (x > 5) else 40)
-
-print(y)
-50
+    50
 
 
 
 
 if Ternário
+~~~~~~~~~~~
 
 nota = float(input('Digite a nota do aluno: '))
 Digite a nota do aluno: 8
