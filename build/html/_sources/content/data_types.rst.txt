@@ -11,10 +11,11 @@ Criação de um objeto e verificando seu tipo:
 
 .. code-block:: python
 
-    # 
+    # Atribuir um inteiro à variável (objeto) "x":
     x = 7
 
-    # type(x)
+    # Verificar o tipo de "x":
+    type(x)
 
 .. code-block:: console
 
@@ -39,7 +40,7 @@ Tipagem Dinâmica
     # Criação de dois objetos de mesmo nome
     x = 3.7
 
-    # 
+    # Exibir o id de "x": 
     id(x)
 
 .. code-block:: console
@@ -48,7 +49,7 @@ Tipagem Dinâmica
 
 .. code-block:: python
 
-    # 
+    # Qual é o tipo de "x":
     type(x)
 
 .. code-block:: console
@@ -57,8 +58,10 @@ Tipagem Dinâmica
 
 .. code-block:: python
 
-    # 
+    # Atribuir uma string à variável "x":
     x = 'foo'
+
+    # Verificar a id de "x":
     id(x)
 
 .. code-block:: console
@@ -67,7 +70,7 @@ Tipagem Dinâmica
 
 .. code-block:: python
 
-    # 
+    # Qual é o tipo de "x":
     type(x)
 
 .. code-block:: console
@@ -101,6 +104,10 @@ Tipagem Forte
 .. code-block:: console
 
     TypeError: must be str, not int
+
+
+Ocorreu um erro, pois foi feita uma tentativa de somar uma string com um inteiro.
+Para isso ser possível é necessário fazer um cast da string para um valor numérico (quando for compatível, é claro).
 
 .. code-block:: python
 
