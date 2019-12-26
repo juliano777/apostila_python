@@ -18,18 +18,22 @@ ou
     t = tuple()
 
 
+.. code-block:: python
 
-Declaração de uma tupla com três elementos:
-
-> t = tuple([1, 2, 3])
-
-ou
-
-> t = (1, 2, 3)
+    # Declaração de uma tupla com três elementos:
+	t = tuple([1, 2, 3])
 
 ou
 
-> t = 1, 2, 3
+.. code-block:: python
+
+    t = (1, 2, 3)
+
+ou
+
+.. code-block:: python
+
+    t = 1, 2, 3
 
 
 
