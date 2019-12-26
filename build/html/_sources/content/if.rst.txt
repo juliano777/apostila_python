@@ -61,25 +61,30 @@ if / elif / else
 
     A string NÃO é vazia!
 
+.. code-block:: python
 
-texto = ''
+    # String vazia:
+    texto = ''
 
-if not texto:
-    print('A string é vazia!')
+    # Bloco if:
+    if not texto:
+        print('A string é vazia!')
 
-A string é vazia!
+.. code-block:: console
 
+    A string é vazia!
 
-x = 1
+.. code-block:: python
 
-y = 2
+    # Objetos int:
+    x = 1
+    y = 2
 
-
-
-if x > y:
-    print('X é maior')
-else:    
-    print('Y é maior')
+    # Bloco if:
+    if x > y:
+        print('X é maior')
+    else:
+        print('Y é maior')
     
 Y é maior
 
