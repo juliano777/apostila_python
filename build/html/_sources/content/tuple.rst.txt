@@ -165,16 +165,15 @@ Tuplas tem apenas os métodos count e index.
 
     3
 
-
-
 Tuplas são imutáveis, mas seus elementos não necessariamente:
 
-> t = ({}, [])   # Tupla com dois elementos; um dicionário e uma lista
+.. code-block:: python
 
-> t[0].update({'chave': 'valor'})  # Alterando o primeiro elemento
+    t = ({}, [])   # Tupla com dois elementos; um dicionário e uma lista
+	t[0].update({'chave': 'valor'})  # Alterando o primeiro elemento
+	t[1].append(7)  # Alterando o segundo elemento
+	t  # Exibindo a tupla
 
-> t[1].append(7)  # Alterando o segundo elemento
+.. code-block:: console
 
-> t  # Exibindo a tupla
-
-({'chave': 'valor'}, [7])
+    ({'chave': 'valor'}, [7])

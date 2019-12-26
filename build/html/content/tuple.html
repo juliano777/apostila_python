@@ -296,11 +296,15 @@ Ela é mais recomendada para uso de dados estáticos, pois comparada à lista, t
 </pre></div>
 </div>
 <p>Tuplas são imutáveis, mas seus elementos não necessariamente:</p>
-<p>&gt; t = ({}, [])   # Tupla com dois elementos; um dicionário e uma lista</p>
-<p>&gt; t[0].update({‘chave’: ‘valor’})  # Alterando o primeiro elemento</p>
-<p>&gt; t[1].append(7)  # Alterando o segundo elemento</p>
-<p>&gt; t  # Exibindo a tupla</p>
-<p>({‘chave’: ‘valor’}, [7])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">({},</span> <span class="p">[])</span>   <span class="c1"># Tupla com dois elementos; um dicionário e uma lista</span>
+    <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;chave&#39;</span><span class="p">:</span> <span class="s1">&#39;valor&#39;</span><span class="p">})</span>  <span class="c1"># Alterando o primeiro elemento</span>
+    <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>  <span class="c1"># Alterando o segundo elemento</span>
+    <span class="n">t</span>  <span class="c1"># Exibindo a tupla</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">({&#39;chave&#39;: &#39;valor&#39;}, [7])</span>
+</pre></div>
+</div>
 </div>
 
 
