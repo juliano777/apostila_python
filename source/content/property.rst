@@ -19,9 +19,10 @@ Modificador Private (__)
     # Tentativa de acesso a atributo privado:
     f.__atributo
 
-. . . 
+.. code-block:: console
 
-AttributeError: 'Foo' object has no attribute '__atributo'
+    . . .
+    AttributeError: 'Foo' object has no attribute '__atributo'
 
 
 
