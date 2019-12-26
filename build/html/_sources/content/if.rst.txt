@@ -48,14 +48,18 @@ if / elif / else
 
     bar é falso!
 
+.. code-block:: python
 
+    # Objeto string:
+    texto = 'Python e PostgreSQL: Poder!'
 
-texto = 'Python e PostgreSQL: uma dupla dinâmica!'
+    # Bloco if:
+    if texto:
+        print('A string NÃO é vazia!')
 
-if texto:
-    print('A string NÃO é vazia!')
+.. code-block:: console
 
-A string NÃO é vazia!
+    A string NÃO é vazia!
 
 
 texto = ''
