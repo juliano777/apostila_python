@@ -109,6 +109,7 @@ Tuplas tem apenas os métodos count e index.
 
     # Verificando os valores das variáveis:
 	x
+	x
 
 .. code-block:: console
 
