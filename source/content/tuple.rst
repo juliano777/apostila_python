@@ -65,59 +65,30 @@ ou
     # Via intersecção, o que há em comum entre lista e tupla?:
 	tupla.intersection(lista)
 
-.. code-block:: python
-	    
-	{'__add__',
- '__class__',
- '__contains__',
- '__delattr__',
- '__doc__',
- '__eq__',
- '__format__',
- '__ge__',
- '__getattribute__',
- '__getitem__',
- '__getslice__',
- '__gt__',
- '__hash__',
- '__init__',
- '__iter__',
- '__le__',
- '__len__',
- '__lt__',
- '__mul__',
- '__ne__',
- '__new__',
- '__reduce__',
- '__reduce_ex__',
- '__repr__',
- '__rmul__',
- '__setattr__',
- '__sizeof__',
- '__str__',
- '__subclasshook__',
- 'count',
- 'index'}
+. . .
 
 Tuplas tem apenas os métodos count e index.
 
+.. code-block:: python
+
+    # Tupla de um único elemento:
+	t = (1, )
 
 
-Tupla de um único elemento:
+.. code-block:: python
 
-> t = (1, )
+    # Exibir o conteúdo da tupla:
+	t
 
+.. code-block:: console
 
-
-Exibir o conteúdo da tupla:
-
-> t
-
-(1,)
+    (1,)
 
 
 
-Função type para verificar o tipo do objeto:
+.. code-block:: python
+
+    # Função type para verificar o tipo do objeto:
 
 > type(t)
 
