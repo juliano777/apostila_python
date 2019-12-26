@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>13. set e frozenset &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="13. Dicionários" href="dict.html" />
+    <link rel="next" title="14. Dicionários" href="dict.html" />
     <link rel="prev" title="12. Tupla" href="tuple.html" /> 
 </head>
 
@@ -82,7 +82,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
@@ -95,27 +95,29 @@
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
-<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">25. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">26. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">30. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">31. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">32. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">33. pytest</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. set e frozenset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">20. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">21. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">22. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">23. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">24. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">25. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">26. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">27. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">28. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">29. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">30. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">31. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">32. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">33. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">34. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">35. pytest</a></li>
 </ul>
 
             
@@ -161,7 +163,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li><span class="section-number">13. </span>set e frozenset</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,16 +182,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>set e frozenset</p>
-<blockquote>
-<div><p>Similarmente a list e tuple, a diferença entre eles é que frozenset é um tipo imutável.
-Seus elementos são únicos.
-Implementam operações matemáticas de conjuntos.</p>
-</div></blockquote>
-<p>Set vazio:</p>
-<p>&gt; s = {<a href="#id1"><span class="problematic" id="id2">*</span></a>()}</p>
+  <div class="section" id="set-e-frozenset">
+<h1><span class="section-number">13. </span>set e frozenset<a class="headerlink" href="#set-e-frozenset" title="Link permanente para este título">¶</a></h1>
+<div class="line-block">
+<div class="line">Similarmente a list e tuple, a diferença entre eles é que frozenset é um tipo imutável.</div>
+<div class="line">Seus elementos são únicos.</div>
+<div class="line">Implementam operações matemáticas de conjuntos.</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set vazio:</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="o">*</span><span class="p">()}</span>
+</pre></div>
+</div>
 <p>ou</p>
-<p>&gt; s = set()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Criação de um conjunto (set) não vazio:</p>
 <p>&gt; s = set([1, 1, 2, 3])</p>
 <p>ou</p>
@@ -229,6 +236,7 @@ Implementam operações matemáticas de conjuntos.</p>
 <p>Exibindo o conteúdo do frozenset:</p>
 <p>&gt; f</p>
 <p>frozenset({1, 2, 3})</p>
+</div>
 
 
            </div>
@@ -238,7 +246,7 @@ Implementam operações matemáticas de conjuntos.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dict.html" class="btn btn-neutral float-right" title="13. Dicionários" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dict.html" class="btn btn-neutral float-right" title="14. Dicionários" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tuple.html" class="btn btn-neutral float-left" title="12. Tupla" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

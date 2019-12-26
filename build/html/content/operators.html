@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14. Aritméticos &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>15. Aritméticos &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="15. Iteratoradores e Geradores" href="iter_gen.html" />
-    <link rel="prev" title="13. Dicionários" href="dict.html" /> 
+    <link rel="next" title="16. Iteratoradores e Geradores" href="iter_gen.html" />
+    <link rel="prev" title="14. Dicionários" href="dict.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,31 +95,32 @@
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">10. Sequências</a></li>
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Aritméticos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#atribuicao-de-valores">14.1. Atribuição de Valores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Aritméticos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#atribuicao-de-valores">15.1. Atribuição de Valores</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">15. Iteratoradores e Geradores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">16. Funções</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oo.html">17. Orientação a Objetos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">18. Método de Classe e Método Estático</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property.html">19. Encapsulamento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scope.html">20. Escopo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="if.html">21. if / elif / else</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loops.html">22. Loops - Laços de Repetição</a></li>
-<li class="toctree-l1"><a class="reference internal" href="open.html">23. open</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">24. Módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">25. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">26. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">27. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">28. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">20. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">21. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">22. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">23. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">24. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">25. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">26. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">27. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">28. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">29. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">30. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">31. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">32. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">33. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">34. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">35. pytest</a></li>
 </ul>
 
             
@@ -165,7 +166,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">14. </span>Aritméticos</li>
+      <li><span class="section-number">15. </span>Aritméticos</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,7 +188,7 @@
   <p># <a class="reference external" href="https://data-flair.training/blogs/python-operator/">https://data-flair.training/blogs/python-operator/</a>
 # <a class="reference external" href="https://www.tutorialspoint.com/python/bitwise_operators_example">https://www.tutorialspoint.com/python/bitwise_operators_example</a></p>
 <div class="section" id="aritmeticos">
-<h1><span class="section-number">14. </span>Aritméticos<a class="headerlink" href="#aritmeticos" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">15. </span>Aritméticos<a class="headerlink" href="#aritmeticos" title="Link permanente para este título">¶</a></h1>
 <div class="line-block">
 <div class="line">Descrição       | Operador | Exemplo | Saída |</div>
 </div>
@@ -360,7 +361,7 @@ True</p>
 <p>True &gt;&gt; True
 0</p>
 <div class="section" id="atribuicao-de-valores">
-<h2><span class="section-number">14.1. </span>Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">15.1. </span>Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição Simples</span>
 
 <span class="n">foo</span> <span class="o">=</span> <span class="mi">0</span>
@@ -425,10 +426,10 @@ True</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="iter_gen.html" class="btn btn-neutral float-right" title="15. Iteratoradores e Geradores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="iter_gen.html" class="btn btn-neutral float-right" title="16. Iteratoradores e Geradores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dict.html" class="btn btn-neutral float-left" title="13. Dicionários" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dict.html" class="btn btn-neutral float-left" title="14. Dicionários" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
