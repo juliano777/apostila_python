@@ -58,7 +58,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:
 
 .. code-block:: console
 
-    datetime.datetime(2019, 12, 27, 18, 30)    
+    datetime.datetime(2019, 12, 27, 19, 0)    
 
 
 .. code-block:: python
@@ -74,11 +74,19 @@ A mesma informação armazenada como datetime ocupa menos espaço que string.
 
 .. code-block:: python
 
-    # Recriar a variável como datetime utilizando seu valor antigo de string
-    dt_evento = datetime.strptime(dt_evento, '%Y-%m-%d %H:%M'):
+    # Recriar a variável como datetime utilizando seu valor antigo de string:
+    dt_evento = datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
 
     # Verificando o tipo:
     type(dt_evento)
+
+.. code-block:: console
+
+    datetime.datetime
+
+    
+
+        
 
 .. code-block:: python
 

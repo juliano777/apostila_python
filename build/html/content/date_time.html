@@ -227,7 +227,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.datetime(2019, 12, 27, 18, 30)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.datetime(2019, 12, 27, 19, 0)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># O tamanho em bytes do dado em datetime:</span>
@@ -238,11 +238,14 @@ strptime transforma uma string para datetime conforme uma dada máscara:</p>
 </pre></div>
 </div>
 <p>A mesma informação armazenada como datetime ocupa menos espaço que string.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recriar a variável como datetime utilizando seu valor antigo de string</span>
-<span class="n">dt_evento</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recriar a variável como datetime utilizando seu valor antigo de string:</span>
+<span class="n">dt_evento</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
 
 <span class="c1"># Verificando o tipo:</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">dt_evento</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">datetime.datetime</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># :</span>
