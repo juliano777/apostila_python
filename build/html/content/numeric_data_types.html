@@ -101,26 +101,27 @@
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
-<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">25. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">26. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">30. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">31. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">32. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">33. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">14. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">15. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">16. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">17. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">18. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">19. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">20. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">21. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">22. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">23. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">24. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">25. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">26. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">27. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">28. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -194,93 +195,94 @@
 A princípio utilizamos para números inteiros o tipo int. O número máximo de int que é aceito pode variar de uma máquina para outra.
 Para sabermos qual é o número máximo do tipo int fazemos:</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Objeto inteiro</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Objeto inteiro:</span>
+<span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>ou</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">7</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu valor</span>
-    <span class="n">i</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu valor:</span>
+<span class="n">i</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu tipo</span>
-    <span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu tipo:</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="nb">type</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tipo de &quot;bar&quot;:</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">long</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Representação hexadecimal de 178</span>
-    <span class="mh">0xb2</span>
+<span class="mh">0xb2</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">178</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Representação octal de 8</span>
-    <span class="mi">0</span><span class="n">o10</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Representação octal de 8:</span>
+<span class="mi">0</span><span class="n">o10</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">8</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Representação binária de 14</span>
-    <span class="mb">0b1110</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Representação binária de 14:</span>
+<span class="mb">0b1110</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">14</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número 7 (sete) convertido para as bases binária, octal e hexadecimal</span>
-    <span class="nb">bin</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>  <span class="c1"># binário</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número 7 (sete) convertido para as bases</span>
+<span class="c1"># binária, hexadecimal e octal respectivamente:</span>
+<span class="nb">bin</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0b111&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="nb">oct</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retorna a forma octal de 7:</span>
+<span class="nb">oct</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0o7&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="nb">hex</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retorna a versão hexadecimal de 7:</span>
+<span class="nb">hex</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0x7&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Descobrir o decimal dada uma base</span>
-    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;facada&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Descobrir o decimal dada uma base:</span>
+<span class="nb">int</span><span class="p">(</span><span class="s1">&#39;facada&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">16435930</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;25&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 25 octal em decimal é:</span>
+<span class="nb">int</span><span class="p">(</span><span class="s1">&#39;25&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">21</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;1111&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1111 binário é em decimal:</span>
+<span class="nb">int</span><span class="p">(</span><span class="s1">&#39;1111&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">15</span>
@@ -293,8 +295,8 @@ Para sabermos qual é o número máximo do tipo int fazemos:</p>
 <div><p>Ponto flutuante; não tem precisão absoluta, sua precisão é relativa.
 Para uma maior precisão com números que tenham ponto flutuante, utilizar o módulo decimal.</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de um float</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de um float:</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>ou</p>
@@ -308,20 +310,17 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 </pre></div>
 </div>
 <p>Formas de se definir um float:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5000000000</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.5000000000</span>
 </pre></div>
 </div>
 <p>ou</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span>
 </pre></div>
 </div>
 <p>ou</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span>
 
-    <span class="n">x</span>  <span class="c1"># Exibe o valor</span>
+<span class="n">x</span>  <span class="c1"># Exibe o valor</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0.5</span>
@@ -333,31 +332,30 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">float</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mf">2.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">2.</span>
 
-    <span class="n">x</span>  <span class="c1"># Verifica o valor</span>
+<span class="n">x</span>  <span class="c1"># Verifica o valor</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2.0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Que tipo resulta de da soma de um inteiro e um float?</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Que tipo resulta de da soma de um inteiro e um float?:</span>
     <span class="nb">type</span><span class="p">(</span><span class="mi">7</span> <span class="o">+</span> <span class="mf">3.0</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">float</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Resultado</span>
-    <span class="mi">7</span> <span class="o">+</span> <span class="mf">3.0</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Resultado:</span>
+<span class="mi">7</span> <span class="o">+</span> <span class="mf">3.0</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10.0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Divisão</span>
-    <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Divisão:</span>
+<span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p>ou</p>
@@ -375,22 +373,22 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1.5</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Divisão Inteira</span>
-    <span class="mi">3</span> <span class="o">//</span> <span class="mf">2.0</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Divisão Inteira:</span>
+<span class="mi">3</span> <span class="o">//</span> <span class="mf">2.0</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1.0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Notação Científica</span>
-    <span class="mf">1e+2</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Notação Científica:</span>
+<span class="mf">1e+2</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">100.0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="mf">1e-3</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Notação científica com expoente negativo:</span>
+<span class="mf">1e-3</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0.001</span>
@@ -402,73 +400,66 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 <blockquote>
 <div><p>É o tipo de dados em Python que trata de números complexos, que são muito utilizados em engenharia elétrica.</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte real</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte real:</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1+0j)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu valor e seu tipo</span>
-    <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu valor e seu tipo:</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">complex</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Novo valor do número complexo com parte real e imaginária</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Novo valor do número complexo com parte real e imaginária:</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">c</span>  <span class="c1"># Verificando o valor</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>  <span class="c1"># Verificando o valor</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(5+3j)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte imaginária</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte imaginária:</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">c</span>  <span class="c1"># Verificando seu valor</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>  <span class="c1"># Verificando seu valor</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3j</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">imag</span>  <span class="c1"># Extraindo somente a parte imaginária</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">imag</span>  <span class="c1"># Extraindo somente a parte imaginária</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">real</span>  <span class="c1"># Extraindo somente a parte real</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">real</span>  <span class="c1"># Extraindo somente a parte real</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0.0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Somando o número com a parte real</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Somando o número com a parte real</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1+3j)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;7j&#39;</span><span class="p">)</span>  <span class="c1"># Somando o número com a parte imaginária</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;7j&#39;</span><span class="p">)</span>  <span class="c1"># Somando o número com a parte imaginária</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10j</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-    <span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>  <span class="c1"># somando o número complexo com outro complexo</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>  <span class="c1"># somando o número complexo com outro complexo</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(2+20j)</span>

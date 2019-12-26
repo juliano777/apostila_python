@@ -11,8 +11,8 @@ int
 
 .. code-block:: python
 
-    # Objeto inteiro
-	i = int(7)
+    # Objeto inteiro:
+    i = int(7)
 
 ou
 
@@ -22,8 +22,8 @@ ou
 
 .. code-block:: python
 
-    # Verificando seu valor
-	i
+    # Verificando seu valor:
+    i
 
 .. code-block:: console
 
@@ -31,8 +31,8 @@ ou
 
 .. code-block:: python
 
-    # Verificando seu tipo
-	type(i)
+    # Verificando seu tipo:
+    type(i)
 
 .. code-block:: console
 
@@ -40,8 +40,8 @@ ou
 
 .. code-block:: python
 
-    # 
-	type(bar)
+    # Tipo de "bar":
+    type(bar)
 
 .. code-block:: console
 
@@ -50,7 +50,7 @@ ou
 .. code-block:: python
 
     # Representação hexadecimal de 178
-	0xb2
+    0xb2
 
 .. code-block:: console
 
@@ -58,8 +58,8 @@ ou
 
 .. code-block:: python
 
-    # Representação octal de 8
-	0o10
+    # Representação octal de 8:
+    0o10
 
 .. code-block:: console
 
@@ -67,8 +67,8 @@ ou
 
 .. code-block:: python
 
-    # Representação binária de 14
-	0b1110
+    # Representação binária de 14:
+    0b1110
 
 .. code-block:: console
 
@@ -76,8 +76,9 @@ ou
 
 .. code-block:: python
 
-    # Número 7 (sete) convertido para as bases binária, octal e hexadecimal
-	bin(7)  # binário
+    # Número 7 (sete) convertido para as bases 
+    # binária, hexadecimal e octal respectivamente:
+    bin(7)
 
 .. code-block:: console
 
@@ -85,8 +86,8 @@ ou
 
 .. code-block:: python
 
-    # 
-	oct(7)
+    # Retorna a forma octal de 7:
+    oct(7)
 
 .. code-block:: console
 
@@ -94,8 +95,8 @@ ou
 
 .. code-block:: python
 
-    # 
-	hex(7)
+    # Retorna a versão hexadecimal de 7:
+    hex(7)
 
 .. code-block:: console
 
@@ -103,8 +104,8 @@ ou
 
 .. code-block:: python
 
-    # Descobrir o decimal dada uma base
-	int('facada', base=16)
+    # Descobrir o decimal dada uma base:
+    int('facada', base=16)
 
 .. code-block:: console
 
@@ -112,8 +113,8 @@ ou
 
 .. code-block:: python
 
-    # 
-	int('25', base=8)
+    # 25 octal em decimal é:
+    int('25', base=8)
 
 .. code-block:: console
 
@@ -121,8 +122,8 @@ ou
 
 .. code-block:: python
 
-    # 
-	int('1111', base=2)
+    # 1111 binário é em decimal:
+    int('1111', base=2)
 
 .. code-block:: console
 
@@ -139,8 +140,8 @@ float
 
 .. code-block:: python
 
-    # Criação de um float
-	f = float(3)
+    # Criação de um float:
+    f = float(3)
 
 ou
 
@@ -160,21 +161,18 @@ Formas de se definir um float:
 
 .. code-block:: python
 
-    # 
 	x = 0.5000000000
 
 ou
 
 .. code-block:: python
 
-    # 
 	x = 0.5
 
 ou
 
 .. code-block:: python
 
-    # 
 	x = .5
 
 	x  # Exibe o valor
@@ -193,7 +191,6 @@ ou
 
 .. code-block:: python
 
-    # 
 	x = 2.
 
 	x  # Verifica o valor
@@ -204,7 +201,7 @@ ou
 
 .. code-block:: python
 
-    # Que tipo resulta de da soma de um inteiro e um float?
+    # Que tipo resulta de da soma de um inteiro e um float?:
 	type(7 + 3.0)
 
 .. code-block:: console
@@ -214,8 +211,8 @@ ou
 
 .. code-block:: python
 
-    # Resultado
-	7 + 3.0
+    # Resultado:
+    7 + 3.0
 
 .. code-block:: console
 
@@ -224,8 +221,8 @@ ou
 
 .. code-block:: python
 
-    # Divisão
-	3 / 2
+    # Divisão:
+    3 / 2
 
 ou
 
@@ -251,8 +248,8 @@ ou
 
 .. code-block:: python
 
-    # Divisão Inteira
-	3 // 2.0
+    # Divisão Inteira:
+    3 // 2.0
 
 .. code-block:: console
 
@@ -260,8 +257,8 @@ ou
 
 .. code-block:: python
 
-    # Notação Científica
-	1e+2
+    # Notação Científica:
+    1e+2
 
 .. code-block:: console
 
@@ -269,8 +266,8 @@ ou
 
 .. code-block:: python
 
-    # 
-	1e-3
+    # Notação científica com expoente negativo:
+    1e-3
 
 .. code-block:: console
 
@@ -283,9 +280,9 @@ complex
 
 .. code-block:: python
 
-    # Número complexo somente com a parte real
-	c = complex(1)
-	print(c)
+    # Número complexo somente com a parte real:
+    c = complex(1)
+    print(c)
 
 .. code-block:: console
 
@@ -293,8 +290,8 @@ complex
 
 .. code-block:: python
 
-    # Verificando seu valor e seu tipo
-	type(c)
+    # Verificando seu valor e seu tipo:
+    type(c)
 
 .. code-block:: console
 
@@ -302,12 +299,11 @@ complex
 
 .. code-block:: python
 
-    # Novo valor do número complexo com parte real e imaginária
-	c = complex(5, 3)
+    # Novo valor do número complexo com parte real e imaginária:
+    c = complex(5, 3)
 
 .. code-block:: python
 
-    # 
 	c  # Verificando o valor
 
 .. code-block:: console
@@ -317,12 +313,11 @@ complex
 
 .. code-block:: python
 
-    # Número complexo somente com a parte imaginária
-	c = complex(0, 3)
+    # Número complexo somente com a parte imaginária:
+    c = complex(0, 3)
 
 .. code-block:: python
 
-    # 
 	c  # Verificando seu valor
 
 .. code-block:: console
@@ -331,7 +326,6 @@ complex
 
 .. code-block:: python
 
-    # 
 	c.imag  # Extraindo somente a parte imaginária
 
 .. code-block:: console
@@ -340,7 +334,6 @@ complex
 
 .. code-block:: python
 
-    # 
 	c.real  # Extraindo somente a parte real
 
 .. code-block:: console
@@ -349,7 +342,6 @@ complex
 
 .. code-block:: python
 
-    # 
 	c + 1  # Somando o número com a parte real
 
 .. code-block:: console
@@ -358,7 +350,6 @@ complex
 
 .. code-block:: python
 
-    # 
 	c + complex('7j')  # Somando o número com a parte imaginária
 
 .. code-block:: console
@@ -367,7 +358,6 @@ complex
 
 .. code-block:: python
 
-    # 
 	c + complex(2, 17)  # somando o número complexo com outro complexo
 
 .. code-block:: console
