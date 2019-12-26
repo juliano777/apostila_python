@@ -3,12 +3,14 @@ with
 
 	É usado para encapsular a execução de um bloco com métodos definidos por um gerenciador de contexto. 
 
+.. code-block:: bash
 
-$ cat << EOF > /tmp/numbers.txt
-1
-2
-3
-EOF
+    # 
+    $ cat << EOF > /tmp/numbers.txt
+    1
+    2
+    3
+    EOF
 
 
 $ cat << EOF > /tmp/numbers_str.txt
