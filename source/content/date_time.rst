@@ -254,10 +254,6 @@ O Módulo time
 
     # Converte um tempo em segundos desde Epoch para uma string, 
     # se nenhum parâmetro for passado retorna string do momento atual:
-
-.. code-block:: python
-
-    # :
     ctime()
 
 .. code-block:: console
@@ -266,7 +262,6 @@ O Módulo time
 
 .. code-block:: python
 
-    # :
     ctime(1540000000)
 
 .. code-block:: console
