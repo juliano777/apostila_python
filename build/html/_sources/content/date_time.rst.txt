@@ -46,7 +46,6 @@ Módulo que fornece classes para manipular datas e horas de maneiras simples e c
 | Strings não são adequadas para armazenar data e hora.
 | strptime transforma uma string para datetime conforme uma dada máscara:
 
-    strptime: str -> datetime
 
 
 .. code-block:: python
