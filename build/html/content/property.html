@@ -102,7 +102,10 @@
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">20. Encapsulamento</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">20. Encapsulamento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modificador-private">20.1. Modificador Private (__)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="scope.html">21. Escopo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="if.html">22. if / elif / else</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loops.html">23. Loops - Laços de Repetição</a></li>
@@ -184,16 +187,25 @@
             
   <div class="section" id="encapsulamento">
 <h1><span class="section-number">20. </span>Encapsulamento<a class="headerlink" href="#encapsulamento" title="Link permanente para este título">¶</a></h1>
-<p>Modificador Private (__)</p>
-<blockquote>
-<div><p>Colocando 2 (dois) caracteres underscore antecedendo o atributo, ele fica privado, ou seja, não é acessível fora da classe.</p>
-</div></blockquote>
-<dl class="simple">
-<dt>class Foo(object):</dt><dd><p>__atributo = 0</p>
-</dd>
-</dl>
-<p>f = Foo()</p>
-<p>f.__atributo</p>
+<div class="section" id="modificador-private">
+<h2><span class="section-number">20.1. </span>Modificador Private (__)<a class="headerlink" href="#modificador-private" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Colocando 2 (dois) caracteres underscore antecedendo o atributo, ele fica</div>
+</div>
+<div class="line">privado, ou seja, não é acessível fora da classe.</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de classe de teste:</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">__atributo</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Instância da classe:</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+
+<span class="c1"># Tentativa de acesso a atributo privado:</span>
+<span class="n">f</span><span class="o">.</span><span class="n">__atributo</span>
+</pre></div>
+</div>
 <p>…</p>
 <p>AttributeError: ‘Foo’ object has no attribute ‘__atributo’</p>
 <dl>
@@ -265,6 +277,7 @@ del self.__velocidade</p>
 </div></blockquote>
 </dd>
 </dl>
+</div>
 </div>
 
 

@@ -2,15 +2,22 @@ Encapsulamento
 **************
 
 Modificador Private (__)
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Colocando 2 (dois) caracteres underscore antecedendo o atributo, ele fica privado, ou seja, não é acessível fora da classe.
+|   Colocando 2 (dois) caracteres underscore antecedendo o atributo, ele fica
+| privado, ou seja, não é acessível fora da classe.
 
-class Foo(object):
-    __atributo = 0
+.. code-block:: python
 
-f = Foo()
+    # Criação de classe de teste:
+    class Foo(object):
+        __atributo = 0
 
-f.__atributo
+    # Instância da classe:
+    f = Foo()
+
+    # Tentativa de acesso a atributo privado:
+    f.__atributo
 
 . . . 
 
