@@ -92,36 +92,46 @@ Modificador Private (__)
     . . .
     ValueError: A velocidade máxima permitida é de 300 km/h
 
+.. code-block:: python
 
+    # Remover a property:
+    del c.velocidade
 
-del c.velocidade
-Removendo a propriedade de velocidade
+.. code-block:: console
 
-c.velocidade
+    Removendo a propriedade de velocidade
 
-. . .
+.. code-block:: python
 
-AttributeError: 'Carro' object has no attribute '__velocidade'
+    # Tentativa de acesso à property apagada:
+    c.velocidade
 
+.. code-block:: console
 
-class Carro(object):
-    def __init__(self):
-        self.__velocidade = 0
+    . . .
+    AttributeError: 'Carro' object has no attribute '__velocidade'
+
+.. code-block:: python
+
+    # Criação de classe:
+    class Carro(object):
+        def __init__(self):
+            self.__velocidade = 0
+            
+        @property 
+        def velocidade(self):
+            '''Velocidade máxima do carro'''
+            print('Velocidade: %d km/h' % self.__velocidade)
+            return self.__velocidade
         
-    @property 
-    def velocidade(self):
-        '''Velocidade máxima do carro'''
-        print('Velocidade: %d km/h' % self.__velocidade)
-        return self.__velocidade
-    
-    @velocidade.setter    
-    def velocidade(self, velocidade):
-        if velocidade > 300:
-            raise ValueError('A velocidade máxima permitida é de 300 km/h')        
-        self.__velocidade = velocidade
-        print('Velocidade = %d km/h' % self.__velocidade)
-        
-    @velocidade.deleter   
-    def velocidade(self):
-        print('Removendo a propriedade de velocidade')
-        del self.__velocidade
+        @velocidade.setter    
+        def velocidade(self, velocidade):
+            if velocidade > 300:
+                raise ValueError('A velocidade máxima permitida é de 300 km/h')        
+            self.__velocidade = velocidade
+            print('Velocidade = %d km/h' % self.__velocidade)
+            
+        @velocidade.deleter   
+        def velocidade(self):
+            print('Removendo a propriedade de velocidade')
+            del self.__velocidade
