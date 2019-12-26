@@ -89,7 +89,7 @@ Algumas coisas "estranhas":
 
     Decimal('1.5600')
 
-    O último retorno foi com um número com 4 (quatro) casas decimais.
+O último retorno foi com um número com 4 (quatro) casas decimais.
 
 A função getcontext, com o atributo "prec" (precision) ajusta a quantidade máxima de dígitos (antes e depois do ponto flutuante) para 3 (três):
 

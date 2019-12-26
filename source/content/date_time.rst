@@ -11,25 +11,13 @@ Importação de tipo e função para os testes a seguir:
 
 .. code-block:: python
 
-    # 
+    # Imports:
     from datetime import date
-
-    #
     from datetime import datetime
-
-    # 
     from sys import getsizeof
-
-    # 
     from time import ctime
-
-    #
     from time import sleep
-
-    # 
     from time import time
-
-    # 
     from time import tzname
 
 
