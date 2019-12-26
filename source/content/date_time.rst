@@ -7,8 +7,6 @@ datetime
 Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.
 
 
-Importação de tipo e função para os testes a seguir:
-
 .. code-block:: python
 
     # Imports:
@@ -246,7 +244,7 @@ O Módulo time
 
 .. code-block:: console
 
-    1545143461.209795
+    1577375404.8968937
 
 .. code-block:: python
 
@@ -260,7 +258,7 @@ O Módulo time
 
 .. code-block:: console
 
-    'Tue Dec 18 12:14:49 2018'
+    'Thu Dec 26 12:50:22 2019'
 
 .. code-block:: python
 
