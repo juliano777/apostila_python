@@ -180,11 +180,3 @@ if Ternário
 .. code-block:: console
 
     O número é negativo
-
-
-
-
-continue
-
-
-break
