@@ -12,12 +12,14 @@ with
     3
     EOF
 
+.. code-block:: bash
 
-$ cat << EOF > /tmp/numbers_str.txt
-1
-2
-three
-EOF
+    #     
+    $ cat << EOF > /tmp/numbers_str.txt
+    1
+    2
+    three
+    EOF
 
 
 
