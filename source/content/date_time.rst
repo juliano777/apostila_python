@@ -67,7 +67,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:
 
 .. code-block:: python
 
-    # O tamanho em bytes do dado em datetime
+    # O tamanho em bytes do dado em datetime:
     getsizeof(datetime.strptime(dt_evento, '%Y-%m-%d %H:%M'))
 
 .. code-block:: console
@@ -79,14 +79,14 @@ A mesma informação armazenada como datetime ocupa menos espaço que string.
 .. code-block:: python
 
     # Recriar a variável como datetime utilizando seu valor antigo de string
-    dt_evento = datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
+    dt_evento = datetime.strptime(dt_evento, '%Y-%m-%d %H:%M'):
 
-    # Verificando o tipo
+    # Verificando o tipo:
     type(dt_evento)
 
 .. code-block:: python
 
-    # 
+    # :
     datetime.datetime
 
 
@@ -98,7 +98,7 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 
 .. code-block:: python
 
-    # Extrair como string de um dado datetime
+    # Extrair como string de um dado datetime:
     datetime.strftime(dt_evento, '%Y-%m-%d %H:%M')
 
 .. code-block:: console
@@ -107,10 +107,10 @@ Pode ser necessário também fazer o caminho inverso, para transformar um dado d
 
 .. code-block:: python
 
-    # Variável que contém apenas a data atual
+    # Variável que contém apenas a data atual:
     hoje = date.today()
 
-    # Exibindo o valor da variável
+    # Exibindo o valor da variável:
     print(hoje)
 
 .. code-block:: console
@@ -121,7 +121,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # dia
+    # dia:
     print(hoje.day)
 
 .. code-block:: console
@@ -130,7 +130,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # mês
+    # mês:
     print(hoje.month)
 
 .. code-block:: console
@@ -139,7 +139,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # ano
+    # ano:
     print(hoje.year)
 
 .. code-block:: console
@@ -148,7 +148,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # Formato ISO
+    # Formato ISO:
     hoje.isoformat()
 
 .. code-block:: console
@@ -157,7 +157,8 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # Método toordinal; retorna a quantidade de dias passados desde 01/01/0001
+    # Método toordinal; retorna a quantidade de dias 
+    # passados desde 01/01/0001:
     hoje.toordinal()
 
 .. code-block:: console
@@ -166,7 +167,8 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # Método fromordinal; retorna a data a partir da quantidade de dias passados desde 01/01/0001
+    # Método fromordinal; retorna a data a partir da quantidade 
+    # de dias passados desde 01/01/0001:
     date.fromordinal(737046)
 
 .. code-block:: console
@@ -175,7 +177,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # Que dia será daqui a 40 dias?
+    # Que dia será daqui a 40 dias?:
     date.fromordinal(hoje.toordinal() + 40)   # formato datetime.date
 
 .. code-block:: console
@@ -184,7 +186,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # Formato ISO
+    # Formato ISO:
     date.fromordinal(hoje.toordinal() + 40).isoformat()
 
 .. code-block:: console
@@ -193,7 +195,7 @@ Exibindo apenas partes da data:
 
 .. code-block:: python
 
-    # Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6
+    # Método weekday (dia da semana), em que segunda-feira = 0 e domingo = 6:
     hoje.weekday()
 
 .. code-block:: console
@@ -249,7 +251,7 @@ O Módulo time
 
 .. code-block:: python
 
-    # 
+    # :
     ctime()
 
 .. code-block:: console
@@ -258,7 +260,7 @@ O Módulo time
 
 .. code-block:: python
 
-    # 
+    # :
     ctime(1540000000)
 
 .. code-block:: console
