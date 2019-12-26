@@ -24,6 +24,9 @@ Modificador Private (__)
     . . .
     AttributeError: 'Foo' object has no attribute '__atributo'
 
+Property
+~~~~~~~~
+
 .. code-block:: python
 
     # Classe com property:
