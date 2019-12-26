@@ -6,19 +6,23 @@ while
 
 Executa em laço (loop) enquanto a condição for verdadeira.
 
-i = 0
+.. code-block:: python
 
-while i < 5:
-    print(i)
-    i += 1
-    
-0
-1
-2
-3
-4
+    # 
+    i = 0
 
-i = 0
+    # 
+    while i < 5:
+        print(i)
+        i += 1
+
+.. code-block:: console
+
+    0
+    1
+    2
+    3
+    4
 
 
 O else no loop while
@@ -27,18 +31,24 @@ O else no loop while
 	Opcionalmente, pode-se adicionar um else ao while em Python.
 	A idéia é que se caso o loop seja executado sem interrupção, um break, por exemplo, o que estiver dentro do bloco else será executado.
 
-while i < 5:
-    print(i)
-    i += 1
-else:   
-    print('Fim')
+.. code-block:: python
 
-0
-1
-2
-3
-4
-Fim
+    # 
+    i = 0
+    while i < 5:
+        print(i)
+        i += 1
+    else:   
+        print('Fim')
+
+.. code-block:: console
+
+    0
+    1
+    2
+    3
+    4
+    Fim
 
 i = 0
 

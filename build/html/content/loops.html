@@ -193,37 +193,45 @@
 <div class="section" id="while">
 <h2><span class="section-number">23.1. </span>while<a class="headerlink" href="#while" title="Link permanente para este título">¶</a></h2>
 <p>Executa em laço (loop) enquanto a condição for verdadeira.</p>
-<p>i = 0</p>
-<dl class="simple">
-<dt>while i &lt; 5:</dt><dd><p>print(i)
-i += 1</p>
-</dd>
-</dl>
-<p>0
-1
-2
-3
-4</p>
-<p>i = 0</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">#</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+</pre></div>
+</div>
 <div class="section" id="o-else-no-loop-while">
 <h3><span class="section-number">23.1.1. </span>O else no loop while<a class="headerlink" href="#o-else-no-loop-while" title="Link permanente para este título">¶</a></h3>
 <blockquote>
 <div><p>Opcionalmente, pode-se adicionar um else ao while em Python.
 A idéia é que se caso o loop seja executado sem interrupção, um break, por exemplo, o que estiver dentro do bloco else será executado.</p>
 </div></blockquote>
-<dl class="simple">
-<dt>while i &lt; 5:</dt><dd><p>print(i)
-i += 1</p>
-</dd>
-<dt>else:</dt><dd><p>print(‘Fim’)</p>
-</dd>
-</dl>
-<p>0
-1
-2
-3
-4
-Fim</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">Fim</span>
+</pre></div>
+</div>
 <p>i = 0</p>
 <dl class="simple">
 <dt>while i &lt;= 10:</dt><dd><p>if i == 5: break
