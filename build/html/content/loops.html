@@ -333,74 +333,94 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">5 - Legolas</span>
 </pre></div>
 </div>
-<p>list(enumerate(lor))
-[(0, ‘Gandalf’), (1, ‘Bilbo’), (2, ‘Frodo’), (3, ‘Sauron’), (4, ‘Aragorn’), (5, ‘Legolas’)]</p>
-<p>dados =  [(‘Nome’, ‘Chiquinho’), (‘Sobrenome’, ‘da Silva’), (‘Idade’, 50)]</p>
-<dl class="simple">
-<dt>for k, v in dados:</dt><dd><p>print(‘%s: %s’ % (k, v))</p>
-</dd>
-</dl>
-<p>Nome: Chiquinho
-Sobrenome: da Silva
-Idade: 50</p>
-<dl class="simple">
-<dt>dados = {</dt><dd><p>‘Nome’: ‘Chiquinho’,
-‘Sobrenome’: ‘da Silva’,
-‘Idade’: 50</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="simple">
-<dt>for k, v in dados.items():</dt><dd><p>print(‘%s: %s’ % (k, v))</p>
-</dd>
-</dl>
-<p>Sobrenome: da Silva
-Idade: 50
-Nome: Chiquinho</p>
-<dl class="simple">
-<dt>for i in range(5):</dt><dd><p>print(i)</p>
-</dd>
-<dt>else:</dt><dd><p>print(‘Fim’)</p>
-</dd>
-</dl>
-<p>0
-1
-2
-3
-4
-Fim</p>
-<dl>
-<dt>for i in range(10):</dt><dd><dl class="simple">
-<dt>if i == 6:</dt><dd><p>break</p>
-</dd>
-</dl>
-<p>print(i)</p>
-</dd>
-<dt>else:</dt><dd><p>print(‘Fim’)</p>
-</dd>
-</dl>
-<p>0
-1
-2
-3
-4
-5</p>
-<dl>
-<dt>for i in range(10):</dt><dd><dl class="simple">
-<dt>if i % 2 == 0:</dt><dd><p>continue</p>
-</dd>
-</dl>
-<p>print(i)</p>
-</dd>
-<dt>else:</dt><dd><p>print(‘Fim’)</p>
-</dd>
-</dl>
-<p>1
-3
-5
-7
-9
-Fim</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">lor</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[(0, &#39;Gandalf&#39;), (1, &#39;Bilbo&#39;), (2, &#39;Frodo&#39;), (3, &#39;Sauron&#39;), (4, &#39;Aragorn&#39;), (5, &#39;Legolas&#39;)]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">dados</span> <span class="o">=</span>  <span class="p">[(</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Sobrenome&#39;</span><span class="p">,</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Idade&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)]</span>
+
+<span class="c1">#</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dados</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Nome: Chiquinho</span>
+<span class="go">Sobrenome: da Silva</span>
+<span class="go">Idade: 50</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">dados</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Nome&#39;</span><span class="p">:</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sobrenome&#39;</span><span class="p">:</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Idade&#39;</span><span class="p">:</span> <span class="mi">50</span>
+<span class="p">}</span>
+
+<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
+
+<span class="c1">#</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dados</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Sobrenome: da Silva</span>
+<span class="go">Idade: 50</span>
+<span class="go">Nome: Chiquinho</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">Fim</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+<span class="go">3</span>
+<span class="go">5</span>
+<span class="go">7</span>
+<span class="go">9</span>
+<span class="go">Fim</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

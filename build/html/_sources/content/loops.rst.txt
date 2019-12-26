@@ -163,72 +163,103 @@ for
     4 - Aragorn
     5 - Legolas
 
-list(enumerate(lor))
-[(0, 'Gandalf'), (1, 'Bilbo'), (2, 'Frodo'), (3, 'Sauron'), (4, 'Aragorn'), (5, 'Legolas')]
+.. code-block:: python
 
+    # 
+    list(enumerate(lor))
 
-dados =  [('Nome', 'Chiquinho'), ('Sobrenome', 'da Silva'), ('Idade', 50)]
+.. code-block:: console
 
-for k, v in dados:
-    print('%s: %s' % (k, v))
+    [(0, 'Gandalf'), (1, 'Bilbo'), (2, 'Frodo'), (3, 'Sauron'), (4, 'Aragorn'), (5, 'Legolas')]
 
-Nome: Chiquinho
-Sobrenome: da Silva
-Idade: 50
+.. code-block:: python
 
+    # 
+    dados =  [('Nome', 'Chiquinho'), ('Sobrenome', 'da Silva'), ('Idade', 50)]
 
-dados = {
-    'Nome': 'Chiquinho',
-    'Sobrenome': 'da Silva',
-    'Idade': 50
-}
+    # 
+    for k, v in dados:
+        print('%s: %s' % (k, v))
 
-for k, v in dados.items():
-    print('%s: %s' % (k, v))
+.. code-block:: console
 
-Sobrenome: da Silva
-Idade: 50
-Nome: Chiquinho
+    Nome: Chiquinho
+    Sobrenome: da Silva
+    Idade: 50
 
+.. code-block:: python
 
+    # 
+    dados = {
+        'Nome': 'Chiquinho',
+        'Sobrenome': 'da Silva',
+        'Idade': 50
+    }
 
-for i in range(5):
-    print(i)
-else:
-    print('Fim')
-    
-0
-1
-2
-3
-4
-Fim
+    .. code-block:: python
 
-for i in range(10):
-    if i == 6:
-        break
-    print(i)
-else:
-    print('Fim')
+    # 
+    for k, v in dados.items():
+        print('%s: %s' % (k, v))
 
-0
-1
-2
-3
-4
-5
+.. code-block:: console
 
+    Sobrenome: da Silva
+    Idade: 50
+    Nome: Chiquinho
 
-for i in range(10):
-    if i % 2 == 0:
-        continue
-    print(i)
-else:
-    print('Fim')
+.. code-block:: python
 
-1
-3
-5
-7
-9
-Fim
+    #     
+    for i in range(5):
+        print(i)
+    else:
+        print('Fim')
+
+.. code-block:: console
+
+    0
+    1
+    2
+    3
+    4
+    Fim
+
+.. code-block:: python
+
+    # 
+    for i in range(10):
+        if i == 6:
+            break
+        print(i)
+    else:
+        print('Fim')
+
+.. code-block:: console
+
+    0
+    1
+    2
+    3
+    4
+    5
+
+       
+.. code-block:: python
+
+    # 
+    for i in range(10):
+        if i % 2 == 0:
+            continue
+        print(i)
+    else:
+        print('Fim')
+
+.. code-block:: console
+
+    1
+    3
+    5
+    7
+    9
+    Fim
