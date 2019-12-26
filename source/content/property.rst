@@ -113,7 +113,7 @@ Modificador Private (__)
 
 .. code-block:: python
 
-    # Criação de classe:
+    # Criação de classe com definição de properties via decorators:
     class Carro(object):
         def __init__(self):
             self.__velocidade = 0
