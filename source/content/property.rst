@@ -26,6 +26,7 @@ Modificador Private (__)
 
 .. code-block:: python
 
+    # 
     class Carro(object):
         def __init__(self):
             self.__velocidade = 0
@@ -54,9 +55,11 @@ Modificador Private (__)
     # 
     c.__velocidade
 
-.  .  .
 
-AttributeError: 'Carro' object has no attribute '__velocidade'
+.. code-block:: console
+
+    .  .  .
+    AttributeError: 'Carro' object has no attribute '__velocidade'
 
 
 c.velocidade

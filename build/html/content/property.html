@@ -210,7 +210,8 @@
 <span class="go">AttributeError: &#39;Foo&#39; object has no attribute &#39;__atributo&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -239,8 +240,10 @@
 <span class="n">c</span><span class="o">.</span><span class="n">__velocidade</span>
 </pre></div>
 </div>
-<p>.  .  .</p>
-<p>AttributeError: ‘Carro’ object has no attribute ‘__velocidade’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.  .  .</span>
+<span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;__velocidade&#39;</span>
+</pre></div>
+</div>
 <p>c.velocidade
 Velocidade: 0 km/h
 0</p>
