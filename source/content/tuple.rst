@@ -1,8 +1,9 @@
 Tupla
 *****
 
-	Tupla têm sua estrutura muito similar à da lista, no entanto, ela é imutável.
-	Ela é mais recomendada para uso de dados estáticos, pois comparada à lista, tem um desempenho melhor devido à sua simplicidade e consome menos recursos.
+|	Tupla têm sua estrutura muito similar à da lista, no entanto, ela é imutável.
+|	Ela é mais recomendada para uso de dados estáticos, pois comparada à lista,
+| tem um desempenho melhor devido à sua simplicidade e consome menos recursos.
 
 
 
