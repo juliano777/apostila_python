@@ -134,7 +134,7 @@ Property como Decorator
         @property 
         def velocidade(self):
             '''Velocidade máxima do carro'''
-            print('Velocidade: %d km/h' % self.__velocidade)
+            print('Velocidade: {} km/h'.format(self.__velocidade))
             return self.__velocidade
         
         @velocidade.setter    
@@ -142,7 +142,7 @@ Property como Decorator
             if velocidade > 300:
                 raise ValueError('A velocidade máxima permitida é de 300 km/h')        
             self.__velocidade = velocidade
-            print('Velocidade = %d km/h' % self.__velocidade)
+            print('Velocidade = {} km/h'.format(self.__velocidade))
             
         @velocidade.deleter   
         def velocidade(self):

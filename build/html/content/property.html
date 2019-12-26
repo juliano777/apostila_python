@@ -311,7 +311,7 @@ ValueError: A velocidade máxima permitida é de 300 km/h
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Velocidade máxima do carro&#39;&#39;&#39;</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: {} km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
     <span class="nd">@velocidade.setter</span>
@@ -319,7 +319,7 @@ ValueError: A velocidade máxima permitida é de 300 km/h
         <span class="k">if</span> <span class="n">velocidade</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;A velocidade máxima permitida é de 300 km/h&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="n">velocidade</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = {} km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
 
     <span class="nd">@velocidade.deleter</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
