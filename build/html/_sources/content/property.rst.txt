@@ -114,6 +114,10 @@ Property
     . . .
     AttributeError: 'Carro' object has no attribute '__velocidade'
 
+   
+Property como decorator
+~~~~~~~~~~~~~~~~~~~~~~~     
+
 .. code-block:: python
 
     # Criação de classe com definição de properties via decorators:
