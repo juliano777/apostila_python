@@ -24,34 +24,35 @@ Modificador Private (__)
     . . .
     AttributeError: 'Foo' object has no attribute '__atributo'
 
+.. code-block:: python
 
-
-
-class Carro(object):
-    def __init__(self):
-        self.__velocidade = 0
+    class Carro(object):
+        def __init__(self):
+            self.__velocidade = 0
         
-    def _get__velocidade(self):
-        print('Velocidade: %d km/h' % self.__velocidade)
-        return self.__velocidade
-    
-    def _set__velocidade(self, velocidade):
-        if velocidade > 300:
-            raise ValueError('A velocidade máxima permitida é de 300 km/h')        
-        self.__velocidade = velocidade
-        print('Velocidade = %d km/h' % self.__velocidade)
+        def _get__velocidade(self):
+            print('Velocidade: %d km/h' % self.__velocidade)
+            return self.__velocidade
         
-    def _del__velocidade(self):
-        print('Removendo a propriedade de velocidade')
-        del self.__velocidade
-    
-    velocidade = property(_get__velocidade, _set__velocidade, _del__velocidade,
-                          'Velocidade máxima do carro')
+        def _set__velocidade(self, velocidade):
+            if velocidade > 300:
+                raise ValueError('A velocidade máxima permitida é de 300 km/h')        
+            self.__velocidade = velocidade
+            print('Velocidade = %d km/h' % self.__velocidade)
+            
+        def _del__velocidade(self):
+            print('Removendo a propriedade de velocidade')
+            del self.__velocidade
+        
+        velocidade = property(_get__velocidade, _set__velocidade, _del__velocidade,
+                            'Velocidade máxima do carro')
 
 
-c = Carro()
+    # 
+    c = Carro()
 
-c.__velocidade
+    # 
+    c.__velocidade
 
 .  .  .
 

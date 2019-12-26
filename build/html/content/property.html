@@ -210,30 +210,35 @@
 <span class="go">AttributeError: &#39;Foo&#39; object has no attribute &#39;__atributo&#39;</span>
 </pre></div>
 </div>
-<dl>
-<dt>class Carro(object):</dt><dd><dl>
-<dt>def __init__(self):</dt><dd><p>self.__velocidade = 0</p>
-</dd>
-<dt>def _get__velocidade(self):</dt><dd><p>print(‘Velocidade: %d km/h’ % self.__velocidade)
-return self.__velocidade</p>
-</dd>
-<dt>def _set__velocidade(self, velocidade):</dt><dd><dl class="simple">
-<dt>if velocidade &gt; 300:</dt><dd><p>raise ValueError(‘A velocidade máxima permitida é de 300 km/h’)</p>
-</dd>
-</dl>
-<p>self.__velocidade = velocidade
-print(‘Velocidade = %d km/h’ % self.__velocidade)</p>
-</dd>
-<dt>def _del__velocidade(self):</dt><dd><p>print(‘Removendo a propriedade de velocidade’)
-del self.__velocidade</p>
-</dd>
-<dt>velocidade = property(_get__velocidade, _set__velocidade, _del__velocidade,</dt><dd><p>‘Velocidade máxima do carro’)</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>c = Carro()</p>
-<p>c.__velocidade</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">_get__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
+
+    <span class="k">def</span> <span class="nf">_set__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocidade</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">velocidade</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;A velocidade máxima permitida é de 300 km/h&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="n">velocidade</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_del__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Removendo a propriedade de velocidade&#39;</span><span class="p">)</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
+
+    <span class="n">velocidade</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get__velocidade</span><span class="p">,</span> <span class="n">_set__velocidade</span><span class="p">,</span> <span class="n">_del__velocidade</span><span class="p">,</span>
+                        <span class="s1">&#39;Velocidade máxima do carro&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
+
+<span class="c1">#</span>
+<span class="n">c</span><span class="o">.</span><span class="n">__velocidade</span>
+</pre></div>
+</div>
 <p>.  .  .</p>
 <p>AttributeError: ‘Carro’ object has no attribute ‘__velocidade’</p>
 <p>c.velocidade
