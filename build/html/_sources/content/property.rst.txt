@@ -26,7 +26,7 @@ Modificador Private (__)
 
 .. code-block:: python
 
-    # 
+    # Classe com property:
     class Carro(object):
         def __init__(self):
             self.__velocidade = 0
@@ -49,7 +49,7 @@ Modificador Private (__)
                             'Velocidade máxima do carro')
 
 
-    # 
+    # Instância da classe:
     c = Carro()
 
     # 
