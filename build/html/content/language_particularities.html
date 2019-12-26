@@ -103,8 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#operadores">2.13. Operadores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#o-comando-del">2.14. O Comando del</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#print">2.15. print</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#atribuicao-de-valores">2.16. Atribuição de Valores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#referencia-de-identificadores">2.17. Referência de Identificadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#referencia-de-identificadores">2.16. Referência de Identificadores</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
@@ -706,64 +705,8 @@ Se esse objeto não tiver outra referência, o garbage collector atuará liberan
 </pre></div>
 </div>
 </div>
-<div class="section" id="atribuicao-de-valores">
-<h2><span class="section-number">2.16. </span>Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição Simples</span>
-
-<span class="n">foo</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;bla bla bla&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bla bla bla</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição Composta ou Atribuição por Tupla</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
-</pre></div>
-</div>
-<p>Invertendo valores:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">20</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="referencia-de-identificadores">
-<h2><span class="section-number">2.17. </span>Referência de Identificadores<a class="headerlink" href="#referencia-de-identificadores" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">2.16. </span>Referência de Identificadores<a class="headerlink" href="#referencia-de-identificadores" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">x</span>
