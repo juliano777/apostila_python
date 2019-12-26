@@ -242,33 +242,59 @@ Ela é mais recomendada para uso de dados estáticos, pois comparada à lista, t
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Função type para verificar o tipo do objeto:</span>
+    <span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>&gt; type(t)</p>
-<p>tuple</p>
-<p>Declaração de duas variáveis e trocando o valor entre elas:</p>
-<p>&gt; x = 0</p>
-<p>&gt; y = 1</p>
-<p>&gt; x, y = y, x  # A troca se dá pela atribuição respectiva</p>
-<p>Verificando os valores das variáveis:</p>
-<p>&gt; x</p>
-<p>1</p>
-<p>&gt; y</p>
-<p>0</p>
-<p>Criação de uma variável que retorna uma tupla com três elementos:</p>
-<dl class="simple">
-<dt>&gt; def retorna_tupla():</dt><dd><p>return 1, 2, 3</p>
-</dd>
-</dl>
-<p>Atribuição respectiva:</p>
-<p>&gt; x, y, z = retorna_tupla()</p>
-<p>Verificando os valores das variáveis:</p>
-<p>&gt; print(x)</p>
-<p>1</p>
-<p>&gt; print(y)</p>
-<p>2</p>
-<p>&gt; print(z)</p>
-<p>3</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tuple</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaração de duas variáveis e trocando o valor entre elas:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>  <span class="c1"># A troca se dá pela atribuição respectiva</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando os valores das variáveis:</span>
+    <span class="n">x</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma variável que retorna uma tupla com três elementos:</span>
+    <span class="k">def</span> <span class="nf">retorna_tupla</span><span class="p">():</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição respectiva:</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">retorna_tupla</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando os valores das variáveis:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
+</pre></div>
+</div>
 <p>Tuplas são imutáveis, mas seus elementos não necessariamente:</p>
 <p>&gt; t = ({}, [])   # Tupla com dois elementos; um dicionário e uma lista</p>
 <p>&gt; t[0].update({‘chave’: ‘valor’})  # Alterando o primeiro elemento</p>

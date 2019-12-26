@@ -89,61 +89,81 @@ Tuplas tem apenas os métodos count e index.
 .. code-block:: python
 
     # Função type para verificar o tipo do objeto:
+	type(t)
 
-> type(t)
+.. code-block:: console
 
-tuple
-
-
-
-Declaração de duas variáveis e trocando o valor entre elas:
-
-> x = 0
-
-> y = 1
-
-> x, y = y, x  # A troca se dá pela atribuição respectiva
+    tuple
 
 
+.. code-block:: python
 
-Verificando os valores das variáveis:
-
-> x
-
-1
-
-> y
-
-0
+    # Declaração de duas variáveis e trocando o valor entre elas:
+	x = 0
+	y = 1
+	x, y = y, x  # A troca se dá pela atribuição respectiva
 
 
 
-Criação de uma variável que retorna uma tupla com três elementos:
+.. code-block:: python
 
-> def retorna_tupla():
-    return 1, 2, 3
+    # Verificando os valores das variáveis:
+	x
 
+.. code-block:: console
 
-
-Atribuição respectiva:
-
-> x, y, z = retorna_tupla()
+    1
 
 
+.. code-block:: python
 
-Verificando os valores das variáveis:
+    y
 
-> print(x)
 
-1
+.. code-block:: console
 
-> print(y)
+    0
 
-2
 
-> print(z)
 
-3
+.. code-block:: python
+
+    # Criação de uma variável que retorna uma tupla com três elementos:
+	def retorna_tupla():
+		return 1, 2, 3
+
+
+
+.. code-block:: python
+
+    # Atribuição respectiva:
+	x, y, z = retorna_tupla()
+
+
+.. code-block:: python
+
+    # Verificando os valores das variáveis:
+	print(x)
+
+.. code-block:: console
+
+    1
+
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    2
+
+.. code-block:: python
+
+    print(z)
+
+.. code-block:: console
+
+    3
 
 
 
