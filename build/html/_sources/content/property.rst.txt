@@ -115,7 +115,7 @@ Property
     AttributeError: 'Carro' object has no attribute '__velocidade'
 
    
-Property como decorator
+Property como Decorator
 ~~~~~~~~~~~~~~~~~~~~~~~     
 
 .. code-block:: python
