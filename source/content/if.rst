@@ -4,31 +4,49 @@ if / elif / else
 	O comando if, que inglês significa "se" indica uma condição.
 
 
-x = 7
+.. code-block:: python
 
-In [2]: y = 5
+    # Criação de dois objetos int:
+    x = 7
+    y = 5
 
-In [3]: if x > y: 
-    print('X é maior')
-    
-X é maior
+    # Bloco if:
+    if x > y:
+        print('X é maior')
 
-if x < y: 
-    print('X é maior')
+.. code-block:: console
 
+    X é maior
 
-foo = True
+.. code-block:: python
 
-if foo:
-    print('foo é verdadeiro!')
-    
-foo é verdadeiro!
+    # Bloco if;
+    if x < y:
+        print('X é maior')
 
+.. code-block:: python
 
-if not bar:
-    print('bar é falso!')
-    
-bar é falso!
+    # Objetos booleanos:
+    foo = True
+    bar = False
+
+    # Bloco if:
+    if foo:
+        print('foo é verdadeiro!')
+
+.. code-block:: console
+
+    foo é verdadeiro!
+
+.. code-block:: python
+
+    # Bloco if:
+    if not bar:
+        print('bar é falso!')
+
+.. code-block:: console
+
+    bar é falso!
 
 
 

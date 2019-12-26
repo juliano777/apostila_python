@@ -187,28 +187,43 @@
 <blockquote>
 <div><p>O comando if, que inglês significa “se” indica uma condição.</p>
 </div></blockquote>
-<p>x = 7</p>
-<p>In [2]: y = 5</p>
-<dl class="simple">
-<dt>In [3]: if x &gt; y:</dt><dd><p>print(‘X é maior’)</p>
-</dd>
-</dl>
-<p>X é maior</p>
-<dl class="simple">
-<dt>if x &lt; y:</dt><dd><p>print(‘X é maior’)</p>
-</dd>
-</dl>
-<p>foo = True</p>
-<dl class="simple">
-<dt>if foo:</dt><dd><p>print(‘foo é verdadeiro!’)</p>
-</dd>
-</dl>
-<p>foo é verdadeiro!</p>
-<dl class="simple">
-<dt>if not bar:</dt><dd><p>print(‘bar é falso!’)</p>
-</dd>
-</dl>
-<p>bar é falso!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de dois objetos int:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># Bloco if:</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;X é maior&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">X é maior</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bloco if;</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;X é maior&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Objetos booleanos:</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c1"># Bloco if:</span>
+<span class="k">if</span> <span class="n">foo</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;foo é verdadeiro!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo é verdadeiro!</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bloco if:</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">bar</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;bar é falso!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bar é falso!</span>
+</pre></div>
+</div>
 <p>texto = ‘Python e PostgreSQL: uma dupla dinâmica!’</p>
 <dl class="simple">
 <dt>if texto:</dt><dd><p>print(‘A string NÃO é vazia!’)</p>
