@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>25. with &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="25. Módulos" href="modules.html" />
+    <link rel="next" title="26. Módulos" href="modules.html" />
     <link rel="prev" title="24. open" href="open.html" /> 
 </head>
 
@@ -82,7 +82,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">1. Sobre Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_particularities.html">2. Particularidades da Linguagem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="built-ins.html">3. Comandos e Funções Importantes</a></li>
@@ -107,17 +107,18 @@
 <li class="toctree-l1"><a class="reference internal" href="if.html">22. if / elif / else</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loops.html">23. Loops - Laços de Repetição</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open.html">24. open</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">25. Módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">26. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">27. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">28. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">29. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">30. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">31. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">32. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">33. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">34. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">35. pytest</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">25. with</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">27. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">28. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">31. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">32. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">33. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">35. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">36. pytest</a></li>
 </ul>
 
             
@@ -163,7 +164,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li><span class="section-number">25. </span>with</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -182,7 +183,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>with</p>
+  <div class="section" id="with">
+<h1><span class="section-number">25. </span>with<a class="headerlink" href="#with" title="Link permanente para este título">¶</a></h1>
 <blockquote>
 <div><p>É usado para encapsular a execução de um bloco com métodos definidos por um gerenciador de contexto.</p>
 </div></blockquote>
@@ -324,6 +326,7 @@ return 0</p>
 <p>===== __enter__ =====</p>
 <p>Teste…</p>
 <p>===== __exit__ =====</p>
+</div>
 
 
            </div>
@@ -333,7 +336,7 @@ return 0</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="modules.html" class="btn btn-neutral float-right" title="25. Módulos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="26. Módulos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="open.html" class="btn btn-neutral float-left" title="24. open" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
