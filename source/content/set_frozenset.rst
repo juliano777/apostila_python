@@ -49,13 +49,14 @@ ou
 
     s = {1, 2, 3}
 
+.. code-block:: python
 
+    # Exibindo o conteúdo do set:
+    s
 
-Exibindo o conteúdo do set:
+.. code-block:: console
 
-> s
-
-{1, 2, 3}
+    {1, 2, 3}
 
 
 
