@@ -13,7 +13,6 @@ Strings em Python
     Pode-se usar tanto entre aspas como entre apóstrofos.
 
 
-
 .. code-block:: python
 
     # Declaração de uma variável string utilizando apóstrofos
@@ -40,7 +39,6 @@ Dois exemplos com print de strings com aspas e apóstrofos dentro:
 
 .. code-block:: python
 
-    # 
     print('Uma string que contém "aspas" em si')
 
 .. code-block:: console
@@ -49,7 +47,6 @@ Dois exemplos com print de strings com aspas e apóstrofos dentro:
 
 .. code-block:: python
 
-    # 
     print("Uma string que contém 'apóstrofos' em si")
 
 .. code-block:: console
@@ -77,7 +74,7 @@ Strings de Múltiplas Linhas
 
 .. code-block:: python
 
-    # 
+    # String de múltiplas linhas com triplos apóstrofos:
     s1 = '''
     Um 
     exemplo
@@ -86,7 +83,7 @@ Strings de Múltiplas Linhas
     linhas
     '''
     
-    # 
+    # String de múltiplas linhas com triplas aspas:
     s2 = """
     Um
     exemplo
@@ -95,12 +92,13 @@ Strings de Múltiplas Linhas
     linhas
     """
 
+    # String de múltiplas linhas entre parênteses:
     s3 = ('Um exemplo de string feito para não ultrapassar os setenta \n'
           'e nove caracteres da PEP8 (Python Enhancement Proposal), \n'
           'Proposta de aprimoramento do Python, que visa boas práticas'
           ' de programação.')
 
-    # 
+    # Exibindo s3:
     print(s3)
 
 .. code-block:: console
@@ -441,7 +439,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(200, '#05X')
 
 .. code-block:: console
@@ -460,7 +457,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(31259.75, 'n')
 
 .. code-block:: console
@@ -488,7 +484,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(1000, '.3E')
 
 .. code-block:: console
@@ -510,7 +505,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(1000, 'F')
 
 .. code-block:: console
@@ -529,7 +523,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(1000, '10.3G')
 
 .. code-block:: console
@@ -538,7 +531,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(100000, 'g')
 
 .. code-block:: console
@@ -547,7 +539,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(1000000, 'g')
 
 .. code-block:: console
@@ -556,7 +547,6 @@ Representações de Inteiros
 
 .. code-block:: python
 
-    # 
     format(999.5, '10.4G')
 
 .. code-block:: console
@@ -602,7 +592,8 @@ Bytes (b)
     s2 = 'Macarrão'
     s3 = 'Ação'
 
-    # A partir das três strings criadas anteriormente, criar outras três strings, mas strings de bytes
+    # A partir das três strings criadas anteriormente, criar outras três strings,
+    # mas strings de bytes
     sb1 = s1.encode('utf-8')
     sb2 = s2.encode('utf-8')
     sb3 = s3.encode('utf-8')
@@ -621,7 +612,6 @@ O método encode, utilizando a codificação UTF-8 faz a codificação de cada c
 
 .. code-block:: python
 
-    #
     print(sb2)
 
 .. code-block:: console
@@ -631,7 +621,6 @@ O método encode, utilizando a codificação UTF-8 faz a codificação de cada c
 
 .. code-block:: python
 
-    #
     print(sb3)
 
 .. code-block:: console
@@ -656,7 +645,6 @@ As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
 .. code-block:: python
 
-    #
     print(b'\xc3\xa7'.decode('utf-8'))
 
 .. code-block:: console
@@ -692,7 +680,7 @@ As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
 .. code-block:: python
 
-    # Sem caracteres especiais
+    # Decodificação UTF-8:
     print(sb2.decode('utf-8'))
 
 .. code-block:: console
@@ -702,7 +690,6 @@ As strings que tinham caracteres especiais ficaram um tanto "estranhas"...
 
 .. code-block:: python
 
-    #
     print(sb3.decode('utf-8'))
 
 .. code-block:: console
@@ -981,11 +968,13 @@ Split
 
 Slice
 ~~~~~
-|    Corte de string - ``'string'[inicio:fim - 1:incremento]``
+|   Corte de string - ``'string'[inicio:fim - 1:incremento]``.
+    É importante salientar que no intervalo início:fim começam por zero, o ínício é fechado e o fim é aberto [início:fim).
+    Por padrão o incremento é 1.
 
 .. code-block:: python
 
-    # 
+    # Primeira posição (começa com zero) da string:
     print("Curso de Python”[0])
 
 .. code-block:: console
@@ -994,7 +983,7 @@ Slice
 
 .. code-block:: python
 
-    # 
+    # Da segunda à quarta posição da string:
     print("Curso de Python"[1:5])
 
 .. code-block:: console
@@ -1003,7 +992,7 @@ Slice
 
 .. code-block:: python
 
-    # 
+    # Da segunda à quarta posição com incremento 2:
     print("Curso de Python"[1:5:2])
 
 .. code-block:: console
@@ -1012,7 +1001,7 @@ Slice
 
 .. code-block:: python
 
-    # 
+    # Da posição 9 em diante:
     print("Curso de Python"[9:])
 
 .. code-block:: console
@@ -1021,7 +1010,7 @@ Slice
 
 .. code-block:: python
 
-    # 
+    # Até a posição 4:
     print("Curso de Python"[:5])
 
 .. code-block:: console
@@ -1030,7 +1019,7 @@ Slice
 
 .. code-block:: python
 
-    # 
+    # Padrão...:
     print("Curso de Python"[::])
 
 .. code-block:: console
@@ -1039,8 +1028,8 @@ Slice
 
 .. code-block:: python
 
-    # 
-    print("Curso de Python"[::-1]) # String reversa
+    # String reversa, incremento negativo:
+    print("Curso de Python"[::-1])
 
 .. code-block:: console
 
