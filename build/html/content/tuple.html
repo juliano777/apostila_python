@@ -96,26 +96,27 @@
 <li class="toctree-l1"><a class="reference internal" href="list.html">11. Lista</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">13. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">14. Iteratoradores e Geradores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">15. Funções</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oo.html">16. Orientação a Objetos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">17. Método de Classe e Método Estático</a></li>
-<li class="toctree-l1"><a class="reference internal" href="property.html">18. Encapsulamento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scope.html">19. Escopo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="if.html">20. if / elif / else</a></li>
-<li class="toctree-l1"><a class="reference internal" href="loops.html">21. Loops - Laços de Repetição</a></li>
-<li class="toctree-l1"><a class="reference internal" href="open.html">22. open</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">23. Módulos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">24. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">25. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">26. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">27. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">28. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">29. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">30. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">31. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">32. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">33. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">14. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iter_gen.html">15. Iteratoradores e Geradores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">16. Funções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oo.html">17. Orientação a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">18. Método de Classe e Método Estático</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">19. Encapsulamento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scope.html">20. Escopo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if.html">21. if / elif / else</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">22. Loops - Laços de Repetição</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open.html">23. open</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">24. Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">25. Pacotes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">26. raise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">27. raise Exception(‘Provocando uma exceção’)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">28. Exceção ZeroDivisionError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -186,10 +187,14 @@
 <div><p>Tupla têm sua estrutura muito similar à da lista, no entanto, ela é imutável.
 Ela é mais recomendada para uso de dados estáticos, pois comparada à lista, tem um desempenho melhor devido à sua simplicidade e consome menos recursos.</p>
 </div></blockquote>
-<p>Declaração de uma tupla vazia:</p>
-<p>&gt; t = ()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaração de uma tupla vazia:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="p">()</span>
+</pre></div>
+</div>
 <p>ou</p>
-<p>t = tuple()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Declaração de uma tupla com três elementos:</p>
 <p>&gt; t = tuple([1, 2, 3])</p>
 <p>ou</p>

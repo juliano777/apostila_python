@@ -6,13 +6,16 @@ Tupla
 
 
 
-Declaração de uma tupla vazia:
+.. code-block:: python
 
-> t = ()
+    # Declaração de uma tupla vazia:
+	t = ()
 
-ou 
+ou
 
-t = tuple()
+.. code-block:: python
+
+    t = tuple()
 
 
 
