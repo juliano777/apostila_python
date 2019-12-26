@@ -211,8 +211,10 @@ Exibindo apenas partes da data:
 O Módulo time
 -------------
 
-    Módulo cujos objetos representam uma hora (local) de dia, independente de qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
-    Fornece várias funções para manipular valores de hora. Não confundir com a classe time do módulo datetime.
+ |   Módulo cujos objetos representam uma hora (local) de dia, independente de
+ | qualquer dia em particular, e sujeito a ajustes via um objeto tzinfo.
+ |   Fornece várias funções para manipular valores de hora. Não confundir com 
+ | a classe time do módulo datetime.
 
 .. code-block:: python
 
