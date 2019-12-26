@@ -20,26 +20,34 @@ ou
     s = set()
 
 
+.. code-block:: python
 
-Criação de um conjunto (set) não vazio:
-
-> s = set([1, 1, 2, 3])
-
-ou
-
-> s = set((1, 1, 2, 3))
+    # Criação de um conjunto (set) não vazio:
+    s = set([1, 1, 2, 3])
 
 ou
 
-> s = set([1, 1, 2, 3])
+.. code-block:: python
+
+    s = set((1, 1, 2, 3))
 
 ou
 
-> s = set({1, 1, 2, 3})
+.. code-block:: python
+
+    s = set([1, 1, 2, 3])
 
 ou
 
-> s = {1, 2, 3}
+.. code-block:: python
+
+    s = set({1, 1, 2, 3})
+
+ou
+
+.. code-block:: python
+
+    s = {1, 2, 3}
 
 
 
