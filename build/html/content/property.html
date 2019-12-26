@@ -215,6 +215,12 @@
 </div>
 <div class="section" id="property">
 <h2><span class="section-number">20.2. </span>Property<a class="headerlink" href="#property" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Property é a solução pythônica para implementar getters e setters de forma</div>
+</div>
+<div class="line">inteligente e podendo inclusive impor restrições.</div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classe com property:</span>
 <span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -236,7 +242,7 @@
 
     <span class="c1"># Definição da property velocidade</span>
     <span class="n">velocidade</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get__velocidade</span><span class="p">,</span> <span class="n">_set__velocidade</span><span class="p">,</span> <span class="n">_del__velocidade</span><span class="p">,</span>
-                        <span class="s1">&#39;Velocidade máxima do carro&#39;</span><span class="p">)</span>
+                          <span class="s1">&#39;Velocidade máxima do carro&#39;</span><span class="p">)</span>
 
 
 <span class="c1"># Instância da classe:</span>
@@ -291,6 +297,12 @@ ValueError: A velocidade máxima permitida é de 300 km/h
 </div>
 <div class="section" id="property-como-decorator">
 <h2><span class="section-number">20.3. </span>Property como Decorator<a class="headerlink" href="#property-como-decorator" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Além da já citada implementação de property, pode-se também fazer isso</div>
+</div>
+<div class="line">por meio de decorators.</div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de classe com definição de properties via decorators:</span>
 <span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

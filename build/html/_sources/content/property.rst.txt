@@ -27,6 +27,9 @@ Modificador Private (__)
 Property
 ~~~~~~~~
 
+|   Property é a solução pythônica para implementar getters e setters de forma
+| inteligente e podendo inclusive impor restrições.
+
 .. code-block:: python
 
     # Classe com property:
@@ -50,7 +53,7 @@ Property
         
         # Definição da property velocidade
         velocidade = property(_get__velocidade, _set__velocidade, _del__velocidade,
-                            'Velocidade máxima do carro')
+                              'Velocidade máxima do carro')
 
 
     # Instância da classe:
@@ -116,7 +119,10 @@ Property
 
    
 Property como Decorator
-~~~~~~~~~~~~~~~~~~~~~~~     
+~~~~~~~~~~~~~~~~~~~~~~~
+
+|   Além da já citada implementação de property, pode-se também fazer isso
+| por meio de decorators.
 
 .. code-block:: python
 
