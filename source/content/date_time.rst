@@ -43,8 +43,8 @@ Módulo que fornece classes para manipular datas e horas de maneiras simples e c
     65
 
 
-Strings não são adequadas para armazenar data e hora.
-strptime transforma uma string para datetime conforme uma dada máscara:
+| Strings não são adequadas para armazenar data e hora.
+| strptime transforma uma string para datetime conforme uma dada máscara:
 
     strptime: str -> datetime
 
