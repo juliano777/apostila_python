@@ -41,6 +41,32 @@ print()
     bar
     baz
 
+len()
+-----
+
+    Função que retorna a quantidade de itens de um contêiner.
+
+.. code-block:: python
+
+    # Criação de um objeto contêiner e verificação da quantidade de elementos
+    foo = ('x', 'y', 'z', 123, 5.7)
+
+    # len(foo)
+
+.. code-block:: console
+
+    5
+
+.. code-block:: python
+
+    # Tamanho de uma string
+    len('Heavy Metal')
+
+.. code-block:: console
+
+    11    
+
+
 range()
 -------
 
@@ -225,9 +251,6 @@ reduce()
 .. code-block:: console
 
     10
-
-
-
 
 del
 ---
@@ -929,30 +952,6 @@ id()
 
 Aqui fica demonstrado que quando se cria uma nova variável simplesmente por atribuição é na verdade a criação de uma nova referência (apontamento) para o mesmo objeto.
 
-len
----
-
-    Função que retorna a quantidade de itens de um contêiner.
-
-.. code-block:: python
-
-    # Criação de um objeto contêiner e verificação da quantidade de elementos
-    foo = ('x', 'y', 'z', 123, 5.7)
-
-    # len(foo)
-
-.. code-block:: console
-
-    5
-
-.. code-block:: python
-
-    # Tamanho de uma string
-    len('Heavy Metal')
-
-.. code-block:: console
-
-    11
 
 input
 -----
