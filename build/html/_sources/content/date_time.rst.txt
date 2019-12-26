@@ -84,14 +84,6 @@ A mesma informação armazenada como datetime ocupa menos espaço que string.
 
     datetime.datetime
 
-    
-
-        
-
-.. code-block:: python
-
-    # :
-    datetime.datetime
 
 
 Pode ser necessário também fazer o caminho inverso, para transformar um dado datetime para string.
