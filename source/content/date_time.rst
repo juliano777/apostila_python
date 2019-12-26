@@ -58,7 +58,7 @@ strptime transforma uma string para datetime conforme uma dada máscara:
 .. code-block:: python
 
     # Converter a string para datetime:
-    strptime(dt_evento, '%Y-%m-%d %H:%M')
+    datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
 
     # 
     datetime.strptime(2018, 12, 21, 12, 15)
@@ -216,14 +216,14 @@ O Módulo time
 
 .. code-block:: python
 
-    # Criação de função que espera n segundos e exibe uma mensagem no final
+    # Criação de função que espera n segundos e exibe uma mensagem no final:
     def espera(tempo):
         sleep(tempo)
         print(f'Passaram-se {tempo} segundos')
 
 .. code-block:: python
 
-    # Execução da função
+    # Execução da função:
     espera(3)
 
 .. code-block:: console
@@ -232,7 +232,8 @@ O Módulo time
 
 .. code-block:: python
 
-    # time.time retorna o tempo atual em segundos desde Epoch (01/01/1970 00:00:00)
+    # time.time retorna o tempo atual em segundos 
+    # desde Epoch (01/01/1970 00:00:00):
     time()
 
 .. code-block:: console
@@ -242,7 +243,7 @@ O Módulo time
 .. code-block:: python
 
     # Converte um tempo em segundos desde Epoch para uma string, 
-    # se nenhum parâmetro for passado retorna string do momento atual
+    # se nenhum parâmetro for passado retorna string do momento atual:
 
 .. code-block:: python
 
