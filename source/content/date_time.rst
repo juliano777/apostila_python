@@ -23,7 +23,7 @@ Importação de tipo e função para os testes a seguir:
 
 .. code-block:: python
 
-    # Inserir dados via teclado conforme sugere o modelo na mensagem
+    # Inserir dados via teclado conforme sugere o modelo na mensagem:
     dt_evento = input('Digite a data e hora do evento (AAAA-MM-DD HH:MM): ')
 
 .. code-block:: console
@@ -32,7 +32,7 @@ Importação de tipo e função para os testes a seguir:
 
 .. code-block:: python
 
-    # Verificando o tipo da variável
+    # Verificando o tipo da variável:
     type(dt_evento)
 
 .. code-block:: console
@@ -41,7 +41,7 @@ Importação de tipo e função para os testes a seguir:
 
 .. code-block:: python
 
-    # Quanto custa essa variável em bytes?
+    # Quanto custa essa variável em bytes?:
     getsizeof(dt_evento)
 
 .. code-block:: console
@@ -57,12 +57,12 @@ strptime transforma uma string para datetime conforme uma dada máscara:
 
 .. code-block:: python
 
-    # Converter a string para datetime
-    datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
+    # Converter a string para datetime:
+    strptime(dt_evento, '%Y-%m-%d %H:%M')
 
     # 
-    datetime.datetime(2018, 12, 21, 12, 15)
-
+    datetime.strptime(2018, 12, 21, 12, 15)
+datetime parsed from a string
 .. code-block:: python
 
     # O tamanho em bytes do dado em datetime
