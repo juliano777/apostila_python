@@ -107,8 +107,7 @@ Tuplas tem apenas os métodos count e index.
 
 .. code-block:: python
 
-    # Verificando os valores das variáveis:
-	x
+	# Verificando os valores das variáveis:
 	x
 
 .. code-block:: console
