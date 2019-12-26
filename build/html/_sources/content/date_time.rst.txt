@@ -58,8 +58,8 @@ Módulo que fornece classes para manipular datas e horas de maneiras simples e c
     datetime.datetime(2019, 12, 27, 19, 0)
 
 .. class:: center    
-
-**strptime: str -> datetime**
+    
+    **strptime: str -> datetime**
 
 
 .. code-block:: python
