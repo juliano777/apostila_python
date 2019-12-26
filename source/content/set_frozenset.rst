@@ -81,45 +81,55 @@ ou
     {1, 2, 3, 4}
 
 
+.. code-block:: python
 
-Operação de intersecção entre os conjuntos:
-
-> a & b
-
-ou
-
-> a.intersection(b)
-
-{2, 3}
-
-
-
-Frozenset vazio:
-
-f = frozenset()
-
-
-
-Frozenset não vazio:
-
-> f = frozenset((1, 2, 3))
+    # Operação de intersecção entre os conjuntos:
+    a & b
 
 ou
 
-> f = frozenset({1, 2, 3})
+.. code-block:: python
+
+    a.intersection(b)
+
+.. code-block:: console
+
+    {2, 3}
+
+
+.. code-block:: python
+
+    # Frozenset vazio:
+    f = frozenset()
+
+.. code-block:: python
+
+    # Frozenset não vazio:
+    f = frozenset((1, 2, 3))
 
 ou
 
-> f = frozenset([1, 2, 3])
+.. code-block:: python
+
+    f = frozenset({1, 2, 3})
 
 ou
 
-> f = frozenset({1, 2, 3})
+.. code-block:: python
 
+    f = frozenset([1, 2, 3])
 
+ou
 
-Exibindo o conteúdo do frozenset:
+.. code-block:: python
 
-> f
+    f = frozenset({1, 2, 3})
 
-frozenset({1, 2, 3})
+.. code-block:: python
+
+    # Exibindo o conteúdo do frozenset:
+    f
+
+.. code-block:: console
+
+    frozenset({1, 2, 3})
