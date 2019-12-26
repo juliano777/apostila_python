@@ -67,7 +67,7 @@ ou
 
 .. code-block:: python
 	    
-{'__add__',
+	{'__add__',
  '__class__',
  '__contains__',
  '__delattr__',
