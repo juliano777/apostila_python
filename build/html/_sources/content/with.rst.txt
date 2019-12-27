@@ -151,7 +151,7 @@ with
 
 .. code-block:: python
     
-    import psycopg2
+    from psycopg2 import connect as pg_conn
 
     # Parâmetros de conexão
     PGHOST = 'localhost'
@@ -182,7 +182,7 @@ with
 
         def __enter__(self):
             print('===== __enter__ =====\n')
-            self.conn = psycopg2.connect(str_con)
+            self.conn = pg_conn(str_con)
             cursor = self.conn.cursor()
             cursor.execute(str_sql)
             self.data = cursor.fetchone()
