@@ -1,8 +1,8 @@
 Data e Hora
 ***********
 
-datetime
---------
+O Módulo datetime
+-----------------
 
 Módulo que fornece classes para manipular datas e horas de maneiras simples e complexas. Enquanto data e hora são suportados aritmeticamente, o foco da implementação estã em uma extração eficiente de atributo para saída formatada e manipulação.
 
