@@ -194,9 +194,9 @@ $ cat <span class="s">&lt;&lt; EOF &gt; /tmp/numbers.txt</span>
 <span class="s">2</span>
 <span class="s">3</span>
 <span class="s">EOF</span>
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+
+
+<span class="c1">#</span>
 $ cat <span class="s">&lt;&lt; EOF &gt; /tmp/numbers_str.txt</span>
 <span class="s">1</span>
 <span class="s">2</span>
@@ -204,17 +204,29 @@ $ cat <span class="s">&lt;&lt; EOF &gt; /tmp/numbers_str.txt</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
-<p>f = open(‘/tmp/numbers.txt’, ‘r’)
-for line in f:</p>
-<blockquote>
-<div><p>print(int(line))</p>
-</div></blockquote>
-<p>f.close()
-print(f.closed)</p>
-<p>1
-2
-3
-True</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Abrir o arquivo em modo leitura:</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/numbers.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="c1"># Loop:</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+
+<span class="c1"># Fecha o arquivo:</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># O arquivo foi fechado?:</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>f = open(‘/tmp/numbers_str.txt’, ‘r’)
 for line in f:</p>
 <blockquote>

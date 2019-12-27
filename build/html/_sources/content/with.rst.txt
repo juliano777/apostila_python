@@ -13,7 +13,6 @@ with
     3
     EOF
 
-.. code-block:: bash
 
     #     
     $ cat << EOF > /tmp/numbers_str.txt
@@ -24,16 +23,34 @@ with
 
 
 
-f = open('/tmp/numbers.txt', 'r')
-for line in f:
-    print(int(line))
-f.close()
-print(f.closed)
+.. code-block:: python
 
-1
-2
-3
-True
+    # Abrir o arquivo em modo leitura:    
+    f = open('/tmp/numbers.txt', 'r')
+
+    # Loop:
+    for line in f:
+        print(int(line))
+
+    # Fecha o arquivo:
+    f.close()
+
+.. code-block:: console
+
+    1
+    2
+    3
+
+        
+
+.. code-block:: python
+
+    # O arquivo foi fechado?:
+    print(f.closed)
+
+.. code-block:: console
+
+    True
 
 
 f = open('/tmp/numbers_str.txt', 'r')
