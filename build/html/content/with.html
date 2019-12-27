@@ -315,18 +315,14 @@ $ cat <span class="s">&lt;&lt; EOF &gt; /tmp/numbers_str.txt</span>
 <span class="n">APPLICATION_NAME</span> <span class="o">=</span> <span class="s1">&#39;python&#39;</span>
 
 <span class="c1"># Máscara da string de conexão</span>
-<span class="n">str_con</span> <span class="o">=</span> <span class="s1">&#39;host={} dbname={} port={} user={} password={} application_name={}&#39;</span>
-
-<span class="c1"># String de conexão formatada com os dados</span>
-<span class="n">str_con</span> <span class="o">=</span> <span class="n">pg_conn</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-                        <span class="n">PGHOST</span><span class="p">,</span>
-                        <span class="n">PGDB</span><span class="p">,</span>
-                        <span class="n">PGPORT</span><span class="p">,</span>
-                        <span class="n">PGUSER</span><span class="p">,</span>
-                        <span class="n">PGPASS</span><span class="p">,</span>
-                        <span class="n">APPLICATION_NAME</span>
-                        <span class="p">)</span>
-
+<span class="n">str_con</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">          host={PGHOST}</span>
+<span class="s1">          dbname={PGDB}</span>
+<span class="s1">          port={PGPORT}</span>
+<span class="s1">          user={PGUSER}</span>
+<span class="s1">          password={PGPASS}</span>
+<span class="s1">          application_name={APPLICATION_NAME}</span>
+<span class="s1">          &#39;&#39;&#39;</span>
 
 <span class="n">str_sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT &#39;Teste...&#39;;&quot;</span>
 

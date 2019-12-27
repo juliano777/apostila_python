@@ -162,18 +162,14 @@ with
     APPLICATION_NAME = 'python'
 
     # Máscara da string de conexão
-    str_con = 'host={} dbname={} port={} user={} password={} application_name={}'
-
-    # String de conexão formatada com os dados
-    str_con = pg_conn.format(
-                            PGHOST,
-                            PGDB,
-                            PGPORT,
-                            PGUSER,
-                            PGPASS,
-                            APPLICATION_NAME
-                            )
-
+    str_con = f'''
+              host={PGHOST}
+              dbname={PGDB}
+              port={PGPORT}
+              user={PGUSER}
+              password={PGPASS}
+              application_name={APPLICATION_NAME}
+              '''
 
     str_sql = "SELECT 'Teste...';"
 
