@@ -227,117 +227,90 @@ $ cat <span class="s">&lt;&lt; EOF &gt; /tmp/numbers_str.txt</span>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<p>f = open(‘/tmp/numbers_str.txt’, ‘r’)
-for line in f:</p>
-<blockquote>
-<div><p>print(int(line))</p>
-</div></blockquote>
-<p>f.close()
-print(f.closed)</p>
-<p>1
-2</p>
-<p>ValueError: invalid literal for int() with base 10: ‘threen’</p>
-<p>f.closed
-False</p>
-<p>f.close()</p>
-<p>f.closed
-True</p>
-<dl>
-<dt>try:</dt><dd><p>f = open(‘/tmp/numbers_str.txt’, ‘r’)
-for line in f:</p>
-<blockquote>
-<div><p>print(int(line))</p>
-</div></blockquote>
-</dd>
-<dt>except ValueError:</dt><dd><p>print(‘Ops… Isso não é um número em forma de dígitos…’)</p>
-</dd>
-<dt>finally:</dt><dd><p>f.close()
-print(f.closed)</p>
-</dd>
-</dl>
-<p>1
-2
-Ops… Isso não é um número em forma de dígitos…
-True</p>
-<dl class="simple">
-<dt>with open(‘/tmp/numbers.txt’, ‘r’) as f:</dt><dd><dl class="simple">
-<dt>for line in f:</dt><dd><p>print(int(line))</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>print(f.closed)</p>
-<p>1
-2
-3
-True</p>
-<dl class="simple">
-<dt>try:</dt><dd><dl class="simple">
-<dt>with open(‘/tmp/numbers_str.txt’, ‘r’) as f:</dt><dd><dl class="simple">
-<dt>for line in f:</dt><dd><p>print(int(line))</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd>
-<dt>except ValueError:</dt><dd><p>print(‘Ops… Isso não é um número em forma de dígitos…’)</p>
-</dd>
-<dt>finally:</dt><dd><p>print(f.closed)</p>
-</dd>
-</dl>
-<p>1
-2
-Ops… Isso não é um número em forma de dígitos…
-True</p>
-<hr class="docutils" />
-<p>import psycopg2</p>
-<p># Parâmetros de conexão
-PGHOST = ‘localhost’
-PGDB = ‘postgres’
-PGPORT = 5432
-PGUSER = ‘postgres’
-PGPASS = ‘123’
-APPLICATION_NAME = ‘python’</p>
-<p># Máscara da string de conexão
-str_con = ‘host={} dbname={} port={} user={} password={} application_name={}’</p>
-<p># String de conexão formatada com os dados
-str_con = pg_conn.format(</p>
-<blockquote>
-<div><blockquote>
-<div><p>PGHOST,
-PGDB,
-PGPORT,
-PGUSER,
-PGPASS,
-APPLICATION_NAME</p>
-</div></blockquote>
-<p>)</p>
-</div></blockquote>
-<p>&gt; str_sql = “SELECT ‘Teste…’;”</p>
-<dl class="simple">
-<dt>&gt; class PgConnection(object):</dt><dd><dl class="simple">
-<dt>def __init__(self, str_con, str_sql):</dt><dd><p>self.str_con = str_con
-self.str_sql = str_sql</p>
-</dd>
-<dt>def __enter__(self):</dt><dd><p>print(‘===== __enter__ =====n’)
-self.conn = psycopg2.connect(str_con)
-cursor = self.conn.cursor()
-cursor.execute(str_sql)
-self.data = cursor.fetchone()
-return self.data</p>
-</dd>
-<dt>def __exit__(self, type, value, traceback):</dt><dd><p>print(‘n===== __exit__ =====’)
-self.conn.close()
-return 0</p>
-</dd>
-</dl>
-</dd>
-<dt>&gt; with PgConnection(str_con, str_sql) as x:</dt><dd><p>print(x[0])</p>
-</dd>
-</dl>
-<p>===== __enter__ =====</p>
-<p>Teste…</p>
-<p>===== __exit__ =====</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/numbers_str.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+<span class="go">2</span>
+
+<span class="go">ValueError: invalid literal for int() with base 10: &#39;three\n&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/numbers_str.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Ops... Isso não é um número em forma de dígitos...&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+<span class="go">2</span>
+<span class="go">Ops... Isso não é um número em forma de dígitos...</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/numbers.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/numbers_str.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Ops... Isso não é um número em forma de dígitos...&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+<span class="go">2</span>
+<span class="go">Ops... Isso não é um número em forma de dígitos...</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">===== __enter__ =====</span>
+
+<span class="go">Teste...</span>
+
+<span class="go">===== __exit__ =====</span>
+</pre></div>
+</div>
 </div>
 
 

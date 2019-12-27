@@ -53,128 +53,159 @@ with
     True
 
 
-f = open('/tmp/numbers_str.txt', 'r')
-for line in f:
-    print(int(line))
-f.close()
-print(f.closed)
+.. code-block:: python
 
-
-1
-2
-
-ValueError: invalid literal for int() with base 10: 'three\n'
-
-f.closed
-False
-
-f.close()
-
-f.closed
-True
-
-
-
-try:
+    # 
     f = open('/tmp/numbers_str.txt', 'r')
     for line in f:
         print(int(line))
-except ValueError: 
-    print('Ops... Isso não é um número em forma de dígitos...')
-finally:
     f.close()
     print(f.closed)
 
-1
-2
-Ops... Isso não é um número em forma de dígitos...
-True
 
 
-with open('/tmp/numbers.txt', 'r') as f:
-    for line in f:
-        print(int(line))
-print(f.closed)
+.. code-block:: console
 
-1
-2
-3
-True
+    1
+    2
 
+    ValueError: invalid literal for int() with base 10: 'three\n'
 
-try:
-    with open('/tmp/numbers_str.txt', 'r') as f:
+.. code-block:: python
+
+    # 
+    f.closed
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    # 
+    f.close()
+    f.closed
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    # 
+    try:
+        f = open('/tmp/numbers_str.txt', 'r')
         for line in f:
             print(int(line))
-except ValueError:
-    print('Ops... Isso não é um número em forma de dígitos...')
-finally:
+    except ValueError: 
+        print('Ops... Isso não é um número em forma de dígitos...')
+    finally:
+        f.close()
+        print(f.closed)
+
+.. code-block:: console
+
+    1
+    2
+    Ops... Isso não é um número em forma de dígitos...
+    True
+
+
+.. code-block:: python
+
+    # 
+    with open('/tmp/numbers.txt', 'r') as f:
+        for line in f:
+            print(int(line))
     print(f.closed)
 
-1
-2
-Ops... Isso não é um número em forma de dígitos...
-True
+.. code-block:: console
+
+    1
+    2
+    3
+    True
 
 
------------------------------------------------------------------
+.. code-block:: python
+
+    # 
+    try:
+        with open('/tmp/numbers_str.txt', 'r') as f:
+            for line in f:
+                print(int(line))
+    except ValueError:
+        print('Ops... Isso não é um número em forma de dígitos...')
+    finally:
+        print(f.closed)
+
+.. code-block:: console
+
+    1
+    2
+    Ops... Isso não é um número em forma de dígitos...
+    True
 
 
 
 
-import psycopg2
+.. code-block:: python
+    import psycopg2
 
 
-# Parâmetros de conexão
-PGHOST = 'localhost'
-PGDB = 'postgres'
-PGPORT = 5432
-PGUSER = 'postgres'
-PGPASS = '123'
-APPLICATION_NAME = 'python'
+    # Parâmetros de conexão
+    PGHOST = 'localhost'
+    PGDB = 'postgres'
+    PGPORT = 5432
+    PGUSER = 'postgres'
+    PGPASS = '123'
+    APPLICATION_NAME = 'python'
 
-# Máscara da string de conexão
-str_con = 'host={} dbname={} port={} user={} password={} application_name={}'
+    # Máscara da string de conexão
+    str_con = 'host={} dbname={} port={} user={} password={} application_name={}'
 
-# String de conexão formatada com os dados
-str_con = pg_conn.format(
-                         PGHOST,
-                         PGDB,
-                         PGPORT,
-                         PGUSER,
-                         PGPASS,
-                         APPLICATION_NAME
-                        )
-
-
-> str_sql = "SELECT 'Teste...';"
+    # String de conexão formatada com os dados
+    str_con = pg_conn.format(
+                            PGHOST,
+                            PGDB,
+                            PGPORT,
+                            PGUSER,
+                            PGPASS,
+                            APPLICATION_NAME
+                            )
 
 
-> class PgConnection(object):
-    def __init__(self, str_con, str_sql):
-        self.str_con = str_con
-        self.str_sql = str_sql
+    str_sql = "SELECT 'Teste...';"
 
 
-    def __enter__(self):
-        print('===== __enter__ =====\n')
-        self.conn = psycopg2.connect(str_con)
-        cursor = self.conn.cursor()
-        cursor.execute(str_sql)
-        self.data = cursor.fetchone()
-        return self.data
-
-    def __exit__(self, type, value, traceback):
-        print('\n===== __exit__ =====')
-        self.conn.close()
-        return 0
+    class PgConnection(object):
+        def __init__(self, str_con, str_sql):
+            self.str_con = str_con
+            self.str_sql = str_sql
 
 
-> with PgConnection(str_con, str_sql) as x:
-    print(x[0])
+        def __enter__(self):
+            print('===== __enter__ =====\n')
+            self.conn = psycopg2.connect(str_con)
+            cursor = self.conn.cursor()
+            cursor.execute(str_sql)
+            self.data = cursor.fetchone()
+            return self.data
 
-===== __enter__ =====
+        def __exit__(self, type, value, traceback):
+            print('\n===== __exit__ =====')
+            self.conn.close()
+            return 0
 
-Teste...
 
-===== __exit__ =====
+    with PgConnection(str_con, str_sql) as x:
+        print(x[0])
+
+
+.. code-block:: console
+
+    ===== __enter__ =====
+
+    Teste...
+
+    ===== __exit__ =====
