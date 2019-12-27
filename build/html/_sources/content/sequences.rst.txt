@@ -5,11 +5,11 @@ Sequências
 
 Mútável:
 
-lista -> list -> [0, 'string', 7.0, 1000L]
+**lista -> list -> [0, 'string', 7.0, 1000L]**
 
 Imutáveis:
 
-string -> str -> 'texto'
+**string -> str -> 'texto'**
 
 tupla -> tuple -> (0, 'string', 7.0, 1000L) # Funciona de forma idêntica à lista, porém, seus itens são imutáveis, consome menos recursos.
 
@@ -261,22 +261,24 @@ Dict Comprehension
 
 
 
-Objeto dicionário a ser criado:
+.. code-block:: python
 
-> d1 = {'a': 1, 'b':2, 'c': 3}
+    # Objeto dicionário a ser criado:
+
+    d1 = {'a': 1, 'b':2, 'c': 3}
+
+.. code-block:: python
+
+    # Novo dicionário criado a partir de dict comprehension:
+    d2 = {k.upper(): v * 10 for k, v in d1.items()}
+
+|   Cada chave é o caractere maiúsculo das chave correspondente ao dicionário original e seus valores são multiplicados por 10 (dez).
 
 
 
-Novo dicionário criado a partir de dict comprehension:
+.. code-block:: python
 
-> d2 = {k.upper(): v * 10 for k, v in d1.items()}
-
-    Cada chave é o caractere maiúsculo das chave correspondente ao dicionário original e seus valores são multiplicados por 10 (dez).
-
-
-
-Exibindo o dicionário gerado a partir da dict comprehension:
-
-> print(d2)
+    # Exibindo o dicionário gerado a partir da dict comprehension:
+    print(d2)
 
 {'A': 10, 'B': 20, 'C': 30}
