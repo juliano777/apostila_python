@@ -150,8 +150,8 @@ with
 
 
 .. code-block:: python
+    
     import psycopg2
-
 
     # Parâmetros de conexão
     PGHOST = 'localhost'
