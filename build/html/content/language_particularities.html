@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -222,7 +222,7 @@ break   except    in       raise
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">keyword</span> <span class="kn">import</span> <span class="n">kwlist</span> <span class="k">as</span> <span class="n">keywords</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">keywords</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
@@ -257,7 +257,7 @@ A melhor maneira de se fazer isso é colocar uma linha especial no começo do ar
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Olá!&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python /tmp/hello.py
@@ -274,7 +274,7 @@ A melhor maneira de se fazer isso é colocar uma linha especial no começo do ar
 4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1">#_*_ coding: utf-8 _*_</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Olá!&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 <p>Executar o script:</p>
@@ -293,13 +293,13 @@ A melhor maneira de se fazer isso é colocar uma linha especial no começo do ar
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span>
 <span class="n">Foo</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bar</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo</span>
@@ -314,11 +314,11 @@ Quando uma mesma função é escrita duas ou mais vezes, o que prevalece é a ú
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definição da função sem parâmetro</span>
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
 
 <span class="c1"># (Re)Definição da função com um parâmetro</span>
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
 
 <span class="c1"># Tentativa de execução sem parâmetro</span>
 <span class="n">hello_world</span><span class="p">()</span>
@@ -374,7 +374,7 @@ feita da classe object e cada classe pode herdar mais de uma. Ou seja, também �
 
 <span class="n">c1</span><span class="o">.</span><span class="n">ano</span> <span class="o">=</span> <span class="mi">1995</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;O {} {} fabricado em {} estava estacionado.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">ano</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O </span><span class="si">{}</span><span class="s1"> </span><span class="si">{}</span><span class="s1"> fabricado em </span><span class="si">{}</span><span class="s1"> estava estacionado.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">ano</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">O Porsche Carrera fabricado em 1995 estava estacionado.</span>
@@ -451,7 +451,7 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foobar</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span> <span class="o">+</span> <span class="n">bar</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foobar</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foobar</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
@@ -472,7 +472,7 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foobar</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="n">bar</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foobar</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foobar</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7.0</span>
@@ -494,7 +494,7 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 </div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!!!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!!!&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 <p>Editar o módulo “Modulo2” que está dentro do pacote “PacoteA”:</p>
@@ -503,7 +503,7 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 </div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="n">numero</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">numero</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 <p>Edição de script de exemplo:</p>
@@ -527,8 +527,8 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 <span class="kn">from</span> <span class="nn">PacoteA.Modulo1</span> <span class="kn">import</span> <span class="n">funcao</span>
 <span class="kn">from</span> <span class="nn">PacoteA.PacoteA1</span> <span class="kn">import</span> <span class="n">Modulo2</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Atenção!!!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;O teste vai começar...</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Atenção!!!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O teste vai começar...</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="n">funcao</span><span class="p">()</span>
 
@@ -590,17 +590,17 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 <span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">ano</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">estado_farois</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">estado_farois</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="c1">#Definição de um método da classe</span>
     <span class="k">def</span> <span class="nf">interruptor_farois</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1">#Bloco if</span>
             <span class="k">if</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span><span class="p">):</span>
-                <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Apagando faróis&#39;</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span> <span class="o">=</span> <span class="bp">False</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Apagando faróis&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span> <span class="o">=</span> <span class="kc">False</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Acendendo faróis&#39;</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acendendo faróis&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">estado_farois</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -615,7 +615,7 @@ A mesma variável pode ter seu tipo mudado de acordo com valores a ela atribuíd
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Imprime o valor de x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Imprime o valor de x</span>
 </pre></div>
 </div>
 </div>
@@ -671,14 +671,14 @@ São usados três pares de apóstrofos (‘) ou três pares de aspas (“), 3 (t
 Se esse objeto não tiver outra referência, o garbage collector atuará liberando recursos.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sogra</span> <span class="o">=</span> <span class="s1">&#39;Edelbarina&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sogra</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sogra</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Edelbarina</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">sogra</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sogra</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sogra</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Traceback (most recent call last):</span>
@@ -688,7 +688,7 @@ Se esse objeto não tiver outra referência, o garbage collector atuará liberan
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">]</span>
 <span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;Z&#39;, 1, &#39;m&#39;]</span>
@@ -700,7 +700,7 @@ Se esse objeto não tiver outra referência, o garbage collector atuará liberan
 <blockquote>
 <div><p>Antes era somente um comando, a partir da série 3.X será apenas interpretado como função.</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Teste&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Teste&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Teste</span>
@@ -736,7 +736,7 @@ Se esse objeto não tiver outra referência, o garbage collector atuará liberan
 </pre></div>
 </div>
 <p>Agora são 2 (duas) referências…</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
@@ -746,7 +746,7 @@ Se esse objeto não tiver outra referência, o garbage collector atuará liberan
 </pre></div>
 </div>
 <p>Resta apenas 1 (uma) referência…</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>

@@ -1,0 +1,21 @@
+%
+% sphinxmessages.sty
+%
+% message resources for Sphinx
+%
+\ProvidesPackage{sphinxmessages}[2019/01/04 v2.0 Localized LaTeX macros (Sphinx team)]
+
+\renewcommand{\literalblockcontinuedname}{continuação da página anterior}
+\renewcommand{\literalblockcontinuesname}{continua na próxima página}
+\renewcommand{\sphinxnonalphabeticalgroupname}{Não alfabético}
+\renewcommand{\sphinxsymbolsname}{Símbolos}
+\renewcommand{\sphinxnumbersname}{Números}
+\def\pageautorefname{página}
+
+\addto\captionsbrazil{\renewcommand{\figurename}{Fig.\@{} }}
+\def\fnum@figure{\figurename\thefigure{}}
+
+\addto\captionsbrazil{\renewcommand{\tablename}{Tabela }}
+\def\fnum@table{\tablename\thetable{}}
+
+\addto\captionsbrazil{\renewcommand{\literalblockname}{Listagem}}

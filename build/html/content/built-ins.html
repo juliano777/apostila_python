@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -219,7 +219,7 @@ Seu objetivo é imprimir uma mensagem que por padrão é STDOUT.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Um simples &quot;Hello, world!&quot;:</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Hello, world!</span>
@@ -227,7 +227,7 @@ Seu objetivo é imprimir uma mensagem que por padrão é STDOUT.</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pode-se passar mais de uma string como parâmetro:</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo bar baz</span>
@@ -235,7 +235,7 @@ Seu objetivo é imprimir uma mensagem que por padrão é STDOUT.</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Colocando como separador uma nova linha para cada string passada como parâmetro</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">foo</span>
@@ -282,7 +282,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Um parâmetro (stop)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
@@ -294,7 +294,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dois parâmetros (start e stop)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
@@ -308,7 +308,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Três parâmetros (start, stop e step)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
@@ -320,7 +320,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sequẽncia regressiva</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">20</span>
@@ -354,7 +354,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 </div>
 <p>Em uma sequência de 0 a 19, pela função impar criar um objeto filter somente com os elementos ímpares e posteriormente ser convertido para lista:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">impar</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]</span>
@@ -369,7 +369,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dada uma tupla com várias strings, criar uma lista</span>
 <span class="c1"># com o tamanho de cada string respectivamente</span>
 <span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[4, 3, 3, 4, 6]</span>
@@ -377,8 +377,8 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para cada item da lista, criar uma nova lista</span>
 <span class="c1"># com seus respectivos tipos</span>
-<span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">5j</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="n">j</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[str, float, complex, int]</span>
@@ -388,7 +388,7 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <span class="c1"># ao elemento respectivo na segunda lista e criar uma</span>
 <span class="c1"># nova lista com os resultados</span>
 <span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">pow</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[9, 7, 78125, 1000]</span>
@@ -406,18 +406,18 @@ step:  Valor de incremento, cujo padrão é 1 (um), quando start é maior que st
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>  <span class="c1"># Loop e incrementação</span>
     <span class="n">soma</span> <span class="o">+=</span> <span class="n">i</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">soma</span><span class="p">)</span>  <span class="c1"># Exibe o resultado</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soma</span><span class="p">)</span>  <span class="c1"># Exibe o resultado</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importando reduce de functools</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
 
 <span class="c1"># Função reduce para executar a mesma</span>
 <span class="c1"># tarefa anterior com apenas um comando</span>
-<span class="nb">reduce</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">reduce</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
@@ -437,7 +437,7 @@ Também apaga elemento de uma coleção.</p>
 </div>
 <p>ou</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Equivalência ao comando anterior em forma de função</span>
-<span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Exibe a lista após o elemento ser retirado da mesma</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Exibe a lista após o elemento ser retirado da mesma</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;a&#39;, &#39;c&#39;]</span>
@@ -445,14 +445,14 @@ Também apaga elemento de uma coleção.</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Teste de del para desalocar um objeto criado</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span>  <span class="c1"># Objeto string criado</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Verificando o valor da string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Verificando o valor da string</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bar</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">foo</span>  <span class="c1"># Apagando o objeto string</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Tentativa de imprimir o valor do objeto desalocado</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Tentativa de imprimir o valor do objeto desalocado</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">NameError: name &#39;foo&#39; is not defined</span>
@@ -566,10 +566,10 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 
     <span class="c1"># Métodos</span>
     <span class="k">def</span> <span class="nf">saudacao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Olá&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">dizer_nome</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Meu nome é {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Meu nome é </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando o conteúdo da classe (atributos e métodos)</span>
@@ -618,9 +618,9 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 
     <span class="c1"># Se começar e terminar com &quot;__&quot; retornar True</span>
     <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="kc">True</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Utilizando a função auxiliar criada criar uma nova função</span>
@@ -631,12 +631,12 @@ A chamada dessa função é correspondente ao executar o método __dir__.</p>
 
     <span class="c1"># Generator que conterá os nomes dos métodos por tuple comprehension</span>
     <span class="n">metodos</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">objeto</span><span class="p">)</span>
-               <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">objeto</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+               <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">objeto</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
                <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">is_dunder</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
               <span class="p">)</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">metodos</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chamando a função criada para imprimir em tela os nomes dos métodos:</span>
@@ -674,12 +674,12 @@ vim /tmp/assert_sem_try.py
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Começo&#39;</span><span class="p">)</span>
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Começo&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># OK</span>
 <span class="k">assert</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># Ops...</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execução</span>
@@ -705,15 +705,15 @@ vim /tmp/assert_com_try.py
 6
 7
 8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Começo&#39;</span><span class="p">)</span>
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Começo&#39;</span><span class="p">)</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># OK</span>
     <span class="k">assert</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># Ops...</span>
 <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Teve erro...&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Teve erro...&#39;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="c1"># Execução</span>
@@ -752,7 +752,7 @@ python3.7 /tmp/assert_com_try.py
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">divmod</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Equivalente: 11 // 4, 11 % 4</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(2, 3)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(2, 3)</span>
 </pre></div>
 </div>
 </div>
@@ -838,42 +838,42 @@ Vale lembrar que classes também são chamáveis, bem como objetos de classes qu
 <span class="n">b</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">()</span>
 
 <span class="c1"># Execuções de callable</span>
-<span class="nb">callable</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="n">callable</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="nb">callable</span><span class="p">(</span><span class="n">myfunction</span><span class="p">)</span>
+<span class="n">callable</span><span class="p">(</span><span class="n">myfunction</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="nb">callable</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span>
+<span class="n">callable</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="nb">callable</span><span class="p">(</span><span class="n">Bar</span><span class="p">)</span>
+<span class="n">callable</span><span class="p">(</span><span class="n">Bar</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="nb">callable</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">callable</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="nb">callable</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">callable</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>True</p>
@@ -1026,7 +1026,7 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 <span class="n">foo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>  <span class="c1"># Digite algo...</span>
 
 <span class="c1"># Imprimindo o valor da variável</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
@@ -1040,7 +1040,7 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imprimindo o valor da variável</span>
-<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
@@ -1094,7 +1094,7 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop sobre o iterável</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{} - {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> - </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0 - verde</span>
@@ -1106,24 +1106,24 @@ Opcionalmente podemos colocar uma mensagem para pedir uma entrada de teclado.</p
 <span class="n">y</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="c1"># Método __next__() que traz uma tupla com o índice e o valor</span>
-<span class="n">y</span><span class="o">.</span> <span class="n">__next__</span><span class="p">()</span>
+<span class="n">y</span><span class="o">.</span> <span class="fm">__next__</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(0, &#39;verde&#39;)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">y</span><span class="o">.</span> <span class="n">__next__</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1, &#39;azul&#39;)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(0, &#39;verde&#39;)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">y</span><span class="o">.</span> <span class="n">__next__</span><span class="p">()</span>
+<span class="n">y</span><span class="o">.</span> <span class="fm">__next__</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(2, &#39;amarelo&#39;)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(1, &#39;azul&#39;)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="n">y</span><span class="o">.</span> <span class="fm">__next__</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(2, &#39;amarelo&#39;)</span>
 </pre></div>
 </div>
 </div>

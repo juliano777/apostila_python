@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -189,233 +189,362 @@
 <div><p>Em Python um dicionário é uma estrutura de dados envolta por chaves cujos elementos são compostos por chave:valor e separados por vírgula.</p>
 </div></blockquote>
 <p>Dicionário vazio:</p>
-<p>&gt; d = {}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
 <p>Criação de um dicionário utilizando a função dict:</p>
-<p>&gt; d = dict(chave1 = ‘valor2’, chave2 = 1980)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">chave1</span> <span class="o">=</span> <span class="s1">&#39;valor2&#39;</span><span class="p">,</span> <span class="n">chave2</span> <span class="o">=</span> <span class="mi">1980</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Criação de um dicionário utilizando chaves:</p>
-<dl class="simple">
-<dt>&gt; d = {</dt><dd><p>‘nome’: ‘Chiquinho’,
-‘sobrenome’: ‘da Silva’,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,</p>
-</dd>
-</dl>
-<p>}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="s1">&#39;nome&#39;</span><span class="p">:</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;sobrenome&#39;</span><span class="p">:</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="s1">&#39;chiquinho.silva@zeninguem.com&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
 <p>Exibir o valor de uma chave do dicionário:</p>
-<p>&gt; d[‘nome’]</p>
-<p>‘Chiquinho’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;nome&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Chiquinho&#39;</span>
+</pre></div>
+</div>
 <p>Loop para exibir cada par de chave e valor do dicionário:</p>
-<dl class="simple">
-<dt>&gt; for k in d:</dt><dd><p>print(f’{k} = {d[k]}’)</p>
-</dd>
-</dl>
-<p>nome = Chiquinho
-sobrenome = da Silva
-email = <a class="reference external" href="mailto:chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nome = Chiquinho</span>
+<span class="go">sobrenome = da Silva</span>
+<span class="go">email = chiquinho.silva@zeninguem.com</span>
+</pre></div>
+</div>
 <p>Loop para exibir cada par de chave e valor do dicionário ordenado por chave:</p>
-<dl class="simple">
-<dt>&gt; for k in sorted(d):</dt><dd><p>print(f’{k} = {d[k]}’)</p>
-</dd>
-</dl>
-<p>email = <a class="reference external" href="mailto:chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>
-nome = Chiquinho
-sobrenome = da Silva</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">email = chiquinho.silva@zeninguem.com</span>
+<span class="go">nome = Chiquinho</span>
+<span class="go">sobrenome = da Silva</span>
+</pre></div>
+</div>
 <p>Itens do dicionário:</p>
-<p>&gt; d.items()</p>
-<p>dict_items([(‘nome’, ‘Chiquinho’), (‘sobrenome’, ‘da Silva’), (‘email’, <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’)])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">dict_items([(&#39;nome&#39;, &#39;Chiquinho&#39;), (&#39;sobrenome&#39;, &#39;da Silva&#39;), (&#39;email&#39;, &#39;chiquinho.silva@zeninguem.com&#39;)])</span>
+</pre></div>
+</div>
 <p>Loop sobre os itens do dicionário:</p>
-<dl class="simple">
-<dt>&gt; for k, v in d.items():</dt><dd><p>print(f’{k} = {v}’)</p>
-</dd>
-</dl>
-<p>nome = Chiquinho
-sobrenome = da Silva
-email = <a class="reference external" href="mailto:chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nome = Chiquinho</span>
+<span class="go">sobrenome = da Silva</span>
+<span class="go">email = chiquinho.silva@zeninguem.com</span>
+</pre></div>
+</div>
 <p>Método para exibir as chaves do dicionário:</p>
-<p>&gt; d.keys()</p>
-<p>dict_keys([‘nome’, ‘sobrenome’, ‘email’])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">dict_keys([&#39;nome&#39;, &#39;sobrenome&#39;, &#39;email&#39;])</span>
+</pre></div>
+</div>
 <p>Método para exibir as chaves do dicionário:</p>
-<p>&gt; d.values()</p>
-<p>dict_values([‘Chiquinho’, ‘da Silva’, <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’])</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">dict_values([&#39;Chiquinho&#39;, &#39;da Silva&#39;, &#39;chiquinho.silva@zeninguem.com&#39;])</span>
+</pre></div>
+</div>
 <p>Método para limpar o dicionário:</p>
-<p>&gt; d.clear()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Dicionário após a execução do método clear:</p>
-<p>&gt; d</p>
-<p>{}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{}</span>
+</pre></div>
+</div>
 <p>Método update para adicionar chaves e valores:</p>
-<dl class="simple">
-<dt>&gt; d.update({</dt><dd><p>‘nome’: ‘Chiquinho’,
-‘sobrenome’: ‘da Silva’,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,</p>
-</dd>
-</dl>
-<p>})</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+          <span class="s1">&#39;nome&#39;</span><span class="p">:</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;sobrenome&#39;</span><span class="p">:</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="s1">&#39;chiquinho.silva@zeninguem.com&#39;</span><span class="p">,</span>
+         <span class="p">}</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
 <p>Exibindo o conteúdo do dicionário:</p>
-<p>&gt; d</p>
-<dl class="simple">
-<dt>{‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,</dt><dd><p>‘nome’: ‘Chiquinho’,
-‘sobrenome’: ‘da Silva’}</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;email&#39;: &#39;chiquinho.silva@zeninguem.com&#39;,</span>
+<span class="go"> &#39;nome&#39;: &#39;Chiquinho&#39;,</span>
+<span class="go"> &#39;sobrenome&#39;: &#39;da Silva&#39;}</span>
+</pre></div>
+</div>
 <p>Adicionando uma chave e valor ao dicionário:</p>
-<p>&gt; d.update({‘data_nascimento’: ‘28/02/1936’})</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;data_nascimento&#39;</span><span class="p">:</span> <span class="s1">&#39;28/02/1936&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
 <p>Exibindo o conteúdo do dicionário:</p>
-<p>&gt; d</p>
-<dl class="simple">
-<dt>{‘nome’: ‘Chiquinho’,</dt><dd><p>‘sobrenome’: ‘da Silva’,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,
-‘data_nascimento’: ‘28/02/1936’}</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;nome&#39;: &#39;Chiquinho&#39;,</span>
+<span class="go"> &#39;sobrenome&#39;: &#39;da Silva&#39;,</span>
+<span class="go"> &#39;email&#39;: &#39;chiquinho.silva@zeninguem.com&#39;,</span>
+<span class="go"> &#39;data_nascimento&#39;: &#39;28/02/1936&#39;}</span>
+</pre></div>
+</div>
 <p>Alterando uma chave do dicionário:</p>
-<p>&gt; d[‘data_nascimento’] = ‘08/02/1936’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;data_nascimento&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;08/02/1936&#39;</span>
+</pre></div>
+</div>
 <p>Exibindo o conteúdo do dicionário:</p>
-<p>&gt; d</p>
-<dl class="simple">
-<dt>{‘nome’: ‘Chiquinho’,</dt><dd><p>‘sobrenome’: ‘da Silva’,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,
-‘data_nascimento’: ‘08/02/1936’}</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;nome&#39;: &#39;Chiquinho&#39;,</span>
+<span class="go"> &#39;sobrenome&#39;: &#39;da Silva&#39;,</span>
+<span class="go"> &#39;email&#39;: &#39;chiquinho.silva@zeninguem.com&#39;,</span>
+<span class="go"> &#39;data_nascimento&#39;: &#39;08/02/1936&#39;}</span>
+</pre></div>
+</div>
 <p>Adicionando uma nova chave e valor:</p>
-<p>&gt; d[‘cidade_origem’] = ‘Cascatinha’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;cidade_origem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Cascatinha&#39;</span>
+</pre></div>
+</div>
 <p>Exibindo o conteúdo do dicionário:</p>
-<p>&gt; d</p>
-<dl>
-<dt>{‘nome’: ‘Chiquinho’,</dt><dd><p>‘sobrenome’: ‘da Silva’,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,
-‘data_nascimento’: ‘08/02/1936’,
-‘cidade_origem’: ‘Cascatinha’}</p>
-<blockquote>
-<div><p>Como chave só são aceitos tipos que utilizam hash, listas não são aceitas, mas instâncias de classes e tuplas são aceitas.</p>
-</div></blockquote>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;nome&#39;: &#39;Chiquinho&#39;,</span>
+<span class="go"> &#39;sobrenome&#39;: &#39;da Silva&#39;,</span>
+<span class="go"> &#39;email&#39;: &#39;chiquinho.silva@zeninguem.com&#39;,</span>
+<span class="go"> &#39;data_nascimento&#39;: &#39;08/02/1936&#39;,</span>
+<span class="go"> &#39;cidade_origem&#39;: &#39;Cascatinha&#39;}</span>
+</pre></div>
+</div>
+<p>Como chave só são aceitos tipos que utilizam hash, listas não são aceitas, mas
+instâncias de classes e tuplas são aceitas.</p>
 <p>Criação de uma lista e uma tupla respectivamente:</p>
-<p>&gt; l = [1, 2, 3]</p>
-<p>&gt; t = (5, 7)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Criação de uma classe para teste:</p>
-<dl class="simple">
-<dt>&gt; class Funcionario(object):</dt><dd><p>pass</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Funcionario</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
 <p>Objeto da classe Funcionário:</p>
-<p>&gt; f1 = Funcionario()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f1</span> <span class="o">=</span> <span class="n">Funcionario</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Tentativa de fazer uma lista ser chave do dicionário e atribuir um valor:</p>
-<p>&gt; d[l] = 0</p>
-<p>TypeError: unhashable type: ‘list’</p>
-<blockquote>
-<div><p>Listas são “unhashable”, portanto não podem ser chaves de um dicionário.</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: unhashable type: &#39;list&#39;</span>
+</pre></div>
+</div>
+<p>Listas são “unhashable”, portanto não podem ser chaves de um dicionário.</p>
 <p>Objeto da classe Funcionário como chave do dicionário:</p>
-<p>&gt; d[f1] = ‘Funcionário 1’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="n">f1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Funcionário 1&#39;</span>
+</pre></div>
+</div>
 <p>Exibir o conteúdo do dicionário:</p>
-<p>&gt; d</p>
-<dl class="simple">
-<dt>{‘nome’: ‘Chiquinho’,</dt><dd><p>‘sobrenome’: ‘da Silva’,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,
-‘data_nascimento’: ‘08/02/1936’,
-‘cidade_origem’: ‘Cascatinha’,
-&lt;__main__.Funcionario at 0x7f3769ca9c88&gt;: ‘Funcionário 1’}</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;nome&#39;: &#39;Chiquinho&#39;,</span>
+<span class="go"> &#39;sobrenome&#39;: &#39;da Silva&#39;,</span>
+<span class="go"> &#39;email&#39;: &#39;chiquinho.silva@zeninguem.com&#39;,</span>
+<span class="go"> &#39;data_nascimento&#39;: &#39;08/02/1936&#39;,</span>
+<span class="go"> &#39;cidade_origem&#39;: &#39;Cascatinha&#39;,</span>
+<span class="go"> &lt;__main__.Funcionario at 0x7f3769ca9c88&gt;: &#39;Funcionário 1&#39;}</span>
+</pre></div>
+</div>
 <p>Tupla como chave do dicionário e atribuir um valor:</p>
-<p>&gt; d[t] = 0</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
 <p>Exibir o conteúdo do dicionário:</p>
-<p>&gt; d</p>
-<dl class="simple">
-<dt>{‘nome’: ‘Chiquinho’,</dt><dd><p>‘sobrenome’: ‘da Silva’,
-‘email’: <a class="reference external" href="mailto:'chiquinho&#46;silva&#37;&#52;&#48;zeninguem&#46;com">‘chiquinho<span>&#46;</span>silva<span>&#64;</span>zeninguem<span>&#46;</span>com</a>’,
-‘data_nascimento’: ‘08/02/1936’,
-‘cidade_origem’: ‘Cascatinha’,
-&lt;__main__.Funcionario at 0x7f3769ca9c88&gt;: ‘Funcionário 1’,
-(5, 7): 0}</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;nome&#39;: &#39;Chiquinho&#39;,</span>
+<span class="go"> &#39;sobrenome&#39;: &#39;da Silva&#39;,</span>
+<span class="go"> &#39;email&#39;: &#39;chiquinho.silva@zeninguem.com&#39;,</span>
+<span class="go"> &#39;data_nascimento&#39;: &#39;08/02/1936&#39;,</span>
+<span class="go"> &#39;cidade_origem&#39;: &#39;Cascatinha&#39;,</span>
+<span class="go"> &lt;__main__.Funcionario at 0x7f3769ca9c88&gt;: &#39;Funcionário 1&#39;,</span>
+<span class="go"> (5, 7): 0}</span>
+</pre></div>
+</div>
 <p>Tentativa de acessar uma chave inexistente:</p>
-<p>&gt; d[endereco]</p>
-<p>NameError: name ‘endereco’ is not defined</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="n">endereco</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">NameError: name &#39;endereco&#39; is not defined</span>
+</pre></div>
+</div>
 <p>Método get:</p>
-<p>&gt; d.get(‘nome’)</p>
-<p>‘Chiquinho’</p>
-<blockquote>
-<div><p>Existe a chave “nome”, então seu valor foi retornado.</p>
-</div></blockquote>
-<p>&gt; d.get(‘endereco’)</p>
-<blockquote>
-<div><p>Não existe a chave “endereço”, por isso nada foi retornado, no entanto, não foi lançada exceção.</p>
-</div></blockquote>
-<p>&gt; d.get(‘endereco’, ‘R. do Cafezal, 30’)</p>
-<p>‘R. do Cafezal, 30’</p>
-<blockquote>
-<div><p>Não existe a chave “endereço”, mas no método get foi passado um segundo parâmetro, o qual foi retornado, porém não houve modificação no dicionário.</p>
-</div></blockquote>
-<p>&gt; d.get(‘nome’, ‘Zezinho’)</p>
-<p>‘Chiquinho’</p>
-<blockquote>
-<div><p>A chave “nome” já existia, sendo um valor diferente do valor da mesma, foi retornado o valor que pertence à chave.</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nome&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Chiquinho&#39;</span>
+</pre></div>
+</div>
+<p>Existe a chave “nome”, então seu valor foi retornado.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;endereco&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Não existe a chave “endereço”, por isso nada foi retornado, no entanto, não
+foi lançada exceção.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;endereco&#39;</span><span class="p">,</span> <span class="s1">&#39;R. do Cafezal, 30&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;R. do Cafezal, 30&#39;</span>
+</pre></div>
+</div>
+<p>Não existe a chave “endereço”, mas no método get foi passado um segundo
+parâmetro, o qual foi retornado, porém não houve modificação no dicionário.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nome&#39;</span><span class="p">,</span> <span class="s1">&#39;Zezinho&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Chiquinho&#39;</span>
+</pre></div>
+</div>
+<p>A chave “nome” já existia, sendo um valor diferente do valor da mesma, foi
+retornado o valor que pertence à chave.</p>
 <p>Criação de um dicionário:</p>
-<dl class="simple">
-<dt>&gt; carro = {</dt><dd><p>‘marca’: ‘Fiat’,
-‘modelo’: ‘147’</p>
-</dd>
-</dl>
-<p>}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="s1">&#39;Fiat&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;modelo&#39;</span><span class="p">:</span> <span class="s1">&#39;147&#39;</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
 <p>Tentando acessar uma chave inexistente:</p>
-<p>&gt; carro[‘cor’]</p>
-<p>KeyError: ‘cor’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="p">[</span><span class="s1">&#39;cor&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">KeyError: &#39;cor&#39;</span>
+</pre></div>
+</div>
 <p>Método get apenas para retorno:</p>
-<p>&gt; carro.get(‘cor’, ‘amarelo’)</p>
-<p>‘amarelo’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cor&#39;</span><span class="p">,</span> <span class="s1">&#39;amarelo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;amarelo&#39;</span>
+</pre></div>
+</div>
 <p>Verificando o conteúdo do dicionário:</p>
-<p>&gt; carro</p>
-<p>{‘marca’: ‘Fiat’, ‘modelo’: ‘147’}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;marca&#39;: &#39;Fiat&#39;, &#39;modelo&#39;: &#39;147&#39;}</span>
+</pre></div>
+</div>
 <p>Método setdefault:</p>
-<p>&gt; carro.setdefault(‘modelo’, ‘Topazio’)</p>
-<p>‘147’</p>
-<blockquote>
-<div><p>Já havia uma chave “modelo”, então foi retornado seu valor e não o segundo parâmetro fornecido.</p>
-</div></blockquote>
-<p>&gt; carro.setdefault(‘cor’, ‘verde’)</p>
-<p>‘verde’</p>
-<blockquote>
-<div><p>Não havia uma chave “cor”, agora ela e seu valor fazem parte do dicionário.</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;modelo&#39;</span><span class="p">,</span> <span class="s1">&#39;Topazio&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;147&#39;</span>
+</pre></div>
+</div>
+<p>Já havia uma chave “modelo”, então foi retornado seu valor e não o segundo
+parâmetro fornecido.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;cor&#39;</span><span class="p">,</span> <span class="s1">&#39;verde&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;verde&#39;</span>
+</pre></div>
+</div>
+<p>Não havia uma chave “cor”, agora ela e seu valor fazem parte do dicionário.</p>
 <p>Verificando o conteúdo do dicionário:</p>
-<p>&gt; carro</p>
-<p>{‘cor’: ‘verde’, ‘marca’: ‘Fiat’, ‘modelo’: ‘147’}</p>
-<p>Método update para alterar valores de chaves pré existentes ou mesmo para adicionar novos pares de chave-valor:</p>
-<p>&gt; carro.update(modelo = ‘Topazio’, cor = ‘cinza’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;cor&#39;: &#39;verde&#39;, &#39;marca&#39;: &#39;Fiat&#39;, &#39;modelo&#39;: &#39;147&#39;}</span>
+</pre></div>
+</div>
+<p>Método update para alterar valores de chaves pré existentes ou mesmo para
+adicionar novos pares de chave-valor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;Topazio&#39;</span><span class="p">,</span> <span class="n">cor</span> <span class="o">=</span> <span class="s1">&#39;cinza&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Verificando o conteúdo do dicionário:</p>
-<p>&gt; carro</p>
-<p>{‘cor’: ‘cinza’, ‘marca’: ‘Fiat’, ‘modelo’: ‘Topazio’}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;cor&#39;: &#39;cinza&#39;, &#39;marca&#39;: &#39;Fiat&#39;, &#39;modelo&#39;: &#39;Topazio&#39;}</span>
+</pre></div>
+</div>
 <p>Método pop; retira uma chave do dicionário e retorna seu valor:</p>
-<p>&gt; carro.pop(‘cor’)</p>
-<p>‘cinza’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;cor&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;cinza&#39;</span>
+</pre></div>
+</div>
 <p>Verificando o conteúdo do dicionário:</p>
-<p>&gt; carro</p>
-<p>{‘marca’: ‘Fiat’, ‘modelo’: ‘Topazio’}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;marca&#39;: &#39;Fiat&#39;, &#39;modelo&#39;: &#39;Topazio&#39;}</span>
+</pre></div>
+</div>
 <p>Método pop para uma chave que não existe:</p>
-<p>&gt; carro.pop(‘ano’)</p>
-<p>KeyError: ‘ano’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;ano&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">KeyError: &#39;ano&#39;</span>
+</pre></div>
+</div>
 <p>Método pop para uma chave que não existe, mas fornecendo um valor:</p>
-<p>&gt; carro.pop(‘ano’, 1981)</p>
-<p>1981</p>
-<blockquote>
-<div><p>O dicionário continua sem a chave, mas não lançou uma exceção.</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;ano&#39;</span><span class="p">,</span> <span class="mi">1981</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1981</span>
+</pre></div>
+</div>
+<p>O dicionário continua sem a chave, mas não lançou uma exceção.</p>
 <p>Existe a chave “marca” no dicionário?:</p>
-<p>&gt; ‘marca’ in carro</p>
-<p>True</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;marca&#39;</span> <span class="ow">in</span> <span class="n">carro</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>Existe a chave “cor” no dicionário?:</p>
-<p>&gt; ‘cor’ in carro</p>
-<p>False</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;cor&#39;</span> <span class="ow">in</span> <span class="n">carro</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>Adicionando novas chaves e seus respectivos valores:</p>
-<p>&gt; carro[‘cor’] = ‘cinza’</p>
-<p>&gt; carro[‘ano’] = 1981</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span><span class="p">[</span><span class="s1">&#39;cor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;cinza&#39;</span>
+<span class="n">carro</span><span class="p">[</span><span class="s1">&#39;ano&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1981</span>
+</pre></div>
+</div>
 <p>Verificando o conteúdo do dicionário:</p>
-<p>&gt; carro</p>
-<p>{‘marca’: ‘Fiat’, ‘modelo’: ‘Topazio’, ‘cor’: ‘cinza’, ‘ano’: 1981}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carro</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;marca&#39;: &#39;Fiat&#39;, &#39;modelo&#39;: &#39;Topazio&#39;, &#39;cor&#39;: &#39;cinza&#39;, &#39;ano&#39;: 1981}</span>
+</pre></div>
+</div>
 </div>
 
 
