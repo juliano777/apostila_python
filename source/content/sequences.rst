@@ -11,10 +11,13 @@ Imutáveis:
 
 **string -> str -> 'texto'**
 
-tupla -> tuple -> (0, 'string', 7.0, 1000L) # Funciona de forma idêntica à lista, porém, seus itens são imutáveis, consome menos recursos.
+**tupla -> tuple -> (0, 'string', 7.0, 1000L)**
+
+Strings e tuplas funcionam de forma idêntica à lista, porém, seus itens são imutáveis, consomem menos recursos.
 
 
 Operações com Sequências
+------------------------
 
 - Índices
 
@@ -27,29 +30,42 @@ Operações com Sequências
 
 Segundo elemento da string:
 
-> 'Python'[1]
+.. code-block:: python
 
-'y'
+    'Python'[1]
+
+.. code-block:: console
+
+    'y'
 
 
 
 Primeiro elemento da lista:
 
-> ['foo', 'bar', 2.7, 80,  2 + 7j][0]
+.. code-block:: python
 
-'foo'
+    ['foo', 'bar', 2.7, 80,  2 + 7j][0]
+
+.. code-block:: console
+
+    'foo'
 
 
 
 Quarto elemento da tupla:
 
-> ('Python', 'C', 'C++', 2.7, 3.7)[3]
+.. code-block:: python
 
-2.7
+    ('Python', 'C', 'C++', 2.7, 3.7)[3]
+
+.. code-block:: console
+
+    2.7
 
 
 
-Iteráveis 
+Iteráveis
+---------
 
 	Sequências nos permite também fazer iteração sobre cada elemento.
 
@@ -57,153 +73,213 @@ Iteráveis
 
 Definição de uma tupla:
 
-> regiao_sudeste = ('SP', 'MG', 'ES', 'RJ')
+.. code-block:: python
+
+    regiao_sudeste = ('SP', 'MG', 'ES', 'RJ')
 
 
 
 Loop sobre a tupla e impressão em tela de cada elemento:
 
-> for i in regiao_sudeste:
-    print(i)
+.. code-block:: python
 
-SP
-MG
-ES
-RJ
+    for i in regiao_sudeste:
+        print(i)
+
+.. code-block:: console
+
+    SP
+    MG
+    ES
+    RJ
 
 
 
 Loop sobre a string e impressão em tela de cada caractere:
 
-> for i in 'Python':
-    print(i)
+.. code-block:: python
 
-P
-y
-t
-h
-o
-n
+    for i in 'Python':
+        print(i)
+
+.. code-block:: console
+
+    P
+    y
+    t
+    h
+    o
+    n
 
 
 
 Loop sobre um range de 0 (zero) a 20 (vinte) com a condição de exibir somente 0 (zero) e divisíveis por 5 (cinco):
 
-> for i in range(21):
-    if (i % 5 == 0):
-        print(i)
+.. code-block:: python
 
-0
-5
-10
-15
-20
+    for i in range(21):
+        if (i % 5 == 0):
+            print(i)
+
+.. code-block:: console
+
+    0
+    5
+    10
+    15
+    20
 
 
 
-Fatiamento / Slicing 
+Fatiamento / Slicing
+--------------------
 
     É o corte de uma sequência.
 
-    [inicio:fim - 1:incremento]
+    **[inicio:fim - 1:incremento]**
 
 
 
 Fatiamento sem qualquer determinação:
 
-> 'Python Language'[::]
+.. code-block:: python
 
-'Python Language'
+    'Python Language'[::]
 
-    Não foram determinados início, fim e incremento.
+.. code-block:: console
+
+    'Python Language'
+
+
+Não foram determinados início, fim e incremento.
 
 
 
 Fatiamento determinando apenas o início, que é o último elemento:
 
-> 'Python Language'[-1::]
+.. code-block:: python
 
-'e'
+    'Python Language'[-1::]
+
+.. code-block:: console
+
+    'e'
 
 
 
 Pelo sinal de subtração, os três últimos caracteres da string:
 
-> 'Python Language'[-3::]
+.. code-block:: python
 
-'age'
+    'Python Language'[-3::]
+
+.. code-block:: console
+
+    'age'
 
 
 
 Determinando apenas o incremento de 4 (quatro) em 4:
 
-> (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)[::4]
+.. code-block:: python
 
-(0, 4, 8)
+    (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)[::4]
+
+.. code-block:: console
+
+    (0, 4, 8)
 
 
 
 Incremento negativo faz com que a string seja colocada em ordem reversa:
 
-> 'Python Language'[::-1]
+.. code-block:: python
 
-'egaugnaL nohtyP'
+    'Python Language'[::-1]
+
+.. code-block:: console
+
+    'egaugnaL nohtyP'
+
 
 
 A partir do primeiro caractere:
 
-> 'Python Language'[0:]
+.. code-block:: python
 
-'Python Language'
+    'Python Language'[0:]
+
+.. code-block:: console
+
+    'Python Language'
 
 
 
 Do primeiro ao primeiro caractere:
 
-> 'Python Language'[0:1]
+.. code-block:: python
 
-'P'
+    'Python Language'[0:1]
+
+.. code-block:: console
+
+    'P'
 
 
 
 Do primeiro ao sexto caractere:
 
-> Python Language'[0:6]
+.. code-block:: python
 
-'Python'
+    Python Language'[0:6]
+
+.. code-block:: console
+
+    'Python'
 
 
 
 Do oitavo caractere em diante:
 
-> 'Python Language'[7:]
+.. code-block:: python
 
-'Language'
+    'Python Language'[7:]
+
+.. code-block:: console
+
+    'Language'
 
 
 
 Criação de uma tupla de exemplo:
 
-> linux_distros = (
-                 'Debian',
-                 'RedHat',
-                 'Slackware',
-                 'Ubuntu',
-                 'CentOS',
-                 'SuSE',
-                )
+.. code-block:: python
+
+    linux_distros = (
+                     'Debian',
+                     'RedHat',
+                     'Slackware',
+                     'Ubuntu',
+                     'CentOS',
+                     'SuSE',
+                    )
 
 
 
 Do primeiro ao terceiro elemento:
 
-> linux_distros[0:3]
+.. code-block:: python
 
-('Debian', 'RedHat', 'Slackware')
+    linux_distros[0:3]
+
+.. code-block:: console
+
+    ('Debian', 'RedHat', 'Slackware')
 
 
 
 List Comprehension
+------------------
 
 	Ou em português, "Compreensão de Lista", fornece uma maneira concisa para criar listas.
 	Usos comuns são para fazer novas listas onde cada elemento é o resultado de algumas operações aplicadas para cada membro de outra sequência ou iterável, criar uma subsequência desses elementos que satisfaçam uma certa condição.
@@ -213,29 +289,42 @@ List Comprehension
 
 Lista a partir de uma list comprehension do range:
 
-> [i for i in range(21)]
+.. code-block:: python
 
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    [i for i in range(21)]
+
+.. code-block:: console
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 
 
 Lista cujos elementos são a metade de cada elemento do range:
 
-> [i / 2.0 for i in range(10)]
+.. code-block:: python
 
-[0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
+    [i / 2.0 for i in range(10)]
+
+.. code-block:: console
+
+    [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
 
 
 
 Lista com condição que seja 0 (zero) ou divisível por 5 (cinco):
 
-> [i for i in range(21) if (i % 5 == 0)]
+.. code-block:: python
 
-[0, 5, 10, 15, 20]
+    [i for i in range(21) if (i % 5 == 0)]
+
+.. code-block:: console
+
+    [0, 5, 10, 15, 20]
 
 
 
 Tuple Comprehension
+-------------------
 
     Ou em português "Compreenção de Tupla" é similar a uma list comprehension, no entanto resulta em um generator.
 
@@ -243,42 +332,55 @@ Tuple Comprehension
 
 Criação de um generator a partir de uma tuple comprehension:
 
-> x = (i for i in range(21))
+.. code-block:: python
+
+    x = (i for i in range(21))
 
 
 
 Verificando o tipo do objeto:
 
-> type(x)
+.. code-block:: python
 
-generator
+    type(x)
+
+.. code-block:: console
+
+    generator
 
 
 
 Dict Comprehension
+------------------
 
     Ou também conhecido em português como "Compreenção de Dicionário"
 
 
+Objeto dicionário a ser criado:
 
 .. code-block:: python
-
-    # Objeto dicionário a ser criado:
 
     d1 = {'a': 1, 'b':2, 'c': 3}
 
+
+
+Novo dicionário criado a partir de dict comprehension:    
+
 .. code-block:: python
 
-    # Novo dicionário criado a partir de dict comprehension:
     d2 = {k.upper(): v * 10 for k, v in d1.items()}
 
-|   Cada chave é o caractere maiúsculo das chave correspondente ao dicionário original e seus valores são multiplicados por 10 (dez).
+Cada chave é o caractere maiúsculo das chave correspondente ao dicionário
+original e seus valores são multiplicados por 10 (dez).
 
 
+
+Exibindo o dicionário gerado a partir da dict comprehension:
 
 .. code-block:: python
 
-    # Exibindo o dicionário gerado a partir da dict comprehension:
     print(d2)
 
-{'A': 10, 'B': 20, 'C': 30}
+.. code-block:: console
+
+    {'A': 10, 'B': 20, 'C': 30}
