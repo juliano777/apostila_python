@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -211,7 +211,7 @@ Uma lista é também uma coleção de dados mutável, pois sua estrutura pode se
 </pre></div>
 </div>
 <p>Exibindo o terceiro elemento da lista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
@@ -222,14 +222,14 @@ Uma lista é também uma coleção de dados mutável, pois sua estrutura pode se
 </pre></div>
 </div>
 <p>Exibindo o terceiro elemento da lista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">30</span>
 </pre></div>
 </div>
 <p>Exibindo os elementos da lista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;a&#39;, &#39;b&#39;, 30, 4.0]</span>
@@ -254,7 +254,7 @@ Uma lista é também uma coleção de dados mutável, pois sua estrutura pode se
 </pre></div>
 </div>
 <p>Exibindo os elementos da lista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;a&#39;, &#39;b&#39;, 30, 4.0, &#39;Uma string qualquer...&#39;]</span>
@@ -265,7 +265,7 @@ uma lista atual:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>  <span class="c1"># Definição da primeira lista</span>
 <span class="n">bar</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># Definição da segunda lista</span>
 <span class="n">foo</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>  <span class="c1"># Extendendo a primeira lista com os elementos da segunda</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Exibindo a lista extendida</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1"># Exibindo a lista extendida</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, 1, 2]</span>
@@ -432,7 +432,7 @@ string numa lista, uma lista cujos elementos são os caracteres da string.</p>
 </pre></div>
 </div>
 <p>Como o método pop retorna o último elemento, o mesmo pode ser utilizado para atribuição:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">livro</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;O </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">pop</span><span class="p">()))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">livro</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;O {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">pop</span><span class="p">()))</span>
 <span class="n">livro</span>
 </pre></div>
 </div>
@@ -478,7 +478,7 @@ alfabética:</p>
 </pre></div>
 </div>
 <p>A função sorted também pode somente retornar o reverso de uma lista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[3, 2, 1]</span>
@@ -518,7 +518,7 @@ alfabética:</p>
 </pre></div>
 </div>
 <p>Função sorted transforma a string numa lista e organiza por ordem alfabética:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="s1">&#39;aAcb&#39;</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="s1">&#39;aAcb&#39;</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;c&#39;, &#39;b&#39;, &#39;a&#39;, &#39;A&#39;]</span>
@@ -539,19 +539,19 @@ reversa:</p>
 <p>A partir da lista “x”, atribuir respectivamente seus elementos como valores
 para as variáveis à esquerdae exibir seus valores:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
@@ -569,13 +569,13 @@ número que a quantidade de elementos da lista?:</p>
 duas variáveis.</p>
 <p>Utilização do caractere underscore como solução:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">x</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>

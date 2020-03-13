@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -204,28 +204,37 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 </li>
 </ul>
 <p>Prática:</p>
-<p>Declaração de uma variável com seu valor</p>
-<p>foo = 7</p>
-<p>Exibindo na tela o valor da variável</p>
-<p>print(foo)
-.. code-block:: console</p>
-<blockquote>
-<div><p>7</p>
-</div></blockquote>
-<p>A função locals() retorna um dicionário com os identificadores locais e seus respectivos valores.
+<p>Declaração de uma variável com seu valor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<p>Exibindo na tela o valor da variável:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
+<p>A função locals() retorna um dicionário com os identificadores locais e seus
+respectivos valores.
 Então é pedido o valor dada a chave que é o nome da variável local.</p>
-<p>locals()[‘foo’]
-7</p>
+<p>blablabla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">locals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 <p>Dentro de função</p>
 <p>Declaração de uma variável externamente ao escopo da função</p>
 <p>foo = 7</p>
-<p>Definição de uma função</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>foo = 9
-print(id(foo))
-print(foo)</p>
-</dd>
-</dl>
+<p>Definição de uma função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">foo</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Nota-se que dentro da função também há uma variável chamada “foo”.
 Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
 <p>Exibindo o ID de foo</p>

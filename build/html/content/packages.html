@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -185,15 +185,41 @@
             
   <div class="section" id="pacotes">
 <h1><span class="section-number">27. </span>Pacotes<a class="headerlink" href="#pacotes" title="Link permanente para este título">¶</a></h1>
-<p>$ mkdir pack_0</p>
-<p>$ mv foo.py pack_0/</p>
-<p>$ &gt; pack_0/__init__.py</p>
-<p>import pacote.modulo</p>
-<p>&gt; import pack_0.foo
-&gt; f1 = pack_0.foo.Funcionario()
-&gt; f1.nome = ‘Zezinho’
-&gt; f1.saudacao()
-Olá, meu nome é Zezinho</p>
+<p>Criação de diretório (pacote):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir pack_0
+</pre></div>
+</div>
+<p>Criação de um módulo dentro do pacote:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim pack_0/foo.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># _*_ encoding: utf-8 _*_</span>
+
+<span class="k">print</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Pessoa</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">idade</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">saudacao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá, meu nome é {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">Funcionario</span><span class="p">(</span><span class="n">Pessoa</span><span class="p">):</span>
+    <span class="n">matricula</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="k">def</span> <span class="nf">cubo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>import pacote.modulo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import pack_0.foo
+f1 = pack_0.foo.Funcionario()
+f1.nome = &#39;Zezinho&#39;
+f1.saudacao()
+Olá, meu nome é Zezinho
+</pre></div>
+</div>
 <p>$ ls pack_0/
 foo.py  __init__.py  __pycache__</p>
 <p>$ ls pack_0/__pycache__/
@@ -204,22 +230,6 @@ pack_0/__pycache__/foo.cpython-34.pyc: python 3.4 byte-compiled</p>
 <p># _*_ encoding: utf-8 _*_</p>
 <dl class="simple">
 <dt>if __name__ != ‘__main__’:</dt><dd><p>print(‘Pacote {} importado’.format(__name__))</p>
-</dd>
-</dl>
-<p>$ vim pack_0/foo.py</p>
-<p># _*_ encoding: utf-8 _*_</p>
-<p>print(__name__)</p>
-<dl>
-<dt>class Pessoa(object):</dt><dd><p>nome = ‘’
-idade = 0</p>
-<dl class="simple">
-<dt>def saudacao(self):</dt><dd><p>print(‘Olá, meu nome é {}’.format(self.nome))</p>
-</dd>
-</dl>
-</dd>
-<dt>class Funcionario(Pessoa):</dt><dd><p>matricula = ‘’</p>
-</dd>
-<dt>def cubo(x):</dt><dd><p>return x ** 3</p>
 </dd>
 </dl>
 <p>&gt; import pack_0.foo

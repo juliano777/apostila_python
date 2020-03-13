@@ -2,122 +2,101 @@
 # https://data-flair.training/blogs/python-operator/
 # https://www.tutorialspoint.com/python/bitwise_operators_example
 
-Operadores Bitwise
-******************
+Operadores
+**********
+
+Operadores Aritméticos
+----------------------
+
++-------------------------+----------+---------+-------+
+| Nome                    | Operador | Exemplo | Saída |
++-------------------------+----------+---------+-------+
+| Soma                    | \+       | 5 + 2   | 7     |
++-------------------------+----------+---------+-------+
+| Subtração               | \-       | 13 - 3  | 10    |
++-------------------------+----------+---------+-------+
+| Multiplicação           | \*       | 5 * 3   | 15    |
++-------------------------+----------+---------+-------+
+| Divisão                 | /        | 7 / 2   | 3.5   |
++-------------------------+----------+---------+-------+
+| Divisão Inteira (Floor) | //       | 7 // 2  | 3     |
++-------------------------+----------+---------+-------+
+| Potenciação             | \*\*     | 2 ** 9  | 512   |
++-------------------------+----------+---------+-------+
+| Módulo                  | %        | 7 % 2   | 1     |
++-------------------------+----------+---------+-------+
 
 
-Aritméticos
-~~~~~~~~~~~
+Operadores Relacionais
+----------------------
 
-| Descrição       | Operador | Exemplo | Saída |
-|-----------------|----------|---------|-------|
-| Soma            | +        |  5 + 2  |  7    |
-|  Subtração      | -        | 13 - 3  | 10    |
-| Multiplicação   | *        | 5 * 3   | 15    |
-| Divisão         | /        | 7 / 2   | 3.5   |
-| Divisão Inteira | //       | 7 // 2  | 3     |
-| Potenciação     | **       | 2 ** 9  | 512   |
-
-
-Soma
-----
-
-+
-
-Menor
-<
-
-Deslocamento para esquerda
-<<
-
-
-Subtração
----------
-
--
-
-Maior
->
-
-Deslocamento para direita
->>
-Multiplicação
-*
-
-Menor ou igual
-<=
-
-E bit-a-bit (AND)
-&
-
-Divisão
-/
-
-Divisão Inteira
-//
++-------------+----------+---------------+-------+
+| Nome        | Operador | Exemplo       | Saída |
++-------------+----------+---------------+-------+
+| Menor       | <        | 3 < 2         | False |
+|             |          +---------------+-------+
+|             |          | 2 < 3         | True  |
++-------------+----------+---------------+-------+
+| Maior       | >        | 7 > 5         | True  |
+|             |          +---------------+-------+
+|             |          | 'A' > 'B'     | False |
++-------------+----------+---------------+-------+
+| Menor Igual | <=       | 5 <= 9        | True  |
+|             |          +---------------+-------+
+|             |          | 11 <= 3       | False |
++-------------+----------+---------------+-------+
+| Maior Igual | >=       | 'Z' >= 'W'    | True  |
+|             |          +---------------+-------+
+|             |          | 0 >= 1        | False |
++-------------+----------+---------------+-------+
+| Igual       | ==       | 7 == (4 + 3)  | True  |
+|             |          +---------------+-------+
+|             |          | 'k' == 'v'    | False |
++-------------+----------+---------------+-------+
+| Diferente   | !=       | 5 != 3        | True  |
+|             |          +---------------+-------+
+|             |          | 0 != 0        | False |
++-------------+----------+---------------+-------+
 
 
-.. code-block:: python
+Operadores de Atribuição
+------------------------
 
-    7 / 2
-
-.. code-block:: console
-
-    3.5
-
-.. code-block:: python
-
-    7 / 2.0
-
-.. code-block:: console
-
-    3.5
-
-.. code-block:: python
-
-    7 // 2.0
-
-.. code-block:: console
-
-    3.0
-
-.. code-block:: python
-
-    7 // 2
-
-.. code-block:: console
-
-    3
+ +-----------------------------------+----------+
+| Nome                              | Operador |
++-----------------------------------+----------+
+| Atribuição                        | =        |
++-----------------------------------+----------+
+| Adicionar e Atribuir (Incremento) | +=       |
++-----------------------------------+----------+
+| Subtrair e Atribuir (Decremento)  | -=       |
++-----------------------------------+----------+
+| Dividir e Atribuir                | /=       |
++-----------------------------------+----------+
+| Multiplicar e Atribuir            | \*=      |
++-----------------------------------+----------+
+| Módulo e Atribuir                 | %=       |
++-----------------------------------+----------+
+| Exponenciação e Atribuir          | \*\*=    |
++-----------------------------------+----------+
+| Divisão Inteira e Atribuir        | //=      |
++-----------------------------------+----------+
 
 
+Operadores Lógicos
+------------------
 
+Operadores de Associação
+------------------------
 
-Maior ou igual
->=
+Operadores de Identidade
+------------------------
 
-Ou bit-a-bit (OR)
-|
-
-
-Igual
-==
-
-Ou exclusivo bit-a-bit (XOR)
-^
-Módulo
-%
-
-Diferente
-!=
-
-Inversão (NOT) 
-~
-Potência
-**
+Operadores Bitwise (Operadores Bit a Bit)
+-----------------------------------------
 
 
 
-# Operadores bit a bit / Python Bitwise
 
 
 # Operadores Lógicos OR (|) e AND (&)
@@ -330,7 +309,6 @@ ou
     .. code-block:: console
 
     0
-
 
 
 Atribuição de Valores

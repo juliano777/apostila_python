@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>15. Operadores Bitwise &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>15. Operadores &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,13 +97,15 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Operadores Bitwise</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#aritmeticos">15.1. Aritméticos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#soma">15.1.1. Soma</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#subtracao">15.1.2. Subtração</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#atribuicao-de-valores">15.1.3. Atribuição de Valores</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Operadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-aritmeticos">15.1. Operadores Aritméticos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-relacionais">15.2. Operadores Relacionais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-de-atribuicao">15.3. Operadores de Atribuição</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-logicos">15.4. Operadores Lógicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-de-associacao">15.5. Operadores de Associação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-de-identidade">15.6. Operadores de Identidade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-bitwise-operadores-bit-a-bit">15.7. Operadores Bitwise (Operadores Bit a Bit)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atribuicao-de-valores">15.8. Atribuição de Valores</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
@@ -172,7 +174,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">15. </span>Operadores Bitwise</li>
+      <li><span class="section-number">15. </span>Operadores</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,90 +195,182 @@
             
   <p># <a class="reference external" href="https://data-flair.training/blogs/python-operator/">https://data-flair.training/blogs/python-operator/</a>
 # <a class="reference external" href="https://www.tutorialspoint.com/python/bitwise_operators_example">https://www.tutorialspoint.com/python/bitwise_operators_example</a></p>
-<div class="section" id="operadores-bitwise">
-<h1><span class="section-number">15. </span>Operadores Bitwise<a class="headerlink" href="#operadores-bitwise" title="Link permanente para este título">¶</a></h1>
-<div class="section" id="aritmeticos">
-<h2><span class="section-number">15.1. </span>Aritméticos<a class="headerlink" href="#aritmeticos" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="operadores">
+<h1><span class="section-number">15. </span>Operadores<a class="headerlink" href="#operadores" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="operadores-aritmeticos">
+<h2><span class="section-number">15.1. </span>Operadores Aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Link permanente para este título">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 20%" />
+<col style="width: 18%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Nome</p></td>
+<td><p>Operador</p></td>
+<td><p>Exemplo</p></td>
+<td><p>Saída</p></td>
+</tr>
+<tr class="row-even"><td><p>Soma</p></td>
+<td><p>+</p></td>
+<td><p>5 + 2</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Subtração</p></td>
+<td><p>-</p></td>
+<td><p>13 - 3</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Multiplicação</p></td>
+<td><p>*</p></td>
+<td><p>5 * 3</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>Divisão</p></td>
+<td><p>/</p></td>
+<td><p>7 / 2</p></td>
+<td><p>3.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Divisão Inteira (Floor)</p></td>
+<td><p>//</p></td>
+<td><p>7 // 2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Potenciação</p></td>
+<td><p>**</p></td>
+<td><p>2 ** 9</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-even"><td><p>Módulo</p></td>
+<td><p>%</p></td>
+<td><p>7 % 2</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="operadores-relacionais">
+<h2><span class="section-number">15.2. </span>Operadores Relacionais<a class="headerlink" href="#operadores-relacionais" title="Link permanente para este título">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 22%" />
+<col style="width: 33%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Nome</p></td>
+<td><p>Operador</p></td>
+<td><p>Exemplo</p></td>
+<td><p>Saída</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Menor</p></td>
+<td rowspan="2"><p>&lt;</p></td>
+<td><p>3 &lt; 2</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>2 &lt; 3</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Maior</p></td>
+<td rowspan="2"><p>&gt;</p></td>
+<td><p>7 &gt; 5</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘A’ &gt; ‘B’</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Menor Igual</p></td>
+<td rowspan="2"><p>&lt;=</p></td>
+<td><p>5 &lt;= 9</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>11 &lt;= 3</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Maior Igual</p></td>
+<td rowspan="2"><p>&gt;=</p></td>
+<td><p>‘Z’ &gt;= ‘W’</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>0 &gt;= 1</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Igual</p></td>
+<td rowspan="2"><p>==</p></td>
+<td><p>7 == (4 + 3)</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘k’ == ‘v’</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Diferente</p></td>
+<td rowspan="2"><p>!=</p></td>
+<td><p>5 != 3</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>0 != 0</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="operadores-de-atribuicao">
+<h2><span class="section-number">15.3. </span>Operadores de Atribuição<a class="headerlink" href="#operadores-de-atribuicao" title="Link permanente para este título">¶</a></h2>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+</tbody>
+</table>
+</div></blockquote>
 <div class="line-block">
-<div class="line">Descrição       | Operador | Exemplo | Saída |</div>
+<div class="line">Nome                              | Operador |</div>
 </div>
-<p><a href="#id1"><span class="problematic" id="id2">|-----------------|</span></a>———-<a href="#id3"><span class="problematic" id="id4">|---------|</span></a>——-|
-| Soma            | +        |  5 + 2  |  7    |
-|  Subtração      | -        | 13 - 3  | 10    |
-| Multiplicação   | *        | 5 * 3   | 15    |
-| Divisão         | /        | 7 / 2   | 3.5   |
-| Divisão Inteira | //       | 7 // 2  | 3     |
-| Potenciação     | **       | 2 ** 9  | 512   |</p>
-<div class="section" id="soma">
-<h3><span class="section-number">15.1.1. </span>Soma<a class="headerlink" href="#soma" title="Link permanente para este título">¶</a></h3>
-<ul class="simple">
-<li></li>
-</ul>
-<p>Menor
-&lt;</p>
-<p>Deslocamento para esquerda
-&lt;&lt;</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 78%" />
+<col style="width: 22%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Atribuição</p></td>
+<td><p>=</p></td>
+</tr>
+<tr class="row-even"><td><p>Adicionar e Atribuir (Incremento)</p></td>
+<td><p>+=</p></td>
+</tr>
+<tr class="row-odd"><td><p>Subtrair e Atribuir (Decremento)</p></td>
+<td><p>-=</p></td>
+</tr>
+<tr class="row-even"><td><p>Dividir e Atribuir</p></td>
+<td><p>/=</p></td>
+</tr>
+<tr class="row-odd"><td><p>Multiplicar e Atribuir</p></td>
+<td><p>*=</p></td>
+</tr>
+<tr class="row-even"><td><p>Módulo e Atribuir</p></td>
+<td><p>%=</p></td>
+</tr>
+<tr class="row-odd"><td><p>Exponenciação e Atribuir</p></td>
+<td><p>**=</p></td>
+</tr>
+<tr class="row-even"><td><p>Divisão Inteira e Atribuir</p></td>
+<td><p>//=</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="section" id="subtracao">
-<h3><span class="section-number">15.1.2. </span>Subtração<a class="headerlink" href="#subtracao" title="Link permanente para este título">¶</a></h3>
-<ul class="simple">
-<li></li>
-</ul>
-<p>Maior
-&gt;</p>
-<p>Deslocamento para direita
-&gt;&gt;
-Multiplicação
-*</p>
-<p>Menor ou igual
-&lt;=</p>
-<p>E bit-a-bit (AND)
-&amp;</p>
-<p>Divisão
-/</p>
-<p>Divisão Inteira
-//</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span>
-</pre></div>
+<div class="section" id="operadores-logicos">
+<h2><span class="section-number">15.4. </span>Operadores Lógicos<a class="headerlink" href="#operadores-logicos" title="Link permanente para este título">¶</a></h2>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.5</span>
-</pre></div>
+<div class="section" id="operadores-de-associacao">
+<h2><span class="section-number">15.5. </span>Operadores de Associação<a class="headerlink" href="#operadores-de-associacao" title="Link permanente para este título">¶</a></h2>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">/</span> <span class="mf">2.0</span>
-</pre></div>
+<div class="section" id="operadores-de-identidade">
+<h2><span class="section-number">15.6. </span>Operadores de Identidade<a class="headerlink" href="#operadores-de-identidade" title="Link permanente para este título">¶</a></h2>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.5</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">//</span> <span class="mf">2.0</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.0</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">//</span> <span class="mi">2</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
-</pre></div>
-</div>
-<p>Maior ou igual
-&gt;=</p>
-<p>Ou bit-a-bit (OR)
-|</p>
-<p>Igual
-==</p>
-<p>Ou exclusivo bit-a-bit (XOR)
-^
-Módulo
-%</p>
-<p>Diferente
-!=</p>
-<p>Inversão (NOT)
-~
-Potência
-**</p>
-<p># Operadores bit a bit / Python Bitwise</p>
+<div class="section" id="operadores-bitwise-operadores-bit-a-bit">
+<h2><span class="section-number">15.7. </span>Operadores Bitwise (Operadores Bit a Bit)<a class="headerlink" href="#operadores-bitwise-operadores-bit-a-bit" title="Link permanente para este título">¶</a></h2>
 <p># Operadores Lógicos OR (|) e AND (&amp;)</p>
 <dl class="simple">
 <dt>‘’’</dt><dd><p>Pipe (|) e ampersand (&amp;) são operadores lógicos, utilizados respectivamente para as lógicas or e and.</p>
@@ -314,25 +408,25 @@ Potência
 </tbody>
 </table>
 <p>‘’’</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">|</span> <span class="kc">False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">False</span> <span class="o">|</span> <span class="bp">False</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">|</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">False</span> <span class="o">|</span> <span class="bp">True</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">True</span> <span class="o">|</span> <span class="bp">False</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">|</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">True</span> <span class="o">|</span> <span class="bp">True</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
@@ -387,25 +481,25 @@ ou
 </tbody>
 </table>
 <p>‘’’</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">False</span> <span class="o">&amp;</span> <span class="bp">False</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">False</span> <span class="o">&amp;</span> <span class="bp">True</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">True</span> <span class="o">&amp;</span> <span class="bp">False</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">True</span> <span class="o">&amp;</span> <span class="bp">True</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
@@ -427,25 +521,25 @@ ou
 </div>
 <p>## Operador ampersand “^”: Ou Exclusivo Binário / Binary XOr</p>
 <p># Deslocamento de Bits / Bit Shift</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&gt;&gt;</span> <span class="kc">False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">False</span> <span class="o">&gt;&gt;</span> <span class="bp">False</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&gt;&gt;</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">False</span> <span class="o">&gt;&gt;</span> <span class="bp">True</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&gt;&gt;</span> <span class="kc">False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">True</span> <span class="o">&gt;&gt;</span> <span class="bp">False</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&gt;&gt;</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">True</span> <span class="o">&gt;&gt;</span> <span class="bp">True</span>
 
 <span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">console</span>
 
@@ -454,18 +548,18 @@ ou
 </div>
 </div>
 <div class="section" id="atribuicao-de-valores">
-<h3><span class="section-number">15.1.3. </span>Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h3>
+<h2><span class="section-number">15.8. </span>Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição Simples</span>
 
 <span class="n">foo</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;bla bla bla&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bla bla bla</span>
@@ -474,19 +568,19 @@ ou
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição Composta ou Atribuição por Tupla</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
@@ -496,18 +590,17 @@ ou
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">20</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>

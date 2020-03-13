@@ -1,20 +1,52 @@
 Pacotes
 *******
 
-$ mkdir pack_0
 
-$ mv foo.py pack_0/
+Criação de diretório (pacote):
 
-$ > pack_0/__init__.py
+.. code-block:: bash
+
+    mkdir pack_0
 
 
-import pacote.modulo
 
-> import pack_0.foo
-> f1 = pack_0.foo.Funcionario()
-> f1.nome = 'Zezinho'
-> f1.saudacao()
-Olá, meu nome é Zezinho
+Criação de um módulo dentro do pacote:
+
+.. code-block:: bash
+
+    vim pack_0/foo.py
+
+.. code-block:: python
+
+    # _*_ encoding: utf-8 _*_
+
+    print(__name__)
+
+    
+    class Pessoa(object):
+        nome = ''
+        idade = 0
+
+        def saudacao(self):
+            print('Olá, meu nome é {}'.format(self.nome))
+
+    class Funcionario(Pessoa):
+        matricula = ''
+
+    def cubo(x):
+        return x ** 3
+
+
+
+import pacote.modulo:
+
+.. code-block:: python
+
+    import pack_0.foo
+    f1 = pack_0.foo.Funcionario()
+    f1.nome = 'Zezinho'
+    f1.saudacao()
+    Olá, meu nome é Zezinho
 
 $ ls pack_0/
 foo.py  __init__.py  __pycache__
@@ -31,25 +63,6 @@ $ vim pack_0/__init__.py
 
 if __name__ != '__main__':
     print('Pacote {} importado'.format(__name__))
-
-$ vim pack_0/foo.py
-
-# _*_ encoding: utf-8 _*_
-
-print(__name__)
-
-class Pessoa(object):
-    nome = ''
-    idade = 0
-
-    def saudacao(self):
-        print('Olá, meu nome é {}'.format(self.nome))
-
-class Funcionario(Pessoa):
-    matricula = ''
-
-def cubo(x):
-    return x ** 3
 
 > import pack_0.foo
 Pacote pack_0 importado

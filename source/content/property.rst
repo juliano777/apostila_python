@@ -2,7 +2,7 @@ Encapsulamento
 **************
 
 Modificador Private (__)
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 |   Colocando 2 (dois) caracteres underscore antecedendo o atributo, ele fica
 | privado, ou seja, não é acessível fora da classe.
@@ -25,7 +25,7 @@ Modificador Private (__)
     AttributeError: 'Foo' object has no attribute '__atributo'
 
 Property
-~~~~~~~~
+--------
 
 |   Property é a solução pythônica para implementar getters e setters de forma
 | inteligente e podendo inclusive impor restrições.
@@ -119,7 +119,7 @@ Property
 
    
 Property como Decorator
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 |   Além da já citada implementação de property, pode-se também fazer isso
 | por meio de decorators.

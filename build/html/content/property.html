@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -228,17 +228,17 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="nf">_get__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
     <span class="k">def</span> <span class="nf">_set__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocidade</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">velocidade</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;A velocidade máxima permitida é de 300 km/h&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="n">velocidade</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_del__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removendo a propriedade de velocidade&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Removendo a propriedade de velocidade&#39;</span><span class="p">)</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
     <span class="c1"># Definição da property velocidade</span>
@@ -276,8 +276,8 @@
 <span class="n">c</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">301</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-<span class="ne">ValueError</span><span class="p">:</span> <span class="n">A</span> <span class="n">velocidade</span> <span class="n">máxima</span> <span class="n">permitida</span> <span class="n">é</span> <span class="n">de</span> <span class="mi">300</span> <span class="n">km</span><span class="o">/</span><span class="n">h</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>. . .
+ValueError: A velocidade máxima permitida é de 300 km/h
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remover a property:</span>
@@ -312,19 +312,19 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Velocidade máxima do carro&#39;&#39;&#39;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: </span><span class="si">{}</span><span class="s1"> km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: {} km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
-    <span class="nd">@velocidade</span><span class="o">.</span><span class="n">setter</span>
+    <span class="nd">@velocidade.setter</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocidade</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">velocidade</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;A velocidade máxima permitida é de 300 km/h&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="n">velocidade</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = </span><span class="si">{}</span><span class="s1"> km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = {} km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
 
-    <span class="nd">@velocidade</span><span class="o">.</span><span class="n">deleter</span>
+    <span class="nd">@velocidade.deleter</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removendo a propriedade de velocidade&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Removendo a propriedade de velocidade&#39;</span><span class="p">)</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 </pre></div>
 </div>

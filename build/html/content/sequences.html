@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -105,7 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -221,7 +221,7 @@ Para se obter um índice, fazemos da seguinte forma:</p>
 </pre></div>
 </div>
 <p>Primeiro elemento da lista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span>  <span class="mi">2</span> <span class="o">+</span> <span class="mi">7</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span>  <span class="mi">2</span> <span class="o">+</span> <span class="mi">7j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;foo&#39;</span>
@@ -246,7 +246,7 @@ Para se obter um índice, fazemos da seguinte forma:</p>
 </div>
 <p>Loop sobre a tupla e impressão em tela de cada elemento:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">regiao_sudeste</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">SP</span>
@@ -257,7 +257,7 @@ Para se obter um índice, fazemos da seguinte forma:</p>
 </div>
 <p>Loop sobre a string e impressão em tela de cada caractere:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">P</span>
@@ -271,7 +271,7 @@ Para se obter um índice, fazemos da seguinte forma:</p>
 <p>Loop sobre um range de 0 (zero) a 20 (vinte) com a condição de exibir somente 0 (zero) e divisíveis por 5 (cinco):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">21</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
@@ -314,7 +314,7 @@ Para se obter um índice, fazemos da seguinte forma:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">)[::</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(0, 4, 8)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(0, 4, 8)</span>
 </pre></div>
 </div>
 <p>Incremento negativo faz com que a string seja colocada em ordem reversa:</p>
@@ -367,7 +367,7 @@ Para se obter um índice, fazemos da seguinte forma:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">linux_distros</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(&#39;Debian&#39;, &#39;RedHat&#39;, &#39;Slackware&#39;)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(&#39;Debian&#39;, &#39;RedHat&#39;, &#39;Slackware&#39;)</span>
 </pre></div>
 </div>
 </div>
@@ -433,7 +433,7 @@ Sempre retornará uma lista.</p>
 <p>Cada chave é o caractere maiúsculo das chave correspondente ao dicionário
 original e seus valores são multiplicados por 10 (dez).</p>
 <p>Exibindo o dicionário gerado a partir da dict comprehension:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;A&#39;: 10, &#39;B&#39;: 20, &#39;C&#39;: 30}</span>

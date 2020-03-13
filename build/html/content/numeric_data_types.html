@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -102,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -234,7 +234,7 @@ Para sabermos qual é o número máximo do tipo int fazemos:</p>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Representação octal de 8:</span>
-<span class="mo">0o10</span>
+<span class="mi">0</span><span class="n">o10</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">8</span>
@@ -404,10 +404,10 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte real:</span>
 <span class="n">c</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(1+0j)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1+0j)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verificando seu valor e seu tipo:</span>
@@ -424,7 +424,7 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>  <span class="c1"># Verificando o valor</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(5+3j)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(5+3j)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Número complexo somente com a parte imaginária:</span>
@@ -452,7 +452,7 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Somando o número com a parte real</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(1+3j)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(1+3j)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;7j&#39;</span><span class="p">)</span>  <span class="c1"># Somando o número com a parte imaginária</span>
@@ -464,7 +464,7 @@ Para uma maior precisão com números que tenham ponto flutuante, utilizar o mó
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">+</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>  <span class="c1"># somando o número complexo com outro complexo</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(2+20j)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(2+20j)</span>
 </pre></div>
 </div>
 </div>

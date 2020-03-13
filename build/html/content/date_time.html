@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -101,7 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -268,7 +268,7 @@ estã em uma extração eficiente de atributo para saída formatada e manipulaç
 <span class="n">hoje</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 
 <span class="c1"># Exibindo o valor da variável:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hoje</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hoje</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2019-12-26</span>
@@ -276,21 +276,21 @@ estã em uma extração eficiente de atributo para saída formatada e manipulaç
 </div>
 <p>Exibindo apenas partes da data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># dia:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">26</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mês:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">12</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ano:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hoje</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2019</span>
@@ -372,7 +372,7 @@ estã em uma extração eficiente de atributo para saída formatada e manipulaç
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de função que espera n segundos e exibe uma mensagem no final:</span>
 <span class="k">def</span> <span class="nf">espera</span><span class="p">(</span><span class="n">tempo</span><span class="p">):</span>
     <span class="n">sleep</span><span class="p">(</span><span class="n">tempo</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Passaram-se </span><span class="si">{</span><span class="n">tempo</span><span class="si">}</span><span class="s1"> segundos&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Passaram-se {tempo} segundos&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execução da função:</span>

@@ -18,22 +18,38 @@ Escopo
  
 Prática:
 
-Declaração de uma variável com seu valor
+Declaração de uma variável com seu valor:
 
-foo = 7
+.. code-block:: python
 
-Exibindo na tela o valor da variável
+    foo = 7
 
-print(foo)
+
+
+Exibindo na tela o valor da variável:
+
+.. code-block:: python
+
+    print(foo)
+
 .. code-block:: console
 
     7
 
-A função locals() retorna um dicionário com os identificadores locais e seus respectivos valores.
+A função locals() retorna um dicionário com os identificadores locais e seus
+respectivos valores.
 Então é pedido o valor dada a chave que é o nome da variável local.
 
-locals()['foo']
-7
+
+blablabla:
+
+.. code-block:: python
+
+    locals()['foo']
+
+.. code-block:: console
+
+    7
 
 
 Dentro de função
@@ -42,12 +58,14 @@ Declaração de uma variável externamente ao escopo da função
 
 foo = 7
 
-Definição de uma função
+Definição de uma função:
 
-def funcao():
-    foo = 9
-    print(id(foo))
-    print(foo)
+.. code-block:: python
+
+    def funcao():
+        foo = 9
+        print(id(foo))
+        print(foo)
     
 Nota-se que dentro da função também há uma variável chamada "foo".
 Essa função imprime o ID desse identificador e depois imprime seu valor.
