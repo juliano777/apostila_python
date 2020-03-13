@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>35. Threads &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>33. Threads &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="36. pytest" href="pytest.html" />
-    <link rel="prev" title="34. Recursividade" href="recursive.html" /> 
+    <link rel="next" title="34. pytest" href="pytest.html" />
+    <link rel="prev" title="32. Recursividade" href="recursive.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,18 +110,13 @@
 <li class="toctree-l1"><a class="reference internal" href="with.html">25. with</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">27. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">28. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">31. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">32. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">33. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">35. Threads</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#funcao2">35.1. funcao2</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">36. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">28. Exceções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -167,7 +162,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">35. </span>Threads</li>
+      <li><span class="section-number">33. </span>Threads</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,67 +182,72 @@
            <div itemprop="articleBody">
             
   <div class="section" id="threads">
-<h1><span class="section-number">35. </span>Threads<a class="headerlink" href="#threads" title="Link permanente para este título">¶</a></h1>
-<p>import threading
-import time</p>
-<dl>
-<dt>def funcao1():</dt><dd><p>linha = (‘_’ * 79)
-while (True):</p>
-<blockquote>
-<div><p>print(linha)
-time.sleep(10)</p>
-</div></blockquote>
-</dd>
-<dt>def funcao2(tempo):</dt><dd><dl class="simple">
-<dt>while (True):</dt><dd><p>print(‘funcao2’)
-time.sleep(tempo)</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>t1 = threading.Thread(target=funcao1, name=’primeira_thread’)</p>
-<p>t2 = threading.Thread(target=funcao2, name=’segunda_thread’, args=(3,))</p>
-<p>t1.start()</p>
-<p>t2.start()</p>
-<div class="section" id="funcao2">
-<h2><span class="section-number">35.1. </span>funcao2<a class="headerlink" href="#funcao2" title="Link permanente para este título">¶</a></h2>
-<p>…</p>
-<p>&gt; t1.getName()
-.. code-block:: console</p>
-<blockquote>
-<div><p>‘primeira_thread’</p>
-</div></blockquote>
+<h1><span class="section-number">33. </span>Threads<a class="headerlink" href="#threads" title="Link permanente para este título">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">funcao1</span><span class="p">():</span>
+    <span class="n">linha</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_&#39;</span> <span class="o">*</span> <span class="mi">79</span><span class="p">)</span>
+    <span class="k">while</span> <span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">linha</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">funcao2</span><span class="p">(</span><span class="n">tempo</span><span class="p">):</span>
+    <span class="k">while</span> <span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;funcao2&#39;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">tempo</span><span class="p">)</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">funcao1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;primeira_thread&#39;</span><span class="p">)</span>
+
+<span class="n">t2</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">funcao2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;segunda_thread&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,))</span>
+
+<span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">funcao2</span>
+<span class="go">funcao2</span>
+<span class="go">funcao2</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;primeira_thread&#39;</span>
+</pre></div>
+</div>
 <p>E se quisermos parar uma thread?</p>
-<p>import threading
-import os
-import time</p>
-<dl>
-<dt>class FileChecker(threading.Thread):</dt><dd><dl>
-<dt>def __init__(self, file_path):</dt><dd><p>super(FileChecker, self).__init__()
-self._kill = False
-self._file_path = file_path</p>
-</dd>
-<dt>def run(self):</dt><dd><dl>
-<dt>while (not os.path.isfile(self._file_path)):</dt><dd><p>print(“File {} not found!”.format(self._file_path))
-time.sleep(5)
-if self._kill:</p>
-<blockquote>
-<div><p>break</p>
-</div></blockquote>
-</dd>
-</dl>
-</dd>
-<dt>def stop(self):</dt><dd><p>self._kill = True
-self.join()</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>t = FileChecker(‘/tmp/teste.txt’)
-t.start()</p>
-<p>time.sleep(10)</p>
-<p>t.stop()</p>
-<p>print(‘fim’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">FileChecker</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">FileChecker</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_kill</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_file_path</span> <span class="o">=</span> <span class="n">file_path</span>
+
+  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file_path</span><span class="p">)):</span>
+          <span class="k">print</span><span class="p">(</span><span class="s2">&quot;File {} not found!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file_path</span><span class="p">))</span>
+          <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+          <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kill</span><span class="p">:</span>
+            <span class="k">break</span>
+
+  <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_kill</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">FileChecker</span><span class="p">(</span><span class="s1">&#39;/tmp/teste.txt&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">t</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;fim&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
 
@@ -259,10 +259,10 @@ t.start()</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pytest.html" class="btn btn-neutral float-right" title="36. pytest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pytest.html" class="btn btn-neutral float-right" title="34. pytest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="recursive.html" class="btn btn-neutral float-left" title="34. Recursividade" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="recursive.html" class="btn btn-neutral float-left" title="32. Recursividade" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

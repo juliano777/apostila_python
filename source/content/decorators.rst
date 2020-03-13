@@ -10,85 +10,108 @@ Decoradores em Python
     São envelopes de função.
     Decoradores podem ser definidos como classes ou funções.
 
-
-
 Decoradores de Funções
+----------------------
 
 Classe como decorador:
 
-> class Decorador(object):
-    
-    def __init__(self, funcao):
-        '''        
-        O parâmetro "funcao" é a função que será decorada.
-        '''
+.. code-block:: python
 
-        print('Método __init__() do decorador')  # Mensagem ao instanciar
-        funcao()  # Executa a função ao instanciar
-    
-    def __call__(self):    
-        print('Método __call__() do decorador')
+    class Decorador(object):
+        
+        def __init__(self, funcao):
+            '''        
+            O parâmetro "funcao" é a função que será decorada.
+            '''
+
+            print('Método __init__() do decorador')  # Mensagem ao instanciar
+            funcao()  # Executa a função ao instanciar
+        
+        def __call__(self):    
+            print('Método __call__() do decorador')
 
 
 
 Definição da classe com decorador:
       
-> @Decorador
-def funcao_decorada():
-    print('Dentro da função decorada')
-     
-Método __init__() do decorador
-Dentro da função decorada
+.. code-block:: python
+
+    @Decorador
+    def funcao_decorada():
+        print('Dentro da função decorada')
 
 
-    O método construtor do decorador é invocado logo após da definição da função decorada.
-    No exemplo, a própria função, que é usada como parâmetro, é invocada pelo método construtor __init__().
+.. code-block:: console
+
+    Método __init__() do decorador
+    Dentro da função decorada
+
+O método construtor do decorador é invocado logo após da definição da função
+decorada.
+No exemplo, a própria função, que é usada como parâmetro, é invocada pelo
+método construtor __init__().
 
 
 
 Execução da função decorada:
 
-> funcao_decorada()
+.. code-block:: python
 
-Método __call__() do decorador
+    funcao_decorada()
+
+.. code-block:: console
+
+    Método __call__() do decorador
 
 
 
 Recriação da classe decoradora:
 
-> class Decorador(object):
-     def __init__(self, funcao):
-        print('Método __init__() do decorador')
-        self.funcao = funcao
+.. code-block:: python
 
-     def __call__(self):        
-         print('Método __call__() do decorador')
-         self.funcao()
+    class Decorador(object):
+        def __init__(self, funcao):
+            print('Método __init__() do decorador')
+            self.funcao = funcao
 
-    Diferente da criação da classe anteriormente, aqui a função não é chamada no método construtor, mas sim no método __call__.
+        def __call__(self):        
+            print('Método __call__() do decorador')
+            self.funcao()
+
+Diferente da criação da classe anteriormente, aqui a função não é chamada
+no método construtor, mas sim no método __call__.
 
 
 
 Definição da função decorada:
 
-> @Decorador
-def funcao_decorada():
-    print('Dentro da função')
-    
-Método __init__() do decorador
+.. code-block:: python
+
+    @Decorador
+    def funcao_decorada():
+        print('Dentro da função')
+
+.. code-block:: console
+
+    Método __init__() do decorador
 
 
 
 Execução da função decorada:
 
-> funcao_decorada()
+.. code-block:: python
 
-Método __call__() do decorador
-Dentro da função
+    funcao_decorada()
+
+.. code-block:: console
+
+    Método __call__() do decorador
+    Dentro da função
 
 
 
 Decorador com Argumentos
+------------------------
 
     Para funções decoradas que têm argumentos.
 
@@ -96,29 +119,35 @@ Decorador com Argumentos
 
 Criação da classe decoradora:
 
-> class Decorador():
+.. code-block:: python
 
-    def __init__(self, f):
-        print('Método __init__() do decorador')
-        self.f = f
+    class Decorador():
 
-    def __call__(self, *args, **kargs):        
-         print('Método __call__() do decorador')
-         return self.f(*args, **kargs)
+        def __init__(self, f):
+            print('Método __init__() do decorador')
+            self.f = f
+
+        def __call__(self, *args, **kargs):        
+            print('Método __call__() do decorador')
+            return self.f(*args, **kargs)
 
 
 
 Definição da classe decorada:
 
-> @Decorador
-def soma(x, y):
-    return x + y
+.. code-block:: python
+
+    @Decorador
+    def soma(x, y):
+        return x + y
 
 
 
 Execução da classe decorada:
 
-> print(soma(2, 5))
+.. code-block:: python
+
+    print(soma(2, 5))
 
 .. code-block:: console
 
@@ -127,7 +156,8 @@ Execução da classe decorada:
 
 
 
-Função como decorador
+Função como Decorador
+---------------------
 
     Até então foram vistos exemplos de decoradores definidos como classes, agora serão vistos os definidos como função.
 
@@ -135,29 +165,35 @@ Função como decorador
 
 Criação da função decoradora, o decorador em si:
 
-> def funcao_decoradora(funcao):
-  
-    # Função auxiliar
-    def funcao_auxiliar():
-      print('Antes da função decorada')
-      funcao()
-      print('Depois da função decorada')
-      
-    return funcao_auxiliar
+.. code-block:: python
+
+    def funcao_decoradora(funcao):
+    
+        # Função auxiliar
+        def funcao_auxiliar():
+        print('Antes da função decorada')
+        funcao()
+        print('Depois da função decorada')
+        
+        return funcao_auxiliar
 
 
 
 Definição da função decorada:
 
-> @funcao_decoradora
-def foo():
-  print('Função decorada')
+.. code-block:: python
+
+    @funcao_decoradora
+    def foo():
+        print('Função decorada')
 
 
 
 Execução da função decorada:
   
-> foo() 
+.. code-block:: python
+
+    foo() 
 
 .. code-block:: console
 
@@ -169,40 +205,46 @@ Execução da função decorada:
 
 Podemos também aplicar mais de um decorador a uma função:
 
-> # Função para itálico em HTML
-def to_italic(funcao):
-    def funcao_auxiliadora(*args, **kargs):
-        return '<i>' + funcao(*args, **kargs) + '</i>'
-    return funcao_auxiliadora
+.. code-block:: python
 
-# Função para negrito em HTML
-def to_bold(funcao):
-    def funcao_auxiliadora(*args, **kargs):
-        return '<b>' + funcao(*args, **kargs) + '</b>'
-    return funcao_auxiliadora
+    # Função para itálico em HTML
+    def to_italic(funcao):
+        def funcao_auxiliadora(*args, **kargs):
+            return '<i>' + funcao(*args, **kargs) + '</i>'
+        return funcao_auxiliadora
+
+    # Função para negrito em HTML
+    def to_bold(funcao):
+        def funcao_auxiliadora(*args, **kargs):
+            return '<b>' + funcao(*args, **kargs) + '</b>'
+        return funcao_auxiliadora
 
 
 
 Definição da função decorada com dois decoradores:
 
-> @to_italic
-@to_bold
-def fc_msg(msg):
-    return msg
+.. code-block:: python
+
+    @to_italic
+    @to_bold
+    def fc_msg(msg):
+        return msg
 
 
 
 Execução da função decorada:
 
-> fc_msg('Hello, World!')
+.. code-block:: python
+
+    fc_msg('Hello, World!')
 
 .. code-block:: console
 
     '<i><b>Hello, World!</b></i>'
 
 
-
 Memoização
+----------
 
     Texto...
 
@@ -210,37 +252,43 @@ Memoização
 
 Criação do decorador de memoização:
 
-> def memoize(f):
-    '''
-    Memoize function (as decorator)
-    '''
+.. code-block:: python
 
-    # dictionary (cache)
-    mem = {}
+    def memoize(f):
+        '''
+        Memoize function (as decorator)
+        '''
 
-    ''' Helper function '''
-    def memoizer(*param):
-        key = repr(param)
-        if not key in mem:
-            mem[key] = f(*param)
-        return mem[key]
-    return memoizer
+        # dictionary (cache)
+        mem = {}
+
+        ''' Helper function '''
+        def memoizer(*param):
+            key = repr(param)
+            if not key in mem:
+                mem[key] = f(*param)
+            return mem[key]
+        return memoizer
 
 
 
 Criação da função decorada com memoização aplicada para Fibonacci:
 
-> @memoize
-def fibo(n):
-    if (n < 2): return n
-    else:
-        return fibo(n - 1) + fibo(n - 2)
+.. code-block:: python
+
+    @memoize
+    def fibo(n):
+        if (n < 2): return n
+        else:
+            return fibo(n - 1) + fibo(n - 2)
 
 
 
 Execução da função decorada:
 
-> fibo(39)
+.. code-block:: python
+
+    fibo(39)
 
 .. code-block:: console
 

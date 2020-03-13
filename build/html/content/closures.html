@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>31. Closures &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>29. Closures &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="32. Decoradores em Python" href="decorators.html" />
-    <link rel="prev" title="28. raise" href="except.html" /> 
+    <link rel="next" title="30. Decoradores em Python" href="decorators.html" />
+    <link rel="prev" title="28. Exceções" href="except.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,15 +110,16 @@
 <li class="toctree-l1"><a class="reference internal" href="with.html">25. with</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">27. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">28. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">31. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">32. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">33. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">35. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">36. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">28. Exceções</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">29. Closures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#closures-com-lambda">29.1. Closures com Lambda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -164,7 +165,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">31. </span>Closures</li>
+      <li><span class="section-number">29. </span>Closures</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,86 +185,105 @@
            <div itemprop="articleBody">
             
   <div class="section" id="closures">
-<h1><span class="section-number">31. </span>Closures<a class="headerlink" href="#closures" title="Link permanente para este título">¶</a></h1>
-<blockquote>
-<div><p>Funções são objetos também.
+<h1><span class="section-number">29. </span>Closures<a class="headerlink" href="#closures" title="Link permanente para este título">¶</a></h1>
+<p>Funções são objetos também.
 Closures são funções que constroem funções, retorna outra função.
 Sua estrutura é uma função dentro de outra.
 A função interna é também conhecida como função auxiliadora (helper).</p>
-</div></blockquote>
 <p>Criação de uma closure:</p>
-<dl>
-<dt>&gt; def funcao_principal(x):</dt><dd><dl class="simple">
-<dt>def funcao_auxiliadora(y):</dt><dd><p>return x ** y</p>
-</dd>
-</dl>
-<p>return funcao_auxiliadora</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao_principal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">funcao_auxiliadora</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">funcao_auxiliadora</span>
+</pre></div>
+</div>
 <p>Criação de uma variável foo e passando o valor x para a função principal:</p>
-<p>&gt; foo = funcao_principal(2)</p>
-<blockquote>
-<div><p>“foo” é uma nova função cujo o “x” de “função_principal” é 2.</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">funcao_principal</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>“foo” é uma nova função cujo o “x” de “função_principal” é 2.</p>
 <p>Qual é o nome da função?:</p>
-<p>&gt; print(foo.__name__)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">funcao_auxiliadora</span>
 </pre></div>
 </div>
 <p>Tipo de “foo”:</p>
-<p>&gt; type(foo)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">function</span>
 </pre></div>
 </div>
 <p>Representação de “foo”:</p>
-<p>&gt; repr(foo)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;function funcao_principal.&lt;locals&gt;.funcao_auxiliadora at 0x7f9845369950&gt;&#39;</span>
 </pre></div>
 </div>
 <p>Imprimindo o valor resultante ao passar agora o valor y:</p>
-<p>&gt; print(foo(6))</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">64</span>
-
-<span class="go">A operação realizada foi 2 elevado a 6 (x ** y).</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">64</span>
+</pre></div>
+</div>
+<p>A operação realizada foi 2 elevado a 6 (x ** y).</p>
 <p>Podemos também chamar a função principal passando o parâmetro da função auxiliar:</p>
-<p>&gt; funcao_principal(5)(2)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao_principal</span><span class="p">(</span><span class="mi">5</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">25</span>
 </pre></div>
 </div>
-<p>Closures com Lambda</p>
+<div class="section" id="closures-com-lambda">
+<h2><span class="section-number">29.1. </span>Closures com Lambda<a class="headerlink" href="#closures-com-lambda" title="Link permanente para este título">¶</a></h2>
 <p>Criação de uma closure com lambda:</p>
-<dl class="simple">
-<dt>&gt; def funcao_principal(x):</dt><dd><p>return lambda y: x ** y</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao_principal</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="n">y</span>
+</pre></div>
+</div>
 <p>O “x” será 3:</p>
-<p>&gt; bar = funcao_principal(3)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bar</span> <span class="o">=</span> <span class="n">funcao_principal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Exibindo o nome do objeto:</p>
-<p>&gt; print(bar.__name__)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;lambda&gt;</span>
 </pre></div>
 </div>
 <p>Tipo:</p>
-<p>&gt; type(bar)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">function</span>
 </pre></div>
 </div>
 <p>Representação:</p>
-<p>&gt; repr(bar)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;function funcao_principal.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9844527730&gt;&#39;</span>
 </pre></div>
 </div>
 <p>3 elevado a 2:</p>
-<p>&gt; print(bar(2))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
 </pre></div>
 </div>
 <p>Passando o parâmetro da função principal e de lambda:</p>
-<p>&gt; funcao_principal(2)(5)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao_principal</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">32</span>
 </pre></div>
+</div>
 </div>
 </div>
 
@@ -275,10 +295,10 @@ A função interna é também conhecida como função auxiliadora (helper).</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="decorators.html" class="btn btn-neutral float-right" title="32. Decoradores em Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="decorators.html" class="btn btn-neutral float-right" title="30. Decoradores em Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="except.html" class="btn btn-neutral float-left" title="28. raise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="except.html" class="btn btn-neutral float-left" title="28. Exceções" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>33. Expressões vs Statements &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>31. Expressões vs Statements &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="34. Recursividade" href="recursive.html" />
-    <link rel="prev" title="32. Decoradores em Python" href="decorators.html" /> 
+    <link rel="next" title="32. Recursividade" href="recursive.html" />
+    <link rel="prev" title="30. Decoradores em Python" href="decorators.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,15 +110,18 @@
 <li class="toctree-l1"><a class="reference internal" href="with.html">25. with</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">27. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">28. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">31. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">32. Decoradores em Python</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">33. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">35. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">36. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">28. Exceções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">31. Expressões vs Statements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exec">31.1. exec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eval">31.2. eval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compile">31.3. compile</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -164,7 +167,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">33. </span>Expressões vs Statements</li>
+      <li><span class="section-number">31. </span>Expressões vs Statements</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,60 +187,98 @@
            <div itemprop="articleBody">
             
   <div class="section" id="expressoes-vs-statements">
-<h1><span class="section-number">33. </span>Expressões vs Statements<a class="headerlink" href="#expressoes-vs-statements" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">31. </span>Expressões vs Statements<a class="headerlink" href="#expressoes-vs-statements" title="Link permanente para este título">¶</a></h1>
 <blockquote>
 <div><p>Expressão: é algo que pode ser reduzido para um valor.</p>
 <p>Statement: sinônimo de comando.</p>
 </div></blockquote>
-<p>exec</p>
+<div class="section" id="exec">
+<h2><span class="section-number">31.1. </span>exec<a class="headerlink" href="#exec" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>É uma função que executa um comando (statement) passado como string.</p>
 </div></blockquote>
 <p>bla bla bla:</p>
-<p>&gt; exec(‘print(5)’)  # prints 5.</p>
-<p>5</p>
-<p>&gt; exec(‘print(5)nprint(6)’)  # prints 5{newline}6.</p>
-<p>5
-6</p>
-<p>&gt; exec(‘if True: print(6)’)  # prints 6.</p>
-<p>6</p>
-<p>&gt; exec(‘5’)  # does nothing and returns nothing.</p>
-<p>&gt; exec(‘x = 7’)  # does nothing and returns nothing.</p>
-<p>eval</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">exec</span><span class="p">(</span><span class="s1">&#39;print(5)&#39;</span><span class="p">)</span>  <span class="c1"># prints 5.</span>
+</pre></div>
+</div>
+<div class="highlight-comando notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">exec</span><span class="p">(</span><span class="s1">&#39;print(5)</span><span class="se">\n</span><span class="s1">print(6)&#39;</span><span class="p">)</span>  <span class="c1"># prints 5{newline}6.</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">5</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p>sdsdsdsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">exec</span><span class="p">(</span><span class="s1">&#39;if True: print(6)&#39;</span><span class="p">)</span>  <span class="c1"># prints 6.</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">6</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">exec</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">)</span>  <span class="c1"># does nothing and returns nothing.</span>
+<span class="k">exec</span><span class="p">(</span><span class="s1">&#39;x = 7&#39;</span><span class="p">)</span>  <span class="c1"># does nothing and returns nothing.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="eval">
+<h2><span class="section-number">31.2. </span>eval<a class="headerlink" href="#eval" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>É uma função que retorna o resultado de uma expressão.</p>
 </div></blockquote>
 <p>bla bla bla:</p>
-<p>&gt; x = eval(‘5’)  # x &lt;- 5</p>
-<p>&gt; x = eval(‘%d + 6’ % x)  # x &lt;- 11</p>
-<p>&gt; x = eval(‘abs(%d)’ % -100)  # x &lt;- 100</p>
-<p>&gt; x = eval(‘x = 5’)  # INVÁLIDO; atribuição não é uma expressão</p>
-<p>SyntaxError: invalid syntax</p>
-<p>&gt; x = eval(‘if 1: x = 4’)  # INVÁLIDO; if é um statement e não uma expressão</p>
-<p>SyntaxError: invalid syntax</p>
-<p># <a class="reference external" href="https://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html">https://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">)</span>  <span class="c1"># x &lt;- 5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> + 6&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># x &lt;- 11</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;abs(</span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="o">-</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># x &lt;- 100</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;x = 5&#39;</span><span class="p">)</span>  <span class="c1"># INVÁLIDO; atribuição não é uma expressão</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">SyntaxError: invalid syntax</span>
+</pre></div>
+</div>
+<p>wewewewe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;if 1: x = 4&#39;</span><span class="p">)</span>  <span class="c1"># INVÁLIDO; if é um statement e não uma expressão</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">SyntaxError: invalid syntax</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; execfile(file)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">execfile</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ cat &lt;&lt; EOF &gt; /tmp/foo.py
-print(‘hello, world!’)
-EOF</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/foo.py</span>
+<span class="s">print(&#39;hello, world!&#39;)</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ python /tmp/foo.py
-hello, world!</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python /tmp/foo.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hello, world!</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; execfile(‘/tmp/foo.py’)</p>
-<p>hello, world!</p>
-<p>compile</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>execfile<span class="o">(</span><span class="s1">&#39;/tmp/foo.py&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hello, world!</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="compile">
+<h2><span class="section-number">31.3. </span>compile<a class="headerlink" href="#compile" title="Link permanente para este título">¶</a></h2>
 <p>compile is a lower level version of exec and eval. It does not execute or evaluate your statements or expressions, but returns a code object that can do it. The modes are as follows:</p>
 <blockquote>
 <div><p>compile(string, ‘’, ‘eval’) returns the code object that would have been executed had you done eval(string). Note that you cannot use statements in this mode; only a (single) expression is valid.
 compile(string, ‘’, ‘exec’) returns the code object that would have been executed had you done exec(string). You can use any number of statements here.
 compile(string, ‘’, ‘single’) is like the exec mode, but it will ignore everything except for the first statement. Note that an if/else statement with its results is considered a single statement.</p>
 </div></blockquote>
-<p><a class="reference external" href="http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html">http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html</a></p>
-<p>python3.7 -mtimeit -s ‘code = “a = 2; b = 3; c = a * b”’ ‘exec(code)’</p>
-<p>python3.7 -mtimeit -s ‘code = compile(“a = 2; b = 3; c = a * b”, “&lt;string&gt;”, “exec”)’ ‘exec(code)’</p>
+</div>
 </div>
 
 
@@ -248,10 +289,10 @@ compile(string, ‘’, ‘single’) is like the exec mode, but it will ignore 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="recursive.html" class="btn btn-neutral float-right" title="34. Recursividade" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="recursive.html" class="btn btn-neutral float-right" title="32. Recursividade" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="decorators.html" class="btn btn-neutral float-left" title="32. Decoradores em Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="decorators.html" class="btn btn-neutral float-left" title="30. Decoradores em Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

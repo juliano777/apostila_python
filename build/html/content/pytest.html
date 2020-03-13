@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>36. pytest &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>34. pytest &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="prev" title="35. Threads" href="threads.html" /> 
+    <link rel="prev" title="33. Threads" href="threads.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -109,15 +109,13 @@
 <li class="toctree-l1"><a class="reference internal" href="with.html">25. with</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">27. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">28. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">31. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">32. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">33. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">35. Threads</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">36. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">28. Exceções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">34. pytest</a></li>
 </ul>
 
             
@@ -163,7 +161,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">36. </span>pytest</li>
+      <li><span class="section-number">34. </span>pytest</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,91 +181,92 @@
            <div itemprop="articleBody">
             
   <div class="section" id="pytest">
-<h1><span class="section-number">36. </span>pytest<a class="headerlink" href="#pytest" title="Link permanente para este título">¶</a></h1>
-<p>$ vim /tmp/test_pytest.py</p>
-<p>#=============================================================================</p>
-<p># Função fatorial
-def fatorial(x):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>if x == 0:</dt><dd><p>return 1</p>
-</dd>
-</dl>
-<p>return x * fatorial(x - 1)</p>
-</div></blockquote>
-<p># Função que testa se um número é par
-def e_par(x):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>if x % 2 == 0:</dt><dd><p>return True</p>
-</dd>
-</dl>
-<p>return False</p>
-</div></blockquote>
-<p># Função para testar a função fatorial
-def test_fatorial():</p>
-<blockquote>
-<div><p>assert fatorial(0) == 1</p>
-</div></blockquote>
-<p># Função para testar a função e_par
-def test_par():</p>
-<blockquote>
-<div><p>assert e_par(8)</p>
-</div></blockquote>
-<p>#=============================================================================</p>
-<p>$ py.test /tmp/test_pytest.py</p>
-<p>================================================= test session starts =================================================
-platform linux – Python 3.4.3+, pytest-2.8.7, py-1.4.31, pluggy-0.3.1
-rootdir: /tmp, inifile:
-collected 2 items</p>
-<p>../../tmp/test_pytest.py .F</p>
-<p>====================================================== FAILURES =======================================================
-______________________________________________________ test_par _______________________________________________________</p>
-<blockquote>
-<div><p>def test_par():</p>
-</div></blockquote>
-<p>&gt;       assert e_par(8)
-E       assert e_par(8)</p>
-<p>/tmp/test_pytest.py:19: AssertionError
-========================================= 1 failed, 1 passed in 0.01 seconds ==========================================</p>
-<p>$ vim /tmp/test_pytest.py</p>
-<p>#=============================================================================</p>
-<p># Função fatorial
-def fatorial(x):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>if x == 0:</dt><dd><p>return 1</p>
-</dd>
-</dl>
-<p>return x * fatorial(x - 1)</p>
-</div></blockquote>
-<p># Função que testa se um número é par
-def e_par(x):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>if x % 2 == 0:</dt><dd><p>return True</p>
-</dd>
-</dl>
-<p>return False</p>
-</div></blockquote>
-<p># Função para testar a função fatorial
-def test_fatorial():</p>
-<blockquote>
-<div><p>assert fatorial(0) == 1</p>
-</div></blockquote>
-<p># Função para testar a função e_par
-def test_par():</p>
-<blockquote>
-<div><p>assert e_par(8)</p>
-</div></blockquote>
-<p>#=============================================================================</p>
-<p>$ py.test /tmp/test_pytest.py</p>
-<p>================================================= test session starts =================================================
-platform linux – Python 3.4.3+, pytest-2.8.7, py-1.4.31, pluggy-0.3.1
-rootdir: /tmp, inifile:
-collected 2 items</p>
-<p>../../tmp/test_pytest.py ..</p>
-<p>============================================== 2 passed in 0.00 seconds ===============================================</p>
+<h1><span class="section-number">34. </span>pytest<a class="headerlink" href="#pytest" title="Link permanente para este título">¶</a></h1>
+<p>sdsdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /tmp/test_pytest.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Função fatorial</span>
+<span class="k">def</span> <span class="nf">fatorial</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">fatorial</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Função que testa se um número é par</span>
+<span class="k">def</span> <span class="nf">e_par</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="bp">False</span>
+
+<span class="c1"># Função para testar a função fatorial</span>
+<span class="k">def</span> <span class="nf">test_fatorial</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">fatorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="c1"># Função para testar a função e_par</span>
+<span class="k">def</span> <span class="nf">test_par</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">e_par</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sasasasasa:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py.test /tmp/test_pytest.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">================================================= test session starts =================================================</span>
+<span class="go">platform linux -- Python 3.4.3+, pytest-2.8.7, py-1.4.31, pluggy-0.3.1</span>
+<span class="go">rootdir: /tmp, inifile:</span>
+<span class="go">collected 2 items</span>
+
+<span class="go">../../tmp/test_pytest.py .F</span>
+
+<span class="go">====================================================== FAILURES =======================================================</span>
+<span class="go">______________________________________________________ test_par _______________________________________________________</span>
+
+<span class="go">    def test_par():</span>
+<span class="gp">&gt;</span>       assert e_par<span class="o">(</span><span class="m">8</span><span class="o">)</span>
+<span class="go">E       assert e_par(8)</span>
+
+<span class="go">/tmp/test_pytest.py:19: AssertionError</span>
+<span class="go">========================================= 1 failed, 1 passed in 0.01 seconds ==========================================</span>
+</pre></div>
+</div>
+<p>sdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /tmp/test_pytest.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Função fatorial</span>
+<span class="k">def</span> <span class="nf">fatorial</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">fatorial</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Função que testa se um número é par</span>
+<span class="k">def</span> <span class="nf">e_par</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="bp">False</span>
+
+<span class="c1"># Função para testar a função fatorial</span>
+<span class="k">def</span> <span class="nf">test_fatorial</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">fatorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="c1"># Função para testar a função e_par</span>
+<span class="k">def</span> <span class="nf">test_par</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">e_par</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py.test /tmp/test_pytest.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">================================================= test session starts =================================================</span>
+<span class="go">platform linux -- Python 3.4.3+, pytest-2.8.7, py-1.4.31, pluggy-0.3.1</span>
+<span class="go">rootdir: /tmp, inifile:</span>
+<span class="go">collected 2 items</span>
+
+<span class="go">../../tmp/test_pytest.py ..</span>
+
+<span class="go">============================================== 2 passed in 0.00 seconds ===============================================</span>
+</pre></div>
+</div>
 </div>
 
 
@@ -279,7 +278,7 @@ collected 2 items</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="threads.html" class="btn btn-neutral float-left" title="35. Threads" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="threads.html" class="btn btn-neutral float-left" title="33. Threads" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,33 +1,39 @@
 Closures
 ********
 
-    Funções são objetos também.
-    Closures são funções que constroem funções, retorna outra função.
-    Sua estrutura é uma função dentro de outra.
-    A função interna é também conhecida como função auxiliadora (helper).
+Funções são objetos também.
+Closures são funções que constroem funções, retorna outra função.
+Sua estrutura é uma função dentro de outra.
+A função interna é também conhecida como função auxiliadora (helper).
 
 
 
 Criação de uma closure:
 
-> def funcao_principal(x):
-    def funcao_auxiliadora(y):
-        return x ** y
-    return funcao_auxiliadora
+.. code-block:: python
+
+    def funcao_principal(x):
+        def funcao_auxiliadora(y):
+            return x ** y
+        return funcao_auxiliadora
 
 
 
 Criação de uma variável foo e passando o valor x para a função principal:
 
-> foo = funcao_principal(2)
+.. code-block:: python
 
-    "foo" é uma nova função cujo o "x" de "função_principal" é 2.
+    foo = funcao_principal(2)
+
+"foo" é uma nova função cujo o "x" de "função_principal" é 2.
 
 
 
 Qual é o nome da função?:
 
-> print(foo.__name__)
+.. code-block:: python
+
+    print(foo.__name__)
 
 .. code-block:: console
 
@@ -37,7 +43,9 @@ Qual é o nome da função?:
 
 Tipo de "foo":
 
-> type(foo)
+.. code-block:: python
+
+    type(foo)
 
 .. code-block:: console
 
@@ -47,7 +55,9 @@ Tipo de "foo":
 
 Representação de "foo":
 
-> repr(foo)
+.. code-block:: python
+
+    repr(foo)
 
 .. code-block:: console
 
@@ -57,19 +67,23 @@ Representação de "foo":
 
 Imprimindo o valor resultante ao passar agora o valor y:
 
-> print(foo(6))
+.. code-block:: python
+
+    print(foo(6))
 
 .. code-block:: console
 
     64
 
-    A operação realizada foi 2 elevado a 6 (x ** y).
+A operação realizada foi 2 elevado a 6 (x ** y).
 
 
 
 Podemos também chamar a função principal passando o parâmetro da função auxiliar:
 
-> funcao_principal(5)(2)
+.. code-block:: python
+
+    funcao_principal(5)(2)
 
 .. code-block:: console
 
@@ -78,23 +92,30 @@ Podemos também chamar a função principal passando o parâmetro da função au
 
 
 Closures com Lambda
+-------------------
 
 Criação de uma closure com lambda:
 
-> def funcao_principal(x):
-    return lambda y: x ** y
+.. code-block:: python
+
+    def funcao_principal(x):
+        return lambda y: x ** y
 
 
 
 O "x" será 3:
 
-> bar = funcao_principal(3)
+.. code-block:: python
+
+    bar = funcao_principal(3)
 
 
 
 Exibindo o nome do objeto:
 
-> print(bar.__name__)
+.. code-block:: python
+
+    print(bar.__name__)
 
 .. code-block:: console
 
@@ -104,7 +125,9 @@ Exibindo o nome do objeto:
 
 Tipo:
 
-> type(bar)
+.. code-block:: python
+
+    type(bar)
 
 .. code-block:: console
 
@@ -114,7 +137,9 @@ Tipo:
 
 Representação:
 
-> repr(bar)
+.. code-block:: python
+
+    repr(bar)
 
 .. code-block:: console
 
@@ -124,7 +149,9 @@ Representação:
 
 3 elevado a 2:
 
-> print(bar(2))
+.. code-block:: python
+
+    print(bar(2))
 
 .. code-block:: console
 
@@ -134,7 +161,9 @@ Representação:
 
 Passando o parâmetro da função principal e de lambda:
 
-> funcao_principal(2)(5)
+.. code-block:: python
+
+    funcao_principal(2)(5)
 
 .. code-block:: console
 

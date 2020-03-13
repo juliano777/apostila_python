@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>28. raise &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>28. Exceções &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="31. Closures" href="closures.html" />
+    <link rel="next" title="29. Closures" href="closures.html" />
     <link rel="prev" title="27. Pacotes" href="packages.html" /> 
 </head>
 
@@ -110,15 +110,19 @@
 <li class="toctree-l1"><a class="reference internal" href="with.html">25. with</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">27. Pacotes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">28. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">31. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">32. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">33. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">35. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">36. pytest</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">28. Exceções</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#else">28.1. else</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finally">28.2. finally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raise">28.3. raise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excecao-personalizada">28.4. Exceção Personalizada</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -164,7 +168,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">28. </span>raise</li>
+      <li><span class="section-number">28. </span>Exceções</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,147 +187,156 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>Exceções
-Exceções
-<strong>****</strong></p>
-<p><a class="reference external" href="https://docs.python.org/2/tutorial/errors.html">https://docs.python.org/2/tutorial/errors.html</a>
-<a class="reference external" href="https://docs.python.org/2/library/exceptions.html">https://docs.python.org/2/library/exceptions.html</a></p>
-<p>Blocos de Comandos:</p>
-<p>try: Tenta executar o bloco de comandos.</p>
-<p>except: Em outras linguagens de programação é conhecido como “catch”, captura e trata a exceção.</p>
-<p>else: Só é executado se não tiver nenhuma exceção.</p>
-<p>finally: Tendo exceção ou não é executado de qualquer jeito.</p>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><dl>
-<dt>try:</dt><dd><div class="line-block">
-<div class="line"><br /></div>
+  <div class="section" id="excecoes">
+<h1><span class="section-number">28. </span>Exceções<a class="headerlink" href="#excecoes" title="Link permanente para este título">¶</a></h1>
+<p><strong>Blocos de Comandos</strong>:</p>
+<ul>
+<li><div class="line-block">
+<div class="line">try: Tenta executar o bloco de comandos;</div>
 </div>
-</dd>
-</dl>
-</div></blockquote>
-<div class="line-block">
-<div class="line">Deu erro? |
-/ </div>
+</li>
+<li><div class="line-block">
+<div class="line">except: Em outras linguagens de programação é conhecido como “catch”,</div>
+<div class="line">captura e trata a exceção;</div>
 </div>
-</div></blockquote>
-<dl>
-<dt>sim  /   não</dt><dd><blockquote>
-<div><p>/     </p>
-</div></blockquote>
-<p>/       </p>
-</dd>
-</dl>
-</div></blockquote>
-<dl>
-<dt>else:         except:</dt><dd><dl>
-<dt>      /</dt><dd><dl class="simple">
-<dt>    /</dt><dd><dl class="simple">
-<dt>  /</dt><dd><p>/</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>finally:</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</div></blockquote>
-<div class="section" id="raise">
-<h1><span class="section-number">28. </span>raise<a class="headerlink" href="#raise" title="Link permanente para este título">¶</a></h1>
-<p>The class hierarchy for built-in exceptions is:</p>
-<dl>
-<dt>BaseException</dt><dd><p>+– SystemExit
-+– KeyboardInterrupt
-+– GeneratorExit
-+– Exception</p>
-<blockquote>
-<div><p>+– StopIteration
-+– StandardError
-|    +– BufferError
-|    +– ArithmeticError
-|    |    +– FloatingPointError
-|    |    +– OverflowError
-|    |    +– ZeroDivisionError
-|    +– AssertionError
-|    +– AttributeError
-|    +– EnvironmentError
-|    |    +– IOError
-|    |    +– OSError
-|    |         +– WindowsError (Windows)
-|    |         +– VMSError (VMS)
-|    +– EOFError
-|    +– ImportError
-|    +– LookupError
-|    |    +– IndexError
-|    |    +– KeyError
-|    +– MemoryError
-|    +– NameError
-|    |    +– UnboundLocalError
-|    +– ReferenceError
-|    +– RuntimeError
-|    |    +– NotImplementedError
-|    +– SyntaxError
-|    |    +– IndentationError
-|    |         +– TabError
-|    +– SystemError
-|    +– TypeError
-|    +– ValueError
-|         +– UnicodeError
-|              +– UnicodeDecodeError
-|              +– UnicodeEncodeError
-|              +– UnicodeTranslateError
-+– Warning</p>
-<blockquote>
-<div><p>+– DeprecationWarning
-+– PendingDeprecationWarning
-+– RuntimeWarning
-+– SyntaxWarning
-+– UserWarning
-+– FutureWarning
-+– ImportWarning
-+– UnicodeWarning
-+– BytesWarning</p>
-</div></blockquote>
-</div></blockquote>
-</dd>
-</dl>
-<p>print(1 / 0)</p>
-<p>—-&gt; 1 print(‘Resultado = %s’ % (x / y))</p>
-<p>ZeroDivisionError: integer division or modulo by zero</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>print(1 / 0)</p>
-</dd>
-</dl>
-<p># catch all exceptions
-except:</p>
-<blockquote>
-<div><p>print(‘nnErro: Não dividirás por zero!nn’)</p>
-</div></blockquote>
-<p>Erro: Não dividirás por zero!</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>print(1 / 0)</p>
-</dd>
-</dl>
-<p># specified exception
-except ZeroDivisionError:</p>
-<blockquote>
-<div><p>print(‘nnErro: Não dividirás por zero!nn’)</p>
-</div></blockquote>
-<p>Erro: Não dividirás por zero!</p>
-<p>numeros = (‘zero’, ‘um’, ‘dois’)</p>
-<dl class="simple">
-<dt>In [10]: try:</dt><dd><p>print(numeros[0])
-print(numeros[1])
-print(numeros[2])
-print(numeros[3])</p>
-</dd>
-<dt>except IndexError:</dt><dd><p>print(‘nnERRO: Índice não encontradonn’)</p>
-</dd>
-</dl>
+</li>
+<li><div class="line-block">
+<div class="line">else: Só é executado se não tiver nenhuma exceção;</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">finally: Tendo exceção ou não é executado de qualquer jeito.</div>
+</div>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      try:
+       |
+    Deu erro?
+      / \
+Sim  /   \  Não
+    /     \
+   /       \
+ else:   except:
+   \       /
+    \     /
+     \   /
+      \ /
+    finally:
+</pre></div>
+</div>
+<p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html">Hierarquia de classes built-in de exceções</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">BaseException</span>
+<span class="o">+--</span> <span class="ne">SystemExit</span>
+<span class="o">+--</span> <span class="ne">KeyboardInterrupt</span>
+<span class="o">+--</span> <span class="ne">GeneratorExit</span>
+<span class="o">+--</span> <span class="ne">Exception</span>
+    <span class="o">+--</span> <span class="ne">StopIteration</span>
+    <span class="o">+--</span> <span class="n">StopAsyncIteration</span>
+    <span class="o">+--</span> <span class="ne">ArithmeticError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">FloatingPointError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">OverflowError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ZeroDivisionError</span>
+    <span class="o">+--</span> <span class="ne">AssertionError</span>
+    <span class="o">+--</span> <span class="ne">AttributeError</span>
+    <span class="o">+--</span> <span class="ne">BufferError</span>
+    <span class="o">+--</span> <span class="ne">EOFError</span>
+    <span class="o">+--</span> <span class="ne">ImportError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="n">ModuleNotFoundError</span>
+    <span class="o">+--</span> <span class="ne">LookupError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">IndexError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">KeyError</span>
+    <span class="o">+--</span> <span class="ne">MemoryError</span>
+    <span class="o">+--</span> <span class="ne">NameError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">UnboundLocalError</span>
+    <span class="o">+--</span> <span class="ne">OSError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">BlockingIOError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ChildProcessError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionError</span>
+    <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">BrokenPipeError</span>
+    <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionAbortedError</span>
+    <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionRefusedError</span>
+    <span class="o">|</span>    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ConnectionResetError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">FileExistsError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">FileNotFoundError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">InterruptedError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">IsADirectoryError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">NotADirectoryError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">PermissionError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">ProcessLookupError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">TimeoutError</span>
+    <span class="o">+--</span> <span class="ne">ReferenceError</span>
+    <span class="o">+--</span> <span class="ne">RuntimeError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">NotImplementedError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="n">RecursionError</span>
+    <span class="o">+--</span> <span class="ne">SyntaxError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">IndentationError</span>
+    <span class="o">|</span>         <span class="o">+--</span> <span class="ne">TabError</span>
+    <span class="o">+--</span> <span class="ne">SystemError</span>
+    <span class="o">+--</span> <span class="ne">TypeError</span>
+    <span class="o">+--</span> <span class="ne">ValueError</span>
+    <span class="o">|</span>    <span class="o">+--</span> <span class="ne">UnicodeError</span>
+    <span class="o">|</span>         <span class="o">+--</span> <span class="ne">UnicodeDecodeError</span>
+    <span class="o">|</span>         <span class="o">+--</span> <span class="ne">UnicodeEncodeError</span>
+    <span class="o">|</span>         <span class="o">+--</span> <span class="ne">UnicodeTranslateError</span>
+    <span class="o">+--</span> <span class="ne">Warning</span>
+        <span class="o">+--</span> <span class="ne">DeprecationWarning</span>
+        <span class="o">+--</span> <span class="ne">PendingDeprecationWarning</span>
+        <span class="o">+--</span> <span class="ne">RuntimeWarning</span>
+        <span class="o">+--</span> <span class="ne">SyntaxWarning</span>
+        <span class="o">+--</span> <span class="ne">UserWarning</span>
+        <span class="o">+--</span> <span class="ne">FutureWarning</span>
+        <span class="o">+--</span> <span class="ne">ImportWarning</span>
+        <span class="o">+--</span> <span class="ne">UnicodeWarning</span>
+        <span class="o">+--</span> <span class="ne">BytesWarning</span>
+        <span class="o">+--</span> <span class="ne">ResourceWarning</span>
+</pre></div>
+</div>
+<p>Forçando um erro dividindo por zero:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
+<span class="go">ZeroDivisionError                         Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-18-79ea940cf5e7&gt; in &lt;module&gt;()</span>
+<span class="go">----&gt; 1 print(&#39;Resultado = %s&#39; % (x / y))</span>
+
+<span class="go">ZeroDivisionError: integer division or modulo by zero</span>
+</pre></div>
+</div>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># catch all exceptions</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">Erro: Não dividirás por zero!</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Erro: Não dividirás por zero!</span>
+</pre></div>
+</div>
+<p>Utilizando try e forçando um erro de divisão por zero:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1"># specified exception</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">Erro: Não dividirás por zero!</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Erro: Não dividirás por zero!</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;um&#39;</span><span class="p">,</span> <span class="s1">&#39;dois&#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">ERRO: Índice não encontrado</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">zero</span>
 <span class="go">um</span>
 <span class="go">dois</span>
@@ -331,290 +344,473 @@ print(numeros[3])</p>
 <span class="go">ERRO: Índice não encontrado</span>
 </pre></div>
 </div>
-<dl>
-<dt>try:</dt><dd><p>print(numeros[0])
-print(numeros[1])
-print(numeros[2])
-print(numeros[3])</p>
-</dd>
-<dt>except IndexError, e:</dt><dd><blockquote>
-<div><p>print(‘nnERRO: Índice não encontradonn%s’ % e)</p>
-</div></blockquote>
-<p>….:</p>
-</dd>
-</dl>
-<p>zero
-um
-dois</p>
-<p>ERRO: Índice não encontrado</p>
-<p>tuple index out of range</p>
+<p>sasasasasa:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">ERRO: Índice não encontrado</span><span class="se">\n\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">zero</span>
+<span class="go">um</span>
+<span class="go">dois</span>
+
+
+<span class="go">ERRO: Índice não encontrado</span>
+
+<span class="go">tuple index out of range</span>
+</pre></div>
+</div>
 <p>O “e” é a mensagem de erro “tuple index out of range”</p>
-<p>$ vim excecao.py</p>
-<p>#_*_ encoding: utf-8 _*_</p>
-<p>import sys</p>
-<p>numeros = (‘zero’, ‘um’, ‘dois’)</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>print(numeros[0])
-print(numeros[1])
-print(numeros[2])
-print(numeros[3])</p>
-</dd>
-<dt>except IndexError, e:</dt><dd><p>print &gt;&gt; sys.stderr, ‘nnERRO: Índice não encontradonn%s’ % e
-sys.exit(1)</p>
-</dd>
-</dl>
-<p>$ python excecao.py
-zero
-um
-dois</p>
-<p>ERRO: Índice não encontrado</p>
-<p>tuple index out of range</p>
-<p>$ echo $?
-1</p>
-<p>$ vim excecao3.py</p>
-<p>#_*_ encoding: utf-8 _*_</p>
-<p>import sys</p>
-<p>numeros = (‘zero’, ‘um’, ‘dois’)</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>print(numeros[0])
-print(numeros[1])
-print(numeros[2])
-print(numeros[3])</p>
-</dd>
-<dt>except IndexError as e:</dt><dd><p>print(‘nnERRO: Índice não encontradonn%s’ % e, file = sys.stderr)
-sys.exit(1)</p>
-</dd>
-</dl>
-<p>$ python3 excecao3.py</p>
-<p>zero
-um
-dois</p>
-<p>ERRO: Índice não encontrado</p>
-<p>tuple index out of range</p>
-<p>$ echo $?
-1</p>
-<p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
-<p>—-&gt; 1 f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
-<p>IOError: [Errno 2] No such file or directory: ‘/tmp/blablabla.txt’</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
-</dd>
-<dt>except IOError as e:</dt><dd><p>print(‘O arquivo não existe!’)</p>
-</dd>
-</dl>
-<p>O arquivo não existe!</p>
-<p>type(e)
-IOError</p>
-<p>dir(e)</p>
-<dl class="simple">
-<dt>[‘__class__’,</dt><dd><p>‘__delattr__’,
-‘__dict__’,
-‘__doc__’,
-‘__format__’,
-‘__getattribute__’,
-‘__getitem__’,
-‘__getslice__’,
-‘__hash__’,
-‘__init__’,
-‘__new__’,
-‘__reduce__’,
-‘__reduce_ex__’,
-‘__repr__’,
-‘__setattr__’,
-‘__setstate__’,
-‘__sizeof__’,
-‘__str__’,
-‘__subclasshook__’,
-‘__unicode__’,
-‘args’,
-‘errno’,
-‘filename’,
-‘message’,
-‘strerror’]</p>
-</dd>
-</dl>
-<p>repr(e)</p>
-<p>“IOError(2, ‘No such file or directory’)”</p>
-<p>e.&lt;TAB&gt;
-e.args      e.errno     e.filename  e.message   e.strerror</p>
-<p>print(e.errno)
-2</p>
-<p>$ vim excecao.py</p>
-<p>#_*_ encoding: utf-8 _*_</p>
-<p>import sys</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
-</dd>
-<dt>except IOError as e:</dt><dd><p>print &gt;&gt; sys.stderr, ‘nnERRO: Arquivo não encontradonn%s’ % e
-sys.exit(e.errno)</p>
-</dd>
-</dl>
-<p>$ python excecao.py</p>
-<p>ERRO: Arquivo não encontrado</p>
-<p>[Errno 2] No such file or directory: ‘/tmp/blablabla.txt’</p>
-<p>$ echo $?
-2</p>
-<p>$ vim excecao3.py</p>
-<p>#_*_ encoding: utf-8 _*_</p>
-<p>import sys</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>f = open(‘/tmp/blablabla.txt’, ‘r’)</p>
-</dd>
-<dt>except IOError as e:</dt><dd><p>print(‘nnERRO: Arquivo não encontradonn%s’ % e, file = sys.stderr)
-sys.exit(e.errno)</p>
-</dd>
-</dl>
-<p>$ python3 excecao3.py</p>
-<p>ERRO: Arquivo não encontrado</p>
-<p>[Errno 2] No such file or directory: ‘/tmp/blablabla.txt’</p>
-<p>$ echo $?
-2</p>
-<p>else</p>
-<p>$ vim excecao.py</p>
-<p>#_*_ encoding: utf-8 _*_</p>
-<p>import sys</p>
-<p>f = sys.argv[1]</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>f = open(f, ‘r’)</p>
-</dd>
-<dt>except IOError:</dt><dd><p>print(‘Não existe o arquivo’)</p>
-</dd>
-<dt>else:</dt><dd><p>print(‘Sim, o arquivo existe!’)
-f.close()</p>
-</dd>
-</dl>
-<p>$ python excecao.py /tmp/blablabla.txt
-Não existe o arquivo</p>
-<p>$ &gt; /tmp/blablabla.txt</p>
-<p>$ python excecao.py /tmp/blablabla.txt
-Sim, o arquivo existe!</p>
-<p>$ rm /tmp/blablabla.txt</p>
-<p>finally</p>
-<p>$ vim excecao.py</p>
-<p>#_*_ encoding: utf-8 _*_</p>
-<p>import sys</p>
-<p>f = sys.argv[1]</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>f = open(f, ‘r’)</p>
-</dd>
-<dt>except IOError:</dt><dd><p>print(‘Não existe o arquivo’)</p>
-</dd>
-<dt>else:</dt><dd><p>print(‘Sim, o arquivo existe!’)
-f.close()</p>
-</dd>
-<dt>finally:</dt><dd><p>print(‘Se deu certo ou errado, o programa termina aqui :/’)</p>
-</dd>
-</dl>
-<p>$ python excecao.py /tmp/blablabla.txt
-Não existe o arquivo
-Se deu certo ou errado, o programa termina aqui :/</p>
-<p>$ &gt; /tmp/blablabla.txt</p>
-<p>$ python excecao.py /tmp/blablabla.txt
-Sim, o arquivo existe!
-Se deu certo ou errado, o programa termina aqui :/</p>
-<p>raise</p>
+<p>ssdsdpsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vim excecao.py
+</pre></div>
 </div>
-<div class="section" id="raise-exception-provocando-uma-excecao">
-<h1><span class="section-number">29. </span>raise Exception(‘Provocando uma exceção’)<a class="headerlink" href="#raise-exception-provocando-uma-excecao" title="Link permanente para este título">¶</a></h1>
-<p>Exception                                 Traceback (most recent call last)
-&lt;ipython-input-62-69ebfeaaf513&gt; in &lt;module&gt;()
-—-&gt; 1 raise Exception(‘Provocando uma exceção’)</p>
-<p>Exception: Provocando uma exceção</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>raise ZeroDivisionError()</p>
-</dd>
-<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
-</dd>
-<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
-</dd>
-<dt>except:</dt><dd><p>print(‘Exceção não declarada’)</p>
-</dd>
-</dl>
-<p>Exceção não declarada</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>raise ZeroDivisionError(‘Erro de divisão por zero’)</p>
-</dd>
-<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
-</dd>
-<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
-</dd>
-<dt>except ZeroDivisionError:</dt><dd><p>print(‘Exceção ZeroDivisionError’)</p>
-</dd>
-<dt>except:</dt><dd><p>print(‘Exceção não declarada’)</p>
-</dd>
-</dl>
-<p>Exceção ZeroDivisionError</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>raise ZeroDivisionError(‘Erro de divisão por zero’)</p>
-</dd>
-<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
-</dd>
-<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
-</dd>
-<dt>except ZeroDivisionError:</dt><dd><p>print(‘Exceção ZeroDivisionError’)</p>
-</dd>
-<dt>except Exception:</dt><dd><p>print(‘Exceção não declarada’)</p>
-</dd>
-</dl>
-<p>Exceção ZeroDivisionError</p>
-<dl class="simple">
-<dt>try:</dt><dd><p>raise ZeroDivisionError(‘Erro de divisão por zero’)</p>
-</dd>
-<dt>except IOError:</dt><dd><p>print(‘Exceção IOError’)</p>
-</dd>
-<dt>except IndexError:</dt><dd><p>print(‘Exceção IndexError’)</p>
-</dd>
-<dt>except ZeroDivisionError:</dt><dd><p>print(‘Exceção ZeroDivisionError’)
-raise</p>
-</dd>
-<dt>except Exception:</dt><dd><p>print(‘Exceção não declarada’)</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#_*_ encoding: utf-8 _*_</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">numeros</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;um&#39;</span><span class="p">,</span> <span class="s1">&#39;dois&#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">ERRO: Índice não encontrado</span><span class="se">\n\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="excecao-zerodivisionerror">
-<h1><span class="section-number">30. </span>Exceção ZeroDivisionError<a class="headerlink" href="#excecao-zerodivisionerror" title="Link permanente para este título">¶</a></h1>
-<p>ZeroDivisionError                         Traceback (most recent call last)
-&lt;ipython-input-77-be8b35cbd0cc&gt; in &lt;module&gt;()</p>
-<blockquote>
-<div><p>1 try:</p>
-</div></blockquote>
-<dl class="simple">
-<dt>—-&gt; 2     raise ZeroDivisionError(‘Erro de divisão por zero’)</dt><dd><p>3 except IOError:
-4     print(‘Exceção IOError’)
-5 except IndexError:</p>
-</dd>
-</dl>
-<p>ZeroDivisionError: Erro de divisão por zero</p>
-<p>Exceção Personalizada</p>
-<blockquote>
-<div><p>Para criarmos uma exceção personalizada preciamos criar uma classe que herde de uma outra classe de exceção, cuja raiz é Exception.</p>
-</div></blockquote>
-<dl class="simple">
-<dt>class FooException(Exception):</dt><dd><p>pass</p>
-</dd>
-<dt>try:</dt><dd><p>raise FooException(‘Bla bla bla’)</p>
-</dd>
-<dt>except Exception as e:</dt><dd><p>print(‘Erro ——&gt; %s’ % e)</p>
-</dd>
-</dl>
-<p>Erro ——&gt; Bla bla bla</p>
-<dl class="simple">
-<dt>class EggsException(Exception):</dt><dd><dl class="simple">
-<dt>def __init__(self, value):</dt><dd><p>self.value = value</p>
-</dd>
-<dt>def __str__(self):</dt><dd><p>return self.value</p>
-</dd>
-</dl>
-</dd>
-<dt>try:</dt><dd><p>raise EggsException(50)</p>
-</dd>
-<dt>except EggsException as e:</dt><dd><p>print(‘Ocorreu um erro da minha exceção, cujo valor é %s’ % (e.value))</p>
-</dd>
-</dl>
-<p>Ocorreu um erro da minha exceção, cujo valor é 50</p>
-<p>raise EggsException(‘bla bla bla’)</p>
-<p>—-&gt; 1 raise EggsException(‘bla bla bla’)</p>
-<p>EggsException: bla bla bla</p>
+<p>sdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python excecao.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">zero</span>
+<span class="go">um</span>
+<span class="go">dois</span>
+
+
+<span class="go">ERRO: Índice não encontrado</span>
+
+<span class="go">tuple index out of range</span>
+</pre></div>
+</div>
+<p>ddsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$?</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<p>sdsdsdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim excecao3.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#_*_ encoding: utf-8 _*_</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">numeros</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;um&#39;</span><span class="p">,</span> <span class="s1">&#39;dois&#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">numeros</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">ERRO: Índice não encontrado</span><span class="se">\n\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">,</span> <span class="nb">file</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 excecao3.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">zero</span>
+<span class="go">um</span>
+<span class="go">dois</span>
+
+
+<span class="go">ERRO: Índice não encontrado</span>
+
+<span class="go">tuple index out of range</span>
+</pre></div>
+</div>
+<p>sdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$?</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<p>sddsdsdsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/blablabla.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
+<span class="go">IOError                                   Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-20-11fa3db68c79&gt; in &lt;module&gt;()</span>
+<span class="go">----&gt; 1 f = open(&#39;/tmp/blablabla.txt&#39;, &#39;r&#39;)</span>
+
+<span class="go">IOError: [Errno 2] No such file or directory: &#39;/tmp/blablabla.txt&#39;</span>
+</pre></div>
+</div>
+<p>sddsdsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/blablabla.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;O arquivo não existe!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>O arquivo não existe!
+</pre></div>
+</div>
+<p>sdsdsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">IOError</span>
+</pre></div>
+</div>
+<p>sdsdssdsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;__class__&#39;,</span>
+<span class="go"> &#39;__delattr__&#39;,</span>
+<span class="go"> &#39;__dict__&#39;,</span>
+<span class="go"> &#39;__doc__&#39;,</span>
+<span class="go"> &#39;__format__&#39;,</span>
+<span class="go"> &#39;__getattribute__&#39;,</span>
+<span class="go"> &#39;__getitem__&#39;,</span>
+<span class="go"> &#39;__getslice__&#39;,</span>
+<span class="go"> &#39;__hash__&#39;,</span>
+<span class="go"> &#39;__init__&#39;,</span>
+<span class="go"> &#39;__new__&#39;,</span>
+<span class="go"> &#39;__reduce__&#39;,</span>
+<span class="go"> &#39;__reduce_ex__&#39;,</span>
+<span class="go"> &#39;__repr__&#39;,</span>
+<span class="go"> &#39;__setattr__&#39;,</span>
+<span class="go"> &#39;__setstate__&#39;,</span>
+<span class="go"> &#39;__sizeof__&#39;,</span>
+<span class="go"> &#39;__str__&#39;,</span>
+<span class="go"> &#39;__subclasshook__&#39;,</span>
+<span class="go"> &#39;__unicode__&#39;,</span>
+<span class="go"> &#39;args&#39;,</span>
+<span class="go"> &#39;errno&#39;,</span>
+<span class="go"> &#39;filename&#39;,</span>
+<span class="go"> &#39;message&#39;,</span>
+<span class="go"> &#39;strerror&#39;]</span>
+</pre></div>
+</div>
+<p>dsdsdsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;IOError(2, &#39;No such file or directory&#39;)&quot;</span>
+</pre></div>
+</div>
+<p>sdsdsdsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="o">.&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">e.args      e.errno     e.filename  e.message   e.strerror</span>
+</pre></div>
+</div>
+<p>sdsddssd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">errno</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
+<p>sdsdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim excecao.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#_*_ encoding: utf-8 _*_</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/blablabla.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">ERRO: Arquivo não encontrado</span><span class="se">\n\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">errno</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sddssd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python excecao.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ERRO: Arquivo não encontrado</span>
+
+<span class="go">[Errno 2] No such file or directory: &#39;/tmp/blablabla.txt&#39;</span>
+</pre></div>
+</div>
+<p>sdsdklsdkkl:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$?</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
+<p>sdsdsdsdd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim excecao3.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#_*_ encoding: utf-8 _*_</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/blablabla.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">ERRO: Arquivo não encontrado</span><span class="se">\n\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">,</span> <span class="nb">file</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">errno</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sdsdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 excecao3.py
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ERRO: Arquivo não encontrado</span>
+
+<span class="go">[Errno 2] No such file or directory: &#39;/tmp/blablabla.txt&#39;</span>
+</pre></div>
+</div>
+<p>sdsddssd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$?</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
+<div class="section" id="else">
+<h2><span class="section-number">28.1. </span>else<a class="headerlink" href="#else" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim excecao.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#_*_ encoding: utf-8 _*_</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Não existe o arquivo&#39;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Sim, o arquivo existe!&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>ewowewewe:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python excecao.py /tmp/blablabla.txt
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Não existe o arquivo</span>
+</pre></div>
+</div>
+<p>ewewewewe:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch /tmp/blablabla.txt
+python excecao.py /tmp/blablabla.txt
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Sim, o arquivo existe!</span>
+</pre></div>
+</div>
+<p>dsdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm /tmp/blablabla.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="finally">
+<h2><span class="section-number">28.2. </span>finally<a class="headerlink" href="#finally" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim excecao.py
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#_*_ encoding: utf-8 _*_</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Não existe o arquivo&#39;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Sim, o arquivo existe!&#39;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">finally</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Se deu certo ou errado, o programa termina aqui :/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>dsdsdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python excecao.py /tmp/blablabla.txt
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Não existe o arquivo</span>
+</pre></div>
+</div>
+<p>Se deu certo ou errado, o programa termina aqui :/</p>
+<p>sdsdsd:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch /tmp/blablabla.txt
+python excecao.py /tmp/blablabla.txt
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Sim, o arquivo existe!</span>
+</pre></div>
+</div>
+<p>Se deu certo ou errado, o programa termina aqui :/</p>
+</div>
+<div class="section" id="raise">
+<h2><span class="section-number">28.3. </span>raise<a class="headerlink" href="#raise" title="Link permanente para este título">¶</a></h2>
+<p>sasasasa:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Provocando uma exceção&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
+<span class="go">Exception                                 Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-62-69ebfeaaf513&gt; in &lt;module&gt;()</span>
+<span class="go">----&gt; 1 raise Exception(&#39;Provocando uma exceção&#39;)</span>
+
+<span class="go">Exception: Provocando uma exceção</span>
+</pre></div>
+</div>
+<p>saassasasa:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IOError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IndexError&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção não declarada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Exceção não declarada</span>
+</pre></div>
+</div>
+<p>ewwewewe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s1">&#39;Erro de divisão por zero&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IOError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IndexError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção ZeroDivisionError&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção não declarada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Exceção ZeroDivisionError</span>
+</pre></div>
+</div>
+<p>osdkskldskl:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s1">&#39;Erro de divisão por zero&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IOError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IndexError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção ZeroDivisionError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção não declarada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Exceção ZeroDivisionError</span>
+</pre></div>
+</div>
+<p>ssdsdpsdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s1">&#39;Erro de divisão por zero&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IOError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção IndexError&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção ZeroDivisionError&#39;</span><span class="p">)</span>
+    <span class="k">raise</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceção não declarada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">    Exceção ZeroDivisionError</span>
+<span class="go">---------------------------------------------------------------------------</span>
+<span class="go">ZeroDivisionError                         Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-77-be8b35cbd0cc&gt; in &lt;module&gt;()</span>
+<span class="go">    1 try:</span>
+<span class="go">----&gt; 2     raise ZeroDivisionError(&#39;Erro de divisão por zero&#39;)</span>
+<span class="go">    3 except IOError:</span>
+<span class="go">    4     print(&#39;Exceção IOError&#39;)</span>
+<span class="go">    5 except IndexError:</span>
+
+<span class="go">ZeroDivisionError: Erro de divisão por zero</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="excecao-personalizada">
+<h2><span class="section-number">28.4. </span>Exceção Personalizada<a class="headerlink" href="#excecao-personalizada" title="Link permanente para este título">¶</a></h2>
+<p>Para criarmos uma exceção personalizada preciamos criar uma classe que herde
+de uma outra classe de exceção, cuja raiz é Exception.</p>
+<p>DSSDSDSD:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FooException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">FooException</span><span class="p">(</span><span class="s1">&#39;Bla bla bla&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Erro ------&gt; </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Erro ------&gt; Bla bla bla</span>
+</pre></div>
+</div>
+<p>sdsdksdsd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">EggsException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="n">EggsException</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">EggsException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Ocorreu um erro da minha exceção, cujo valor é </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Ocorreu um erro da minha exceção, cujo valor é 50</span>
+</pre></div>
+</div>
+<p>sdaasasa:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="n">EggsException</span><span class="p">(</span><span class="s1">&#39;bla bla bla&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
+<span class="go">EggsException                             Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-14-4cafda692601&gt; in &lt;module&gt;()</span>
+<span class="go">----&gt; 1 raise EggsException(&#39;bla bla bla&#39;)</span>
+
+<span class="go">EggsException: bla bla bla</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -625,7 +821,7 @@ raise</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="closures.html" class="btn btn-neutral float-right" title="31. Closures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="closures.html" class="btn btn-neutral float-right" title="29. Closures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="packages.html" class="btn btn-neutral float-left" title="27. Pacotes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

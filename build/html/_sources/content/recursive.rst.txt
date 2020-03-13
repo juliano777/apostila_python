@@ -8,22 +8,18 @@ Recursividade
 
 
 
+.. code-block:: python
 
-# _*_ coding: utf-8 _*_
+    # _*_ coding: utf-8 _*_
 
+    # Fatoração
 
+    def fatorial(n):
+        if (n == 1) or (n == 0):
+            return 1
+        else:
+            return n * fatorial(n - 1)
 
-# Fatoração
-
-
-def fatorial(n):
-    if (n == 1) or (n == 0):
-        return 1
-    else:
-        return n * fatorial(n - 1)
-
-
-'''
 
 Ida:
 
@@ -49,26 +45,27 @@ fatorial(4) = 4 * 6 = 24
 fatorial(5) = 5 * 24 = 120
 
 
-'''
-
 
 print(fatorial(5))
 
 
 # Fibonacci
 
+.. code-block:: python
 
-def fibo(n):
-    if (n < 2):
-        return n
-    else:
-        return fibo(n - 1) + fibo(n - 2)
+    def fibo(n):
+        if (n < 2):
+            return n
+        else:
+            return fibo(n - 1) + fibo(n - 2)
 
 
-'''
 
-Sequência de Fibonacci: | 0| 1| 1| 2| 3| 5| 8| 13| 21| 34| 55| ...
-Elemento (n):           | 0| 1| 2| 3| 4| 5| 6| 7 | 8 | 9 | 10| ...
++--------------+---+---+---+---+---+---+---+----+----+----+----+-----+
+| Fibonacci    | 0 | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 | ... |
++--------------+---+---+---+---+---+---+---+----+----+----+----+-----+
+| Elemento (n) | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7  | 8  | 9  | 10 | ... |
++--------------+---+---+---+---+---+---+---+----+----+----+----+-----+
 
 
 Ida:
@@ -88,81 +85,89 @@ fib(0) = 0
 
 fib
 
-'''
 
 
 print(fib(7))
 
 
 Memoização
+----------
 
-	É uma técnica de otimização usada principalmente para acelerar aplicativos pelo armazenamento de resultados de chamadas de função que têm custo alto de processamento e retornando o resultado do cache quando as mesmas entradas acontecerem novamente.
+É uma técnica de otimização usada principalmente para acelerar aplicativos
+pelo armazenamento de resultados de chamadas de função que têm custo alto de
+processamento e retornando o resultado do cache quando as mesmas entradas
+acontecerem novamente.
 
 
 Para testarmos vamos criar o arquivo memoizacao.py com o seguinte conteúdo:
 
-#_*_ encoding: utf-8 _*_
+.. code-block:: python
 
-import time
+    #_*_ encoding: utf-8 _*_
 
-''' Fibonacci function '''
-def fibo(n):
-    if (n < 2): return n
-    else:
-        return fibo(n - 1) + fibo(n - 2)
+    import time
 
-
-''' Memoize function '''
-def memoize(f):
-    # dictionary (cache)
-    mem = {}
-
-    ''' Helper function '''
-    def memoizer(*param):
-        key = repr(param)
-        if not key in mem:
-            mem[key] = f(*param)
-        return mem[key]
-
-    return memoizer
-
-# Start time
-t1 = time.time()
-
-# Loop 
-for i in range(35):
-    print('fib(%s) = %s' % (i, fibo(i)))
-
-# End time
-t2 = time.time()
-
-# Total time
-print('Tempo de execução: %.3fs' % (t2 - t1))
-
-# Take a pause
-raw_input('Pressione <ENTER> para continuar\n')
-
-# Memoization of fibo
-fibo = memoize(fibo)
-
-# Start time
-t1 = time.time()
-
-# loop after memoization
-for i in range(40):
-    print('fib(%s) = %s' % (i, fibo(i)))
-
-# End time
-t2 = time.time()
-
-# Total time
-print('Tempo de execução: %.3fs' % (t2 - t1))
+    ''' Fibonacci function '''
+    def fibo(n):
+        if (n < 2): return n
+        else:
+            return fibo(n - 1) + fibo(n - 2)
 
 
+    ''' Memoize function '''
+    def memoize(f):
+        # dictionary (cache)
+        mem = {}
 
-Execute da seguinte forma: 
+        ''' Helper function '''
+        def memoizer(*param):
+            key = repr(param)
+            if not key in mem:
+                mem[key] = f(*param)
+            return mem[key]
 
-$ python memoizacao.py
+        return memoizer
+
+    # Start time
+    t1 = time.time()
+
+    # Loop 
+    for i in range(35):
+        print('fib(%s) = %s' % (i, fibo(i)))
+
+    # End time
+    t2 = time.time()
+
+    # Total time
+    print('Tempo de execução: %.3fs' % (t2 - t1))
+
+    # Take a pause
+    raw_input('Pressione <ENTER> para continuar\n')
+
+    # Memoization of fibo
+    fibo = memoize(fibo)
+
+    # Start time
+    t1 = time.time()
+
+    # loop after memoization
+    for i in range(40):
+        print('fib(%s) = %s' % (i, fibo(i)))
+
+    # End time
+    t2 = time.time()
+
+    # Total time
+    print('Tempo de execução: %.3fs' % (t2 - t1))
+
+
+
+Execute da seguinte forma:
+
+.. code-block:: bash
+
+    python memoizacao.py
+
 
 
 Antes da memoização:

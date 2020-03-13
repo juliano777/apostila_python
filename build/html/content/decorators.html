@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>32. Decoradores em Python &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>30. Decoradores em Python &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="33. Expressões vs Statements" href="exec_eval_execfile_compile.html" />
-    <link rel="prev" title="31. Closures" href="closures.html" /> 
+    <link rel="next" title="31. Expressões vs Statements" href="exec_eval_execfile_compile.html" />
+    <link rel="prev" title="29. Closures" href="closures.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -110,15 +110,19 @@
 <li class="toctree-l1"><a class="reference internal" href="with.html">25. with</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">27. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">28. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">31. Closures</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">32. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">33. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">35. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">36. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">28. Exceções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">30. Decoradores em Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#decoradores-de-funcoes">30.1. Decoradores de Funções</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#decorador-com-argumentos">30.2. Decorador com Argumentos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcao-como-decorador">30.3. Função como Decorador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memoizacao">30.4. Memoização</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -164,7 +168,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">32. </span>Decoradores em Python</li>
+      <li><span class="section-number">30. </span>Decoradores em Python</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,7 +188,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="decoradores-em-python">
-<h1><span class="section-number">32. </span>Decoradores em Python<a class="headerlink" href="#decoradores-em-python" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">30. </span>Decoradores em Python<a class="headerlink" href="#decoradores-em-python" title="Link permanente para este título">¶</a></h1>
 <blockquote>
 <div><p>É um conceito diferente do conceito decorator de design pattern.
 Pode ser implementado como uma classe ou como uma função.
@@ -195,188 +199,206 @@ Um decorador deve ser executável, ou seja, deve ter o método __call__().
 São envelopes de função.
 Decoradores podem ser definidos como classes ou funções.</p>
 </div></blockquote>
-<p>Decoradores de Funções</p>
+<div class="section" id="decoradores-de-funcoes">
+<h2><span class="section-number">30.1. </span>Decoradores de Funções<a class="headerlink" href="#decoradores-de-funcoes" title="Link permanente para este título">¶</a></h2>
 <p>Classe como decorador:</p>
-<p>&gt; class Decorador(object):</p>
-<blockquote>
-<div><dl>
-<dt>def __init__(self, funcao):</dt><dd><p>‘’’
-O parâmetro “funcao” é a função que será decorada.
-‘’’</p>
-<p>print(‘Método __init__() do decorador’)  # Mensagem ao instanciar
-funcao()  # Executa a função ao instanciar</p>
-</dd>
-<dt>def __call__(self):</dt><dd><p>print(‘Método __call__() do decorador’)</p>
-</dd>
-</dl>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Decorador</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funcao</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        O parâmetro &quot;funcao&quot; é a função que será decorada.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>  <span class="c1"># Mensagem ao instanciar</span>
+        <span class="n">funcao</span><span class="p">()</span>  <span class="c1"># Executa a função ao instanciar</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Definição da classe com decorador:</p>
-<p>&gt; &#64;Decorador
-def funcao_decorada():</p>
-<blockquote>
-<div><p>print(‘Dentro da função decorada’)</p>
-</div></blockquote>
-<p>Método __init__() do decorador
-Dentro da função decorada</p>
-<blockquote>
-<div><p>O método construtor do decorador é invocado logo após da definição da função decorada.
-No exemplo, a própria função, que é usada como parâmetro, é invocada pelo método construtor __init__().</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@Decorador</span>
+<span class="k">def</span> <span class="nf">funcao_decorada</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Dentro da função decorada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __init__() do decorador</span>
+<span class="go">Dentro da função decorada</span>
+</pre></div>
+</div>
+<p>O método construtor do decorador é invocado logo após da definição da função
+decorada.
+No exemplo, a própria função, que é usada como parâmetro, é invocada pelo
+método construtor __init__().</p>
 <p>Execução da função decorada:</p>
-<p>&gt; funcao_decorada()</p>
-<p>Método __call__() do decorador</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao_decorada</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __call__() do decorador</span>
+</pre></div>
+</div>
 <p>Recriação da classe decoradora:</p>
-<dl>
-<dt>&gt; class Decorador(object):</dt><dd><blockquote>
-<div><dl class="simple">
-<dt>def __init__(self, funcao):</dt><dd><p>print(‘Método __init__() do decorador’)
-self.funcao = funcao</p>
-</dd>
-<dt>def __call__(self):</dt><dd><p>print(‘Método __call__() do decorador’)
-self.funcao()</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>Diferente da criação da classe anteriormente, aqui a função não é chamada no método construtor, mas sim no método __call__.</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Decorador</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funcao</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">funcao</span> <span class="o">=</span> <span class="n">funcao</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Diferente da criação da classe anteriormente, aqui a função não é chamada
+no método construtor, mas sim no método __call__.</p>
 <p>Definição da função decorada:</p>
-<p>&gt; &#64;Decorador
-def funcao_decorada():</p>
-<blockquote>
-<div><p>print(‘Dentro da função’)</p>
-</div></blockquote>
-<p>Método __init__() do decorador</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@Decorador</span>
+<span class="k">def</span> <span class="nf">funcao_decorada</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Dentro da função&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __init__() do decorador</span>
+</pre></div>
+</div>
 <p>Execução da função decorada:</p>
-<p>&gt; funcao_decorada()</p>
-<p>Método __call__() do decorador
-Dentro da função</p>
-<p>Decorador com Argumentos</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao_decorada</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __call__() do decorador</span>
+<span class="go">Dentro da função</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="decorador-com-argumentos">
+<h2><span class="section-number">30.2. </span>Decorador com Argumentos<a class="headerlink" href="#decorador-com-argumentos" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Para funções decoradas que têm argumentos.</p>
 </div></blockquote>
 <p>Criação da classe decoradora:</p>
-<p>&gt; class Decorador():</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def __init__(self, f):</dt><dd><p>print(‘Método __init__() do decorador’)
-self.f = f</p>
-</dd>
-<dt>def __call__(self, <a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kargs):</dt><dd><p>print(‘Método __call__() do decorador’)
-return self.f(<a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>kargs)</p>
-</dd>
-</dl>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Decorador</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">f</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Definição da classe decorada:</p>
-<p>&gt; &#64;Decorador
-def soma(x, y):</p>
-<blockquote>
-<div><p>return x + y</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@Decorador</span>
+<span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
 <p>Execução da classe decorada:</p>
-<p>&gt; print(soma(2, 5))</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">soma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __call__() do decorador</span>
 <span class="go">7</span>
 </pre></div>
 </div>
-<p>Função como decorador</p>
+</div>
+<div class="section" id="funcao-como-decorador">
+<h2><span class="section-number">30.3. </span>Função como Decorador<a class="headerlink" href="#funcao-como-decorador" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Até então foram vistos exemplos de decoradores definidos como classes, agora serão vistos os definidos como função.</p>
 </div></blockquote>
 <p>Criação da função decoradora, o decorador em si:</p>
-<p>&gt; def funcao_decoradora(funcao):</p>
-<blockquote>
-<div><p># Função auxiliar
-def funcao_auxiliar():</p>
-<blockquote>
-<div><p>print(‘Antes da função decorada’)
-funcao()
-print(‘Depois da função decorada’)</p>
-</div></blockquote>
-<p>return funcao_auxiliar</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao_decoradora</span><span class="p">(</span><span class="n">funcao</span><span class="p">):</span>
+
+    <span class="c1"># Função auxiliar</span>
+    <span class="k">def</span> <span class="nf">funcao_auxiliar</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Antes da função decorada&#39;</span><span class="p">)</span>
+    <span class="n">funcao</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Depois da função decorada&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">funcao_auxiliar</span>
+</pre></div>
+</div>
 <p>Definição da função decorada:</p>
-<p>&gt; &#64;funcao_decoradora
-def foo():</p>
-<blockquote>
-<div><p>print(‘Função decorada’)</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@funcao_decoradora</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Função decorada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Execução da função decorada:</p>
-<p>&gt; foo()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Antes da função decorada</span>
 <span class="go">Função decorada</span>
 <span class="go">Depois da função decorada</span>
 </pre></div>
 </div>
 <p>Podemos também aplicar mais de um decorador a uma função:</p>
-<p>&gt; # Função para itálico em HTML
-def to_italic(funcao):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def funcao_auxiliadora(<a href="#id9"><span class="problematic" id="id10">*</span></a>args, <a href="#id11"><span class="problematic" id="id12">**</span></a>kargs):</dt><dd><p>return ‘&lt;i&gt;’ + funcao(<a href="#id13"><span class="problematic" id="id14">*</span></a>args, <a href="#id15"><span class="problematic" id="id16">**</span></a>kargs) + ‘&lt;/i&gt;’</p>
-</dd>
-</dl>
-<p>return funcao_auxiliadora</p>
-</div></blockquote>
-<p># Função para negrito em HTML
-def to_bold(funcao):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def funcao_auxiliadora(<a href="#id17"><span class="problematic" id="id18">*</span></a>args, <a href="#id19"><span class="problematic" id="id20">**</span></a>kargs):</dt><dd><p>return ‘&lt;b&gt;’ + funcao(<a href="#id21"><span class="problematic" id="id22">*</span></a>args, <a href="#id23"><span class="problematic" id="id24">**</span></a>kargs) + ‘&lt;/b&gt;’</p>
-</dd>
-</dl>
-<p>return funcao_auxiliadora</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Função para itálico em HTML</span>
+<span class="k">def</span> <span class="nf">to_italic</span><span class="p">(</span><span class="n">funcao</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">funcao_auxiliadora</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;i&gt;&#39;</span> <span class="o">+</span> <span class="n">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/i&gt;&#39;</span>
+    <span class="k">return</span> <span class="n">funcao_auxiliadora</span>
+
+<span class="c1"># Função para negrito em HTML</span>
+<span class="k">def</span> <span class="nf">to_bold</span><span class="p">(</span><span class="n">funcao</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">funcao_auxiliadora</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;b&gt;&#39;</span> <span class="o">+</span> <span class="n">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/b&gt;&#39;</span>
+    <span class="k">return</span> <span class="n">funcao_auxiliadora</span>
+</pre></div>
+</div>
 <p>Definição da função decorada com dois decoradores:</p>
-<p>&gt; &#64;to_italic
-&#64;to_bold
-def fc_msg(msg):</p>
-<blockquote>
-<div><p>return msg</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@to_italic</span>
+<span class="nd">@to_bold</span>
+<span class="k">def</span> <span class="nf">fc_msg</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">msg</span>
+</pre></div>
+</div>
 <p>Execução da função decorada:</p>
-<p>&gt; fc_msg(‘Hello, World!’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fc_msg</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;i&gt;&lt;b&gt;Hello, World!&lt;/b&gt;&lt;/i&gt;&#39;</span>
 </pre></div>
 </div>
-<p>Memoização</p>
+</div>
+<div class="section" id="memoizacao">
+<h2><span class="section-number">30.4. </span>Memoização<a class="headerlink" href="#memoizacao" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Texto…</p>
 </div></blockquote>
 <p>Criação do decorador de memoização:</p>
-<dl>
-<dt>&gt; def memoize(f):</dt><dd><p>‘’’
-Memoize function (as decorator)
-‘’’</p>
-<p># dictionary (cache)
-mem = {}</p>
-<p>‘’’ Helper function ‘’’
-def memoizer(<a href="#id25"><span class="problematic" id="id26">*</span></a>param):</p>
-<blockquote>
-<div><p>key = repr(param)
-if not key in mem:</p>
-<blockquote>
-<div><p>mem[key] = f(<a href="#id27"><span class="problematic" id="id28">*</span></a>param)</p>
-</div></blockquote>
-<p>return mem[key]</p>
-</div></blockquote>
-<p>return memoizer</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">memoize</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Memoize function (as decorator)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1"># dictionary (cache)</span>
+    <span class="n">mem</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="sd">&#39;&#39;&#39; Helper function &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">memoizer</span><span class="p">(</span><span class="o">*</span><span class="n">param</span><span class="p">):</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">mem</span><span class="p">:</span>
+            <span class="n">mem</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">param</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mem</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">memoizer</span>
+</pre></div>
+</div>
 <p>Criação da função decorada com memoização aplicada para Fibonacci:</p>
-<p>&gt; &#64;memoize
-def fibo(n):</p>
-<blockquote>
-<div><p>if (n &lt; 2): return n
-else:</p>
-<blockquote>
-<div><p>return fibo(n - 1) + fibo(n - 2)</p>
-</div></blockquote>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@memoize</span>
+<span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">):</span> <span class="k">return</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Execução da função decorada:</p>
-<p>&gt; fibo(39)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fibo</span><span class="p">(</span><span class="mi">39</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">63245986</span>
 </pre></div>
+</div>
 </div>
 </div>
 
@@ -388,10 +410,10 @@ else:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="exec_eval_execfile_compile.html" class="btn btn-neutral float-right" title="33. Expressões vs Statements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exec_eval_execfile_compile.html" class="btn btn-neutral float-right" title="31. Expressões vs Statements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="closures.html" class="btn btn-neutral float-left" title="31. Closures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="closures.html" class="btn btn-neutral float-left" title="29. Closures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
