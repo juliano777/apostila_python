@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>15. Aritméticos &mdash; documentação Curso de Python 2019-08-28</title>
+  <title>15. Operadores Bitwise &mdash; documentação Curso de Python 2019-08-28</title>
   
 
   
@@ -97,8 +97,13 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Aritméticos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#atribuicao-de-valores">15.1. Atribuição de Valores</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Operadores Bitwise</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#aritmeticos">15.1. Aritméticos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#soma">15.1.1. Soma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subtracao">15.1.2. Subtração</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atribuicao-de-valores">15.1.3. Atribuição de Valores</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
@@ -167,7 +172,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">15. </span>Aritméticos</li>
+      <li><span class="section-number">15. </span>Operadores Bitwise</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -188,8 +193,10 @@
             
   <p># <a class="reference external" href="https://data-flair.training/blogs/python-operator/">https://data-flair.training/blogs/python-operator/</a>
 # <a class="reference external" href="https://www.tutorialspoint.com/python/bitwise_operators_example">https://www.tutorialspoint.com/python/bitwise_operators_example</a></p>
+<div class="section" id="operadores-bitwise">
+<h1><span class="section-number">15. </span>Operadores Bitwise<a class="headerlink" href="#operadores-bitwise" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="aritmeticos">
-<h1><span class="section-number">15. </span>Aritméticos<a class="headerlink" href="#aritmeticos" title="Link permanente para este título">¶</a></h1>
+<h2><span class="section-number">15.1. </span>Aritméticos<a class="headerlink" href="#aritmeticos" title="Link permanente para este título">¶</a></h2>
 <div class="line-block">
 <div class="line">Descrição       | Operador | Exemplo | Saída |</div>
 </div>
@@ -200,16 +207,21 @@
 | Divisão         | /        | 7 / 2   | 3.5   |
 | Divisão Inteira | //       | 7 // 2  | 3     |
 | Potenciação     | **       | 2 ** 9  | 512   |</p>
-<p><strong>Soma</strong></p>
+<div class="section" id="soma">
+<h3><span class="section-number">15.1.1. </span>Soma<a class="headerlink" href="#soma" title="Link permanente para este título">¶</a></h3>
 <ul class="simple">
 <li></li>
 </ul>
 <p>Menor
 &lt;</p>
 <p>Deslocamento para esquerda
-&lt;&lt;
-Subtração
--</p>
+&lt;&lt;</p>
+</div>
+<div class="section" id="subtracao">
+<h3><span class="section-number">15.1.2. </span>Subtração<a class="headerlink" href="#subtracao" title="Link permanente para este título">¶</a></h3>
+<ul class="simple">
+<li></li>
+</ul>
 <p>Maior
 &gt;</p>
 <p>Deslocamento para direita
@@ -224,14 +236,28 @@ Multiplicação
 /</p>
 <p>Divisão Inteira
 //</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="go">3.5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">/</span> <span class="mf">2.0</span>
-<span class="go">3.5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">//</span> <span class="mf">2.0</span>
-<span class="go">3.0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="go">3</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.5</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">/</span> <span class="mf">2.0</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.5</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">//</span> <span class="mf">2.0</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3.0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">//</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
 </pre></div>
 </div>
 <p>Maior ou igual
@@ -288,17 +314,37 @@ Potência
 </tbody>
 </table>
 <p>‘’’</p>
-<p>False | False
-False</p>
-<p>False | True
-True</p>
-<p>True | False
-True</p>
-<p>True | True
-True</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">|</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">|</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">|</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p># 0010 | 0001 = 0011 -&gt; 2 | 1 = 3</p>
-<p>2 | 1
-3</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">|</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
+</pre></div>
+</div>
 <p>‘’’
 0010
 ou
@@ -307,8 +353,12 @@ ou
 0011
 ‘’’</p>
 <p># 1010 | 0011 = 1011 -&gt; 10 | 3 = 11</p>
-<p>10 | 3
-11</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">|</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">11</span>
+</pre></div>
+</div>
 <p># Operador ampersand “&amp;”: E Binário / Binary And</p>
 <dl>
 <dt>‘’’</dt><dd><p>O operador ampersand faz a lógica “and” binária, em português “e”.</p>
@@ -337,32 +387,74 @@ ou
 </tbody>
 </table>
 <p>‘’’</p>
-<p>False &amp; False
-False</p>
-<p>False &amp; True
-False</p>
-<p>True &amp; False
-False</p>
-<p>True &amp; True
-True</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p># 0010 &amp; 0001 = 0000 -&gt; 2 &amp; 1 = 0</p>
-<p>2 &amp; 1
-0</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">&amp;</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
 <p># 1010 &amp; 0011 = 0010 -&gt; 10 &amp; 3 = 2</p>
-<p>10 &amp; 3
-2</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">&amp;</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
 <p>## Operador ampersand “^”: Ou Exclusivo Binário / Binary XOr</p>
 <p># Deslocamento de Bits / Bit Shift</p>
-<p>False &gt;&gt; False
-0</p>
-<p>False &gt;&gt; True
-0</p>
-<p>True &gt;&gt; False
-1</p>
-<p>True &gt;&gt; True
-0</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&gt;&gt;</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&gt;&gt;</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&gt;&gt;</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&gt;&gt;</span> <span class="kc">True</span>
+
+<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">console</span>
+
+<span class="mi">0</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="atribuicao-de-valores">
-<h2><span class="section-number">15.1. </span>Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h2>
+<h3><span class="section-number">15.1.3. </span>Atribuição de Valores<a class="headerlink" href="#atribuicao-de-valores" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuição Simples</span>
 
 <span class="n">foo</span> <span class="o">=</span> <span class="mi">0</span>
@@ -415,6 +507,7 @@ True</p>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>

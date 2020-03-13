@@ -204,7 +204,9 @@ Vejamos agora o dicionário de atributos com seus respectivos valores:
 
 print(c1.__dict__)
 
-{}
+.. code-block:: console
+
+    {}
 
 O atributo especial __dict__, em um objeto, é um dicionário que é usado para guardar atributos e seus respectivos valores.
 O dicionário em questão apresentou um conjunto vazio.
@@ -218,7 +220,9 @@ Consulta ao dicionário do objeto novamente:
 	
 print(c1.__dict__)
 
-{'modelo': '911', 'marca': 'Porsche'}
+.. code-block:: console
+
+    {'modelo': '911', 'marca': 'Porsche'}
 
 
 Com os atributos preenchidos com valores agora o dicionário não está mais vazio.
@@ -228,7 +232,9 @@ c1.ano = 1993
 	
 print(c1.__dict__)
 
-{'ano': 1993, 'modelo': '911', 'marca': 'Porsche'}
+.. code-block:: console
+
+    {'ano': 1993, 'modelo': '911', 'marca': 'Porsche'}
 
 E que tal se pudermos no momento da criação do objeto, além de poder atribuir valores
 aos atributos existentes, também criar atributos que não existem na classe?
@@ -255,7 +261,9 @@ Verificando o dicionário do objeto:
 
 print(c1.__dict__)
 
-{'ano': 1991, 'modelo': '911', 'marca': 'Porsche', 'cor': 'verde'}
+.. code-block:: console
+
+    {'ano': 1991, 'modelo': '911', 'marca': 'Porsche', 'cor': 'verde'}
 
 
 O Método super()

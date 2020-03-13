@@ -40,8 +40,10 @@ Seu nome é foo.
 
 
 $ python3 foo.py 
-Este arquivo, foo.py é um módulo!
-Seu nome é __main__.
+.. code-block:: console
+
+    Este arquivo, foo.py é um módulo!
+    Seu nome é __main__.
 
 
 $ vim foo.py
@@ -66,8 +68,10 @@ Recarregando um Módulo
 
 > import importlib
 > importlib.reload(foo)
-Módulo importado.
-<module 'foo' from '/tmp/foo.py'>
+.. code-block:: console
+
+    Módulo importado.
+    <module 'foo' from '/tmp/foo.py'>
 
 
 $ vim foo.py
@@ -91,15 +95,23 @@ def cubo(x):
 Recarregando um módulo
 
 > importlib.reload(foo)
-<module 'foo' from '/tmp/foo.py'>
+
+.. code-block:: console
+
+    <module 'foo' from '/tmp/foo.py'>
 
 > f1 = foo.Funcionario()
 > f1.nome = 'Chiquinho'
 > f1.saudacao()
-Olá, meu nome é Chiquinho
+.. code-block:: console
+
+    Olá, meu nome é Chiquinho
 
 > print(foo.cubo(7))
-343
+
+.. code-block:: console
+
+    343
 
 
 
@@ -111,32 +123,20 @@ import as ...
 > f1 = meu_modulo.Funcionario()
 > f1.matricula = 'xyz12345'
 > print(f1.matricula)
-xyz12345
+.. code-block:: console
+
+    xyz12345
 
 
 from módulo import ...
 
-> from foo import Funcionario
-> f1 = Funcionario()
-> f1.nome = 'Chiquinho'
-> f1.saudacao()
-Olá, meu nome é Chiquinho
+.. code-block:: python
 
+    from foo import Funcionario
+    f1 = Funcionario()
+    f1.nome = 'Chiquinho'
+    f1.saudacao()
 
+.. code-block:: console
 
-
-
-
-
-
-
-
-     
-
-      
-
-
-
-
-
-
+    Olá, meu nome é Chiquinho

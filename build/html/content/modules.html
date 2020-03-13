@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -215,8 +215,11 @@ print(‘Seu nome é {}.’.format(__name__))</p>
 Este arquivo, /tmp/foo.py é um módulo!
 Seu nome é foo.</p>
 <p>$ python3 foo.py
-Este arquivo, foo.py é um módulo!
+.. code-block:: console</p>
+<blockquote>
+<div><p>Este arquivo, foo.py é um módulo!
 Seu nome é __main__.</p>
+</div></blockquote>
 <p>$ vim foo.py</p>
 <p># _*_ encoding: utf-8 _*_</p>
 <dl class="simple">
@@ -234,8 +237,11 @@ Executado a partir da linha de comando.</p>
 <p>Recarregando um Módulo</p>
 <p>&gt; import importlib
 &gt; importlib.reload(foo)
-Módulo importado.
+.. code-block:: console</p>
+<blockquote>
+<div><p>Módulo importado.
 &lt;module ‘foo’ from ‘/tmp/foo.py’&gt;</p>
+</div></blockquote>
 <p>$ vim foo.py</p>
 <p># _*_ encoding: utf-8 _*_</p>
 <dl>
@@ -252,26 +258,40 @@ idade = 0</p>
 </dd>
 </dl>
 <p>Recarregando um módulo</p>
-<p>&gt; importlib.reload(foo)
-&lt;module ‘foo’ from ‘/tmp/foo.py’&gt;</p>
+<p>&gt; importlib.reload(foo)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;module &#39;foo&#39; from &#39;/tmp/foo.py&#39;&gt;</span>
+</pre></div>
+</div>
 <p>&gt; f1 = foo.Funcionario()
 &gt; f1.nome = ‘Chiquinho’
 &gt; f1.saudacao()
-Olá, meu nome é Chiquinho</p>
-<p>&gt; print(foo.cubo(7))
-343</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>Olá, meu nome é Chiquinho</p>
+</div></blockquote>
+<p>&gt; print(foo.cubo(7))</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">343</span>
+</pre></div>
+</div>
 <p>import as …</p>
 <p>&gt; import foo as meu_modulo
 &gt; f1 = meu_modulo.Funcionario()
 &gt; f1.matricula = ‘xyz12345’
 &gt; print(f1.matricula)
-xyz12345</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>xyz12345</p>
+</div></blockquote>
 <p>from módulo import …</p>
-<p>&gt; from foo import Funcionario
-&gt; f1 = Funcionario()
-&gt; f1.nome = ‘Chiquinho’
-&gt; f1.saudacao()
-Olá, meu nome é Chiquinho</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">foo</span> <span class="kn">import</span> <span class="n">Funcionario</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">Funcionario</span><span class="p">()</span>
+<span class="n">f1</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Chiquinho&#39;</span>
+<span class="n">f1</span><span class="o">.</span><span class="n">saudacao</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Olá, meu nome é Chiquinho</span>
+</pre></div>
+</div>
 </div>
 
 

@@ -37,7 +37,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
     <link rel="next" title="17. Funções" href="functions.html" />
-    <link rel="prev" title="15. Aritméticos" href="operators.html" /> 
+    <link rel="prev" title="15. Operadores Bitwise" href="operators.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">16. Iteratoradores e Geradores</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#iterator">16.1. Iterator</a></li>
 </ul>
@@ -198,20 +198,29 @@ Todo objeto que tiver o método __next__() é um iterator.</p>
 <p>&gt; it = iter(‘bar’)</p>
 <p>Representação:</p>
 <p>&gt; repr(it)</p>
-<p>‘&lt;iterator object at 0x7f123cd62c50&gt;’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;iterator object at 0x7f123cd62c50&gt;&#39;</span>
+</pre></div>
+</div>
 <p>Executando o método __next__ até seu fim:</p>
 <p>&gt; it.__next__()</p>
-<p>‘b’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;b&#39;</span>
+</pre></div>
+</div>
 <p>&gt; it.__next__()</p>
-<p>‘a’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;a&#39;</span>
+</pre></div>
+</div>
 <p>&gt; it.__next__()</p>
-<p>‘r’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;r&#39;</span>
+</pre></div>
+</div>
 <p>&gt; it.__next__()</p>
-<p>StopIteration:</p>
-<blockquote>
-<div><p>Bla bla bla</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">StopIteration:</span>
+
+<span class="go">    Bla bla bla</span>
+</pre></div>
+</div>
 <p>Nota-se que a iteração foi feita sobre a string declarada, de forma a retornar caractere por caractere e após o último foi lançada uma exceção indicando que não há mais elementos a serem retornados.</p>
-</div></blockquote>
 <p>Classe Iterator</p>
 <blockquote>
 <div><p>É possível também implementar um iterador como um objeto de uma classe personalizada.
@@ -241,7 +250,9 @@ return cur</p>
 </div></blockquote>
 <p>Somatória dos 10 primeiros números:</p>
 <p>&gt; print(sum(FirstNumbers(10)))</p>
-<p>45</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">45</span>
+</pre></div>
+</div>
 <p>Generator</p>
 <blockquote>
 <div><p>Um generator é um objeto iterável assim como um iterator, mas nem todo iterator é um generator.
@@ -254,27 +265,40 @@ Um generator implementa o conceito de lazy evaluation, o que faz com que em dete
 <p>&gt; rq = [x ** 2 for x in numeros]</p>
 <p>Verificando os elementos:</p>
 <p>&gt; rq</p>
-<p>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+</pre></div>
+</div>
 <p>Verificando o tipo:</p>
 <p>&gt; type(rq)</p>
-<p>list</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">list</span>
+</pre></div>
+</div>
 <p>Tuple comprehension é uma maneira de se criar um generator:</p>
 <p>&gt; rq = (x ** 2 for x in numeros)</p>
 <p>Verificando o tipo do objeto:</p>
 <p>&gt; type(rq)</p>
-<p>generator</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">generator</span>
+</pre></div>
+</div>
 <p>Executando o método dunder next até o fim dos elementos:</p>
 <p>&gt; rq.__next__()</p>
-<p>0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
 <p>&gt; rq.__next__()</p>
-<p>1</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
 <p>…</p>
-<p>81</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">81</span>
+</pre></div>
+</div>
 <p>&gt; rq.__next__()</p>
-<p>StopIteration:</p>
-<blockquote>
-<div><p>Bla bla bla</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">StopIteration:</span>
+
+<span class="go">    Bla bla bla</span>
+</pre></div>
+</div>
 <p>Funções Generator</p>
 <blockquote>
 <div><p>Uma função generator utiliza o comando yield em vez de return, o que faz com que retorne o próximo elemento da sequência.</p>
@@ -293,17 +317,27 @@ i += 1</p>
 <p>&gt; x = gen()</p>
 <p>Verificando os tipos:</p>
 <p>&gt; type(gen)</p>
-<p>function</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">function</span>
+</pre></div>
+</div>
 <p>&gt; type(x)</p>
-<p>generator</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">generator</span>
+</pre></div>
+</div>
 <p>Execução do método __next__ até o fim:</p>
 <p>&gt; x.__next__()</p>
-<p>0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
 <p>…</p>
 <p>&gt; x.__next__()</p>
-<p>9</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
+</pre></div>
+</div>
 <p>&gt; x.__next__()</p>
-<p>StopIteration:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">StopIteration:</span>
+</pre></div>
+</div>
 <p>Iterator vs Generator</p>
 <blockquote>
 <div><ul class="simple">
@@ -320,9 +354,13 @@ i += 1</p>
 <p>&gt; from timeit import timeit</p>
 <p>Verificação de tipos:</p>
 <p>&gt; type(iter([x for x in range(1, 1001)]))</p>
-<p>list_iterator</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">list_iterator</span>
+</pre></div>
+</div>
 <p>&gt; type((x for x in range(1, 1001)))</p>
-<p>generator</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">generator</span>
+</pre></div>
+</div>
 <p>Strings com código em loop sobre iterador e gerador, respectivamente:</p>
 <p>&gt; code_it = ‘’’
 for i in (iter([x for x in range(1, 1001)])):</p>
@@ -338,9 +376,13 @@ for i in ((x for x in range(1, 1001))):</p>
 <p>‘’’</p>
 <p>Cronometrando os códigos de iterador e gerador, respectivamente:</p>
 <p>&gt; timeit(code_it)</p>
-<p>42.666774257901125</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">42.666774257901125</span>
+</pre></div>
+</div>
 <p>&gt; timeit(code_gen)</p>
-<p>53.58039242995437</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">53.58039242995437</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -355,7 +397,7 @@ for i in ((x for x in range(1, 1001))):</p>
         <a href="functions.html" class="btn btn-neutral float-right" title="17. Funções" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="operators.html" class="btn btn-neutral float-left" title="15. Aritméticos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="operators.html" class="btn btn-neutral float-left" title="15. Operadores Bitwise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

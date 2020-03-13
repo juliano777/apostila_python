@@ -33,7 +33,9 @@ _______________________________________________________________________________
 . . .
 
 > t1.getName()
-'primeira_thread'
+.. code-block:: console
+
+    'primeira_thread'
 
 
 
@@ -69,4 +71,3 @@ time.sleep(10)
 t.stop()
 
 print('fim')
-

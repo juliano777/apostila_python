@@ -29,7 +29,9 @@ Qual é o nome da função?:
 
 > print(foo.__name__)
 
-funcao_auxiliadora
+.. code-block:: console
+
+    funcao_auxiliadora
 
 
 
@@ -37,7 +39,9 @@ Tipo de "foo":
 
 > type(foo)
 
-function
+.. code-block:: console
+
+    function
 
 
 
@@ -45,7 +49,9 @@ Representação de "foo":
 
 > repr(foo)
 
-'<function funcao_principal.<locals>.funcao_auxiliadora at 0x7f9845369950>'
+.. code-block:: console
+
+    '<function funcao_principal.<locals>.funcao_auxiliadora at 0x7f9845369950>'
 
 
 
@@ -53,7 +59,9 @@ Imprimindo o valor resultante ao passar agora o valor y:
 
 > print(foo(6))
 
-64
+.. code-block:: console
+
+    64
 
     A operação realizada foi 2 elevado a 6 (x ** y).
 
@@ -63,7 +71,9 @@ Podemos também chamar a função principal passando o parâmetro da função au
 
 > funcao_principal(5)(2)
 
-25
+.. code-block:: console
+
+    25
 
 
 
@@ -86,7 +96,9 @@ Exibindo o nome do objeto:
 
 > print(bar.__name__)
 
-<lambda>
+.. code-block:: console
+
+    <lambda>
 
 
 
@@ -94,7 +106,9 @@ Tipo:
 
 > type(bar)
 
-function
+.. code-block:: console
+
+    function
 
 
 
@@ -102,7 +116,9 @@ Representação:
 
 > repr(bar)
 
-'<function funcao_principal.<locals>.<lambda> at 0x7f9844527730>'
+.. code-block:: console
+
+    '<function funcao_principal.<locals>.<lambda> at 0x7f9844527730>'
 
 
 
@@ -110,7 +126,9 @@ Representação:
 
 > print(bar(2))
 
-9
+.. code-block:: console
+
+    9
 
 
 
@@ -118,4 +136,6 @@ Passando o parâmetro da função principal e de lambda:
 
 > funcao_principal(2)(5)
 
-32
+.. code-block:: console
+
+    32

@@ -2,6 +2,9 @@
 # https://data-flair.training/blogs/python-operator/
 # https://www.tutorialspoint.com/python/bitwise_operators_example
 
+Operadores Bitwise
+******************
+
 
 Aritméticos
 ~~~~~~~~~~~
@@ -16,7 +19,8 @@ Aritméticos
 | Potenciação     | **       | 2 ** 9  | 512   |
 
 
-**Soma**
+Soma
+----
 
 +
 
@@ -25,7 +29,11 @@ Menor
 
 Deslocamento para esquerda
 <<
+
+
 Subtração
+---------
+
 -
 
 Maior
@@ -49,14 +57,37 @@ Divisão Inteira
 //
 
 
->>> 7 / 2
-3.5
->>> 7 / 2.0
-3.5
->>> 7 // 2.0
-3.0
->>> 7 // 2
-3
+.. code-block:: python
+
+    7 / 2
+
+.. code-block:: console
+
+    3.5
+
+.. code-block:: python
+
+    7 / 2.0
+
+.. code-block:: console
+
+    3.5
+
+.. code-block:: python
+
+    7 // 2.0
+
+.. code-block:: console
+
+    3.0
+
+.. code-block:: python
+
+    7 // 2
+
+.. code-block:: console
+
+    3
 
 
 
@@ -118,17 +149,37 @@ Potência
 
 '''    
 
-False | False
-False
+.. code-block:: python
 
-False | True
-True
+    False | False
 
-True | False
-True
+.. code-block:: console
 
-True | True
-True
+    False
+
+.. code-block:: python
+
+    False | True
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    True | False
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    True | True
+
+.. code-block:: console
+
+    True
 
 
 
@@ -137,8 +188,13 @@ True
 
 # 0010 | 0001 = 0011 -> 2 | 1 = 3
 
-2 | 1
-3
+.. code-block:: python
+
+    2 | 1
+
+.. code-block:: console
+
+    3
 
 '''
 0010
@@ -151,8 +207,14 @@ ou
 
 # 1010 | 0011 = 1011 -> 10 | 3 = 11
 
-10 | 3
-11
+
+.. code-block:: python
+
+    10 | 3
+
+.. code-block:: console
+
+    11
 
 
 # Operador ampersand "&": E Binário / Binary And
@@ -176,65 +238,98 @@ ou
 
 
 
-False & False
-False
+.. code-block:: python
 
-False & True
-False
+    False & False
 
-True & False
-False
+.. code-block:: console
 
-True & True
-True
+    False
+
+.. code-block:: python
+
+    False & True
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    True & False
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    True & True
+
+.. code-block:: console
+
+    True
 
 
 # 0010 & 0001 = 0000 -> 2 & 1 = 0
 
-2 & 1
-0
+.. code-block:: python
+
+    2 & 1
+
+.. code-block:: console
+
+    0
 
 
 # 1010 & 0011 = 0010 -> 10 & 3 = 2
 
-10 & 3
-2
+.. code-block:: python
+
+    10 & 3
+
+.. code-block:: console
+
+    2
 
 
 
 ## Operador ampersand "^": Ou Exclusivo Binário / Binary XOr
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Deslocamento de Bits / Bit Shift
 
 
-False >> False
-0
+.. code-block:: python
 
-False >> True
-0
+    False >> False
 
-True >> False
-1
+.. code-block:: console
 
-True >> True
-0
+    0
+
+.. code-block:: python
+
+    False >> True
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    True >> False
+
+.. code-block:: console
+
+    1
+
+.. code-block:: python
+
+    True >> True
+
+    .. code-block:: console
+
+    0
 
 
 

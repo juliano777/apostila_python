@@ -19,7 +19,11 @@ def funcao():
     print(msg)      
     
 funcao()
-O quardrado de 7 é 49
+
+
+.. code-block:: console
+
+    O quardrado de 7 é 49
 
 O Comando return
 ----------------
@@ -39,7 +43,10 @@ def funcao():
 Utilizando print para imprimir em tela o valor retornado pela função multiplicado por 3
 
 print(funcao() * 3)    
-21
+
+.. code-block:: console
+
+    21
 
 Definição de uma função que retorna mais de um valor
 
@@ -53,12 +60,18 @@ x = funcao()
 Imprimindo o valor da variável
 
 print(x)
-(3, 9)
+
+.. code-block:: console
+
+    (3, 9)
 
 Verificando o tipo da variável
 
 type(x)
-tuple
+
+.. code-block:: console
+
+    tuple
 
 Definição de uma função com código após return
 
@@ -69,7 +82,9 @@ def funcao():
 Execução da função    
     
 funcao()
-7
+.. code-block:: console
+
+    7
 
 Como pode-se notar, o código inserido após return foi completamente ignorado.
 Devido ao fato de os comandos serem digitados no shell interativo foi impresso em tela
@@ -93,18 +108,23 @@ Execução da função sem passar argumentos
 funcao()  
 
 ---------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-/home/28532757871/<ipython-input-22-7473677d9fe3> in <module>()
-----> 1 funcao()
+.. code-block:: console
 
-TypeError: funcao() takes exactly 1 argument (0 given)
+    TypeError                                 Traceback (most recent call last)
+    /home/beethoven/<ipython-input-22-7473677d9fe3> in <module>()
+    ----> 1 funcao()
+
+    TypeError: funcao() takes exactly 1 argument (0 given)
 
 Devido ao fato de a função exigir que seja passado um argumento
 
 Execução da função passando um argumento
 
 funcao(7)
-7
+
+.. code-block:: console
+
+    7
 
 =====================================================================================================================
 

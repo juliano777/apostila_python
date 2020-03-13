@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -207,22 +207,31 @@ A função interna é também conhecida como função auxiliadora (helper).</p>
 </div></blockquote>
 <p>Qual é o nome da função?:</p>
 <p>&gt; print(foo.__name__)</p>
-<p>funcao_auxiliadora</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">funcao_auxiliadora</span>
+</pre></div>
+</div>
 <p>Tipo de “foo”:</p>
 <p>&gt; type(foo)</p>
-<p>function</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">function</span>
+</pre></div>
+</div>
 <p>Representação de “foo”:</p>
 <p>&gt; repr(foo)</p>
-<p>‘&lt;function funcao_principal.&lt;locals&gt;.funcao_auxiliadora at 0x7f9845369950&gt;’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;function funcao_principal.&lt;locals&gt;.funcao_auxiliadora at 0x7f9845369950&gt;&#39;</span>
+</pre></div>
+</div>
 <p>Imprimindo o valor resultante ao passar agora o valor y:</p>
 <p>&gt; print(foo(6))</p>
-<p>64</p>
-<blockquote>
-<div><p>A operação realizada foi 2 elevado a 6 (x ** y).</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">64</span>
+
+<span class="go">A operação realizada foi 2 elevado a 6 (x ** y).</span>
+</pre></div>
+</div>
 <p>Podemos também chamar a função principal passando o parâmetro da função auxiliar:</p>
 <p>&gt; funcao_principal(5)(2)</p>
-<p>25</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">25</span>
+</pre></div>
+</div>
 <p>Closures com Lambda</p>
 <p>Criação de uma closure com lambda:</p>
 <dl class="simple">
@@ -233,19 +242,29 @@ A função interna é também conhecida como função auxiliadora (helper).</p>
 <p>&gt; bar = funcao_principal(3)</p>
 <p>Exibindo o nome do objeto:</p>
 <p>&gt; print(bar.__name__)</p>
-<p>&lt;lambda&gt;</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;lambda&gt;</span>
+</pre></div>
+</div>
 <p>Tipo:</p>
 <p>&gt; type(bar)</p>
-<p>function</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">function</span>
+</pre></div>
+</div>
 <p>Representação:</p>
 <p>&gt; repr(bar)</p>
-<p>‘&lt;function funcao_principal.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9844527730&gt;’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;function funcao_principal.&lt;locals&gt;.&lt;lambda&gt; at 0x7f9844527730&gt;&#39;</span>
+</pre></div>
+</div>
 <p>3 elevado a 2:</p>
 <p>&gt; print(bar(2))</p>
-<p>9</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
+</pre></div>
+</div>
 <p>Passando o parâmetro da função principal e de lambda:</p>
 <p>&gt; funcao_principal(2)(5)</p>
-<p>32</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">32</span>
+</pre></div>
+</div>
 </div>
 
 

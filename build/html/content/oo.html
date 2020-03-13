@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">18. Orientação a Objetos</a><ul>
@@ -340,7 +340,9 @@ modelo = ‘’</p>
 <p>c1 = Carro()</p>
 <p>Vejamos agora o dicionário de atributos com seus respectivos valores:</p>
 <p>print(c1.__dict__)</p>
-<p>{}</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{}</span>
+</pre></div>
+</div>
 <p>O atributo especial __dict__, em um objeto, é um dicionário que é usado para guardar atributos e seus respectivos valores.
 O dicionário em questão apresentou um conjunto vazio.</p>
 <p>Agora vamos preencher os atributos:</p>
@@ -348,12 +350,16 @@ O dicionário em questão apresentou um conjunto vazio.</p>
 c1.modelo = ‘911’</p>
 <p>Consulta ao dicionário do objeto novamente:</p>
 <p>print(c1.__dict__)</p>
-<p>{‘modelo’: ‘911’, ‘marca’: ‘Porsche’}</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;modelo&#39;: &#39;911&#39;, &#39;marca&#39;: &#39;Porsche&#39;}</span>
+</pre></div>
+</div>
 <p>Com os atributos preenchidos com valores agora o dicionário não está mais vazio.
 Python é tão flexível que nos permite até criar um atributo “on the fly”:</p>
 <p>c1.ano = 1993</p>
 <p>print(c1.__dict__)</p>
-<p>{‘ano’: 1993, ‘modelo’: ‘911’, ‘marca’: ‘Porsche’}</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;ano&#39;: 1993, &#39;modelo&#39;: &#39;911&#39;, &#39;marca&#39;: &#39;Porsche&#39;}</span>
+</pre></div>
+</div>
 <p>E que tal se pudermos no momento da criação do objeto, além de poder atribuir valores
 aos atributos existentes, também criar atributos que não existem na classe?</p>
 <p>Criação da classe Carro agora utilizando o método construtor (__init__()), o qual fará
@@ -375,7 +381,9 @@ def __init__(self, <a href="#id1"><span class="problematic" id="id2">**</span></
 <p>c1 = Carro(marca = ‘Porsche’, modelo = ‘911’, cor = ‘verde’, ano = 1991)</p>
 <p>Verificando o dicionário do objeto:</p>
 <p>print(c1.__dict__)</p>
-<p>{‘ano’: 1991, ‘modelo’: ‘911’, ‘marca’: ‘Porsche’, ‘cor’: ‘verde’}</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;ano&#39;: 1991, &#39;modelo&#39;: &#39;911&#39;, &#39;marca&#39;: &#39;Porsche&#39;, &#39;cor&#39;: &#39;verde&#39;}</span>
+</pre></div>
+</div>
 <p>O Método super()</p>
 <dl class="simple">
 <dt>class Mae(object):</dt><dd><dl class="simple">

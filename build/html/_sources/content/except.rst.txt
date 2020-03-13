@@ -134,12 +134,13 @@ In [10]: try:
 except IndexError:    
     print('\n\nERRO: Índice não encontrado\n\n')
    
-zero
-um
-dois
+.. code-block:: console
 
+    zero
+    um
+    dois
 
-ERRO: Índice não encontrado
+    ERRO: Índice não encontrado
 
 
 try:                            

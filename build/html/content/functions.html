@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">17. Funções</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#funcoes-sem-argumentos">17.1. Funções sem Argumentos</a></li>
@@ -205,8 +205,10 @@ msg = ‘O quardrado de 7 é %d’ % numero
 print(msg)</p>
 </dd>
 </dl>
-<p>funcao()
-O quardrado de 7 é 49</p>
+<p>funcao()</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">O quardrado de 7 é 49</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="o-comando-return">
 <h2><span class="section-number">17.2. </span>O Comando return<a class="headerlink" href="#o-comando-return" title="Link permanente para este título">¶</a></h2>
@@ -224,8 +226,10 @@ Quando uma função não tem um comando return, seu retorno é None implícito, 
 </dd>
 </dl>
 <p>Utilizando print para imprimir em tela o valor retornado pela função multiplicado por 3</p>
-<p>print(funcao() * 3)
-21</p>
+<p>print(funcao() * 3)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">21</span>
+</pre></div>
+</div>
 <p>Definição de uma função que retorna mais de um valor</p>
 <dl class="simple">
 <dt>def funcao():</dt><dd><p>return 3, 9</p>
@@ -234,11 +238,15 @@ Quando uma função não tem um comando return, seu retorno é None implícito, 
 <p>Atribuindo à variável o valor de retorno da função</p>
 <p>x = funcao()</p>
 <p>Imprimindo o valor da variável</p>
-<p>print(x)
-(3, 9)</p>
+<p>print(x)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(3, 9)</span>
+</pre></div>
+</div>
 <p>Verificando o tipo da variável</p>
-<p>type(x)
-tuple</p>
+<p>type(x)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tuple</span>
+</pre></div>
+</div>
 <p>Definição de uma função com código após return</p>
 <dl class="simple">
 <dt>def funcao():</dt><dd><p>return 7
@@ -247,7 +255,10 @@ print(‘Teste’)</p>
 </dl>
 <p>Execução da função</p>
 <p>funcao()
-7</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>7</p>
+</div></blockquote>
 <p>Como pode-se notar, o código inserido após return foi completamente ignorado.
 Devido ao fato de os comandos serem digitados no shell interativo foi impresso em tela
 o valor de retorno da função.</p>
@@ -264,12 +275,18 @@ Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não o
 </dl>
 <p>Execução da função sem passar argumentos</p>
 <p>funcao()</p>
-<p>—-&gt; 1 funcao()</p>
+<blockquote>
+<div><p>TypeError                                 Traceback (most recent call last)
+/home/beethoven/&lt;ipython-input-22-7473677d9fe3&gt; in &lt;module&gt;()
+—-&gt; 1 funcao()</p>
 <p>TypeError: funcao() takes exactly 1 argument (0 given)</p>
+</div></blockquote>
 <p>Devido ao fato de a função exigir que seja passado um argumento</p>
 <p>Execução da função passando um argumento</p>
-<p>funcao(7)
-7</p>
+<p>funcao(7)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 <hr class="docutils" />
 <p>Argumentos Nomeados</p>
 <blockquote>

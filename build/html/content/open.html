@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -204,7 +204,9 @@ Um arquivo é iterável, cujas iterações são por linha.</p>
 <p>&gt; f = open(‘/tmp/foo.txt’, ‘w+’)</p>
 <p>bla bla bla:</p>
 <p>&gt; type(f)</p>
-<p>_io.TextIOWrapper</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">_io.TextIOWrapper</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; print(‘Teste de escrita em arquivo’, file=f)</p>
 <p>bla bla bla:</p>
@@ -237,23 +239,33 @@ linha_3</p>
 <p>&gt; f = open(‘/tmp/linhas.txt’)</p>
 <p>bla bla bla:</p>
 <p>&gt; f.readline()</p>
-<p>‘linha_1n’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;linha_1\n&#39;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.readline().split()</p>
-<p>[‘linha_2’]</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_2&#39;]</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.readline().split()</p>
-<p>[‘linha_3’]</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_3&#39;]</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.readline().split()</p>
-<p>[]</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[]</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
 <p>&gt; f = open(‘/tmp/linhas.txt’)</p>
 <p>bla bla bla:</p>
 <p>&gt; f.readlines()</p>
-<p>[‘linha_1n’, ‘linha_2n’, ‘linha_3n’]</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_1\n&#39;, &#39;linha_2\n&#39;, &#39;linha_3\n&#39;]</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
@@ -304,9 +316,11 @@ EOF</p>
 <dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
 </dd>
 </dl>
-<p>1 - Verde
-2 - Preto
-3 - Branco</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
+<span class="go">2 - Preto</span>
+<span class="go">3 - Branco</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.seek(1)</p>
 <p>bla bla bla:</p>
@@ -314,32 +328,46 @@ EOF</p>
 <dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
 </dd>
 </dl>
-<ul class="simple">
-<li><p>Verde</p></li>
-</ul>
-<p>2 - Preto
-3 - Branco</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
+<span class="go">2 - Preto</span>
+<span class="go">3 - Branco</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.seek(0)</p>
-<p>0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
 <p>&gt; f.read(7)</p>
-<p>‘1 - Ver’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Ver&#39;</span>
+</pre></div>
+</div>
 <p>&gt; f.read(7)</p>
-<p>‘den2 - ‘</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;de\n2 - &#39;</span>
+</pre></div>
+</div>
 <p>&gt; f.read(7)</p>
-<p>‘Preton3’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Preto\n3&#39;</span>
+</pre></div>
+</div>
 <p>&gt; f.read(7)</p>
-<p>‘ - Bran’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; - Bran&#39;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
 <p>&gt; f.closed</p>
-<p>True</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f = open(‘/tmp/cores.txt’, ‘w’)</p>
 <p>bla bla bla:</p>
 <p>&gt; f.closed</p>
-<p>False</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
@@ -352,17 +380,23 @@ EOF</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/cores.txt</p>
-<p>1 - Verde</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; print(f.name)</p>
-<p>/tmp/cores.txt</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/tmp/cores.txt</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f = open(‘/tmp/cores.txt’, ‘a’)</p>
 <p>bla bla bla:</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/cores.txt</p>
-<p>1 - Verde</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f = open(‘/tmp/cores.txt’, ‘a’)</p>
 <p>bla bla bla:</p>
@@ -373,34 +407,50 @@ EOF</p>
 <p>&gt; f.flush()</p>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/cores.txt</p>
-<p>1 - Verde
-2 - Preto
-3 - Branco</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
+<span class="go">2 - Preto</span>
+<span class="go">3 - Branco</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
 <p>&gt; f = open(‘/tmp/cores.txt’, ‘r’)</p>
 <p>bla bla bla:</p>
 <p>&gt; f.tell()</p>
-<p>0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.read()</p>
-<p>‘1 - Verden2 - Preton3 - Brancon’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Verde\n2 - Preto\n3 - Branco\n&#39;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.tell()</p>
-<p>31</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">31</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.seek(0)</p>
-<p>0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.tell()</p>
-<p>0</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.read(7)</p>
-<p>‘1 - Ver’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Ver&#39;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.tell()</p>
-<p>7</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
@@ -413,9 +463,11 @@ EOF</p>
 <p>&gt; f.flush()</p>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/planetas.txt</p>
-<p>Saturno
-Urano
-Netuno</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Saturno</span>
+<span class="go">Urano</span>
+<span class="go">Netuno</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; planetas = (‘Marten’, ‘Vênusn’, ‘Plutãon’, ‘Júpitern’)</p>
 <p>bla bla bla:</p>
@@ -424,13 +476,15 @@ Netuno</p>
 <p>&gt; f.close()</p>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/planetas.txt</p>
-<p>Saturno
-Urano
-Netuno
-Marte
-Vênus
-Plutão
-Júpiter</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Saturno</span>
+<span class="go">Urano</span>
+<span class="go">Netuno</span>
+<span class="go">Marte</span>
+<span class="go">Vênus</span>
+<span class="go">Plutão</span>
+<span class="go">Júpiter</span>
+</pre></div>
+</div>
 </div>
 
 

@@ -25,7 +25,9 @@ foo = 7
 Exibindo na tela o valor da variável
 
 print(foo)
-7
+.. code-block:: console
+
+    7
 
 A função locals() retorna um dicionário com os identificadores locais e seus respectivos valores.
 Então é pedido o valor dada a chave que é o nome da variável local.
@@ -53,12 +55,16 @@ Essa função imprime o ID desse identificador e depois imprime seu valor.
 Exibindo o ID de foo    
 
 print(id(foo))
-162857064
+.. code-block:: console
+
+    162857064
 
 Exibindo o valor de foo
 
 print(foo)
-7
+.. code-block:: console
+
+    7
 
 Acionando a função
 
@@ -92,7 +98,9 @@ pela função secundária.
 
 Chamando a função     
 funcao_principal()
-1
+.. code-block:: console
+
+    1
 
 
 Uma nova definição da função
@@ -109,7 +117,9 @@ Diferente do exemplo anterior, a função secundária declarou sua própria vari
 
 Testando a função    
 funcao_principal()
-2
+.. code-block:: console
+
+    2
 
 Nota-se que o valor considerado foi o de "x", que é o identificador mais interno.
 
@@ -136,7 +146,9 @@ Será que isso altera o valor da variável global?
 Execução da função
         
 funcao()
-eggs
+.. code-block:: console
+
+    eggs
 
 Podemos notar que o valor impresso é igual ao da variável "foo" dentro da função.
 Pra saber se a variável global foi alterada, vamos testar com a função print.
@@ -144,7 +156,9 @@ Pra saber se a variável global foi alterada, vamos testar com a função print.
 Imprimindo o valor da variável global
 
 print(foo)
-bar
+.. code-block:: console
+
+    bar
 
 Pode-se concluir que a função criada não interferiu na variável global.
 Para alterar uma variável global em um contexto local precisamos utilizar o comando global.
@@ -160,7 +174,9 @@ def funcao():
 Executar função
     
 funcao()
-eggs
+.. code-block:: console
+
+    eggs
       
 OK, a função imprimiu o valor local da função.
 Mas será que a variável global também foi alterada?
@@ -169,7 +185,9 @@ Mas será que a variável global também foi alterada?
 Imprimir o valor da variável global
       
 print(foo)
-eggs
+.. code-block:: console
+
+    eggs
 
 Agora a função pôde alterar a variável global.
 Isso se deve ao fato do comando global ter sido empregado.
@@ -198,7 +216,9 @@ str = 1
 Qual é o tipo?
 
 type(str)
-int
+.. code-block:: console
+
+    int
 
 "str" que inicialmente era um identificador para o tipo de strings em Python, 
 aqui agora virou uma variável de inteiro.
@@ -223,14 +243,18 @@ __builtins__.str(str)
 del str
 
 str(7)
-'7'
+.. code-block:: console
+
+    '7'
 
 
 dir(__builtins__)
 
 
-global nome_variavel
-nome_variavel = valor
+.. code-block:: console
+
+    global nome_variavel
+    nome_variavel = valor
 
 
 
@@ -265,8 +289,10 @@ bla bla bla:
 
 > f()
 
-escopo global
-escopo local
+.. code-block:: console
+
+    escopo global
+    escopo local
 
 
 
@@ -282,12 +308,14 @@ bla bla bla:
 
 > vars(Spam)
 
-<dictproxy {'__dict__': <attribute '__dict__' of 'Spam' objects>,
- '__doc__': None,
- '__module__': '__main__',
- '__weakref__': <attribute '__weakref__' of 'Spam' objects>,
- 'bar': '',
- 'foo': ''}>
+.. code-block:: console
+
+    <dictproxy {'__dict__': <attribute '__dict__' of 'Spam' objects>,
+     '__doc__': None,
+     '__module__': '__main__',
+     '__weakref__': <attribute '__weakref__' of 'Spam' objects>,
+     'bar': '',
+     'foo': ''}>
 
 
 
@@ -303,7 +331,9 @@ bla bla bla:
 
 > type(x)
 
-NameError: name 'x' is not defined
+.. code-block:: console
+
+    NameError: name 'x' is not defined
 
 
 
@@ -317,7 +347,9 @@ bla bla bla:
 
 > type(x)
 
-int
+.. code-block:: console
+
+    int
 
 
 
@@ -325,4 +357,6 @@ bla bla bla:
 
 > print(x)
 
-7
+.. code-block:: console
+
+    7

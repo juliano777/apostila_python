@@ -47,7 +47,9 @@ Método de classe <class '__main__.Foo'>
 Invocando um método estático a partir da classe
 
 Foo.metodo_estatico()
-Método estático
+.. code-block:: console
+
+    Método estático
 
 
 Criação de objeto:
@@ -59,14 +61,20 @@ A instância "o" é implicitamente passada como argumento para o método constru
 Chamada do método comum pela instância
 
 o.metodo_comum()
-Método comum <__main__.Foo object at 0x7f40d812d410>
+.. code-block:: console
+
+    Método comum <__main__.Foo object at 0x7f40d812d410>
 
 Chamada do método de classe pela instância
 
 o.metodo_de_classe()
-Método de classe <class '__main__.Foo'>
+.. code-block:: console
+
+    Método de classe <class '__main__.Foo'>
 
 Chamada do método estático pela instância
 
 o.metodo_estatico()
-Método estático
+.. code-block:: console
+
+    Método estático

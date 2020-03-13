@@ -31,7 +31,9 @@ bla bla bla:
 
 > type(f)
 
-_io.TextIOWrapper
+.. code-block:: console
+
+    _io.TextIOWrapper
 
 
 
@@ -108,7 +110,9 @@ bla bla bla:
 
 > f.readline()
 
-'linha_1\n'
+.. code-block:: console
+
+    'linha_1\n'
 
 
 
@@ -116,7 +120,9 @@ bla bla bla:
 
 > f.readline().split()
 
-['linha_2']
+.. code-block:: console
+
+    ['linha_2']
 
 
 
@@ -124,7 +130,9 @@ bla bla bla:
 
 > f.readline().split()
 
-['linha_3']
+.. code-block:: console
+
+    ['linha_3']
 
 
 
@@ -132,7 +140,9 @@ bla bla bla:
 
 > f.readline().split()
 
-[]
+.. code-block:: console
+
+    []
 
 
 
@@ -152,7 +162,9 @@ bla bla bla:
 
 > f.readlines()
 
-['linha_1\n', 'linha_2\n', 'linha_3\n']
+.. code-block:: console
+
+    ['linha_1\n', 'linha_2\n', 'linha_3\n']
 
 
 
@@ -244,9 +256,11 @@ bla bla bla:
 > for i in f:
     print(i.strip())
 
-1 - Verde
-2 - Preto
-3 - Branco
+.. code-block:: console
+
+    1 - Verde
+    2 - Preto
+    3 - Branco
 
 
 
@@ -261,9 +275,11 @@ bla bla bla:
 > for i in f:
     print(i.strip())
 
-- Verde
-2 - Preto
-3 - Branco
+.. code-block:: console
+
+    1 - Verde
+    2 - Preto
+    3 - Branco
 
 
 
@@ -271,24 +287,34 @@ bla bla bla:
 
 > f.seek(0)
 
-0
+.. code-block:: console
+
+    0
 
 > f.read(7)
 
-'1 - Ver'
+.. code-block:: console
+
+    '1 - Ver'
 
 
 > f.read(7)
 
-'de\n2 - '
+.. code-block:: console
+
+    'de\n2 - '
 
 > f.read(7)
 
-'Preto\n3'
+.. code-block:: console
+
+    'Preto\n3'
 
 > f.read(7)
 
-' - Bran'
+.. code-block:: console
+
+    ' - Bran'
 
 
 
@@ -302,7 +328,9 @@ bla bla bla:
 
 > f.closed
 
-True
+.. code-block:: console
+
+    True
 
 
 
@@ -316,7 +344,9 @@ bla bla bla:
 
 > f.closed
 
-False
+.. code-block:: console
+
+    False
 
 
 
@@ -354,7 +384,9 @@ bla bla bla:
 
 $ cat /tmp/cores.txt
 
-1 - Verde
+.. code-block:: console
+
+    1 - Verde
 
 
 
@@ -362,7 +394,9 @@ bla bla bla:
 
 > print(f.name)
 
-/tmp/cores.txt
+.. code-block:: console
+
+    /tmp/cores.txt
 
 
 
@@ -382,7 +416,9 @@ bla bla bla:
 
 $ cat /tmp/cores.txt
 
-1 - Verde
+.. code-block:: console
+
+    1 - Verde
 
 
 
@@ -414,9 +450,11 @@ bla bla bla:
 
 $ cat /tmp/cores.txt
 
-1 - Verde
-2 - Preto
-3 - Branco
+.. code-block:: console
+
+    1 - Verde
+    2 - Preto
+    3 - Branco
 
 
 
@@ -436,7 +474,9 @@ bla bla bla:
 
 > f.tell()
 
-0
+.. code-block:: console
+
+    0
 
 
 
@@ -444,7 +484,9 @@ bla bla bla:
 
 > f.read()
 
-'1 - Verde\n2 - Preto\n3 - Branco\n'
+.. code-block:: console
+
+    '1 - Verde\n2 - Preto\n3 - Branco\n'
 
 
 
@@ -452,7 +494,9 @@ bla bla bla:
 
 > f.tell()
 
-31
+.. code-block:: console
+
+    31
 
 
 
@@ -460,7 +504,9 @@ bla bla bla:
 
 > f.seek(0)
 
-0
+.. code-block:: console
+
+    0
 
 
 
@@ -468,7 +514,9 @@ bla bla bla:
 
 > f.tell()
 
-0
+.. code-block:: console
+
+    0
 
 
 
@@ -476,7 +524,9 @@ bla bla bla:
 
 > f.read(7)
 
-'1 - Ver'
+.. code-block:: console
+
+    '1 - Ver'
 
 
 
@@ -484,7 +534,9 @@ bla bla bla:
 
 > f.tell()
 
-7
+.. code-block:: console
+
+    7
 
 
 
@@ -522,9 +574,11 @@ bla bla bla:
 
 $ cat /tmp/planetas.txt
 
-Saturno
-Urano
-Netuno
+.. code-block:: console
+
+    Saturno
+    Urano
+    Netuno
 
 
 
@@ -550,10 +604,12 @@ bla bla bla:
 
 $ cat /tmp/planetas.txt
 
-Saturno
-Urano
-Netuno
-Marte
-Vênus
-Plutão
-Júpiter
+.. code-block:: console
+
+    Saturno
+    Urano
+    Netuno
+    Marte
+    Vênus
+    Plutão
+    Júpiter

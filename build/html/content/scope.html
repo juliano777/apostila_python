@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -208,7 +208,10 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <p>foo = 7</p>
 <p>Exibindo na tela o valor da variável</p>
 <p>print(foo)
-7</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>7</p>
+</div></blockquote>
 <p>A função locals() retorna um dicionário com os identificadores locais e seus respectivos valores.
 Então é pedido o valor dada a chave que é o nome da variável local.</p>
 <p>locals()[‘foo’]
@@ -227,10 +230,16 @@ print(foo)</p>
 Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
 <p>Exibindo o ID de foo</p>
 <p>print(id(foo))
-162857064</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>162857064</p>
+</div></blockquote>
 <p>Exibindo o valor de foo</p>
 <p>print(foo)
-7</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>7</p>
+</div></blockquote>
 <p>Acionando a função</p>
 <p>funcao()
 162857040
@@ -261,7 +270,10 @@ def funcao_secundaria():</p>
 </dl>
 <p>Chamando a função
 funcao_principal()
-1</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>1</p>
+</div></blockquote>
 <p>Uma nova definição da função</p>
 <dl>
 <dt>def funcao_principal():</dt><dd><p>x = 1
@@ -276,7 +288,10 @@ print(x)</p>
 <p>Diferente do exemplo anterior, a função secundária declarou sua própria variável “x”.</p>
 <p>Testando a função
 funcao_principal()
-2</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>2</p>
+</div></blockquote>
 <p>Nota-se que o valor considerado foi o de “x”, que é o identificador mais interno.</p>
 <ul>
 <li><p>Escopo Global ou Escopo do Módulo</p>
@@ -297,12 +312,18 @@ imprime esse valor em tela.
 Será que isso altera o valor da variável global?</p>
 <p>Execução da função</p>
 <p>funcao()
-eggs</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>eggs</p>
+</div></blockquote>
 <p>Podemos notar que o valor impresso é igual ao da variável “foo” dentro da função.
 Pra saber se a variável global foi alterada, vamos testar com a função print.</p>
 <p>Imprimindo o valor da variável global</p>
 <p>print(foo)
-bar</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>bar</p>
+</div></blockquote>
 <p>Pode-se concluir que a função criada não interferiu na variável global.
 Para alterar uma variável global em um contexto local precisamos utilizar o comando global.</p>
 <p>Criação de função que altera a variável global</p>
@@ -314,12 +335,18 @@ print(foo)</p>
 </dl>
 <p>Executar função</p>
 <p>funcao()
-eggs</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>eggs</p>
+</div></blockquote>
 <p>OK, a função imprimiu o valor local da função.
 Mas será que a variável global também foi alterada?</p>
 <p>Imprimir o valor da variável global</p>
 <p>print(foo)
-eggs</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>eggs</p>
+</div></blockquote>
 <p>Agora a função pôde alterar a variável global.
 Isso se deve ao fato do comando global ter sido empregado.
 A variável global a ser alterada deve ser declarada como global antes de sua
@@ -339,7 +366,10 @@ E se subscrevermos esse item localmente?</p>
 str = 1</p>
 <p>Qual é o tipo?</p>
 <p>type(str)
-int</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>int</p>
+</div></blockquote>
 <p>“str” que inicialmente era um identificador para o tipo de strings em Python,
 aqui agora virou uma variável de inteiro.
 Mas e o tipo “str” deixou de existir?</p>
@@ -354,10 +384,15 @@ type</p>
 ‘1’</p>
 <p>del str</p>
 <p>str(7)
-‘7’</p>
+.. code-block:: console</p>
+<blockquote>
+<div><p>‘7’</p>
+</div></blockquote>
 <p>dir(__builtins__)</p>
-<p>global nome_variavel
-nome_variavel = valor</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">global nome_variavel</span>
+<span class="go">nome_variavel = valor</span>
+</pre></div>
+</div>
 <p># ==============================================================================</p>
 <p>Funções globals(), locals() e vars() e Comando global</p>
 <blockquote>
@@ -378,8 +413,10 @@ print(locals()[‘foo’])</p>
 </dl>
 <p>bla bla bla:</p>
 <p>&gt; f()</p>
-<p>escopo global
-escopo local</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">escopo global</span>
+<span class="go">escopo local</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <dl class="simple">
 <dt>&gt; class Spam(object):</dt><dd><p>foo = ‘’
@@ -388,14 +425,14 @@ bar = ‘’</p>
 </dl>
 <p>bla bla bla:</p>
 <p>&gt; vars(Spam)</p>
-<dl class="simple">
-<dt>&lt;dictproxy {‘__dict__’: &lt;attribute ‘__dict__’ of ‘Spam’ objects&gt;,</dt><dd><p>‘__doc__’: None,
-‘__module__’: ‘__main__’,
-‘__weakref__’: &lt;attribute ‘__weakref__’ of ‘Spam’ objects&gt;,
-‘bar’: ‘’,
-‘foo’: ‘’}&gt;</p>
-</dd>
-</dl>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;dictproxy {&#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;Spam&#39; objects&gt;,</span>
+<span class="go"> &#39;__doc__&#39;: None,</span>
+<span class="go"> &#39;__module__&#39;: &#39;__main__&#39;,</span>
+<span class="go"> &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;Spam&#39; objects&gt;,</span>
+<span class="go"> &#39;bar&#39;: &#39;&#39;,</span>
+<span class="go"> &#39;foo&#39;: &#39;&#39;}&gt;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <dl class="simple">
 <dt>&gt; def f():</dt><dd><p>global x
@@ -404,15 +441,21 @@ x = 7</p>
 </dl>
 <p>bla bla bla:</p>
 <p>&gt; type(x)</p>
-<p>NameError: name ‘x’ is not defined</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">NameError: name &#39;x&#39; is not defined</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; f()</p>
 <p>bla bla bla:</p>
 <p>&gt; type(x)</p>
-<p>int</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>&gt; print(x)</p>
-<p>7</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 </div>
 
 

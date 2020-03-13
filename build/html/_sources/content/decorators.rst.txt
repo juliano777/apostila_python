@@ -120,8 +120,10 @@ Execução da classe decorada:
 
 > print(soma(2, 5))
 
-Método __call__() do decorador
-7
+.. code-block:: console
+
+    Método __call__() do decorador
+    7
 
 
 
@@ -157,9 +159,11 @@ Execução da função decorada:
   
 > foo() 
 
-Antes da função decorada
-Função decorada
-Depois da função decorada
+.. code-block:: console
+
+    Antes da função decorada
+    Função decorada
+    Depois da função decorada
 
 
 
@@ -192,7 +196,9 @@ Execução da função decorada:
 
 > fc_msg('Hello, World!')
 
-'<i><b>Hello, World!</b></i>'
+.. code-block:: console
+
+    '<i><b>Hello, World!</b></i>'
 
 
 
@@ -236,4 +242,6 @@ Execução da função decorada:
 
 > fibo(39)
 
-63245986
+.. code-block:: console
+
+    63245986

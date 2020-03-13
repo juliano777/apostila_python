@@ -20,7 +20,9 @@ Representação:
 
 > repr(it)
 
-'<iterator object at 0x7f123cd62c50>'
+.. code-block:: console
+
+    '<iterator object at 0x7f123cd62c50>'
 
 
 
@@ -28,23 +30,31 @@ Executando o método __next__ até seu fim:
 
 > it.__next__()
 
-'b'
+.. code-block:: console
+
+    'b'
 
 > it.__next__()
 
-'a'
+.. code-block:: console
+
+    'a'
 
 > it.__next__()
 
-'r'
+.. code-block:: console
+
+    'r'
 
 > it.__next__()
 
-StopIteration:
+.. code-block:: console
 
-    Bla bla bla
+    StopIteration:
 
-    Nota-se que a iteração foi feita sobre a string declarada, de forma a retornar caractere por caractere e após o último foi lançada uma exceção indicando que não há mais elementos a serem retornados.
+        Bla bla bla
+
+Nota-se que a iteração foi feita sobre a string declarada, de forma a retornar caractere por caractere e após o último foi lançada uma exceção indicando que não há mais elementos a serem retornados.
 
 
 
@@ -83,7 +93,9 @@ Somatória dos 10 primeiros números:
 
 > print(sum(FirstNumbers(10)))
 
-45
+.. code-block:: console
+
+    45
 
 
 
@@ -111,7 +123,9 @@ Verificando os elementos:
 
 > rq
 
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+.. code-block:: console
+
+    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 
 
@@ -119,7 +133,9 @@ Verificando o tipo:
 
 > type(rq)
 
-list
+.. code-block:: console
+
+    list
 
 
 
@@ -133,7 +149,9 @@ Verificando o tipo do objeto:
 
 > type(rq)
 
-generator
+.. code-block:: console
+
+    generator
 
 
 
@@ -141,21 +159,29 @@ Executando o método dunder next até o fim dos elementos:
 
 > rq.__next__()
 
-0
+.. code-block:: console
+
+    0
 
 > rq.__next__()
 
-1
+.. code-block:: console
+
+    1
 
 . . .
 
-81
+.. code-block:: console
+
+    81
 
 > rq.__next__()
 
-StopIteration:
+.. code-block:: console
 
-    Bla bla bla
+    StopIteration:
+
+        Bla bla bla
 
 
 
@@ -187,11 +213,15 @@ Verificando os tipos:
 
 > type(gen)
 
-function
+.. code-block:: console
+
+    function
 
 > type(x)
 
-generator
+.. code-block:: console
+
+    generator
 
 
 
@@ -199,17 +229,23 @@ Execução do método __next__ até o fim:
 
 > x.__next__()
 
-0
+.. code-block:: console
+
+    0
 
 . . . 
 
 > x.__next__()
 
-9
+.. code-block:: console
+
+    9
 
 > x.__next__()
 
-StopIteration:
+.. code-block:: console
+
+    StopIteration:
 
 
 
@@ -236,11 +272,15 @@ Verificação de tipos:
 
 > type(iter([x for x in range(1, 1001)]))
 
-list_iterator
+.. code-block:: console
+
+    list_iterator
 
 > type((x for x in range(1, 1001)))
 
-generator
+.. code-block:: console
+
+    generator
 
 
 
@@ -262,8 +302,12 @@ Cronometrando os códigos de iterador e gerador, respectivamente:
 
 > timeit(code_it)
 
-42.666774257901125
+.. code-block:: console
+
+    42.666774257901125
 
 > timeit(code_gen)
 
-53.58039242995437
+.. code-block:: console
+
+    53.58039242995437

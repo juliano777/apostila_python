@@ -984,6 +984,7 @@ input
 
     # Imprimindo o valor da variável
     print(foo)
+    
 
 .. code-block:: console
 
@@ -999,6 +1000,7 @@ min e max
     # Valor mínimo entre inteiros
     min(0, 2, -50, 7)
 
+
 .. code-block:: console
 
     -50
@@ -1009,14 +1011,17 @@ min e max
     # Valor máximo entre inteiros
     max(0, 2, -50, 7)
 
+
 .. code-block:: console
 
     7
+
 
 .. code-block:: python
 
     # Para caracteres a ordem alfabética é levada em conta
     max('c', 'x', 'k')
+
 
 .. code-block:: console
 
@@ -1038,9 +1043,13 @@ enumerate
     # Exibindo o tipo de y
     type(y)
 
+
+
 .. code-block:: console
 
     enumerate
+
+   
 
 .. code-block:: python
 
@@ -1048,11 +1057,13 @@ enumerate
     for i, j in y:
         print('{} - {}'.format(i, j))
 
+
 .. code-block:: console
 
     0 - verde
     1 - azul
     2 - amarelo
+
 
 .. code-block:: python
 
@@ -1062,23 +1073,28 @@ enumerate
     # Método __next__() que traz uma tupla com o índice e o valor
     y. __next__()
 
+
 .. code-block:: console
 
     (0, 'verde')
+
 
 .. code-block:: python
 
     #
     y. __next__()
 
+
 .. code-block:: console
 
     (1, 'azul')
+
 
 .. code-block:: python
 
     # 
     y. __next__()
+
 
 .. code-block:: console
 

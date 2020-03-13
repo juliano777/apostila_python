@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuple.html">12. Tupla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set_frozenset.html">13. set e frozenset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dict.html">14. Dicionários</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Aritméticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores Bitwise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -275,8 +275,10 @@ def soma(x, y):</p>
 </div></blockquote>
 <p>Execução da classe decorada:</p>
 <p>&gt; print(soma(2, 5))</p>
-<p>Método __call__() do decorador
-7</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __call__() do decorador</span>
+<span class="go">7</span>
+</pre></div>
+</div>
 <p>Função como decorador</p>
 <blockquote>
 <div><p>Até então foram vistos exemplos de decoradores definidos como classes, agora serão vistos os definidos como função.</p>
@@ -301,9 +303,11 @@ def foo():</p>
 </div></blockquote>
 <p>Execução da função decorada:</p>
 <p>&gt; foo()</p>
-<p>Antes da função decorada
-Função decorada
-Depois da função decorada</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Antes da função decorada</span>
+<span class="go">Função decorada</span>
+<span class="go">Depois da função decorada</span>
+</pre></div>
+</div>
 <p>Podemos também aplicar mais de um decorador a uma função:</p>
 <p>&gt; # Função para itálico em HTML
 def to_italic(funcao):</p>
@@ -332,7 +336,9 @@ def fc_msg(msg):</p>
 </div></blockquote>
 <p>Execução da função decorada:</p>
 <p>&gt; fc_msg(‘Hello, World!’)</p>
-<p>‘&lt;i&gt;&lt;b&gt;Hello, World!&lt;/b&gt;&lt;/i&gt;’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;i&gt;&lt;b&gt;Hello, World!&lt;/b&gt;&lt;/i&gt;&#39;</span>
+</pre></div>
+</div>
 <p>Memoização</p>
 <blockquote>
 <div><p>Texto…</p>
@@ -369,7 +375,9 @@ else:</p>
 </div></blockquote>
 <p>Execução da função decorada:</p>
 <p>&gt; fibo(39)</p>
-<p>63245986</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">63245986</span>
+</pre></div>
+</div>
 </div>
 
 
