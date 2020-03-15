@@ -82,6 +82,77 @@ Operadores de Atribuição
 | Divisão Inteira e Atribuir        | //=      |
 +-----------------------------------+----------+
 
+Atribuição de Valores
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    # Atribuição Simples
+
+    foo = 0
+    bar = 'bla bla bla'
+    print(foo)
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    print(bar)
+
+.. code-block:: console
+
+    bla bla bla
+
+.. code-block:: python
+
+    # Atribuição Composta ou Atribuição por Tupla
+    x, y, z = (1, 2, 3)
+
+    print(x)
+
+.. code-block:: console
+
+    1
+
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    2
+
+.. code-block:: python
+
+    print(z)
+
+.. code-block:: console
+
+    3
+
+Invertendo valores:
+
+.. code-block:: python
+
+    x = 10
+    y = 20
+    x, y = y, x
+    print(x)
+
+.. code-block:: console
+
+    20
+
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    10
+
 
 Operadores Lógicos
 ------------------
@@ -318,11 +389,7 @@ bin(0b101 ^ 0b110)
 Binary One's Complement / Complemento Binário (~)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It returns the one’s complement of a number’s binary.
-It flips the bits. Binary for 2 is 00000010.
-Its one’s complement is 11111101.
-This is binary for -3.
-So, this results in -3. Similarly, ~1 results in -2.
+<>
 
 
 
@@ -332,82 +399,3 @@ Binary Left-Shift / Deslocamento Binário à Esquerda
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Binary Right-Shift / Deslocamento Binário à Direita
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
-
-
-
-Atribuição de Valores
----------------------
-
-.. code-block:: python
-
-    # Atribuição Simples
-
-    foo = 0
-    bar = 'bla bla bla'
-    print(foo)
-
-.. code-block:: console
-
-    0
-
-.. code-block:: python
-
-    print(bar)
-
-.. code-block:: console
-
-    bla bla bla
-
-.. code-block:: python
-
-    # Atribuição Composta ou Atribuição por Tupla
-    x, y, z = (1, 2, 3)
-
-    print(x)
-
-.. code-block:: console
-
-    1
-
-.. code-block:: python
-
-    print(y)
-
-.. code-block:: console
-
-    2
-
-.. code-block:: python
-
-    print(z)
-
-.. code-block:: console
-
-    3
-
-Invertendo valores:
-
-.. code-block:: python
-
-    x = 10
-    y = 20
-    x, y = y, x
-    print(x)
-
-.. code-block:: console
-
-    20
-
-.. code-block:: python
-
-    print(y)
-
-.. code-block:: console
-
-    10

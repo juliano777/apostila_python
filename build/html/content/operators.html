@@ -661,190 +661,60 @@ True</p>
 </div>
 <div class="section" id="binary-xor-ou-exclusivo-binario">
 <h3><span class="section-number">15.7.3. </span>Binary XOR / “Ou” Exclusivo Binário (^)<a class="headerlink" href="#binary-xor-ou-exclusivo-binario" title="Link permanente para este título">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 5%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><em>XOr</em></p></td>
+<td colspan="3"><p><strong>Binário</strong></p></td>
+<td></td>
+<td><p><strong>Decimal</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>NumX</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>NumY</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Resultado</em></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+<p>0b101 ^ 0b110
+3</p>
+<p>bin(0b101 ^ 0b110)
+0b11’</p>
+<p>5 ^ 6
+3</p>
 </div>
 <div class="section" id="binary-one-s-complement-complemento-binario">
 <h3><span class="section-number">15.7.4. </span>Binary One’s Complement / Complemento Binário (~)<a class="headerlink" href="#binary-one-s-complement-complemento-binario" title="Link permanente para este título">¶</a></h3>
+<p>&lt;&gt;</p>
 </div>
 <div class="section" id="binary-left-shift-deslocamento-binario-a-esquerda">
 <h3><span class="section-number">15.7.5. </span>Binary Left-Shift / Deslocamento Binário à Esquerda<a class="headerlink" href="#binary-left-shift-deslocamento-binario-a-esquerda" title="Link permanente para este título">¶</a></h3>
 </div>
 <div class="section" id="binary-right-shift-deslocamento-binario-a-direita">
 <h3><span class="section-number">15.7.6. </span>Binary Right-Shift / Deslocamento Binário à Direita<a class="headerlink" href="#binary-right-shift-deslocamento-binario-a-direita" title="Link permanente para este título">¶</a></h3>
-<p># Operadores Lógicos OR (|) e AND (&amp;)</p>
-<dl class="simple">
-<dt>‘’’</dt><dd><p>Pipe (|) e ampersand (&amp;) são operadores lógicos, utilizados respectivamente para as lógicas or e and.</p>
-</dd>
-</dl>
-<p>‘’’</p>
-<p># Operador pipe “|”: Ou Binário / Binary Or</p>
-<dl>
-<dt>‘’’</dt><dd><p>O operador pipe faz a lógica “or” binária, em português “ou”.</p>
-<p>Dada a seguinte tabela da verdade em que;</p>
-<p>0 = False
-1 = True</p>
-<p>Observe os resultados e em seguida via statements Python:</p>
-</dd>
-</dl>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 40%" />
-<col style="width: 30%" />
-<col style="width: 30%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>OR</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-<p>‘’’</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">|</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">|</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">|</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
-</pre></div>
-</div>
-<p># 0010 | 0001 = 0011 -&gt; 2 | 1 = 3</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">|</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
-</pre></div>
-</div>
-<p>‘’’
-0010
-ou
-0001
-——-
-0011
-‘’’</p>
-<p># 1010 | 0011 = 1011 -&gt; 10 | 3 = 11</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">|</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">11</span>
-</pre></div>
-</div>
-<p># Operador ampersand “&amp;”: E Binário / Binary And</p>
-<dl>
-<dt>‘’’</dt><dd><p>O operador ampersand faz a lógica “and” binária, em português “e”.</p>
-<p>Como vimos nos exemplos anteriores, mas agora com a lógica and, observe os resultados e em seguida via statements Python:</p>
-</dd>
-</dl>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 45%" />
-<col style="width: 27%" />
-<col style="width: 27%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>AND</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-<p>‘’’</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
-</pre></div>
-</div>
-<p># 0010 &amp; 0001 = 0000 -&gt; 2 &amp; 1 = 0</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">&amp;</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
-</pre></div>
-</div>
-<p># 1010 &amp; 0011 = 0010 -&gt; 10 &amp; 3 = 2</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">&amp;</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
-</pre></div>
-</div>
-<p>## Operador ampersand “^”: Ou Exclusivo Binário / Binary XOr</p>
-<p># Deslocamento de Bits / Bit Shift</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&gt;&gt;</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&gt;&gt;</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&gt;&gt;</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">&gt;&gt;</span> <span class="kc">True</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">console</span>
-
-<span class="mi">0</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="atribuicao-de-valores">
