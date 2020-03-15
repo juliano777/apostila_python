@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="28. raise" href="except.html" />
+    <link rel="next" title="28. Exceções" href="except.html" />
     <link rel="prev" title="26. Módulos" href="modules.html" /> 
 </head>
 
@@ -110,15 +110,13 @@
 <li class="toctree-l1"><a class="reference internal" href="with.html">25. with</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">26. Módulos</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">27. Pacotes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html">28. raise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#raise-exception-provocando-uma-excecao">29. raise Exception(‘Provocando uma exceção’)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="except.html#excecao-zerodivisionerror">30. Exceção ZeroDivisionError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="closures.html">31. Closures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">32. Decoradores em Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">33. Expressões vs Statements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recursive.html">34. Recursividade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="threads.html">35. Threads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytest.html">36. pytest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="except.html">28. Exceções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="closures.html">29. Closures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">30. Decoradores em Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exec_eval_execfile_compile.html">31. Expressões vs Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recursive.html">32. Recursividade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="threads.html">33. Threads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytest.html">34. pytest</a></li>
 </ul>
 
             
@@ -195,7 +193,7 @@
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># _*_ encoding: utf-8 _*_</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">Pessoa</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -203,7 +201,7 @@
     <span class="n">idade</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="nf">saudacao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Olá, meu nome é {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Olá, meu nome é </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="p">))</span>
 
 <span class="k">class</span> <span class="nc">Funcionario</span><span class="p">(</span><span class="n">Pessoa</span><span class="p">):</span>
     <span class="n">matricula</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -213,11 +211,11 @@
 </pre></div>
 </div>
 <p>import pacote.modulo:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import pack_0.foo
-f1 = pack_0.foo.Funcionario()
-f1.nome = &#39;Zezinho&#39;
-f1.saudacao()
-Olá, meu nome é Zezinho
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pack_0.foo</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">pack_0</span><span class="o">.</span><span class="n">foo</span><span class="o">.</span><span class="n">Funcionario</span><span class="p">()</span>
+<span class="n">f1</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Zezinho&#39;</span>
+<span class="n">f1</span><span class="o">.</span><span class="n">saudacao</span><span class="p">()</span>
+<span class="n">Olá</span><span class="p">,</span> <span class="n">meu</span> <span class="n">nome</span> <span class="n">é</span> <span class="n">Zezinho</span>
 </pre></div>
 </div>
 <p>$ ls pack_0/
@@ -280,7 +278,7 @@ pack_0.pack_1.pack_2.foo
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="except.html" class="btn btn-neutral float-right" title="28. raise" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="except.html" class="btn btn-neutral float-right" title="28. Exceções" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="modules.html" class="btn btn-neutral float-left" title="26. Módulos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

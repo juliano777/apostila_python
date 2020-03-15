@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -319,16 +319,16 @@ acontecerem novamente.</p>
 
 <span class="c1"># Loop</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">35</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;fib(</span><span class="si">%s</span><span class="s1">) = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fibo</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fib(</span><span class="si">%s</span><span class="s1">) = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fibo</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
 
 <span class="c1"># End time</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
 <span class="c1"># Total time</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Tempo de execução: </span><span class="si">%.3f</span><span class="s1">s&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tempo de execução: </span><span class="si">%.3f</span><span class="s1">s&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">))</span>
 
 <span class="c1"># Take a pause</span>
-<span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Pressione &lt;ENTER&gt; para continuar</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Pressione &lt;ENTER&gt; para continuar</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="c1"># Memoization of fibo</span>
 <span class="n">fibo</span> <span class="o">=</span> <span class="n">memoize</span><span class="p">(</span><span class="n">fibo</span><span class="p">)</span>
@@ -338,13 +338,13 @@ acontecerem novamente.</p>
 
 <span class="c1"># loop after memoization</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;fib(</span><span class="si">%s</span><span class="s1">) = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fibo</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fib(</span><span class="si">%s</span><span class="s1">) = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fibo</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
 
 <span class="c1"># End time</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
 <span class="c1"># Total time</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Tempo de execução: </span><span class="si">%.3f</span><span class="s1">s&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tempo de execução: </span><span class="si">%.3f</span><span class="s1">s&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Execute da seguinte forma:</p>

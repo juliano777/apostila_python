@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -209,17 +209,17 @@ Decoradores podem ser definidos como classes ou funções.</p>
 <span class="sd">        O parâmetro &quot;funcao&quot; é a função que será decorada.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
 
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>  <span class="c1"># Mensagem ao instanciar</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>  <span class="c1"># Mensagem ao instanciar</span>
         <span class="n">funcao</span><span class="p">()</span>  <span class="c1"># Executa a função ao instanciar</span>
 
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Definição da classe com decorador:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@Decorador</span>
 <span class="k">def</span> <span class="nf">funcao_decorada</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Dentro da função decorada&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dentro da função decorada&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __init__() do decorador</span>
@@ -240,11 +240,11 @@ método construtor __init__().</p>
 <p>Recriação da classe decoradora:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Decorador</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funcao</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">funcao</span> <span class="o">=</span> <span class="n">funcao</span>
 
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">funcao</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -253,7 +253,7 @@ no método construtor, mas sim no método __call__.</p>
 <p>Definição da função decorada:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@Decorador</span>
 <span class="k">def</span> <span class="nf">funcao_decorada</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Dentro da função&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dentro da função&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __init__() do decorador</span>
@@ -277,11 +277,11 @@ no método construtor, mas sim no método __call__.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Decorador</span><span class="p">():</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método __init__() do decorador&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">f</span>
 
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método __call__() do decorador&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -292,7 +292,7 @@ no método construtor, mas sim no método __call__.</p>
 </pre></div>
 </div>
 <p>Execução da classe decorada:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">soma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método __call__() do decorador</span>
@@ -310,9 +310,9 @@ no método construtor, mas sim no método __call__.</p>
 
     <span class="c1"># Função auxiliar</span>
     <span class="k">def</span> <span class="nf">funcao_auxiliar</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Antes da função decorada&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Antes da função decorada&#39;</span><span class="p">)</span>
     <span class="n">funcao</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Depois da função decorada&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Depois da função decorada&#39;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">funcao_auxiliar</span>
 </pre></div>
@@ -320,7 +320,7 @@ no método construtor, mas sim no método __call__.</p>
 <p>Definição da função decorada:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@funcao_decoradora</span>
 <span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Função decorada&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Função decorada&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Execução da função decorada:</p>

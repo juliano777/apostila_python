@@ -1070,31 +1070,23 @@ enumerate
     # Criar o iterável novamente
     y = enumerate(x)
 
-    # Método __next__() que traz uma tupla com o índice e o valor
+
+
+| Método __next__() que traz uma tupla com o índice e o valor.
+| Executar 3 (três) vezes:
+
+.. code-block:: python
+
     y. __next__()
-
-
+    
+    
 .. code-block:: console
 
     (0, 'verde')
 
-
-.. code-block:: python
-
-    #
-    y. __next__()
-
-
 .. code-block:: console
 
     (1, 'azul')
-
-
-.. code-block:: python
-
-    # 
-    y. __next__()
-
 
 .. code-block:: console
 
