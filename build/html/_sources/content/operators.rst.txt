@@ -291,7 +291,7 @@ Operadores de Identidade
 +--------------+---------------------+
 | is           | Testa se é          |
 +--------------+---------------------+
-| is not       | Testa  não é        |
+| is not       | Testa se não é      |
 +--------------+---------------------+
 
 Exemplos:
@@ -374,7 +374,7 @@ Operadores Bitwise (Operadores Bit a Bit)
 +-------------------------+--------------+
 | Binary AND              | &            |
 +-------------------------+--------------+
-| Binary OR               | |            |
+| Binary OR               | \|           |
 +-------------------------+--------------+
 | Binary XOR              | ^            |
 +-------------------------+--------------+
@@ -568,6 +568,42 @@ Binary One's Complement / Complemento Binário (~)
 Binary Left-Shift / Deslocamento Binário à Esquerda
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+.. code-block:: python
+
+    7 << 2
+
+.. code-block:: console
+
+    28
+
+.. code-block:: python
+
+    bin(7 << 2)                                     
+
+.. code-block:: console
+
+    '0b11100'
+
+.. code-block:: python
+
+    7 << 3         
+
+.. code-block:: console
+
+    56
+
+.. code-block:: python
+
+    bin(7 << 3)                         
+
+.. code-block:: console
+
+    '0b111000'
+
+
+
+
 .. code-block:: python
 
     False << False                                                                                                                                                                                             
@@ -603,6 +639,51 @@ Binary Left-Shift / Deslocamento Binário à Esquerda
 
 Binary Right-Shift / Deslocamento Binário à Direita
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    4 >> 1
+
+.. code-block:: console
+
+    2
+
+
+.. code-block:: python
+
+    bin(4 >> 1)                                      
+
+.. code-block:: console
+
+    '0b10'
+
+
+.. code-block:: python
+
+    4 >> 2         
+
+.. code-block:: console
+
+    1
+
+
+.. code-block:: python
+
+    8 >> 1                                   
+
+.. code-block:: console
+
+    4
+
+
+.. code-block:: python
+
+    bin(8 >> 1)         
+
+.. code-block:: console
+
+    '0b100'
+
 
 .. code-block:: python
 

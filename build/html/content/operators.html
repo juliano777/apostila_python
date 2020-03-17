@@ -588,7 +588,7 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 <td><p>Testa se é</p></td>
 </tr>
 <tr class="row-odd"><td><p>is not</p></td>
-<td><p>Testa  não é</p></td>
+<td><p>Testa se não é</p></td>
 </tr>
 </tbody>
 </table>
@@ -660,10 +660,7 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 <td><p>&amp;</p></td>
 </tr>
 <tr class="row-odd"><td><p>Binary OR</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td><p>|</p></td>
 </tr>
 <tr class="row-even"><td><p>Binary XOR</p></td>
 <td><p>^</p></td>
@@ -903,6 +900,30 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 </div>
 <div class="section" id="binary-left-shift-deslocamento-binario-a-esquerda">
 <h3><span class="section-number">15.7.5. </span>Binary Left-Shift / Deslocamento Binário à Esquerda<a class="headerlink" href="#binary-left-shift-deslocamento-binario-a-esquerda" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">28</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">7</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0b11100&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">56</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">7</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0b111000&#39;</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&lt;&lt;</span> <span class="kc">False</span>
 </pre></div>
 </div>
@@ -930,6 +951,36 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 </div>
 <div class="section" id="binary-right-shift-deslocamento-binario-a-direita">
 <h3><span class="section-number">15.7.6. </span>Binary Right-Shift / Deslocamento Binário à Direita<a class="headerlink" href="#binary-right-shift-deslocamento-binario-a-direita" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">4</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0b10&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">8</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">4</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="mi">8</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;0b100&#39;</span>
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">&gt;&gt;</span> <span class="kc">False</span>
 </pre></div>
 </div>
