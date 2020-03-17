@@ -82,6 +82,77 @@ Operadores de Atribuição
 | Divisão Inteira e Atribuir        | //=      |
 +-----------------------------------+----------+
 
+Atribuição de Valores
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    # Atribuição Simples
+
+    foo = 0
+    bar = 'bla bla bla'
+    print(foo)
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    print(bar)
+
+.. code-block:: console
+
+    bla bla bla
+
+.. code-block:: python
+
+    # Atribuição Composta ou Atribuição por Tupla
+    x, y, z = (1, 2, 3)
+
+    print(x)
+
+.. code-block:: console
+
+    1
+
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    2
+
+.. code-block:: python
+
+    print(z)
+
+.. code-block:: console
+
+    3
+
+Invertendo valores:
+
+.. code-block:: python
+
+    x = 10
+    y = 20
+    x, y = y, x
+    print(x)
+
+.. code-block:: console
+
+    20
+
+.. code-block:: python
+
+    print(y)
+
+.. code-block:: console
+
+    10
+
 
 Operadores Lógicos
 ------------------
@@ -162,23 +233,53 @@ Operadores de Associação
 
 Exemplos:
 
-7 in (9, 11, 13, 7, 28)                                                                                                                                                                                    
-True
+.. code-block:: python
 
-'a' in 'Python'                                                                                                                                                                                            
-False
+    7 in (9, 11, 13, 7, 28)
 
-'nome' in {'nome': 'Diana'}                                                                                                                                                                                
-True
+.. code-block:: console
 
-'Diana' in {'nome': 'Diana'}                                                                                                                                                                               
-False
+    True
 
-(2 * 10) not in (20, 30)                                                                                                                                                                                  
-False
+.. code-block:: python
 
-3 not in (20, 30)                                                                                                                                                                                         
-True
+    'a' in 'Python'
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    'nome' in {'nome': 'Diana'}    
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    'Diana' in {'nome': 'Diana'}                                                                                                                                                                               
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    (2 * 10) not in (20, 30)                                                                                                                                                                                  
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    3 not in (20, 30)                                                                                                                                                                                         
+
+.. code-block:: console
+
+    True
 
 
 
@@ -195,32 +296,73 @@ Operadores de Identidade
 
 Exemplos:
 
-t1 = (1, 2, 3)                                                                                                                                                                                             
+.. code-block:: python
 
-id(t1)                                                                                                                                                                                                     
-139965970848192
+    t1 = (1, 2, 3)                                                                                                                                                                                             
 
-t2 = t1                                                                                                                                                                                                    
+.. code-block:: python
 
-id(t2)                                                                                                                                                                                                    
-139965970848192
+    id(t1)                                                                                                                                                                                                     
 
-t3 = (1, 2, 3)                                                                                                                                                                                            
+.. code-block:: console
 
-id(t3)                                                                                                                                                                                                    
-139965970847744
+    139965970848192
 
-t1 is t2                                                                                                                                                                                                  
-True
+.. code-block:: python
 
-t1 is t3                                                                                                                                                                                                  
-False
+    t2 = t1                                                                                                                                                                                                    
 
-t1 == t3                                                                                                                                                                                                  
-True
+.. code-block:: python
 
-t1 is not t3                                                                                                                                                                                              
-True
+    id(t2)                                                                                                                                                                                                    
+
+.. code-block:: console
+
+    139965970848192
+
+.. code-block:: python
+
+    t3 = (1, 2, 3)                                                                                                                                                                                            
+
+.. code-block:: python
+
+    id(t3)                                                                                                                                                                                                    
+
+.. code-block:: console
+
+    139965970847744
+
+.. code-block:: python
+
+    t1 is t2                                                                                                                                                                                                  
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    t1 is t3                                                                                                                                                                                                  
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    t1 == t3                                                                                                                                                                                                  
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    t1 is not t3
+
+.. code-block:: console
+
+    True
 
 
 
@@ -257,14 +399,29 @@ Binary AND / "E" Binário (&)
 | *Resultado* |  1 |  0 | 0 |  | 4           |
 +-------------+----+----+---+--+-------------+
 
-0b101 & 0b110                                                                                                                                                                                             
-4
+.. code-block:: python
 
-bin(0b101 & 0b110)                                                                                                                                                                                        
-0b100'
+    0b101 & 0b110                                                                                                                                                                                             
 
-5 & 6                                                                                                                                                                                                     
-4
+.. code-block:: console
+
+    4
+
+.. code-block:: python
+
+    bin(0b101 & 0b110)                                                                                                                                                                                        
+
+.. code-block:: console
+
+    0b100'
+
+.. code-block:: python
+
+    5 & 6                                                                                                                                                                                                     
+
+.. code-block:: console
+
+    4
 
 
 
@@ -282,14 +439,29 @@ Binary OR / "Ou" Binário (|)
 | *Resultado* |  1 |  1 | 1 |  | 7           |
 +-------------+----+----+---+--+-------------+
 
-0b101 | 0b110                                                                                                                                                                                             
-7
+.. code-block:: python
 
-bin(0b101 | 0b110)
-0b111'
+    0b101 | 0b110
 
-5 | 6                                                                                                                                                                                                     
-7
+.. code-block:: console
+
+    7
+
+.. code-block:: python
+
+    bin(0b101 | 0b110)
+
+.. code-block:: console
+
+    0b111'
+
+.. code-block:: python
+
+    5 | 6                                                                                                                                                                                                     
+
+.. code-block:: console
+
+    7
 
 
 Binary XOR / "Ou" Exclusivo Binário (^) 
@@ -305,75 +477,77 @@ Binary XOR / "Ou" Exclusivo Binário (^)
 | *Resultado* |  0 |  1 | 1 |  | 3           |
 +-------------+----+----+---+--+-------------+
 
-0b101 ^ 0b110                                                                                                                                                                                             
-3
+.. code-block:: python
 
-bin(0b101 ^ 0b110)
-0b11'
+    0b101 ^ 0b110
 
-5 ^ 6                                                                                                                                                                                                     
-3
+.. code-block:: console
+
+    3
+
+.. code-block:: python
+
+    bin(0b101 ^ 0b110)
+
+.. code-block:: console
+
+    0b11'
+
+.. code-block:: python
+
+    5 ^ 6                                                                                                                                                                                                     
+
+.. code-block:: console
+
+    3
 
 
 Binary One's Complement / Complemento Binário (~)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<>
-
-
-
-
-
-Binary Left-Shift / Deslocamento Binário à Esquerda
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Binary Right-Shift / Deslocamento Binário à Direita
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
-
-
-
-Atribuição de Valores
----------------------
-
 .. code-block:: python
 
-    # Atribuição Simples
-
-    foo = 0
-    bar = 'bla bla bla'
-    print(foo)
+    ~ True                                                                                                                                                                                                             
 
 .. code-block:: console
 
-    0
+    -2
 
 .. code-block:: python
 
-    print(bar)
+    ~ False                                   
 
 .. code-block:: console
 
-    bla bla bla
+    -1
 
 .. code-block:: python
 
-    # Atribuição Composta ou Atribuição por Tupla
-    x, y, z = (1, 2, 3)
-
-    print(x)
+    ~ 0        
 
 .. code-block:: console
 
-    1
+    -1
 
 .. code-block:: python
 
-    print(y)
+    ~ 1                                  
+
+.. code-block:: console
+
+    -2
+
+.. code-block:: python
+
+    ~ 2        
+
+.. code-block:: console
+
+    -3
+
+.. code-block:: python
+
+    ~ -3                          
 
 .. code-block:: console
 
@@ -381,29 +555,84 @@ Atribuição de Valores
 
 .. code-block:: python
 
-    print(z)
+    ~ -1                                                      
 
 .. code-block:: console
 
-    3
+    0  
 
-Invertendo valores:
+
+
+
+
+Binary Left-Shift / Deslocamento Binário à Esquerda
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
-    x = 10
-    y = 20
-    x, y = y, x
-    print(x)
+    False << False                                                                                                                                                                                             
 
 .. code-block:: console
 
-    20
+    0
 
 .. code-block:: python
 
-    print(y)
+    False << True                                                                                                                                                                                              
 
 .. code-block:: console
 
-    10
+    0
+
+.. code-block:: python
+
+    True << False                                                                                                                                                                                              
+
+.. code-block:: console
+
+    1
+
+.. code-block:: python
+
+    True << True                                                                                                                                                                                               
+
+.. code-block:: console
+
+    2
+
+
+Binary Right-Shift / Deslocamento Binário à Direita
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    False >> False
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    False >> True
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    True >> False
+
+.. code-block:: console
+
+    1
+
+.. code-block:: python
+
+    True >> True
+
+.. code-block:: console
+
+    0
+
