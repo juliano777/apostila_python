@@ -291,7 +291,7 @@ Operadores de Identidade
 +--------------+---------------------+
 | is           | Testa se é          |
 +--------------+---------------------+
-| is not       | Testa  não é        |
+| is not       | Testa se não é      |
 +--------------+---------------------+
 
 Exemplos:
