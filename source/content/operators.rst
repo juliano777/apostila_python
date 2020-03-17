@@ -1,6 +1,6 @@
 
-# https://data-flair.training/blogs/python-operator/
-# https://www.tutorialspoint.com/python/bitwise_operators_example
+.. https://data-flair.training/blogs/python-operator/
+.. https://www.tutorialspoint.com/python/bitwise_operators_example
 
 Operadores
 **********
