@@ -67,6 +67,8 @@ Operadores Aritméticos
 Operadores Relacionais
 ----------------------
 
+|   São operadores que testam o relacionamento de valores de seus operandos.
+
 +-------------+----------+---------------+-------+
 | Nome        | Operador | Exemplo       | Saída |
 +-------------+----------+---------------+-------+
@@ -295,6 +297,8 @@ Atribuição floor:
 Operadores Lógicos
 ------------------
 
+|   São operadores que utilizam a lógica binária.
+
 +--------------------+----------+
 | Nome               | Operador |
 +--------------------+----------+
@@ -361,6 +365,8 @@ Seu papel é apenas inverter.
 Operadores de Associação
 ------------------------
 
+|   Testam se um valor pertence a um conjunto.
+
 +--------------+-----------------------+
 | **Operador** | **Breve Descrição**   |
 +--------------+-----------------------+
@@ -371,6 +377,8 @@ Operadores de Associação
 
 Exemplos:
 
+7 está no conjunto de elementos dentro da tupla?:
+
 .. code-block:: python
 
     7 in (9, 11, 13, 7, 28)
@@ -378,6 +386,10 @@ Exemplos:
 .. code-block:: console
 
     True
+
+
+
+Na palavra "Python" tem a letra "a"?:    
 
 .. code-block:: python
 
@@ -387,6 +399,10 @@ Exemplos:
 
     False
 
+
+
+Existe a chave "nome" no dicionário?    
+
 .. code-block:: python
 
     'nome' in {'nome': 'Diana'}    
@@ -395,13 +411,24 @@ Exemplos:
 
     True
 
+
+
+Existe "Diana" como chave no dicionário?:   
+
 .. code-block:: python
 
-    'Diana' in {'nome': 'Diana'}                                                                                                                                                                               
+    'Diana' in {'nome': 'Diana'}
+
+|   Para dicionários a chave é levada em consideração dessa forma e não seus
+| valores.                                                                                                                                                                                  
 
 .. code-block:: console
 
     False
+
+
+
+O resultado da operação à esquerda está contido na tupla à direita?:    
 
 .. code-block:: python
 
@@ -410,6 +437,10 @@ Exemplos:
 .. code-block:: console
 
     False
+
+
+
+3 não está contido na tupla?:    
 
 .. code-block:: python
 
@@ -424,6 +455,8 @@ Exemplos:
 Operadores de Identidade
 ------------------------
 
+|   Testam a identidade de um elemento.
+
 +--------------+---------------------+
 | **Operador** | **Breve Descrição** |
 +--------------+---------------------+
@@ -434,9 +467,14 @@ Operadores de Identidade
 
 Exemplos:
 
+Criação de uma tupla com 3 (três) elementos:
+
 .. code-block:: python
 
-    t1 = (1, 2, 3)                                                                                                                                                                                             
+    t1 = (1, 2, 3)
+
+
+Com a função id verificar a identidade dessa tupla:                                                                                                                                                                                              
 
 .. code-block:: python
 
@@ -446,9 +484,17 @@ Exemplos:
 
     139965970848192
 
+
+
+Criar uma nova variável que aponta para a primeira tupla:    
+
 .. code-block:: python
 
-    t2 = t1                                                                                                                                                                                                    
+    t2 = t1
+
+
+
+verificar o id dessa nova tupla:                                                                                                                                                                                                    
 
 .. code-block:: python
 
@@ -457,6 +503,12 @@ Exemplos:
 .. code-block:: console
 
     139965970848192
+
+|   Nota-se que t1 e t2 tem o mesmo id.    
+
+
+
+Criação de uma tupla com os mesmos elementos de t1:    
 
 .. code-block:: python
 
@@ -470,6 +522,12 @@ Exemplos:
 
     139965970847744
 
+|   t3 não tem o mesmo id que t1 e t2.
+
+
+
+t1 é t2?:
+
 .. code-block:: python
 
     t1 is t2                                                                                                                                                                                                  
@@ -477,6 +535,13 @@ Exemplos:
 .. code-block:: console
 
     True
+
+|   Sim, pois t2 na verdade é um apontamento em memória cujo apontamento
+| é o mesmo de t1.
+
+
+
+t1 é t3?
 
 .. code-block:: python
 
@@ -486,6 +551,13 @@ Exemplos:
 
     False
 
+|   Não, pois t3 apesar de ter a mesma construção foi criada do zero, portanto
+| é um novo apontamento em memória.
+
+
+
+t1 é igual a t3 (valores)?:
+
 .. code-block:: python
 
     t1 == t3                                                                                                                                                                                                  
@@ -493,6 +565,13 @@ Exemplos:
 .. code-block:: console
 
     True
+
+|   O resultado foi verdadeiro, pois o operador == testa os valores e não a
+| identidade.
+
+
+
+t1 não é t3?:
 
 .. code-block:: python
 
@@ -506,6 +585,8 @@ Exemplos:
 
 Operadores Bitwise (Operadores Bit a Bit)
 -----------------------------------------
+
+|   São operadores que trabalham na composição binária de um elemento.
 
 +-------------------------+--------------+
 | **Nome**                | **Operador** |

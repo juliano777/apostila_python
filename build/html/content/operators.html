@@ -308,6 +308,9 @@
 </div>
 <div class="section" id="operadores-relacionais">
 <h2><span class="section-number">15.3. </span>Operadores Relacionais<a class="headerlink" href="#operadores-relacionais" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">São operadores que testam o relacionamento de valores de seus operandos.</div>
+</div>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
@@ -533,6 +536,9 @@ valores:</p>
 </div>
 <div class="section" id="operadores-logicos">
 <h2><span class="section-number">15.5. </span>Operadores Lógicos<a class="headerlink" href="#operadores-logicos" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">São operadores que utilizam a lógica binária.</div>
+</div>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 67%" />
@@ -630,6 +636,9 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 </div>
 <div class="section" id="operadores-de-associacao">
 <h2><span class="section-number">15.6. </span>Operadores de Associação<a class="headerlink" href="#operadores-de-associacao" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">Testam se um valor pertence a um conjunto.</div>
+</div>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 38%" />
@@ -648,36 +657,48 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 </tbody>
 </table>
 <p>Exemplos:</p>
+<p>7 está no conjunto de elementos dentro da tupla?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
+<p>Na palavra “Python” tem a letra “a”?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
+<p>Existe a chave “nome” no dicionário?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;nome&#39;</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;nome&#39;</span><span class="p">:</span> <span class="s1">&#39;Diana&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
+<p>Existe “Diana” como chave no dicionário?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Diana&#39;</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;nome&#39;</span><span class="p">:</span> <span class="s1">&#39;Diana&#39;</span><span class="p">}</span>
 </pre></div>
+</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Para dicionários a chave é levada em consideração dessa forma e não seus</div>
+</div>
+<div class="line">valores.</div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
+<p>O resultado da operação à esquerda está contido na tupla à direita?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
+<p>3 não está contido na tupla?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -687,6 +708,9 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 </div>
 <div class="section" id="operadores-de-identidade">
 <h2><span class="section-number">15.7. </span>Operadores de Identidade<a class="headerlink" href="#operadores-de-identidade" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">Testam a identidade de um elemento.</div>
+</div>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 40%" />
@@ -705,24 +729,32 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 </tbody>
 </table>
 <p>Exemplos:</p>
+<p>Criação de uma tupla com 3 (três) elementos:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Com a função id verificar a identidade dessa tupla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">139965970848192</span>
 </pre></div>
 </div>
+<p>Criar uma nova variável que aponta para a primeira tupla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span> <span class="o">=</span> <span class="n">t1</span>
 </pre></div>
 </div>
+<p>verificar o id dessa nova tupla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">139965970848192</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line">Nota-se que t1 e t2 tem o mesmo id.</div>
+</div>
+<p>Criação de uma tupla com os mesmos elementos de t1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -732,24 +764,49 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">139965970847744</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line">t3 não tem o mesmo id que t1 e t2.</div>
+</div>
+<p>t1 é t2?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="ow">is</span> <span class="n">t2</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Sim, pois t2 na verdade é um apontamento em memória cujo apontamento</div>
+</div>
+<div class="line">é o mesmo de t1.</div>
+</div>
+<p>t1 é t3?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="ow">is</span> <span class="n">t3</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Não, pois t3 apesar de ter a mesma construção foi criada do zero, portanto</div>
+</div>
+<div class="line">é um novo apontamento em memória.</div>
+</div>
+<p>t1 é igual a t3 (valores)?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">==</span> <span class="n">t3</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">O resultado foi verdadeiro, pois o operador == testa os valores e não a</div>
+</div>
+<div class="line">identidade.</div>
+</div>
+<p>t1 não é t3?:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">t3</span>
 </pre></div>
 </div>
@@ -759,6 +816,9 @@ apenas um dos valores envolvidos seja verdadeiro.</p>
 </div>
 <div class="section" id="operadores-bitwise-operadores-bit-a-bit">
 <h2><span class="section-number">15.8. </span>Operadores Bitwise (Operadores Bit a Bit)<a class="headerlink" href="#operadores-bitwise-operadores-bit-a-bit" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">São operadores que trabalham na composição binária de um elemento.</div>
+</div>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 64%" />
