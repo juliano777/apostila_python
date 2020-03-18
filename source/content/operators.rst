@@ -5,8 +5,45 @@
 Operadores
 **********
 
+O que são Operadores
+--------------------
+
+|   Operadores são elementos de programação que permitem fazer operações com
+| operandos.
+|   Operandos são os elementos cujas ações de um operador têm efeito.
+|   Operadores já fazem parte de nossa vida muito antes da programação, em
+| matemática para ser mais preciso.
+|   Operadores podem ser **binários** e **unários**.
+
+Operadores Binários
+~~~~~~~~~~~~~~~~~~~
+
+|   São aqueles que requerem 2 (dois) operandos para uma operação.
+|
+|   Exemplo: `2 + 5`
+|
+|   Operador: `+` (soma)
+|   Operandos: `2` e `5`
+
+
+
+Operadores Unários
+~~~~~~~~~~~~~~~~~~
+
+|   São aqueles que requerem apenas 1 (um) operando para uma operação.
+|
+|   Exemplo: `not False`
+|
+|   Operador: `not` (negação)
+|   Operandos: `False`
+
+
+
 Operadores Aritméticos
 ----------------------
+
+|   São os primeiros operadores que uma pessoa tem contato na vida, pois são
+| os operadores para operações matemáticas.
 
 +-------------------------+--------------+-------------+-----------+
 | **Nome**                | **Operador** | **Exemplo** | **Saída** |
@@ -62,6 +99,8 @@ Operadores Relacionais
 Operadores de Atribuição
 ------------------------
 
+|   Têm por objetivo atribuir um valor a uma variável.
+
 +-----------------------------------+----------+
 | Nome                              | Operador |
 +-----------------------------------+----------+
@@ -82,12 +121,11 @@ Operadores de Atribuição
 | Divisão Inteira e Atribuir        | //=      |
 +-----------------------------------+----------+
 
-Atribuição de Valores
-~~~~~~~~~~~~~~~~~~~~~
+
+
+Atribuição simples e exibição da primeira variável:
 
 .. code-block:: python
-
-    # Atribuição Simples
 
     foo = 0
     bar = 'bla bla bla'
@@ -97,6 +135,8 @@ Atribuição de Valores
 
     0
 
+Exibição do valor da segunda variável:
+
 .. code-block:: python
 
     print(bar)
@@ -105,11 +145,12 @@ Atribuição de Valores
 
     bla bla bla
 
+Atribuição composta ou atribuição por tupla e exibição de seus respectivos
+valores:
+
 .. code-block:: python
 
-    # Atribuição Composta ou Atribuição por Tupla
     x, y, z = (1, 2, 3)
-
     print(x)
 
 .. code-block:: console
@@ -132,7 +173,7 @@ Atribuição de Valores
 
     3
 
-Invertendo valores:
+Invertendo valores e suas respectivas exibições:
 
 .. code-block:: python
 
@@ -152,6 +193,103 @@ Invertendo valores:
 .. code-block:: console
 
     10
+
+
+Incremento:
+
+.. code-block:: python
+
+    x = 0
+    x += 1  # 1
+    x += 1  # 2
+    print(x)
+
+.. code-block:: console
+
+    2
+
+Decremento (aproveitando o exercício anterior):
+
+.. code-block:: python
+
+    x -= 1
+    print(x)
+
+.. code-block:: console
+
+    1
+
+
+
+Dividir e atribuir:
+
+.. code-block:: python
+
+    x = 20
+    x /= 2  # 10.0
+    x /= 2  # 5.0
+    print(x)
+
+.. code-block:: console
+
+    5.0
+
+
+
+Multiplicar e atribuir:
+
+.. code-block:: python
+
+    x = 10
+    x *= 2  # 20
+    x *= 2  # 40
+    print(x)
+
+.. code-block:: console
+
+    40
+
+
+
+Atribuição por módulo:
+
+.. code-block:: python
+
+    x = 5
+    x %= 3
+    print(x)
+
+.. code-block:: console
+
+    2
+
+
+
+Atribuição por exponenciação:
+
+.. code-block:: python
+
+    x = 10
+    x **= 2
+    print(x)
+
+.. code-block:: console
+
+    100
+
+
+
+Atribuição floor:
+
+.. code-block:: python
+
+    x = 7
+    x //= 2
+    print(x)
+
+.. code-block:: console
+
+    3     
 
 
 Operadores Lógicos
