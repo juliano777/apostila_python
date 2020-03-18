@@ -586,7 +586,8 @@ t1 não é t3?:
 Operadores Bitwise (Operadores Bit a Bit)
 -----------------------------------------
 
-|   São operadores que trabalham na composição binária de um elemento.
+|   São operadores que trabalham na composição binária de um elemento bit a
+| bit.
 
 +-------------------------+--------------+
 | **Nome**                | **Operador** |
@@ -935,4 +936,3 @@ Binary Right-Shift / Deslocamento Binário à Direita
 .. code-block:: console
 
     0
-
