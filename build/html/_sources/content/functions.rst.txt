@@ -340,10 +340,13 @@ funcao(10, z = 30, y = 50)
 Argumentos em Lista Não Nomeados
 --------------------------------
 
-	É possível passar uma lista de argumentos sem nomear cada um deles, ou seja, atribuir uma variável.
-	Essa lista, internamente é interpretada como uma tupla (tuple).
-	Tal recurso nos possibilita passar uma quantidade indeterminada de argumentos.
-	O identificador da variável que representa esse tipo de argumento vem logo depois do caractere asterisco (*).
+|   É possível passar uma lista de argumentos sem nomear cada um deles, ou 
+| seja, atribuir uma variável.
+|   Essa lista, internamente é interpretada como uma tupla (tuple).
+|   Tal recurso nos possibilita passar uma quantidade indeterminada de
+| argumentos.
+|   O identificador da variável que representa esse tipo de argumento vem logo
+| depois do caractere asterisco (*).
 
 .. code-block:: python
 
@@ -399,13 +402,12 @@ Execução:
 
 
 
-Definição de uma função com um parâmetro obrigatório e parâmetros arbitrários
-não nomeados:    
+Definição de uma função com um parâmetros arbitrários não nomeados:    
 
 
 .. code-block:: python
 
-    def funcao(x, *args):
+    def funcao(*args):
         return args
 
 

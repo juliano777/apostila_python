@@ -421,12 +421,21 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 </div>
 <div class="section" id="argumentos-em-lista-nao-nomeados">
 <h2><span class="section-number">17.5. </span>Argumentos em Lista Não Nomeados<a class="headerlink" href="#argumentos-em-lista-nao-nomeados" title="Link permanente para este título">¶</a></h2>
-<blockquote>
-<div><p>É possível passar uma lista de argumentos sem nomear cada um deles, ou seja, atribuir uma variável.
-Essa lista, internamente é interpretada como uma tupla (tuple).
-Tal recurso nos possibilita passar uma quantidade indeterminada de argumentos.
-O identificador da variável que representa esse tipo de argumento vem logo depois do caractere asterisco (*).</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line-block">
+<div class="line">É possível passar uma lista de argumentos sem nomear cada um deles, ou</div>
+</div>
+<div class="line">seja, atribuir uma variável.</div>
+<div class="line-block">
+<div class="line">Essa lista, internamente é interpretada como uma tupla (tuple).</div>
+<div class="line">Tal recurso nos possibilita passar uma quantidade indeterminada de</div>
+</div>
+<div class="line">argumentos.</div>
+<div class="line-block">
+<div class="line">O identificador da variável que representa esse tipo de argumento vem logo</div>
+</div>
+<div class="line">depois do caractere asterisco (*).</div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="n">qtd</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
     <span class="n">primeiro</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -466,9 +475,8 @@ O identificador da variável que representa esse tipo de argumento vem logo depo
 <span class="go">Argumento 3 = 99</span>
 </pre></div>
 </div>
-<p>Definição de uma função com um parâmetro obrigatório e parâmetros arbitrários
-não nomeados:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<p>Definição de uma função com um parâmetros arbitrários não nomeados:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">args</span>
 </pre></div>
 </div>
