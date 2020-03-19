@@ -103,7 +103,10 @@
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property.html">20. Encapsulamento</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">21. Escopo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">21. Escopo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#escopo-de-funcao-externa">21.1. Escopo de Função Externa</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="if.html">22. if / elif / else</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loops.html">23. Loops - Laços de Repetição</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open.html">24. open</a></li>
@@ -244,58 +247,67 @@ Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">162857064</span>
 </pre></div>
 </div>
-<p>Exibindo o valor de foo</p>
-<p>print(foo)
-.. code-block:: console</p>
-<blockquote>
-<div><p>7</p>
-</div></blockquote>
-<p>Acionando a função</p>
-<p>funcao()
-162857040
-9</p>
-<p>Nota-se também que bem como o ID e o valor retornados pela função,
-da variável interna foo são diferentes da variável externa de mesmo nome.</p>
-<ul>
-<li><p>Escopo de Função Externa</p>
+<p>Exibindo o valor de foo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
+<p>Acionando a função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">162857040</span>
+<span class="go">9</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Nota-se também que bem como o ID e o valor retornados pela função,</div>
+</div>
+<div class="line">da variável interna foo são diferentes da variável externa de mesmo nome.</div>
+</div>
+<div class="section" id="escopo-de-funcao-externa">
+<h2><span class="section-number">21.1. </span>Escopo de Função Externa<a class="headerlink" href="#escopo-de-funcao-externa" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Ao se criar uma função dentro de outra, a função mais interna pode utilizar um</p>
 </div></blockquote>
-</li>
-</ul>
 <p>identificador que esteja no nível mais acima.</p>
 <p>Prática:</p>
-<p>Definição da funcao</p>
-<dl>
-<dt>def funcao_principal():</dt><dd><p>x = 1
-def funcao_secundaria():</p>
-<blockquote>
-<div><p>print(x)</p>
-</div></blockquote>
-<p>funcao_secundaria()</p>
-<p>A função principal tem uma variável x, cujo valor é impresso em tela</p>
-</dd>
+<p>Definição da funcao:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao_principal</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">funcao_secundaria</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">funcao_secundaria</span><span class="p">()</span>
+
+<span class="n">A</span> <span class="n">função</span> <span class="n">principal</span> <span class="n">tem</span> <span class="n">uma</span> <span class="n">variável</span> <span class="n">x</span><span class="p">,</span> <span class="n">cujo</span> <span class="n">valor</span> <span class="n">é</span> <span class="n">impresso</span> <span class="n">em</span> <span class="n">tela</span>
+</pre></div>
+</div>
+<dl class="simple">
 <dt>pela função secundária.</dt><dd><p>A função principal invoca a função secundária.</p>
 </dd>
 </dl>
-<p>Chamando a função
-funcao_principal()
-.. code-block:: console</p>
-<blockquote>
-<div><p>1</p>
-</div></blockquote>
-<p>Uma nova definição da função</p>
-<dl>
-<dt>def funcao_principal():</dt><dd><p>x = 1
-def funcao_secundaria():</p>
-<blockquote>
-<div><p>x = 2
-print(x)</p>
-</div></blockquote>
-<p>funcao_secundaria()</p>
-</dd>
-</dl>
-<p>Diferente do exemplo anterior, a função secundária declarou sua própria variável “x”.</p>
+<p>Chamando a função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao_principal</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<p>Uma nova definição da função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao_principal</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">funcao_secundaria</span><span class="p">():</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">funcao_secundaria</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Diferente do exemplo anterior, a função secundária declarou sua própria variável “x”.</div>
+</div>
 <p>Testando a função
 funcao_principal()
 .. code-block:: console</p>
@@ -465,6 +477,7 @@ x = 7</p>
 <p>&gt; print(x)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
+</div>
 </div>
 </div>
 

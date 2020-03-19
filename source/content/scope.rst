@@ -79,65 +79,84 @@ Exibindo o ID de foo:
 .. code-block:: python
 
     print(id(foo))
-    
+
 .. code-block:: console
 
     162857064
 
-Exibindo o valor de foo
 
-print(foo)
+
+Exibindo o valor de foo:
+
+.. code-block:: python
+
+    print(foo)
+
 .. code-block:: console
 
     7
 
-Acionando a função
+Acionando a função:
 
-funcao()
-162857040
-9
+.. code-block:: python
 
-Nota-se também que bem como o ID e o valor retornados pela função,
-da variável interna foo são diferentes da variável externa de mesmo nome.
+    funcao()
+
+.. code-block:: console
+
+    162857040
+    9
+
+|   Nota-se também que bem como o ID e o valor retornados pela função,
+| da variável interna foo são diferentes da variável externa de mesmo nome.
 
 
-- Escopo de Função Externa
+Escopo de Função Externa
+------------------------
 
     Ao se criar uma função dentro de outra, a função mais interna pode utilizar um
 identificador que esteja no nível mais acima.
 
 Prática:
 
-Definição da funcao
+Definição da funcao:
 
-def funcao_principal():
-    x = 1
-    def funcao_secundaria():
-        print(x)
-    funcao_secundaria()     
+.. code-block:: python
+
+    def funcao_principal():
+        x = 1
+        def funcao_secundaria():
+            print(x)
+        funcao_secundaria()     
     
     A função principal tem uma variável x, cujo valor é impresso em tela
 pela função secundária.
     A função principal invoca a função secundária.
     
 
-Chamando a função     
-funcao_principal()
+Chamando a função:
+
+.. code-block:: python
+
+    funcao_principal()
+
 .. code-block:: console
 
     1
 
 
-Uma nova definição da função
+Uma nova definição da função:
 
-def funcao_principal():
-    x = 1
-    def funcao_secundaria():
-        x = 2
-        print(x)
-    funcao_secundaria()     
-    
-Diferente do exemplo anterior, a função secundária declarou sua própria variável "x".    
+.. code-block:: python
+
+    def funcao_principal():
+        x = 1
+        def funcao_secundaria():
+            x = 2
+            print(x)
+        funcao_secundaria()
+
+|   Diferente do exemplo anterior, a função secundária declarou sua própria variável "x".    
     
 
 Testando a função    
