@@ -90,13 +90,15 @@ bla bla bla:
 
     c1 = Carro()
 
-TypeError                                 Traceback (most recent call last)
-<ipython-input-13-e2526cbd1648> in <module>()
-     15 
-     16 
----> 17 c1 = Carro()
+.. code-block:: console
 
-TypeError: __init__() takes exactly 3 arguments (1 given)
+    TypeError                                 Traceback (most recent call last)
+    <ipython-input-13-e2526cbd1648> in <module>()
+        15 
+        16 
+    ---> 17 c1 = Carro()
+
+    TypeError: __init__() takes exactly 3 arguments (1 given)
 
 
 
@@ -107,7 +109,9 @@ bla bla bla:
     c1 = Carro('Fiat', '147')
     c1.ignicao()
 
-Motor ligado!
+.. code-block:: console
+
+    Motor ligado!
 
 
 
@@ -117,7 +121,9 @@ bla bla bla:
 
     c1.ignicao()
 
-Motor desligado!
+.. code-block:: console
+
+    Motor desligado!
 
 
 
@@ -125,10 +131,12 @@ bla bla bla:
 
 .. code-block:: python
 
-    print('Marca: %s\nModelo: %s' % (c1.marca, c1.modelo))
+    print(f'Marca: {c1.marca}\nModelo: {c1.modelo}')
 
-Marca: Fiat
-Modelo: 147
+.. code-block:: console
+
+    Marca: Fiat
+    Modelo: 147
 
 
 Método __str__:
@@ -137,7 +145,9 @@ Método __str__:
 
     print(c1)
 
-<__main__.Carro object at 0x7f1f6313eed0>
+.. code-block:: console
+
+    <__main__.Carro object at 0x7f1f6313eed0>
 
 
 
@@ -147,7 +157,9 @@ bla bla bla:
 
     repr(c1)
 
-'<__main__.Carro object at 0x7f1f6313eed0>'
+.. code-block:: console
+
+    '<__main__.Carro object at 0x7f1f6313eed0>'
 
 
 
@@ -176,7 +188,9 @@ bla bla bla:
     c1 = Carro('Fiat', '147')
     print(c1)
 
-Fiat - 147
+.. code-block:: console
+
+    Fiat - 147
 
 
 bla bla bla:

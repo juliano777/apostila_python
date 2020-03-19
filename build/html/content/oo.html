@@ -258,41 +258,52 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>TypeError                                 Traceback (most recent call last)
-&lt;ipython-input-13-e2526cbd1648&gt; in &lt;module&gt;()</p>
-<blockquote>
-<div><p>15
-16</p>
-</div></blockquote>
-<p>—&gt; 17 c1 = Carro()</p>
-<p>TypeError: __init__() takes exactly 3 arguments (1 given)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError                                 Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-13-e2526cbd1648&gt; in &lt;module&gt;()</span>
+<span class="go">    15</span>
+<span class="go">    16</span>
+<span class="go">---&gt; 17 c1 = Carro()</span>
+
+<span class="go">TypeError: __init__() takes exactly 3 arguments (1 given)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s1">&#39;Fiat&#39;</span><span class="p">,</span> <span class="s1">&#39;147&#39;</span><span class="p">)</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">ignicao</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Motor ligado!</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Motor ligado!</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="n">ignicao</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Motor desligado!</p>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Marca: </span><span class="si">%s</span><span class="se">\n</span><span class="s1">Modelo: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">modelo</span><span class="p">))</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Motor desligado!</span>
 </pre></div>
 </div>
-<p>Marca: Fiat
-Modelo: 147</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{c1.marca}</span><span class="se">\n</span><span class="s1">Modelo: </span><span class="si">{c1.modelo}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Marca: Fiat</span>
+<span class="go">Modelo: 147</span>
+</pre></div>
+</div>
 <p>Método __str__:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>&lt;__main__.Carro object at 0x7f1f6313eed0&gt;</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;__main__.Carro object at 0x7f1f6313eed0&gt;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>‘&lt;__main__.Carro object at 0x7f1f6313eed0&gt;’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;__main__.Carro object at 0x7f1f6313eed0&gt;&#39;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
@@ -316,7 +327,9 @@ Modelo: 147</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Fiat - 147</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
