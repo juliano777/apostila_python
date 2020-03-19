@@ -535,17 +535,31 @@ Execução com duplo asterisco no identificador do parâmetro:
 Funções com Argumentos Variados
 -------------------------------
 
-	E se precisarmos fazer uma função que utilize tipos diferentes conforme visto anteriormente?
-	A ordem dos tipos de argumentos é a seguinte:
+|   E se precisarmos fazer uma função que utilize tipos diferentes conforme
+| visto anteriormente?
+|   A ordem dos tipos de argumentos é a seguinte:
+|
+|   **Simples**, **Nomeados**, **Lista de Não Nomeados** e **Lista de Nomeados**
 
-	Simples, Nomeados, Lista de Não Nomeados e Lista de Nomeados
 
-def foo(a, b = 3, *c, **d):
-    print(a + b)
-    print(c)
-    print(d)
 
-    foo(4, 5, 'Alemanha', 'Holanda', 'Inglaterra', continente = 'Europa', hemisferio = 'Norte')
+Definição e execução de uma função com parâmetros mistos:
+
+.. code-block:: python
+
+    def foo(a, b = 3, *c, **d):
+        print(a + b)
+        print(c)
+        print(d)
+
+        foo(
+            4,
+            5,
+            'Alemanha',
+            'Holanda',
+            'Inglaterra',
+            continente = 'Europa',
+            hemisferio = 'Norte')
 
 .. code-block:: console
 
@@ -558,7 +572,9 @@ def foo(a, b = 3, *c, **d):
 Estruturas de Dados como Parâmetro para Funções
 -----------------------------------------------
 
-	Em algumas situações pode ser útil utilizar uma estrutura de dados como tupla (tuple), lista (list), dicionário (dict) ou mesmo um conjunto (set / frozenset).
+|   Em algumas situações pode ser útil utilizar uma estrutura de dados como
+| tupla (tuple), lista (list), dicionário (dict) ou mesmo um conjunto
+| (set / frozenset).
 
 
 
