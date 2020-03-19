@@ -249,13 +249,24 @@ Definindo uma função com dois parâmetros:
         return x + y
 
 
-funcao(3)
+
+Execução da função passando apenas um parâmetro (o obrigatório):
+
+.. code-block:: python
+
+    funcao(3)
 
 .. code-block:: console
 
     10
 
-funcao(2, 3)
+
+
+Passando os dois parâmetros:
+
+.. code-block:: python
+
+    funcao(2, 3)
 
 .. code-block:: console
 
