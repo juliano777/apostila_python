@@ -398,8 +398,15 @@ Execução:
     Argumento 3 = 99
 
 
-def funcao(x, *args):
-     return args
+
+Definição de uma função com um parâmetro obrigatório e parâmetros arbitrários
+não nomeados:    
+
+
+.. code-block:: python
+
+    def funcao(x, *args):
+        return args
     
 spam = (1, 2, 3, 4)
 
