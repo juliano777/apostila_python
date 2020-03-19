@@ -344,7 +344,10 @@ funcao(eggs)
 TypeError: funcao() takes exactly 0 arguments (1 given)
 
 funcao(**eggs)
-{'a': 3, 'b': 5, 'c': 'x'}
+
+.. code-block:: console
+
+    {'a': 3, 'b': 5, 'c': 'x'}
 
 
 
@@ -361,10 +364,13 @@ def foo(a, b = 3, *c, **d):
     print(c)
     print(d)
 
-foo(4, 5, 'Alemanha', 'Holanda', 'Inglaterra', continente = 'Europa', hemisferio = 'Norte')
-9
-('Alemanha', 'Holanda', 'Inglaterra')
-{'continente': 'Europa', 'hemisferio': 'Norte'}
+    foo(4, 5, 'Alemanha', 'Holanda', 'Inglaterra', continente = 'Europa', hemisferio = 'Norte')
+
+.. code-block:: console
+
+    9
+    ('Alemanha', 'Holanda', 'Inglaterra')
+    {'continente': 'Europa', 'hemisferio': 'Norte'}
 
 
 
@@ -377,34 +383,36 @@ Estruturas de Dados como Parâmetro para Funções
 
 Criação da função de teste:
 
-> def param_test(x, y):
+def param_test(x, y):
     return x + y
 
 
 
 Declaração das variáveis de estrutura de dados que serão utilizadas como parâmetro para a função:
 
-> tupla = (5, 2)
+tupla = (5, 2)
 
-> lista = [5, 2]
+lista = [5, 2]
 
-> dicio = {'x': 5, 'y': 2}
+dicio = {'x': 5, 'y': 2}
 
-> conjunto = {2, 5, 2}
+conjunto = {2, 5, 2}
 
 
 
 Testes utilizando as estruturas de dados criadas:
 
-> param_test(**dicio)  # Dicionário (dict) como parâmetro
+param_test(**dicio)  # Dicionário (dict) como parâmetro
 
-> param_test(*tupla)  # Tupla (tuple) como parâmetro  
+param_test(*tupla)  # Tupla (tuple) como parâmetro  
 
-> param_test(*lista)  # Lista (list) como parâmetro
+param_test(*lista)  # Lista (list) como parâmetro
 
-> param_test(*conjunto)  # Conjunto (set) como parâmetro
+param_test(*conjunto)  # Conjunto (set) como parâmetro
 
-7
+.. code-block:: console
+
+    7
 
 
 
@@ -437,9 +445,11 @@ if __name__ == '__main__':
 
 python hello.py 
 
-==== Início ====
-Função executada
-==== Fim ====
+.. code-block:: console
+
+    ==== Início ====
+    Função executada
+    ==== Fim ====
 
 
 

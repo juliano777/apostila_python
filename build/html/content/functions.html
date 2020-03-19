@@ -475,16 +475,18 @@ Nome = Chiquinho</p>
 A ordem dos tipos de argumentos é a seguinte:</p>
 <p>Simples, Nomeados, Lista de Não Nomeados e Lista de Nomeados</p>
 </div></blockquote>
-<dl class="simple">
+<dl>
 <dt>def foo(a, b = 3, <a href="#id23"><span class="problematic" id="id24">*</span></a>c, <a href="#id25"><span class="problematic" id="id26">**</span></a>d):</dt><dd><p>print(a + b)
 print(c)
 print(d)</p>
+<p>foo(4, 5, ‘Alemanha’, ‘Holanda’, ‘Inglaterra’, continente = ‘Europa’, hemisferio = ‘Norte’)</p>
 </dd>
 </dl>
-<p>foo(4, 5, ‘Alemanha’, ‘Holanda’, ‘Inglaterra’, continente = ‘Europa’, hemisferio = ‘Norte’)
-9
-(‘Alemanha’, ‘Holanda’, ‘Inglaterra’)
-{‘continente’: ‘Europa’, ‘hemisferio’: ‘Norte’}</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
+<span class="gp gp-VirtualEnv">(&#39;Alemanha&#39;, &#39;Holanda&#39;, &#39;Inglaterra&#39;)</span>
+<span class="go">{&#39;continente&#39;: &#39;Europa&#39;, &#39;hemisferio&#39;: &#39;Norte&#39;}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="estruturas-de-dados-como-parametro-para-funcoes">
 <h2><span class="section-number">17.8. </span>Estruturas de Dados como Parâmetro para Funções<a class="headerlink" href="#estruturas-de-dados-como-parametro-para-funcoes" title="Link permanente para este título">¶</a></h2>
@@ -493,20 +495,22 @@ print(d)</p>
 </div></blockquote>
 <p>Criação da função de teste:</p>
 <dl class="simple">
-<dt>&gt; def param_test(x, y):</dt><dd><p>return x + y</p>
+<dt>def param_test(x, y):</dt><dd><p>return x + y</p>
 </dd>
 </dl>
 <p>Declaração das variáveis de estrutura de dados que serão utilizadas como parâmetro para a função:</p>
-<p>&gt; tupla = (5, 2)</p>
-<p>&gt; lista = [5, 2]</p>
-<p>&gt; dicio = {‘x’: 5, ‘y’: 2}</p>
-<p>&gt; conjunto = {2, 5, 2}</p>
+<p>tupla = (5, 2)</p>
+<p>lista = [5, 2]</p>
+<p>dicio = {‘x’: 5, ‘y’: 2}</p>
+<p>conjunto = {2, 5, 2}</p>
 <p>Testes utilizando as estruturas de dados criadas:</p>
-<p>&gt; param_test(<a href="#id27"><span class="problematic" id="id28">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
-<p>&gt; param_test(<a href="#id29"><span class="problematic" id="id30">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
-<p>&gt; param_test(<a href="#id31"><span class="problematic" id="id32">*</span></a>lista)  # Lista (list) como parâmetro</p>
-<p>&gt; param_test(<a href="#id33"><span class="problematic" id="id34">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
-<p>7</p>
+<p>param_test(<a href="#id27"><span class="problematic" id="id28">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
+<p>param_test(<a href="#id29"><span class="problematic" id="id30">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
+<p>param_test(<a href="#id31"><span class="problematic" id="id32">*</span></a>lista)  # Lista (list) como parâmetro</p>
+<p>param_test(<a href="#id33"><span class="problematic" id="id34">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="boas-praticas-funcao-main">
 <h2><span class="section-number">17.9. </span>Boas Práticas: Função Main<a class="headerlink" href="#boas-praticas-funcao-main" title="Link permanente para este título">¶</a></h2>
@@ -530,9 +534,11 @@ print(‘==== Fim ====’)</p>
 </dd>
 </dl>
 <p>python hello.py</p>
-<p>==== Início ====
-Função executada
-==== Fim ====</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">==== Início ====</span>
+<span class="go">Função executada</span>
+<span class="go">==== Fim ====</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="funcoes-geradoras">
 <h2><span class="section-number">17.10. </span>Funções Geradoras<a class="headerlink" href="#funcoes-geradoras" title="Link permanente para este título">¶</a></h2>
