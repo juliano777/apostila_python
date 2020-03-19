@@ -138,18 +138,18 @@ Argumentos Simples (Argumentos Não Nomeados)
 	Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios têm um valor inicial.
 
 
-Definição de uma função
+Definição de uma função:
 
 def funcao(x):
   return x
 
-Execução da função sem passar argumentos
+Execução da função sem passar argumentos:
 
-funcao()  
+funcao()
 
----------------------------------------------------------------------------
 .. code-block:: console
 
+    ---------------------------------------------------------------------------
     TypeError                                 Traceback (most recent call last)
     /home/beethoven/<ipython-input-22-7473677d9fe3> in <module>()
     ----> 1 funcao()
@@ -179,17 +179,27 @@ Definição de função com um argumento
 def funcao(x = 7):
     return x
 
-Chamando a função sem declarar valor de argumento
+Chamando a função sem declarar valor de argumento:
 
 funcao()
-7
 
-Chamando a função explicitando um valor de argumento
+.. code-block:: console
+
+    7
+
+Chamando a função explicitando um valor de argumento:
+
 funcao(9)
-9
+
+.. code-block:: console
+
+    9
 
 funcao(x = 9)
-9        
+
+.. code-block:: console
+
+    9        
 
 Definindo uma função mesclando argumentos padrão e obrigatórios
 
@@ -205,10 +215,16 @@ def funcao(x, y = 7):
 
 
 funcao(3)
-10
+
+.. code-block:: console
+
+    10
 
 funcao(2, 3)
-5
+
+.. code-block:: console
+
+    5
 
 funcao()
 
@@ -218,13 +234,22 @@ def funcao(x, y = 1, z = 2):
     return x + y + z
     
 funcao(0)
-3
+
+.. code-block:: console
+
+    3
 
 funcao(1, 2)
-5
+
+.. code-block:: console
+
+    5
 
 funcao(1, 2, 90)
-93
+
+.. code-block:: console
+
+    93
 
 funcao(10, z = 30, y = 50)
 

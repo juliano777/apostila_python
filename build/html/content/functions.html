@@ -294,19 +294,21 @@ multiplicado por 3:</p>
 <div><p>Uma função pode ter um ou mais argumentos a serem pasados.
 Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios têm um valor inicial.</p>
 </div></blockquote>
-<p>Definição de uma função</p>
+<p>Definição de uma função:</p>
 <dl class="simple">
 <dt>def funcao(x):</dt><dd><p>return x</p>
 </dd>
 </dl>
-<p>Execução da função sem passar argumentos</p>
+<p>Execução da função sem passar argumentos:</p>
 <p>funcao()</p>
-<blockquote>
-<div><p>TypeError                                 Traceback (most recent call last)
-/home/beethoven/&lt;ipython-input-22-7473677d9fe3&gt; in &lt;module&gt;()
-—-&gt; 1 funcao()</p>
-<p>TypeError: funcao() takes exactly 1 argument (0 given)</p>
-</div></blockquote>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
+<span class="go">TypeError                                 Traceback (most recent call last)</span>
+<span class="go">/home/beethoven/&lt;ipython-input-22-7473677d9fe3&gt; in &lt;module&gt;()</span>
+<span class="go">----&gt; 1 funcao()</span>
+
+<span class="go">TypeError: funcao() takes exactly 1 argument (0 given)</span>
+</pre></div>
+</div>
 <p>Devido ao fato de a função exigir que seja passado um argumento</p>
 <p>Execução da função passando um argumento</p>
 <p>funcao(7)</p>
@@ -325,14 +327,20 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <dt>def funcao(x = 7):</dt><dd><p>return x</p>
 </dd>
 </dl>
-<p>Chamando a função sem declarar valor de argumento</p>
-<p>funcao()
-7</p>
-<p>Chamando a função explicitando um valor de argumento
-funcao(9)
-9</p>
-<p>funcao(x = 9)
-9</p>
+<p>Chamando a função sem declarar valor de argumento:</p>
+<p>funcao()</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
+<p>Chamando a função explicitando um valor de argumento:</p>
+<p>funcao(9)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
+</pre></div>
+</div>
+<p>funcao(x = 9)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
+</pre></div>
+</div>
 <p>Definindo uma função mesclando argumentos padrão e obrigatórios</p>
 <dl class="simple">
 <dt>def funcao(x = 7, y):</dt><dd><p>return x + y</p>
@@ -344,22 +352,32 @@ funcao(9)
 <dt>def funcao(x, y = 7):</dt><dd><p>return x + y</p>
 </dd>
 </dl>
-<p>funcao(3)
-10</p>
-<p>funcao(2, 3)
-5</p>
+<p>funcao(3)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
+</pre></div>
+</div>
+<p>funcao(2, 3)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">5</span>
+</pre></div>
+</div>
 <p>funcao()</p>
 <p>TypeError: funcao() takes at least 1 argument (0 given)</p>
 <dl class="simple">
 <dt>def funcao(x, y = 1, z = 2):</dt><dd><p>return x + y + z</p>
 </dd>
 </dl>
-<p>funcao(0)
-3</p>
-<p>funcao(1, 2)
-5</p>
-<p>funcao(1, 2, 90)
-93</p>
+<p>funcao(0)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
+</pre></div>
+</div>
+<p>funcao(1, 2)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">5</span>
+</pre></div>
+</div>
+<p>funcao(1, 2, 90)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">93</span>
+</pre></div>
+</div>
 <p>funcao(10, z = 30, y = 50)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">90</span>
 </pre></div>
