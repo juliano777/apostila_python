@@ -462,9 +462,15 @@ Argumentos em Lista Nomeados
 |   É uma lista com quantidade indeterminada e cada elemento da lista tem um
 | identificador próprio.
 
-def funcao(**kargs):
-    return kargs
-   
+
+
+Definição de uma função com parâmetros arbitrários nomeados:
+
+.. code-block:: python
+
+    def funcao(**kargs):
+        return kargs
+    
     funcao(a = 1, b = 2)
 
 .. code-block:: console
@@ -473,17 +479,19 @@ def funcao(**kargs):
 
 
 
-def funcao(**kargs):
-    for k, v in kargs.items():
-        print('%s = %s' % (k.capitalize(), v))
-        
-        
-funcao(
-    nome = 'Chiquinho',
-    sobrenome = 'da Silva',
-    idade = 30,
-    telefone = '(11) 99999-9999',
-  )
+Definição e execução:
+
+    def funcao(**kargs):
+        for k, v in kargs.items():
+            print(f'{k} = {v}')
+            
+            
+    funcao(
+        nome = 'Chiquinho',
+        sobrenome = 'da Silva',
+        idade = 30,
+        telefone = '(11) 99999-9999',
+    )
 
 
 .. code-block:: console
