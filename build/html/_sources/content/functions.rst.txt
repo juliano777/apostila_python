@@ -347,14 +347,14 @@ Argumentos em Lista Não Nomeados
 
 .. code-block:: python
 
-    def funcao(*args):
-        qtd = len(args)
-        primeiro = args[0]
-        ultimo = args[-1]
-        print('Foram passados %d argumentos' % qtd)
-        print('O primeiro é "%s"' % primeiro)
-        print('O último é "%s"' % ultimo)
-        print('Os argumentos passados foram: %s' % str(args))
+    def funcao(*args): 
+        qtd = len(args) 
+        primeiro = args[0] 
+        ultimo = args[-1] 
+        print(f'Foram passados {qtd} argumentos') 
+        print(f'O primeiro é {primeiro}') 
+        print(f'O último é {ultimo}') 
+        print(f'Os argumentos passados foram: {args}')
 
 .. code-block:: console
 
