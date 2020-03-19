@@ -102,6 +102,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">17. Funções</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#funcoes-sem-argumentos">17.1. Funções sem Argumentos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#o-comando-return">17.2. O Comando return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#argumentos-simples-argumentos-nao-nomeados">17.3. Argumentos Simples (Argumentos Não Nomeados)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#argumentos-nomeados">17.4. Argumentos Nomeados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#argumentos-em-lista-nao-nomeados">17.5. Argumentos em Lista Não Nomeados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#argumentos-em-lista-nomeados">17.6. Argumentos em Lista Nomeados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcoes-com-argumentos-variados">17.7. Funções com Argumentos Variados</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -268,11 +273,19 @@ multiplicado por 3:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
-<p>Como pode-se notar, o código inserido após return foi completamente ignorado.
-Devido ao fato de os comandos serem digitados no shell interativo foi impresso em tela
-o valor de retorno da função.</p>
-<hr class="docutils" />
-<p>Argumentos Simples (Argumentos Não Nomeados)</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Como pode-se notar, o código inserido após return foi completamente</div>
+</div>
+<div class="line">ignorado.</div>
+<div class="line-block">
+<div class="line">Devido ao fato de os comandos serem digitados no shell interativo foi</div>
+</div>
+<div class="line">impresso em tela o valor de retorno da função.</div>
+</div>
+</div>
+<div class="section" id="argumentos-simples-argumentos-nao-nomeados">
+<h2><span class="section-number">17.3. </span>Argumentos Simples (Argumentos Não Nomeados)<a class="headerlink" href="#argumentos-simples-argumentos-nao-nomeados" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Uma função pode ter um ou mais argumentos a serem pasados.
 Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios têm um valor inicial.</p>
@@ -296,8 +309,9 @@ Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não o
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
-<hr class="docutils" />
-<p>Argumentos Nomeados</p>
+</div>
+<div class="section" id="argumentos-nomeados">
+<h2><span class="section-number">17.4. </span>Argumentos Nomeados<a class="headerlink" href="#argumentos-nomeados" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Podemos definir uma função em que um ou mais argumentos tenham valores padrões de forma que ao invocar a função podemos omitir a declaração, pois será considerado o padrão ou explicitando um valor.
 Quando houver mais de um argumento, os argumentos obrigatórios devem vira primeiro.</p>
@@ -344,8 +358,9 @@ funcao(9)
 93</p>
 <p>funcao(10, z = 30, y = 50)
 90</p>
-<hr class="docutils" />
-<p>Argumentos em Lista Não Nomeados</p>
+</div>
+<div class="section" id="argumentos-em-lista-nao-nomeados">
+<h2><span class="section-number">17.5. </span>Argumentos em Lista Não Nomeados<a class="headerlink" href="#argumentos-em-lista-nao-nomeados" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>É possível passar uma lista de argumentos sem nomear cada um deles, ou seja, atribuir uma variável.
 Essa lista, internamente é interpretada como uma tupla (tuple).
@@ -407,8 +422,9 @@ Argumento 3 = 99</p>
 <p>Quando o caractere asterisco é posicionado antes de uma variável faz com que considere que aquela variável (coleções) seja
 “desempacotada”. Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência de valores estraídos separados
 por vírgulas.</p>
-<hr class="docutils" />
-<p>Argumentos em Lista Nomeados</p>
+</div>
+<div class="section" id="argumentos-em-lista-nomeados">
+<h2><span class="section-number">17.6. </span>Argumentos em Lista Nomeados<a class="headerlink" href="#argumentos-em-lista-nomeados" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>O identificador da variável desse tipo de argumento é precedido por dois asteriscos (**).
 É uma lista com quantidade indeterminada e cada elemento da lista tem um identificador próprio.</p>
@@ -447,8 +463,9 @@ Nome = Chiquinho</p>
 <p>TypeError: funcao() takes exactly 0 arguments (1 given)</p>
 <p>funcao(<a href="#id21"><span class="problematic" id="id22">**</span></a>eggs)
 {‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
-<hr class="docutils" />
-<p>Funções com Argumentos Variados</p>
+</div>
+<div class="section" id="funcoes-com-argumentos-variados">
+<h2><span class="section-number">17.7. </span>Funções com Argumentos Variados<a class="headerlink" href="#funcoes-com-argumentos-variados" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>E se precisarmos fazer uma função que utilize tipos diferentes conforme visto anteriormente?
 A ordem dos tipos de argumentos é a seguinte:</p>

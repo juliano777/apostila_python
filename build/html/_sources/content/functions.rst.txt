@@ -119,18 +119,20 @@ Execução da função:
 .. code-block:: python
 
     funcao()
-    
+
 .. code-block:: console
 
     7
 
-Como pode-se notar, o código inserido após return foi completamente ignorado.
-Devido ao fato de os comandos serem digitados no shell interativo foi impresso em tela
-o valor de retorno da função.
+|   Como pode-se notar, o código inserido após return foi completamente
+| ignorado.
+|   Devido ao fato de os comandos serem digitados no shell interativo foi
+| impresso em tela o valor de retorno da função.
 
-=====================================================================================================================
+
 
 Argumentos Simples (Argumentos Não Nomeados)
+--------------------------------------------
 
 	Uma função pode ter um ou mais argumentos a serem pasados.
 	Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios têm um valor inicial.
@@ -163,10 +165,11 @@ funcao(7)
 .. code-block:: console
 
     7
-
-=====================================================================================================================
-
+    
+    
+    
 Argumentos Nomeados
+-------------------
 
 	Podemos definir uma função em que um ou mais argumentos tenham valores padrões de forma que ao invocar a função podemos omitir a declaração, pois será considerado o padrão ou explicitando um valor.
 	Quando houver mais de um argumento, os argumentos obrigatórios devem vira primeiro.
@@ -227,15 +230,16 @@ funcao(10, z = 30, y = 50)
 90
 
 
-=====================================================================================================================
-
 
 Argumentos em Lista Não Nomeados
+--------------------------------
 
 	É possível passar uma lista de argumentos sem nomear cada um deles, ou seja, atribuir uma variável.
 	Essa lista, internamente é interpretada como uma tupla (tuple).
 	Tal recurso nos possibilita passar uma quantidade indeterminada de argumentos.
 	O identificador da variável que representa esse tipo de argumento vem logo depois do caractere asterisco (*).
+
+    
 
 def funcao(*args):
     qtd = len(args)
@@ -295,9 +299,10 @@ Quando o caractere asterisco é posicionado antes de uma variável faz com que c
 "desempacotada". Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência de valores estraídos separados
 por vírgulas.
 
-=====================================================================================================================
+
 
 Argumentos em Lista Nomeados
+----------------------------
 
 	O identificador da variável desse tipo de argumento é precedido por dois asteriscos (**).
 	É uma lista com quantidade indeterminada e cada elemento da lista tem um identificador próprio.
@@ -341,9 +346,10 @@ TypeError: funcao() takes exactly 0 arguments (1 given)
 funcao(**eggs)
 {'a': 3, 'b': 5, 'c': 'x'}
 
-=====================================================================================================================
+
 
 Funções com Argumentos Variados
+-------------------------------
 
 	E se precisarmos fazer uma função que utilize tipos diferentes conforme visto anteriormente?
 	A ordem dos tipos de argumentos é a seguinte:
