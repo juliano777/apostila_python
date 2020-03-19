@@ -425,6 +425,7 @@ Notemos a diferença de comportamento nas execuções:
 
 .. code-block:: python
 
+    # Execução sem "desempacotamento" dos valores da tupla
     funcao(spam)
 
 .. code-block:: console
@@ -432,16 +433,10 @@ Notemos a diferença de comportamento nas execuções:
     ((1, 2, 3, 4),)
     (1, 2, 3, 4)
 
-|   Execução frustrada :/
-|   É preciso "desempacotar" a tupla...
-
-
-
-Tentativa de execução da função passando puramente o identificador da tupla
-com o asterisco para desempacotá-la:
 
 .. code-block:: python
 
+    # Execução com "desempacotamento" dos valores da tupla
     funcao(*spam)
 
 .. code-block:: console

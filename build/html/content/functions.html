@@ -487,20 +487,16 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 </pre></div>
 </div>
 <p>Notemos a diferença de comportamento nas execuções:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="n">spam</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execução sem &quot;desempacotamento&quot; dos valores da tupla</span>
+<span class="n">funcao</span><span class="p">(</span><span class="n">spam</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">((1, 2, 3, 4)</span><span class="go">,)</span>
 <span class="gp gp-VirtualEnv">(1, 2, 3, 4)</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">Execução frustrada :/</div>
-<div class="line">É preciso “desempacotar” a tupla…</div>
-</div>
-<p>Tentativa de execução da função passando puramente o identificador da tupla
-com o asterisco para desempacotá-la:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">spam</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execução com &quot;desempacotamento&quot; dos valores da tupla</span>
+<span class="n">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">spam</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(1, 2, 3, 4)</span>
