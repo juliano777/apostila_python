@@ -407,8 +407,14 @@ não nomeados:
 
     def funcao(x, *args):
         return args
-    
-spam = (1, 2, 3, 4)
+
+
+
+Criação de uma tupla com quatro elementos:
+
+.. code-block:: python
+
+    spam = (1, 2, 3, 4)
 
 funcao(spam)
 
