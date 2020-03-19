@@ -375,7 +375,6 @@ Modelo: 147</p>
 <div class="section" id="objetos-com-atributos-dinamicos">
 <h2><span class="section-number">18.3. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
 <p>Criação da classe Carro:</p>
-<p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -386,15 +385,19 @@ Modelo: 147</p>
 </pre></div>
 </div>
 <p>Vejamos agora o dicionário de atributos com seus respectivos valores:</p>
-<p>print(c1.__dict__)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{}</span>
 </pre></div>
 </div>
 <p>O atributo especial __dict__, em um objeto, é um dicionário que é usado para guardar atributos e seus respectivos valores.
 O dicionário em questão apresentou um conjunto vazio.</p>
 <p>Agora vamos preencher os atributos:</p>
-<p>c1.marca = ‘Porsche’
-c1.modelo = ‘911’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;Porsche&#39;</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;911&#39;</span>
+</pre></div>
+</div>
 <p>Consulta ao dicionário do objeto novamente:</p>
 <p>print(c1.__dict__)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;modelo&#39;: &#39;911&#39;, &#39;marca&#39;: &#39;Porsche&#39;}</span>

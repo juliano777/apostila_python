@@ -255,8 +255,6 @@ Objetos com Atributos Dinâmicos
 
 Criação da classe Carro:
 
-bla bla bla:
-
 .. code-block:: python
 
     class Carro(object):
@@ -275,7 +273,9 @@ Criação de um objeto da classe Carro:
 
 Vejamos agora o dicionário de atributos com seus respectivos valores:
 
-print(c1.__dict__)
+.. code-block:: python
+
+    print(c1.__dict__)
 
 .. code-block:: console
 
@@ -285,9 +285,11 @@ O atributo especial __dict__, em um objeto, é um dicionário que é usado para 
 O dicionário em questão apresentou um conjunto vazio.
 
 Agora vamos preencher os atributos:
-	
-c1.marca = 'Porsche'
-c1.modelo = '911'
+
+.. code-block:: python
+
+    c1.marca = 'Porsche'
+    c1.modelo = '911'
 
 Consulta ao dicionário do objeto novamente:
 	
