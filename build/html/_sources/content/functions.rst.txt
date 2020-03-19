@@ -703,44 +703,59 @@ Criação de um generator pela função geradora e verificando seu tipo:
 
     generator
 
-g.next()
+
+
+Método next():
+
+.. code-block:: python
+
+    g.next()
 
 .. code-block:: console
 
     INÍCIO
     'P'
 
-g.next()
+.. code-block:: python
+
+    g.next()
 
 
 .. code-block:: console
 
     'y'
 
-g.next()
+.. code-block:: python
+
+    g.next()
 
 .. code-block:: console
-
+    
     't'
 
-g.next()
+.. code-block:: python
+
+    g.next()
 
 .. code-block:: console
 
     'h'
 
-g.next()
+.. code-block:: python
+
+    g.next()
 
 .. code-block:: console
 
     'o'
 
-g.next()
+.. code-block:: python
+
+    g.next()
 
 .. code-block:: console
 
     'n'
-
 
 .. code-block:: python
 
