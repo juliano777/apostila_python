@@ -630,27 +630,37 @@ Boas Práticas: Função Main
 
 
 
+Editando um script Python de teste:
+
 .. code-block:: bash
 
     vim hello.py
 
-#!/usr/bin/env python
-#_*_ coding: utf-8 _*_
+.. code-block:: python
 
-def funcao():
-     print('Função executada')
+    #!/usr/bin/env python
+    #_*_ coding: utf-8 _*_
 
-
-def Main():
-     print('==== Início ====')
-     funcao()
-     print('==== Fim ====')
+    def funcao():
+        print('Função executada')
 
 
-if __name__ == '__main__':
-    Main()
+    def Main():
+        print('==== Início ====')
+        funcao()
+        print('==== Fim ====')
 
-python hello.py 
+
+    if __name__ == '__main__':
+        Main()
+
+
+
+Execução do script:
+
+.. code-block:: bash
+
+    python hello.py 
 
 .. code-block:: console
 
@@ -663,15 +673,24 @@ python hello.py
 Funções Geradoras
 -----------------
 
-	Uma função geradora ao invés de utilizar o comando return, utiliza o comando yield, que retorna um objeto generator.
+|   Uma função geradora ao invés de utilizar o comando return, utiliza o
+| comando yield, que retorna um objeto generator.
 
-def f_gen(var):
-    print('INÍCIO')
 
-    for i in var:
-        yield i
-    
-    print('FIM')        
+
+Criação de uma função geradora:
+
+.. code-block:: python
+
+    def f_gen(var):
+        print('INÍCIO')
+
+        for i in var:
+            yield i
+        
+        print('FIM')
+
+  
 
 g = f_gen('Python')
 

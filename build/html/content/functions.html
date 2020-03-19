@@ -665,22 +665,31 @@ parâmetro para a função:</p>
 <div class="line">de um if. Sendo que se for executado, terá a variável especial “__name__”</div>
 <div class="line">como valor “__main__”.</div>
 </div>
+<p>Editando um script Python de teste:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim hello.py
 </pre></div>
 </div>
-<p>#!/usr/bin/env python
-#_*_ coding: utf-8 _*_</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>print(‘Função executada’)</p>
-</dd>
-<dt>def Main():</dt><dd><p>print(‘==== Início ====’)
-funcao()
-print(‘==== Fim ====’)</p>
-</dd>
-<dt>if __name__ == ‘__main__’:</dt><dd><p>Main()</p>
-</dd>
-</dl>
-<p>python hello.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#_*_ coding: utf-8 _*_</span>
+
+<span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Função executada&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">Main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;==== Início ====&#39;</span><span class="p">)</span>
+    <span class="n">funcao</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;==== Fim ====&#39;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">Main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Execução do script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python hello.py
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">==== Início ====</span>
 <span class="go">Função executada</span>
 <span class="go">==== Fim ====</span>
@@ -689,18 +698,22 @@ print(‘==== Fim ====’)</p>
 </div>
 <div class="section" id="funcoes-geradoras">
 <h2><span class="section-number">17.10. </span>Funções Geradoras<a class="headerlink" href="#funcoes-geradoras" title="Link permanente para este título">¶</a></h2>
-<blockquote>
-<div><p>Uma função geradora ao invés de utilizar o comando return, utiliza o comando yield, que retorna um objeto generator.</p>
-</div></blockquote>
-<dl>
-<dt>def f_gen(var):</dt><dd><p>print(‘INÍCIO’)</p>
-<dl class="simple">
-<dt>for i in var:</dt><dd><p>yield i</p>
-</dd>
-</dl>
-<p>print(‘FIM’)</p>
-</dd>
-</dl>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Uma função geradora ao invés de utilizar o comando return, utiliza o</div>
+</div>
+<div class="line">comando yield, que retorna um objeto generator.</div>
+</div>
+<p>Criação de uma função geradora:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f_gen</span><span class="p">(</span><span class="n">var</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;INÍCIO&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">var</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">i</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FIM&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>g = f_gen(‘Python’)</p>
 <p>type(g)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">generator</span>
