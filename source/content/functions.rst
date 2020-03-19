@@ -560,13 +560,16 @@ g.next()
 
     'n'
 
-g.next()
+
+.. code-block:: python
+
+    g.next()
 
 .. code-block:: console
 
     FIM
 
-StopIteration: 
+    StopIteration: . . .
 
 
 Funções Lambda
