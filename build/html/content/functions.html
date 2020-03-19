@@ -561,16 +561,22 @@ telefone = ‘(11) 99999-9999’,</p>
 <span class="go">Nome = Chiquinho</span>
 </pre></div>
 </div>
-<dl>
-<dt>def funcao(<a href="#id3"><span class="problematic" id="id4">**</span></a>kargs):</dt><dd><p>return kargs</p>
-<p>eggs = {‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
-</dd>
-</dl>
-<p>funcao(eggs)</p>
+<p>Definição e execução:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">kargs</span>
+
+    <span class="n">eggs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;x&#39;</span><span class="p">}</span>
+
+<span class="n">funcao</span><span class="p">(</span><span class="n">eggs</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: funcao() takes exactly 0 arguments (1 given)</span>
 </pre></div>
 </div>
-<p>funcao(<a href="#id5"><span class="problematic" id="id6">**</span></a>eggs)</p>
+<p>Execução com duplo asterisco no identificador do parâmetro:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="o">**</span><span class="n">eggs</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;a&#39;: 3, &#39;b&#39;: 5, &#39;c&#39;: &#39;x&#39;}</span>
 </pre></div>
 </div>
@@ -583,7 +589,7 @@ A ordem dos tipos de argumentos é a seguinte:</p>
 <p>Simples, Nomeados, Lista de Não Nomeados e Lista de Nomeados</p>
 </div></blockquote>
 <dl>
-<dt>def foo(a, b = 3, <a href="#id7"><span class="problematic" id="id8">*</span></a>c, <a href="#id9"><span class="problematic" id="id10">**</span></a>d):</dt><dd><p>print(a + b)
+<dt>def foo(a, b = 3, <a href="#id3"><span class="problematic" id="id4">*</span></a>c, <a href="#id5"><span class="problematic" id="id6">**</span></a>d):</dt><dd><p>print(a + b)
 print(c)
 print(d)</p>
 <p>foo(4, 5, ‘Alemanha’, ‘Holanda’, ‘Inglaterra’, continente = ‘Europa’, hemisferio = ‘Norte’)</p>
@@ -611,10 +617,10 @@ print(d)</p>
 <p>dicio = {‘x’: 5, ‘y’: 2}</p>
 <p>conjunto = {2, 5, 2}</p>
 <p>Testes utilizando as estruturas de dados criadas:</p>
-<p>param_test(<a href="#id11"><span class="problematic" id="id12">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
-<p>param_test(<a href="#id13"><span class="problematic" id="id14">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
-<p>param_test(<a href="#id15"><span class="problematic" id="id16">*</span></a>lista)  # Lista (list) como parâmetro</p>
-<p>param_test(<a href="#id17"><span class="problematic" id="id18">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
+<p>param_test(<a href="#id7"><span class="problematic" id="id8">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
+<p>param_test(<a href="#id9"><span class="problematic" id="id10">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
+<p>param_test(<a href="#id11"><span class="problematic" id="id12">*</span></a>lista)  # Lista (list) como parâmetro</p>
+<p>param_test(<a href="#id13"><span class="problematic" id="id14">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>

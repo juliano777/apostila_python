@@ -502,18 +502,29 @@ Definição e execução:
     Nome = Chiquinho
 
 
-def funcao(**kargs):
-    return kargs
 
-    eggs = {'a': 3, 'b': 5, 'c': 'x'}
+Definição e execução:
 
-funcao(eggs)
+.. code-block:: python
+
+    def funcao(**kargs):
+        return kargs
+
+        eggs = {'a': 3, 'b': 5, 'c': 'x'}
+
+    funcao(eggs)
 
 .. code-block:: console
 
     TypeError: funcao() takes exactly 0 arguments (1 given)
 
-funcao(**eggs)
+
+
+Execução com duplo asterisco no identificador do parâmetro:
+
+.. code-block:: python
+
+    funcao(**eggs)
 
 .. code-block:: console
 
