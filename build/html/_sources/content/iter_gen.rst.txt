@@ -75,10 +75,12 @@ Executando o método __next__ até seu fim:
 Classe Iterator
 ---------------
 
-    É possível também implementar um iterador como um objeto de uma classe personalizada.
-    É necessário implementar os métodos __iter__ e __next__.
-    __iter__ retorna o objeto iterador por si.
-    __next__ retorna o próximo item da coleção e ao alcançar o fim e se houver uma chamada sequente uma exceção é lançada (StopIteration).
+|   É possível também implementar um iterador como um objeto de uma classe
+| personalizada.
+|   É necessário implementar os métodos __iter__ e __next__.
+|   __iter__ retorna o objeto iterador por si.
+|   __next__ retorna o próximo item da coleção e ao alcançar o fim e se
+| houver uma chamada sequente uma exceção é lançada (StopIteration).
 
 
 
@@ -119,10 +121,15 @@ Somatória dos 10 primeiros números:
 
 
 Generator
+---------
 
-    Um generator é um objeto iterável assim como um iterator, mas nem todo iterator é um generator.
-    Funções de generator permite declarar uma função que se comporta como um iterador, podendo ser usadas em loops.
-    Um generator implementa o conceito de lazy evaluation, o que faz com que em determinadas situações economize-se recursos de processamento, pois cada elemento é processado conforme a demanda.
+|   Um generator é um objeto iterável assim como um iterator, mas nem todo
+| iterator é um generator.
+|   Funções de generator permite declarar uma função que se comporta como um
+| iterador, podendo ser usadas em loops.
+|   Um generator implementa o conceito de lazy evaluation, o que faz com que
+| em determinadas situações economize-se recursos de processamento, pois cada
+| elemento é processado conforme a demanda.
 
 
 

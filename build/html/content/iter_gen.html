@@ -101,6 +101,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">16. Iteratoradores e Geradores</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#iterator">16.1. Iterator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#classe-iterator">16.2. Classe Iterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generator">16.3. Generator</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
@@ -241,12 +242,18 @@ Todo objeto que tiver o método __next__() é um iterator.</p>
 </div>
 <div class="section" id="classe-iterator">
 <h2><span class="section-number">16.2. </span>Classe Iterator<a class="headerlink" href="#classe-iterator" title="Link permanente para este título">¶</a></h2>
-<blockquote>
-<div><p>É possível também implementar um iterador como um objeto de uma classe personalizada.
-É necessário implementar os métodos __iter__ e __next__.
-__iter__ retorna o objeto iterador por si.
-__next__ retorna o próximo item da coleção e ao alcançar o fim e se houver uma chamada sequente uma exceção é lançada (StopIteration).</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line-block">
+<div class="line">É possível também implementar um iterador como um objeto de uma classe</div>
+</div>
+<div class="line">personalizada.</div>
+<div class="line-block">
+<div class="line">É necessário implementar os métodos __iter__ e __next__.</div>
+<div class="line">__iter__ retorna o objeto iterador por si.</div>
+<div class="line">__next__ retorna o próximo item da coleção e ao alcançar o fim e se</div>
+</div>
+<div class="line">houver uma chamada sequente uma exceção é lançada (StopIteration).</div>
+</div>
 <p>Criação da classe de iterador:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FirstNumbers</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
@@ -274,12 +281,24 @@ __next__ retorna o próximo item da coleção e ao alcançar o fim e se houver u
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">45</span>
 </pre></div>
 </div>
-<p>Generator</p>
-<blockquote>
-<div><p>Um generator é um objeto iterável assim como um iterator, mas nem todo iterator é um generator.
-Funções de generator permite declarar uma função que se comporta como um iterador, podendo ser usadas em loops.
-Um generator implementa o conceito de lazy evaluation, o que faz com que em determinadas situações economize-se recursos de processamento, pois cada elemento é processado conforme a demanda.</p>
-</div></blockquote>
+</div>
+<div class="section" id="generator">
+<h2><span class="section-number">16.3. </span>Generator<a class="headerlink" href="#generator" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Um generator é um objeto iterável assim como um iterator, mas nem todo</div>
+</div>
+<div class="line">iterator é um generator.</div>
+<div class="line-block">
+<div class="line">Funções de generator permite declarar uma função que se comporta como um</div>
+</div>
+<div class="line">iterador, podendo ser usadas em loops.</div>
+<div class="line-block">
+<div class="line">Um generator implementa o conceito de lazy evaluation, o que faz com que</div>
+</div>
+<div class="line">em determinadas situações economize-se recursos de processamento, pois cada</div>
+<div class="line">elemento é processado conforme a demanda.</div>
+</div>
 <p>Criando um objeto range que vai de 0  a 9:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
