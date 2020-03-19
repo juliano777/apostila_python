@@ -771,11 +771,20 @@ parâmetro para a função:</p>
 </div>
 <div class="section" id="funcoes-lambda">
 <h2><span class="section-number">17.11. </span>Funções Lambda<a class="headerlink" href="#funcoes-lambda" title="Link permanente para este título">¶</a></h2>
-<blockquote>
-<div><p>São funções anônimas, ou seja, que não são associadas a um nome. Um recurso similar às funções anônimas em PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
-Sua estrutura é composta apenas por expressões, o que a torna muito limitada, no entanto consome menos recursos do que uma função convencional.
-Por só aceitar expressões, o comando return não é permitido em sua estrutura.</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line-block">
+<div class="line">São funções anônimas, ou seja, que não são associadas a um nome. Um</div>
+</div>
+<div class="line">recurso similar às funções anônimas em PL/pgSQL (PostgreSQL).</div>
+<div class="line-block">
+<div class="line">Sua estrutura é composta apenas por expressões, o que a torna muito</div>
+</div>
+<div class="line">limitada, no entanto consome menos recursos do que uma função convencional.</div>
+<div class="line-block">
+<div class="line">Por só aceitar expressões, o comando return não é permitido em sua</div>
+</div>
+<div class="line">estrutura.</div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>

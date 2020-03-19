@@ -771,9 +771,12 @@ Método next():
 Funções Lambda
 --------------
 
-	São funções anônimas, ou seja, que não são associadas a um nome. Um recurso similar às funções anônimas em PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
-	Sua estrutura é composta apenas por expressões, o que a torna muito limitada, no entanto consome menos recursos do que uma função convencional. 
-	Por só aceitar expressões, o comando return não é permitido em sua estrutura.
+|	São funções anônimas, ou seja, que não são associadas a um nome. Um
+| recurso similar às funções anônimas em PL/pgSQL (PostgreSQL).
+|   Sua estrutura é composta apenas por expressões, o que a torna muito
+| limitada, no entanto consome menos recursos do que uma função convencional. 
+|   Por só aceitar expressões, o comando return não é permitido em sua
+| estrutura.
 
 
 
