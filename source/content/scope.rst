@@ -157,10 +157,15 @@ Uma nova definição da função:
         funcao_secundaria()
 
 |   Diferente do exemplo anterior, a função secundária declarou sua própria variável "x".    
-    
 
-Testando a função    
-funcao_principal()
+
+
+Testando a função:
+
+.. code-block:: python
+
+    funcao_principal()
+    
 .. code-block:: console
 
     2
