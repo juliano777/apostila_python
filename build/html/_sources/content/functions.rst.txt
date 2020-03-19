@@ -272,14 +272,34 @@ Passando os dois parâmetros:
 
     5
 
-funcao()
 
-TypeError: funcao() takes at least 1 argument (0 given)
 
-def funcao(x, y = 1, z = 2):
-    return x + y + z
-    
-funcao(0)
+Forçando um erro ao não passar sequer o parâmetro obrigatório:
+
+.. code-block:: python
+
+    funcao()
+
+.. code-block:: console
+
+    TypeError: funcao() takes at least 1 argument (0 given)
+
+
+
+Definindo uma função com dois parâmetros opcionais:
+
+.. code-block:: python
+
+    def funcao(x, y = 1, z = 2):
+        return x + y + z
+
+
+
+Execução da função:
+
+.. code-block:: python
+
+    funcao(0)
 
 .. code-block:: console
 

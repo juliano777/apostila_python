@@ -381,13 +381,22 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">5</span>
 </pre></div>
 </div>
-<p>funcao()</p>
-<p>TypeError: funcao() takes at least 1 argument (0 given)</p>
-<dl class="simple">
-<dt>def funcao(x, y = 1, z = 2):</dt><dd><p>return x + y + z</p>
-</dd>
-</dl>
-<p>funcao(0)</p>
+<p>Forçando um erro ao não passar sequer o parâmetro obrigatório:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: funcao() takes at least 1 argument (0 given)</span>
+</pre></div>
+</div>
+<p>Definindo uma função com dois parâmetros opcionais:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
+</pre></div>
+</div>
+<p>Execução da função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
 </pre></div>
 </div>
