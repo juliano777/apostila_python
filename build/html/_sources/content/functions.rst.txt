@@ -368,24 +368,27 @@ Argumentos em Lista Não Nomeados
 
 Definição de função de duas formas diferentes:
 
+.. code-block:: python
 
-
-
-
-
-    
-    
-def funcao(*args):
-    for arg in args:
-        print('Argumento {} = {}'.format(args.index(arg), arg))
+    def funcao(*args):
+        for arg in args:
+            print('Argumento {} = {}'.format(args.index(arg), arg))
 
 ou
 
-def funcao(*args):
-    for i, arg in enumerate(args):
-        print('Argumento {} = {}'.format(i, arg))
-        
-funcao('a', 1.5, 7, 99)
+.. code-block:: python
+
+    def funcao(*args):
+        for i, arg in enumerate(args):
+            print('Argumento {} = {}'.format(i, arg))
+
+
+
+Execução:
+
+.. code-block:: python
+
+    funcao('a', 1.5, 7, 99)
 
 .. code-block:: console
 
