@@ -102,8 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">18. Orientação a Objetos</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#metodo-definido-externamente-a-classe">18.1. Método Definido Externamente à Classe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#o-metodo-x">18.2. o.metodo_x()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.3. Objetos com Atributos Dinâmicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.2. Objetos com Atributos Dinâmicos</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
@@ -194,22 +193,16 @@ Tudo em Python é objeto (inclusive classes);
 O método construtor é o método inicializador, o método mágico __init__;</p>
 </div></blockquote>
 <p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NomeClasse</span><span class="p">(</span><span class="n">ClasseMae</span><span class="p">):</span>
+    <span class="c1"># Método construtor ou método inicializador (sem parâmetro)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="c1"># Método comum com 1 (um) parâmetro</span>
+    <span class="k">def</span> <span class="nf">metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">foo</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">foo</span>
 </pre></div>
 </div>
-<dl>
-<dt>class NomeClasse(ClasseMae):</dt><dd><p># Método construtor ou método inicializador (sem parâmetro)
-def __init__(self):</p>
-<blockquote>
-<div><p>pass</p>
-</div></blockquote>
-<p># Método comum com 1 (um) parâmetro
-def metodo(self, foo):</p>
-<blockquote>
-<div><p>return foo</p>
-</div></blockquote>
-</dd>
-</dl>
 <div class="line-block">
 <div class="line">Em Python a definição de uma classe é bem simples. Usamos o comando class seguindo do nome da classe a ser criada, logo em seguida vindo entre parênteses os nomes das classes mãe separados por vírgulas, pois em Python é permitida herança múltipla.</div>
 <div class="line">O método construtor, também chamado de método inicializador é o __init__.</div>
@@ -245,27 +238,22 @@ Há uma convenção que colocando um unerline como primeiro caractere no nome de
 Porém, isso é apenas uma convenção. Nada impede que sejam acessados externamente.
 Para que haja um bloqueio efetivo há um recurso na linguagem chamado “property”.</p>
 <p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+
+    <span class="k">def</span> <span class="nf">ignicao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor desligado!&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor ligado!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl>
-<dt>class Carro(object):</dt><dd><p>motor_ligado = False</p>
-<dl class="simple">
-<dt>def __init__(self, marca, modelo):</dt><dd><p>self.marca = marca
-self.modelo = modelo</p>
-</dd>
-<dt>def ignicao(self):</dt><dd><dl class="simple">
-<dt>if (self.motor_ligado):</dt><dd><p>self.motor_ligado = False
-print(‘Motor desligado!’)</p>
-</dd>
-<dt>else:</dt><dd><p>self.motor_ligado = True
-print(‘Motor ligado!’)</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd>
-</dl>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
 </pre></div>
@@ -295,10 +283,15 @@ print(‘Motor ligado!’)</p>
 </div>
 <p>Marca: Fiat
 Modelo: 147</p>
-<p>Método __str__</p>
-<p>print(c1)</p>
+<p>Método __str__:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>&lt;__main__.Carro object at 0x7f1f6313eed0&gt;</p>
-<p>repr(c1)</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>‘&lt;__main__.Carro object at 0x7f1f6313eed0&gt;’</p>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -328,7 +321,9 @@ Modelo: 147</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Out[32]: ‘&lt;__main__.Carro object at 0x7f1f631273d0&gt;’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;__main__.Carro object at 0x7f1f631273d0&gt;&#39;</span>
+</pre></div>
+</div>
 <div class="section" id="metodo-definido-externamente-a-classe">
 <h2><span class="section-number">18.1. </span>Método Definido Externamente à Classe<a class="headerlink" href="#metodo-definido-externamente-a-classe" title="Link permanente para este título">¶</a></h2>
 <p>bla bla bla:</p>
@@ -352,28 +347,36 @@ Modelo: 147</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">numero</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>800</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">800</span>
+</pre></div>
+</div>
 <p>Método Definido Externamente ao Objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="s1">&#39;X&#39;</span>
+
+<span class="n">o</span><span class="o">.</span><span class="n">metodo_x</span> <span class="o">=</span> <span class="n">metodo_objeto</span>
+
+<span class="n">o</span><span class="o">.</span><span class="n">metodo_x</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>o.metodo_x = metodo_objeto</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
+<span class="go">TypeError                                 Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-41-2f98daa957c2&gt; in &lt;module&gt;()</span>
+<span class="go">----&gt; 1 o.metodo_x()</span>
+
+<span class="go">TypeError: metodo_objeto() takes exactly 1 argument (0 given)</span>
+</pre></div>
 </div>
-<div class="section" id="o-metodo-x">
-<h2><span class="section-number">18.2. </span>o.metodo_x()<a class="headerlink" href="#o-metodo-x" title="Link permanente para este título">¶</a></h2>
-<p>TypeError                                 Traceback (most recent call last)
-&lt;ipython-input-41-2f98daa957c2&gt; in &lt;module&gt;()
-—-&gt; 1 o.metodo_x()</p>
-<p>TypeError: metodo_objeto() takes exactly 1 argument (0 given)</p>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">.</span><span class="n">metodo_x</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>‘X’</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;X&#39;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="objetos-com-atributos-dinamicos">
-<h2><span class="section-number">18.3. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">18.2. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
 <p>Criação da classe Carro:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>

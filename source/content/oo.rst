@@ -10,16 +10,15 @@ Orientação a Objetos
 bla bla bla:
 
 .. code-block:: python
-
     
-class NomeClasse(ClasseMae):
-    # Método construtor ou método inicializador (sem parâmetro)
-    def __init__(self):        
-        pass
+    class NomeClasse(ClasseMae):
+        # Método construtor ou método inicializador (sem parâmetro)
+        def __init__(self):        
+            pass
 
-    # Método comum com 1 (um) parâmetro
-    def metodo(self, foo):
-        return foo
+        # Método comum com 1 (um) parâmetro
+        def metodo(self, foo):
+            return foo
 
 
 |   Em Python a definição de uma classe é bem simples. Usamos o comando class seguindo do nome da classe a ser criada, logo em seguida vindo entre parênteses os nomes das classes mãe separados por vírgulas, pois em Python é permitida herança múltipla.
@@ -68,23 +67,20 @@ bla bla bla:
 
 .. code-block:: python
 
-    
+    class Carro(object):
+        motor_ligado = False    
 
+        def __init__(self, marca, modelo):
+            self.marca = marca
+            self.modelo = modelo
 
-class Carro(object):
-    motor_ligado = False    
-
-    def __init__(self, marca, modelo):
-        self.marca = marca
-        self.modelo = modelo
-
-    def ignicao(self):
-        if (self.motor_ligado):
-            self.motor_ligado = False
-            print('Motor desligado!')
-        else:
-            self.motor_ligado = True
-            print('Motor ligado!')
+        def ignicao(self):
+            if (self.motor_ligado):
+                self.motor_ligado = False
+                print('Motor desligado!')
+            else:
+                self.motor_ligado = True
+                print('Motor ligado!')
 
 
 
@@ -135,14 +131,21 @@ Marca: Fiat
 Modelo: 147
 
 
-Método __str__
+Método __str__:
 
-print(c1)
+.. code-block:: python
+
+    print(c1)
 
 <__main__.Carro object at 0x7f1f6313eed0>
 
 
-repr(c1)
+
+bla bla bla:
+
+.. code-block:: python
+
+    repr(c1)
 
 '<__main__.Carro object at 0x7f1f6313eed0>'
 
@@ -182,7 +185,9 @@ bla bla bla:
 
     repr(c1)
 
-Out[32]: '<__main__.Carro object at 0x7f1f631273d0>'
+.. code-block:: console
+
+    '<__main__.Carro object at 0x7f1f631273d0>'
 
 
 Método Definido Externamente à Classe
@@ -218,7 +223,10 @@ bla bla bla:
 .. code-block:: python
 
     print(o.numero)
-800
+
+.. code-block:: console
+
+    800
 
 Método Definido Externamente ao Objeto:
 
@@ -227,16 +235,19 @@ Método Definido Externamente ao Objeto:
     def metodo_objeto(self):
         return 'X'
 
-o.metodo_x = metodo_objeto
+    o.metodo_x = metodo_objeto
+
+    o.metodo_x()
 
 
-o.metodo_x()
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-41-2f98daa957c2> in <module>()
-----> 1 o.metodo_x()
+.. code-block:: console
 
-TypeError: metodo_objeto() takes exactly 1 argument (0 given)
+    ---------------------------------------------------------------------------
+    TypeError                                 Traceback (most recent call last)
+    <ipython-input-41-2f98daa957c2> in <module>()
+    ----> 1 o.metodo_x()
+
+    TypeError: metodo_objeto() takes exactly 1 argument (0 given)
 
 
 
@@ -246,7 +257,9 @@ bla bla bla:
 
     o.metodo_x(o)
 
-'X'
+.. code-block:: console
+
+    'X'
 
 
 Objetos com Atributos Dinâmicos
