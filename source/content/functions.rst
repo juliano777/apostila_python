@@ -185,37 +185,53 @@ Argumentos Nomeados
 	Podemos definir uma função em que um ou mais argumentos tenham valores padrões de forma que ao invocar a função podemos omitir a declaração, pois será considerado o padrão ou explicitando um valor.
 	Quando houver mais de um argumento, os argumentos obrigatórios devem vira primeiro.
 
-Definição de função com um argumento 
 
-def funcao(x = 7):
-    return x
+
+Definição de função com um argumento:
+
+.. code-block:: python
+
+    def funcao(x = 7):
+        return x
+
+
 
 Chamando a função sem declarar valor de argumento:
 
-funcao()
+.. code-block:: python
+
+    funcao()
 
 .. code-block:: console
 
     7
 
+
+
 Chamando a função explicitando um valor de argumento:
 
-funcao(9)
+.. code-block:: python
+
+    funcao(9)
+
+ou
+
+.. code-block:: python
+
+    funcao(x = 9)    
 
 .. code-block:: console
 
     9
 
-funcao(x = 9)
 
-.. code-block:: console
 
-    9        
+Definindo uma função mesclando argumentos padrão e obrigatórios:
 
-Definindo uma função mesclando argumentos padrão e obrigatórios
+.. code-block:: python
 
-def funcao(x = 7, y):
-         return x + y
+    def funcao(x = 7, y):
+        return x + y
 
 SyntaxError: non-default argument follows default argument
 

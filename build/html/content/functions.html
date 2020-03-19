@@ -328,30 +328,34 @@ Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não o
 <div><p>Podemos definir uma função em que um ou mais argumentos tenham valores padrões de forma que ao invocar a função podemos omitir a declaração, pois será considerado o padrão ou explicitando um valor.
 Quando houver mais de um argumento, os argumentos obrigatórios devem vira primeiro.</p>
 </div></blockquote>
-<p>Definição de função com um argumento</p>
-<dl class="simple">
-<dt>def funcao(x = 7):</dt><dd><p>return x</p>
-</dd>
-</dl>
+<p>Definição de função com um argumento:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
 <p>Chamando a função sem declarar valor de argumento:</p>
-<p>funcao()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
 <p>Chamando a função explicitando um valor de argumento:</p>
-<p>funcao(9)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ou</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
 </pre></div>
 </div>
-<p>funcao(x = 9)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">9</span>
+<p>Definindo uma função mesclando argumentos padrão e obrigatórios:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
-<p>Definindo uma função mesclando argumentos padrão e obrigatórios</p>
-<dl class="simple">
-<dt>def funcao(x = 7, y):</dt><dd><p>return x + y</p>
-</dd>
-</dl>
 <p>SyntaxError: non-default argument follows default argument</p>
 <p>Houve um erro, pois primeiro são os argumentos não padrões.</p>
 <dl class="simple">
