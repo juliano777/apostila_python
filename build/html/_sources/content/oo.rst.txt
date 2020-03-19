@@ -171,44 +171,61 @@ bla bla bla:
                 print('Motor ligado!')
 
     c1 = Carro('Fiat', '147')
-
-print(c1)
+    print(c1)
 
 Fiat - 147
 
-repr(c1)
+
+bla bla bla:
+
+.. code-block:: python
+
+    repr(c1)
+
 Out[32]: '<__main__.Carro object at 0x7f1f631273d0>'
 
 
 Método Definido Externamente à Classe
-
-
-def metodo_externo(self, frase, numero):
-    self.numero = numero
-    print(frase)
-
-
-class MinhaClasse(object):
-    pass
+-------------------------------------
 
 
 
-o = MinhaClasse()
+bla bla bla:
+
+.. code-block:: python
+
+    def metodo_externo(self, frase, numero):
+        self.numero = numero
+        print(frase)
 
 
-MinhaClasse.metodo = metodo_externo
+    class MinhaClasse(object):
+        pass
+
+    o = MinhaClasse()
+
+    MinhaClasse.metodo = metodo_externo
+
+    o.metodo('Bla bla bla', 800)
 
 
-o.metodo('Bla bla bla', 800)
 Bla bla bla
 
-print(o.numero)
+
+
+bla bla bla:
+
+.. code-block:: python
+
+    print(o.numero)
 800
 
-Método Definido Externamente ao Objeto
+Método Definido Externamente ao Objeto:
 
-def metodo_objeto(self):
-    return 'X'
+.. code-block:: python
+
+    def metodo_objeto(self):
+        return 'X'
 
 o.metodo_x = metodo_objeto
 
@@ -221,7 +238,14 @@ TypeError                                 Traceback (most recent call last)
 
 TypeError: metodo_objeto() takes exactly 1 argument (0 given)
 
-o.metodo_x(o)
+
+
+bla bla bla:
+
+.. code-block:: python
+
+    o.metodo_x(o)
+
 'X'
 
 
@@ -231,14 +255,22 @@ Objetos com Atributos Dinâmicos
 
 Criação da classe Carro:
 
-class Carro(object):
-    marca = ''
-    modelo = ''
+bla bla bla:
+
+.. code-block:: python
+
+    class Carro(object):
+        marca = ''
+        modelo = ''
+
+
 
 
 Criação de um objeto da classe Carro:
 
-c1 = Carro()
+.. code-block:: python
+
+    c1 = Carro()
 
 
 Vejamos agora o dicionário de atributos com seus respectivos valores:

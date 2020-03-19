@@ -101,8 +101,9 @@
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">18. Orientação a Objetos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#o-metodo-x">18.1. o.metodo_x()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.2. Objetos com Atributos Dinâmicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodo-definido-externamente-a-classe">18.1. Método Definido Externamente à Classe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#o-metodo-x">18.2. o.metodo_x()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.3. Objetos com Atributos Dinâmicos</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
@@ -319,51 +320,71 @@ Modelo: 147</p>
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor ligado!&#39;</span><span class="p">)</span>
 
 <span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s1">&#39;Fiat&#39;</span><span class="p">,</span> <span class="s1">&#39;147&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>print(c1)</p>
 <p>Fiat - 147</p>
-<p>repr(c1)
-Out[32]: ‘&lt;__main__.Carro object at 0x7f1f631273d0&gt;’</p>
-<p>Método Definido Externamente à Classe</p>
-<dl class="simple">
-<dt>def metodo_externo(self, frase, numero):</dt><dd><p>self.numero = numero
-print(frase)</p>
-</dd>
-<dt>class MinhaClasse(object):</dt><dd><p>pass</p>
-</dd>
-</dl>
-<p>o = MinhaClasse()</p>
-<p>MinhaClasse.metodo = metodo_externo</p>
-<p>o.metodo(‘Bla bla bla’, 800)
-Bla bla bla</p>
-<p>print(o.numero)
-800</p>
-<p>Método Definido Externamente ao Objeto</p>
-<dl class="simple">
-<dt>def metodo_objeto(self):</dt><dd><p>return ‘X’</p>
-</dd>
-</dl>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Out[32]: ‘&lt;__main__.Carro object at 0x7f1f631273d0&gt;’</p>
+<div class="section" id="metodo-definido-externamente-a-classe">
+<h2><span class="section-number">18.1. </span>Método Definido Externamente à Classe<a class="headerlink" href="#metodo-definido-externamente-a-classe" title="Link permanente para este título">¶</a></h2>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_externo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frase</span><span class="p">,</span> <span class="n">numero</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">numero</span> <span class="o">=</span> <span class="n">numero</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">frase</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">MinhaClasse</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">o</span> <span class="o">=</span> <span class="n">MinhaClasse</span><span class="p">()</span>
+
+<span class="n">MinhaClasse</span><span class="o">.</span><span class="n">metodo</span> <span class="o">=</span> <span class="n">metodo_externo</span>
+
+<span class="n">o</span><span class="o">.</span><span class="n">metodo</span><span class="p">(</span><span class="s1">&#39;Bla bla bla&#39;</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Bla bla bla</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">numero</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>800</p>
+<p>Método Definido Externamente ao Objeto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;X&#39;</span>
+</pre></div>
+</div>
 <p>o.metodo_x = metodo_objeto</p>
+</div>
 <div class="section" id="o-metodo-x">
-<h2><span class="section-number">18.1. </span>o.metodo_x()<a class="headerlink" href="#o-metodo-x" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">18.2. </span>o.metodo_x()<a class="headerlink" href="#o-metodo-x" title="Link permanente para este título">¶</a></h2>
 <p>TypeError                                 Traceback (most recent call last)
 &lt;ipython-input-41-2f98daa957c2&gt; in &lt;module&gt;()
 —-&gt; 1 o.metodo_x()</p>
 <p>TypeError: metodo_objeto() takes exactly 1 argument (0 given)</p>
-<p>o.metodo_x(o)
-‘X’</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">.</span><span class="n">metodo_x</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>‘X’</p>
 </div>
 <div class="section" id="objetos-com-atributos-dinamicos">
-<h2><span class="section-number">18.2. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">18.3. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
 <p>Criação da classe Carro:</p>
-<dl class="simple">
-<dt>class Carro(object):</dt><dd><p>marca = ‘’
-modelo = ‘’</p>
-</dd>
-</dl>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
 <p>Criação de um objeto da classe Carro:</p>
-<p>c1 = Carro()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Vejamos agora o dicionário de atributos com seus respectivos valores:</p>
 <p>print(c1.__dict__)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{}</span>
