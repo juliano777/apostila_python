@@ -277,12 +277,21 @@ print(‘Motor ligado!’)</p>
 </div></blockquote>
 <p>—&gt; 17 c1 = Carro()</p>
 <p>TypeError: __init__() takes exactly 3 arguments (1 given)</p>
-<p>c1 = Carro(‘Fiat’, ‘147’)</p>
-<p>c1.ignicao()</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s1">&#39;Fiat&#39;</span><span class="p">,</span> <span class="s1">&#39;147&#39;</span><span class="p">)</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">ignicao</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Motor ligado!</p>
-<p>c1.ignicao()</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="n">ignicao</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>Motor desligado!</p>
-<p>print(‘Marca: %snModelo: %s’ % (c1.marca, c1.modelo))</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Marca: </span><span class="si">%s</span><span class="se">\n</span><span class="s1">Modelo: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="n">c1</span><span class="o">.</span><span class="n">modelo</span><span class="p">))</span>
+</pre></div>
+</div>
 <p>Marca: Fiat
 Modelo: 147</p>
 <p>Método __str__</p>
@@ -290,27 +299,28 @@ Modelo: 147</p>
 <p>&lt;__main__.Carro object at 0x7f1f6313eed0&gt;</p>
 <p>repr(c1)</p>
 <p>‘&lt;__main__.Carro object at 0x7f1f6313eed0&gt;’</p>
-<dl>
-<dt>class Carro(object):</dt><dd><p>motor_ligado = False</p>
-<dl class="simple">
-<dt>def __init__(self, marca, modelo):</dt><dd><p>self.marca = marca
-self.modelo = modelo</p>
-</dd>
-<dt>def __str__(self):</dt><dd><p>return ‘%s - %s’ % (self.marca, self.modelo)</p>
-</dd>
-<dt>def ignicao(self):</dt><dd><dl class="simple">
-<dt>if (self.motor_ligado):</dt><dd><p>self.motor_ligado = False
-print(‘Motor desligado!’)</p>
-</dd>
-<dt>else:</dt><dd><p>self.motor_ligado = True
-print(‘Motor ligado!’)</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>c1 = Carro(‘Fiat’, ‘147’)</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">ignicao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor desligado!&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor ligado!&#39;</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s1">&#39;Fiat&#39;</span><span class="p">,</span> <span class="s1">&#39;147&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>print(c1)</p>
 <p>Fiat - 147</p>
 <p>repr(c1)

@@ -102,17 +102,34 @@ TypeError                                 Traceback (most recent call last)
 
 TypeError: __init__() takes exactly 3 arguments (1 given)
 
-c1 = Carro('Fiat', '147')
 
-c1.ignicao()
+
+bla bla bla:
+
+.. code-block:: python
+
+    c1 = Carro('Fiat', '147')
+    c1.ignicao()
 
 Motor ligado!
 
-c1.ignicao()
+
+
+bla bla bla:
+
+.. code-block:: python
+
+    c1.ignicao()
 
 Motor desligado!
 
-print('Marca: %s\nModelo: %s' % (c1.marca, c1.modelo))
+
+
+bla bla bla:
+
+.. code-block:: python
+
+    print('Marca: %s\nModelo: %s' % (c1.marca, c1.modelo))
 
 Marca: Fiat
 Modelo: 147
@@ -131,25 +148,29 @@ repr(c1)
 
 
 
-class Carro(object):
-    motor_ligado = False    
+bla bla bla:
 
-    def __init__(self, marca, modelo):
-        self.marca = marca
-        self.modelo = modelo
+.. code-block:: python
 
-    def __str__(self):
-        return '%s - %s' % (self.marca, self.modelo)
+    class Carro(object):
+        motor_ligado = False    
 
-    def ignicao(self):
-        if (self.motor_ligado):
-            self.motor_ligado = False
-            print('Motor desligado!')
-        else:
-            self.motor_ligado = True
-            print('Motor ligado!')
+        def __init__(self, marca, modelo):
+            self.marca = marca
+            self.modelo = modelo
 
-c1 = Carro('Fiat', '147')
+        def __str__(self):
+            return '%s - %s' % (self.marca, self.modelo)
+
+        def ignicao(self):
+            if (self.motor_ligado):
+                self.motor_ligado = False
+                print('Motor desligado!')
+            else:
+                self.motor_ligado = True
+                print('Motor ligado!')
+
+    c1 = Carro('Fiat', '147')
 
 print(c1)
 
