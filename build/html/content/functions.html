@@ -508,25 +508,14 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 </div>
 <div class="line-block">
 <div class="line-block">
-<div class="line">Com o asterisco e o identificador da tupla houve o “desempacotamento” dos</div>
+<div class="line">Quando o caractere asterisco é posicionado antes de uma variável faz com</div>
 </div>
-<div class="line">elementos, assim tornando possível passá-la como argumento para a função.</div>
+<div class="line">que considere que aquela variável (coleções) seja “desempacotada”.</div>
+<div class="line-block">
+<div class="line">Seus elementos são passados como se fossem uma tupla, ou seja, uma</div>
 </div>
-<dl class="simple">
-<dt>def funcao(<a href="#id1"><span class="problematic" id="id2">*</span></a>args):</dt><dd><p>return args</p>
-</dd>
-</dl>
-<p>funcao(spam)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">((1, 2, 3, 4)</span><span class="go">,)</span>
-</pre></div>
+<div class="line">sequência de valores estraídos separados por vírgulas.</div>
 </div>
-<p>funcao(<a href="#id3"><span class="problematic" id="id4">*</span></a>spam)</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(1, 2, 3, 4)</span>
-</pre></div>
-</div>
-<p>Quando o caractere asterisco é posicionado antes de uma variável faz com que considere que aquela variável (coleções) seja
-“desempacotada”. Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência de valores estraídos separados
-por vírgulas.</p>
 </div>
 <div class="section" id="argumentos-em-lista-nomeados">
 <h2><span class="section-number">17.6. </span>Argumentos em Lista Nomeados<a class="headerlink" href="#argumentos-em-lista-nomeados" title="Link permanente para este título">¶</a></h2>
@@ -535,7 +524,7 @@ por vírgulas.</p>
 É uma lista com quantidade indeterminada e cada elemento da lista tem um identificador próprio.</p>
 </div></blockquote>
 <dl>
-<dt>def funcao(<a href="#id5"><span class="problematic" id="id6">**</span></a>kargs):</dt><dd><p>return kargs</p>
+<dt>def funcao(<a href="#id1"><span class="problematic" id="id2">**</span></a>kargs):</dt><dd><p>return kargs</p>
 <p>funcao(a = 1, b = 2)</p>
 </dd>
 </dl>
@@ -543,7 +532,7 @@ por vírgulas.</p>
 </pre></div>
 </div>
 <dl>
-<dt>def funcao(<a href="#id7"><span class="problematic" id="id8">**</span></a>kargs):</dt><dd><dl class="simple">
+<dt>def funcao(<a href="#id3"><span class="problematic" id="id4">**</span></a>kargs):</dt><dd><dl class="simple">
 <dt>for k, v in kargs.items():</dt><dd><p>print(‘%s = %s’ % (k.capitalize(), v))</p>
 </dd>
 </dl>
@@ -564,7 +553,7 @@ telefone = ‘(11) 99999-9999’,</p>
 </pre></div>
 </div>
 <dl>
-<dt>def funcao(<a href="#id9"><span class="problematic" id="id10">**</span></a>kargs):</dt><dd><p>return kargs</p>
+<dt>def funcao(<a href="#id5"><span class="problematic" id="id6">**</span></a>kargs):</dt><dd><p>return kargs</p>
 <p>eggs = {‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
 </dd>
 </dl>
@@ -572,7 +561,7 @@ telefone = ‘(11) 99999-9999’,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: funcao() takes exactly 0 arguments (1 given)</span>
 </pre></div>
 </div>
-<p>funcao(<a href="#id11"><span class="problematic" id="id12">**</span></a>eggs)</p>
+<p>funcao(<a href="#id7"><span class="problematic" id="id8">**</span></a>eggs)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;a&#39;: 3, &#39;b&#39;: 5, &#39;c&#39;: &#39;x&#39;}</span>
 </pre></div>
 </div>
@@ -585,7 +574,7 @@ A ordem dos tipos de argumentos é a seguinte:</p>
 <p>Simples, Nomeados, Lista de Não Nomeados e Lista de Nomeados</p>
 </div></blockquote>
 <dl>
-<dt>def foo(a, b = 3, <a href="#id13"><span class="problematic" id="id14">*</span></a>c, <a href="#id15"><span class="problematic" id="id16">**</span></a>d):</dt><dd><p>print(a + b)
+<dt>def foo(a, b = 3, <a href="#id9"><span class="problematic" id="id10">*</span></a>c, <a href="#id11"><span class="problematic" id="id12">**</span></a>d):</dt><dd><p>print(a + b)
 print(c)
 print(d)</p>
 <p>foo(4, 5, ‘Alemanha’, ‘Holanda’, ‘Inglaterra’, continente = ‘Europa’, hemisferio = ‘Norte’)</p>
@@ -613,10 +602,10 @@ print(d)</p>
 <p>dicio = {‘x’: 5, ‘y’: 2}</p>
 <p>conjunto = {2, 5, 2}</p>
 <p>Testes utilizando as estruturas de dados criadas:</p>
-<p>param_test(<a href="#id17"><span class="problematic" id="id18">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
-<p>param_test(<a href="#id19"><span class="problematic" id="id20">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
-<p>param_test(<a href="#id21"><span class="problematic" id="id22">*</span></a>lista)  # Lista (list) como parâmetro</p>
-<p>param_test(<a href="#id23"><span class="problematic" id="id24">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
+<p>param_test(<a href="#id13"><span class="problematic" id="id14">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
+<p>param_test(<a href="#id15"><span class="problematic" id="id16">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
+<p>param_test(<a href="#id17"><span class="problematic" id="id18">*</span></a>lista)  # Lista (list) como parâmetro</p>
+<p>param_test(<a href="#id19"><span class="problematic" id="id20">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>

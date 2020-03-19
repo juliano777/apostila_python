@@ -446,32 +446,11 @@ Notemos a diferença de comportamento nas execuções:
     2
     3
     4
-
-|   Com o asterisco e o identificador da tupla houve o "desempacotamento" dos
-| elementos, assim tornando possível passá-la como argumento para a função.
-
-
-
-
-
-def funcao(*args):
-    return args
-
-funcao(spam)
-
-.. code-block:: console
-
-    ((1, 2, 3, 4),)
-
-funcao(*spam)
-
-.. code-block:: console
-
-    (1, 2, 3, 4)
-
-Quando o caractere asterisco é posicionado antes de uma variável faz com que considere que aquela variável (coleções) seja
-"desempacotada". Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência de valores estraídos separados
-por vírgulas.
+    
+|   Quando o caractere asterisco é posicionado antes de uma variável faz com
+| que considere que aquela variável (coleções) seja "desempacotada".
+|   Seus elementos são passados como se fossem uma tupla, ou seja, uma
+| sequência de valores estraídos separados por vírgulas.
 
 
 
