@@ -780,6 +780,8 @@ Funções Lambda
 
 
 
+Execução de uma função lambda:
+
 .. code-block:: python
 
     (lambda x, y: x + y)(5, 2)
@@ -788,10 +790,13 @@ Funções Lambda
 
     7
 
-foo = lambda x, y: x ** y
+
+
+Criando uma função através de uma função lambda e execução:
 
 .. code-block:: python
 
+    foo = lambda x, y: x ** y
     print(foo(2, 5))
 
 .. code-block:: console
