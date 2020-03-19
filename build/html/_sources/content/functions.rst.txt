@@ -68,35 +68,58 @@ Definição de uma função que retorna mais de um valor:
     def funcao():
         return 3, 9
 
-Atribuindo à variável o valor de retorno da função    
 
-x = funcao()
 
-Imprimindo o valor da variável
+Atribuindo à variável o valor de retorno da função:
 
-print(x)
+.. code-block:: python
+
+    x = funcao()
+
+
+
+
+Imprimindo o valor da variável:
+
+.. code-block:: python
+
+    print(x)
 
 .. code-block:: console
 
     (3, 9)
 
-Verificando o tipo da variável
 
-type(x)
+
+
+Verificando o tipo da variável:
+
+.. code-block:: python
+
+    type(x)
 
 .. code-block:: console
 
     tuple
 
-Definição de uma função com código após return
 
-def funcao():
-    return 7
-    print('Teste')
 
-Execução da função    
+Definição de uma função com código após return:
+
+.. code-block:: python
+
+    def funcao():
+        return 7
+        print('Teste')
+
+
+
+Execução da função:
+
+.. code-block:: python
+
+    funcao()
     
-funcao()
 .. code-block:: console
 
     7

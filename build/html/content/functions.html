@@ -237,30 +237,37 @@ multiplicado por 3:</p>
     <span class="k">return</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span>
 </pre></div>
 </div>
-<p>Atribuindo à variável o valor de retorno da função</p>
-<p>x = funcao()</p>
-<p>Imprimindo o valor da variável</p>
-<p>print(x)</p>
+<p>Atribuindo à variável o valor de retorno da função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Imprimindo o valor da variável:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(3, 9)</span>
 </pre></div>
 </div>
-<p>Verificando o tipo da variável</p>
-<p>type(x)</p>
+<p>Verificando o tipo da variável:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tuple</span>
 </pre></div>
 </div>
-<p>Definição de uma função com código após return</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>return 7
-print(‘Teste’)</p>
-</dd>
-</dl>
-<p>Execução da função</p>
-<p>funcao()
-.. code-block:: console</p>
-<blockquote>
-<div><p>7</p>
-</div></blockquote>
+<p>Definição de uma função com código após return:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">7</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Teste&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Execução da função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 <p>Como pode-se notar, o código inserido após return foi completamente ignorado.
 Devido ao fato de os comandos serem digitados no shell interativo foi impresso em tela
 o valor de retorno da função.</p>
