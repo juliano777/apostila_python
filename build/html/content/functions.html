@@ -475,7 +475,7 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <span class="go">Argumento 3 = 99</span>
 </pre></div>
 </div>
-<p>Definição de uma função com um parâmetros arbitrários não nomeados:</p>
+<p>Definição de uma função com um parâmetro arbitrário não nomeado:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
@@ -486,8 +486,7 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">spam</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Tentativa de execução da função passando puramente o identificador da tupla
-criada:</p>
+<p>Notemos a diferença de comportamento nas execuções:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="n">spam</span><span class="p">)</span>
 </pre></div>
 </div>

@@ -402,8 +402,7 @@ Execução:
 
 
 
-Definição de uma função com um parâmetros arbitrários não nomeados:    
-
+Definição de uma função com um parâmetro arbitrário não nomeado:    
 
 .. code-block:: python
 
@@ -422,8 +421,7 @@ Criação de uma tupla com quatro elementos:
 
 
 
-Tentativa de execução da função passando puramente o identificador da tupla
-criada:
+Notemos a diferença de comportamento nas execuções:
 
 .. code-block:: python
 
