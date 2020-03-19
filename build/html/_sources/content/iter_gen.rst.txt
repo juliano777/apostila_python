@@ -66,11 +66,14 @@ Executando o método __next__ até seu fim:
 
         Bla bla bla
 
-Nota-se que a iteração foi feita sobre a string declarada, de forma a retornar caractere por caractere e após o último foi lançada uma exceção indicando que não há mais elementos a serem retornados.
+|   Nota-se que a iteração foi feita sobre a string declarada, de forma a 
+| retornar caractere por caractere e após o último foi lançada uma exceção
+| indicando que não há mais elementos a serem retornados.
 
 
 
 Classe Iterator
+---------------
 
     É possível também implementar um iterador como um objeto de uma classe personalizada.
     É necessário implementar os métodos __iter__ e __next__.

@@ -100,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="operators.html">15. Operadores</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">16. Iteratoradores e Geradores</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#iterator">16.1. Iterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classe-iterator">16.2. Classe Iterator</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
@@ -230,8 +231,16 @@ Todo objeto que tiver o método __next__() é um iterator.</p>
 <span class="go">    Bla bla bla</span>
 </pre></div>
 </div>
-<p>Nota-se que a iteração foi feita sobre a string declarada, de forma a retornar caractere por caractere e após o último foi lançada uma exceção indicando que não há mais elementos a serem retornados.</p>
-<p>Classe Iterator</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Nota-se que a iteração foi feita sobre a string declarada, de forma a</div>
+</div>
+<div class="line">retornar caractere por caractere e após o último foi lançada uma exceção</div>
+<div class="line">indicando que não há mais elementos a serem retornados.</div>
+</div>
+</div>
+<div class="section" id="classe-iterator">
+<h2><span class="section-number">16.2. </span>Classe Iterator<a class="headerlink" href="#classe-iterator" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>É possível também implementar um iterador como um objeto de uma classe personalizada.
 É necessário implementar os métodos __iter__ e __next__.
