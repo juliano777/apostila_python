@@ -459,29 +459,54 @@ def f_gen(var):
 g = f_gen('Python')
 
 type(g)
-generator
+
+.. code-block:: console
+
+    generator
 
 g.next()
-INÍCIO
-'P'
+
+.. code-block:: console
+
+    INÍCIO
+    'P'
 
 g.next()
-'y'
+
+
+.. code-block:: console
+
+    'y'
 
 g.next()
-'t'
+
+.. code-block:: console
+
+    't'
 
 g.next()
-'h'
+
+.. code-block:: console
+
+    'h'
 
 g.next()
-'o'
+
+.. code-block:: console
+
+    'o'
 
 g.next()
-'n'
+
+.. code-block:: console
+
+    'n'
 
 g.next()
-FIM
+
+.. code-block:: console
+
+    FIM
 
 StopIteration: 
 
