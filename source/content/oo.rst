@@ -52,7 +52,10 @@ bla bla bla:
     o = Baz('Chiquinho da Silva')
     o.idade = 51
     o.altura = 1.60
-    print('%s tem %s anos e %.2fm de altura' % (o.nome, o.idade, o.altura))
+    print(f'{o.nome} tem {o.idade} anos e {o.altura}.2fm de altura')
+
+.. code-block:: console
+
     Chiquinho da Silva tem 51 anos e 1.60m de altura
 
 
