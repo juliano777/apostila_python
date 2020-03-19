@@ -319,8 +319,8 @@ Iterator vs Generator
 - Generator utiliza yield, iterator não;
 
 - Gerador salva o estado de variáveis locais a cada vez que o yield pausa o
- loop. Um iterador não faz uso de variáveis locais, tudo o que ele precisa é
- faz a iteração.
+  loop. Um iterador não faz uso de variáveis locais, tudo o que ele precisa é
+  faz a iteração.
 
 - Iteradores fazem uso mais eficiente de memória.
 
