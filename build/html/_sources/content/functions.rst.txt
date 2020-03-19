@@ -481,6 +481,8 @@ Definição de uma função com parâmetros arbitrários nomeados:
 
 Definição e execução:
 
+.. code-block:: python
+
     def funcao(**kargs):
         for k, v in kargs.items():
             print(f'{k} = {v}')

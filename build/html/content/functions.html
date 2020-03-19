@@ -540,21 +540,19 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 </pre></div>
 </div>
 <p>Definição e execução:</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def funcao(<a href="#id1"><span class="problematic" id="id2">**</span></a>kargs):</dt><dd><dl class="simple">
-<dt>for k, v in kargs.items():</dt><dd><p>print(f’{k} = {v}’)</p>
-</dd>
-</dl>
-</dd>
-<dt>funcao(</dt><dd><p>nome = ‘Chiquinho’,
-sobrenome = ‘da Silva’,
-idade = 30,
-telefone = ‘(11) 99999-9999’,</p>
-</dd>
-</dl>
-<p>)</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{k}</span><span class="s1"> = </span><span class="si">{v}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="n">funcao</span><span class="p">(</span>
+    <span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">,</span>
+    <span class="n">sobrenome</span> <span class="o">=</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">,</span>
+    <span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="n">telefone</span> <span class="o">=</span> <span class="s1">&#39;(11) 99999-9999&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Idade = 30</span>
 <span class="go">Sobrenome = da Silva</span>
 <span class="go">Telefone = (11) 99999-9999</span>
@@ -636,10 +634,10 @@ telefone = ‘(11) 99999-9999’,</p>
 <p>dicio = {‘x’: 5, ‘y’: 2}</p>
 <p>conjunto = {2, 5, 2}</p>
 <p>Testes utilizando as estruturas de dados criadas:</p>
-<p>param_test(<a href="#id3"><span class="problematic" id="id4">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
-<p>param_test(<a href="#id5"><span class="problematic" id="id6">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
-<p>param_test(<a href="#id7"><span class="problematic" id="id8">*</span></a>lista)  # Lista (list) como parâmetro</p>
-<p>param_test(<a href="#id9"><span class="problematic" id="id10">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
+<p>param_test(<a href="#id1"><span class="problematic" id="id2">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
+<p>param_test(<a href="#id3"><span class="problematic" id="id4">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
+<p>param_test(<a href="#id5"><span class="problematic" id="id6">*</span></a>lista)  # Lista (list) como parâmetro</p>
+<p>param_test(<a href="#id7"><span class="problematic" id="id8">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
