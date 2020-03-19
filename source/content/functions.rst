@@ -429,8 +429,21 @@ criada:
 
     ()
 
-funcao(*spam)
-(2, 3, 4)
+|   Execução frustrada :/
+|   É preciso "desempacotar" a tupla...
+
+
+
+Tentativa de execução da função passando puramente o identificador da tupla
+com o asterisco para desempacotá-la:
+
+.. code-block:: python
+
+    funcao(*spam)
+
+.. code-block:: console
+
+    (2, 3, 4)
 
 def funcao(*args):
     return args
