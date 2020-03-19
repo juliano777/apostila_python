@@ -224,8 +224,10 @@ Então é pedido o valor dada a chave que é o nome da variável local.</p>
 </pre></div>
 </div>
 <p>Dentro de função</p>
-<p>Declaração de uma variável externamente ao escopo da função</p>
-<p>foo = 7</p>
+<p>Declaração de uma variável externamente ao escopo da função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
 <p>Definição de uma função:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
     <span class="n">foo</span> <span class="o">=</span> <span class="mi">9</span>
@@ -235,12 +237,13 @@ Então é pedido o valor dada a chave que é o nome da variável local.</p>
 </div>
 <p>Nota-se que dentro da função também há uma variável chamada “foo”.
 Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
-<p>Exibindo o ID de foo</p>
-<p>print(id(foo))
-.. code-block:: console</p>
-<blockquote>
-<div><p>162857064</p>
-</div></blockquote>
+<p>Exibindo o ID de foo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">foo</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">162857064</span>
+</pre></div>
+</div>
 <p>Exibindo o valor de foo</p>
 <p>print(foo)
 .. code-block:: console</p>

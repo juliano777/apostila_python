@@ -54,9 +54,13 @@ blablabla:
 
 Dentro de função
 
-Declaração de uma variável externamente ao escopo da função
+Declaração de uma variável externamente ao escopo da função:
 
-foo = 7
+.. code-block:: python
+
+    foo = 7
+
+
 
 Definição de uma função:
 
@@ -70,9 +74,12 @@ Definição de uma função:
 Nota-se que dentro da função também há uma variável chamada "foo".
 Essa função imprime o ID desse identificador e depois imprime seu valor.
     
-Exibindo o ID de foo    
+Exibindo o ID de foo:
 
-print(id(foo))
+.. code-block:: python
+
+    print(id(foo))
+    
 .. code-block:: console
 
     162857064
