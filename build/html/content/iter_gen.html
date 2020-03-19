@@ -423,12 +423,16 @@ Todo objeto que tiver o método __next__() é um iterator.</p>
 <li><p>Para criar um generator utilizamos ou uma função com yield no lugar de</p></li>
 </ul>
 <p>return ou tuple comprehension.
-Para criar um iterador utilizamos a função iter();
-- Generator utiliza yield, iterator não;
-- Gerador salva o estado de variáveis locais a cada vez que o yield pausa
-o loop. Um iterador não faz uso de variáveis locais, tudo o que ele
-precisa é faz a iteração.
-- Iteradores fazem uso mais eficiente de memória.</p>
+Para criar um iterador utilizamos a função iter();</p>
+<ul class="simple">
+<li><p>Generator utiliza yield, iterator não;</p></li>
+<li><p>Gerador salva o estado de variáveis locais a cada vez que o yield pausa</p></li>
+</ul>
+<p>o loop. Um iterador não faz uso de variáveis locais, tudo o que ele
+precisa é faz a iteração.</p>
+<ul class="simple">
+<li><p>Iteradores fazem uso mais eficiente de memória.</p></li>
+</ul>
 </div></blockquote>
 <p>Do módulo timeit importar a função de mesmo nome:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">timeit</span> <span class="kn">import</span> <span class="n">timeit</span>
