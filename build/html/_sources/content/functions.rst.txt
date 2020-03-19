@@ -429,7 +429,8 @@ Notemos a diferença de comportamento nas execuções:
 
 .. code-block:: console
 
-    ()
+    ((1, 2, 3, 4),)
+    (1, 2, 3, 4)
 
 |   Execução frustrada :/
 |   É preciso "desempacotar" a tupla...
@@ -445,7 +446,11 @@ com o asterisco para desempacotá-la:
 
 .. code-block:: console
 
-    (2, 3, 4)
+    (1, 2, 3, 4)
+    1
+    2
+    3
+    4
 
 |   Com o asterisco e o identificador da tupla houve o "desempacotamento" dos
 | elementos, assim tornando possível passá-la como argumento para a função.
