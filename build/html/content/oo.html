@@ -216,33 +216,37 @@ def metodo(self, foo):</p>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="k">class</span> <span class="nc">Bar</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">idade</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">metodo_teste</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Teste&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Baz</span><span class="p">(</span><span class="n">Foo</span><span class="p">,</span> <span class="n">Bar</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nome</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="n">nome</span>
+
+    <span class="n">altura</span> <span class="o">=</span> <span class="mf">0.0</span>
 </pre></div>
 </div>
-<dl>
-<dt>class Bar(object):</dt><dd><p>idade = 0</p>
-<dl class="simple">
-<dt>def metodo_teste(self):</dt><dd><p>print(‘Teste’)</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>class Baz(Foo, Bar):</p>
-<blockquote>
-<div><dl class="simple">
-<dt>def __init__(self, nome):</dt><dd><p>self.nome = nome</p>
-</dd>
-</dl>
-<p>altura = 0.0</p>
-</div></blockquote>
-<p>o = Baz(‘Chiquinho da Silva’)</p>
-<p>o.idade = 51</p>
-<p>o.altura = 1.60</p>
-<p>print(‘%s tem %s anos e %.2fm de altura’ % (o.nome, o.idade, o.altura))</p>
-<p>Chiquinho da Silva tem 51 anos e 1.60m de altura</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Baz</span><span class="p">(</span><span class="s1">&#39;Chiquinho da Silva&#39;</span><span class="p">)</span>
+<span class="n">o</span><span class="o">.</span><span class="n">idade</span> <span class="o">=</span> <span class="mi">51</span>
+<span class="n">o</span><span class="o">.</span><span class="n">altura</span> <span class="o">=</span> <span class="mf">1.60</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> tem </span><span class="si">%s</span><span class="s1"> anos e </span><span class="si">%.2f</span><span class="s1">m de altura&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">nome</span><span class="p">,</span> <span class="n">o</span><span class="o">.</span><span class="n">idade</span><span class="p">,</span> <span class="n">o</span><span class="o">.</span><span class="n">altura</span><span class="p">))</span>
+<span class="n">Chiquinho</span> <span class="n">da</span> <span class="n">Silva</span> <span class="n">tem</span> <span class="mi">51</span> <span class="n">anos</span> <span class="n">e</span> <span class="mf">1.60</span><span class="n">m</span> <span class="n">de</span> <span class="n">altura</span>
+</pre></div>
+</div>
 <p>Obs.: Em Python todos métodos e atributos são públicos.
 Há uma convenção que colocando um unerline como primeiro caractere no nome de um atributo ou um método o sinaliza como privado.
 Porém, isso é apenas uma convenção. Nada impede que sejam acessados externamente.
 Para que haja um bloqueio efetivo há um recurso na linguagem chamado “property”.</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <dl>
 <dt>class Carro(object):</dt><dd><p>motor_ligado = False</p>
 <dl class="simple">
@@ -261,7 +265,10 @@ print(‘Motor ligado!’)</p>
 </dl>
 </dd>
 </dl>
-<p>c1 = Carro()</p>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>TypeError                                 Traceback (most recent call last)
 &lt;ipython-input-13-e2526cbd1648&gt; in &lt;module&gt;()</p>
 <blockquote>

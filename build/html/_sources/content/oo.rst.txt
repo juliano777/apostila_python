@@ -31,39 +31,44 @@ bla bla bla:
 .. code-block:: python
 
     class Foo(object):
-        nome = ''  
+        nome = ''
 
+    class Bar(object):
+        idade = 0
 
-class Bar(object):
-    idade = 0
+        def metodo_teste(self):
+            print('Teste')
 
-    def metodo_teste(self):
-        print('Teste')
+    class Baz(Foo, Bar):
 
+        def __init__(self, nome):
+            self.nome = nome 
 
-class Baz(Foo, Bar):
+        altura = 0.0
 
-    def __init__(self, nome):
-        self.nome = nome 
+bla bla bla:
 
-    altura = 0.0
+.. code-block:: python
 
-
-o = Baz('Chiquinho da Silva')
-
-o.idade = 51
-
-o.altura = 1.60
-
-print('%s tem %s anos e %.2fm de altura' % (o.nome, o.idade, o.altura))
-
-Chiquinho da Silva tem 51 anos e 1.60m de altura
+    o = Baz('Chiquinho da Silva')
+    o.idade = 51
+    o.altura = 1.60
+    print('%s tem %s anos e %.2fm de altura' % (o.nome, o.idade, o.altura))
+    Chiquinho da Silva tem 51 anos e 1.60m de altura
 
 
 Obs.: Em Python todos métodos e atributos são públicos.
 Há uma convenção que colocando um unerline como primeiro caractere no nome de um atributo ou um método o sinaliza como privado.
 Porém, isso é apenas uma convenção. Nada impede que sejam acessados externamente.
 Para que haja um bloqueio efetivo há um recurso na linguagem chamado "property".
+
+
+
+bla bla bla:
+
+.. code-block:: python
+
+    
 
 
 class Carro(object):
@@ -82,7 +87,12 @@ class Carro(object):
             print('Motor ligado!')
 
 
-c1 = Carro()
+
+bla bla bla:
+
+.. code-block:: python
+
+    c1 = Carro()
 
 TypeError                                 Traceback (most recent call last)
 <ipython-input-13-e2526cbd1648> in <module>()
