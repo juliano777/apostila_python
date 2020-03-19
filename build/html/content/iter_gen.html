@@ -102,6 +102,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#iterator">16.1. Iterator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#classe-iterator">16.2. Classe Iterator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generator">16.3. Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcoes-generator">16.4. Funções Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iterator-vs-generator">16.5. Iterator vs Generator</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
@@ -357,10 +359,15 @@ Todo objeto que tiver o método __next__() é um iterator.</p>
 <span class="go">    Bla bla bla</span>
 </pre></div>
 </div>
-<p>Funções Generator</p>
-<blockquote>
-<div><p>Uma função generator utiliza o comando yield em vez de return, o que faz com que retorne o próximo elemento da sequência.</p>
-</div></blockquote>
+</div>
+<div class="section" id="funcoes-generator">
+<h2><span class="section-number">16.4. </span>Funções Generator<a class="headerlink" href="#funcoes-generator" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Uma função generator utiliza o comando yield em vez de return, o que faz</div>
+</div>
+<div class="line">com que retorne o próximo elemento da sequência.</div>
+</div>
 <p>Criação de uma função generator:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gen</span><span class="p">():</span>
 
@@ -408,17 +415,20 @@ Todo objeto que tiver o método __next__() é um iterator.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">StopIteration:</span>
 </pre></div>
 </div>
-<p>Iterator vs Generator</p>
+</div>
+<div class="section" id="iterator-vs-generator">
+<h2><span class="section-number">16.5. </span>Iterator vs Generator<a class="headerlink" href="#iterator-vs-generator" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p>Para criar um generator utilizamos ou uma função com yield no lugar de return ou tuple comprehension.</p></li>
+<li><p>Para criar um generator utilizamos ou uma função com yield no lugar de</p></li>
 </ul>
-<p>Para criar um iterador utilizamos a função iter();</p>
-<ul class="simple">
-<li><p>Generator utiliza yield, iterator não;</p></li>
-<li><p>Gerador salva o estado de variáveis locais a cada vez que o yield pausa o loop. Um iterador não faz uso de variáveis locais, tudo o que ele precisa é faz a iteração.</p></li>
-<li><p>Iteradores fazem uso mais eficiente de memória.</p></li>
-</ul>
+<p>return ou tuple comprehension.
+Para criar um iterador utilizamos a função iter();
+- Generator utiliza yield, iterator não;
+- Gerador salva o estado de variáveis locais a cada vez que o yield pausa
+o loop. Um iterador não faz uso de variáveis locais, tudo o que ele
+precisa é faz a iteração.
+- Iteradores fazem uso mais eficiente de memória.</p>
 </div></blockquote>
 <p>Do módulo timeit importar a função de mesmo nome:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">timeit</span> <span class="kn">import</span> <span class="n">timeit</span>
