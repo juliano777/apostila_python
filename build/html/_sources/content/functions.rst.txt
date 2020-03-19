@@ -457,8 +457,10 @@ Notemos a diferença de comportamento nas execuções:
 Argumentos em Lista Nomeados
 ----------------------------
 
-	O identificador da variável desse tipo de argumento é precedido por dois asteriscos (**).
-	É uma lista com quantidade indeterminada e cada elemento da lista tem um identificador próprio.
+|   O identificador da variável desse tipo de argumento é precedido por dois
+| asteriscos (**).
+|   É uma lista com quantidade indeterminada e cada elemento da lista tem um
+| identificador próprio.
 
 def funcao(**kargs):
     return kargs
