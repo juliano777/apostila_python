@@ -310,8 +310,11 @@ Argumentos em Lista Nomeados
 def funcao(**kargs):
     return kargs
    
-funcao(a = 1, b = 2)
-{'a': 1, 'b': 2}
+    funcao(a = 1, b = 2)
+
+.. code-block:: console
+
+    {'a': 1, 'b': 2}
 
 
 
@@ -328,20 +331,24 @@ funcao(
   )
 
 
-Idade = 30
-Sobrenome = da Silva
-Telefone = (11) 99999-9999
-Nome = Chiquinho  
+.. code-block:: console
+
+    Idade = 30
+    Sobrenome = da Silva
+    Telefone = (11) 99999-9999
+    Nome = Chiquinho
 
 
 def funcao(**kargs):
     return kargs
 
-eggs = {'a': 3, 'b': 5, 'c': 'x'}
+    eggs = {'a': 3, 'b': 5, 'c': 'x'}
 
 funcao(eggs)
 
-TypeError: funcao() takes exactly 0 arguments (1 given)
+.. code-block:: console
+
+    TypeError: funcao() takes exactly 0 arguments (1 given)
 
 funcao(**eggs)
 

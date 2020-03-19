@@ -433,12 +433,14 @@ por vírgulas.</p>
 <div><p>O identificador da variável desse tipo de argumento é precedido por dois asteriscos (**).
 É uma lista com quantidade indeterminada e cada elemento da lista tem um identificador próprio.</p>
 </div></blockquote>
-<dl class="simple">
+<dl>
 <dt>def funcao(<a href="#id15"><span class="problematic" id="id16">**</span></a>kargs):</dt><dd><p>return kargs</p>
+<p>funcao(a = 1, b = 2)</p>
 </dd>
 </dl>
-<p>funcao(a = 1, b = 2)
-{‘a’: 1, ‘b’: 2}</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;a&#39;: 1, &#39;b&#39;: 2}</span>
+</pre></div>
+</div>
 <dl>
 <dt>def funcao(<a href="#id17"><span class="problematic" id="id18">**</span></a>kargs):</dt><dd><dl class="simple">
 <dt>for k, v in kargs.items():</dt><dd><p>print(‘%s = %s’ % (k.capitalize(), v))</p>
@@ -454,19 +456,25 @@ telefone = ‘(11) 99999-9999’,</p>
 <p>)</p>
 </dd>
 </dl>
-<p>Idade = 30
-Sobrenome = da Silva
-Telefone = (11) 99999-9999
-Nome = Chiquinho</p>
-<dl class="simple">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Idade = 30</span>
+<span class="go">Sobrenome = da Silva</span>
+<span class="go">Telefone = (11) 99999-9999</span>
+<span class="go">Nome = Chiquinho</span>
+</pre></div>
+</div>
+<dl>
 <dt>def funcao(<a href="#id19"><span class="problematic" id="id20">**</span></a>kargs):</dt><dd><p>return kargs</p>
+<p>eggs = {‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
 </dd>
 </dl>
-<p>eggs = {‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
 <p>funcao(eggs)</p>
-<p>TypeError: funcao() takes exactly 0 arguments (1 given)</p>
-<p>funcao(<a href="#id21"><span class="problematic" id="id22">**</span></a>eggs)
-{‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: funcao() takes exactly 0 arguments (1 given)</span>
+</pre></div>
+</div>
+<p>funcao(<a href="#id21"><span class="problematic" id="id22">**</span></a>eggs)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;a&#39;: 3, &#39;b&#39;: 5, &#39;c&#39;: &#39;x&#39;}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="funcoes-com-argumentos-variados">
 <h2><span class="section-number">17.7. </span>Funções com Argumentos Variados<a class="headerlink" href="#funcoes-com-argumentos-variados" title="Link permanente para este título">¶</a></h2>
