@@ -444,9 +444,10 @@ O identificador da variável que representa esse tipo de argumento vem logo depo
 <span class="go">Os argumentos passados foram: (&#39;abacaxi&#39;, 3, &#39;p&#39;, 8.3, (5+9j))</span>
 </pre></div>
 </div>
+<p>Definição de função de duas formas diferentes:</p>
 <dl class="simple">
 <dt>def funcao(<a href="#id1"><span class="problematic" id="id2">*</span></a>args):</dt><dd><dl class="simple">
-<dt>for arg in args:</dt><dd><p>print(‘Argumento %d = %s’ % (args.index(arg), arg))</p>
+<dt>for arg in args:</dt><dd><p>print(‘Argumento {} = {}’.format(args.index(arg), arg))</p>
 </dd>
 </dl>
 </dd>
@@ -454,7 +455,7 @@ O identificador da variável que representa esse tipo de argumento vem logo depo
 <p>ou</p>
 <dl class="simple">
 <dt>def funcao(<a href="#id3"><span class="problematic" id="id4">*</span></a>args):</dt><dd><dl class="simple">
-<dt>for i, arg in enumerate(args):</dt><dd><p>print(‘Argumento %d = %s’ % (i, arg))</p>
+<dt>for i, arg in enumerate(args):</dt><dd><p>print(‘Argumento {} = {}’.format(i, arg))</p>
 </dd>
 </dl>
 </dd>

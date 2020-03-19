@@ -363,17 +363,27 @@ Argumentos em Lista Não Nomeados
     O primeiro é "abacaxi"
     O último é "(5+9j)"
     Os argumentos passados foram: ('abacaxi', 3, 'p', 8.3, (5+9j))
+
+
+
+Definição de função de duas formas diferentes:
+
+
+
+
+
+
     
     
 def funcao(*args):
     for arg in args:
-        print('Argumento %d = %s' % (args.index(arg), arg)) 
+        print('Argumento {} = {}'.format(args.index(arg), arg))
 
 ou
 
 def funcao(*args):
     for i, arg in enumerate(args):
-        print('Argumento %d = %s' % (i, arg))
+        print('Argumento {} = {}'.format(i, arg))
         
 funcao('a', 1.5, 7, 99)
 
