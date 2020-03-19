@@ -51,8 +51,8 @@ bla bla bla:
 
     o = Baz('Chiquinho da Silva')
     o.idade = 51
-    o.altura = 1.60
-    print(f'{o.nome} tem {o.idade} anos e {o.altura}.2fm de altura')
+    o.altura = 1.6
+    print(f'{o.nome} tem {o.idade} anos e {o.altura:.2f}m de altura')
 
 .. code-block:: console
 
