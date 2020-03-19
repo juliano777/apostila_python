@@ -295,7 +295,7 @@ Definindo uma função com dois parâmetros opcionais:
 
 
 
-Execução da função:
+Execução da função com um parâmetro (o obrigatório):
 
 .. code-block:: python
 
