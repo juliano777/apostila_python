@@ -372,7 +372,7 @@ Definição de função de duas formas diferentes:
 
     def funcao(*args):
         for arg in args:
-            print('Argumento {} = {}'.format(args.index(arg), arg))
+            print(f'Argumento {args.index(arg)} = {arg}')
 
 ou
 
@@ -380,7 +380,7 @@ ou
 
     def funcao(*args):
         for i, arg in enumerate(args):
-            print('Argumento {} = {}'.format(i, arg))
+            print(f'Argumento {i} = {arg}')
 
 
 
