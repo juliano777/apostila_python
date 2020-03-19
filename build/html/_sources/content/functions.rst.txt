@@ -445,6 +445,9 @@ com o asterisco para desempacotá-la:
 
     (2, 3, 4)
 
+|   Com o asterisco e o identificador da tupla houve o "desempacotamento" dos
+| elementos, assim tornando possível passá-la como argumento para a função.
+
 def funcao(*args):
     return args
 
