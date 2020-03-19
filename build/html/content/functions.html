@@ -187,23 +187,24 @@
             
   <div class="section" id="funcoes">
 <h1><span class="section-number">17. </span>Funções<a class="headerlink" href="#funcoes" title="Link permanente para este título">¶</a></h1>
-<blockquote>
-<div><p>Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente essas mesmas instruções reaproveitando o código ali escrito.
-No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.
-Após definida a função, a mesma é invocada pelo seu nome e seus argumentos (se ela requerir).
-Funções em Python são definidas a partir do comando def.
-Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente essas mesmas instruções reaproveitando o código ali escrito.</div>
+<div class="line">No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.</div>
+<div class="line">Após definida a função, a mesma é invocada pelo seu nome e seus argumentos (se ela requerir).</div>
+<div class="line">Funções em Python são definidas a partir do comando def.</div>
+<div class="line">Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.</div>
+</div>
 <div class="section" id="funcoes-sem-argumentos">
 <h2><span class="section-number">17.1. </span>Funções sem Argumentos<a class="headerlink" href="#funcoes-sem-argumentos" title="Link permanente para este título">¶</a></h2>
-<p>Definição da função sem argumentos</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>numero = 7 ** 2
-msg = ‘O quardrado de 7 é %d’ % numero
-print(msg)</p>
-</dd>
-</dl>
-<p>funcao()</p>
+<p>Definição da função sem argumentos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="n">numero</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;O quardrado de 7 é </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">numero</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">O quardrado de 7 é 49</span>
 </pre></div>
 </div>
@@ -219,10 +220,10 @@ Mas em um aplicativo ou script isso não acontecerá, portanto se deseja imprimi
 Quando uma função não tem um comando return, seu retorno é None implícito, o que para outras linguagens como C e Java é a mesma coisa que void.</p>
 </div></blockquote>
 <p>Definição da função</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>return 7</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">7</span>
+</pre></div>
+</div>
 <p>Utilizando print para imprimir em tela o valor retornado pela função multiplicado por 3</p>
 <p>print(funcao() * 3)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">21</span>

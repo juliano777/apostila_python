@@ -1,24 +1,26 @@
 Funções
 *******
 
-	Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente essas mesmas instruções reaproveitando o código ali escrito.
-	No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.
-	Após definida a função, a mesma é invocada pelo seu nome e seus argumentos (se ela requerir).
-	Funções em Python são definidas a partir do comando def.
-	Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.
+|   Uma funçao é um recurso de linguagens de programação, que armazena instruções contidas em um bloco de forma a evitar escrever novamente essas mesmas instruções reaproveitando o código ali escrito.
+|   No âmbito (escopo) da função podem ser definidas variáveis que só terão visibilidade dentro da função.
+|   Após definida a função, a mesma é invocada pelo seu nome e seus argumentos (se ela requerir).
+|   Funções em Python são definidas a partir do comando def.
+|   Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais legível além de ser uma boa prática.
 
 
 Funções sem Argumentos
 ----------------------
 
-Definição da função sem argumentos 
+Definição da função sem argumentos:
 
-def funcao():
-    numero = 7 ** 2
-    msg = 'O quardrado de 7 é %d' % numero
-    print(msg)      
-    
-funcao()
+.. code-block:: python
+
+    def funcao():
+        numero = 7 ** 2
+        msg = 'O quardrado de 7 é %d' % numero
+        print(msg)      
+        
+    funcao()
 
 
 .. code-block:: console
@@ -37,8 +39,10 @@ O Comando return
 
 Definição da função
 
-def funcao():
-    return 7
+.. code-block:: python
+
+    def funcao():
+        return 7
     
 Utilizando print para imprimir em tela o valor retornado pela função multiplicado por 3
 
