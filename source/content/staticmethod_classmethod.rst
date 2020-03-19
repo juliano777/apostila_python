@@ -35,10 +35,10 @@ métodos comum, de classe e estático:
         print('Método estático')
 
 	
-Na classe foram declarados três métodos, sendo que o primeiro que é um método
-comum, cujo primeiro argumento é o tradicional self que representa a instância
-(objeto) criada a partir da classe.
-O segundo método é decorado com @classmethod, faz desse método um método de
+|   Na classe foram declarados três métodos, sendo que o primeiro que é um
+| método comum, cujo primeiro argumento é o tradicional self que representa a
+| instância (objeto) criada a partir da classe.
+|   O segundo método é decorado com @classmethod, faz desse método um método de
 classe, o qual não faz necessária a criação de um objeto para ser utilizado.
 Esse tipo de método é invocado da seguinte forma: Classe.metodo_de_classe().
 Ainda sobre o método de classe um detalhe interessante é o "cls" ao invés de
