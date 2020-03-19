@@ -690,11 +690,14 @@ Criação de uma função geradora:
         
         print('FIM')
 
-  
 
-g = f_gen('Python')
 
-type(g)
+Criação de um generator pela função geradora e verificando seu tipo:
+
+.. code-block:: python
+
+    g = f_gen('Python')
+    type(g)
 
 .. code-block:: console
 
