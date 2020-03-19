@@ -408,7 +408,9 @@ Definição de uma função com um parâmetros arbitrários não nomeados:
 .. code-block:: python
 
     def funcao(*args):
-        return args
+        print(args)
+        for i in args:
+            print(i)
 
 
 
