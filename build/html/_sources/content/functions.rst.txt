@@ -138,14 +138,21 @@ Argumentos Simples (Argumentos Não Nomeados)
 	Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não obrigatórios têm um valor inicial.
 
 
+
 Definição de uma função:
 
-def funcao(x):
-  return x
+.. code-block:: python
+
+    def funcao(x):
+        return x
+
+
 
 Execução da função sem passar argumentos:
 
-funcao()
+.. code-block:: python
+
+    funcao()
 
 .. code-block:: console
 
@@ -156,11 +163,15 @@ funcao()
 
     TypeError: funcao() takes exactly 1 argument (0 given)
 
-Devido ao fato de a função exigir que seja passado um argumento
+|   Devido ao fato de a função exigir que seja passado um argumento.
 
-Execução da função passando um argumento
 
-funcao(7)
+
+Execução da função passando um argumento:
+
+.. code-block:: python
+
+    funcao(7)
 
 .. code-block:: console
 
