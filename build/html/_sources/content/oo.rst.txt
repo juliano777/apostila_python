@@ -6,6 +6,12 @@ Orientação a Objetos
 	O método construtor é o método inicializador, o método mágico __init__;
 
 
+
+bla bla bla:
+
+.. code-block:: python
+
+    
 class NomeClasse(ClasseMae):
     # Método construtor ou método inicializador (sem parâmetro)
     def __init__(self):        
@@ -16,12 +22,16 @@ class NomeClasse(ClasseMae):
         return foo
 
 
-	Em Python a definição de uma classe é bem simples. Usamos o comando class seguindo do nome da classe a ser criada, logo em seguida vindo entre parênteses os nomes das classes mãe separados por vírgulas, pois em Python é permitida herança múltipla.
-	O método construtor, também chamado de método inicializador é o __init__.
+|   Em Python a definição de uma classe é bem simples. Usamos o comando class seguindo do nome da classe a ser criada, logo em seguida vindo entre parênteses os nomes das classes mãe separados por vírgulas, pois em Python é permitida herança múltipla.
+|   O método construtor, também chamado de método inicializador é o __init__.
 
 
-class Foo(object):
-    nome = ''  
+bla bla bla:
+
+.. code-block:: python
+
+    class Foo(object):
+        nome = ''  
 
 
 class Bar(object):
