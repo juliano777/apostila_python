@@ -399,3 +399,8 @@ bla bla bla:
     o = Filha()
 
     o.metodo()
+
+.. code-block:: console
+
+    Método da classe Mae
+    Método da classe Filha
