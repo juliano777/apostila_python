@@ -366,9 +366,10 @@ foo(4, 5, 'Alemanha', 'Holanda', 'Inglaterra', continente = 'Europa', hemisferio
 ('Alemanha', 'Holanda', 'Inglaterra')
 {'continente': 'Europa', 'hemisferio': 'Norte'}
 
-=====================================================================================================================
+
 
 Estruturas de Dados como Parâmetro para Funções
+-----------------------------------------------
 
 	Em algumas situações pode ser útil utilizar uma estrutura de dados como tupla (tuple), lista (list), dicionário (dict) ou mesmo um conjunto (set / frozenset).
 
@@ -405,9 +406,10 @@ Testes utilizando as estruturas de dados criadas:
 
 7
 
-=====================================================================================================================
+
 
 Boas Práticas: Função Main
+--------------------------
 
 	Evite execuções globais, quebre seu código em funções o que facilita o reúso e teste de código.
 	Crie uma função principal (main). Crie primeiro as outras funções e por último a ser definida a função principal.
@@ -440,9 +442,9 @@ Função executada
 ==== Fim ====
 
 
-=====================================================================================================================
 
 Funções Geradoras
+-----------------
 
 	Uma função geradora ao invés de utilizar o comando return, utiliza o comando yield, que retorna um objeto generator.
 
@@ -484,22 +486,29 @@ FIM
 StopIteration: 
 
 
-=====================================================================================================================
-
 Funções Lambda
+--------------
 
 	São funções anônimas, ou seja, que não são associadas a um nome. Um recurso similar às funções anônimas em PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
 	Sua estrutura é composta apenas por expressões, o que a torna muito limitada, no entanto consome menos recursos do que uma função convencional. 
 	Por só aceitar expressões, o comando return não é permitido em sua estrutura.
 
-(lambda x, y: x + y)(5, 2)
-7
+
+
+.. code-block:: python
+
+    (lambda x, y: x + y)(5, 2)
+
+.. code-block:: console
+
+    7
 
 foo = lambda x, y: x ** y
 
-print(foo(2, 5))
-32
+.. code-block:: python
 
+    print(foo(2, 5))
 
-=====================================================================================================================   
-     
+.. code-block:: console
+
+    32

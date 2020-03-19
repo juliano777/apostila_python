@@ -107,6 +107,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#argumentos-em-lista-nao-nomeados">17.5. Argumentos em Lista Não Nomeados</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#argumentos-em-lista-nomeados">17.6. Argumentos em Lista Nomeados</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#funcoes-com-argumentos-variados">17.7. Funções com Argumentos Variados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estruturas-de-dados-como-parametro-para-funcoes">17.8. Estruturas de Dados como Parâmetro para Funções</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#boas-praticas-funcao-main">17.9. Boas Práticas: Função Main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcoes-geradoras">17.10. Funções Geradoras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcoes-lambda">17.11. Funções Lambda</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="oo.html">18. Orientação a Objetos</a></li>
@@ -481,8 +485,9 @@ print(d)</p>
 9
 (‘Alemanha’, ‘Holanda’, ‘Inglaterra’)
 {‘continente’: ‘Europa’, ‘hemisferio’: ‘Norte’}</p>
-<hr class="docutils" />
-<p>Estruturas de Dados como Parâmetro para Funções</p>
+</div>
+<div class="section" id="estruturas-de-dados-como-parametro-para-funcoes">
+<h2><span class="section-number">17.8. </span>Estruturas de Dados como Parâmetro para Funções<a class="headerlink" href="#estruturas-de-dados-como-parametro-para-funcoes" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Em algumas situações pode ser útil utilizar uma estrutura de dados como tupla (tuple), lista (list), dicionário (dict) ou mesmo um conjunto (set / frozenset).</p>
 </div></blockquote>
@@ -502,8 +507,9 @@ print(d)</p>
 <p>&gt; param_test(<a href="#id31"><span class="problematic" id="id32">*</span></a>lista)  # Lista (list) como parâmetro</p>
 <p>&gt; param_test(<a href="#id33"><span class="problematic" id="id34">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
 <p>7</p>
-<hr class="docutils" />
-<p>Boas Práticas: Função Main</p>
+</div>
+<div class="section" id="boas-praticas-funcao-main">
+<h2><span class="section-number">17.9. </span>Boas Práticas: Função Main<a class="headerlink" href="#boas-praticas-funcao-main" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Evite execuções globais, quebre seu código em funções o que facilita o reúso e teste de código.
 Crie uma função principal (main). Crie primeiro as outras funções e por último a ser definida a função principal.
@@ -527,8 +533,9 @@ print(‘==== Fim ====’)</p>
 <p>==== Início ====
 Função executada
 ==== Fim ====</p>
-<hr class="docutils" />
-<p>Funções Geradoras</p>
+</div>
+<div class="section" id="funcoes-geradoras">
+<h2><span class="section-number">17.10. </span>Funções Geradoras<a class="headerlink" href="#funcoes-geradoras" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>Uma função geradora ao invés de utilizar o comando return, utiliza o comando yield, que retorna um objeto generator.</p>
 </div></blockquote>
@@ -560,19 +567,27 @@ INÍCIO
 <p>g.next()
 FIM</p>
 <p>StopIteration:</p>
-<hr class="docutils" />
-<p>Funções Lambda</p>
+</div>
+<div class="section" id="funcoes-lambda">
+<h2><span class="section-number">17.11. </span>Funções Lambda<a class="headerlink" href="#funcoes-lambda" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>São funções anônimas, ou seja, que não são associadas a um nome. Um recurso similar às funções anônimas em PL/pgSQL (PostgreSQL) e PL/SQL (Oracle).
 Sua estrutura é composta apenas por expressões, o que a torna muito limitada, no entanto consome menos recursos do que uma função convencional.
 Por só aceitar expressões, o comando return não é permitido em sua estrutura.</p>
 </div></blockquote>
-<p>(lambda x, y: x + y)(5, 2)
-7</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
 <p>foo = lambda x, y: x ** y</p>
-<p>print(foo(2, 5))
-32</p>
-<hr class="docutils" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">32</span>
+</pre></div>
+</div>
 </div>
 </div>
 
