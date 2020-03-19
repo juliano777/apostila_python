@@ -1,23 +1,23 @@
 Método de Classe e Método Estático
 **********************************
 
-Existem dois tipos de métodos que podem ser executados diretamente de uma
-classe, ou seja, sem precisar criar um objeto dela. Justamente por serem
-independentes de objetos não esperam um "self" como primeiro parâmetro.
-A utilidade desses métodos é para processamento de dados de classes em vez
-de instâncias.
-Mesmo que isso possa ser feito por uma função escrita externamente à classe,
-não terá uma associação a essa classe e não poderão ser herdados por classes
-filhas. 
-Métodos estáticos são usados para agrupar funções que têm conexão lógica com
-a classe.
-Métodos de classe são usados para o mesmo fim que os métodos estáticos, mas
-que também podem processar dados da classe diretamente.	
+|   Existem dois tipos de métodos que podem ser executados diretamente de uma
+| classe, ou seja, sem precisar criar um objeto dela. Justamente por serem
+| independentes de objetos não esperam um "`self`" como primeiro parâmetro.
+|   A utilidade desses métodos é para processamento de dados de classes em vez
+| de instâncias.
+|   Mesmo que isso possa ser feito por uma função escrita externamente à classe,
+| não terá uma associação a essa classe e não poderão ser herdados por classes
+| filhas. 
+|   Métodos estáticos são usados para agrupar funções que têm conexão lógica com
+| a classe.
+|   Métodos de classe são usados para o mesmo fim que os métodos estáticos, mas
+| que também podem processar dados da classe diretamente.	
 
 Prática:
 
-	Observe no exemplo a seguir as diferentes assinaturas para respectivamente
-os métodos comum, de classe e estático:
+Observe no exemplo a seguir as diferentes assinaturas para respectivamente os
+métodos comum, de classe e estático:
 
 .. code-block:: python
 

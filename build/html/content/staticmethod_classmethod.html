@@ -183,23 +183,33 @@
             
   <div class="section" id="metodo-de-classe-e-metodo-estatico">
 <h1><span class="section-number">19. </span>Método de Classe e Método Estático<a class="headerlink" href="#metodo-de-classe-e-metodo-estatico" title="Link permanente para este título">¶</a></h1>
-<p>Existem dois tipos de métodos que podem ser executados diretamente de uma
-classe, ou seja, sem precisar criar um objeto dela. Justamente por serem
-independentes de objetos não esperam um “self” como primeiro parâmetro.
-A utilidade desses métodos é para processamento de dados de classes em vez
-de instâncias.
-Mesmo que isso possa ser feito por uma função escrita externamente à classe,
-não terá uma associação a essa classe e não poderão ser herdados por classes
-filhas.
-Métodos estáticos são usados para agrupar funções que têm conexão lógica com
-a classe.
-Métodos de classe são usados para o mesmo fim que os métodos estáticos, mas
-que também podem processar dados da classe diretamente.</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Existem dois tipos de métodos que podem ser executados diretamente de uma</div>
+</div>
+<div class="line">classe, ou seja, sem precisar criar um objeto dela. Justamente por serem</div>
+<div class="line">independentes de objetos não esperam um “<cite>self</cite>” como primeiro parâmetro.</div>
+<div class="line-block">
+<div class="line">A utilidade desses métodos é para processamento de dados de classes em vez</div>
+</div>
+<div class="line">de instâncias.</div>
+<div class="line-block">
+<div class="line">Mesmo que isso possa ser feito por uma função escrita externamente à classe,</div>
+</div>
+<div class="line">não terá uma associação a essa classe e não poderão ser herdados por classes</div>
+<div class="line">filhas.</div>
+<div class="line-block">
+<div class="line">Métodos estáticos são usados para agrupar funções que têm conexão lógica com</div>
+</div>
+<div class="line">a classe.</div>
+<div class="line-block">
+<div class="line">Métodos de classe são usados para o mesmo fim que os métodos estáticos, mas</div>
+</div>
+<div class="line">que também podem processar dados da classe diretamente.</div>
+</div>
 <p>Prática:</p>
-<blockquote>
-<div><p>Observe no exemplo a seguir as diferentes assinaturas para respectivamente</p>
-</div></blockquote>
-<p>os métodos comum, de classe e estático:</p>
+<p>Observe no exemplo a seguir as diferentes assinaturas para respectivamente os
+métodos comum, de classe e estático:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">metodo_comum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
