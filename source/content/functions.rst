@@ -37,25 +37,36 @@ O Comando return
 	Mas em um aplicativo ou script isso não acontecerá, portanto se deseja imprimir um valor em tela, isso deve ser explicitado, o que é mais comumente feito por print().
 	Quando uma função não tem um comando return, seu retorno é None implícito, o que para outras linguagens como C e Java é a mesma coisa que void.
 
-Definição da função
+
+
+Definição da função:
 
 .. code-block:: python
 
     def funcao():
         return 7
-    
-Utilizando print para imprimir em tela o valor retornado pela função multiplicado por 3
 
-print(funcao() * 3)    
+
+
+Utilizando print para imprimir em tela o valor retornado pela função
+multiplicado por 3:
+
+.. code-block:: python
+
+    print(funcao() * 3)    
 
 .. code-block:: console
 
     21
+    
+    
+    
+Definição de uma função que retorna mais de um valor:
 
-Definição de uma função que retorna mais de um valor
+.. code-block:: python
 
-def funcao():
-    return 3, 9
+    def funcao():
+        return 3, 9
 
 Atribuindo à variável o valor de retorno da função    
 

@@ -219,21 +219,24 @@ Vale lembrar que return não é a mesma coisa que imprimir em tela. Quando se di
 Mas em um aplicativo ou script isso não acontecerá, portanto se deseja imprimir um valor em tela, isso deve ser explicitado, o que é mais comumente feito por print().
 Quando uma função não tem um comando return, seu retorno é None implícito, o que para outras linguagens como C e Java é a mesma coisa que void.</p>
 </div></blockquote>
-<p>Definição da função</p>
+<p>Definição da função:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
     <span class="k">return</span> <span class="mi">7</span>
 </pre></div>
 </div>
-<p>Utilizando print para imprimir em tela o valor retornado pela função multiplicado por 3</p>
-<p>print(funcao() * 3)</p>
+<p>Utilizando print para imprimir em tela o valor retornado pela função
+multiplicado por 3:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">funcao</span><span class="p">()</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">21</span>
 </pre></div>
 </div>
-<p>Definição de uma função que retorna mais de um valor</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>return 3, 9</p>
-</dd>
-</dl>
+<p>Definição de uma função que retorna mais de um valor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span>
+</pre></div>
+</div>
 <p>Atribuindo à variável o valor de retorno da função</p>
 <p>x = funcao()</p>
 <p>Imprimindo o valor da variável</p>
