@@ -582,32 +582,33 @@ Estruturas de Dados como Parâmetro para Funções
 
 Criação da função de teste:
 
-def param_test(x, y):
-    return x + y
+.. code-block:: python
+
+    def param_test(x, y):
+        return x + y
 
 
 
-Declaração das variáveis de estrutura de dados que serão utilizadas como parâmetro para a função:
+Declaração das variáveis de estrutura de dados que serão utilizadas como
+parâmetro para a função:
 
-tupla = (5, 2)
+.. code-block:: python
 
-lista = [5, 2]
-
-dicio = {'x': 5, 'y': 2}
-
-conjunto = {2, 5, 2}
+    tupla = (5, 2)
+    lista = [5, 2]
+    dicio = {'x': 5, 'y': 2}
+    conjunto = {2, 5, 2}
 
 
 
 Testes utilizando as estruturas de dados criadas:
 
-param_test(**dicio)  # Dicionário (dict) como parâmetro
+.. code-block:: python
 
-param_test(*tupla)  # Tupla (tuple) como parâmetro  
-
-param_test(*lista)  # Lista (list) como parâmetro
-
-param_test(*conjunto)  # Conjunto (set) como parâmetro
+    param_test(**dicio)  # Dicionário (dict) como parâmetro
+    param_test(*tupla)  # Tupla (tuple) como parâmetro  
+    param_test(*lista)  # Lista (list) como parâmetro
+    param_test(*conjunto)  # Conjunto (set) como parâmetro
 
 .. code-block:: console
 

@@ -624,20 +624,25 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <div class="line">(set / frozenset).</div>
 </div>
 <p>Criação da função de teste:</p>
-<dl class="simple">
-<dt>def param_test(x, y):</dt><dd><p>return x + y</p>
-</dd>
-</dl>
-<p>Declaração das variáveis de estrutura de dados que serão utilizadas como parâmetro para a função:</p>
-<p>tupla = (5, 2)</p>
-<p>lista = [5, 2]</p>
-<p>dicio = {‘x’: 5, ‘y’: 2}</p>
-<p>conjunto = {2, 5, 2}</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">param_test</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>Declaração das variáveis de estrutura de dados que serão utilizadas como
+parâmetro para a função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">dicio</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+</pre></div>
+</div>
 <p>Testes utilizando as estruturas de dados criadas:</p>
-<p>param_test(<a href="#id1"><span class="problematic" id="id2">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
-<p>param_test(<a href="#id3"><span class="problematic" id="id4">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
-<p>param_test(<a href="#id5"><span class="problematic" id="id6">*</span></a>lista)  # Lista (list) como parâmetro</p>
-<p>param_test(<a href="#id7"><span class="problematic" id="id8">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">param_test</span><span class="p">(</span><span class="o">**</span><span class="n">dicio</span><span class="p">)</span>  <span class="c1"># Dicionário (dict) como parâmetro</span>
+<span class="n">param_test</span><span class="p">(</span><span class="o">*</span><span class="n">tupla</span><span class="p">)</span>  <span class="c1"># Tupla (tuple) como parâmetro</span>
+<span class="n">param_test</span><span class="p">(</span><span class="o">*</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Lista (list) como parâmetro</span>
+<span class="n">param_test</span><span class="p">(</span><span class="o">*</span><span class="n">conjunto</span><span class="p">)</span>  <span class="c1"># Conjunto (set) como parâmetro</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
