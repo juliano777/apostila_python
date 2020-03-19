@@ -356,12 +356,17 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
-<p>SyntaxError: non-default argument follows default argument</p>
-<p>Houve um erro, pois primeiro são os argumentos não padrões.</p>
-<dl class="simple">
-<dt>def funcao(x, y = 7):</dt><dd><p>return x + y</p>
-</dd>
-</dl>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">SyntaxError: non-default argument follows default argument</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Houve um erro, pois primeiro são os argumentos não padrões.</div>
+</div>
+<p>Definindo uma função com dois parâmetros:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
 <p>funcao(3)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">10</span>
 </pre></div>

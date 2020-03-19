@@ -233,12 +233,20 @@ Definindo uma função mesclando argumentos padrão e obrigatórios:
     def funcao(x = 7, y):
         return x + y
 
-SyntaxError: non-default argument follows default argument
+.. code-block:: console
 
-Houve um erro, pois primeiro são os argumentos não padrões.
+    SyntaxError: non-default argument follows default argument
 
-def funcao(x, y = 7):
-     return x + y     
+|   Houve um erro, pois primeiro são os argumentos não padrões.
+
+
+
+Definindo uma função com dois parâmetros:
+
+.. code-block:: python
+
+    def funcao(x, y = 7):
+        return x + y
 
 
 funcao(3)
