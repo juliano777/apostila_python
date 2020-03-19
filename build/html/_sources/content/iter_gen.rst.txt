@@ -313,8 +313,8 @@ Iterator vs Generator
 ---------------------
 
 - Para criar um generator utilizamos ou uma função com yield no lugar de
-  return ou tuple comprehension.
-  Para criar um iterador utilizamos a função iter();
+    return ou tuple comprehension.
+    Para criar um iterador utilizamos a função iter();
 
 - Generator utiliza yield, iterator não;
 
