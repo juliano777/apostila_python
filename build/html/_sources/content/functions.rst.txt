@@ -305,13 +305,25 @@ Execução da função com um parâmetro (o obrigatório):
 
     3
 
-funcao(1, 2)
+
+
+Execução da função com um parâmetro obrigatório e um opcional:
+
+.. code-block:: python
+
+    funcao(1, 2)
 
 .. code-block:: console
 
     5
 
-funcao(1, 2, 90)
+
+
+Execução da função com um parâmetro obrigatório e dois opcionais:
+
+.. code-block:: python
+
+    funcao(1, 2, 90)
 
 .. code-block:: console
 
@@ -333,16 +345,16 @@ Argumentos em Lista Não Nomeados
 	Tal recurso nos possibilita passar uma quantidade indeterminada de argumentos.
 	O identificador da variável que representa esse tipo de argumento vem logo depois do caractere asterisco (*).
 
-    
+.. code-block:: python
 
-def funcao(*args):
-    qtd = len(args)
-    primeiro = args[0]
-    ultimo = args[-1]
-    print('Foram passados %d argumentos' % qtd)
-    print('O primeiro é "%s"' % primeiro)
-    print('O último é "%s"' % ultimo)
-    print('Os argumentos passados foram: %s' % str(args))
+    def funcao(*args):
+        qtd = len(args)
+        primeiro = args[0]
+        ultimo = args[-1]
+        print('Foram passados %d argumentos' % qtd)
+        print('O primeiro é "%s"' % primeiro)
+        print('O último é "%s"' % ultimo)
+        print('Os argumentos passados foram: %s' % str(args))
 
 .. code-block:: console
 

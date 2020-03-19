@@ -400,11 +400,17 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">3</span>
 </pre></div>
 </div>
-<p>funcao(1, 2)</p>
+<p>Execução da função com um parâmetro obrigatório e um opcional:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">5</span>
 </pre></div>
 </div>
-<p>funcao(1, 2, 90)</p>
+<p>Execução da função com um parâmetro obrigatório e dois opcionais:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">93</span>
 </pre></div>
 </div>
@@ -421,16 +427,16 @@ Essa lista, internamente é interpretada como uma tupla (tuple).
 Tal recurso nos possibilita passar uma quantidade indeterminada de argumentos.
 O identificador da variável que representa esse tipo de argumento vem logo depois do caractere asterisco (*).</p>
 </div></blockquote>
-<dl class="simple">
-<dt>def funcao(<a href="#id1"><span class="problematic" id="id2">*</span></a>args):</dt><dd><p>qtd = len(args)
-primeiro = args[0]
-ultimo = args[-1]
-print(‘Foram passados %d argumentos’ % qtd)
-print(‘O primeiro é “%s”’ % primeiro)
-print(‘O último é “%s”’ % ultimo)
-print(‘Os argumentos passados foram: %s’ % str(args))</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">qtd</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">primeiro</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ultimo</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Foram passados </span><span class="si">%d</span><span class="s1"> argumentos&#39;</span> <span class="o">%</span> <span class="n">qtd</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O primeiro é &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">primeiro</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O último é &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">ultimo</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Os argumentos passados foram: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">funcao(&#39;abacaxi&#39;, 3, &#39;p&#39;, 8.3, 5 + 9j)</span>
 <span class="go">Foram passados 5 argumentos</span>
 <span class="go">O primeiro é &quot;abacaxi&quot;</span>
@@ -439,7 +445,7 @@ print(‘Os argumentos passados foram: %s’ % str(args))</p>
 </pre></div>
 </div>
 <dl class="simple">
-<dt>def funcao(<a href="#id3"><span class="problematic" id="id4">*</span></a>args):</dt><dd><dl class="simple">
+<dt>def funcao(<a href="#id1"><span class="problematic" id="id2">*</span></a>args):</dt><dd><dl class="simple">
 <dt>for arg in args:</dt><dd><p>print(‘Argumento %d = %s’ % (args.index(arg), arg))</p>
 </dd>
 </dl>
@@ -447,7 +453,7 @@ print(‘Os argumentos passados foram: %s’ % str(args))</p>
 </dl>
 <p>ou</p>
 <dl class="simple">
-<dt>def funcao(<a href="#id5"><span class="problematic" id="id6">*</span></a>args):</dt><dd><dl class="simple">
+<dt>def funcao(<a href="#id3"><span class="problematic" id="id4">*</span></a>args):</dt><dd><dl class="simple">
 <dt>for i, arg in enumerate(args):</dt><dd><p>print(‘Argumento %d = %s’ % (i, arg))</p>
 </dd>
 </dl>
@@ -461,7 +467,7 @@ print(‘Os argumentos passados foram: %s’ % str(args))</p>
 </pre></div>
 </div>
 <dl class="simple">
-<dt>def funcao(x, <a href="#id7"><span class="problematic" id="id8">*</span></a>args):</dt><dd><p>return args</p>
+<dt>def funcao(x, <a href="#id5"><span class="problematic" id="id6">*</span></a>args):</dt><dd><p>return args</p>
 </dd>
 </dl>
 <p>spam = (1, 2, 3, 4)</p>
@@ -469,17 +475,17 @@ print(‘Os argumentos passados foram: %s’ % str(args))</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">()</span>
 </pre></div>
 </div>
-<p>funcao(<a href="#id9"><span class="problematic" id="id10">*</span></a>spam)
+<p>funcao(<a href="#id7"><span class="problematic" id="id8">*</span></a>spam)
 (2, 3, 4)</p>
 <dl class="simple">
-<dt>def funcao(<a href="#id11"><span class="problematic" id="id12">*</span></a>args):</dt><dd><p>return args</p>
+<dt>def funcao(<a href="#id9"><span class="problematic" id="id10">*</span></a>args):</dt><dd><p>return args</p>
 </dd>
 </dl>
 <p>funcao(spam)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">((1, 2, 3, 4)</span><span class="go">,)</span>
 </pre></div>
 </div>
-<p>funcao(<a href="#id13"><span class="problematic" id="id14">*</span></a>spam)</p>
+<p>funcao(<a href="#id11"><span class="problematic" id="id12">*</span></a>spam)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(1, 2, 3, 4)</span>
 </pre></div>
 </div>
@@ -494,7 +500,7 @@ por vírgulas.</p>
 É uma lista com quantidade indeterminada e cada elemento da lista tem um identificador próprio.</p>
 </div></blockquote>
 <dl>
-<dt>def funcao(<a href="#id15"><span class="problematic" id="id16">**</span></a>kargs):</dt><dd><p>return kargs</p>
+<dt>def funcao(<a href="#id13"><span class="problematic" id="id14">**</span></a>kargs):</dt><dd><p>return kargs</p>
 <p>funcao(a = 1, b = 2)</p>
 </dd>
 </dl>
@@ -502,7 +508,7 @@ por vírgulas.</p>
 </pre></div>
 </div>
 <dl>
-<dt>def funcao(<a href="#id17"><span class="problematic" id="id18">**</span></a>kargs):</dt><dd><dl class="simple">
+<dt>def funcao(<a href="#id15"><span class="problematic" id="id16">**</span></a>kargs):</dt><dd><dl class="simple">
 <dt>for k, v in kargs.items():</dt><dd><p>print(‘%s = %s’ % (k.capitalize(), v))</p>
 </dd>
 </dl>
@@ -523,7 +529,7 @@ telefone = ‘(11) 99999-9999’,</p>
 </pre></div>
 </div>
 <dl>
-<dt>def funcao(<a href="#id19"><span class="problematic" id="id20">**</span></a>kargs):</dt><dd><p>return kargs</p>
+<dt>def funcao(<a href="#id17"><span class="problematic" id="id18">**</span></a>kargs):</dt><dd><p>return kargs</p>
 <p>eggs = {‘a’: 3, ‘b’: 5, ‘c’: ‘x’}</p>
 </dd>
 </dl>
@@ -531,7 +537,7 @@ telefone = ‘(11) 99999-9999’,</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: funcao() takes exactly 0 arguments (1 given)</span>
 </pre></div>
 </div>
-<p>funcao(<a href="#id21"><span class="problematic" id="id22">**</span></a>eggs)</p>
+<p>funcao(<a href="#id19"><span class="problematic" id="id20">**</span></a>eggs)</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;a&#39;: 3, &#39;b&#39;: 5, &#39;c&#39;: &#39;x&#39;}</span>
 </pre></div>
 </div>
@@ -544,7 +550,7 @@ A ordem dos tipos de argumentos é a seguinte:</p>
 <p>Simples, Nomeados, Lista de Não Nomeados e Lista de Nomeados</p>
 </div></blockquote>
 <dl>
-<dt>def foo(a, b = 3, <a href="#id23"><span class="problematic" id="id24">*</span></a>c, <a href="#id25"><span class="problematic" id="id26">**</span></a>d):</dt><dd><p>print(a + b)
+<dt>def foo(a, b = 3, <a href="#id21"><span class="problematic" id="id22">*</span></a>c, <a href="#id23"><span class="problematic" id="id24">**</span></a>d):</dt><dd><p>print(a + b)
 print(c)
 print(d)</p>
 <p>foo(4, 5, ‘Alemanha’, ‘Holanda’, ‘Inglaterra’, continente = ‘Europa’, hemisferio = ‘Norte’)</p>
@@ -572,10 +578,10 @@ print(d)</p>
 <p>dicio = {‘x’: 5, ‘y’: 2}</p>
 <p>conjunto = {2, 5, 2}</p>
 <p>Testes utilizando as estruturas de dados criadas:</p>
-<p>param_test(<a href="#id27"><span class="problematic" id="id28">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
-<p>param_test(<a href="#id29"><span class="problematic" id="id30">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
-<p>param_test(<a href="#id31"><span class="problematic" id="id32">*</span></a>lista)  # Lista (list) como parâmetro</p>
-<p>param_test(<a href="#id33"><span class="problematic" id="id34">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
+<p>param_test(<a href="#id25"><span class="problematic" id="id26">**</span></a>dicio)  # Dicionário (dict) como parâmetro</p>
+<p>param_test(<a href="#id27"><span class="problematic" id="id28">*</span></a>tupla)  # Tupla (tuple) como parâmetro</p>
+<p>param_test(<a href="#id29"><span class="problematic" id="id30">*</span></a>lista)  # Lista (list) como parâmetro</p>
+<p>param_test(<a href="#id31"><span class="problematic" id="id32">*</span></a>conjunto)  # Conjunto (set) como parâmetro</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
