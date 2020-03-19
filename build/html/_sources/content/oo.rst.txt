@@ -301,9 +301,10 @@ print(c1.__dict__)
 Com os atributos preenchidos com valores agora o dicionário não está mais vazio.
 Python é tão flexível que nos permite até criar um atributo “on the fly”:
 
-c1.ano = 1993
-	
-print(c1.__dict__)
+.. code-block:: python
+
+    c1.ano = 1993
+	print(c1.__dict__)
 
 .. code-block:: console
 
@@ -315,24 +316,30 @@ aos atributos existentes, também criar atributos que não existem na classe?
 Criação da classe Carro agora utilizando o método construtor (__init__()), o qual fará
 o trabalho de associar ao objeto instanciado cada par chave / valor declarado:
 
-class Carro(object):
-    marca = ''
-    modelo = ''
-     
-    # Metodo construtor
-    def __init__(self, **kargs):
-        for chave,valor in kargs.items():
-            self.__dict__[chave] = valor
+.. code-block:: python
+
+    class Carro(object):
+        marca = ''
+        modelo = ''
+        
+        # Metodo construtor
+        def __init__(self, **kargs):
+            for chave,valor in kargs.items():
+                self.__dict__[chave] = valor
 
 
-Criação do objeto com atributos dinâmicos;
+Criação do objeto com atributos dinâmicos:
 
-c1 = Carro(marca = 'Porsche', modelo = '911', cor = 'verde', ano = 1991)
+.. code-block:: python
+
+    c1 = Carro(marca = 'Porsche', modelo = '911', cor = 'verde', ano = 1991)
 
 
 Verificando o dicionário do objeto:
 
-print(c1.__dict__)
+.. code-block:: python
+
+    print(c1.__dict__)
 
 .. code-block:: console
 
@@ -341,16 +348,20 @@ print(c1.__dict__)
 
 O Método super()
 
-class Mae(object):
-    def metodo(self):
-        print('Método da classe Mae')
+bla bla bla:
 
-class Filha(Mae):
-    def metodo(self):
-        super().metodo() # Chamando o método da classe mãe
-        print('Método da classe Filha')
+.. code-block:: python
+
+    class Mae(object):
+        def metodo(self):
+            print('Método da classe Mae')
+
+    class Filha(Mae):
+        def metodo(self):
+            super().metodo() # Chamando o método da classe mãe
+            print('Método da classe Filha')
 
 
-o = Filha()
+    o = Filha()
 
-o.metodo()
+    o.metodo()
