@@ -360,8 +360,10 @@ funcao(9)
 5</p>
 <p>funcao(1, 2, 90)
 93</p>
-<p>funcao(10, z = 30, y = 50)
-90</p>
+<p>funcao(10, z = 30, y = 50)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">90</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="argumentos-em-lista-nao-nomeados">
 <h2><span class="section-number">17.5. </span>Argumentos em Lista Não Nomeados<a class="headerlink" href="#argumentos-em-lista-nao-nomeados" title="Link permanente para este título">¶</a></h2>
@@ -381,11 +383,13 @@ print(‘O último é “%s”’ % ultimo)
 print(‘Os argumentos passados foram: %s’ % str(args))</p>
 </dd>
 </dl>
-<p>funcao(‘abacaxi’, 3, ‘p’, 8.3, 5 + 9j)
-Foram passados 5 argumentos
-O primeiro é “abacaxi”
-O último é “(5+9j)”
-Os argumentos passados foram: (‘abacaxi’, 3, ‘p’, 8.3, (5+9j))</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">funcao(&#39;abacaxi&#39;, 3, &#39;p&#39;, 8.3, 5 + 9j)</span>
+<span class="go">Foram passados 5 argumentos</span>
+<span class="go">O primeiro é &quot;abacaxi&quot;</span>
+<span class="go">O último é &quot;(5+9j)&quot;</span>
+<span class="go">Os argumentos passados foram: (&#39;abacaxi&#39;, 3, &#39;p&#39;, 8.3, (5+9j))</span>
+</pre></div>
+</div>
 <dl class="simple">
 <dt>def funcao(<a href="#id3"><span class="problematic" id="id4">*</span></a>args):</dt><dd><dl class="simple">
 <dt>for arg in args:</dt><dd><p>print(‘Argumento %d = %s’ % (args.index(arg), arg))</p>
@@ -402,27 +406,35 @@ Os argumentos passados foram: (‘abacaxi’, 3, ‘p’, 8.3, (5+9j))</p>
 </dd>
 </dl>
 <p>funcao(‘a’, 1.5, 7, 99)</p>
-<p>Argumento 0 = a
-Argumento 1 = 1.5
-Argumento 2 = 7
-Argumento 3 = 99</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Argumento 0 = a</span>
+<span class="go">Argumento 1 = 1.5</span>
+<span class="go">Argumento 2 = 7</span>
+<span class="go">Argumento 3 = 99</span>
+</pre></div>
+</div>
 <dl class="simple">
 <dt>def funcao(x, <a href="#id7"><span class="problematic" id="id8">*</span></a>args):</dt><dd><p>return args</p>
 </dd>
 </dl>
 <p>spam = (1, 2, 3, 4)</p>
-<p>funcao(spam)
-()</p>
+<p>funcao(spam)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">()</span>
+</pre></div>
+</div>
 <p>funcao(<a href="#id9"><span class="problematic" id="id10">*</span></a>spam)
 (2, 3, 4)</p>
 <dl class="simple">
 <dt>def funcao(<a href="#id11"><span class="problematic" id="id12">*</span></a>args):</dt><dd><p>return args</p>
 </dd>
 </dl>
-<p>funcao(spam)
-((1, 2, 3, 4),)</p>
-<p>funcao(<a href="#id13"><span class="problematic" id="id14">*</span></a>spam)
-(1, 2, 3, 4)</p>
+<p>funcao(spam)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">((1, 2, 3, 4)</span><span class="go">,)</span>
+</pre></div>
+</div>
+<p>funcao(<a href="#id13"><span class="problematic" id="id14">*</span></a>spam)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(1, 2, 3, 4)</span>
+</pre></div>
+</div>
 <p>Quando o caractere asterisco é posicionado antes de uma variável faz com que considere que aquela variável (coleções) seja
 “desempacotada”. Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência de valores estraídos separados
 por vírgulas.</p>

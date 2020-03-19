@@ -227,7 +227,10 @@ funcao(1, 2, 90)
 93
 
 funcao(10, z = 30, y = 50)
-90
+
+.. code-block:: console
+
+    90
 
 
 
@@ -250,11 +253,13 @@ def funcao(*args):
     print('O último é "%s"' % ultimo)
     print('Os argumentos passados foram: %s' % str(args))
 
-funcao('abacaxi', 3, 'p', 8.3, 5 + 9j)
-Foram passados 5 argumentos
-O primeiro é "abacaxi"
-O último é "(5+9j)"
-Os argumentos passados foram: ('abacaxi', 3, 'p', 8.3, (5+9j))
+.. code-block:: console
+
+    funcao('abacaxi', 3, 'p', 8.3, 5 + 9j)
+    Foram passados 5 argumentos
+    O primeiro é "abacaxi"
+    O último é "(5+9j)"
+    Os argumentos passados foram: ('abacaxi', 3, 'p', 8.3, (5+9j))
     
     
 def funcao(*args):
@@ -269,10 +274,12 @@ def funcao(*args):
         
 funcao('a', 1.5, 7, 99)
 
-Argumento 0 = a
-Argumento 1 = 1.5
-Argumento 2 = 7
-Argumento 3 = 99
+.. code-block:: console
+
+    Argumento 0 = a
+    Argumento 1 = 1.5
+    Argumento 2 = 7
+    Argumento 3 = 99
 
 
 def funcao(x, *args):
@@ -281,7 +288,10 @@ def funcao(x, *args):
 spam = (1, 2, 3, 4)
 
 funcao(spam)
-()
+
+.. code-block:: console
+
+    ()
 
 funcao(*spam)
 (2, 3, 4)
@@ -290,10 +300,16 @@ def funcao(*args):
     return args
 
 funcao(spam)
-((1, 2, 3, 4),)
+
+.. code-block:: console
+
+    ((1, 2, 3, 4),)
 
 funcao(*spam)
-(1, 2, 3, 4)
+
+.. code-block:: console
+
+    (1, 2, 3, 4)
 
 Quando o caractere asterisco é posicionado antes de uma variável faz com que considere que aquela variável (coleções) seja
 "desempacotada". Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência de valores estraídos separados
