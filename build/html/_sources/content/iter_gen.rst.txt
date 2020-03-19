@@ -12,13 +12,17 @@ Iterator
 
 Criação de um iterator com uma string:
 
-> it = iter('bar')
+.. code-block:: python
+
+    it = iter('bar')
 
 
 
 Representação:
 
-> repr(it)
+.. code-block:: python
+
+    repr(it)
 
 .. code-block:: console
 
@@ -28,25 +32,33 @@ Representação:
 
 Executando o método __next__ até seu fim:
 
-> it.__next__()
+.. code-block:: python
+
+    it.__next__()
 
 .. code-block:: console
 
     'b'
 
-> it.__next__()
+.. code-block:: python
+
+    it.__next__()
 
 .. code-block:: console
 
     'a'
 
-> it.__next__()
+.. code-block:: python
+
+    it.__next__()
 
 .. code-block:: console
 
     'r'
 
-> it.__next__()
+.. code-block:: python
+
+    it.__next__()
 
 .. code-block:: console
 
@@ -69,7 +81,9 @@ Classe Iterator
 
 Criação da classe de iterador:
 
-> class FirstNumbers(object):
+.. code-block:: python
+
+    class FirstNumbers(object):
 
     def __init__(self, n):
         self.n = n
@@ -91,7 +105,9 @@ Criação da classe de iterador:
 
 Somatória dos 10 primeiros números:
 
-> print(sum(FirstNumbers(10)))
+.. code-block:: python
+
+    print(sum(FirstNumbers(10)))
 
 .. code-block:: console
 
@@ -109,19 +125,25 @@ Generator
 
 Criando um objeto range que vai de 0  a 9:
 
-> numeros = range(0, 10)
+.. code-block:: python
+
+    numeros = range(0, 10)
 
 
 
 Se for utilizado list comrprehension será gerada uma lista:
 
-> rq = [x ** 2 for x in numeros]
+.. code-block:: python
+
+    rq = [x ** 2 for x in numeros]
 
 
 
 Verificando os elementos:
 
-> rq
+.. code-block:: python
+
+    rq
 
 .. code-block:: console
 
@@ -131,7 +153,9 @@ Verificando os elementos:
 
 Verificando o tipo:
 
-> type(rq)
+.. code-block:: python
+
+    type(rq)
 
 .. code-block:: console
 
@@ -141,13 +165,17 @@ Verificando o tipo:
 
 Tuple comprehension é uma maneira de se criar um generator:
 
-> rq = (x ** 2 for x in numeros)
+.. code-block:: python
+
+    rq = (x ** 2 for x in numeros)
 
 
 
 Verificando o tipo do objeto:
 
-> type(rq)
+.. code-block:: python
+
+    type(rq)
 
 .. code-block:: console
 
@@ -157,13 +185,17 @@ Verificando o tipo do objeto:
 
 Executando o método dunder next até o fim dos elementos:
 
-> rq.__next__()
+.. code-block:: python
+
+    rq.__next__()
 
 .. code-block:: console
 
     0
 
-> rq.__next__()
+.. code-block:: python
+
+    rq.__next__()
 
 .. code-block:: console
 
@@ -175,7 +207,9 @@ Executando o método dunder next até o fim dos elementos:
 
     81
 
-> rq.__next__()
+.. code-block:: python
+
+    rq.__next__()
 
 .. code-block:: console
 
@@ -193,7 +227,9 @@ Funções Generator
 
 Criação de uma função generator:
 
-> def gen():
+.. code-block:: python
+
+    def gen():
 
     i = 0
 
@@ -205,19 +241,25 @@ Criação de uma função generator:
 
 Criação do gerador via execução da função:
 
-> x = gen()
+.. code-block:: python
+
+    x = gen()
 
 
 
 Verificando os tipos:
 
-> type(gen)
+.. code-block:: python
+
+    type(gen)
 
 .. code-block:: console
 
     function
 
-> type(x)
+.. code-block:: python
+
+    type(x)
 
 .. code-block:: console
 
@@ -227,7 +269,9 @@ Verificando os tipos:
 
 Execução do método __next__ até o fim:
 
-> x.__next__()
+.. code-block:: python
+
+    x.__next__()
 
 .. code-block:: console
 
@@ -235,13 +279,17 @@ Execução do método __next__ até o fim:
 
 . . . 
 
-> x.__next__()
+.. code-block:: python
+
+    x.__next__()
 
 .. code-block:: console
 
     9
 
-> x.__next__()
+.. code-block:: python
+
+    x.__next__()
 
 .. code-block:: console
 
@@ -264,19 +312,25 @@ Iterator vs Generator
 
 Do módulo timeit importar a função de mesmo nome:
 
-> from timeit import timeit
+.. code-block:: python
+
+    from timeit import timeit
 
 
 
 Verificação de tipos:
 
-> type(iter([x for x in range(1, 1001)]))
+.. code-block:: python
+
+    type(iter([x for x in range(1, 1001)]))
 
 .. code-block:: console
 
     list_iterator
 
-> type((x for x in range(1, 1001)))
+.. code-block:: python
+
+    type((x for x in range(1, 1001)))
 
 .. code-block:: console
 
@@ -286,12 +340,16 @@ Verificação de tipos:
 
 Strings com código em loop sobre iterador e gerador, respectivamente:
 
-> code_it = '''                                
+.. code-block:: python
+
+    code_it = '''                                
 for i in (iter([x for x in range(1, 1001)])):
     pass
 '''
 
-> code_gen = '''                                
+.. code-block:: python
+
+    code_gen = '''                                
 for i in ((x for x in range(1, 1001))):
     pass
 '''
@@ -300,13 +358,17 @@ for i in ((x for x in range(1, 1001))):
 
 Cronometrando os códigos de iterador e gerador, respectivamente:
 
-> timeit(code_it)
+.. code-block:: python
+
+    timeit(code_it)
 
 .. code-block:: console
 
     42.666774257901125
 
-> timeit(code_gen)
+.. code-block:: python
+
+    timeit(code_gen)
 
 .. code-block:: console
 
