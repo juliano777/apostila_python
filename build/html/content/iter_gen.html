@@ -450,18 +450,18 @@ faz a iteração.</p></li>
 </pre></div>
 </div>
 <dl class="simple">
-<dt>for i in (iter([x for x in range(1, 1001)])):</dt><dd><p>pass</p>
+<dt>for i in (iter([x for x in range(1, 1001)])):</dt><dd><p>pass
+‘’’</p>
 </dd>
 </dl>
-<p>‘’’</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">code_gen</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
 </pre></div>
 </div>
 <dl class="simple">
-<dt>for i in ((x for x in range(1, 1001))):</dt><dd><p>pass</p>
+<dt>for i in ((x for x in range(1, 1001))):</dt><dd><p>pass
+‘’’</p>
 </dd>
 </dl>
-<p>‘’’</p>
 <p>Cronometrando os códigos de iterador e gerador, respectivamente:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">timeit</span><span class="p">(</span><span class="n">code_it</span><span class="p">)</span>
 </pre></div>

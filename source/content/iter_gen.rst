@@ -361,14 +361,14 @@ Strings com código em loop sobre iterador e gerador, respectivamente:
     code_it = '''                                
 for i in (iter([x for x in range(1, 1001)])):
     pass
-'''
+    '''
 
 .. code-block:: python
 
     code_gen = '''                                
 for i in ((x for x in range(1, 1001))):
     pass
-'''
+    '''
 
 
 
