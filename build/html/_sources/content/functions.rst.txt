@@ -619,13 +619,20 @@ Testes utilizando as estruturas de dados criadas:
 Boas Práticas: Função Main
 --------------------------
 
-	Evite execuções globais, quebre seu código em funções o que facilita o reúso e teste de código.
-	Crie uma função principal (main). Crie primeiro as outras funções e por último a ser definida a função principal.
-	Na função principal serão feitas as chamadas às outras funções.
-	Outra coisa interessante a ser feita é colocar a função principal dentro de um if. Sendo que se for executado, terá a variável especial "__name__" como valor "__main__".
+|   Evite execuções globais, quebre seu código em funções o que facilita o
+| reúso e teste de código.
+|   Crie uma função principal (main). Crie primeiro as outras funções e por
+| último a ser definida a função principal.
+|   Na função principal serão feitas as chamadas às outras funções.
+|   Outra coisa interessante a ser feita é colocar a função principal dentro
+| de um if. Sendo que se for executado, terá a variável especial "__name__"
+| como valor "__main__".
 
 
-vim hello.py
+
+.. code-block:: bash
+
+    vim hello.py
 
 #!/usr/bin/env python
 #_*_ coding: utf-8 _*_
