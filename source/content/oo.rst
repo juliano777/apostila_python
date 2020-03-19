@@ -3,7 +3,7 @@ Orientação a Objetos
 
 	Python suporta herança múltipla;
 	Tudo em Python é objeto (inclusive classes);
-	O método construtor é o método inicializador, o método mágico __init__;
+	O método construtor é o método inicializador, o método mágico `__init__`;
 
 
 
