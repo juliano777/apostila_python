@@ -38,18 +38,23 @@ métodos comum, de classe e estático:
 |   Na classe foram declarados três métodos, sendo que o primeiro que é um
 | método comum, cujo primeiro argumento é o tradicional self que representa a
 | instância (objeto) criada a partir da classe.
-|   O segundo método é decorado com @classmethod, faz desse método um método de
-classe, o qual não faz necessária a criação de um objeto para ser utilizado.
-Esse tipo de método é invocado da seguinte forma: Classe.metodo_de_classe().
-Ainda sobre o método de classe um detalhe interessante é o "cls" ao invés de
-self.
-A variável "cls" é utilizada com um propósito similar ao de self, mas ao invés
-de representar uma instância criada, representa a classe à qual o método
-pertence.
-Assim como self, cls é apenas uma convenção, deixando ao gosto do usuário, se
-o mesmo desejar utilizar outro nome.
-E por fim o método estático, decorado com @staticmethod é como uma função
-definida externamente à classe. Não recebe um "self" ou um "cls".
+|   O segundo método é decorado com @classmethod, faz desse método um método
+| de classe, o qual não faz necessária a criação de um objeto para ser
+| utilizado.
+|   Esse tipo de método é invocado da seguinte forma:
+|
+| `Classe.metodo_de_classe().`
+|
+|   Ainda sobre o método de classe um detalhe interessante é o "cls" ao invés
+| de self.
+|   A variável "cls" é utilizada com um propósito similar ao de self, mas ao
+| invés de representar uma instância criada, representa a classe à qual o
+| método pertence.
+|   Assim como self, cls é apenas uma convenção, deixando ao gosto do usuário,
+| se o mesmo desejar utilizar outro nome.
+|   E por fim o método estático, decorado com @staticmethod é como uma função
+| definida externamente à classe. Não recebe um "self" ou um "cls".
+
 
 
 Chamada do método comum pela classe:
@@ -62,8 +67,9 @@ Chamada do método comum pela classe:
 
     TypeError: unbound method metodo_comum() must be called with Foo instance as first argument (got nothing instead)
 
-Aqui podemos ver que se for feita uma tentativa de invocar a partir da classe
-um método que não seja nem de classe e nem estático será retornado um erro.
+|   Aqui podemos ver que se for feita uma tentativa de invocar a partir da
+| classe um método que não seja nem de classe e nem estático será retornado
+| um erro.
 
 
 
