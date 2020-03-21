@@ -227,6 +227,7 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 
 <span class="k">class</span> <span class="nc">Baz</span><span class="p">(</span><span class="n">Foo</span><span class="p">,</span> <span class="n">Bar</span><span class="p">):</span>
 
+    <span class="c1"># Método construtor exige que se passe o sobrenome</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sobrenome</span> <span class="o">=</span> <span class="n">sobrenome</span>
 
@@ -238,9 +239,11 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 <span class="n">o</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Chiquinho&#39;</span>
 <span class="n">o</span><span class="o">.</span><span class="n">idade</span> <span class="o">=</span> <span class="mi">51</span>
 <span class="n">o</span><span class="o">.</span><span class="n">altura</span> <span class="o">=</span> <span class="mf">1.6</span>
+
 <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">sobrenome</span><span class="si">}</span><span class="s1"> &#39;</span>
      <span class="sa">f</span><span class="s1">&#39;tem </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">idade</span><span class="si">}</span><span class="s1"> anos e &#39;</span>
      <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">altura</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">m de altura&#39;</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
