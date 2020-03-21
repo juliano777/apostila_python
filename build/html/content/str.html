@@ -916,21 +916,21 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exibir mensagem com uma f string</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Comprei um </span><span class="si">{marca}</span><span class="s1"> </span><span class="si">{modelo}</span><span class="s1"> </span><span class="si">{cor}</span><span class="s1"> ano </span><span class="si">{ano}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Comprei um </span><span class="si">{</span><span class="n">marca</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">modelo</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">cor</span><span class="si">}</span><span class="s1"> ano </span><span class="si">{</span><span class="n">ano</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Comprei um Fiat 147 azul ano 1985</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uma f string também permite que se use expressões</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{5 + 2}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Métodos e funções também são permitidos</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{cor.upper()}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">cor</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">AZUL</span>
@@ -947,11 +947,11 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 
     <span class="c1"># Método string</span>
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{marca}</span><span class="s1"> </span><span class="si">{modelo}</span><span class="s1"> / </span><span class="si">{cor}</span><span class="s1"> / </span><span class="si">{ano}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">marca</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">modelo</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="n">cor</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="n">ano</span><span class="si">}</span><span class="s1">&#39;</span>
 
     <span class="c1"># Método de representação</span>
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{marca}</span><span class="s1"> </span><span class="si">{modelo}</span><span class="s1"> | </span><span class="si">{cor}</span><span class="s1"> | </span><span class="si">{ano}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">marca</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">modelo</span><span class="si">}</span><span class="s1"> | </span><span class="si">{</span><span class="n">cor</span><span class="si">}</span><span class="s1"> | </span><span class="si">{</span><span class="n">ano</span><span class="si">}</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de um objeto Carro</span>
@@ -959,24 +959,24 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print do método __str__ do objeto:</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{c}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat 147 / azul / 1985</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print do método __repr__ do objeto</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{c!r}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">c</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat 147 | azul | 1985</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># f string de múltiplas linhas</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{marca}</span><span class="se">\n</span><span class="s1">&#39;</span>\
-    <span class="sa">f</span><span class="s1">&#39;Modelo: </span><span class="si">{modelo}</span><span class="se">\n</span><span class="s1">&#39;</span>\
-    <span class="sa">f</span><span class="s1">&#39;Ano: </span><span class="si">{ano}</span><span class="se">\n</span><span class="s1">&#39;</span>\
-    <span class="sa">f</span><span class="s1">&#39;Cor: </span><span class="si">{cor}</span><span class="s1">&#39;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{</span><span class="n">marca</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>\
+    <span class="sa">f</span><span class="s1">&#39;Modelo: </span><span class="si">{</span><span class="n">modelo</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>\
+    <span class="sa">f</span><span class="s1">&#39;Ano: </span><span class="si">{</span><span class="n">ano</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>\
+    <span class="sa">f</span><span class="s1">&#39;Cor: </span><span class="si">{</span><span class="n">cor</span><span class="si">}</span><span class="s1">&#39;</span>
 
 <span class="c1"># Exibir a mensagem</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -989,10 +989,10 @@ Cada tipo de string tem um prefixo, que são “b” bytes, “f” format, “r
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># f String entre parênteses</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{marca}</span><span class="s1"> - &#39;</span>
-     <span class="sa">f</span><span class="s1">&#39;Modelo: </span><span class="si">{modelo}</span><span class="s1"> - &#39;</span>
-     <span class="sa">f</span><span class="s1">&#39;Ano: </span><span class="si">{ano}</span><span class="s1"> - &#39;</span>
-     <span class="sa">f</span><span class="s1">&#39;Cor: </span><span class="si">{cor}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{</span><span class="n">marca</span><span class="si">}</span><span class="s1"> - &#39;</span>
+     <span class="sa">f</span><span class="s1">&#39;Modelo: </span><span class="si">{</span><span class="n">modelo</span><span class="si">}</span><span class="s1"> - &#39;</span>
+     <span class="sa">f</span><span class="s1">&#39;Ano: </span><span class="si">{</span><span class="n">ano</span><span class="si">}</span><span class="s1"> - &#39;</span>
+     <span class="sa">f</span><span class="s1">&#39;Cor: </span><span class="si">{</span><span class="n">cor</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="c1"># Exibir a mensagem</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>

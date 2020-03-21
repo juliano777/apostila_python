@@ -440,10 +440,10 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
     <span class="n">qtd</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
     <span class="n">primeiro</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">ultimo</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Foram passados </span><span class="si">{qtd}</span><span class="s1"> argumentos&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;O primeiro é </span><span class="si">{primeiro}</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;O último é </span><span class="si">{ultimo}</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Os argumentos passados foram: </span><span class="si">{args}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Foram passados </span><span class="si">{</span><span class="n">qtd</span><span class="si">}</span><span class="s1"> argumentos&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;O primeiro é </span><span class="si">{</span><span class="n">primeiro</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;O último é </span><span class="si">{</span><span class="n">ultimo</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Os argumentos passados foram: </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">funcao(&#39;abacaxi&#39;, 3, &#39;p&#39;, 8.3, 5 + 9j)</span>
@@ -456,13 +456,13 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <p>Definição de função de duas formas diferentes:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argumento {args.index(arg)} = </span><span class="si">{arg}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argumento </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>ou</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argumento </span><span class="si">{i}</span><span class="s1"> = </span><span class="si">{arg}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argumento </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Execução:</p>
@@ -542,7 +542,7 @@ Quando houver mais de um argumento, os argumentos obrigatórios devem vira prime
 <p>Definição e execução:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">(</span><span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{k}</span><span class="s1"> = </span><span class="si">{v}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
 <span class="n">funcao</span><span class="p">(</span>

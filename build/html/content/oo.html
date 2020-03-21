@@ -230,7 +230,7 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Baz</span><span class="p">(</span><span class="s1">&#39;Chiquinho da Silva&#39;</span><span class="p">)</span>
 <span class="n">o</span><span class="o">.</span><span class="n">idade</span> <span class="o">=</span> <span class="mi">51</span>
 <span class="n">o</span><span class="o">.</span><span class="n">altura</span> <span class="o">=</span> <span class="mf">1.6</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{o.nome}</span><span class="s1"> tem </span><span class="si">{o.idade}</span><span class="s1"> anos e </span><span class="si">{o.altura:.2f}</span><span class="s1">m de altura&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s1"> tem </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">idade</span><span class="si">}</span><span class="s1"> anos e </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">altura</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">m de altura&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Chiquinho da Silva tem 51 anos e 1.60m de altura</span>
@@ -286,7 +286,7 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{c1.marca}</span><span class="se">\n</span><span class="s1">Modelo: </span><span class="si">{c1.modelo}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{</span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span><span class="si">}</span><span class="se">\n</span><span class="s1">Modelo: </span><span class="si">{</span><span class="n">c1</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Marca: Fiat</span>
