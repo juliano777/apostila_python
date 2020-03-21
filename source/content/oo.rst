@@ -7,7 +7,7 @@ Orientação a Objetos
 
 
 
-bla bla bla:
+Exemplo de criação de uma classe:
 
 .. code-block:: python
     
@@ -21,11 +21,15 @@ bla bla bla:
             return foo
 
 
-|   Em Python a definição de uma classe é bem simples. Usamos o comando class seguindo do nome da classe a ser criada, logo em seguida vindo entre parênteses os nomes das classes mãe separados por vírgulas, pois em Python é permitida herança múltipla.
-|   O método construtor, também chamado de método inicializador é o __init__.
+|   Em Python a definição de uma classe é bem simples. Usamos o comando class
+| seguindo do nome da classe a ser criada, logo em seguida vindo entre
+| parênteses os nomes das classes mãe separados por vírgulas, pois em Python é
+| permitida herança múltipla.
+|   O método construtor, também chamado de método inicializador é o `__init__`.
 
 
-bla bla bla:
+
+Herança múltipla; a terceira classe herda das duas primeiras:
 
 .. code-block:: python
 
@@ -40,19 +44,25 @@ bla bla bla:
 
     class Baz(Foo, Bar):
 
-        def __init__(self, nome):
-            self.nome = nome 
+        def __init__(self, sobrenome):
+            self.sobrenome = sobrenome 
 
         altura = 0.0
 
-bla bla bla:
+Instanciação da classe e testes com seus atributos:
 
 .. code-block:: python
 
-    o = Baz('Chiquinho da Silva')
+    o = Baz('da Silva')
+    o.nome = 'Chiquinho'
     o.idade = 51
     o.altura = 1.6
-    print(f'{o.nome} tem {o.idade} anos e {o.altura:.2f}m de altura')
+    s = (f'{o.nome} {o.sobrenome}'
+         f'tem {o.idade} anos e '
+         f'{o.altura:.2f}m de altura')
+    print(s)
+
+|       
 
 .. code-block:: console
 

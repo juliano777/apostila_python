@@ -193,7 +193,7 @@
 Tudo em Python é objeto (inclusive classes);
 O método construtor é o método inicializador, o método mágico <cite>__init__</cite>;</p>
 </div></blockquote>
-<p>bla bla bla:</p>
+<p>Exemplo de criação de uma classe:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NomeClasse</span><span class="p">(</span><span class="n">ClasseMae</span><span class="p">):</span>
     <span class="c1"># Método construtor ou método inicializador (sem parâmetro)</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -205,10 +205,17 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line">Em Python a definição de uma classe é bem simples. Usamos o comando class seguindo do nome da classe a ser criada, logo em seguida vindo entre parênteses os nomes das classes mãe separados por vírgulas, pois em Python é permitida herança múltipla.</div>
-<div class="line">O método construtor, também chamado de método inicializador é o __init__.</div>
+<div class="line-block">
+<div class="line">Em Python a definição de uma classe é bem simples. Usamos o comando class</div>
 </div>
-<p>bla bla bla:</p>
+<div class="line">seguindo do nome da classe a ser criada, logo em seguida vindo entre</div>
+<div class="line">parênteses os nomes das classes mãe separados por vírgulas, pois em Python é</div>
+<div class="line">permitida herança múltipla.</div>
+<div class="line-block">
+<div class="line">O método construtor, também chamado de método inicializador é o <cite>__init__</cite>.</div>
+</div>
+</div>
+<p>Herança múltipla; a terceira classe herda das duas primeiras:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
@@ -220,18 +227,23 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 
 <span class="k">class</span> <span class="nc">Baz</span><span class="p">(</span><span class="n">Foo</span><span class="p">,</span> <span class="n">Bar</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nome</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="n">nome</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sobrenome</span> <span class="o">=</span> <span class="n">sobrenome</span>
 
     <span class="n">altura</span> <span class="o">=</span> <span class="mf">0.0</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Baz</span><span class="p">(</span><span class="s1">&#39;Chiquinho da Silva&#39;</span><span class="p">)</span>
+<p>Instanciação da classe e testes com seus atributos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Baz</span><span class="p">(</span><span class="s1">&#39;da Silva&#39;</span><span class="p">)</span>
+<span class="n">o</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Chiquinho&#39;</span>
 <span class="n">o</span><span class="o">.</span><span class="n">idade</span> <span class="o">=</span> <span class="mi">51</span>
 <span class="n">o</span><span class="o">.</span><span class="n">altura</span> <span class="o">=</span> <span class="mf">1.6</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s1"> tem </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">idade</span><span class="si">}</span><span class="s1"> anos e </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">altura</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">m de altura&#39;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">sobrenome</span><span class="si">}</span><span class="s1"> tem </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">idade</span><span class="si">}</span><span class="s1"> anos e </span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">altura</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">m de altura&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Chiquinho da Silva tem 51 anos e 1.60m de altura</span>
 </pre></div>

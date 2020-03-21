@@ -554,14 +554,14 @@ Definição e execução de uma função com parâmetros mistos:
         print(c)
         print(d)
 
-        foo(
-            4,
-            5,
-            'Alemanha',
-            'Holanda',
-            'Inglaterra',
-            continente = 'Europa',
-            hemisferio = 'Norte')
+    foo(
+        4,
+        5,
+        'Alemanha',
+        'Holanda',
+        'Inglaterra',
+        continente = 'Europa',
+        hemisferio = 'Norte')
 
 .. code-block:: console
 
