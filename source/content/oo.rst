@@ -57,7 +57,7 @@ Instanciação da classe e testes com seus atributos:
     o.nome = 'Chiquinho'
     o.idade = 51
     o.altura = 1.6
-    s = (f'{o.nome} {o.sobrenome}'
+    s = (f'{o.nome} {o.sobrenome} '
          f'tem {o.idade} anos e '
          f'{o.altura:.2f}m de altura')
     print(s)
