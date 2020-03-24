@@ -101,9 +101,10 @@
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">18. Orientação a Objetos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#metodo-definido-externamente-a-classe">18.1. Método Definido Externamente à Classe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.2. Objetos com Atributos Dinâmicos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#o-metodo-super">18.3. O Método super()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodo-str">18.1. Método __str__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodo-definido-externamente-a-classe">18.2. Método Definido Externamente à Classe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.3. Objetos com Atributos Dinâmicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#o-metodo-super">18.4. O Método super()</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
@@ -247,9 +248,6 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Chiquinho da Silva tem 51 anos e 1.60m de altura</span>
 </pre></div>
 </div>
@@ -257,7 +255,7 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 Há uma convenção que colocando um unerline como primeiro caractere no nome de um atributo ou um método o sinaliza como privado.
 Porém, isso é apenas uma convenção. Nada impede que sejam acessados externamente.
 Para que haja um bloqueio efetivo há um recurso na linguagem chamado “property”.</p>
-<p>bla bla bla:</p>
+<p>Criação de classe com método construtor e um método personalizado:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
 
@@ -274,7 +272,13 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor ligado!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">O método construtor requer que sejam passados dois parâmetros: marca e</div>
+</div>
+<div class="line">modelo.</div>
+</div>
+<p>Tentativa de criar uma instância da classe sem passar parâmetros:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -287,7 +291,7 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 <span class="go">TypeError: __init__() takes exactly 3 arguments (1 given)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Instanciação correta da classe Carro:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s1">&#39;Fiat&#39;</span><span class="p">,</span> <span class="s1">&#39;147&#39;</span><span class="p">)</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">ignicao</span><span class="p">()</span>
 </pre></div>
@@ -295,14 +299,14 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Motor ligado!</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método ignicao:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="n">ignicao</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Motor desligado!</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Exibindo atributos via print:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Marca: </span><span class="si">{</span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span><span class="si">}</span><span class="se">\n</span><span class="s1">Modelo: </span><span class="si">{</span><span class="n">c1</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -310,7 +314,15 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 <span class="go">Modelo: 147</span>
 </pre></div>
 </div>
-<p>Método __str__:</p>
+<div class="section" id="metodo-str">
+<h2><span class="section-number">18.1. </span>Método __str__<a class="headerlink" href="#metodo-str" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">É o método dunder cujo objetivo é a representação em string do objeto.</div>
+<div class="line">Esse método é chamado quando as funções <cite>print()</cite> e <cite>str()</cite> tem um objeto</div>
+</div>
+<div class="line">como parâmetro.</div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -357,8 +369,9 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;__main__.Carro object at 0x7f1f631273d0&gt;&#39;</span>
 </pre></div>
 </div>
+</div>
 <div class="section" id="metodo-definido-externamente-a-classe">
-<h2><span class="section-number">18.1. </span>Método Definido Externamente à Classe<a class="headerlink" href="#metodo-definido-externamente-a-classe" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">18.2. </span>Método Definido Externamente à Classe<a class="headerlink" href="#metodo-definido-externamente-a-classe" title="Link permanente para este título">¶</a></h2>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_externo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frase</span><span class="p">,</span> <span class="n">numero</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">numero</span> <span class="o">=</span> <span class="n">numero</span>
@@ -409,7 +422,7 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 </div>
 </div>
 <div class="section" id="objetos-com-atributos-dinamicos">
-<h2><span class="section-number">18.2. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">18.3. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
 <p>Criação da classe Carro:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -475,7 +488,7 @@ o trabalho de associar ao objeto instanciado cada par chave / valor declarado:</
 </div>
 </div>
 <div class="section" id="o-metodo-super">
-<h2><span class="section-number">18.3. </span>O Método super()<a class="headerlink" href="#o-metodo-super" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">18.4. </span>O Método super()<a class="headerlink" href="#o-metodo-super" title="Link permanente para este título">¶</a></h2>
 <div class="line-block">
 <div class="line">Bla bla bla</div>
 </div>

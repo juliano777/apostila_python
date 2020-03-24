@@ -79,7 +79,7 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado "property"
 
 
 
-bla bla bla:
+Criação de classe com método construtor e um método personalizado:
 
 .. code-block:: python
 
@@ -98,9 +98,12 @@ bla bla bla:
                 self.motor_ligado = True
                 print('Motor ligado!')
 
+|   O método construtor requer que sejam passados dois parâmetros: marca e
+| modelo.                
 
 
-bla bla bla:
+
+Tentativa de criar uma instância da classe sem passar parâmetros:
 
 .. code-block:: python
 
@@ -118,7 +121,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Instanciação correta da classe Carro:
 
 .. code-block:: python
 
@@ -131,7 +134,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método ignicao:
 
 .. code-block:: python
 
@@ -143,7 +146,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Exibindo atributos via print:
 
 .. code-block:: python
 
@@ -155,7 +158,16 @@ bla bla bla:
     Modelo: 147
 
 
-Método __str__:
+
+Métodos __str__ e __repr__
+--------------------------
+
+**__str__**
+
+|   É o método dunder cujo objetivo é a representação em string do objeto.
+|   Esse método é chamado quando as funções `print()` e `str()` tem um objeto
+| como parâmetro.
+
 
 .. code-block:: python
 
@@ -218,6 +230,9 @@ bla bla bla:
 .. code-block:: console
 
     '<__main__.Carro object at 0x7f1f631273d0>'
+
+
+
 
 
 Método Definido Externamente à Classe
