@@ -101,7 +101,10 @@
 <li class="toctree-l1"><a class="reference internal" href="iter_gen.html">16. Iteratoradores e Geradores</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">17. Funções</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">18. Orientação a Objetos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#metodo-str">18.1. Método __str__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-str-e-repr">18.1. Métodos __str__ e __repr__</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diferencas-entre-str-e-repr">18.1.1. Diferenças entre __str__ e __repr__</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#metodo-definido-externamente-a-classe">18.2. Método Definido Externamente à Classe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.3. Objetos com Atributos Dinâmicos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#o-metodo-super">18.4. O Método super()</a></li>
@@ -189,11 +192,13 @@
             
   <div class="section" id="orientacao-a-objetos">
 <h1><span class="section-number">18. </span>Orientação a Objetos<a class="headerlink" href="#orientacao-a-objetos" title="Link permanente para este título">¶</a></h1>
-<blockquote>
-<div><p>Python suporta herança múltipla;
-Tudo em Python é objeto (inclusive classes);
-O método construtor é o método inicializador, o método mágico <cite>__init__</cite>;</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">Python suporta herança múltipla;</div>
+<div class="line-block">
+<div class="line">Tudo em Python é objeto (inclusive classes);</div>
+<div class="line">O método construtor é o método inicializador, o método mágico <cite>__init__</cite>;</div>
+</div>
+</div>
 <p>Exemplo de criação de uma classe:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NomeClasse</span><span class="p">(</span><span class="n">ClasseMae</span><span class="p">):</span>
     <span class="c1"># Método construtor ou método inicializador (sem parâmetro)</span>
@@ -251,10 +256,21 @@ O método construtor é o método inicializador, o método mágico <cite>__init_
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Chiquinho da Silva tem 51 anos e 1.60m de altura</span>
 </pre></div>
 </div>
-<p>Obs.: Em Python todos métodos e atributos são públicos.
-Há uma convenção que colocando um unerline como primeiro caractere no nome de um atributo ou um método o sinaliza como privado.
-Porém, isso é apenas uma convenção. Nada impede que sejam acessados externamente.
-Para que haja um bloqueio efetivo há um recurso na linguagem chamado “property”.</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Obs.: Em Python todos métodos e atributos são públicos.</div>
+<div class="line">Há uma convenção que colocando um unerline como primeiro caractere no nome</div>
+</div>
+<div class="line">de um atributo ou um método o sinaliza como privado.</div>
+<div class="line-block">
+<div class="line">Porém, isso é apenas uma convenção. Nada impede que sejam acessados</div>
+</div>
+<div class="line">externamente.</div>
+<div class="line-block">
+<div class="line">Para que haja um bloqueio efetivo há um recurso na linguagem chamado</div>
+</div>
+<div class="line">“property”.</div>
+</div>
 <p>Criação de classe com método construtor e um método personalizado:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
@@ -314,8 +330,9 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 <span class="go">Modelo: 147</span>
 </pre></div>
 </div>
-<div class="section" id="metodo-str">
-<h2><span class="section-number">18.1. </span>Método __str__<a class="headerlink" href="#metodo-str" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="metodos-str-e-repr">
+<h2><span class="section-number">18.1. </span>Métodos __str__ e __repr__<a class="headerlink" href="#metodos-str-e-repr" title="Link permanente para este título">¶</a></h2>
+<p><strong>__str__</strong></p>
 <div class="line-block">
 <div class="line-block">
 <div class="line">É o método dunder cujo objetivo é a representação em string do objeto.</div>
@@ -323,20 +340,37 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 </div>
 <div class="line">como parâmetro.</div>
 </div>
+<p><strong>__repr__</strong></p>
+<div class="line-block">
+<div class="line">É o método dunder de representação do objeto.</div>
+</div>
+<div class="section" id="diferencas-entre-str-e-repr">
+<h3><span class="section-number">18.1.1. </span>Diferenças entre __str__ e __repr__<a class="headerlink" href="#diferencas-entre-str-e-repr" title="Link permanente para este título">¶</a></h3>
+<ul class="simple">
+<li><p>__str__ retorna uma string enquanto __repr__ retorna qualquer expressão Python;</p></li>
+<li><p>Se não houver implementação de __str__ então __repr__ será chamado no lugar.</p></li>
+</ul>
+<p>Por outro lado se __repr__ não for implementado, nada fará seu papel;
+- Se o método __repr__ retornar string, pode-se pular a implementação de __str__.</p>
+<p>Aproveitando o exercício anterior, usando a função print no objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;__main__.Carro object at 0x7f1f6313eed0&gt;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método __repr__ do objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;__main__.Carro object at 0x7f1f6313eed0&gt;&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<div class="line-block">
+<div class="line">Nem __str__ nem __repr__ originais foram humanamente amigáveis…</div>
+</div>
+<p>Criação da classe carro com implementação do método __str__ e teste com
+objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
 
@@ -345,7 +379,7 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
         <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s1">&#39;</span>
 
     <span class="k">def</span> <span class="nf">ignicao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span><span class="p">):</span>
@@ -362,12 +396,84 @@ Para que haja um bloqueio efetivo há um recurso na linguagem chamado “propert
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>__repr__ do objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;__main__.Carro object at 0x7f1f631273d0&gt;&#39;</span>
 </pre></div>
+</div>
+<p>Criação da classe carro com implementação do método __repr__ e teste
+com objeto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="k">def</span> <span class="nf">ignicao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor desligado!&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor ligado!&#39;</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s1">&#39;Fiat&#39;</span><span class="p">,</span> <span class="s1">&#39;147&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
+</pre></div>
+</div>
+<p>__repr__ do objeto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
+</pre></div>
+</div>
+<p>Criação da classe carro com implementação dos métodos __repr__ e __str__ e
+teste com objeto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="n">marca</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># A implementar ainda...</span>
+
+    <span class="k">def</span> <span class="nf">ignicao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor desligado!&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Motor ligado!&#39;</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">(</span><span class="s1">&#39;Fiat&#39;</span><span class="p">,</span> <span class="s1">&#39;147&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
+</pre></div>
+</div>
+<p>__repr__ do objeto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;__main__.Carro object at 0x7f1f631273d0&gt;&#39;</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="metodo-definido-externamente-a-classe">

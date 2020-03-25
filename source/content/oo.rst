@@ -1,9 +1,9 @@
 Orientação a Objetos
 ********************
 
-	Python suporta herança múltipla;
-	Tudo em Python é objeto (inclusive classes);
-	O método construtor é o método inicializador, o método mágico `__init__`;
+|   Python suporta herança múltipla;
+|	Tudo em Python é objeto (inclusive classes);
+|	O método construtor é o método inicializador, o método mágico `__init__`;
 
 
 
@@ -72,10 +72,13 @@ Instanciação da classe e testes com seus atributos:
     Chiquinho da Silva tem 51 anos e 1.60m de altura
 
 
-Obs.: Em Python todos métodos e atributos são públicos.
-Há uma convenção que colocando um unerline como primeiro caractere no nome de um atributo ou um método o sinaliza como privado.
-Porém, isso é apenas uma convenção. Nada impede que sejam acessados externamente.
-Para que haja um bloqueio efetivo há um recurso na linguagem chamado "property".
+|   Obs.: Em Python todos métodos e atributos são públicos.
+|   Há uma convenção que colocando um unerline como primeiro caractere no nome
+| de um atributo ou um método o sinaliza como privado.
+|   Porém, isso é apenas uma convenção. Nada impede que sejam acessados
+| externamente.
+|   Para que haja um bloqueio efetivo há um recurso na linguagem chamado
+| "property".
 
 
 
@@ -168,6 +171,21 @@ Métodos __str__ e __repr__
 |   Esse método é chamado quando as funções `print()` e `str()` tem um objeto
 | como parâmetro.
 
+**__repr__**
+
+|   É o método dunder de representação do objeto.
+
+Diferenças entre __str__ e __repr__
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- __str__ retorna uma string enquanto __repr__ retorna qualquer expressão Python;
+- Se não houver implementação de __str__ então __repr__ será chamado no lugar.
+Por outro lado se __repr__ não for implementado, nada fará seu papel;
+- Se o método __repr__ retornar string, pode-se pular a implementação de __str__.
+
+
+
+Aproveitando o exercício anterior, usando a função print no objeto:
 
 .. code-block:: python
 
@@ -179,7 +197,7 @@ Métodos __str__ e __repr__
 
 
 
-bla bla bla:
+Método __repr__ do objeto:
 
 .. code-block:: python
 
@@ -189,9 +207,12 @@ bla bla bla:
 
     '<__main__.Carro object at 0x7f1f6313eed0>'
 
+|   Nem __str__ nem __repr__ originais foram humanamente amigáveis...
 
 
-bla bla bla:
+
+Criação da classe carro com implementação do método __str__ e teste com
+objeto:
 
 .. code-block:: python
 
@@ -203,7 +224,7 @@ bla bla bla:
             self.modelo = modelo
 
         def __str__(self):
-            return '%s - %s' % (self.marca, self.modelo)
+            return f'{self.marca} - {self.modelo}'
 
         def ignicao(self):
             if (self.motor_ligado):
@@ -221,7 +242,96 @@ bla bla bla:
     Fiat - 147
 
 
-bla bla bla:
+__repr__ do objeto:
+
+.. code-block:: python
+
+    repr(c1)
+
+.. code-block:: console
+
+    '<__main__.Carro object at 0x7f1f631273d0>'
+
+
+
+Criação da classe carro com implementação do método __repr__ e teste
+com objeto:
+
+.. code-block:: python
+
+    class Carro(object):
+        motor_ligado = False    
+
+        def __init__(self, marca, modelo):
+            self.marca = marca
+            self.modelo = modelo
+
+        def __repr__(self):
+            return f'{self.marca} - {self.modelo}'
+
+        def ignicao(self):
+            if (self.motor_ligado):
+                self.motor_ligado = False
+                print('Motor desligado!')
+            else:
+                self.motor_ligado = True
+                print('Motor ligado!')
+
+    c1 = Carro('Fiat', '147')
+    print(c1)
+
+.. code-block:: console
+
+    Fiat - 147
+
+
+__repr__ do objeto:
+
+.. code-block:: python
+
+    repr(c1)
+
+.. code-block:: console
+
+    Fiat - 147
+
+
+
+Criação da classe carro com implementação dos métodos __repr__ e __str__ e
+teste com objeto:
+
+.. code-block:: python
+
+    class Carro(object):
+        motor_ligado = False    
+
+        def __init__(self, marca, modelo):
+            self.marca = marca
+            self.modelo = modelo
+
+        def __str__(self):
+            return f'{self.marca} - {self.modelo}'
+            
+        def __repr__(self):
+            # A implementar ainda...
+
+        def ignicao(self):
+            if (self.motor_ligado):
+                self.motor_ligado = False
+                print('Motor desligado!')
+            else:
+                self.motor_ligado = True
+                print('Motor ligado!')
+
+    c1 = Carro('Fiat', '147')
+    print(c1)
+
+.. code-block:: console
+
+    Fiat - 147
+
+
+__repr__ do objeto:
 
 .. code-block:: python
 
