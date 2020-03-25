@@ -539,6 +539,7 @@ declarado:
                 self.__dict__[chave] = valor
 
 
+
 Criação do objeto com atributos dinâmicos:
 
 .. code-block:: python

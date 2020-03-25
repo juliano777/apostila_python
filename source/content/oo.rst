@@ -558,8 +558,8 @@ Verificando o dicionário do objeto:
     {'ano': 1991, 'modelo': '911', 'marca': 'Porsche', 'cor': 'verde'}
 
 
-O Método super()
-----------------
+super()
+-------
 
 |   Bla bla bla
 
