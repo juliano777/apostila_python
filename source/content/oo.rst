@@ -173,15 +173,20 @@ Métodos __str__ e __repr__
 
 **__repr__**
 
-|   É o método dunder de representação do objeto.
+|   É o método dunder de representação do objeto, que pode ser algo além de
+| uma string.
+|   Este método é chamado quando se apenas usa o nome da instância.
+
 
 Diferenças entre __str__ e __repr__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- __str__ retorna uma string enquanto __repr__ retorna qualquer expressão Python;
 - Se não houver implementação de __str__ então __repr__ será chamado no lugar.
 Por outro lado se __repr__ não for implementado, nada fará seu papel;
-- Se o método __repr__ retornar string, pode-se pular a implementação de __str__.
+- Se o método __repr__ retornar uma string, pode-se pular a implementação de
+__str__.
+- Costuma-se dizer que __str__ é um método para usuários enquanto __repr__ é
+um método para desenvolvedores.   
 
 
 
@@ -197,7 +202,7 @@ Aproveitando o exercício anterior, usando a função print no objeto:
 
 
 
-Método __repr__ do objeto:
+Função repr com o objeto:
 
 .. code-block:: python
 
@@ -242,7 +247,7 @@ objeto:
     Fiat - 147
 
 
-__repr__ do objeto:
+Função repr com o objeto:
 
 .. code-block:: python
 
@@ -285,7 +290,7 @@ com objeto:
     Fiat - 147
 
 
-__repr__ do objeto:
+Função repr com o objeto:
 
 .. code-block:: python
 
@@ -313,7 +318,7 @@ teste com objeto:
             return f'{self.marca} - {self.modelo}'
             
         def __repr__(self):
-            # A implementar ainda...
+            return {'marca': self.marca, 'modelo': self.modelo}
 
         def ignicao(self):
             if (self.motor_ligado):
@@ -331,7 +336,20 @@ teste com objeto:
     Fiat - 147
 
 
-__repr__ do objeto:
+
+Método __repr__ do objeto:
+
+.. code-block:: python
+
+    c1.__repr__()
+
+.. code-block:: console
+
+    {'marca': 'Fiat', 'modelo': '147'}
+
+
+
+Função repr com o objeto:
 
 .. code-block:: python
 
@@ -339,18 +357,48 @@ __repr__ do objeto:
 
 .. code-block:: console
 
-    '<__main__.Carro object at 0x7f1f631273d0>'
+    ---------------------------------------------------------------------------
+    TypeError                                 Traceback (most recent call last)
+    <ipython-input-58-3772d9a2a4c4> in <module>
+    ----> 1 repr(c1)
+
+    TypeError: __repr__ returned non-string (type dict)
+
+|   A função repr exige que seja passado como string...
 
 
+
+Como o método __repr__ tem seu retorno como um dicionário ele pode ser
+aproveitado:
+
+.. code-block:: python
+
+    print(c1.__repr__()['modelo'])
+
+.. code-block:: console
+
+    147
 
 
 
 Método Definido Externamente à Classe
 -------------------------------------
 
+|   Após criarmos uma classe é possível adicionar novos métodos a ela
+| definindo-os externamente.
 
 
-bla bla bla:
+
+Criação de uma classe se, métodos:
+
+.. code-block:: python
+
+    class MinhaClasse(object):
+        pass
+
+
+
+Criação de uma função:
 
 .. code-block:: python
 
@@ -359,17 +407,32 @@ bla bla bla:
         print(frase)
 
 
-    class MinhaClasse(object):
-        pass
+
+Instanciação da classe:
+
+.. code-block:: python
 
     o = MinhaClasse()
 
+
+
+Atribuindo um novo método à classe através da função externa criada:
+
+.. code-block:: python
+
     MinhaClasse.metodo = metodo_externo
+
+
+
+Mesmo o método ter sido adicionado depois:
+
+.. code-block:: python
 
     o.metodo('Bla bla bla', 800)
 
+.. code-block:: python
 
-Bla bla bla
+    Bla bla bla
 
 
 

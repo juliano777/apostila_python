@@ -342,16 +342,24 @@
 </div>
 <p><strong>__repr__</strong></p>
 <div class="line-block">
-<div class="line">É o método dunder de representação do objeto.</div>
+<div class="line-block">
+<div class="line">É o método dunder de representação do objeto, que pode ser algo além de</div>
+</div>
+<div class="line">uma string.</div>
+<div class="line-block">
+<div class="line">Este método é chamado quando se apenas usa o nome da instância.</div>
+</div>
 </div>
 <div class="section" id="diferencas-entre-str-e-repr">
 <h3><span class="section-number">18.1.1. </span>Diferenças entre __str__ e __repr__<a class="headerlink" href="#diferencas-entre-str-e-repr" title="Link permanente para este título">¶</a></h3>
 <ul class="simple">
-<li><p>__str__ retorna uma string enquanto __repr__ retorna qualquer expressão Python;</p></li>
 <li><p>Se não houver implementação de __str__ então __repr__ será chamado no lugar.</p></li>
 </ul>
 <p>Por outro lado se __repr__ não for implementado, nada fará seu papel;
-- Se o método __repr__ retornar string, pode-se pular a implementação de __str__.</p>
+- Se o método __repr__ retornar uma string, pode-se pular a implementação de
+__str__.
+- Costuma-se dizer que __str__ é um método para usuários enquanto __repr__ é
+um método para desenvolvedores.</p>
 <p>Aproveitando o exercício anterior, usando a função print no objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
@@ -359,7 +367,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;__main__.Carro object at 0x7f1f6313eed0&gt;</span>
 </pre></div>
 </div>
-<p>Método __repr__ do objeto:</p>
+<p>Função repr com o objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -396,7 +404,7 @@ objeto:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
 </pre></div>
 </div>
-<p>__repr__ do objeto:</p>
+<p>Função repr com o objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -430,7 +438,7 @@ com objeto:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
 </pre></div>
 </div>
-<p>__repr__ do objeto:</p>
+<p>Função repr com o objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -450,7 +458,7 @@ teste com objeto:</p>
         <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="si">}</span><span class="s1">&#39;</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># A implementar ainda...</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;marca&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">marca</span><span class="p">,</span> <span class="s1">&#39;modelo&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span><span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">ignicao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_ligado</span><span class="p">):</span>
@@ -467,34 +475,72 @@ teste com objeto:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Fiat - 147</span>
 </pre></div>
 </div>
-<p>__repr__ do objeto:</p>
+<p>Método __repr__ do objeto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;marca&#39;: &#39;Fiat&#39;, &#39;modelo&#39;: &#39;147&#39;}</span>
+</pre></div>
+</div>
+<p>Função repr com o objeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;&lt;__main__.Carro object at 0x7f1f631273d0&gt;&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
+<span class="go">TypeError                                 Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-58-3772d9a2a4c4&gt; in &lt;module&gt;</span>
+<span class="go">----&gt; 1 repr(c1)</span>
+
+<span class="go">TypeError: __repr__ returned non-string (type dict)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">A função repr exige que seja passado como string…</div>
+</div>
+<p>Como o método __repr__ tem seu retorno como um dicionário ele pode ser
+aproveitado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()[</span><span class="s1">&#39;modelo&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">147</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="metodo-definido-externamente-a-classe">
 <h2><span class="section-number">18.2. </span>Método Definido Externamente à Classe<a class="headerlink" href="#metodo-definido-externamente-a-classe" title="Link permanente para este título">¶</a></h2>
-<p>bla bla bla:</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Após criarmos uma classe é possível adicionar novos métodos a ela</div>
+</div>
+<div class="line">definindo-os externamente.</div>
+</div>
+<p>Criação de uma classe se, métodos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MinhaClasse</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Criação de uma função:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_externo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frase</span><span class="p">,</span> <span class="n">numero</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">numero</span> <span class="o">=</span> <span class="n">numero</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">frase</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">MinhaClasse</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-<span class="n">o</span> <span class="o">=</span> <span class="n">MinhaClasse</span><span class="p">()</span>
-
-<span class="n">MinhaClasse</span><span class="o">.</span><span class="n">metodo</span> <span class="o">=</span> <span class="n">metodo_externo</span>
-
-<span class="n">o</span><span class="o">.</span><span class="n">metodo</span><span class="p">(</span><span class="s1">&#39;Bla bla bla&#39;</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Bla bla bla</p>
+<p>Instanciação da classe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">MinhaClasse</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Atribuindo um novo método à classe através da função externa criada:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">MinhaClasse</span><span class="o">.</span><span class="n">metodo</span> <span class="o">=</span> <span class="n">metodo_externo</span>
+</pre></div>
+</div>
+<p>Mesmo o método ter sido adicionado depois:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">.</span><span class="n">metodo</span><span class="p">(</span><span class="s1">&#39;Bla bla bla&#39;</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Bla</span> <span class="n">bla</span> <span class="n">bla</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">numero</span><span class="p">)</span>
 </pre></div>
