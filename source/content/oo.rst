@@ -564,6 +564,9 @@ super()
 |   Bla bla bla
 
 
+.. https://appdividend.com/2019/01/22/python-super-function-example-super-method-tutorial
+
+
 
 bla bla bla:
 
