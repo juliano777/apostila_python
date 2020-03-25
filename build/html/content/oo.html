@@ -541,40 +541,22 @@ aproveitado:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Bla</span> <span class="n">bla</span> <span class="n">bla</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificando o atributo novo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">numero</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">800</span>
 </pre></div>
 </div>
-<p>Método Definido Externamente ao Objeto:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">metodo_objeto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s1">&#39;X&#39;</span>
-
-<span class="n">o</span><span class="o">.</span><span class="n">metodo_x</span> <span class="o">=</span> <span class="n">metodo_objeto</span>
-
-<span class="n">o</span><span class="o">.</span><span class="n">metodo_x</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------------------</span>
-<span class="go">TypeError                                 Traceback (most recent call last)</span>
-<span class="go">&lt;ipython-input-41-2f98daa957c2&gt; in &lt;module&gt;()</span>
-<span class="go">----&gt; 1 o.metodo_x()</span>
-
-<span class="go">TypeError: metodo_objeto() takes exactly 1 argument (0 given)</span>
-</pre></div>
-</div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">.</span><span class="n">metodo_x</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;X&#39;</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="objetos-com-atributos-dinamicos">
 <h2><span class="section-number">18.3. </span>Objetos com Atributos Dinâmicos<a class="headerlink" href="#objetos-com-atributos-dinamicos" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Sua serventia está em poder definir um objeto com atributos definidos</div>
+</div>
+<div class="line">arbitrariamente.</div>
+</div>
 <p>Criação da classe Carro:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -592,8 +574,15 @@ aproveitado:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{}</span>
 </pre></div>
 </div>
-<p>O atributo especial __dict__, em um objeto, é um dicionário que é usado para guardar atributos e seus respectivos valores.
-O dicionário em questão apresentou um conjunto vazio.</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">O atributo especial __dict__, em um objeto, é um dicionário que é usado</div>
+</div>
+<div class="line">para guardar atributos e seus respectivos valores.</div>
+<div class="line-block">
+<div class="line">O dicionário em questão apresentou um conjunto vazio.</div>
+</div>
+</div>
 <p>Agora vamos preencher os atributos:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span><span class="o">.</span><span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;Porsche&#39;</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;911&#39;</span>
@@ -613,10 +602,16 @@ Python é tão flexível que nos permite até criar um atributo “on the fly”
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">{&#39;ano&#39;: 1993, &#39;modelo&#39;: &#39;911&#39;, &#39;marca&#39;: &#39;Porsche&#39;}</span>
 </pre></div>
 </div>
-<p>E que tal se pudermos no momento da criação do objeto, além de poder atribuir valores
-aos atributos existentes, também criar atributos que não existem na classe?</p>
-<p>Criação da classe Carro agora utilizando o método construtor (__init__()), o qual fará
-o trabalho de associar ao objeto instanciado cada par chave / valor declarado:</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">E se no momento da criação do objeto, além de atribuir valores aos</div>
+</div>
+<div class="line">atributos existentes, também ser possível criar atributos que não existem</div>
+<div class="line">na classe?</div>
+</div>
+<p>Criação da classe Carro agora utilizando o método construtor (__init__()), o
+qual fará o trabalho de associar ao objeto instanciado cada par chave / valor
+declarado:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">marca</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">modelo</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>

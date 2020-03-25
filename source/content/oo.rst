@@ -436,7 +436,7 @@ Mesmo o método ter sido adicionado depois:
 
 
 
-bla bla bla:
+Verificando o atributo novo:
 
 .. code-block:: python
 
@@ -446,42 +446,15 @@ bla bla bla:
 
     800
 
-Método Definido Externamente ao Objeto:
 
-.. code-block:: python
-
-    def metodo_objeto(self):
-        return 'X'
-
-    o.metodo_x = metodo_objeto
-
-    o.metodo_x()
-
-
-.. code-block:: console
-
-    ---------------------------------------------------------------------------
-    TypeError                                 Traceback (most recent call last)
-    <ipython-input-41-2f98daa957c2> in <module>()
-    ----> 1 o.metodo_x()
-
-    TypeError: metodo_objeto() takes exactly 1 argument (0 given)
-
-
-
-bla bla bla:
-
-.. code-block:: python
-
-    o.metodo_x(o)
-
-.. code-block:: console
-
-    'X'
 
 
 Objetos com Atributos Dinâmicos
 -------------------------------
+
+|   Sua serventia está em poder definir um objeto com atributos definidos
+| arbitrariamente.
+
 
 
 Criação da classe Carro:
@@ -494,12 +467,12 @@ Criação da classe Carro:
 
 
 
-
 Criação de um objeto da classe Carro:
 
 .. code-block:: python
 
     c1 = Carro()
+
 
 
 Vejamos agora o dicionário de atributos com seus respectivos valores:
@@ -512,8 +485,9 @@ Vejamos agora o dicionário de atributos com seus respectivos valores:
 
     {}
 
-O atributo especial __dict__, em um objeto, é um dicionário que é usado para guardar atributos e seus respectivos valores.
-O dicionário em questão apresentou um conjunto vazio.
+|   O atributo especial __dict__, em um objeto, é um dicionário que é usado
+| para guardar atributos e seus respectivos valores.
+|   O dicionário em questão apresentou um conjunto vazio.
 
 Agora vamos preencher os atributos:
 
@@ -521,6 +495,8 @@ Agora vamos preencher os atributos:
 
     c1.marca = 'Porsche'
     c1.modelo = '911'
+
+
 
 Consulta ao dicionário do objeto novamente:
 	
@@ -543,11 +519,13 @@ Python é tão flexível que nos permite até criar um atributo “on the fly”
 
     {'ano': 1993, 'modelo': '911', 'marca': 'Porsche'}
 
-E que tal se pudermos no momento da criação do objeto, além de poder atribuir valores
-aos atributos existentes, também criar atributos que não existem na classe?
+|   E se no momento da criação do objeto, além de atribuir valores aos
+| atributos existentes, também ser possível criar atributos que não existem
+| na classe?
 
-Criação da classe Carro agora utilizando o método construtor (__init__()), o qual fará
-o trabalho de associar ao objeto instanciado cada par chave / valor declarado:
+Criação da classe Carro agora utilizando o método construtor (__init__()), o
+qual fará o trabalho de associar ao objeto instanciado cada par chave / valor
+declarado:
 
 .. code-block:: python
 
@@ -559,6 +537,7 @@ o trabalho de associar ao objeto instanciado cada par chave / valor declarado:
         def __init__(self, **kargs):
             for chave,valor in kargs.items():
                 self.__dict__[chave] = valor
+
 
 
 Criação do objeto com atributos dinâmicos:
