@@ -709,6 +709,102 @@ herança:</p>
 <span class="go">Método da classe D</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Nota-se que prevaleceu a lógica de Ordem de Resolução de Método (em inglês</div>
+</div>
+<div class="line">MRO).</div>
+<div class="line-block">
+<div class="line">Tal ordem foi conforme a ordem de definição de herança da classe.</div>
+</div>
+</div>
+<p>Agora além do primeiro método, igual ao exercício anterior, vamos definir um
+método particular para a cada classe primária:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#=============================================================================</span>
+<span class="c1"># Classes Primárias com Métodos de Nomes Diferentes</span>
+<span class="c1">#=============================================================================</span>
+
+<span class="c1"># Classe primária A</span>
+<span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método da classe A&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">metodo_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método alpha da classe A&#39;</span><span class="p">)</span>
+
+<span class="c1"># Classe primária B</span>
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método da classe B&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">metodo_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método beta da classe B&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#=============================================================================</span>
+<span class="c1"># Herança de Múltiplas Classes</span>
+<span class="c1">#=============================================================================</span>
+
+<span class="c1"># Classe C, derivada respectivamente de A e B</span>
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">metodo</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método da classe C&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">metodo2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">metodo_alpha</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">metodo_beta</span><span class="p">()</span>
+
+<span class="c1"># Classe D, derivada respectivamente de B e A</span>
+<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">metodo</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método da classe D&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">metodo2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">metodo_alpha</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">metodo_beta</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Instanciação das classes derivadas:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">D</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Execução dos métodos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">metodo</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método da classe A</span>
+<span class="go">Método da classe C</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">metodo</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método da classe B</span>
+<span class="go">Método da classe D</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Até aqui, na execução do método está igual ao exercício anterior.</div>
+</div>
+<p>Agora em cada objeto vamos chamar o segundo método, o qual faz chamada a
+métodos de nomes diferentes que são próprios à sua respectiva classe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">metodo2</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método alpha da classe A</span>
+<span class="go">Método beta da classe B</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">metodo2</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método alpha da classe A</span>
+<span class="go">Método beta da classe B</span>
+</pre></div>
+</div>
 </div>
 </div>
 

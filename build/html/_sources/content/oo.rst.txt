@@ -654,4 +654,114 @@ Em cada instância criada execução do método:
 .. code-block:: console
 
     Método da classe B
-    Método da classe D    
+    Método da classe D
+
+|   Nota-se que prevaleceu a lógica de Ordem de Resolução de Método (em inglês
+| MRO).
+|   Tal ordem foi conforme a ordem de definição de herança da classe.
+
+
+
+Agora além do primeiro método, igual ao exercício anterior, vamos definir um
+método particular para a cada classe primária:
+
+.. code-block:: python
+
+    #=============================================================================
+    # Classes Primárias com Métodos de Nomes Diferentes
+    #=============================================================================
+
+    # Classe primária A
+    class A(object): 
+        def metodo(self): 
+            print('Método da classe A')
+            
+        def metodo_alpha(self):
+            print('Método alpha da classe A')
+            
+    # Classe primária B 
+    class B(object): 
+        def metodo(self): 
+            print('Método da classe B')
+        
+        def metodo_beta(self):
+            print('Método beta da classe B')
+            
+
+    #=============================================================================
+    # Herança de Múltiplas Classes
+    #=============================================================================
+
+    # Classe C, derivada respectivamente de A e B
+    class C(A, B): 
+        def metodo(self):
+            super().metodo()
+            print('Método da classe C')
+            
+        def metodo2(self):
+            super().metodo_alpha()
+            super().metodo_beta()        
+            
+    # Classe D, derivada respectivamente de B e A        
+    class D(B, A): 
+        def metodo(self):
+            super().metodo()
+            print('Método da classe D')
+            
+        def metodo2(self):
+            super().metodo_alpha()
+            super().metodo_beta()
+
+Instanciação das classes derivadas:
+
+.. code-block:: python
+
+    c = C()
+    d = D()
+
+
+
+Execução dos métodos:
+
+.. code-block:: python
+
+    c.metodo()
+
+.. code-block:: console
+
+    Método da classe A
+    Método da classe C    
+    
+.. code-block:: python
+
+    d.metodo()
+
+.. code-block:: console
+
+    Método da classe B
+    Método da classe D
+
+|   Até aqui, na execução do método está igual ao exercício anterior.
+
+
+
+Agora em cada objeto vamos chamar o segundo método, o qual faz chamada a
+métodos de nomes diferentes que são próprios à sua respectiva classe:
+
+.. code-block:: python
+
+    c.metodo2()
+
+.. code-block:: console
+
+    Método alpha da classe A
+    Método beta da classe B        
+
+.. code-block:: python
+
+    d.metodo2()
+
+.. code-block:: console
+
+    Método alpha da classe A
+    Método beta da classe B   
