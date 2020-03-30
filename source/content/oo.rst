@@ -558,8 +558,8 @@ Verificando o dicionário do objeto:
     {'ano': 1991, 'modelo': '911', 'marca': 'Porsche', 'cor': 'verde'}
 
 
-super()
--------
+super() e MRO
+-------------
 
 |   Bla bla bla
 
@@ -568,7 +568,7 @@ super()
 
 
 
-bla bla bla:
+Uma herança simples na qual a classe filha chama o métod da classe mãe:
 
 .. code-block:: python
 
@@ -590,3 +590,72 @@ bla bla bla:
 
     Método da classe Mae
     Método da classe Filha
+
+
+
+Definição de duas classes primárias e mais duas derivadas delas com múltipla
+herança:
+
+.. code-block:: python
+
+    # Classe primária A
+    class A(object): 
+        def metodo(self): 
+            print('Método da classe A')
+            
+    # Classe primária B 
+    class B(object): 
+        def metodo(self): 
+            print('Método da classe B')
+            
+
+    #=============================================================================
+    # Herança de Múltiplas Classes
+    #=============================================================================
+
+    # Classe C, derivada respectivamente de A e B
+    class C(A, B): 
+        def metodo(self):
+            super().metodo()
+            print('Método da classe C')
+            
+    # Classe D, derivada respectivamente de B e A        
+    class D(B, A): 
+        def metodo(self):
+            super().metodo()
+            print('Método da classe D')
+
+
+
+Instanciação de dois objetos, respectivamente das classes C e D:
+
+.. code-block:: python
+
+    c = C()
+    d = D()
+
+
+
+Em cada instância criada execução do método:
+
+.. code-block:: python
+
+    c.metodo()
+
+.. code-block:: console
+
+    Método da classe A
+    Método da classe C
+
+.. code-block:: python
+
+    d.metodo()
+
+.. code-block:: console
+
+    Método da classe B
+    Método da classe D
+
+|   Nota-se que prevaleceu a lógica de Ordem de Resolução de Método (em inglês
+| MRO).
+|   Tal ordem foi conforme a ordem de definição de herança da classe.
