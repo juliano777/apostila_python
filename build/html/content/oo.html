@@ -641,8 +641,14 @@ declarado:</p>
 <div class="section" id="super">
 <h2><span class="section-number">18.4. </span>super()<a class="headerlink" href="#super" title="Link permanente para este título">¶</a></h2>
 <div class="line-block">
-<div class="line">É uma função built-in que retorna o objeto proxy que nos permite referenciar à uma classe superior (uma classe herdada).</div>
-<div class="line">super() pode ser usada para ter acesso a métodos herdados que são da classe superior.</div>
+<div class="line-block">
+<div class="line">É uma função built-in que retorna o objeto proxy que nos permite</div>
+</div>
+<div class="line">referenciar à uma classe superior (uma classe herdada).</div>
+<div class="line-block">
+<div class="line">super() pode ser usada para ter acesso a métodos herdados que são da</div>
+</div>
+<div class="line">classe superior.</div>
 </div>
 <p>Uma herança simples na qual a classe filha chama o métod da classe mãe:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mae</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -667,7 +673,41 @@ declarado:</p>
 <div class="section" id="heranca-de-nivel-multiplo">
 <h3><span class="section-number">18.4.1. </span>Herança de Nível Múltiplo<a class="headerlink" href="#heranca-de-nivel-multiplo" title="Link permanente para este título">¶</a></h3>
 <div class="line-block">
-<div class="line">Bla bla bla</div>
+<div class="line-block">
+<div class="line">Podem ter casos em que uma classe que deriva de outra tenha uma classe que</div>
+</div>
+<div class="line">deriva dela.</div>
+</div>
+<p>A classe C herda de B, que por sua vez herda de A:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classe primária A</span>
+<span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__init__ da classe A&#39;</span><span class="p">)</span>
+
+<span class="c1"># Classe derivada B</span>
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__init__ da classe B&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="c1"># Classe derivada C</span>
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__init__ da classe C&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Instanciação da classe de nível mais baixo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">C</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="fm">__init__</span> <span class="n">da</span> <span class="n">classe</span> <span class="n">C</span>
+<span class="fm">__init__</span> <span class="n">da</span> <span class="n">classe</span> <span class="n">B</span>
+<span class="fm">__init__</span> <span class="n">da</span> <span class="n">classe</span> <span class="n">A</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Nota-se que ordem de chamada do método __init__.</div>
 </div>
 </div>
 <div class="section" id="mro-method-resolution-order-ordem-de-resolucao-de-metodo">

@@ -561,11 +561,10 @@ Verificando o dicionário do objeto:
 super()
 -------
 
-|   É uma função built-in que retorna o objeto proxy que nos permite referenciar à uma classe superior (uma classe herdada).
-|   super() pode ser usada para ter acesso a métodos herdados que são da classe superior.
-
-
-.. https://appdividend.com/2019/01/22/python-super-function-example-super-method-tutorial
+|   É uma função built-in que retorna o objeto proxy que nos permite 
+| referenciar à uma classe superior (uma classe herdada).
+|   super() pode ser usada para ter acesso a métodos herdados que são da
+| classe superior.
 
 
 
@@ -597,14 +596,56 @@ Uma herança simples na qual a classe filha chama o métod da classe mãe:
 Herança de Nível Múltiplo
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|   Bla bla bla    
+|   Podem ter casos em que uma classe que deriva de outra tenha uma classe que
+| deriva dela.
+
+
+
+A classe C herda de B, que por sua vez herda de A:
+
+.. code-block:: python
+
+    # Classe primária A
+    class A(object):
+        def __init__(self):
+            print('__init__ da classe A')
+            
+    # Classe derivada B
+    class B(A):
+        def __init__(self):
+            print('__init__ da classe B')
+            super().__init__()
+
+    # Classe derivada C
+    class C(B):
+        def __init__(self):
+            print('__init__ da classe C')
+            super().__init__()
+
+
+
+Instanciação da classe de nível mais baixo:
+
+.. code-block:: python
+
+    c = C()
+
+.. code-block:: python
+
+    __init__ da classe C
+    __init__ da classe B
+    __init__ da classe A
+
+|   Nota-se que ordem de chamada do método __init__.
 
 
 
 MRO - Method Resolution Order / Ordem de Resolução de Método
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|   Bla bla bla
+|   MRO é a forma que Python utiliza para determinar a ordem de busca em
+| classes.
+
 
 
 Definição de duas classes primárias e mais duas derivadas delas com múltipla
@@ -782,4 +823,4 @@ métodos de nomes diferentes que são próprios à sua respectiva classe:
 
 |   Mais uma vez notamos a aplicação do conceito de MRO.
 |   Quando super chamou os métodos metodo_alpha e metodo_beta não havia uma
-| menção explícita onde estavam.    
+| menção explícita onde estavam.
