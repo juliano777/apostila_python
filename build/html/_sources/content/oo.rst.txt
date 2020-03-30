@@ -594,9 +594,17 @@ Uma herança simples na qual a classe filha chama o métod da classe mãe:
 
 
 
+Herança de Nível Múltiplo
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|   Bla bla bla    
+
+
+
 MRO - Method Resolution Order / Ordem de Resolução de Método
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+|   Bla bla bla
 
 
 Definição de duas classes primárias e mais duas derivadas delas com múltipla
