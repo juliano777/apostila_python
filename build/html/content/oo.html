@@ -107,7 +107,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#metodo-definido-externamente-a-classe">18.2. Método Definido Externamente à Classe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#objetos-com-atributos-dinamicos">18.3. Objetos com Atributos Dinâmicos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#super-e-mro">18.4. super() e MRO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#super">18.4. super()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mro-method-resolution-order-ordem-de-resolucao-de-metodo">18.4.1. MRO - Method Resolution Order / Ordem de Resolução de Método</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
@@ -634,10 +637,11 @@ declarado:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="super-e-mro">
-<h2><span class="section-number">18.4. </span>super() e MRO<a class="headerlink" href="#super-e-mro" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="super">
+<h2><span class="section-number">18.4. </span>super()<a class="headerlink" href="#super" title="Link permanente para este título">¶</a></h2>
 <div class="line-block">
-<div class="line">Bla bla bla</div>
+<div class="line">É uma função built-in que retorna o objeto proxy que nos permite referenciar à uma classe superior (uma classe herdada).</div>
+<div class="line">super() pode ser usada para ter acesso a métodos herdados que são da classe superior.</div>
 </div>
 <p>Uma herança simples na qual a classe filha chama o métod da classe mãe:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Mae</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -659,6 +663,8 @@ declarado:</p>
 <span class="go">Método da classe Filha</span>
 </pre></div>
 </div>
+<div class="section" id="mro-method-resolution-order-ordem-de-resolucao-de-metodo">
+<h3><span class="section-number">18.4.1. </span>MRO - Method Resolution Order / Ordem de Resolução de Método<a class="headerlink" href="#mro-method-resolution-order-ordem-de-resolucao-de-metodo" title="Link permanente para este título">¶</a></h3>
 <p>Definição de duas classes primárias e mais duas derivadas delas com múltipla
 herança:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classe primária A</span>
@@ -804,6 +810,14 @@ métodos de nomes diferentes que são próprios à sua respectiva classe:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método alpha da classe A</span>
 <span class="go">Método beta da classe B</span>
 </pre></div>
+</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Mais uma vez notamos a aplicação do conceito de MRO.</div>
+<div class="line">Quando super chamou os métodos metodo_alpha e metodo_beta não havia uma</div>
+</div>
+<div class="line">menção explícita onde estavam.</div>
+</div>
 </div>
 </div>
 </div>

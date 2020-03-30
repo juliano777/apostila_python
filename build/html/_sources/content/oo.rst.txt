@@ -558,10 +558,11 @@ Verificando o dicionário do objeto:
     {'ano': 1991, 'modelo': '911', 'marca': 'Porsche', 'cor': 'verde'}
 
 
-super() e MRO
--------------
+super()
+-------
 
-|   Bla bla bla
+|   É uma função built-in que retorna o objeto proxy que nos permite referenciar à uma classe superior (uma classe herdada).
+|   super() pode ser usada para ter acesso a métodos herdados que são da classe superior.
 
 
 .. https://appdividend.com/2019/01/22/python-super-function-example-super-method-tutorial
@@ -590,6 +591,11 @@ Uma herança simples na qual a classe filha chama o métod da classe mãe:
 
     Método da classe Mae
     Método da classe Filha
+
+
+
+MRO - Method Resolution Order / Ordem de Resolução de Método
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -764,4 +770,8 @@ métodos de nomes diferentes que são próprios à sua respectiva classe:
 .. code-block:: console
 
     Método alpha da classe A
-    Método beta da classe B   
+    Método beta da classe B
+
+|   Mais uma vez notamos a aplicação do conceito de MRO.
+|   Quando super chamou os métodos metodo_alpha e metodo_beta não havia uma
+| menção explícita onde estavam.    
