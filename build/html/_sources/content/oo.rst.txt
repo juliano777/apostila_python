@@ -643,7 +643,9 @@ Instanciação da classe de nível mais baixo:
 MRO - Method Resolution Order / Ordem de Resolução de Método
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|   Bla bla bla
+|   MRO é a forma que Python utiliza para determinar a ordem de busca em
+| classes.
+
 
 
 Definição de duas classes primárias e mais duas derivadas delas com múltipla
@@ -821,4 +823,4 @@ métodos de nomes diferentes que são próprios à sua respectiva classe:
 
 |   Mais uma vez notamos a aplicação do conceito de MRO.
 |   Quando super chamou os métodos metodo_alpha e metodo_beta não havia uma
-| menção explícita onde estavam.    
+| menção explícita onde estavam.
