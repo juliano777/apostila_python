@@ -187,8 +187,8 @@
 <div class="line-block">
 <div class="line">Existem dois tipos de métodos que podem ser executados diretamente de uma</div>
 </div>
-<div class="line">classe, ou seja, sem precisar criar um objeto dela. Justamente por serem</div>
-<div class="line">independentes de objetos não esperam um “<cite>self</cite>” como primeiro parâmetro.</div>
+<div class="line">classe, ou seja, sem precisar criar um objeto dela. Por serem independentes</div>
+<div class="line">de objetos não esperam um “<cite>self</cite>” como primeiro parâmetro.</div>
 <div class="line-block">
 <div class="line">A utilidade desses métodos é para processamento de dados de classes em vez</div>
 </div>
@@ -207,21 +207,20 @@
 </div>
 <div class="line">que também podem processar dados da classe diretamente.</div>
 </div>
-<p>Prática:</p>
 <p>Observe no exemplo a seguir as diferentes assinaturas para respectivamente os
 métodos comum, de classe e estático:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">metodo_comum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método comum </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Método comum </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">metodo_de_classe</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método de classe </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Método de classe </span><span class="si">{</span><span class="bp">cls</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">metodo_estatico</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método estático&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Método estático&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -231,9 +230,9 @@ métodos comum, de classe e estático:</p>
 <div class="line">método comum, cujo primeiro argumento é o tradicional self que representa a</div>
 <div class="line">instância (objeto) criada a partir da classe.</div>
 <div class="line-block">
-<div class="line">O segundo método é decorado com &#64;classmethod, faz desse método um método</div>
+<div class="line">O segundo método é decorado com &#64;classmethod, faz desse um método de</div>
 </div>
-<div class="line">de classe, o qual não faz necessária a criação de um objeto para ser</div>
+<div class="line">classe, o qual não faz necessária a criação de um objeto para ser</div>
 <div class="line">utilizado.</div>
 <div class="line-block">
 <div class="line">Esse tipo de método é invocado da seguinte forma:</div>
@@ -242,18 +241,17 @@ métodos comum, de classe e estático:</p>
 <div class="line"><cite>Classe.metodo_de_classe().</cite></div>
 <div class="line"><br /></div>
 <div class="line-block">
-<div class="line">Ainda sobre o método de classe um detalhe interessante é o “cls” ao invés</div>
+<div class="line">Ainda sobre o método de classe um detalhe interessante é o “cls” em vez de</div>
 </div>
-<div class="line">de self.</div>
+<div class="line">self.</div>
 <div class="line-block">
-<div class="line">A variável “cls” é utilizada com um propósito similar ao de self, mas ao</div>
+<div class="line">A variável “cls” é utilizada com um propósito similar ao de self. No caso</div>
 </div>
-<div class="line">invés de representar uma instância criada, representa a classe à qual o</div>
-<div class="line">método pertence.</div>
+<div class="line">representa a classe à qual o método pertence.</div>
 <div class="line-block">
-<div class="line">Assim como self, cls é apenas uma convenção, deixando ao gosto do usuário,</div>
+<div class="line">Como self, cls é apenas uma convenção, deixando ao gosto do usuário, se o</div>
 </div>
-<div class="line">se o mesmo desejar utilizar outro nome.</div>
+<div class="line">mesmo quiser utilizar outro nome.</div>
 <div class="line-block">
 <div class="line">E por fim o método estático, decorado com &#64;staticmethod é como uma função</div>
 </div>
@@ -263,15 +261,14 @@ métodos comum, de classe e estático:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">.</span><span class="n">metodo_comum</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: unbound method metodo_comum() must be called with Foo instance as first argument (got nothing instead)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">TypeError: metodo_comum() missing 1 required positional argument: &#39;self&#39;</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line-block">
-<div class="line">Aqui podemos ver que se for feita uma tentativa de invocar a partir da</div>
+<div class="line">Observa-se que se for feita uma tentativa de invocar a partir da classe um</div>
 </div>
-<div class="line">classe um método que não seja nem de classe e nem estático será retornado</div>
-<div class="line">um erro.</div>
+<div class="line">método que não seja nem de classe e nem estático será retornado um erro.</div>
 </div>
 <p>Invocando um método de classe a partir da classe:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">.</span><span class="n">metodo_de_classe</span><span class="p">()</span>
@@ -280,7 +277,7 @@ métodos comum, de classe e estático:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Método de classe &lt;class &#39;__main__.Foo&#39;&gt;</span>
 </pre></div>
 </div>
-<p>Invocando um método estático a partir da classe</p>
+<p>Invocando um método estático a partir da classe:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">.</span><span class="n">metodo_estatico</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -291,8 +288,12 @@ métodos comum, de classe e estático:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>A instância “o” é implicitamente passada como argumento para o método
-construtor que não foi declarado.</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">A instância “o” é implicitamente passada como argumento para o método</div>
+</div>
+<div class="line">construtor que não foi declarado.</div>
+</div>
 <p>Chamada do método comum pela instância:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">.</span><span class="n">metodo_comum</span><span class="p">()</span>
 </pre></div>

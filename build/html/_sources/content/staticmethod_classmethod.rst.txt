@@ -2,8 +2,8 @@ Método de Classe e Método Estático
 **********************************
 
 |   Existem dois tipos de métodos que podem ser executados diretamente de uma
-| classe, ou seja, sem precisar criar um objeto dela. Justamente por serem
-| independentes de objetos não esperam um "`self`" como primeiro parâmetro.
+| classe, ou seja, sem precisar criar um objeto dela. Por serem independentes
+| de objetos não esperam um "`self`" como primeiro parâmetro.
 |   A utilidade desses métodos é para processamento de dados de classes em vez
 | de instâncias.
 |   Mesmo que isso possa ser feito por uma função escrita externamente à classe,
@@ -12,9 +12,9 @@ Método de Classe e Método Estático
 |   Métodos estáticos são usados para agrupar funções que têm conexão lógica com
 | a classe.
 |   Métodos de classe são usados para o mesmo fim que os métodos estáticos, mas
-| que também podem processar dados da classe diretamente.	
+| que também podem processar dados da classe diretamente.
 
-Prática:
+
 
 Observe no exemplo a seguir as diferentes assinaturas para respectivamente os
 métodos comum, de classe e estático:
@@ -24,34 +24,33 @@ métodos comum, de classe e estático:
     class Foo(object):
         
         def metodo_comum(self):
-            print('Método comum {}'.format(self))
+            print(f'Método comum {self}')
 
         @classmethod
         def metodo_de_classe(cls):
-            print('Método de classe {}'.format(cls))
+            print(f'Método de classe {cls}')
 
         @staticmethod
         def metodo_estatico():
-        print('Método estático')
+            print('Método estático')
 
 	
 |   Na classe foram declarados três métodos, sendo que o primeiro que é um
 | método comum, cujo primeiro argumento é o tradicional self que representa a
 | instância (objeto) criada a partir da classe.
-|   O segundo método é decorado com @classmethod, faz desse método um método
-| de classe, o qual não faz necessária a criação de um objeto para ser
+|   O segundo método é decorado com @classmethod, faz desse um método de
+| classe, o qual não faz necessária a criação de um objeto para ser
 | utilizado.
 |   Esse tipo de método é invocado da seguinte forma:
 |
 | `Classe.metodo_de_classe().`
 |
-|   Ainda sobre o método de classe um detalhe interessante é o "cls" ao invés
-| de self.
-|   A variável "cls" é utilizada com um propósito similar ao de self, mas ao
-| invés de representar uma instância criada, representa a classe à qual o
-| método pertence.
-|   Assim como self, cls é apenas uma convenção, deixando ao gosto do usuário,
-| se o mesmo desejar utilizar outro nome.
+|   Ainda sobre o método de classe um detalhe interessante é o "cls" em vez de
+| self.
+|   A variável "cls" é utilizada com um propósito similar ao de self. No caso
+| representa a classe à qual o método pertence.
+|   Como self, cls é apenas uma convenção, deixando ao gosto do usuário, se o 
+| mesmo quiser utilizar outro nome.
 |   E por fim o método estático, decorado com @staticmethod é como uma função
 | definida externamente à classe. Não recebe um "self" ou um "cls".
 
@@ -65,11 +64,10 @@ Chamada do método comum pela classe:
 
 .. code-block:: console
 
-    TypeError: unbound method metodo_comum() must be called with Foo instance as first argument (got nothing instead)
+    TypeError: metodo_comum() missing 1 required positional argument: 'self'
 
-|   Aqui podemos ver que se for feita uma tentativa de invocar a partir da
-| classe um método que não seja nem de classe e nem estático será retornado
-| um erro.
+|   Observa-se que se for feita uma tentativa de invocar a partir da classe um
+| método que não seja nem de classe e nem estático será retornado um erro.
 
 
 
@@ -85,7 +83,7 @@ Invocando um método de classe a partir da classe:
 
 
 
-Invocando um método estático a partir da classe
+Invocando um método estático a partir da classe:
 
 .. code-block:: python
 
@@ -103,8 +101,8 @@ Criação de objeto:
 
     o = Foo()
 
-A instância "o" é implicitamente passada como argumento para o método
-construtor que não foi declarado.
+|   A instância "o" é implicitamente passada como argumento para o método
+| construtor que não foi declarado.
 
 
 
@@ -119,16 +117,19 @@ Chamada do método comum pela instância:
 
     Método comum <__main__.Foo object at 0x7f40d812d410>
 
+
+
 Chamada do método de classe pela instância:
 
 .. code-block:: python
 
     o.metodo_de_classe()
 
-
 .. code-block:: console
 
     Método de classe <class '__main__.Foo'>
+
+
 
 Chamada do método estático pela instância:
 
