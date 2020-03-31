@@ -24,6 +24,8 @@ Modificador Private (__)
     . . .
     AttributeError: 'Foo' object has no attribute '__atributo'
 
+
+
 Property
 --------
 
@@ -38,21 +40,23 @@ Property
             self.__velocidade = 0
         
         def _get__velocidade(self):
-            print('Velocidade: %d km/h' % self.__velocidade)
+            print(f'Velocidade: {self.__velocidade} km/h')
             return self.__velocidade
         
         def _set__velocidade(self, velocidade):
             if velocidade > 300:
                 raise ValueError('A velocidade máxima permitida é de 300 km/h')        
             self.__velocidade = velocidade
-            print('Velocidade = %d km/h' % self.__velocidade)
+            print(f'Velocidade = {self.__velocidade} km/h')
             
         def _del__velocidade(self):
             print('Removendo a propriedade de velocidade')
             del self.__velocidade
         
         # Definição da property velocidade
-        velocidade = property(_get__velocidade, _set__velocidade, _del__velocidade,
+        velocidade = property(_get__velocidade,
+                              _set__velocidade,
+                              _del__velocidade,
                               'Velocidade máxima do carro')
 
 
@@ -68,9 +72,12 @@ Property
     .  .  .
     AttributeError: 'Carro' object has no attribute '__velocidade'
 
+
+
+Acessando a property velocidade:    
+
 .. code-block:: python
 
-    # Acessando a property "velocidade":
     c.velocidade
 
 .. code-block:: console
@@ -78,46 +85,60 @@ Property
     Velocidade: 0 km/h
     0
 
+
+
+Atribuindo um valor para a property:
+
 .. code-block:: python
 
-    # Atribuindo um valor para a property:
     c.velocidade = 200
 
 .. code-block:: console
 
     Velocidade = 200 km/h
 
+
+
+Tentativa de atribuir um valor não permitido:    
+
 .. code-block:: python
 
-    # Tentativa de atribuir um valor não permitido;
     c.velocidade = 301
 
-
-.. code-block:: python
-
+.. code-block:: console
+    
     . . .
+
     ValueError: A velocidade máxima permitida é de 300 km/h
 
+
+
+Remover a property:
+
 .. code-block:: python
 
-    # Remover a property:
     del c.velocidade
 
 .. code-block:: console
 
     Removendo a propriedade de velocidade
 
+
+
+Tentativa de acesso à property apagada:
+
 .. code-block:: python
 
-    # Tentativa de acesso à property apagada:
     c.velocidade
 
 .. code-block:: console
 
     . . .
+
     AttributeError: 'Carro' object has no attribute '__velocidade'
 
-   
+
+
 Property como Decorator
 -----------------------
 
@@ -133,8 +154,10 @@ Property como Decorator
             
         @property 
         def velocidade(self):
-            '''Velocidade máxima do carro'''
-            print('Velocidade: {} km/h'.format(self.__velocidade))
+            '''
+            Velocidade máxima do carro
+            '''
+            print(f'Velocidade: {self.__velocidade} km/h')
             return self.__velocidade
         
         @velocidade.setter    
@@ -142,7 +165,7 @@ Property como Decorator
             if velocidade > 300:
                 raise ValueError('A velocidade máxima permitida é de 300 km/h')        
             self.__velocidade = velocidade
-            print('Velocidade = {} km/h'.format(self.__velocidade))
+            print(f'Velocidade = {self.__velocidade} km/h')
             
         @velocidade.deleter   
         def velocidade(self):

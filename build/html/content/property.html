@@ -226,21 +226,23 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="nf">_get__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Velocidade: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="si">}</span><span class="s1"> km/h&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
     <span class="k">def</span> <span class="nf">_set__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocidade</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">velocidade</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;A velocidade máxima permitida é de 300 km/h&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="n">velocidade</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = </span><span class="si">%d</span><span class="s1"> km/h&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Velocidade = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="si">}</span><span class="s1"> km/h&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_del__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removendo a propriedade de velocidade&#39;</span><span class="p">)</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
     <span class="c1"># Definição da property velocidade</span>
-    <span class="n">velocidade</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get__velocidade</span><span class="p">,</span> <span class="n">_set__velocidade</span><span class="p">,</span> <span class="n">_del__velocidade</span><span class="p">,</span>
+    <span class="n">velocidade</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get__velocidade</span><span class="p">,</span>
+                          <span class="n">_set__velocidade</span><span class="p">,</span>
+                          <span class="n">_del__velocidade</span><span class="p">,</span>
                           <span class="s1">&#39;Velocidade máxima do carro&#39;</span><span class="p">)</span>
 
 
@@ -255,41 +257,43 @@
 <span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;__velocidade&#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acessando a property &quot;velocidade&quot;:</span>
-<span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
+<p>Acessando a property velocidade:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Velocidade: 0 km/h</span>
 <span class="go">0</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atribuindo um valor para a property:</span>
-<span class="n">c</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">200</span>
+<p>Atribuindo um valor para a property:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">200</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Velocidade = 200 km/h</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tentativa de atribuir um valor não permitido;</span>
-<span class="n">c</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">301</span>
+<p>Tentativa de atribuir um valor não permitido:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">301</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
-<span class="ne">ValueError</span><span class="p">:</span> <span class="n">A</span> <span class="n">velocidade</span> <span class="n">máxima</span> <span class="n">permitida</span> <span class="n">é</span> <span class="n">de</span> <span class="mi">300</span> <span class="n">km</span><span class="o">/</span><span class="n">h</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
+
+<span class="go">ValueError: A velocidade máxima permitida é de 300 km/h</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remover a property:</span>
-<span class="k">del</span> <span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
+<p>Remover a property:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Removendo a propriedade de velocidade</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tentativa de acesso à property apagada:</span>
-<span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
+<p>Tentativa de acesso à property apagada:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
+
 <span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;__velocidade&#39;</span>
 </pre></div>
 </div>
@@ -309,8 +313,10 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Velocidade máxima do carro&#39;&#39;&#39;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade: </span><span class="si">{}</span><span class="s1"> km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Velocidade máxima do carro</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Velocidade: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="si">}</span><span class="s1"> km/h&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
     <span class="nd">@velocidade</span><span class="o">.</span><span class="n">setter</span>
@@ -318,7 +324,7 @@
         <span class="k">if</span> <span class="n">velocidade</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;A velocidade máxima permitida é de 300 km/h&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="n">velocidade</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Velocidade = </span><span class="si">{}</span><span class="s1"> km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Velocidade = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="si">}</span><span class="s1"> km/h&#39;</span><span class="p">)</span>
 
     <span class="nd">@velocidade</span><span class="o">.</span><span class="n">deleter</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
