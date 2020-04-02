@@ -188,28 +188,36 @@
             
   <div class="section" id="encapsulamento">
 <h1><span class="section-number">20. </span>Encapsulamento<a class="headerlink" href="#encapsulamento" title="Link permanente para este título">¶</a></h1>
+<div class="line-block">
+<div class="line">O conceito de encapsulamento no geral consiste em isolar atributos e / ou métodos de acesso externo deixando-os como privados.</div>
+<div class="line">Atributos privados devem ser acessados ou modificados através de <em>getters</em> e <em>setters</em>, respectivamente.</div>
+<div class="line">Métodos privados têm sua área de atuação restrita somente internamente na classe.</div>
+</div>
 <div class="section" id="modificador-private">
 <h2><span class="section-number">20.1. </span>Modificador Private (__)<a class="headerlink" href="#modificador-private" title="Link permanente para este título">¶</a></h2>
 <div class="line-block">
-<div class="line-block">
-<div class="line">Colocando 2 (dois) caracteres underscore antecedendo o atributo, ele fica</div>
+<div class="line">Colocando 2 (dois) underscores antecedendo o atributo, ele fica privado, ou seja, não é acessível fora da classe.</div>
+<div class="line">Em Python não existem modificadores de atributos e métodos como em outras linguagens, ou seja, não existe <em>public</em>, <em>private</em> ou <em>protected</em>.</div>
 </div>
-<div class="line">privado, ou seja, não é acessível fora da classe.</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de classe de teste:</span>
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>Criação de uma classe de teste:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">__atributo</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1"># Instância da classe:</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
-
-<span class="c1"># Tentativa de acesso a atributo privado:</span>
-<span class="n">f</span><span class="o">.</span><span class="n">__atributo</span>
+</pre></div>
+</div>
+<p>Instância da classe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Tentativa de acesso a atributo privado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">__atributo</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
 <span class="go">AttributeError: &#39;Foo&#39; object has no attribute &#39;__atributo&#39;</span>
 </pre></div>
+</div>
+<div class="line-block">
+<div class="line">Por ser um atributo privado, seu acesso externo não foi reconhecido.</div>
 </div>
 </div>
 <div class="section" id="property">
@@ -220,37 +228,40 @@
 </div>
 <div class="line">inteligente e podendo inclusive impor restrições.</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classe com property:</span>
-<span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>Criação da classe Carro:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">_get__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Métodos privados para a property</span>
+
+    <span class="k">def</span> <span class="nf">__get__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Velocidade: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="si">}</span><span class="s1"> km/h&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
-    <span class="k">def</span> <span class="nf">_set__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocidade</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__set__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocidade</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">velocidade</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;A velocidade máxima permitida é de 300 km/h&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="n">velocidade</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Velocidade = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span><span class="si">}</span><span class="s1"> km/h&#39;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_del__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__del__velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removendo a propriedade de velocidade&#39;</span><span class="p">)</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span>
 
     <span class="c1"># Definição da property velocidade</span>
-    <span class="n">velocidade</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get__velocidade</span><span class="p">,</span>
-                          <span class="n">_set__velocidade</span><span class="p">,</span>
-                          <span class="n">_del__velocidade</span><span class="p">,</span>
-                          <span class="s1">&#39;Velocidade máxima do carro&#39;</span><span class="p">)</span>
-
-
-<span class="c1"># Instância da classe:</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
-
-<span class="c1"># Tentativa de acesso ao atributo privado:</span>
-<span class="n">c</span><span class="o">.</span><span class="n">__velocidade</span>
+    <span class="n">velocidade</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">__get__velocidade</span><span class="p">,</span>  <span class="c1"># getter</span>
+                          <span class="n">__set__velocidade</span><span class="p">,</span>  <span class="c1"># setter</span>
+                          <span class="n">__del__velocidade</span><span class="p">,</span>  <span class="c1"># deleter</span>
+                          <span class="s1">&#39;Velocidade máxima do carro&#39;</span><span class="p">)</span>  <span class="c1"># Descrição</span>
+</pre></div>
+</div>
+<p>Instância da classe Carro:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Carro</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Tentativa de acesso ao atributo privado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">__velocidade</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.  .  .</span>
@@ -270,6 +281,42 @@
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Velocidade = 200 km/h</span>
+</pre></div>
+</div>
+<p>O que acontece se pegarmos o nome do atributo privado e o definirmos externamente?:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="s1">&#39;valor equivocado&#39;</span>
+</pre></div>
+</div>
+<p>Acessando o atributo adicionado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">__velocidade</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;valor equivocado&#39;</span>
+</pre></div>
+</div>
+<p>Será que a property foi afetada?:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Velocidade: 200 km/h</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Felizmente a property não foi afetada e o encapsulamento foi mantido :)</div>
+</div>
+<p>Reatribuir um novo valor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span> <span class="o">=</span> <span class="mi">170</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Velocidade = 170 km/h</span>
+</pre></div>
+</div>
+<p>Consultar o valor do atributo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Velocidade: 170 km/h</span>
+<span class="go">170</span>
 </pre></div>
 </div>
 <p>Tentativa de atribuir um valor não permitido:</p>
@@ -292,24 +339,21 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">velocidade</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. . .</span>
-
-<span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;__velocidade&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;_Carro__velocidade&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="property-como-decorator">
 <h2><span class="section-number">20.3. </span>Property como Decorator<a class="headerlink" href="#property-como-decorator" title="Link permanente para este título">¶</a></h2>
 <div class="line-block">
-<div class="line-block">
-<div class="line">Além da já citada implementação de property, pode-se também fazer isso</div>
+<div class="line">Além da já citada implementação de property, pode-se também fazer isso por meio de decorators.</div>
 </div>
-<div class="line">por meio de decorators.</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de classe com definição de properties via decorators:</span>
-<span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>Criação de classe com definição de properties via decorators:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Carro</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__velocidade</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Properties</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

@@ -1,28 +1,49 @@
 Encapsulamento
 **************
 
+|   O conceito de encapsulamento no geral consiste em isolar atributos e / ou métodos de acesso externo deixando-os como privados.
+|   Atributos privados devem ser acessados ou modificados através de *getters* e *setters*, respectivamente.
+|   Métodos privados têm sua área de atuação restrita somente internamente na classe.
+
+
 Modificador Private (__)
 ------------------------
 
-|   Colocando 2 (dois) caracteres underscore antecedendo o atributo, ele fica
-| privado, ou seja, não é acessível fora da classe.
+|   Colocando 2 (dois) underscores antecedendo o atributo, ele fica privado, ou seja, não é acessível fora da classe.
+|   Em Python não existem modificadores de atributos e métodos como em outras linguagens, ou seja, não existe *public*, *private* ou *protected*.
+
+
+
+Criação de uma classe de teste:
 
 .. code-block:: python
 
-    # Criação de classe de teste:
     class Foo(object):
         __atributo = 0
 
-    # Instância da classe:
+
+
+Instância da classe:
+
+.. code-block:: python
+
     f = Foo()
 
-    # Tentativa de acesso a atributo privado:
+
+
+
+Tentativa de acesso a atributo privado:
+
+.. code-block:: python
+
     f.__atributo
 
 .. code-block:: console
 
     . . .
     AttributeError: 'Foo' object has no attribute '__atributo'
+
+|   Por ser um atributo privado, seu acesso externo não foi reconhecido.    
 
 
 
@@ -32,38 +53,52 @@ Property
 |   Property é a solução pythônica para implementar getters e setters de forma
 | inteligente e podendo inclusive impor restrições.
 
+
+
+Criação da classe Carro:
+
 .. code-block:: python
 
-    # Classe com property:
     class Carro(object):
         def __init__(self):
             self.__velocidade = 0
         
-        def _get__velocidade(self):
+        # Métodos privados para a property
+
+        def __get__velocidade(self):
             print(f'Velocidade: {self.__velocidade} km/h')
             return self.__velocidade
         
-        def _set__velocidade(self, velocidade):
+        def __set__velocidade(self, velocidade):
             if velocidade > 300:
                 raise ValueError('A velocidade máxima permitida é de 300 km/h')        
             self.__velocidade = velocidade
             print(f'Velocidade = {self.__velocidade} km/h')
             
-        def _del__velocidade(self):
+        def __del__velocidade(self):
             print('Removendo a propriedade de velocidade')
             del self.__velocidade
         
         # Definição da property velocidade
-        velocidade = property(_get__velocidade,
-                              _set__velocidade,
-                              _del__velocidade,
-                              'Velocidade máxima do carro')
+        velocidade = property(__get__velocidade,  # getter
+                              __set__velocidade,  # setter
+                              __del__velocidade,  # deleter
+                              'Velocidade máxima do carro')  # Descrição
 
 
-    # Instância da classe:
+
+Instância da classe Carro:
+
+.. code-block:: python
+
     c = Carro()
 
-    # Tentativa de acesso ao atributo privado:
+
+
+Tentativa de acesso ao atributo privado:
+
+.. code-block:: python
+
     c.__velocidade
 
 
@@ -96,6 +131,64 @@ Atribuindo um valor para a property:
 .. code-block:: console
 
     Velocidade = 200 km/h
+
+
+
+O que acontece se pegarmos o nome do atributo privado e o definirmos externamente?:
+
+.. code-block:: python
+
+    c.__velocidade = 'valor equivocado'
+    
+    
+    
+Acessando o atributo adicionado:
+
+.. code-block:: python
+
+    c.__velocidade                                                                                                                                                                                            
+.. code-block:: console
+
+    'valor equivocado'
+    
+    
+    
+Será que a property foi afetada?:
+
+.. code-block:: python
+
+    c.velocidade
+
+.. code-block:: console
+
+    Velocidade: 200 km/h
+    
+|   Felizmente a property não foi afetada e o encapsulamento foi mantido :)
+
+
+
+Reatribuir um novo valor:
+
+.. code-block:: python
+
+    c.velocidade = 170                                                                                                                                                                                        
+
+.. code-block:: console
+
+    Velocidade = 170 km/h
+    
+    
+    
+Consultar o valor do atributo:
+
+.. code-block:: python
+
+    c.velocidade
+    
+.. code-block:: console
+
+    Velocidade: 170 km/h
+    170    
 
 
 
@@ -133,24 +226,26 @@ Tentativa de acesso à property apagada:
 
 .. code-block:: console
 
-    . . .
-
-    AttributeError: 'Carro' object has no attribute '__velocidade'
+    AttributeError: 'Carro' object has no attribute '_Carro__velocidade'
 
 
 
 Property como Decorator
 -----------------------
 
-|   Além da já citada implementação de property, pode-se também fazer isso
-| por meio de decorators.
+|   Além da já citada implementação de property, pode-se também fazer isso por meio de decorators.
+
+
+
+Criação de classe com definição de properties via decorators:
 
 .. code-block:: python
 
-    # Criação de classe com definição de properties via decorators:
     class Carro(object):
         def __init__(self):
             self.__velocidade = 0
+
+        # Properties    
             
         @property 
         def velocidade(self):

@@ -5,10 +5,10 @@ Escopo
     Um identificador pode ser uma variável, um comando, uma função uma clase ou um objeto.
     A ordem de busca de um identificador em escopos é a seguinte:
     
-  1º) Local ou dentro de função;
-  2º) Função externa;
-  3º) Global ou de módulo;
-  4º) __builtins__
+  1. Local ou dentro de função;
+  2. Função externa;
+  3. Global ou de módulo;
+  4.  __builtins__
 
 
 - Escopo Local ou Dentro de Função
