@@ -180,6 +180,7 @@ if Ternário
 |   bla bla bla
 
 
+
 bla bla bla:
 
 .. code-block:: python
