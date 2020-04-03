@@ -225,7 +225,7 @@ bla bla bla:
 .. code-block:: python
 
     # Exibe a mensagem:
-    print('Aluno {}!'.format(estado))
+    print('Aluno {estado}!')
 
 .. code-block:: console
 
@@ -254,7 +254,7 @@ bla bla bla:
     sinal = 'positivo' if num > 0 else 'negativo' if num < 0 else 'zero'
 
     # Exibe mensagem:
-    print('O número é {}'.format(sinal))
+    print(f'O número é {sinal}'
 
 .. code-block:: console
 
