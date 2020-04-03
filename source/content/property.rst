@@ -266,3 +266,5 @@ Criação de classe com definição de properties via decorators:
         def velocidade(self):
             print('Removendo a propriedade de velocidade')
             del self.__velocidade
+
+|   Repetir os comandos do exercício anterior ;)            

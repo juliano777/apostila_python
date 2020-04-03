@@ -562,7 +562,9 @@ bla bla bla:
 
 bla bla bla:
 
-$ cat /tmp/cores.txt
+.. code-block:: bash
+
+    cat /tmp/cores.txt
 
 .. code-block:: console
 
@@ -714,7 +716,9 @@ bla bla bla:
 
 bla bla bla:
 
-$ cat /tmp/planetas.txt
+.. code-block:: bash
+
+    cat /tmp/planetas.txt
 
 .. code-block:: console
 
@@ -750,7 +754,9 @@ bla bla bla:
 
 bla bla bla:
 
-$ cat /tmp/planetas.txt
+.. code-block:: bash
+
+    cat /tmp/planetas.txt
 
 .. code-block:: console
 
