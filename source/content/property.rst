@@ -50,8 +50,7 @@ Tentativa de acesso a atributo privado:
 Property
 --------
 
-|   Property é a solução pythônica para implementar getters e setters de forma
-| inteligente e podendo inclusive impor restrições.
+|   Property é a solução pythônica para implementar getters e setters de forma inteligente e podendo inclusive impor restrições.
 
 
 
@@ -267,4 +266,115 @@ Criação de classe com definição de properties via decorators:
             print('Removendo a propriedade de velocidade')
             del self.__velocidade
 
-|   Repetir os comandos do exercício anterior ;)            
+|   Repetir os comandos do exercício anterior ;) 
+
+
+
+Descriptors
+-----------
+
+|   São objetos Python que implementam um método do protocolo descritor, que nos permite criar objetos que
+tenham um comportamento desejado quando seus atributos são acessados por outros objetos.
+
+
+
+Criação de uma classe descriptor:
+
+.. code-block:: python
+
+    class Verbose(object):
+
+        def __get__(self, obj, type=None) -> object:
+            return 7
+            
+        def __set__(self, obj, value) -> None:
+            raise AttributeError('Não pode mudar o valor!!!')
+            
+        def __delete__(self, obj, type=None) -> None:
+            raise AttributeError('Não pode remover o atributo!!!')
+        
+        
+        
+        
+        
+Criação de uma classe de teste para o descriptor:
+
+.. code-block:: python
+
+    class Foo(object):
+        atributo = Verbose()
+
+
+
+    
+Instanciação da classe Foo:
+
+.. code-block:: python
+
+    o = Foo()
+
+
+
+
+Verificação do tipo do atributo que utiliza o descriptor:
+
+.. code-block:: python
+
+    type(o.atributo)                                                                                                                                                                                           
+
+.. code-block:: console
+
+    int
+
+
+
+
+Exibe o valor do atributo:
+
+.. code-block:: python
+
+    print(o.atributo)                                                                                                                                                                                          
+
+.. code-block:: console
+
+    7
+
+
+
+Tentativa de atribuir um novo valor ao atributo:
+
+.. code-block:: python
+
+    o.atributo = 9
+
+.. code-block:: console
+
+    AttributeError: Não pode mudar o valor!!!
+
+|   Houve um lançamento de exceção ao tentar redefinir o valor do atributo.
+
+
+
+Tentativa de remover o atributo do objeto:
+
+.. code-block:: python
+
+    del o.atributo
+
+.. code-block:: console
+
+    AttributeError: Não pode remover o atributo!!!
+
+|   Houve um lançamento de exceção ao tentar remover o atributo.
+
+
+
+Verificando se o atributo foi alterado:
+
+.. code-block:: python
+
+    print(o.atributo)
+
+.. code-block:: console
+
+    7

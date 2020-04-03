@@ -50,8 +50,7 @@ Tentativa de acesso a atributo privado:
 Property
 --------
 
-|   Property é a solução pythônica para implementar getters e setters de forma
-| inteligente e podendo inclusive impor restrições.
+|   Property é a solução pythônica para implementar getters e setters de forma inteligente e podendo inclusive impor restrições.
 
 
 
