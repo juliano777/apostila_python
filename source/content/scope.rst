@@ -488,9 +488,11 @@ Verificando o tipo:
 
     NameError: name 'x' is not defined
 
+|   A variável "x" não existe ainda.    
 
 
-bla bla bla:
+
+Executando a função:
 
 .. code-block:: python
 
@@ -498,7 +500,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificando o tipo:
 
 .. code-block:: python
 
@@ -510,7 +512,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Exibir o valor da variável:
 
 .. code-block:: python
 
