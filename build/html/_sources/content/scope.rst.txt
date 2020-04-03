@@ -512,7 +512,7 @@ Verificando o tipo:
 
 
 
-bla bla bla:
+Exibir o valor da variável:
 
 .. code-block:: python
 

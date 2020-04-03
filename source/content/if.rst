@@ -4,13 +4,20 @@ if / elif / else
 	O comando if, que inglês significa "se" indica uma condição.
 
 
+
+Criação de dois objetos int:
+
 .. code-block:: python
 
-    # Criação de dois objetos int:
     x = 7
     y = 5
 
-    # Bloco if:
+
+
+Bloco if teste se x é maior que y:
+
+.. code-block:: python
+
     if x > y:
         print('X é maior')
 
@@ -18,19 +25,32 @@ if / elif / else
 
     X é maior
 
+
+
+Bloco if teste se x é menor que y:
+
 .. code-block:: python
 
-    # Bloco if;
     if x < y:
-        print('X é maior')
+        print('Y é maior')
+
+|   Aqui nada aconteceu, pois a condição de if não foi satisfeita.
+
+
+
+Criação de duas variáveis booleanas:
 
 .. code-block:: python
 
-    # Objetos booleanos:
     foo = True
     bar = False
 
-    # Bloco if:
+
+
+Modo "pythônico" de se testar um valor booleano:
+
+.. code-block:: python
+
     if foo:
         print('foo é verdadeiro!')
 
@@ -38,15 +58,24 @@ if / elif / else
 
     foo é verdadeiro!
 
+|   Note que não foi testado `foo == False`, utilizou-se uma maneira muito mais elegante.
+
+
+
+Testando uma Variável booleana com negação:
+
 .. code-block:: python
 
-    # Bloco if:
     if not bar:
         print('bar é falso!')
 
 .. code-block:: console
 
     bar é falso!
+
+
+
+Podemos também de maneira parecida, se a variável tiver um conteúdo:    
 
 .. code-block:: python
 
@@ -57,9 +86,14 @@ if / elif / else
     if texto:
         print('A string NÃO é vazia!')
 
+
 .. code-block:: console
 
     A string NÃO é vazia!
+
+
+
+Teste de negação com string vazia:    
 
 .. code-block:: python
 
@@ -73,6 +107,10 @@ if / elif / else
 .. code-block:: console
 
     A string é vazia!
+
+
+
+Boco if com else:    
 
 .. code-block:: python
 
@@ -89,6 +127,10 @@ if / elif / else
 .. code-block:: python
 
     Y é maior
+
+
+
+Bloco if com elif:    
 
 .. code-block:: python
 
@@ -108,6 +150,10 @@ if / elif / else
 
     Valores iguais
 
+
+
+O valor de y depende de x:    
+
 .. code-block:: python
 
     # Objeto int:
@@ -119,9 +165,22 @@ if / elif / else
     else:
         y = 0
 
+    # Exibe o resultado
+    print(y)
+
+.. code-block:: console
+
+    3
+
+
 
 if Ternário
 ~~~~~~~~~~~
+
+|   bla bla bla
+
+
+bla bla bla:
 
 .. code-block:: python
 
@@ -137,6 +196,10 @@ if Ternário
 
     50
 
+
+
+bla bla bla:    
+
 .. code-block:: python
 
     # Variável float para receber a nota:
@@ -146,10 +209,18 @@ if Ternário
 
     Digite a nota do aluno: 8
 
+
+
+bla bla bla:    
+
 .. code-block:: python
 
     # Atribuição condicional:
     estado = 'aprovado' if nota >= 7 else 'reprovado'
+
+
+
+bla bla bla:    
 
 .. code-block:: python
 
@@ -160,6 +231,10 @@ if Ternário
 
     Aluno aprovado!
 
+
+
+bla bla bla:
+
 .. code-block:: python
 
     # Variável int:
@@ -168,6 +243,10 @@ if Ternário
 .. code-block:: console
 
     Digite um número: -2
+
+
+
+bla bla bla:    
 
 .. code-block:: python
 
