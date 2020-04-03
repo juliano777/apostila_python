@@ -1,14 +1,15 @@
 Escopo
 ******
 
-    Por escopo entende-se o contexto onde um identificador será considerado.
-    Um identificador pode ser uma variável, um comando, uma função uma clase ou um objeto.
-    A ordem de busca de um identificador em escopos é a seguinte:
+|   Por escopo entende-se o contexto onde um identificador será considerado.
+|   Um identificador pode ser uma variável, um comando, uma função uma clase ou um objeto.
+|   A ordem de busca de um identificador em escopos é a seguinte:
     
-  1. Local ou dentro de função;
-  2. Função externa;
-  3. Global ou de módulo;
-  4.  __builtins__
+1. Local ou dentro de função;
+2. Função externa;
+3. Global ou de módulo;
+4.  __builtins__
+
 
 
 Escopo Local ou Dentro de Função
@@ -122,6 +123,7 @@ Acionando a função:
     9
 
 |   Nota-se também que bem como o ID e o valor retornados pela função, da variável interna foo são diferentes da variável externa de mesmo nome.
+
 
 
 Escopo de Função Externa
@@ -330,7 +332,7 @@ Qual é o tipo?:
 
 
 
-Qual o tipo?
+Qual tipo?
 
 .. code-block:: python
 
@@ -356,7 +358,7 @@ Valor de str?:
 
 
 
-bla bla bla:
+Chamar a str built-in para converter a str redefinida:
 
 .. code-block:: python
 
@@ -376,7 +378,7 @@ Apagando a variável:
 
 
 
-bla bla bla:
+Função built-in str:
 
 .. code-block:: python
 
@@ -386,19 +388,17 @@ bla bla bla:
 
     '7'
 
+|   Observe que a função não foi removida, apenas a variável criada por redefinição.    
 
 
-bla bla bla:
+
+Verificar todos identificadores built-ins:
 
 .. code-block:: python
 
     dir(__builtins__)
 
-
-.. code-block:: console
-
-    global nome_variavel
-    nome_variavel = valor
+|   . . .
 
 
 
@@ -413,7 +413,7 @@ Funções globals(), locals() e vars() e Comando global
 
 
 
-bla bla bla:
+Variável em um escopo global:
 
 .. code-block:: python
 
@@ -421,19 +421,19 @@ bla bla bla:
 
 
 
-bla bla bla:
+Função de teste:
 
 .. code-block:: python
 
     def f():
         foo = 'escopo local'
         bar = 'uma variável qualquer...'
-        print(globals()['foo'])
-        print(locals()['foo'])
+        print(globals()['foo'])  # Valor do identificador global
+        print(locals()['foo'])  # Valor do identificador local
 
 
 
-bla bla bla:
+Chamada da função:
 
 .. code-block:: python
 
@@ -446,7 +446,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criação de uma classe de teste:
 
 .. code-block:: python
 
@@ -456,24 +456,19 @@ bla bla bla:
 
 
 
-bla bla bla:
+"foo" e "bar" ambos identificadores estão contidos em "vars(Spam)"?:
 
 .. code-block:: python
 
-    vars(Spam)
+    set(('foo', 'bar')).issubset(vars(Spam))
 
 .. code-block:: console
 
-    <dictproxy {'__dict__': <attribute '__dict__' of 'Spam' objects>,
-     '__doc__': None,
-     '__module__': '__main__',
-     '__weakref__': <attribute '__weakref__' of 'Spam' objects>,
-     'bar': '',
-     'foo': ''}>
+    True
 
 
 
-bla bla bla:
+Função de teste:
 
 .. code-block:: python
 

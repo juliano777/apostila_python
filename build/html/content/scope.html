@@ -194,19 +194,17 @@
             
   <div class="section" id="escopo">
 <h1><span class="section-number">21. </span>Escopo<a class="headerlink" href="#escopo" title="Link permanente para este título">¶</a></h1>
-<blockquote>
-<div><blockquote>
-<div><p>Por escopo entende-se o contexto onde um identificador será considerado.
-Um identificador pode ser uma variável, um comando, uma função uma clase ou um objeto.
-A ordem de busca de um identificador em escopos é a seguinte:</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">Por escopo entende-se o contexto onde um identificador será considerado.</div>
+<div class="line">Um identificador pode ser uma variável, um comando, uma função uma clase ou um objeto.</div>
+<div class="line">A ordem de busca de um identificador em escopos é a seguinte:</div>
+</div>
 <ol class="arabic simple">
 <li><p>Local ou dentro de função;</p></li>
 <li><p>Função externa;</p></li>
 <li><p>Global ou de módulo;</p></li>
 <li><p>__builtins__</p></li>
 </ol>
-</div></blockquote>
 <div class="section" id="escopo-local-ou-dentro-de-funcao">
 <h2><span class="section-number">21.1. </span>Escopo Local ou Dentro de Função<a class="headerlink" href="#escopo-local-ou-dentro-de-funcao" title="Link permanente para este título">¶</a></h2>
 <blockquote>
@@ -435,7 +433,7 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <div class="line">“str” que inicialmente era um identificador para o tipo de strings em Python, aqui agora virou uma variável de inteiro.</div>
 <div class="line">Mas e o tipo “str” deixou de existir?</div>
 </div>
-<p>Qual o tipo?</p>
+<p>Qual tipo?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">str</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -452,7 +450,7 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Chamar a str built-in para converter a str redefinida:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">__builtins__</span><span class="o">.</span><span class="n">str</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -463,20 +461,22 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="nb">str</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Função built-in str:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;7&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<div class="line-block">
+<div class="line">Observe que a função não foi removida, apenas a variável criada por redefinição.</div>
+</div>
+<p>Verificar todos identificadores built-ins:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">global nome_variavel</span>
-<span class="go">nome_variavel = valor</span>
-</pre></div>
+<div class="line-block">
+<div class="line">…</div>
 </div>
 </div>
 <div class="section" id="funcoes-globals-locals-e-vars-e-comando-global">
@@ -489,19 +489,19 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <li><p>locals(): Retorna variáveis locais (escopo local);</p></li>
 <li><p>vars(obj): sem argumentos é equivalente a locals(), com um argumento, equivalente a objeto.__dict__.</p></li>
 </ul>
-<p>bla bla bla:</p>
+<p>Variável em um escopo global:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;escopo global&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Função de teste:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
     <span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;escopo local&#39;</span>
     <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;uma variável qualquer...&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">locals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span>  <span class="c1"># Valor do identificador global</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">locals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span>  <span class="c1"># Valor do identificador local</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Chamada da função:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -509,25 +509,20 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <span class="go">escopo local</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Criação de uma classe de teste:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Spam</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">vars</span><span class="p">(</span><span class="n">Spam</span><span class="p">)</span>
+<p>“foo” e “bar” ambos identificadores estão contidos em “vars(Spam)”?:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">((</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="nb">vars</span><span class="p">(</span><span class="n">Spam</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;dictproxy {&#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;Spam&#39; objects&gt;,</span>
-<span class="go"> &#39;__doc__&#39;: None,</span>
-<span class="go"> &#39;__module__&#39;: &#39;__main__&#39;,</span>
-<span class="go"> &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;Spam&#39; objects&gt;,</span>
-<span class="go"> &#39;bar&#39;: &#39;&#39;,</span>
-<span class="go"> &#39;foo&#39;: &#39;&#39;}&gt;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Função de teste:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">x</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>

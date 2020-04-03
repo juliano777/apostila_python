@@ -104,9 +104,11 @@
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">20. Encapsulamento</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#modificador-private">20.1. Modificador Private (__)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#property">20.2. Property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#property-como-decorator">20.3. Property como Decorator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#descriptors">20.4. Descriptors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#property">20.2. Property</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#property-como-decorator">20.2.1. Property como Decorator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#descriptors">20.3. Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scope.html">21. Escopo</a></li>
@@ -339,9 +341,8 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;_Carro__velocidade&#39;</span>
 </pre></div>
 </div>
-</div>
 <div class="section" id="property-como-decorator">
-<h2><span class="section-number">20.3. </span>Property como Decorator<a class="headerlink" href="#property-como-decorator" title="Link permanente para este título">¶</a></h2>
+<h3><span class="section-number">20.2.1. </span>Property como Decorator<a class="headerlink" href="#property-como-decorator" title="Link permanente para este título">¶</a></h3>
 <div class="line-block">
 <div class="line">Além da já citada implementação de property, pode-se também fazer isso por meio de decorators.</div>
 </div>
@@ -377,8 +378,9 @@
 <div class="line">Repetir os comandos do exercício anterior ;)</div>
 </div>
 </div>
+</div>
 <div class="section" id="descriptors">
-<h2><span class="section-number">20.4. </span>Descriptors<a class="headerlink" href="#descriptors" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">20.3. </span>Descriptors<a class="headerlink" href="#descriptors" title="Link permanente para este título">¶</a></h2>
 <div class="line-block">
 <div class="line">São objetos Python que implementam um método do protocolo descritor, que nos permite criar objetos que</div>
 </div>
