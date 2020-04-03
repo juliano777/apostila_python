@@ -23,13 +23,17 @@ Modos
 
 bla bla bla:
 
-> f = open('/tmp/foo.txt', 'w+')
+.. code-block:: python
+
+    f = open('/tmp/foo.txt', 'w+')
 
 
 
 bla bla bla:
 
-> type(f)
+.. code-block:: python
+
+    type(f)
 
 .. code-block:: console
 
@@ -39,76 +43,100 @@ bla bla bla:
 
 bla bla bla:
 
-> print('Teste de escrita em arquivo', file=f)
+.. code-block:: python
+
+    print('Teste de escrita em arquivo', file=f)
 
 
 
 bla bla bla:
 
-> print(' ', file=f)
+.. code-block:: python
+
+    print(' ', file=f)
 
 
 
 bla bla bla:
 
-> print('Uma linha qualquer', file=f)
+.. code-block:: python
+
+    print('Uma linha qualquer', file=f)
 
 
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-> f = open('/tmp/foo.txt', 'r')
+.. code-block:: python
+
+    f = open('/tmp/foo.txt', 'r')
 
 
 
 bla bla bla:
 
-> for line in f:
+.. code-block:: python
+
+    for line in f:
     print(line.strip('\n'))
 
 
 
 Fechamento de arquivo:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-$ cat << EOF > /tmp/linhas.txt
-linha_1
-linha_2
-linha_3
-EOF
+.. code-block:: bash
+
+    cat << EOF > /tmp/linhas.txt
+    linha_1
+    linha_2
+    linha_3
+    EOF
 
 
 
 bla bla bla:
 
-$ cat /tmp/linhas.txt
+.. code-block:: bash
 
-linha_1
-linha_2
-linha_3
+    cat /tmp/linhas.txt
 
+.. code-block:: console
 
-
-bla bla bla:
-
-> f = open('/tmp/linhas.txt')
+    linha_1
+    linha_2
+    linha_3
 
 
 
 bla bla bla:
 
-> f.readline()
+.. code-block:: python
+
+    f = open('/tmp/linhas.txt')
+
+
+
+bla bla bla:
+
+.. code-block:: python
+
+    f.readline()
 
 .. code-block:: console
 
@@ -118,7 +146,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.readline().split()
+.. code-block:: python
+
+    f.readline().split()
 
 .. code-block:: console
 
@@ -128,7 +158,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.readline().split()
+.. code-block:: python
+
+    f.readline().split()
 
 .. code-block:: console
 
@@ -138,7 +170,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.readline().split()
+.. code-block:: python
+
+    f.readline().split()
 
 .. code-block:: console
 
@@ -148,19 +182,25 @@ bla bla bla:
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-> f = open('/tmp/linhas.txt')
+.. code-block:: python
+
+    f = open('/tmp/linhas.txt')
 
 
 
 bla bla bla:
 
-> f.readlines()
+.. code-block:: python
+
+    f.readlines()
 
 .. code-block:: console
 
@@ -170,91 +210,115 @@ bla bla bla:
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-$ cat << EOF > /tmp/teste.py
-#!/usr/bin/env python3
-#_*_ encoding: utf8 _*_
+.. code-block:: bash
 
-import sys
+    cat << EOF > /tmp/teste.py
+    #!/usr/bin/env python3
+    #_*_ encoding: utf8 _*_
 
-file_open = sys.argv[1]
+    import sys
 
-
-file_open = open(file_open, 'r')
-
-for i in file_open:
-    print(i.strip())
-
-file_open.close()
-EOF
+    file_open = sys.argv[1]
 
 
+    file_open = open(file_open, 'r')
 
-bla bla bla:
+    for i in file_open:
+        print(i.strip())
 
-$ chmod +x /tmp/teste.py
+    file_open.close()
+    EOF
 
 
 
 bla bla bla:
 
-$ ./teste.py linhas.txt
+.. code-block:: bash
 
-linha_1
-linha_2
-linha_3
+    chmod +x /tmp/teste.py
+
+
+
+bla bla bla:
+
+.. code-block:: bash
+
+    ./teste.py linhas.txt
+
+.. code-block:: console
+
+    linha_1
+    linha_2
+    linha_3
 
 
 
 O Método seek:
 
-$ cat << EOF > /tmp/cores.txt
-1 - Verde
-2 - Preto
-3 - Branco
-EOF
+.. code-block:: bash
+
+    cat << EOF > /tmp/cores.txt
+    1 - Verde
+    2 - Preto
+    3 - Branco
+    EOF
 
 
 
 bla bla bla:
 
-> f = open('/tmp/cores.txt', 'r')
+.. code-block:: python
+
+    f = open('/tmp/cores.txt', 'r')
 
 
 
 bla bla bla:
 
-> for i in f:
-    print(i.strip())
+.. code-block:: python
 
-1 - Verde
-2 - Preto
-3 - Branco
+    for i in f:
+        print(i.strip())
 
+.. code-block:: python
 
-
-bla bla bla:
-
-> for i in f:
-    print(i.strip())
+    1 - Verde
+    2 - Preto
+    3 - Branco
 
 
 
 bla bla bla:
 
-> f.seek(0)
+.. code-block:: python
+
+    for i in f:
+        print(i.strip())
 
 
 
 bla bla bla:
 
-> for i in f:
-    print(i.strip())
+.. code-block:: python
+
+    f.seek(0)
+
+
+
+bla bla bla:
+
+.. code-block:: python
+
+    for i in f:
+        print(i.strip())
 
 .. code-block:: console
 
@@ -266,14 +330,18 @@ bla bla bla:
 
 bla bla bla:
 
-> f.seek(1)
+.. code-block:: python
+
+    f.seek(1)
 
 
 
 bla bla bla:
 
-> for i in f:
-    print(i.strip())
+.. code-block:: python
+
+    for i in f:
+        print(i.strip())
 
 .. code-block:: console
 
@@ -285,32 +353,42 @@ bla bla bla:
 
 bla bla bla:
 
-> f.seek(0)
+.. code-block:: python
+
+    f.seek(0)
 
 .. code-block:: console
 
     0
 
-> f.read(7)
+.. code-block:: python
+
+    f.read(7)
 
 .. code-block:: console
 
     '1 - Ver'
 
 
-> f.read(7)
+.. code-block:: python
+
+    f.read(7)
 
 .. code-block:: console
 
     'de\n2 - '
 
-> f.read(7)
+.. code-block:: python
+
+    f.read(7)
 
 .. code-block:: console
 
     'Preto\n3'
 
-> f.read(7)
+.. code-block:: python
+
+    f.read(7)
 
 .. code-block:: console
 
@@ -320,13 +398,17 @@ bla bla bla:
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-> f.closed
+.. code-block:: python
+
+    f.closed
 
 .. code-block:: console
 
@@ -336,13 +418,17 @@ bla bla bla:
 
 bla bla bla:
 
-> f = open('/tmp/cores.txt', 'w')
+.. code-block:: python
+
+    f = open('/tmp/cores.txt', 'w')
 
 
 
 bla bla bla:
 
-> f.closed
+.. code-block:: python
+
+    f.closed
 
 .. code-block:: console
 
@@ -352,37 +438,49 @@ bla bla bla:
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-$ cat /tmp/cores.txt
+.. code-block:: bash
+
+    cat /tmp/cores.txt
 
 
 
 bla bla bla:
 
-> f = open('/tmp/cores.txt', 'w')
+.. code-block:: python
+
+    f = open('/tmp/cores.txt', 'w')
 
 
 
 bla bla bla:
 
-> f.write('1 - Verde\n')
+.. code-block:: python
+
+    f.write('1 - Verde\n')
 
 
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-$ cat /tmp/cores.txt
+.. code-block:: bash
+
+    cat /tmp/cores.txt
 
 .. code-block:: console
 
@@ -392,7 +490,9 @@ $ cat /tmp/cores.txt
 
 bla bla bla:
 
-> print(f.name)
+.. code-block:: python
+
+    print(f.name)
 
 .. code-block:: console
 
@@ -402,19 +502,25 @@ bla bla bla:
 
 bla bla bla:
 
-> f = open('/tmp/cores.txt', 'a')
+.. code-block:: python
+
+    f = open('/tmp/cores.txt', 'a')
 
 
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-$ cat /tmp/cores.txt
+.. code-block:: bash
+
+    cat /tmp/cores.txt
 
 .. code-block:: console
 
@@ -424,31 +530,41 @@ $ cat /tmp/cores.txt
 
 bla bla bla:
 
-> f = open('/tmp/cores.txt', 'a')
+.. code-block:: python
+
+    f = open('/tmp/cores.txt', 'a')
 
 
 
 bla bla bla:
 
-> f.write('2 - Preto\n')
+.. code-block:: python
+
+    f.write('2 - Preto\n')
 
 
 
 bla bla bla:
 
-> f.write('3 - Branco\n')
+.. code-block:: python
+
+    f.write('3 - Branco\n')
 
 
 
 bla bla bla:
 
-> f.flush()
+.. code-block:: python
+
+    f.flush()
 
 
 
 bla bla bla:
 
-$ cat /tmp/cores.txt
+.. code-block:: bash
+
+    cat /tmp/cores.txt
 
 .. code-block:: console
 
@@ -460,19 +576,25 @@ $ cat /tmp/cores.txt
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-> f = open('/tmp/cores.txt', 'r')
+.. code-block:: python
+
+    f = open('/tmp/cores.txt', 'r')
 
 
 
 bla bla bla:
 
-> f.tell()
+.. code-block:: python
+
+    f.tell()
 
 .. code-block:: console
 
@@ -482,7 +604,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.read()
+.. code-block:: python
+
+    f.read()
 
 .. code-block:: console
 
@@ -492,7 +616,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.tell()
+.. code-block:: python
+
+    f.tell()
 
 .. code-block:: console
 
@@ -502,7 +628,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.seek(0)
+.. code-block:: python
+
+    f.seek(0)
 
 .. code-block:: console
 
@@ -512,7 +640,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.tell()
+.. code-block:: python
+
+    f.tell()
 
 .. code-block:: console
 
@@ -522,7 +652,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.read(7)
+.. code-block:: python
+
+    f.read(7)
 
 .. code-block:: console
 
@@ -532,7 +664,9 @@ bla bla bla:
 
 bla bla bla:
 
-> f.tell()
+.. code-block:: python
+
+    f.tell()
 
 .. code-block:: console
 
@@ -542,37 +676,49 @@ bla bla bla:
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-> f = open('/tmp/planetas.txt', 'w')
+.. code-block:: python
+
+    f = open('/tmp/planetas.txt', 'w')
 
 
 
 bla bla bla:
 
-> planetas = ('Saturno\n', 'Urano\n', 'Netuno\n')
+.. code-block:: python
+
+    planetas = ('Saturno\n', 'Urano\n', 'Netuno\n')
 
 
 
 bla bla bla:
 
-> f.writelines(planetas)
+.. code-block:: python
+
+    f.writelines(planetas)
 
 
 
 bla bla bla:
 
-> f.flush()
+.. code-block:: python
+
+    f.flush()
 
 
 
 bla bla bla:
 
-$ cat /tmp/planetas.txt
+.. code-block:: bash
+
+    cat /tmp/planetas.txt
 
 .. code-block:: console
 
@@ -584,25 +730,33 @@ $ cat /tmp/planetas.txt
 
 bla bla bla:
 
-> planetas = ('Marte\n', 'Vênus\n', 'Plutão\n', 'Júpiter\n')
+.. code-block:: python
+
+    planetas = ('Marte\n', 'Vênus\n', 'Plutão\n', 'Júpiter\n')
 
 
 
 bla bla bla:
 
-> f.writelines(planetas)
+.. code-block:: python
+
+    f.writelines(planetas)
 
 
 
 bla bla bla:
 
-> f.close()
+.. code-block:: python
+
+    f.close()
 
 
 
 bla bla bla:
 
-$ cat /tmp/planetas.txt
+.. code-block:: bash
+
+    cat /tmp/planetas.txt
 
 .. code-block:: console
 

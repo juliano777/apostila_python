@@ -104,7 +104,15 @@
 <li class="toctree-l1"><a class="reference internal" href="staticmethod_classmethod.html">19. Método de Classe e Método Estático</a></li>
 <li class="toctree-l1"><a class="reference internal" href="property.html">20. Encapsulamento</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">21. Escopo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#escopo-de-funcao-externa">21.1. Escopo de Função Externa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#escopo-local-ou-dentro-de-funcao">21.1. Escopo Local ou Dentro de Função</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funcao-locals">21.1.1. Função locals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#escopo-interno-de-uma-funcao">21.1.2. Escopo Interno de uma Função</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#escopo-de-funcao-externa">21.2. Escopo de Função Externa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#escopo-global-ou-escopo-do-modulo">21.3. Escopo Global ou Escopo do Módulo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#escopo-builtins">21.4. Escopo __builtins__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcoes-globals-locals-e-vars-e-comando-global">21.5. Funções globals(), locals() e vars() e Comando global</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="if.html">22. if / elif / else</a></li>
@@ -199,14 +207,11 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <li><p>__builtins__</p></li>
 </ol>
 </div></blockquote>
-<ul>
-<li><p>Escopo Local ou Dentro de Função</p>
+<div class="section" id="escopo-local-ou-dentro-de-funcao">
+<h2><span class="section-number">21.1. </span>Escopo Local ou Dentro de Função<a class="headerlink" href="#escopo-local-ou-dentro-de-funcao" title="Link permanente para este título">¶</a></h2>
 <blockquote>
 <div><p>É o escopo que tem a maior prioridade.</p>
 </div></blockquote>
-</li>
-</ul>
-<p>Prática:</p>
 <p>Declaração de uma variável com seu valor:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="mi">7</span>
 </pre></div>
@@ -218,17 +223,27 @@ A ordem de busca de um identificador em escopos é a seguinte:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
-<p>A função locals() retorna um dicionário com os identificadores locais e seus
-respectivos valores.
-Então é pedido o valor dada a chave que é o nome da variável local.</p>
-<p>blablabla:</p>
+<div class="section" id="funcao-locals">
+<h3><span class="section-number">21.1.1. </span>Função locals<a class="headerlink" href="#funcao-locals" title="Link permanente para este título">¶</a></h3>
+<div class="line-block">
+<div class="line-block">
+<div class="line">A função locals() retorna um dicionário com os identificadores locais e seus respectivos valores.</div>
+</div>
+<div class="line">Então é pedido o valor dada a chave que é o nome da variável local.</div>
+</div>
+<p>Usando locals para retornar o valor de uma variável:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">locals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
-<p>Dentro de função</p>
+</div>
+<div class="section" id="escopo-interno-de-uma-funcao">
+<h3><span class="section-number">21.1.2. </span>Escopo Interno de uma Função<a class="headerlink" href="#escopo-interno-de-uma-funcao" title="Link permanente para este título">¶</a></h3>
+<div class="line-block">
+<div class="line">Diz respeito ao espaço delimitado de alcance, dentro de uma função.</div>
+</div>
 <p>Declaração de uma variável externamente ao escopo da função:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="mi">7</span>
 </pre></div>
@@ -240,8 +255,9 @@ Então é pedido o valor dada a chave que é o nome da variável local.</p>
     <span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Nota-se que dentro da função também há uma variável chamada “foo”.
-Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
+<div class="line-block">
+<div class="line">Nota-se que dentro da função também há uma variável chamada “foo”. Essa função imprime o ID desse identificador e depois imprime seu valor.</div>
+</div>
 <p>Exibindo o ID de foo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">foo</span><span class="p">))</span>
 </pre></div>
@@ -265,32 +281,27 @@ Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line-block">
-<div class="line">Nota-se também que bem como o ID e o valor retornados pela função,</div>
+<div class="line">Nota-se também que bem como o ID e o valor retornados pela função, da variável interna foo são diferentes da variável externa de mesmo nome.</div>
 </div>
-<div class="line">da variável interna foo são diferentes da variável externa de mesmo nome.</div>
+</div>
 </div>
 <div class="section" id="escopo-de-funcao-externa">
-<h2><span class="section-number">21.1. </span>Escopo de Função Externa<a class="headerlink" href="#escopo-de-funcao-externa" title="Link permanente para este título">¶</a></h2>
-<blockquote>
-<div><p>Ao se criar uma função dentro de outra, a função mais interna pode utilizar um</p>
-</div></blockquote>
-<p>identificador que esteja no nível mais acima.</p>
-<p>Prática:</p>
-<p>Definição da funcao:</p>
+<h2><span class="section-number">21.2. </span>Escopo de Função Externa<a class="headerlink" href="#escopo-de-funcao-externa" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">Ao se criar uma função dentro de outra, a função mais interna pode utilizar um identificador que esteja no nível mais acima.</div>
+</div>
+<p>Definição de uma função com uma função interna:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao_principal</span><span class="p">():</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">def</span> <span class="nf">funcao_secundaria</span><span class="p">():</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="n">funcao_secundaria</span><span class="p">()</span>
-
-<span class="n">A</span> <span class="n">função</span> <span class="n">principal</span> <span class="n">tem</span> <span class="n">uma</span> <span class="n">variável</span> <span class="n">x</span><span class="p">,</span> <span class="n">cujo</span> <span class="n">valor</span> <span class="n">é</span> <span class="n">impresso</span> <span class="n">em</span> <span class="n">tela</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>pela função secundária.</dt><dd><p>A função principal invoca a função secundária.</p>
-</dd>
-</dl>
+<div class="line-block">
+<div class="line">A função principal tem uma variável x, cujo valor é impresso em tela pela função secundária.</div>
+<div class="line">A função principal invoca a função secundária.</div>
+</div>
 <p>Chamando a função:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao_principal</span><span class="p">()</span>
 </pre></div>
@@ -317,139 +328,197 @@ Essa função imprime o ID desse identificador e depois imprime seu valor.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">2</span>
 </pre></div>
 </div>
-<p>Nota-se que o valor considerado foi o de “x”, que é o identificador mais interno.</p>
-<ul>
-<li><p>Escopo Global ou Escopo do Módulo</p>
-<p>É também conhecido como escopo de módulo devido ao fato de estar na endentação do mesmo.</p>
-</li>
-</ul>
-<p>Prática:</p>
-<p>Criação de variável</p>
-<p>foo = ‘bar’</p>
-<p>Criação de função</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>foo = ‘eggs’
-print(foo)</p>
-</dd>
-</dl>
-<p>A função criada tem uma variável com o mesmo nome que uma variável global, a ela dá um valor e
-imprime esse valor em tela.
-Será que isso altera o valor da variável global?</p>
-<p>Execução da função</p>
-<p>funcao()
-.. code-block:: console</p>
-<blockquote>
-<div><p>eggs</p>
-</div></blockquote>
-<p>Podemos notar que o valor impresso é igual ao da variável “foo” dentro da função.
-Pra saber se a variável global foi alterada, vamos testar com a função print.</p>
-<p>Imprimindo o valor da variável global</p>
-<p>print(foo)
-.. code-block:: console</p>
-<blockquote>
-<div><p>bar</p>
-</div></blockquote>
-<p>Pode-se concluir que a função criada não interferiu na variável global.
-Para alterar uma variável global em um contexto local precisamos utilizar o comando global.</p>
-<p>Criação de função que altera a variável global</p>
-<dl class="simple">
-<dt>def funcao():</dt><dd><p>global foo
-foo = ‘eggs’
-print(foo)</p>
-</dd>
-</dl>
-<p>Executar função</p>
-<p>funcao()
-.. code-block:: console</p>
-<blockquote>
-<div><p>eggs</p>
-</div></blockquote>
-<p>OK, a função imprimiu o valor local da função.
-Mas será que a variável global também foi alterada?</p>
-<p>Imprimir o valor da variável global</p>
-<p>print(foo)
-.. code-block:: console</p>
-<blockquote>
-<div><p>eggs</p>
-</div></blockquote>
-<p>Agora a função pôde alterar a variável global.
-Isso se deve ao fato do comando global ter sido empregado.
-A variável global a ser alterada deve ser declarada como global antes de sua
-atribuição.</p>
-<p>Escopo __builtins__</p>
-<blockquote>
-<div><p>O escopo __builtins__ abrange identificadores que já estão definidos antes mesmo do código a ser escrito.
-São funções, comandos e variáveis internas de Python.</p>
-</div></blockquote>
-<p>Prática:</p>
-<p>“str” é está em __builtins__?</p>
-<p>‘str’ in dir(__builtins__)
-True</p>
-<p>Resposta afirmativa (True), ou seja, “str” faz parte desse escopo.
-E se subscrevermos esse item localmente?</p>
-<p>Criando uma variável cujo identificador pertence ao escopo __builtins__
-str = 1</p>
-<p>Qual é o tipo?</p>
-<p>type(str)
-.. code-block:: console</p>
-<blockquote>
-<div><p>int</p>
-</div></blockquote>
-<p>“str” que inicialmente era um identificador para o tipo de strings em Python,
-aqui agora virou uma variável de inteiro.
-Mas e o tipo “str” deixou de existir?</p>
-<p>Qual o tipo?
-type(__builtins__.str)
-type</p>
-<p>É do tipo “tipo”</p>
-<p>Valor de str?</p>
-<p>str
-1</p>
-<p>__builtins__.str(str)
-‘1’</p>
-<p>del str</p>
-<p>str(7)
-.. code-block:: console</p>
-<blockquote>
-<div><p>‘7’</p>
-</div></blockquote>
-<p>dir(__builtins__)</p>
+<div class="line-block">
+<div class="line">Nota-se que o valor considerado foi o de “x”, que é o identificador mais interno.</div>
+</div>
+</div>
+<div class="section" id="escopo-global-ou-escopo-do-modulo">
+<h2><span class="section-number">21.3. </span>Escopo Global ou Escopo do Módulo<a class="headerlink" href="#escopo-global-ou-escopo-do-modulo" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">É também conhecido como escopo de módulo devido ao fato de estar na endentação do mesmo.</div>
+</div>
+<p>Criação de variável:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span>
+</pre></div>
+</div>
+<p>Criação de função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;eggs&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">A função criada tem uma variável com o mesmo nome que uma variável global, a ela dá um valor e imprime esse valor em tela.</div>
+<div class="line">Será que isso altera o valor da variável global?</div>
+</div>
+<p>Execução da função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">eggs</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Nota-se que o valor impresso é igual ao da variável “foo” dentro da função.</div>
+<div class="line">Pra saber se a variável global foi alterada, vamos testar com a função print.</div>
+</div>
+<p>Imprimindo o valor da variável global:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">bar</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Pode-se concluir que a função criada não interferiu na variável global.</div>
+<div class="line">Para alterar uma variável global em um contexto local precisamos utilizar o comando global.</div>
+</div>
+<p>Criação de função que altera a variável global:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">foo</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;eggs&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Executar função:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">funcao</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">eggs</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">OK, a função imprimiu o valor local da função.</div>
+<div class="line">Mas será que a variável global também foi alterada?</div>
+</div>
+<p>Imprimir o valor da variável global:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">eggs</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Agora a função pôde alterar a variável global. Isso se deve ao fato do comando global ter sido empregado.</div>
+<div class="line">A variável global a ser alterada deve ser declarada como global antes de sua atribuição.</div>
+</div>
+</div>
+<div class="section" id="escopo-builtins">
+<h2><span class="section-number">21.4. </span>Escopo __builtins__<a class="headerlink" href="#escopo-builtins" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">O escopo __builtins__ abrange identificadores que já estão definidos antes mesmo do código a ser escrito.</div>
+<div class="line">São funções, comandos e variáveis internas de Python.</div>
+</div>
+<p>“str” é está em __builtins__?:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;str&#39;</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Resposta afirmativa (True), ou seja, “str” faz parte desse escopo.</div>
+<div class="line">E se sobescrevermos esse item localmente?</div>
+</div>
+<p>Criando uma variável cujo identificador pertence ao escopo __builtins__:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Qual é o tipo?:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">“str” que inicialmente era um identificador para o tipo de strings em Python, aqui agora virou uma variável de inteiro.</div>
+<div class="line">Mas e o tipo “str” deixou de existir?</div>
+</div>
+<p>Qual o tipo?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">str</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">type</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">É do tipo “tipo”</div>
+</div>
+<p>Valor de str?:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1</span>
+</pre></div>
+</div>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">__builtins__</span><span class="o">.</span><span class="n">str</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1&#39;</span>
+</pre></div>
+</div>
+<p>Apagando a variável:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="nb">str</span>
+</pre></div>
+</div>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;7&#39;</span>
+</pre></div>
+</div>
+<p>bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">global nome_variavel</span>
 <span class="go">nome_variavel = valor</span>
 </pre></div>
 </div>
-<p># ==============================================================================</p>
-<p>Funções globals(), locals() e vars() e Comando global</p>
-<blockquote>
-<div><p>Cada uma das funções retornam dicionários de variáveis e seus respectivos valores.
-globals(): Retorna variáveis globais (escopo do módulo);
-locals(): Retorna variáveis locais (escopo local);
-vars(obj): sem argumentos é equivalente a locals(), com um argumento, equivalente a objeto.__dict__</p>
-</div></blockquote>
+</div>
+<div class="section" id="funcoes-globals-locals-e-vars-e-comando-global">
+<h2><span class="section-number">21.5. </span>Funções globals(), locals() e vars() e Comando global<a class="headerlink" href="#funcoes-globals-locals-e-vars-e-comando-global" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">Cada uma das funções retornam dicionários de variáveis e seus respectivos valores.</div>
+</div>
+<ul class="simple">
+<li><p>globals(): Retorna variáveis globais (escopo do módulo);</p></li>
+<li><p>locals(): Retorna variáveis locais (escopo local);</p></li>
+<li><p>vars(obj): sem argumentos é equivalente a locals(), com um argumento, equivalente a objeto.__dict__.</p></li>
+</ul>
 <p>bla bla bla:</p>
-<p>&gt; foo = ‘escopo global’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;escopo global&#39;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; def f():</dt><dd><p>foo = ‘escopo local’
-bar = ‘uma variável qualquer…’
-print(globals()[‘foo’])
-print(locals()[‘foo’])</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;escopo local&#39;</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;uma variável qualquer...&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">locals</span><span class="p">()[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">escopo global</span>
 <span class="go">escopo local</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; class Spam(object):</dt><dd><p>foo = ‘’
-bar = ‘’</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Spam</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; vars(Spam)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">vars</span><span class="p">(</span><span class="n">Spam</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&lt;dictproxy {&#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;Spam&#39; objects&gt;,</span>
 <span class="go"> &#39;__doc__&#39;: None,</span>
 <span class="go"> &#39;__module__&#39;: &#39;__main__&#39;,</span>
@@ -459,25 +528,33 @@ bar = ‘’</p>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; def f():</dt><dd><p>global x
-x = 7</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; type(x)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">NameError: name &#39;x&#39; is not defined</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; type(x)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; print(x)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>

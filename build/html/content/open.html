@@ -199,210 +199,318 @@ Um arquivo é iterável, cujas iterações são por linha.</p>
 ‘t’       Modo de texto (padrão);
 ‘+’       Abre um arquivo em disco para a atualização (leitura e escrita).</p>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/foo.txt’, ‘w+’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/foo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; type(f)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">_io.TextIOWrapper</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; print(‘Teste de escrita em arquivo’, file=f)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Teste de escrita em arquivo&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; print(‘ ‘, file=f)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; print(‘Uma linha qualquer’, file=f)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Uma linha qualquer&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/foo.txt’, ‘r’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/foo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; for line in f:</dt><dd><p>print(line.strip(‘n’))</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 <p>Fechamento de arquivo:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ cat &lt;&lt; EOF &gt; /tmp/linhas.txt
-linha_1
-linha_2
-linha_3
-EOF</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/linhas.txt</span>
+<span class="s">linha_1</span>
+<span class="s">linha_2</span>
+<span class="s">linha_3</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ cat /tmp/linhas.txt</p>
-<p>linha_1
-linha_2
-linha_3</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/linhas.txt
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">linha_1</span>
+<span class="go">linha_2</span>
+<span class="go">linha_3</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/linhas.txt’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/linhas.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.readline()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;linha_1\n&#39;</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.readline().split()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_2&#39;]</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.readline().split()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_3&#39;]</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.readline().split()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[]</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/linhas.txt’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/linhas.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.readlines()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_1\n&#39;, &#39;linha_2\n&#39;, &#39;linha_3\n&#39;]</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ cat &lt;&lt; EOF &gt; /tmp/teste.py
-#!/usr/bin/env python3
-#_*_ encoding: utf8 _*_</p>
-<p>import sys</p>
-<p>file_open = sys.argv[1]</p>
-<p>file_open = open(file_open, ‘r’)</p>
-<dl class="simple">
-<dt>for i in file_open:</dt><dd><p>print(i.strip())</p>
-</dd>
-</dl>
-<p>file_open.close()
-EOF</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/teste.py</span>
+<span class="s">#!/usr/bin/env python3</span>
+<span class="s">#_*_ encoding: utf8 _*_</span>
+
+<span class="s">import sys</span>
+
+<span class="s">file_open = sys.argv[1]</span>
+
+
+<span class="s">file_open = open(file_open, &#39;r&#39;)</span>
+
+<span class="s">for i in file_open:</span>
+<span class="s">    print(i.strip())</span>
+
+<span class="s">file_open.close()</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ chmod +x /tmp/teste.py</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x /tmp/teste.py
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ ./teste.py linhas.txt</p>
-<p>linha_1
-linha_2
-linha_3</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./teste.py linhas.txt
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">linha_1</span>
+<span class="go">linha_2</span>
+<span class="go">linha_3</span>
+</pre></div>
+</div>
 <p>O Método seek:</p>
-<p>$ cat &lt;&lt; EOF &gt; /tmp/cores.txt
-1 - Verde
-2 - Preto
-3 - Branco
-EOF</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/cores.txt</span>
+<span class="s">1 - Verde</span>
+<span class="s">2 - Preto</span>
+<span class="s">3 - Branco</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/cores.txt’, ‘r’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
-</dd>
-</dl>
-<p>1 - Verde
-2 - Preto
-3 - Branco</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">-</span> <span class="n">Verde</span>
+<span class="mi">2</span> <span class="o">-</span> <span class="n">Preto</span>
+<span class="mi">3</span> <span class="o">-</span> <span class="n">Branco</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.seek(0)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
 <span class="go">2 - Preto</span>
 <span class="go">3 - Branco</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.seek(1)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<dl class="simple">
-<dt>&gt; for i in f:</dt><dd><p>print(i.strip())</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
 <span class="go">2 - Preto</span>
 <span class="go">3 - Branco</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.seek(0)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<p>&gt; f.read(7)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Ver&#39;</span>
 </pre></div>
 </div>
-<p>&gt; f.read(7)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;de\n2 - &#39;</span>
 </pre></div>
 </div>
-<p>&gt; f.read(7)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Preto\n3&#39;</span>
 </pre></div>
 </div>
-<p>&gt; f.read(7)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; - Bran&#39;</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.closed</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/cores.txt’, ‘w’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.closed</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">closed</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ cat /tmp/cores.txt</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/cores.txt
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/cores.txt’, ‘w’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.write(‘1 - Verden’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;1 - Verde</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ cat /tmp/cores.txt</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/cores.txt
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; print(f.name)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/tmp/cores.txt</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/cores.txt’, ‘a’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>$ cat /tmp/cores.txt</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/cores.txt
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/cores.txt’, ‘a’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.write(‘2 - Preton’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;2 - Preto</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.write(‘3 - Brancon’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;3 - Branco</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.flush()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/cores.txt</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
@@ -411,54 +519,82 @@ EOF</p>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/cores.txt’, ‘r’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.tell()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.read()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Verde\n2 - Preto\n3 - Branco\n&#39;</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.tell()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">31</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.seek(0)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.tell()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.read(7)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Ver&#39;</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.tell()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+</pre></div>
+</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f = open(‘/tmp/planetas.txt’, ‘w’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/planetas.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; planetas = (‘Saturnon’, ‘Uranon’, ‘Netunon’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">planetas</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Saturno</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Urano</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Netuno</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.writelines(planetas)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">planetas</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.flush()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/planetas.txt</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Saturno</span>
@@ -467,11 +603,17 @@ EOF</p>
 </pre></div>
 </div>
 <p>bla bla bla:</p>
-<p>&gt; planetas = (‘Marten’, ‘Vênusn’, ‘Plutãon’, ‘Júpitern’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">planetas</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Marte</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Vênus</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Plutão</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Júpiter</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.writelines(planetas)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">planetas</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
-<p>&gt; f.close()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>bla bla bla:</p>
 <p>$ cat /tmp/planetas.txt</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Saturno</span>
