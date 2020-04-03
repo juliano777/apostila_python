@@ -478,7 +478,7 @@ Função de teste:
 
 
 
-bla bla bla:
+Verificando o tipo:
 
 .. code-block:: python
 
