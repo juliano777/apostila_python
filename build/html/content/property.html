@@ -106,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#modificador-private">20.1. Modificador Private (__)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#property">20.2. Property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#property-como-decorator">20.3. Property como Decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#descriptors">20.4. Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scope.html">21. Escopo</a></li>
@@ -261,8 +262,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">__velocidade</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.  .  .</span>
-<span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;__velocidade&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">AttributeError: &#39;Carro&#39; object has no attribute &#39;__velocidade&#39;</span>
 </pre></div>
 </div>
 <p>Acessando a property velocidade:</p>
@@ -375,6 +375,76 @@
 </div>
 <div class="line-block">
 <div class="line">Repetir os comandos do exercício anterior ;)</div>
+</div>
+</div>
+<div class="section" id="descriptors">
+<h2><span class="section-number">20.4. </span>Descriptors<a class="headerlink" href="#descriptors" title="Link permanente para este título">¶</a></h2>
+<div class="line-block">
+<div class="line">São objetos Python que implementam um método do protocolo descritor, que nos permite criar objetos que</div>
+</div>
+<p>tenham um comportamento desejado quando seus atributos são acessados por outros objetos.</p>
+<p>Criação de uma classe descriptor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Verbose</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">7</span>
+
+    <span class="k">def</span> <span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;Não pode mudar o valor!!!&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__delete__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;Não pode remover o atributo!!!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Criação de uma classe de teste para o descriptor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">atributo</span> <span class="o">=</span> <span class="n">Verbose</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Instanciação da classe Foo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Verificação do tipo do atributo que utiliza o descriptor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">atributo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">int</span>
+</pre></div>
+</div>
+<p>Exibe o valor do atributo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">atributo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
+</div>
+<p>Tentativa de atribuir um novo valor ao atributo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">.</span><span class="n">atributo</span> <span class="o">=</span> <span class="mi">9</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">AttributeError: Não pode mudar o valor!!!</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Houve um lançamento de exceção ao tentar redefinir o valor do atributo.</div>
+</div>
+<p>Tentativa de remover o atributo do objeto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">o</span><span class="o">.</span><span class="n">atributo</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">AttributeError: Não pode remover o atributo!!!</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Houve um lançamento de exceção ao tentar remover o atributo.</div>
+</div>
+<p>Verificando se o atributo foi alterado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">atributo</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
+</pre></div>
 </div>
 </div>
 </div>

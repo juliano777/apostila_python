@@ -103,7 +103,6 @@ Tentativa de acesso ao atributo privado:
 
 .. code-block:: console
 
-    .  .  .
     AttributeError: 'Carro' object has no attribute '__velocidade'
 
 
@@ -230,7 +229,7 @@ Tentativa de acesso à property apagada:
 
 
 Property como Decorator
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 |   Além da já citada implementação de property, pode-se também fazer isso por meio de decorators.
 
