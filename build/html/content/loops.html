@@ -194,9 +194,9 @@
 <div class="section" id="while">
 <h2><span class="section-number">23.1. </span>while<a class="headerlink" href="#while" title="Link permanente para este título">¶</a></h2>
 <p>Executa em laço (loop) enquanto a condição for verdadeira.</p>
+<p>Enquanto i for menor que 5, exiba i:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># Enquanto i for menor que 5</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -211,12 +211,12 @@
 </div>
 <div class="section" id="o-else-no-loop-while">
 <h3><span class="section-number">23.1.1. </span>O else no loop while<a class="headerlink" href="#o-else-no-loop-while" title="Link permanente para este título">¶</a></h3>
-<blockquote>
-<div><p>Opcionalmente, pode-se adicionar um else ao while em Python.
-A idéia é que se caso o loop seja executado sem interrupção, um break, por exemplo, o que estiver dentro do bloco else será executado.</p>
-</div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="line-block">
+<div class="line">Opcionalmente, pode-se adicionar um else ao while em Python.</div>
+<div class="line">A idéia é que se caso o loop seja executado sem interrupção, um break, por exemplo, o que estiver dentro do bloco else será executado.</div>
+</div>
+<p>Loop while com else sem interrupção:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -232,10 +232,9 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">Fim</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<p>Loop while com else com interrupção (break):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1">#</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span> <span class="k">break</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -251,10 +250,9 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">4</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<p>Loop while com else e sem break:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1">#</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -276,8 +274,11 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 </div>
 <div class="section" id="loop-infinito">
 <h3><span class="section-number">23.1.2. </span>Loop Infinito<a class="headerlink" href="#loop-infinito" title="Link permanente para este título">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<div class="line-block">
+<div class="line">Bla bla bla</div>
+</div>
+<p>Enquanto não houver uma interrupção externa, o loop abaixo exibirá “x” eternamente:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -290,8 +291,11 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 </div>
 <div class="section" id="for">
 <h3><span class="section-number">23.1.3. </span>for<a class="headerlink" href="#for" title="Link permanente para este título">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<div class="line-block">
+<div class="line">Bla bla bla</div>
+</div>
+<p>Um simples loop for com a função range:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -302,10 +306,9 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">4</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">lor</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gandalf&#39;</span><span class="p">,</span> <span class="s1">&#39;Bilbo&#39;</span><span class="p">,</span> <span class="s1">&#39;Frodo&#39;</span><span class="p">,</span> <span class="s1">&#39;Sauron&#39;</span><span class="p">,</span> <span class="s1">&#39;Aragorn&#39;</span><span class="p">,</span> <span class="s1">&#39;Legolas&#39;</span><span class="p">)</span>
+<p>Loop sobre os elementos de uma tupla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lor</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gandalf&#39;</span><span class="p">,</span> <span class="s1">&#39;Bilbo&#39;</span><span class="p">,</span> <span class="s1">&#39;Frodo&#39;</span><span class="p">,</span> <span class="s1">&#39;Sauron&#39;</span><span class="p">,</span> <span class="s1">&#39;Aragorn&#39;</span><span class="p">,</span> <span class="s1">&#39;Legolas&#39;</span><span class="p">)</span>
 
-<span class="c1">#</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lor</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
@@ -318,8 +321,9 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">Legolas</span>
 </pre></div>
 </div>
+<p>Loop sobr os elementos da tupla enumerados:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">personagem</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lor</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">personagem</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">personagem</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0 - Gandalf</span>
@@ -330,17 +334,16 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">5 - Legolas</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">lor</span><span class="p">))</span>
+<p>Enumerando a tupla e convertendo-a para uma lista:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">lor</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[(0, &#39;Gandalf&#39;), (1, &#39;Bilbo&#39;), (2, &#39;Frodo&#39;), (3, &#39;Sauron&#39;), (4, &#39;Aragorn&#39;), (5, &#39;Legolas&#39;)]</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">dados</span> <span class="o">=</span>  <span class="p">[(</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Sobrenome&#39;</span><span class="p">,</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Idade&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)]</span>
+<p>Lista cujos elementos são tuplas cujos elementos representam chave e valor, e por fim loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dados</span> <span class="o">=</span>  <span class="p">[(</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Sobrenome&#39;</span><span class="p">,</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Idade&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)]</span>
 
-<span class="c1">#</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dados</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -350,17 +353,16 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">Idade: 50</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="n">dados</span> <span class="o">=</span> <span class="p">{</span>
+<p>Bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dados</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;Nome&#39;</span><span class="p">:</span> <span class="s1">&#39;Chiquinho&#39;</span><span class="p">,</span>
     <span class="s1">&#39;Sobrenome&#39;</span><span class="p">:</span> <span class="s1">&#39;da Silva&#39;</span><span class="p">,</span>
     <span class="s1">&#39;Idade&#39;</span><span class="p">:</span> <span class="mi">50</span>
 <span class="p">}</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-<span class="c1">#</span>
-<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dados</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</pre></div>
+</div>
+<p>Bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dados</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -369,8 +371,8 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">Nome: Chiquinho</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<p>Bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fim&#39;</span><span class="p">)</span>
@@ -384,8 +386,8 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">Fim</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<p>Bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -401,8 +403,8 @@ A idéia é que se caso o loop seja executado sem interrupção, um break, por e
 <span class="go">5</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<p>Bla bla bla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">continue</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
