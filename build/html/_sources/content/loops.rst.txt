@@ -221,7 +221,7 @@ Lista cujos elementos são tuplas cujos elementos representam chave e valor, e p
 
 
 
-Bla bla bla:
+Criação de um dicionário:
 
 .. code-block:: python
 
@@ -233,7 +233,7 @@ Bla bla bla:
 
 
 
-Bla bla bla:
+Loop sobre um dicionário:
 
 .. code-block:: python
 
@@ -248,7 +248,7 @@ Bla bla bla:
 
 
 
-Bla bla bla:
+Loop for com else e sem interrupção:
 
 .. code-block:: python
 
@@ -268,7 +268,7 @@ Bla bla bla:
 
 
 
-Bla bla bla:
+Loop for com else e com interrupção:
 
 .. code-block:: python
 
@@ -290,7 +290,7 @@ Bla bla bla:
 
 
 
-Bla bla bla:
+Loop for com else e sem interrupção:
 
 .. code-block:: python
 

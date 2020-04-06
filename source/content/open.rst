@@ -2,22 +2,28 @@ open
 ****
 
 
-	É a forma nativa de Python para manipular arquivos (leitura e escrita).
-	A partir da versão 3 de Python use preferencialmente open, pois file foi removido.
-	Um arquivo é iterável, cujas iterações são por linha.
+|   É a forma nativa de Python para manipular arquivos (leitura e escrita).
+|   Um arquivo é iterável, cujas iterações são por linha.
 
-open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None) 
+`open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)`
 
-Modos
-
---------- ---------------------------------------------------------------
-'r'       Leitura (padrão);
-'w'       Escrita (novo arquivo, ou se o mesmo existir será truncado);
-'x'       Cria um novo arquivo e o abre para escrita;
-'a'       Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente);
-'b'       Modo binário;
-'t'       Modo de texto (padrão);
-'+'       Abre um arquivo em disco para a atualização (leitura e escrita).
+ +------+--------------------------------------------------------------------------+
+| Modo | Descrição                                                                |
++------+--------------------------------------------------------------------------+
+| r    | Leitura (padrão).                                                        |
++------+--------------------------------------------------------------------------+
+| w    | Escrita (novo arquivo, ou se o mesmo existir será truncado).             |
++------+--------------------------------------------------------------------------+
+| x    | Cria um novo arquivo e o abre para escrita.                              |
++------+--------------------------------------------------------------------------+
+| a    | Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente). |
++------+--------------------------------------------------------------------------+
+| b    | Modo binário.                                                            |
++------+--------------------------------------------------------------------------+
+| t    | Modo de texto (padrão).                                                  |
++------+--------------------------------------------------------------------------+
+| +    | Abre um arquivo em disco para a atualização (leitura e escrita).         |
++------+--------------------------------------------------------------------------+
 
 
 
