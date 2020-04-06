@@ -174,14 +174,20 @@ O valor de y depende de x:
 
 
 
-if Ternário
-~~~~~~~~~~~
+Operador Ternário
+~~~~~~~~~~~~~~~~~
 
-|   bla bla bla
+|   Um recurso bastante interessante em outras linguagens como em C, por exemplo.
+|   Seu objetivo é abreviar um bloco if em apenas uma linha.
+
+**Sintaxe**:
+
+|   `retorno_se_verdadeiro if condição else retorno_se_falso`
 
 
 
-bla bla bla:
+
+Declaração de uma variável x com valor, atribui a y o resultado e exibe seu valor:
 
 .. code-block:: python
 
@@ -199,11 +205,10 @@ bla bla bla:
 
 
 
-bla bla bla:    
+Variável float para receber a nota:    
 
 .. code-block:: python
 
-    # Variável float para receber a nota:
     nota = float(input('Digite a nota do aluno: '))
 
 .. code-block:: console
@@ -212,21 +217,19 @@ bla bla bla:
 
 
 
-bla bla bla:    
+Atribuição condicional:
 
 .. code-block:: python
 
-    # Atribuição condicional:
     estado = 'aprovado' if nota >= 7 else 'reprovado'
 
 
 
-bla bla bla:    
+Exibe a mensagem:
 
 .. code-block:: python
 
-    # Exibe a mensagem:
-    print('Aluno {estado}!')
+    print(f'Aluno {estado}!')
 
 .. code-block:: console
 
@@ -234,11 +237,10 @@ bla bla bla:
 
 
 
-bla bla bla:
+Variável int:
 
 .. code-block:: python
 
-    # Variável int:
     num = int(input('Digite um número: '))
 
 .. code-block:: console
@@ -247,14 +249,18 @@ bla bla bla:
 
 
 
-bla bla bla:    
+Atribuição condicional:
 
 .. code-block:: python
 
-    # Atribuição condicional:
     sinal = 'positivo' if num > 0 else 'negativo' if num < 0 else 'zero'
 
-    # Exibe mensagem:
+
+
+Exibe mensagem:
+
+.. code-block:: python
+
     print(f'O número é {sinal}'
 
 .. code-block:: console
