@@ -149,9 +149,8 @@ for
 
 .. code-block:: python
 
-    #     
     for i, personagem in enumerate(lor):
-        print('%d - %s' % (i, personagem))
+        print(f'{i} - {personagem}'
 
 .. code-block:: console
 
@@ -178,7 +177,7 @@ for
 
     # 
     for k, v in dados:
-        print('%s: %s' % (k, v))
+        print(f'{k}: {v}')
 
 .. code-block:: console
 
@@ -199,7 +198,7 @@ for
 
     # 
     for k, v in dados.items():
-        print('%s: %s' % (k, v))
+        print(f'{k}: {v}')
 
 .. code-block:: console
 

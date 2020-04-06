@@ -8,10 +8,9 @@ Executa em laço (loop) enquanto a condição for verdadeira.
 
 .. code-block:: python
 
-    # 
     i = 0
 
-    # 
+    # Enquanto i for menor que 5
     while i < 5:
         print(i)
         i += 1
