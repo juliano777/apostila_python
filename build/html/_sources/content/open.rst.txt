@@ -2,13 +2,12 @@ open
 ****
 
 
-	É a forma nativa de Python para manipular arquivos (leitura e escrita).
-	A partir da versão 3 de Python use preferencialmente open, pois file foi removido.
-	Um arquivo é iterável, cujas iterações são por linha.
+|   É a forma nativa de Python para manipular arquivos (leitura e escrita).
+|   Um arquivo é iterável, cujas iterações são por linha.
 
-open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None) 
+`open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)`
 
- +------+--------------------------------------------------------------------------+
++------+--------------------------------------------------------------------------+
 | Modo | Descrição                                                                |
 +------+--------------------------------------------------------------------------+
 | r    | Leitura (padrão).                                                        |

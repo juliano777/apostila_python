@@ -183,46 +183,39 @@
             
   <div class="section" id="open">
 <h1><span class="section-number">24. </span>open<a class="headerlink" href="#open" title="Link permanente para este título">¶</a></h1>
-<blockquote>
-<div><p>É a forma nativa de Python para manipular arquivos (leitura e escrita).
-A partir da versão 3 de Python use preferencialmente open, pois file foi removido.
-Um arquivo é iterável, cujas iterações são por linha.</p>
-</div></blockquote>
-<p>open(file, mode=’r’, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</p>
-<blockquote>
-<div><table class="docutils align-default">
-<tbody>
-</tbody>
-</table>
-</div></blockquote>
 <div class="line-block">
-<div class="line">Modo | Descrição                                                                |</div>
+<div class="line">É a forma nativa de Python para manipular arquivos (leitura e escrita).</div>
+<div class="line">Um arquivo é iterável, cujas iterações são por linha.</div>
 </div>
+<p><cite>open(file, mode=’r’, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</cite></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 93%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>r</p></td>
+<tr class="row-odd"><td><p>Modo</p></td>
+<td><p>Descrição</p></td>
+</tr>
+<tr class="row-even"><td><p>r</p></td>
 <td><p>Leitura (padrão).</p></td>
 </tr>
-<tr class="row-even"><td><p>w</p></td>
+<tr class="row-odd"><td><p>w</p></td>
 <td><p>Escrita (novo arquivo, ou se o mesmo existir será truncado).</p></td>
 </tr>
-<tr class="row-odd"><td><p>x</p></td>
+<tr class="row-even"><td><p>x</p></td>
 <td><p>Cria um novo arquivo e o abre para escrita.</p></td>
 </tr>
-<tr class="row-even"><td><p>a</p></td>
+<tr class="row-odd"><td><p>a</p></td>
 <td><p>Escrita (append; o novo conteúdo é adicionado ao arquivo pré existente).</p></td>
 </tr>
-<tr class="row-odd"><td><p>b</p></td>
+<tr class="row-even"><td><p>b</p></td>
 <td><p>Modo binário.</p></td>
 </tr>
-<tr class="row-even"><td><p>t</p></td>
+<tr class="row-odd"><td><p>t</p></td>
 <td><p>Modo de texto (padrão).</p></td>
 </tr>
-<tr class="row-odd"><td><ul class="simple">
+<tr class="row-even"><td><ul class="simple">
 <li></li>
 </ul>
 </td>
