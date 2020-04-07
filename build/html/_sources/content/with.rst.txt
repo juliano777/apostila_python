@@ -9,16 +9,14 @@ Criação de um arquivo via shell do shell do sistema operacional:
 
 .. code-block:: bash
 
-    # 
-    $ cat << EOF > /tmp/numbers.txt
+    cat << EOF > /tmp/numbers.txt
     1
     2
     3
     EOF
 
 
-    #     
-    $ cat << EOF > /tmp/numbers_str.txt
+    cat << EOF > /tmp/numbers_str.txt
     1
     2
     three
@@ -229,6 +227,6 @@ Exemplo de with com conexão a uma base de dados PostgreSQL:
 
     ===== __enter__ =====
 
-    Teste...
+    Hello, World!
 
     ===== __exit__ =====

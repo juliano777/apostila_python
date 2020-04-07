@@ -5,32 +5,22 @@ with
 
 
 
-Criação de um arquivo via shell do shell do sistema operacional:
+Criação de um arquivo via shell do sistema operacional:
 
 .. code-block:: bash
 
-    # 
-    $ cat << EOF > /tmp/numbers.txt
+    cat << EOF > /tmp/numbers.txt
     1
     2
     3
     EOF
 
 
-    #     
-    $ cat << EOF > /tmp/numbers_str.txt
-    1
-    2
-    three
-    EOF
 
-
-
-Bla bla bla:
+Abrir o arquivo em modo leitura:
 
 .. code-block:: python
 
-    # Abrir o arquivo em modo leitura:    
     f = open('/tmp/numbers.txt', 'r')
 
     # Loop:
@@ -64,7 +54,6 @@ Bla bla bla:
 
 .. code-block:: python
 
-    # 
     f = open('/tmp/numbers_str.txt', 'r')
     for line in f:
         print(int(line))
