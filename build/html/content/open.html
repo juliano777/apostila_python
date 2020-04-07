@@ -220,47 +220,47 @@
 </tr>
 </tbody>
 </table>
-<p>bla bla bla:</p>
+<p>Supondo que o arquivo não exista, criação do mesmo para leitura e escrita:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/foo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificando o tipo de f:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">_io.TextIOWrapper</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Escrevendo no arquivo com a função print:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Teste de escrita em arquivo&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Uma linha em branco:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Mais uma linha…:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Uma linha qualquer&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Fechando o objeto e aplicando todas as escritas feitas:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Reabrindo o arquivo para somente leitura:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/foo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Imprimir o arquivo em tela linha por linha:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Fechamento de arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>No shell do sistema operacional usar o recurso heredoc para criar linhas em um novo arquivo:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/linhas.txt</span>
 <span class="s">linha_1</span>
 <span class="s">linha_2</span>
@@ -268,7 +268,7 @@
 <span class="s">EOF</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Exibir as linhas:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/linhas.txt
 </pre></div>
 </div>
@@ -277,82 +277,85 @@
 <span class="go">linha_3</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Em um shell Python abrir o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/linhas.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método readline:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;linha_1\n&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método split na saída do método readline (3X):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_2&#39;]</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</pre></div>
-</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_3&#39;]</span>
-</pre></div>
-</div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[]</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<div class="line-block">
+<div class="line">O método readline interagiu para cada linha retornando-a até não ter mais nada a ler no arquivo.</div>
+</div>
+<p>Fechando o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Reabrindo o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/linhas.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método readlines:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[&#39;linha_1\n&#39;, &#39;linha_2\n&#39;, &#39;linha_3\n&#39;]</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<div class="line-block">
+<div class="line">O método readlines retorna cada linha do arquivo como um elemento de uma lista.</div>
+</div>
+<p>Fechando o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/teste.py</span>
-<span class="s">#!/usr/bin/env python3</span>
-<span class="s">#_*_ encoding: utf8 _*_</span>
-
-<span class="s">import sys</span>
-
-<span class="s">file_open = sys.argv[1]</span>
-
-
-<span class="s">file_open = open(file_open, &#39;r&#39;)</span>
-
-<span class="s">for i in file_open:</span>
-<span class="s">    print(i.strip())</span>
-
-<span class="s">file_open.close()</span>
-<span class="s">EOF</span>
+<p>Criar um script Python cujo comportamento é o mesmo do utilitário shell cat:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /tmp/cat.py
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x /tmp/teste.py
+<p>Código Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1">#_*_ encoding: utf8 _*_</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Primeiro argumento do script</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Abrir o arquivo como somente leitura (sobrescreve a variável original)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="c1"># Para cada linha imprimir, com o método strip suprimindo linhas em branco</span>
+<span class="c1"># desnecessárias. (Supressão de \n no final de cada linha)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./teste.py linhas.txt
+<p>Tornar o script executável:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x /tmp/cat.py
+</pre></div>
+</div>
+<p>Teste do script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/tmp/cat.py /tmp/linhas.txt
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">linha_1</span>
@@ -360,7 +363,7 @@
 <span class="go">linha_3</span>
 </pre></div>
 </div>
-<p>O Método seek:</p>
+<p>Novo arquivo criado via shell do sistema operacional:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat <span class="s">&lt;&lt; EOF &gt; /tmp/cores.txt</span>
 <span class="s">1 - Verde</span>
 <span class="s">2 - Preto</span>
@@ -368,11 +371,11 @@
 <span class="s">EOF</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Abrir o arquivo em modo somente leitura:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Um simples loop for sobre o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </pre></div>
@@ -382,16 +385,16 @@
 <span class="mi">3</span> <span class="o">-</span> <span class="n">Branco</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Nova execução do loop:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método seek; posição 0 do cursor:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Nova execução do loop:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </pre></div>
@@ -401,139 +404,117 @@
 <span class="go">3 - Branco</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Posição 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Nova execução do loop:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">- Verde</span>
 <span class="go">2 - Preto</span>
 <span class="go">3 - Branco</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Posição 0 (zero) do cursor:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
-</pre></div>
-</div>
+<p>Lê as 7 (sete) primeiras posições:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Ver&#39;</span>
 </pre></div>
 </div>
+<p>Ler as próximas 7 (sete) posições (repetir):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;de\n2 - &#39;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-</div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;Preto\n3&#39;</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39; - Bran&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Fechar o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificar se o arquivo está fechado como o atributo closed:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">closed</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">True</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Abrir o arquivo como escrita:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificar se o arquivo está fechado como o atributo closed:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">closed</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">False</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Fechar o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificar o conteúdo do arquivo via shell do sistema operacional:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/cores.txt
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Abrir p arquivo como escrita:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Escrever no arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;1 - Verde</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Fechar o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificar o conteúdo do arquivo via shell do sistema operacional:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/cores.txt
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<div class="line-block">
+<div class="line">Todo o conteúdo foi substituído por essa linha…</div>
+</div>
+<p>Exibir a localização do arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/tmp/cores.txt</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Abrir o arquivo em modo append:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>bla bla bla:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/cores.txt
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">1 - Verde</span>
-</pre></div>
-</div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>bla bla bla:</p>
+<p>Adicionar novas linhas ao arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;2 - Preto</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;3 - Branco</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;3 - Branco</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>bla bla bla:</p>
+<p>Efetivar a escrita no arquivo sem fechá-lo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificar o conteúdo do arquivo via shell do sistema operacional:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/cores.txt
 </pre></div>
 </div>
@@ -542,84 +523,84 @@
 <span class="go">3 - Branco</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Fechar o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Abrir o arquivo em modo leitura:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/cores.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método tell; retorna a posição atual:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método read:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Verde\n2 - Preto\n3 - Branco\n&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Veriricando a atual posição:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">31</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método seek recoloca o cursor na posição 0 (zero):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método tell confirma:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">0</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Ler 7 (sete) posições adiante:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&#39;1 - Ver&#39;</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Método tell:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">7</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Fechar o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Criar um novo arquivo como escrita:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/tmp/planetas.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Tupla com 3 (três) elementos:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">planetas</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Saturno</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Urano</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Netuno</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Escreve linhas no arquivo com os elementos da tupla:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">planetas</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Efetiva a escrita:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificando o conteúdo do arquivo via shell do sistema operacional:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/planetas.txt
 </pre></div>
 </div>
@@ -628,19 +609,19 @@
 <span class="go">Netuno</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Redefinindo a tupla com outros elementos:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">planetas</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Marte</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Vênus</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Plutão</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Júpiter</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Escrevendo (adicionando) linhas:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">planetas</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Fechar o arquivo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>bla bla bla:</p>
+<p>Verificando o conteúdo do arquivo via shell do sistema operacional:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /tmp/planetas.txt
 </pre></div>
 </div>

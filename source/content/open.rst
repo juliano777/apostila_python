@@ -27,7 +27,7 @@ open
 
 
 
-bla bla bla:
+Supondo que o arquivo não exista, criação do mesmo para leitura e escrita:
 
 .. code-block:: python
 
@@ -35,7 +35,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificando o tipo de f:
 
 .. code-block:: python
 
@@ -47,7 +47,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Escrevendo no arquivo com a função print:
 
 .. code-block:: python
 
@@ -55,7 +55,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Uma linha em branco:
 
 .. code-block:: python
 
@@ -63,7 +63,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Mais uma linha...:
 
 .. code-block:: python
 
@@ -71,7 +71,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Fechando o objeto e aplicando todas as escritas feitas:
 
 .. code-block:: python
 
@@ -79,7 +79,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Reabrindo o arquivo para somente leitura:
 
 .. code-block:: python
 
@@ -87,12 +87,12 @@ bla bla bla:
 
 
 
-bla bla bla:
+Imprimir o arquivo em tela linha por linha:
 
 .. code-block:: python
 
     for line in f:
-    print(line.strip('\n'))
+        print(line.strip('\n'))
 
 
 
@@ -104,7 +104,7 @@ Fechamento de arquivo:
 
 
 
-bla bla bla:
+No shell do sistema operacional usar o recurso heredoc para criar linhas em um novo arquivo:
 
 .. code-block:: bash
 
@@ -116,7 +116,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Exibir as linhas:
 
 .. code-block:: bash
 
@@ -130,7 +130,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Em um shell Python abrir o arquivo:
 
 .. code-block:: python
 
@@ -138,7 +138,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método readline:
 
 .. code-block:: python
 
@@ -150,7 +150,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método split na saída do método readline (3X):
 
 .. code-block:: python
 
@@ -161,32 +161,20 @@ bla bla bla:
     ['linha_2']
 
 
-
-bla bla bla:
-
-.. code-block:: python
-
-    f.readline().split()
-
 .. code-block:: console
 
     ['linha_3']
 
 
-
-bla bla bla:
-
-.. code-block:: python
-
-    f.readline().split()
-
 .. code-block:: console
 
     []
 
+|   O método readline interagiu para cada linha retornando-a até não ter mais nada a ler no arquivo.    
 
 
-bla bla bla:
+
+Fechando o arquivo:
 
 .. code-block:: python
 
@@ -194,7 +182,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Reabrindo o arquivo:
 
 .. code-block:: python
 
@@ -202,7 +190,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método readlines:
 
 .. code-block:: python
 
@@ -212,9 +200,11 @@ bla bla bla:
 
     ['linha_1\n', 'linha_2\n', 'linha_3\n']
 
+|   O método readlines retorna cada linha do arquivo como um elemento de uma lista.    
 
 
-bla bla bla:
+
+Fechando o arquivo:
 
 .. code-block:: python
 
@@ -222,42 +212,51 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criar um script Python cujo comportamento é o mesmo do utilitário shell cat:
 
 .. code-block:: bash
 
-    cat << EOF > /tmp/teste.py
+    vim /tmp/cat.py
+
+
+
+Código Python:
+
+.. code-block:: python
+
     #!/usr/bin/env python3
     #_*_ encoding: utf8 _*_
 
     import sys
 
-    file_open = sys.argv[1]
+    # Primeiro argumento do script
+    f = sys.argv[1]
 
+    # Abrir o arquivo como somente leitura (sobrescreve a variável original)
+    f = open(f, 'r')
 
-    file_open = open(file_open, 'r')
-
-    for i in file_open:
+    # Para cada linha imprimir, com o método strip suprimindo linhas em branco
+    # desnecessárias. (Supressão de \n no final de cada linha)
+    for i in f:
         print(i.strip())
 
-    file_open.close()
-    EOF
+    f.close()
 
 
 
-bla bla bla:
-
-.. code-block:: bash
-
-    chmod +x /tmp/teste.py
-
-
-
-bla bla bla:
+Tornar o script executável:
 
 .. code-block:: bash
 
-    ./teste.py linhas.txt
+    chmod +x /tmp/cat.py
+
+
+
+Teste do script:
+
+.. code-block:: bash
+
+    /tmp/cat.py /tmp/linhas.txt
 
 .. code-block:: console
 
@@ -267,7 +266,7 @@ bla bla bla:
 
 
 
-O Método seek:
+Novo arquivo criado via shell do sistema operacional:
 
 .. code-block:: bash
 
@@ -279,7 +278,7 @@ O Método seek:
 
 
 
-bla bla bla:
+Abrir o arquivo em modo somente leitura:
 
 .. code-block:: python
 
@@ -287,7 +286,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Um simples loop for sobre o arquivo:
 
 .. code-block:: python
 
@@ -302,7 +301,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Nova execução do loop:
 
 .. code-block:: python
 
@@ -311,7 +310,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método seek; posição 0 do cursor:
 
 .. code-block:: python
 
@@ -319,7 +318,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Nova execução do loop:
 
 .. code-block:: python
 
@@ -334,7 +333,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Posição 1:
 
 .. code-block:: python
 
@@ -342,7 +341,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Nova execução do loop:
 
 .. code-block:: python
 
@@ -351,21 +350,21 @@ bla bla bla:
 
 .. code-block:: console
 
-    1 - Verde
+    - Verde
     2 - Preto
     3 - Branco
 
 
 
-bla bla bla:
+Posição 0 (zero) do cursor:
 
 .. code-block:: python
 
     f.seek(0)
 
-.. code-block:: console
 
-    0
+
+Lê as 7 (sete) primeiras posições:
 
 .. code-block:: python
 
@@ -376,6 +375,9 @@ bla bla bla:
     '1 - Ver'
 
 
+
+Ler as próximas 7 (sete) posições (repetir):
+
 .. code-block:: python
 
     f.read(7)
@@ -384,17 +386,10 @@ bla bla bla:
 
     'de\n2 - '
 
-.. code-block:: python
-
-    f.read(7)
-
 .. code-block:: console
 
     'Preto\n3'
 
-.. code-block:: python
-
-    f.read(7)
 
 .. code-block:: console
 
@@ -402,7 +397,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Fechar o arquivo:
 
 .. code-block:: python
 
@@ -410,7 +405,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificar se o arquivo está fechado como o atributo closed:
 
 .. code-block:: python
 
@@ -422,7 +417,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Abrir o arquivo como escrita:
 
 .. code-block:: python
 
@@ -430,7 +425,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificar se o arquivo está fechado como o atributo closed:
 
 .. code-block:: python
 
@@ -442,7 +437,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Fechar o arquivo:
 
 .. code-block:: python
 
@@ -450,7 +445,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificar o conteúdo do arquivo via shell do sistema operacional:
 
 .. code-block:: bash
 
@@ -458,7 +453,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Abrir p arquivo como escrita:
 
 .. code-block:: python
 
@@ -466,7 +461,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Escrever no arquivo:
 
 .. code-block:: python
 
@@ -474,7 +469,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Fechar o arquivo:
 
 .. code-block:: python
 
@@ -482,7 +477,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificar o conteúdo do arquivo via shell do sistema operacional:
 
 .. code-block:: bash
 
@@ -492,9 +487,11 @@ bla bla bla:
 
     1 - Verde
 
+|   Todo o conteúdo foi substituído por essa linha...    
 
 
-bla bla bla:
+
+Exibir a localização do arquivo:
 
 .. code-block:: python
 
@@ -506,7 +503,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Abrir o arquivo em modo append:
 
 .. code-block:: python
 
@@ -514,51 +511,16 @@ bla bla bla:
 
 
 
-bla bla bla:
-
-.. code-block:: python
-
-    f.close()
-
-
-
-bla bla bla:
-
-.. code-block:: bash
-
-    cat /tmp/cores.txt
-
-.. code-block:: console
-
-    1 - Verde
-
-
-
-bla bla bla:
-
-.. code-block:: python
-
-    f = open('/tmp/cores.txt', 'a')
-
-
-
-bla bla bla:
+Adicionar novas linhas ao arquivo:
 
 .. code-block:: python
 
     f.write('2 - Preto\n')
-
-
-
-bla bla bla:
-
-.. code-block:: python
-
     f.write('3 - Branco\n')
 
 
 
-bla bla bla:
+Efetivar a escrita no arquivo sem fechá-lo:
 
 .. code-block:: python
 
@@ -566,7 +528,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificar o conteúdo do arquivo via shell do sistema operacional:
 
 .. code-block:: bash
 
@@ -580,7 +542,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Fechar o arquivo:
 
 .. code-block:: python
 
@@ -588,7 +550,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Abrir o arquivo em modo leitura:
 
 .. code-block:: python
 
@@ -596,7 +558,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método tell; retorna a posição atual:
 
 .. code-block:: python
 
@@ -608,7 +570,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método read:
 
 .. code-block:: python
 
@@ -620,7 +582,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Veriricando a atual posição:
 
 .. code-block:: python
 
@@ -632,7 +594,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método seek recoloca o cursor na posição 0 (zero):
 
 .. code-block:: python
 
@@ -644,7 +606,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método tell confirma:
 
 .. code-block:: python
 
@@ -656,7 +618,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Ler 7 (sete) posições adiante:
 
 .. code-block:: python
 
@@ -668,7 +630,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Método tell:
 
 .. code-block:: python
 
@@ -680,7 +642,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Fechar o arquivo:
 
 .. code-block:: python
 
@@ -688,7 +650,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Criar um novo arquivo como escrita:
 
 .. code-block:: python
 
@@ -696,7 +658,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Tupla com 3 (três) elementos:
 
 .. code-block:: python
 
@@ -704,7 +666,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Escreve linhas no arquivo com os elementos da tupla:
 
 .. code-block:: python
 
@@ -712,7 +674,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Efetiva a escrita:
 
 .. code-block:: python
 
@@ -720,7 +682,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificando o conteúdo do arquivo via shell do sistema operacional:
 
 .. code-block:: bash
 
@@ -734,7 +696,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Redefinindo a tupla com outros elementos:
 
 .. code-block:: python
 
@@ -742,7 +704,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Escrevendo (adicionando) linhas:
 
 .. code-block:: python
 
@@ -750,7 +712,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Fechar o arquivo:
 
 .. code-block:: python
 
@@ -758,7 +720,7 @@ bla bla bla:
 
 
 
-bla bla bla:
+Verificando o conteúdo do arquivo via shell do sistema operacional:
 
 .. code-block:: bash
 

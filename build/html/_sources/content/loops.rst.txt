@@ -134,7 +134,7 @@ Enquanto não houver uma interrupção externa, o loop abaixo exibirá "x" etern
 for
 ~~~
 
-|   Bla bla bla
+|   O loop for interage sobre cada membro de um objeto iterável.
 
 
 
