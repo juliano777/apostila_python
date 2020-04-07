@@ -4,7 +4,7 @@ Loops - Laços de Repetição
 while
 -----
 
-Executa em laço (loop) enquanto a condição for verdadeira.
+|   Executa em laço (loop) **enquanto** a condição for verdadeira.
 
 
 
@@ -110,7 +110,8 @@ Loop while com else e sem break:
 Loop Infinito
 ~~~~~~~~~~~~~
 
-|   Bla bla bla
+|   Em determinadas situações se faz necessário o uso de um loop sem fim.
+|   Para que esse loop infinito seja rompido é preciso que uma ação externa ocorra, como uma interrupção com a combinação de teclas <Ctrl> + C.
 
 
 
@@ -133,7 +134,7 @@ Enquanto não houver uma interrupção externa, o loop abaixo exibirá "x" etern
 for
 ~~~
 
-|   Bla bla bla
+|   O loop for interage sobre cada membro de um objeto iterável.
 
 
 
