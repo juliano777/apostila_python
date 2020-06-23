@@ -83,3 +83,14 @@ print(y)
 
 print(z)                                                                                                                                                                                                  
 5
+
+
+
+# Descartando valores
+*_, y, z = (1, 2, 3, 4, 5)                                                                                                                                                                                
+
+print(y)                                                                                                                                                                                                  
+4
+
+print(z)                                                                                                                                                                                                  
+5
