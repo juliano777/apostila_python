@@ -221,3 +221,33 @@ Exemplo de with com conexão a uma base de dados PostgreSQL:
     Hello, World!
 
     ===== __exit__ =====
+    
+    
+.. code-block:: python
+
+    class DBConnection(object):
+    '''
+    Classe para conexão de bancos PostgreSQL ou MySQL/MariaDB
+
+    Parâmetros:
+
+    - db_connector: Função connect do driver;
+    - conn_params: Dicionário de parâmetros de conexão;
+    - sql: String de statements para execução.    
+    '''
+
+    def __init__(self, db_connector, conn_params: dict, sql: str):
+        self.db_connector = db_connector
+        self.conn_params = conn_params
+        self.sql = sql
+
+    def __enter__(self):
+        self.conn = self.db_connector(**self.conn_params)
+        cursor = self.conn.cursor()
+        cursor.execute(self.sql)
+        self.data = cursor.fetchall()
+        return self.data
+
+    def __exit__(self, type, value, traceback):
+        self.conn.close()
+        return 0    
