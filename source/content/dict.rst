@@ -114,7 +114,7 @@ Método para exibir as chaves do dicionário:
 
 
 
-Método para exibir as chaves do dicionário:
+Método para exibir os valores do dicionário:
 
 .. code-block:: python
 
