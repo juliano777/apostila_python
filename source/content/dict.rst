@@ -1,7 +1,7 @@
 Dicionários
 ***********
 
-    Em Python um dicionário é uma estrutura de dados envolta por chaves cujos elementos são compostos por chave:valor e separados por vírgula.
+    Em Python um dicionário é uma estrutura de dados envolta por chaves cujos elementos são compostos por chave e valor e separados por vírgula.
 
 
 
