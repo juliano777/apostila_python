@@ -118,24 +118,25 @@ Forçando um erro dividindo por zero:
 
 
 
-bla bla bla:
+Tratamento geral para exceções:
 
 .. code-block:: python
 
     try:
-        print(1 / 0)
+        print(1 / 0)  # print "malicioso" com divisão por zero
 
-    # catch all exceptions
+    # Captura todas exceções: generalista
     except:
-        print('\n\nErro: Não dividirás por zero!\n\n')
+        print('\n\nOcorreu um erro!\n\n')
 
 .. code-block:: console
 
-    Erro: Não dividirás por zero!
+    Ocorreu um erro!
 
-
-
-Utilizando try e forçando um erro de divisão por zero:
+Dizer que ocorreu um erro não diz muita coisa...  
+  
+  
+Utilizando try e capturando uma exceção específica para divisão por zero:
 
 .. code-block:: python
 
@@ -151,15 +152,18 @@ Utilizando try e forçando um erro de divisão por zero:
     Erro: Não dividirás por zero!
 
 
+Tratamento de erro específico para índice de elementos:
+
 .. code-block:: python
 
+    # Tupla com três elementos
     numeros = ('zero', 'um', 'dois')
 
     try:                            
         print(numeros[0])
         print(numeros[1])
         print(numeros[2])
-        print(numeros[3])
+        print(numeros[3])  # ! quarto elemento
     except IndexError:    
         print('\n\nERRO: Índice não encontrado\n\n')
    
@@ -173,7 +177,7 @@ Utilizando try e forçando um erro de divisão por zero:
 
 
 
-sasasasasa:
+Agora exibindo além da mensagem customizada, a mensagem original de erro:
 
 .. code-block:: python
 
@@ -181,9 +185,9 @@ sasasasasa:
         print(numeros[0])
         print(numeros[1])
         print(numeros[2])
-        print(numeros[3])
+        print(numeros[3])  # ! quarto elemento
     except IndexError, e:    
-        print('\n\nERRO: Índice não encontrado\n\n%s' % e)
+        print(f'\n\nERRO: Índice não encontrado\n\n{e}')
 
 .. code-block:: console
 
@@ -200,7 +204,7 @@ O "e" é a mensagem de erro "tuple index out of range"
 
 
 
-ssdsdpsdsd:
+Com o editor vim ou outro de sua preferência criar o script Python:
 
 .. code-block:: bash
 
@@ -210,22 +214,28 @@ ssdsdpsdsd:
 
     #_*_ encoding: utf-8 _*_
 
-    import sys
+    # Do módulo sys importar a função exit dando um apelido
+    from sys exit as sys_exit
 
+    # Tupla de três elementos
     numeros = ('zero', 'um', 'dois')
 
     try:
         print(numeros[0])
         print(numeros[1])
         print(numeros[2])
-        print(numeros[3])
+        print(numeros[3])  # ! quarto elemento
+
     except IndexError, e:
-        print >> sys.stderr, '\n\nERRO: Índice não encontrado\n\n%s' % e
-        sys.exit(1)
+        # Mensagem para a saída de erro
+        print(file=sys.stderr, f'\n\nERRO: Índice não encontrado!\n\n{e}')
+        
+        # Retorno 1 do script em caso de exceção
+        sys_exit(1)
 
 
 
-sdsdsdsd:
+Execução do script:
 
 .. code-block:: bash
 
@@ -243,7 +253,7 @@ sdsdsdsd:
     tuple index out of range
 
 
-ddsdsd:
+Exibe o código de execução:
 
 .. code-block:: bash
 
@@ -253,177 +263,7 @@ ddsdsd:
 
     1
 
-
-
-sdsdsdsdsdsd:
-
-.. code-block:: bash
-
-    vim excecao3.py
-
-.. code-block:: python
-
-    #_*_ encoding: utf-8 _*_
-
-    import sys
-
-    numeros = ('zero', 'um', 'dois')
-
-    try:
-        print(numeros[0])
-        print(numeros[1])
-        print(numeros[2])
-        print(numeros[3])
-    except IndexError as e:
-        print('\n\nERRO: Índice não encontrado\n\n%s' % e, file = sys.stderr)
-        sys.exit(1)
-
-
-
-sdsdsd:
-
-.. code-block:: bash
-
-    python3 excecao3.py
-
-.. code-block:: console
-
-    zero
-    um
-    dois
-
-
-    ERRO: Índice não encontrado
-
-    tuple index out of range
-
-
-
-sdsdsdsd:
-
-.. code-block:: bash
-
-    echo $?
-
-.. code-block:: console
-
-    1
-
-
-
-sddsdsdsdsd:
-
-.. code-block:: python
-
-    f = open('/tmp/blablabla.txt', 'r')
-
-.. code-block:: console
-
-    ---------------------------------------------------------------------------
-    IOError                                   Traceback (most recent call last)
-    <ipython-input-20-11fa3db68c79> in <module>()
-    ----> 1 f = open('/tmp/blablabla.txt', 'r')
-
-    IOError: [Errno 2] No such file or directory: '/tmp/blablabla.txt'
-
-
-
-sddsdsdsd:
-
-.. code-block:: python
-
-    try:
-        f = open('/tmp/blablabla.txt', 'r')
-    except IOError as e:
-        print('O arquivo não existe!')
-
-.. code-block:: python
-
-    O arquivo não existe!
-
-
-
-sdsdsdsd:
-
-.. code-block:: python
-
-    type(e)
-
-.. code-block:: console
-
-    IOError
-
-
-
-sdsdssdsdsd:    
-
-.. code-block:: python
-
-    dir(e)
-
-.. code-block:: console
-
-    ['__class__',
-     '__delattr__',
-     '__dict__',
-     '__doc__',
-     '__format__',
-     '__getattribute__',
-     '__getitem__',
-     '__getslice__',
-     '__hash__',
-     '__init__',
-     '__new__',
-     '__reduce__',
-     '__reduce_ex__',
-     '__repr__',
-     '__setattr__',
-     '__setstate__',
-     '__sizeof__',
-     '__str__',
-     '__subclasshook__',
-     '__unicode__',
-     'args',
-     'errno',
-     'filename',
-     'message',
-     'strerror']
-
-
-
-dsdsdsdsd:
-
-.. code-block:: python
-
-    repr(e)
-
-.. code-block:: console
-
-    "IOError(2, 'No such file or directory')"
-
-
-sdsdsdsdsd:
-
-.. code-block:: python
-
-    e.<TAB>
-
-.. code-block:: console
-
-    e.args      e.errno     e.filename  e.message   e.strerror
-
-
-
-sdsddssd:
-
-.. code-block:: python
-
-    print(e.errno)
-
-.. code-block:: console
-
-    2
-
+Nota-se que o código foi 1, de acordo com o passado para a função exit do módulo sys.    
 
 
 sdsdsdsdsd:
@@ -649,7 +489,8 @@ Se deu certo ou errado, o programa termina aqui :/
 raise
 -----
 
-sasasasa:
+O comando `raise` é uma facilidade dada ao programador para forçar uma exceção
+específica.  Muito útil para testar tratamentos de exceções.
 
 .. code-block:: python
 
