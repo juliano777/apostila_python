@@ -7,11 +7,11 @@ Exceções
 
 **Blocos de Comandos**:
 
-- | try: Tenta executar o bloco de comandos;
-- | except: Em outras linguagens de programação é conhecido como "catch",
+- | `try`: Tenta executar o bloco de comandos;
+- | `except`: Em outras linguagens de programação é conhecido como "catch",
   | captura e trata a exceção;
-- | else: Só é executado se não tiver nenhuma exceção;
-- | finally: Tendo exceção ou não é executado de qualquer jeito.
+- | `else`: Só é executado se não tiver nenhuma exceção;
+- | `finally`: Tendo exceção ou não é executado de qualquer jeito.
 
 ::
 
