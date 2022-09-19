@@ -17,12 +17,12 @@ Exceções
 
                         try:
                          | 
-                      Deu erro?
+                   Lançou exceção?   
                         / \                    
                   Sim  /   \  Não
                       /     \
                      /       \
-                   else:   except:
+                  except:   else: 
                      \       /
                       \     /
                        \   /
