@@ -3,6 +3,299 @@ Comandos e Funções Importantes
 
 	Neste capítulo são abordados comandos e funções interessantes e / ou imprescindíveis para a linguagem.
 
+all() e any()
+-------------
+    A função `all()` analisa cada elemento de um iterável e retorna `True` se **todos** esses elementos forem `True`.  
+    Enquanto que para a função `any()` basta que **apenas um elemento** seja `True` para retornar `True`.  
+
+.. code-block:: python
+
+    # Todos elementos verdadeiros
+    x = (True, True, True)
+
+    # Todos elementos são verdadeiros?
+    all(x)
+   
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    # Há pelo menos um elemento verdadeiro?
+    any(x)
+
+.. code-block:: console
+
+    True
+
+
+.. code-block:: python
+   
+    # Todos elementos falsos
+    y = (False, False, False)
+
+    # Todos elementos são verdadeiros?
+    all(y)
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python   
+   
+    # Há pelo menos um elemento verdadeiro?
+    any(y)
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python   
+   
+    # Apenas um elemento verdadeiro
+    z = (False, True, False)
+
+    # Todos elementos são verdadeiros?
+    all(z)
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    # Há pelo menos um elemento verdadeiro?
+    any(z)
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python   
+    
+    # Dentre todos os outros elementos verdadeiros, um nulo
+    w = (True, True, True, True, True, True, True, True, None)
+
+    # Todos elementos são verdadeiros?
+    all(w)
+
+.. code-block:: console
+
+    False
+
+.. code-block:: python
+
+    # Há pelo menos um elemento verdadeiro?
+    any(w)
+
+.. code-block:: console
+
+    True
+
+iter() e next()
+---------------
+
+A função `iter()` cria um objeto iterador cujos elementos podem ser acessados na sequência pela função `next()`.
+
+Sintaxes gerais:
+
+`iter(object[, sentinel])`
+
+O parâmetro sentinela (`sentinel`) é opcional. Porém, se o mesmo for declarado, o objeto tem que ser "chamável" (*callable*).
+Esse parâmetro sentinela
+
+`next(iterator[, default])`
+
+O valor `default` é opcional, cujo objetivo é ao se atingir o fim dos elementos do objeto iterador em vez de retornar uma exceção, seu valor exibido toda vez que for chamado.
+
+.. code-block:: python
+
+    # Criação de uma simples lista
+    lista = ['A', 0, True, 5.2, -3, 'z'1]
+
+    # Criação de um objeto iterador a partir da lista
+    my_iter = iter(lista)
+
+    # Executar a chamada do próximo elemento até a exaustão
+    next(my_iter)
+
+.. code-block::
+
+    'A'
+
+.. code-block::
+
+    next(my_iter)
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    next(my_iter)
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    next(my_iter)
+
+.. code-block:: console
+
+    5.2
+
+.. code-block:: python
+
+    next(my_iter)
+
+.. code-block:: console
+
+    -3
+
+.. code-block:: python
+
+    next(my_iter)
+
+.. code-block:: console
+
+    'z'
+
+.. code-block:: python
+
+    next(my_iter)    
+
+.. code-block:: console
+
+    In [103]: next(my_iter)
+    ---------------------------------------------------------------------------
+    StopIteration                             Traceback (most recent call last)
+    Cell In [103], line 1
+    ----> 1 next(my_iter)
+
+    StopIteration:
+
+Aqui nota-se uma exceção que foi lançada devido ao iterador ter sido exaurido.  
+   
+.. code-block:: python
+
+    # Criação de um iterador a partir da lista
+    my_iter = iter(lista)
+
+    # Criação de uma função lambda que retorna o próximo valor do iterador
+    f = lambda : next(my_iter)
+
+    # Criação de um iterador com sentinela
+    iter_sentinel = iter(f, -3)
+
+    # Verificar o próximo valor
+    next(iter_sentinel)
+
+.. code-block:: console
+
+    'A'
+
+.. code-block:: python
+
+    next(iter_sentinel)
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    next(iter_sentinel)
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    next(iter_sentinel)
+
+.. code-block:: console
+
+    5.2
+
+.. code-block:: python
+
+    next(iter_sentinel)    
+
+.. code-block:: console
+
+    next(iter_sentinel)
+    ---------------------------------------------------------------------------
+    StopIteration                             Traceback (most recent call last)
+    Cell In [137], line 1
+    ----> 1 next(iter_sentinel)
+
+    StopIteration:
+
+Novamente o iterador foi exaurido e por isso lançou uma exceção.
+
+.. code-block:: python
+
+    # Criação de um iterador a partir de uma lista
+    my_iter = iter(lista)
+
+    # Criação de um iterador com sentinela
+    iter_sentinel = iter(f, -3)
+
+    # Execução de next() com um valor padrão
+    next(iter_sentinel, 'Fim')
+
+.. code-block:: console
+    'A'
+
+.. code-block:: python
+
+    next(iter_sentinel, 'Fim')
+
+.. code-block:: console
+
+    0
+
+.. code-block:: python
+
+    next(iter_sentinel, 'Fim')
+
+.. code-block:: console
+
+    True
+
+.. code-block:: python
+
+    next(iter_sentinel, 'Fim')
+
+.. code-block:: console
+
+    5.2
+
+.. code-block:: python
+
+    next(iter_sentinel, 'Fim')
+
+.. code-block:: console
+
+    'Fim'
+
+.. code-block:: python
+
+    next(iter_sentinel, 'Fim')
+
+.. code-block:: console
+
+    'Fim'
+
+Após exaurido, por duas vezes, não foi lançada uma exceção, mas sim retornado um valor padrão.  
+  
+  
 print()
 -------
 
@@ -713,75 +1006,51 @@ callable()
 
 .. code-block:: python
 
-    # Criação de uma função
-    def myfunction():
+    # Criação de função comum
+    def f1():
         pass
 
-    # Criação de uma classe sem o método __call__()
-    class Foo:
+    # Criação de função lambda
+    f2 = lambda : None
+
+    # Criação de classe
+    class Foo(object):
         pass
 
-    # Criação de uma classe com o método __call__()
-    class Bar:
-        def __call__(self):
-            pass
+    # Objeto da classe Foo
+    o = Foo()
 
-    # Instância da classe sem o método __call__()
-    f = Foo()
-
-    # Instância da classe com o método __call__()
-    b = Bar()
-
-    # Execuções de callable
-    callable('foo')
-
-.. code-block:: console
-
-    False
+    # Dicionário cujos elementos são os objetos criados
+    d = {
+        'f1': 'Função comum',
+        'f2': 'Função lambda',
+        'Foo': 'Classe',
+        'o': 'Objeto da classe Foo',
+    }
 
 .. code-block:: python
 
-    #
-    callable(myfunction)
-    
-.. code-block:: console
+    # Loop sobre chave e valor do dicionário
+    for k, v in d.items():
+        # String formatada
+        c = f'callable({k})'
 
-    True
+        # Execução da string "c", a qual será avaliada como um comando, cujo
+        # retorno é armazenado na variável
+        is_callable = eval(c)
 
+        if is_callable:
+            print(f'{v}: Sim')
+        else:
+            print(f'{v}: Não')
 
-.. code-block:: python
+.. code-block:: console            
 
-    # 
-    callable(Foo)
-    
-.. code-block:: console
+    Função comum: Sim
+    Função lambda: Sim
+    Classe: Sim
+    Objeto da classe Foo: Não
 
-    True
-
-.. code-block:: python
-
-    #
-    callable(Bar)
-
-.. code-block:: console
-
-    True
-
-.. code-block:: python
-
-    #
-    callable(f)
-
-.. code-block:: console
-
-    False
-
-.. code-block:: python
-
-    # 
-    callable(b)
-
-True
 
 
 oct()
