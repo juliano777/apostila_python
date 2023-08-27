@@ -10,73 +10,89 @@ all() e any()
 
 .. code-block:: python
 
-   # Todos elementos verdadeiros
-   x = (True, True, True)
+    # Todos elementos verdadeiros
+    x = (True, True, True)
 
-   all(x)
+    # Todos elementos são verdadeiros?
+    all(x)
+   
 
 .. code-block:: console
 
-   True
+    True
 
 .. code-block:: python
-   any(x)
+
+    # Há pelo menos um elemento verdadeiro?
+    any(x)
 
 .. code-block:: console
 
-   True
+    True
 
 
 .. code-block:: python
-   # Todos elementos falsos
-   y = (False, False, False)
+   
+    # Todos elementos falsos
+    y = (False, False, False)
 
-   all(y)
+    # Todos elementos são verdadeiros?
+    all(y)
 
 .. code-block:: console
 
-   False
+    False
 
 .. code-block:: python   
-   any(y)
+   
+    # Há pelo menos um elemento verdadeiro?
+    any(y)
 
 .. code-block:: console
 
-   False
+    False
 
 .. code-block:: python   
-   # Apenas um elemento verdadeiro
-   z = (False, True, False)
+   
+    # Apenas um elemento verdadeiro
+    z = (False, True, False)
 
-   all(z)
+    # Todos elementos são verdadeiros?
+    all(z)
 
 .. code-block:: console
 
-   False
+    False
+
+.. code-block:: python
+
+    # Há pelo menos um elemento verdadeiro?
+    any(z)
+
+.. code-block:: console
+
+    True
 
 .. code-block:: python   
-   any(z)
+    
+    # Dentre todos os outros elementos verdadeiros, um nulo
+    w = (True, True, True, True, True, True, True, True, None)
+
+    # Todos elementos são verdadeiros?
+    all(w)
 
 .. code-block:: console
 
-   True
+    False
 
-.. code-block:: python   
-   # Dentre todos os outros elementos verdadeiros, um nulo
-   w = (True, True, True, True, True, True, True, True, None)
+.. code-block:: python
 
-   all(w)
-
-.. code-block:: console
-
-   False
-
-.. code-block:: python   
-   any(w)
+    # Há pelo menos um elemento verdadeiro?
+    any(w)
 
 .. code-block:: console
 
-   True
+    True
 
 iter() e next()
 ---------------
@@ -149,6 +165,10 @@ O valor `default` é opcional, cujo objetivo é ao se atingir o fim dos elemento
 
     'z'
 
+.. code-block:: python
+
+    next(my_iter)    
+
 .. code-block:: console
 
     In [103]: next(my_iter)
@@ -198,7 +218,14 @@ Aqui nota-se uma exceção que foi lançada devido ao iterador ter sido exaurido
 .. code-block:: python
 
     next(iter_sentinel)
-5.2
+
+.. code-block:: console
+
+    5.2
+
+.. code-block:: python
+
+    next(iter_sentinel)    
 
 .. code-block:: console
 
@@ -222,7 +249,9 @@ Novamente o iterador foi exaurido e por isso lançou uma exceção.
 
     # Execução de next() com um valor padrão
     next(iter_sentinel, 'Fim')
-'A'
+
+.. code-block:: console
+    'A'
 
 .. code-block:: python
 
