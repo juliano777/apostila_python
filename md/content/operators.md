@@ -1,0 +1,898 @@
+---
+title: Operadores
+---
+
+# O que são Operadores
+
+|   Operadores são elementos de programação que permitem fazer operações
+  com
+| operandos.
+|   Operandos são os elementos cujas ações de um operador têm efeito.
+|   Operadores já fazem parte de nossa vida muito antes da programação,
+  em
+| matemática para ser mais preciso.
+|   Operadores podem ser **binários** e **unários**.
+
+## Operadores Binários
+
+|   São aqueles que requerem 2 (dois) operandos para uma operação.
+| 
+|   Exemplo: [2 + 5]{.title-ref}
+| 
+|   Operador: [+]{.title-ref} (soma)
+|   Operandos: [2]{.title-ref} e [5]{.title-ref}
+
+## Operadores Unários
+
+|   São aqueles que requerem apenas 1 (um) operando para uma operação.
+| 
+|   Exemplo: [not False]{.title-ref}
+| 
+|   Operador: [not]{.title-ref} (negação)
+|   Operandos: [False]{.title-ref}
+
+# Operadores Aritméticos
+
+|   São os primeiros operadores que uma pessoa tem contato na vida, pois
+  são
+| os operadores para operações matemáticas.
+
+  ------------------------- -------------- ------------- -------------
+  **Nome**                  **Operador**   **Exemplo**   **Saída**
+
+  Soma                      \+             5 + 2         7
+
+  Subtração                 \-             13 - 3        10
+
+  Multiplicação             \*             5 \* 3        15
+
+  Divisão                   /              7 / 2         3.5
+
+  Divisão Inteira (Floor)   //             7 // 2        3
+
+  Potenciação               \*\*           2 \*\* 9      512
+
+  Módulo                    \%             7 % 2         1
+  ------------------------- -------------- ------------- -------------
+
+# Operadores Relacionais
+
+|   São operadores que testam o relacionamento de valores de seus
+  operandos.
+
++-------------+----------+---------------+-------+
+| Nome        | Operador | Exemplo       | Saída |
++-------------+----------+---------------+-------+
+| Menor       | \<       | > 3 \< 2      | >     |
+|             |          |               | False |
+|             | :   -    | \-\-          |       |
+|             |          | \-\-\-\-\-\-\ | \-\-  |
+|             |          | -\-\-\-\-\--+ | \-\-\ |
+|             |          |               | -\--+ |
+|             |          | :   2 \< 3    |       |
+|             |          |               | :     |
+|             |          |               |  True |
++-------------+----------+---------------+-------+
+| Maior       | \>       | > 7 \> 5      | >     |
+|             |          |               |  True |
+|             | :   -    | \-\-          |       |
+|             |          | \-\-\-\-\-\-\ | \-\-  |
+|             |          | -\-\-\-\-\--+ | \-\-\ |
+|             |          |               | -\--+ |
+|             |          | :   \'A\' \>  |       |
+|             |          |     \'B\'     | :     |
+|             |          |               | False |
++-------------+----------+---------------+-------+
+| Menor Igual | \<=      | > 5 \<= 9     | >     |
+|             |          |               |  True |
+|             | :   -    | \-\-          |       |
+|             |          | \-\-\-\-\-\-\ | \-\-  |
+|             |          | -\-\-\-\-\--+ | \-\-\ |
+|             |          |               | -\--+ |
+|             |          | :   11 \<= 3  |       |
+|             |          |               | :     |
+|             |          |               | False |
++-------------+----------+---------------+-------+
+| Maior Igual | \>=      | > \'Z\' \>=   | >     |
+|             |          | > \'W\'       |  True |
+|             | :   -    |               |       |
+|             |          | \-\-          | \-\-  |
+|             |          | \-\-\-\-\-\-\ | \-\-\ |
+|             |          | -\-\-\-\-\--+ | -\--+ |
+|             |          |               |       |
+|             |          | :   0 \>= 1   | :     |
+|             |          |               | False |
++-------------+----------+---------------+-------+
+| Igual       | ==       | > 7 == (4 +   | >     |
+|             |          | > 3)          |  True |
+|             | :   -    |               |       |
+|             |          | \-\-          | \-\-  |
+|             |          | \-\-\-\-\-\-\ | \-\-\ |
+|             |          | -\-\-\-\-\--+ | -\--+ |
+|             |          |               |       |
+|             |          | :   \'k\' ==  | :     |
+|             |          |     \'v\'     | False |
++-------------+----------+---------------+-------+
+| Diferente   | !=       | > 5 != 3      | >     |
+|             |          |               |  True |
+|             | :   -    | \-\-          |       |
+|             |          | \-\-\-\-\-\-\ | \-\-  |
+|             |          | -\-\-\-\-\--+ | \-\-\ |
+|             |          |               | -\--+ |
+|             |          | :   0 != 0    |       |
+|             |          |               | :     |
+|             |          |               | False |
++-------------+----------+---------------+-------+
+
+# Operadores de Atribuição
+
+|   Têm por objetivo atribuir um valor a uma variável.
+
+  ----------------------------------- ----------
+  Nome                                Operador
+
+  Atribuição                          =
+
+  Adicionar e Atribuir (Incremento)   +=
+
+  Subtrair e Atribuir (Decremento)    -=
+
+  Dividir e Atribuir                  /=
+
+  Multiplicar e Atribuir              \*=
+
+  Módulo e Atribuir                   %=
+
+  Exponenciação e Atribuir            \*\*=
+
+  Divisão Inteira e Atribuir          //=
+  ----------------------------------- ----------
+
+Atribuição simples e exibição da primeira variável:
+
+``` python
+foo = 0
+bar = 'bla bla bla'
+print(foo)
+```
+
+``` console
+0
+```
+
+Exibição do valor da segunda variável:
+
+``` python
+print(bar)
+```
+
+``` console
+bla bla bla
+```
+
+Atribuição composta ou atribuição por tupla e exibição de seus
+respectivos valores:
+
+``` python
+x, y, z = (1, 2, 3)
+print(x)
+```
+
+``` console
+1
+```
+
+``` python
+print(y)
+```
+
+``` console
+2
+```
+
+``` python
+print(z)
+```
+
+``` console
+3
+```
+
+Invertendo valores e suas respectivas exibições:
+
+``` python
+x = 10
+y = 20
+x, y = y, x
+print(x)
+```
+
+``` console
+20
+```
+
+``` python
+print(y)
+```
+
+``` console
+10
+```
+
+Incremento:
+
+``` python
+x = 0
+x += 1  # 1
+x += 1  # 2
+print(x)
+```
+
+``` console
+2
+```
+
+Decremento (aproveitando o exercício anterior):
+
+``` python
+x -= 1
+print(x)
+```
+
+``` console
+1
+```
+
+Dividir e atribuir:
+
+``` python
+x = 20
+x /= 2  # 10.0
+x /= 2  # 5.0
+print(x)
+```
+
+``` console
+5.0
+```
+
+Multiplicar e atribuir:
+
+``` python
+x = 10
+x *= 2  # 20
+x *= 2  # 40
+print(x)
+```
+
+``` console
+40
+```
+
+Atribuição por módulo:
+
+``` python
+x = 5
+x %= 3
+print(x)
+```
+
+``` console
+2
+```
+
+Atribuição por exponenciação:
+
+``` python
+x = 10
+x **= 2
+print(x)
+```
+
+``` console
+100
+```
+
+Atribuição floor:
+
+``` python
+x = 7
+x //= 2
+print(x)
+```
+
+``` console
+3     
+```
+
+# Operadores Lógicos
+
+|   São operadores que utilizam a lógica binária.
+
+  -------------------- ----------
+  Nome                 Operador
+
+  And ou \"E\" lógico  and
+
+  Or ou \"Ou\" lógico  or
+
+  Not ou Negação       not
+  -------------------- ----------
+
+## Tabelas da Verdade
+
+**Tabela AND**
+
+Na lógica **AND** para que o resultado seja verdadeiro (*True*),
+**todos** os valores envolvidos têm que ser verdadeiros.
+
+  ----------------- -----------
+  Operação          Resultado
+
+  False and False   False
+
+  False and True    False
+
+  True and False    False
+
+  True and True     True
+  ----------------- -----------
+
+**Tabela OR**
+
+Na lógica **OR** para que o resultado seja verdadeiro (*True*), basta
+que apenas um dos valores envolvidos seja verdadeiro.
+
+  ---------------- -----------
+  Operação         Resultado
+
+  False or False   False
+
+  False or True    True
+
+  True or False    True
+
+  True or True     True
+  ---------------- -----------
+
+**Tabela NOT**
+
+Seu papel é apenas inverter.
+
+  --------------- ---------------
+  **Operação**    **Resultado**
+
+  not False       True
+
+  not True        False
+  --------------- ---------------
+
+# Operadores de Associação
+
+|   Testam se um valor pertence a um conjunto.
+
+  -------------- -----------------------
+  **Operador**   **Breve Descrição**
+
+  in             Testa se pertence
+
+  not in         Testa se não pertence
+  -------------- -----------------------
+
+Exemplos:
+
+7 está no conjunto de elementos dentro da tupla?:
+
+``` python
+7 in (9, 11, 13, 7, 28)
+```
+
+``` console
+True
+```
+
+Na palavra \"Python\" tem a letra \"a\"?:
+
+``` python
+'a' in 'Python'
+```
+
+``` console
+False
+```
+
+Existe a chave \"nome\" no dicionário?
+
+``` python
+'nome' in {'nome': 'Diana'}    
+```
+
+``` console
+True
+```
+
+Existe \"Diana\" como chave no dicionário?:
+
+``` python
+'Diana' in {'nome': 'Diana'}
+```
+
+|   Para dicionários a chave é levada em consideração dessa forma e não
+  seus
+| valores.
+
+``` console
+False
+```
+
+O resultado da operação à esquerda está contido na tupla à direita?:
+
+``` python
+(2 * 10) not in (20, 30)                                                                                                                                                                                  
+```
+
+``` console
+False
+```
+
+3 não está contido na tupla?:
+
+``` python
+3 not in (20, 30)                                                                                                                                                                                         
+```
+
+``` console
+True
+```
+
+# Operadores de Identidade
+
+|   Testam a identidade de um elemento.
+
+  -------------- ---------------------
+  **Operador**   **Breve Descrição**
+
+  is             Testa se é
+
+  is not         Testa se não é
+  -------------- ---------------------
+
+Exemplos:
+
+Criação de uma tupla com 3 (três) elementos:
+
+``` python
+t1 = (1, 2, 3)
+```
+
+Com a função id verificar a identidade dessa tupla:
+
+``` python
+id(t1)                                                                                                                                                                                                     
+```
+
+``` console
+139965970848192
+```
+
+Criar uma nova variável que aponta para a primeira tupla:
+
+``` python
+t2 = t1
+```
+
+verificar o id dessa nova tupla:
+
+``` python
+id(t2)                                                                                                                                                                                                    
+```
+
+``` console
+139965970848192
+```
+
+|   Nota-se que t1 e t2 tem o mesmo id.
+
+Criação de uma tupla com os mesmos elementos de t1:
+
+``` python
+t3 = (1, 2, 3)                                                                                                                                                                                            
+```
+
+``` python
+id(t3)                                                                                                                                                                                                    
+```
+
+``` console
+139965970847744
+```
+
+|   t3 não tem o mesmo id que t1 e t2.
+
+t1 é t2?:
+
+``` python
+t1 is t2                                                                                                                                                                                                  
+```
+
+``` console
+True
+```
+
+|   Sim, pois t2 na verdade é um apontamento em memória cujo apontamento
+| é o mesmo de t1.
+
+t1 é t3?
+
+``` python
+t1 is t3                                                                                                                                                                                                  
+```
+
+``` console
+False
+```
+
+|   Não, pois t3 apesar de ter a mesma construção foi criada do zero,
+  portanto
+| é um novo apontamento em memória.
+
+t1 é igual a t3 (valores)?:
+
+``` python
+t1 == t3                                                                                                                                                                                                  
+```
+
+``` console
+True
+```
+
+|   O resultado foi verdadeiro, pois o operador == testa os valores e
+  não a
+| identidade.
+
+t1 não é t3?:
+
+``` python
+t1 is not t3
+```
+
+``` console
+True
+```
+
+# Operadores Bitwise (Operadores Bit a Bit)
+
+|   São operadores que trabalham na composição binária de um elemento
+  bit a
+| bit.
+
+  ------------------------- --------------
+  **Nome**                  **Operador**
+
+  Binary AND                &
+
+  Binary OR                 \|
+
+  Binary XOR                \^
+
+  Binary One\'s Complement  \~
+
+  Binary Left-Shift         \<\<
+
+  Binary Right-Shift        \>\>
+  ------------------------- --------------
+
+## Binary AND / \"E\" Binário (&)
+
++-------------+-------------+---+-------------+
+| *And*       | **Binário** |   | **Decimal** |
++-------------+-------------+---+-------------+
+| NumX        | > 1 \| 0 \| |   | 5           |
+|             | > 1         |   |             |
++-------------+-------------+---+-------------+
+| NumY        | > 1 \| 1 \| |   | 6           |
+|             | > 0         |   |             |
++-------------+-------------+---+-------------+
+| *Resultado* | > 1 \| 0 \| |   | 4           |
+|             | > 0         |   |             |
++-------------+-------------+---+-------------+
+
+``` python
+0b101 & 0b110                                                                                                                                                                                             
+```
+
+``` console
+4
+```
+
+``` python
+bin(0b101 & 0b110)                                                                                                                                                                                        
+```
+
+``` console
+0b100'
+```
+
+``` python
+5 & 6                                                                                                                                                                                                     
+```
+
+``` console
+4
+```
+
+## Binary OR / \"Ou\" Binário (\|)
+
++-------------+-------------+---+-------------+
+| *Or*        | **Binário** |   | **Decimal** |
++-------------+-------------+---+-------------+
+| NumX        | > 1 \| 0 \| |   | 5           |
+|             | > 1         |   |             |
++-------------+-------------+---+-------------+
+| NumY        | > 1 \| 1 \| |   | 6           |
+|             | > 0         |   |             |
++-------------+-------------+---+-------------+
+| *Resultado* | > 1 \| 1 \| |   | 7           |
+|             | > 1         |   |             |
++-------------+-------------+---+-------------+
+
+``` python
+0b101 | 0b110
+```
+
+``` console
+7
+```
+
+``` python
+bin(0b101 | 0b110)
+```
+
+``` console
+0b111'
+```
+
+``` python
+5 | 6                                                                                                                                                                                                     
+```
+
+``` console
+7
+```
+
+## Binary XOR / \"Ou\" Exclusivo Binário (\^)
+
++-------------+-------------+---+-------------+
+| *XOr*       | **Binário** |   | **Decimal** |
++-------------+-------------+---+-------------+
+| NumX        | > 1 \| 0 \| |   | 5           |
+|             | > 1         |   |             |
++-------------+-------------+---+-------------+
+| NumY        | > 1 \| 1 \| |   | 6           |
+|             | > 0         |   |             |
++-------------+-------------+---+-------------+
+| *Resultado* | > 0 \| 1 \| |   | 3           |
+|             | > 1         |   |             |
++-------------+-------------+---+-------------+
+
+``` python
+0b101 ^ 0b110
+```
+
+``` console
+3
+```
+
+``` python
+bin(0b101 ^ 0b110)
+```
+
+``` console
+0b11'
+```
+
+``` python
+5 ^ 6                                                                                                                                                                                                     
+```
+
+``` console
+3
+```
+
+## Binary One\'s Complement / Complemento Binário (\~)
+
+``` python
+~ True                                                                                                                                                                                                             
+```
+
+``` console
+-2
+```
+
+``` python
+~ False                                   
+```
+
+``` console
+-1
+```
+
+``` python
+~ 0        
+```
+
+``` console
+-1
+```
+
+``` python
+~ 1                                  
+```
+
+``` console
+-2
+```
+
+``` python
+~ 2        
+```
+
+``` console
+-3
+```
+
+``` python
+~ -3                          
+```
+
+``` console
+2
+```
+
+``` python
+~ -1                                                      
+```
+
+``` console
+0  
+```
+
+## Binary Left-Shift / Deslocamento Binário à Esquerda
+
+``` python
+7 << 2
+```
+
+``` console
+28
+```
+
+``` python
+bin(7 << 2)                                     
+```
+
+``` console
+'0b11100'
+```
+
+``` python
+7 << 3         
+```
+
+``` console
+56
+```
+
+``` python
+bin(7 << 3)                         
+```
+
+``` console
+'0b111000'
+```
+
+``` python
+False << False                                                                                                                                                                                             
+```
+
+``` console
+0
+```
+
+``` python
+False << True                                                                                                                                                                                              
+```
+
+``` console
+0
+```
+
+``` python
+True << False                                                                                                                                                                                              
+```
+
+``` console
+1
+```
+
+``` python
+True << True                                                                                                                                                                                               
+```
+
+``` console
+2
+```
+
+## Binary Right-Shift / Deslocamento Binário à Direita
+
+``` python
+4 >> 1
+```
+
+``` console
+2
+```
+
+``` python
+bin(4 >> 1)                                      
+```
+
+``` console
+'0b10'
+```
+
+``` python
+4 >> 2         
+```
+
+``` console
+1
+```
+
+``` python
+8 >> 1                                   
+```
+
+``` console
+4
+```
+
+``` python
+bin(8 >> 1)         
+```
+
+``` console
+'0b100'
+```
+
+``` python
+False >> False
+```
+
+``` console
+0
+```
+
+``` python
+False >> True
+```
+
+``` console
+0
+```
+
+``` python
+True >> False
+```
+
+``` console
+1
+```
+
+``` python
+True >> True
+```
+
+``` console
+0
+```
