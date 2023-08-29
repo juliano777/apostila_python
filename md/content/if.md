@@ -1,6 +1,6 @@
----
-title: if / elif / else
----
+
+# if / elif / else
+
 
 > O comando if, que inglês significa \"se\" indica uma condição.
 
@@ -151,15 +151,15 @@ print(y)
 3
 ```
 
-# Operador Ternário
+## Operador Ternário
 
-|   Um recurso bastante interessante em outras linguagens como em C, por
-  exemplo.
-|   Seu objetivo é abreviar um bloco if em apenas uma linha.
-
+Um recurso bastante interessante em outras linguagens como em C, por
+exemplo.  
+Seu objetivo é abreviar um bloco if em apenas uma linha.  
+  
 **Sintaxe**:
-
-|   \`retorno_se_verdadeiro if condição else retorno_se_falso\`
+  
+`retorno_se_verdadeiro` **`if`** `condição` **`else`** `retorno_se_falso`
 
 Declaração de uma variável x com valor, atribui a y o resultado e exibe
 seu valor:

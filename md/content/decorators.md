@@ -1,15 +1,14 @@
----
-title: Decoradores em Python
----
+# Decoradores em Python
 
-> É um conceito diferente do conceito decorator de design pattern. Pode
-> ser implementado como uma classe ou como uma função. Modificam
-> funções. É identificado da seguinte forma: \@nome_do_decorador. Deve
-> ser inserido na linha anterior da definição. Um decorador deve ser
-> executável, ou seja, deve ter o método \_\_call\_\_(). São envelopes
-> de função. Decoradores podem ser definidos como classes ou funções.
+É um conceito diferente do conceito decorator de *design pattern*. Pode ser
+implementado como uma classe ou como uma função. Modificam funções.  
+É identificado da seguinte forma: `@nome_do_decorador`.  
+Deve ser inserido na linha anterior da definição.  
+Um decorador deve ser executável, ou seja, deve ter o método `__call__()`.  
+São como envelopes para funções.  
+Decoradores podem ser definidos como classes ou funções.
 
-# Decoradores de Funções
+## Decoradores de funções
 
 Classe como decorador:
 
@@ -43,7 +42,7 @@ Dentro da função decorada
 
 O método construtor do decorador é invocado logo após da definição da
 função decorada. No exemplo, a própria função, que é usada como
-parâmetro, é invocada pelo método construtor \_\_init\_\_().
+parâmetro, é invocada pelo método construtor __init__().
 
 Execução da função decorada:
 
@@ -69,7 +68,7 @@ class Decorador(object):
 ```
 
 Diferente da criação da classe anteriormente, aqui a função não é
-chamada no método construtor, mas sim no método \_\_call\_\_.
+chamada no método construtor, mas sim no método `__call__()`.
 
 Definição da função decorada:
 
@@ -94,7 +93,7 @@ Método __call__() do decorador
 Dentro da função
 ```
 
-# Decorador com Argumentos
+## Decorador com argumentos
 
 > Para funções decoradas que têm argumentos.
 
@@ -131,11 +130,11 @@ Método __call__() do decorador
 7
 ```
 
-# Função como Decorador
+## Função como decorador
 
-> Até então foram vistos exemplos de decoradores definidos como classes,
-> agora serão vistos os definidos como função.
-
+Até então foram vistos exemplos de decoradores definidos como classes, agora
+serão vistos os definidos como função.  
+   
 Criação da função decoradora, o decorador em si:
 
 ``` python
@@ -205,9 +204,9 @@ fc_msg('Hello, World!')
 '<i><b>Hello, World!</b></i>'
 ```
 
-# Memoização
+## Memoização
 
-> Texto\...
+XXXtextoXXX
 
 Criação do decorador de memoização:
 

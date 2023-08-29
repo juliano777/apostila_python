@@ -1,6 +1,5 @@
----
-title: Escopo
----
+# Escopo
+
 
 |   Por escopo entende-se o contexto onde um identificador será
   considerado.

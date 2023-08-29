@@ -1,8 +1,6 @@
----
-title: Iteratoradores e Geradores
----
+# Iteratoradores e geradores
 
-# Iterator
+## Iterator
 
 > Um iterator (iterador) permite acessar elementos de uma coleção /
 > sequência, retornando cada elemento sequencialmente. Todo objeto que
@@ -66,7 +64,7 @@ StopIteration:
   exceção
 | indicando que não há mais elementos a serem retornados.
 
-# Classe Iterator
+## Classe Iterator
 
 |   É possível também implementar um iterador como um objeto de uma
   classe
@@ -109,20 +107,16 @@ print(sum(FirstNumbers(10)))
 45
 ```
 
-# Generator
+## Generator
 
-|   Um generator é um objeto iterável assim como um iterator, mas nem
-  todo
-| iterator é um generator.
-|   Funções de generator permite declarar uma função que se comporta
-  como um
-| iterador, podendo ser usadas em loops.
-|   Um generator implementa o conceito de lazy evaluation, o que faz com
-  que
-| em determinadas situações economize-se recursos de processamento, pois
-  cada
-| elemento é processado conforme a demanda.
-
+Um generator é um objeto iterável assim como um iterator, mas nem todo
+iterator é um generator.  
+Funções de generator permite declarar uma função que se comporta como um
+iterador, podendo ser usadas em *loops*.  
+Um generator implementa o conceito de *lazy evaluation*, o que faz com que em
+determinadas situações economize-se recursos de processamento, pois cada 
+elemento é processado conforme a demanda.  
+   
 Criando um objeto range que vai de 0 a 9:
 
 ``` python
@@ -205,7 +199,7 @@ StopIteration:
     Bla bla bla
 ```
 
-# Funções Generator
+### Funções Generator
 
 |   Uma função generator utiliza o comando yield em vez de return, o que
   faz
@@ -275,18 +269,19 @@ x.__next__()
 StopIteration:
 ```
 
-# Iterator vs Generator
+## Iterator vs generator
 
--   Para criar um generator utilizamos ou uma função com yield no lugar
-    de return ou tuple comprehension. Para criar um iterador utilizamos
-    a função [iter()]{.title-ref};
--   Generator utiliza [yield]{.title-ref}, iterator não;
--   Gerador salva o estado de variáveis locais a cada vez que o yield
-    pausa o loop. Um iterador não faz uso de variáveis locais, tudo o
-    que ele precisa é faz a iteração.
--   Iteradores fazem uso mais eficiente de memória.
+- Para criar um generator utilizamos ou uma função com `yield` no lugar de
+  `return` ou *tuple comprehension*.
+  Para criar um iterador utiliza-se a função `iter()`;
+- Generator utiliza `yield`, iterator não;
+- Gerador salva o estado de variáveis locais a cada vez que o `yield` pausa o
+  *loop*.
+  Um iterador não faz uso de variáveis locais, tudo o que ele precisa é faz a
+  iteração.
+- Iteradores fazem uso mais eficiente de memória.
 
-Do módulo timeit importar a função de mesmo nome:
+Do módulo `timeit` importar a função de mesmo nome:
 
 ``` python
 from timeit import timeit

@@ -1,8 +1,6 @@
----
-title: Particularidades da Linguagem
----
+# Particularidades da Linguagem
 
-# Palavras Reservadas
+## Palavras Reservadas
 
 Palavras reservadas ou em inglês *keywords* são
 
@@ -29,7 +27,7 @@ for i in keywords:
 . . .
 ```
 
-# Definição do Interpretador de Comandos
+## Definição do Interpretador de Comandos
 
 > Para scripts Python, na primeira linha podemos especificar o
 > interpretador de comandos a ser utilizado, também conhecido como
@@ -101,7 +99,7 @@ python /tmp/hello.py
 Olá!
 ```
 
-# Case Sensitive
+# Case sensitive
 
 > Python é case sensitive, ou seja, letras maiúsculas e minúsculas são
 > interpretadas de formas diferentes.
@@ -124,12 +122,12 @@ print(Foo)
 foo
 ```
 
-# Não Suporta Sobrecarga de Funções / Métodos
+## Não suporta sobrecarga de funções / métodos
 
-> Àqueles que vêm de Java deve estranhar dentre outras coisas o fato de
-> Python não suportar sobrecarga de funções e métodos. Quando uma mesma
-> função é escrita duas ou mais vezes, o que prevalece é a última
-> definição.
+Àqueles que vêm de Java deve estranhar dentre outras coisas o fato de Python
+não suportar sobrecarga de funções e métodos.  
+Quando uma mesma função é escrita duas ou mais vezes, o que prevalece é a
+última definição.
 
 ``` python
 # Definição da função sem parâmetro
@@ -159,12 +157,13 @@ hello_world('foo')
 foo
 ```
 
-# Orientada a Objetos
+## Orientada a objetos
 
-> Em Python tudo é objeto. Ainda fazendo comparação com o mundo Java, em
-> Python não existem tipos primitivos. Até mesmo um número inteiro é uma
-> instância de int e tem seus atributos e métodos.
-
+Em Python tudo é objeto. Ainda fazendo comparação com o mundo Java, em Python
+não existem tipos primitivos. 
+Até mesmo um número inteiro é uma instância de int e tem seus atributos e
+métodos.   
+   
 ``` python
 x = 45
 x.__hex__()
@@ -229,7 +228,7 @@ class Minotauro(Humano, Animal):
     pass
 ```
 
-# Tipagem Dinâmica
+## Tipagem dinâmica
 
 > O interpretador define o tipo de acordo com o valor atribuído à
 > variável. A mesma variável pode ter seu tipo mudado de acordo com
@@ -263,12 +262,12 @@ type(foo)
 float
 ```
 
-# Tipagem Forte
+## Tipagem forte
 
-> O interpretador verifica se a operação é válida e não faz coerção
-> automática entre tipos incompatíveis. Caso haja operações de tipos
-> incompatíveis é preciso fazer a conversão explícita da variável ou
-> variáveis antes da operação.
+O interpretador verifica se a operação é válida e não faz coerção
+automática entre tipos incompatíveis. Caso haja operações de tipos
+incompatíveis é preciso fazer a conversão explícita da variável ou
+variáveis antes da operação.
 
 ``` python
 foo = '2'
@@ -335,11 +334,12 @@ print(foobar)
 7.0
 ```
 
-# Bytecode
+## Bytecode
 
-> Formato binário multiplataforma resultante da compilação de um código
-> Python.
+Formato binário multiplataforma resultante da compilação de um código
+Python.  
 
+  
 Criação de estrutura de diretórios para teste de pacote e bytecode:
 
 ``` bash
@@ -487,7 +487,7 @@ x = 5 + 2
 print(x)  # Imprime o valor de x
 ```
 
-# Docstrings ou Strings de Múltiplas Linhas
+# Docstrings ou strings de múltiplas linhas
 
 > Feitos dentro de funções e classes, que geram documentação
 > automaticamente que pode ser acessado pela função help(). São usados
@@ -574,8 +574,8 @@ print(a)
 
 # print
 
-> Antes era somente um comando, a partir da série 3.X será apenas
-> interpretado como função.
+Antes era somente um comando, a partir da série 3.X será apenas interpretado
+como função.
 
 ``` python
 print('Teste')
@@ -585,7 +585,7 @@ print('Teste')
 Teste
 ```
 
-# Referência de Identificadores
+# Referência de identificadores
 
 ``` python
 x = 7

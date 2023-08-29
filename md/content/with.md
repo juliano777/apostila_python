@@ -1,10 +1,9 @@
----
-title: with
----
+# with
 
-|   O comando with é usado para encapsular a execução de um bloco com
-  métodos definidos por um gerenciador de contexto.
 
+O comando with é usado para encapsular a execução de um bloco com métodos
+definidos por um gerenciador de contexto.  
+  
 Criação de um arquivo via shell do sistema operacional:
 
 ``` bash
