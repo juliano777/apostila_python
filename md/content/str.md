@@ -1,8 +1,8 @@
 # Strings
 
-Em Ciências da Computação chamamos de string um texto, também conhecido como
+Em Ciências da Computação chamamos de *string* um texto, também conhecido como
 cadeia de caracteres.  
-Strings representam textos, frases ou palavras.  
+*Strings* representam textos, frases ou palavras.  
 É um recurso muito caro em termos de recursos computacionais (processamento e
 memória) e que portanto deve ser utilizado com cuidado, pois escalabilidade é
 algo que deve ser sempre um fator a ser levado em conta.
@@ -136,10 +136,10 @@ Proposta de aprimoramento do Python, que visa boas práticas de programação.
 
 ## Formatação
 
-Há casos que é necessário fazer formatação de strings colocando uma string
-como um template.  
+Há casos que é necessário fazer formatação de strings colocando uma *string*
+como um *template*.  
 Inicialmente tinha-se a interpolação que utiliza o sinal de porcentagem (%),
-posteriormente foi adicionado o método format.
+posteriormente foi adicionado o método `format()`.
 
 ``` python
 # Interpolação
@@ -257,7 +257,7 @@ class Foo(object):
 'REPRESENTAÇÃO REPRESENTA\\xc7\\xc3O'
 ```
 
-## Preenchimento (padding) e alinhamento de Strings
+## Preenchimento (padding) e alinhamento de strings
 
 ``` python
 # Alinhamento à direita dentro de 7 colunas
@@ -683,8 +683,8 @@ Ao ser decodificado passa a ser uma string.
 
 ### Format strings
 
-> Ou também conhecidas como \"f strings\" foi um recurso adicionado à
-> versão 3.6 de Python.
+Ou também conhecidas como "*f strings*" foi um recurso adicionado à versão
+3.6 de Python.
 
 ``` python
 # Definição de variáveis
@@ -967,7 +967,7 @@ print("Curso de Python"[::-1])
 
 ## Docstrings
 
-São strings que vêm logo após a definição de uma função, de um método ou de
+São *strings* que vêm logo após a definição de uma função, de um método ou de
 uma classe.  
 É muito útil para fins de documentação.  
 Para visualizar o conteúdo dessa string utiliza-se o atributo mágico `__doc__`
@@ -1054,7 +1054,7 @@ class Foo(__builtin__.object)
 
 ## Imutabilidade
 
-> Strings em Python são imutáveis.
+*Strings* em Python são imutáveis.
 
 ``` python
 # Criação de uma string
@@ -1221,9 +1221,11 @@ rápida e eficiente. O método join, que é escrito em C, que faz a junção
 de todos elementos concatenando em um único passo.Muito melhor do que o
 método anterior em que um novo objeto é criado a cada iteração.
 
-## Métodos de Strings
+## Métodos de strings
 
--   join; junta elementos de uma lista ou tupla utlizando uma string.
+### join()
+
+Junta elementos de uma lista ou tupla utlizando uma string.
 
 ``` python
 # Criação de uma lista
@@ -1275,7 +1277,9 @@ print(bar)
 Python
 ```
 
--   find & index - Qual é a diferença entre eles?
+### find() & index()
+
+Qual é a diferença entre eles?
 
 ``` python
 # Dada a seguinte string
@@ -1321,7 +1325,9 @@ Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não
 encontrar o que foi pedido. O -1 não deve ser confundido como último
 elemento.
 
--   count
+### count()
+
+Conta quantas vezes o pedaço da *string* aparece na *string* inteira.  
 
 ``` python
 # Na frase em latim abaixo, quantas vezes aparece a letra "u"?

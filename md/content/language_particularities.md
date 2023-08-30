@@ -1,6 +1,6 @@
 # Particularidades da linguagem
 
-## Palavras Reservadas
+## Palavras reservadas
 
 Palavras reservadas ou em inglês *keywords* são
 
@@ -27,31 +27,25 @@ for i in keywords:
 . . .
 ```
 
-## Definição do Interpretador de Comandos
+## Definição do interpretador de comandos
 
-> Para scripts Python, na primeira linha podemos especificar o
-> interpretador de comandos a ser utilizado, também conhecido como
-> shebang;
+Para *scripts* Python, na primeira linha podemos especificar o interpretador
+de comandos a ser utilizado, também conhecido como *shebang*.
 
 ``` {.python linenos=""}
 #!/usr/bin/env python3
 ```
 
-::: note
-::: title
-Note
-:::
+> Em ambientes Windows não é preciso espeficar, isso é pertinente a ambientes
+Unix.
 
-Em ambientes Windows não é preciso espeficar, isso é pertinente a
-ambientes Unix.
-:::
 
-## Codificação (Conjunto de Caracteres - Encoding)
+## Codificação (Conjunto de caracteres - encoding)
 
-> É possível utilizar codificações diferentes de ASCII em arquivos de
-> código-fonte. A melhor maneira de se fazer isso é colocar uma linha
-> especial no começo do arquivo, se foi especificado o interpretador,
-> deve vir logo depois dele:
+É possível utilizar codificações diferentes de ASCII em arquivos de
+código-fonte.  
+A melhor maneira de se fazer isso é colocar uma linha especial no começo do
+arquivo, se foi especificado o interpretador, deve vir logo depois dele:
 
 ``` {.python linenos=""}
 # _*_ encoding: utf-8 _*_
@@ -101,8 +95,8 @@ Olá!
 
 # Case sensitive
 
-> Python é case sensitive, ou seja, letras maiúsculas e minúsculas são
-> interpretadas de formas diferentes.
+Python é case sensitive, ou seja, letras maiúsculas e minúsculas são
+interpretadas de formas diferentes.
 
 ``` python
 foo = 'bar'
@@ -230,10 +224,9 @@ class Minotauro(Humano, Animal):
 
 ## Tipagem dinâmica
 
-> O interpretador define o tipo de acordo com o valor atribuído à
-> variável. A mesma variável pode ter seu tipo mudado de acordo com
-> valores a ela atribuídos ao longo do código-fonte e em seu tempo de
-> execução.
+O interpretador define o tipo de acordo com o valor atribuído à variável.  
+A mesma variável pode ter seu tipo mudado de acordo com valores a ela
+atribuídos ao longo do código-fonte e em seu tempo de execução.
 
 ``` python
 foo = 'bar'
@@ -264,10 +257,10 @@ float
 
 ## Tipagem forte
 
-O interpretador verifica se a operação é válida e não faz coerção
-automática entre tipos incompatíveis. Caso haja operações de tipos
-incompatíveis é preciso fazer a conversão explícita da variável ou
-variáveis antes da operação.
+O interpretador verifica se a operação é válida e não faz coerção automática
+entre tipos incompatíveis.  
+Caso haja operações de tipos incompatíveis é preciso fazer a conversão
+explícita da variável ou variáveis antes da operação.
 
 ``` python
 foo = '2'
@@ -336,8 +329,7 @@ print(foobar)
 
 ## Bytecode
 
-Formato binário multiplataforma resultante da compilação de um código
-Python.  
+Formato binário multiplataforma resultante da compilação de um código Python.  
 
   
 Criação de estrutura de diretórios para teste de pacote e bytecode:
@@ -404,11 +396,11 @@ Hello World!!!
 27
 ```
 
-Quando um módulo é carregado pela primeira vez ou se seu código é mais
-novo do que o arquivo binário ele é compilado e então gera ou gera
-novamente o arquivo binário .pyc.
+Quando um módulo é carregado pela primeira vez ou se seu código é mais novo do
+que o arquivo binário ele é compilado e então gera ou gera novamente o arquivo
+binário `.pyc`.
 
-Listar o conteúdo de \"PacoteA\":
+Listar o conteúdo de PacoteA:
 
 ``` bash
 ls /tmp/python/PacoteA/
@@ -438,7 +430,7 @@ file /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc
 /tmp/python/PacoteA/__pycache__/Modulo1.cpython-36.pyc: python 3.6 byte-compiled
 ```
 
-# Quebra de linhas
+## Quebra de linhas
 
 Pode ser usada a barra invertida ou por vírgula.
 
@@ -450,10 +442,10 @@ varLista = [7,14,25,
             81,121]
 ```
 
-# Blocos
+## Blocos
 
-> São delimitados por endentação e a linha anterior ao bloco sempre
-> termina com dois pontos.
+São delimitados por endentação e a linha anterior ao bloco sempre termina com
+dois pontos.
 
 ``` python
 #Definição de uma classe
@@ -473,9 +465,9 @@ class Carro(object):
                 self.estado_farois = True
 ```
 
-# Comentários
+## Comentários
 
-> Inicia-se com o caractere \"#\" em cada linha.
+Inicia-se com o caractere \"#\" em cada linha.
 
 ``` python
 # um simples comentário
@@ -487,12 +479,12 @@ x = 5 + 2
 print(x)  # Imprime o valor de x
 ```
 
-# Docstrings ou strings de múltiplas linhas
+## Docstrings ou strings de múltiplas linhas
 
-> Feitos dentro de funções e classes, que geram documentação
-> automaticamente que pode ser acessado pela função help(). São usados
-> três pares de apóstrofos (\') ou três pares de aspas (\"), 3 (três) no
-> início e 3 (três) no fim.
+Feitos dentro de funções e classes, que geram documentação automaticamente
+que pode ser acessado pela função `help()`.
+São usados três apóstrofos (`'''`) ou três aspas (`"""` ), 3 (três) no início
+e 3 (três) no fim.
 
 ``` python
 # Com apóstrofos
@@ -522,25 +514,25 @@ funcao()
     Esta função não faz absolutamente nada
 ```
 
-# Operadores
+## Operadores
 
 Python suporta operadores dos tipos:
 
--   Aritiméticos: +, -, *, /, //,*\*, %;
--   Relacionais: \>, \<, \>=, \>=, ==, !=;
--   Atribuição: =, +=, +=, -=, /=, *=, %=,*\*=, //=;
--   Lógicos: and, or, not;
--   Associação: in, not in;
--   Identidade: is, is not;
--   Bitwise: &, \|, \^, \~, \<\<, \>\>.
+- Aritiméticos: `+`, `-`, `*`, `/`, `//`, `**`, `%`;
+- Relacionais: `>`, `<`, `>=`, `>=`, `==`, `!=`;
+- Atribuição: `=`, `+=`, `-=`, `/=`, `*=`, `%=`,`**=`, `//=`;
+- Lógicos: `and`, `or`, `not`;
+- Associação: `in`, `not in`;
+- Identidade: `is`, `is not`;
+- Bitwise: `&`, `|`, `^`, `~`, `<<`, `>>`.
 
 Operadores serão discutidos em mais detalhes em um capítulo posterior.
 
-# O Comando del
+## O Comando del
 
-> Este comando tem como objetivo remover a referência de um objeto. Se
-> esse objeto não tiver outra referência, o garbage collector atuará
-> liberando recursos.
+Este comando tem como objetivo remover a referência de um objeto.  
+Se esse objeto não tiver outra referência, o garbage collector atuará
+liberando recursos.
 
 ``` python
 sogra = 'Edelbarina'
@@ -572,10 +564,9 @@ print(a)
 ['Z', 1, 'm']
 ```
 
-# print
+## print
 
-Antes era somente um comando, a partir da série 3.X será apenas interpretado
-como função.
+Antes era somente um comando, a partir de Python 3 será passou a ser função.
 
 ``` python
 print('Teste')

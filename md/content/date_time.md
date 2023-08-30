@@ -1,11 +1,12 @@
 # Data e hora
 
-# O Módulo datetime
+# O módulo datetime
 
-Módulo que fornece classes para manipular datas e horas de maneiras
-simples e complexas. Enquanto data e hora são suportados
-aritmeticamente, o foco da implementação estã em uma extração eficiente
-de atributo para saída formatada e manipulação.
+Módulo que fornece classes para manipular datas e horas de maneiras simples e
+complexas.  
+Enquanto data e hora são suportados aritmeticamente, o foco da implementação
+estão em uma extração eficiente de atributo para saída formatada e
+manipulação.
 
 ``` python
 # Imports:
@@ -41,9 +42,9 @@ getsizeof(dt_evento)
 65
 ```
 
-| Strings não são adequadas para armazenar data e hora.
-| strptime transforma uma string para datetime conforme uma dada
-  máscara:
+Strings não são adequadas para armazenar data e hora.  
+`strptime()` transforma uma *string* para `datetime` conforme uma dada
+máscara:
 
 ``` python
 # Converter a string para datetime:
@@ -54,7 +55,7 @@ datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
 datetime.datetime(2019, 12, 27, 19, 0)
 ```
 
-**strptime: str -\> datetime**
+**strptime: str -> datetime**
 
 ``` python
 # O tamanho em bytes do dado em datetime:

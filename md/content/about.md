@@ -3,9 +3,9 @@
 ## O que é Python
 
 Python é uma linguagem de programação criada pelo holandês Guido van Rossum no
-começo dos anos 90 na Stichting Mathematisch Centrum (http://www.cwi.nl/),
-na Holanda, com o objetivo de ser uma sucessora de uma linguagem chamada
-ABC.  
+começo dos anos 90 na Stichting Mathematisch Centrum
+[http://www.cwi.nl](http://www.cwi.nl), na Holanda, com o objetivo de ser uma
+sucessora de uma linguagem chamada ABC.  
 O nome linguagem foi inspirado na série humorística Monty Python's Flying
 Circus, do grupo humorístico britânico Monty Python.  
 É muito atrativa para desenvolvimento ágil de aplicações.  
@@ -54,14 +54,14 @@ PostgreSQL, sistemas operacionais BSDs e outros projetos de software livre.
 Como o próprio nome diz, é o interpretador que faz a análise sintática e
 executa as instruções Python.  
 
-## Modo Interativo do Interpretador Python
+## Modo interativo do interpretador Python
 
 O modo interativo de Python é um recurso interessante que facilita o trabalho
 do desenvolvedor de forma que se possa testar algo que esteja fazendo assim
 que o comando é finalizado.  
 É um recurso muito útil para debugging, quick hacking e testes.
 
-## Invocando o Modo Interativo do Interpretador
+### Invocando o modo interativo do interpretador
 
 A maioria das distribuições Linux tem já o Python instalado, de forma que para
 ter acesso ao prompt interativo bastar digitar no terminal o comando 

@@ -1,12 +1,27 @@
 # Tipos Numéricos - int, float e complex
 
 
-# int
+## int
 
-> Para representação de todos números inteiros é o tipo int. A princípio
-> utilizamos para números inteiros o tipo int. O número máximo de int
-> que é aceito pode variar de uma máquina para outra. Para sabermos qual
-> é o número máximo do tipo int fazemos:
+Para representação de todos números inteiros é o tipo `int`.  
+A princípio utilizamos para números inteiros o tipo `int`.  
+O número máximo de `int` que é aceito pode variar de uma máquina para outra.  
+     
+``` python
+# ============================================================================
+# Obter o número máximo do tipo int para a máquina
+# ============================================================================
+
+from sys import maxsize
+
+print(maxsize)
+```
+
+```
+9223372036854775807
+```
+
+
 
 ``` python
 # Objeto inteiro:
@@ -128,11 +143,10 @@ int('1111', base=2)
 15
 ```
 
-# float
+## float
 
-> Ponto flutuante; não tem precisão absoluta, sua precisão é relativa.
-> Para uma maior precisão com números que tenham ponto flutuante,
-> utilizar o módulo decimal.
+Ponto flutuante; não tem precisão absoluta, sua precisão é relativa.  
+Para uma maior precisão com números que tenham ponto flutuante, utilizar o módulo `decimal`.
 
 ``` python
 # Criação de um float:
@@ -267,10 +281,10 @@ ou
 0.001
 ```
 
-# complex
+## complex
 
-> É o tipo de dados em Python que trata de números complexos, que são
-> muito utilizados em engenharia elétrica.
+É o tipo de dados em Python que trata de números complexos, que são muito
+utilizados em engenharia elétrica.
 
 ``` python
 # Número complexo somente com a parte real:

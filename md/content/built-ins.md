@@ -1,16 +1,14 @@
 # Comandos e funções importantes
 
+Neste capítulo são abordados comandos e funções interessantes e / ou
+imprescindíveis para a linguagem.
 
-> Neste capítulo são abordados comandos e funções interessantes e / ou
-> imprescindíveis para a linguagem.
+## all() e any()
 
-# all() e any()
-
-> A função [all()]{.title-ref} analisa cada elemento de um iterável e
-> retorna [True]{.title-ref} se **todos** esses elementos forem
-> [True]{.title-ref}. Enquanto que para a função [any()]{.title-ref}
-> basta que **apenas um elemento** seja [True]{.title-ref} para retornar
-> [True]{.title-ref}.
+A função `all()` analisa cada elemento de um iterável e retorna `True` se
+**todos** esses elementos forem `True`.
+Enquanto que para a função `any()` basta que **apenas um elemento** seja
+`True` para retornar `True``.
 
 ``` python
 # Todos elementos verdadeiros
@@ -96,24 +94,23 @@ any(w)
 True
 ```
 
-# iter() e next()
+## iter() e next()
 
-A função [iter()]{.title-ref} cria um objeto iterador cujos elementos
-podem ser acessados na sequência pela função [next()]{.title-ref}.
+A função `iter()` cria um objeto iterador cujos elementos podem ser acessados
+na sequência pela função `next()`.  
+   
+Sintaxes gerais:  
+   
+`[iter(object[, sentinel])`
 
-Sintaxes gerais:
+O parâmetro sentinela (`sentinel`) é opcional. Porém, se o mesmo for 
+declarado, o objeto tem que ser "chamável" (*callable*).  
+  
+`next(iterator\[, default\]`
 
-[iter(object\[, sentinel\])]{.title-ref}
-
-O parâmetro sentinela ([sentinel]{.title-ref}) é opcional. Porém, se o
-mesmo for declarado, o objeto tem que ser \"chamável\" (*callable*).
-Esse parâmetro sentinela
-
-[next(iterator\[, default\])]{.title-ref}
-
-O valor [default]{.title-ref} é opcional, cujo objetivo é ao se atingir
-o fim dos elementos do objeto iterador em vez de retornar uma exceção,
-seu valor exibido toda vez que for chamado.
+O valor `default` é opcional, cujo objetivo é ao se atingir o fim dos
+elementos do objeto iterador em vez de retornar uma exceção, seu valor exibido
+toda vez que for chamado.
 
 ``` python
 # Criação de uma simples lista
@@ -303,11 +300,11 @@ next(iter_sentinel, 'Fim')
 Após exaurido, por duas vezes, não foi lançada uma exceção, mas sim
 retornado um valor padrão.
 
-# print()
+## print()
 
-> Em Python 2 era um comando e em Python 3 passou a ser exclusivamente
-> uma função. Seu objetivo é imprimir uma mensagem que por padrão é
-> STDOUT.
+Em Python 2 era um comando e em Python 3 passou a ser exclusivamente uma
+função.  
+Seu objetivo é imprimir uma mensagem que por padrão é `STDOUT`.  
 
 ``` python
 # Um simples "Hello, world!":
@@ -341,9 +338,9 @@ bar
 baz
 ```
 
-# len()
+## len()
 
-> Função que retorna a quantidade de itens de um contêiner.
+Função que retorna a quantidade de itens de um contêiner.
 
 ``` python
 # Criação de um objeto contêiner e verificação da quantidade de elementos
@@ -365,19 +362,20 @@ len('Heavy Metal')
 11    
 ```
 
-# range()
+## range()
 
-> É uma função que retorna um objeto com uma faixa inteiros (range
-> object). Muito útil para uso em loops.
-
-Sintaxe:
-
-> range(stop) range(start, stop\[, step\])
->
-> start: Valor inicial da sequência, por padrão é 0 (zero). stop: Valor
-> final da sequẽncia - 1. step: Valor de incremento, cujo padrão é 1
-> (um), quando start é maior que stop, ou seja, para se fazer uma
-> sequência regressiva é preciso um número negativo.
+É uma função que retorna um objeto com uma faixa inteiros (*range object*).  
+Muito útil para uso em *loops*.  
+   
+Sintaxe:  
+  
+`range(stop) range(start, stop[, step])`  
+  
+**`start`**: Valor inicial da sequência, por padrão é 0 (zero).  
+**`stop`**: Valor final da sequẽncia - 1.
+**`step`**: Valor de incremento, cujo padrão é 1 (um), quando `start` é maior
+que `stop`, ou seja, para se fazer uma sequência regressiva é preciso um
+número negativo.
 
 ``` python
 # Um parâmetro (stop)
@@ -436,10 +434,10 @@ for i in range(20, 1, -5):
 5
 ```
 
-# filter()
+## filter()
 
-> Função que retorna um iterador produzindo os itens iteráveis para os
-> quais a função(item) for True.
+Função que retorna um iterador produzindo os itens iteráveis para os quais a
+`função(item)` for `True`.
 
 ``` python
 # Criação de uma função que retorna True se o objeto for ímpar
@@ -475,9 +473,9 @@ print(list(f))
 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 ```
 
-# map()
+## map()
 
-> Cria um iterador que aplica uma função para cada elemento do iterável.
+Cria um iterador que aplica uma função para cada elemento do iterável.
 
 ``` python
 # Dada uma tupla com várias strings, criar uma lista 
@@ -513,10 +511,10 @@ print(list(m))
 [9, 7, 78125, 1000]
 ```
 
-# reduce()
+## reduce()
 
-> Em Python 2 estava disponível sem a necessidade de fazer importação,
-> hoje em Python 3 está no módulo functools.
+Em Python 2 estava disponível sem a necessidade de fazer importação, em Python
+3 está no módulo `functools`.
 
 ``` python
 # Via loop somar todos elementos de uma tupla
@@ -545,10 +543,10 @@ reduce(int.__add__, (2, 1, 4, 3))
 10
 ```
 
-# del
+## del
 
-> Pode ser tanto um comando como uma função cuja finalidade é remover a
-> referência de um objeto. Também apaga elemento de uma coleção.
+Pode ser tanto um comando como uma função cuja finalidade é remover a
+referência de um objeto. Também apaga elemento de uma coleção.
 
 ``` python
 # Teste de del em um objeto mutável (lista)
@@ -588,11 +586,10 @@ NameError: name 'foo' is not defined
 
 Nota-se que após o del não é possível mais fazer referência ao objeto.
 
-# ord e chr
+## ord() e chr()
 
-> A função ord retorna o código Unicode de um caractere. A função chr
-> faz o caminho inverso, ou seja, retorna um caractere dado um código
-> Unicode. Em Python 2 chr era unichr.
+A função ord retorna o código *Unicode* de um caractere. A função `chr()` faz
+o caminho inverso, ou seja, retorna um caractere dado um código *Unicode*.
 
 ``` python
 ord('\n')  # Qual é o código Unicode para new line?
@@ -658,11 +655,11 @@ chr(981)  # Qual caractere Unicode corresponde ao código 981?
 'ϕ'
 ```
 
-# dir()
+## dir()
 
-> Função que lista atributos e métodos de um elemento. Se chamada sem
-> nenhum argumento retorna os nomes do escopo atual. A chamada dessa
-> função é correspondente ao executar o método \_\_dir\_\_.
+Função que lista atributos e métodos de um elemento.  
+Se chamada sem nenhum argumento retorna os nomes do escopo atual.  
+A chamada dessa função é correspondente ao executar o método `__dir__()`.  
 
 ``` python
 # Definição de variáeis
@@ -806,11 +803,11 @@ dizer_nome
 saudacao
 ```
 
-# pass
+## pass
 
-> É um comando de operação nula, ou seja, quando é executado nada
-> acontece. É útil como um marcador quando um statement é requerido
-> sintaticamente, mas não tem necessidade de um código a ser executado.
+É um comando de operação nula, ou seja, quando é executado nada acontece.  
+É útil como um marcador quando um *statement* é requerido sintaticamente, mas
+não tem necessidade de um código a ser executado.
 
 ``` python
 # Função que nada faz:
@@ -818,13 +815,13 @@ def nula():
     pass
 ```
 
-# assert
+## assert
 
-> Um statements assert é uma maneira conveniente para inserir asserções
-> de debug. O comando assert verifica em tempo de execução uma
-> determinada condição e se a mesma não for verdadira uma exceção
-> AssertionError é lançada e se essa exceção não for tratada, o programa
-> pára.
+Um statements `assert` é uma maneira conveniente para inserir asserções
+de *debug*.  
+O comando `assert` verifica em tempo de execução uma determinada condição e se
+a mesma não for verdadira uma exceção `AssertionError` é lançada e se essa
+exceção não for tratada, o programa pára.
 
 ``` bash
 # Criação do script com assert sem tratamento de exceção
@@ -882,9 +879,9 @@ Teve erro...
 Fim
 ```
 
-# abs()
+## abs()
 
-> Retorna o valor absoluto do argumento.
+Retorna o valor absoluto do argumento.
 
 ``` python
 abs(3)
@@ -902,10 +899,10 @@ abs(-3)
 3
 ```
 
-# divmod()
+## divmod()
 
-> Função que retorna uma tupla de dois elementos no formato (x//y, x%y),
-> respectivamente resultado da divisão inteira e resto da divisão:
+Função que retorna uma tupla de dois elementos no formato `(x//y, x%y)`,
+respectivamente resultado da divisão inteira e resto da divisão:
 
 ``` python
 divmod(11, 4)  # Equivalente: 11 // 4, 11 % 4
@@ -915,12 +912,13 @@ divmod(11, 4)  # Equivalente: 11 // 4, 11 % 4
 (2, 3)
 ```
 
-# round()
+## round()
 
-> Função que retorna um número de forma arredondada dada uma precisão em
-> dígitos decimais. O valor de retorno é um inteiro se o número de
-> dígitos for omitido ou None. Caso contrário, o valor de retorno terá o
-> mesmo tipo do número. O número de dígitos pode ser negativo.
+Função que retorna um número de forma arredondada dada uma precisão em
+dígitos decimais.  
+O valor de retorno é um inteiro se o número de dígitos for omitido ou `None`.
+Caso contrário, o valor de retorno terá o mesmo tipo do número. O número de
+dígitos pode ser negativo.
 
 ``` python
 # Arredondamento sem especificar o número de dígitos (segundo parâmetro)
@@ -985,11 +983,12 @@ round(1237.87431, -3)
 1000.0
 ```
 
-# callable()
+## callable()
 
-> Função que retorna True se o objeto é \"chamável\" (callable) (i. e.,
-> algum tipo de função). Vale lembrar que classes também são chamáveis,
-> bem como objetos de classes que implementam o método \_\_call\_\_().
+Função que retorna `True` se o objeto é "chamável" (*callable*) (i. e., algum
+tipo de função).  
+Vale lembrar que classes também são chamáveis, bem como objetos de classes que
+implementam o método `__call__()`.
 
 ``` python
 # Criação de função comum
@@ -1038,9 +1037,9 @@ Classe: Sim
 Objeto da classe Foo: Não
 ```
 
-# oct()
+## oct()
 
-> Função que retorna a representação octal de um inteiro.
+Função que retorna a representação octal de um inteiro.
 
 ``` python
 # 
@@ -1060,10 +1059,10 @@ oct(10)
 '0o12'
 ```
 
-# hash()
+## hash()
 
-> Função que retorna o valor hash de um dado objeto. Dois objetos que
-> são comparados também devem ter o mesmo valor de hash.
+Função que retorna o valor *hash* de um dado objeto.  
+Dois objetos que são comparados também devem ter o mesmo valor de *hash*.
 
 ``` python
 # Testes com a função hash
@@ -1126,10 +1125,10 @@ hash(9999999999999999999)
 776627963145224195
 ```
 
-# id()
+## id()
 
-> É uma função que retorna a identidade de um objeto. É a garantia que o
-> objeto será único dentre outros.
+É uma função que retorna a identidade de um objeto. É a garantia que o
+objeto será único dentre outros.
 
 ``` python
 # Criação de duas tuplas
@@ -1200,15 +1199,15 @@ id(bar) == id(baz)
 True
 ```
 
-Aqui fica demonstrado que quando se cria uma nova variável simplesmente
-por atribuição é na verdade a criação de uma nova referência
-(apontamento) para o mesmo objeto.
+Aqui fica demonstrado que quando se cria uma nova variável simplesmente por
+atribuição é na verdade a criação de uma nova referência (apontamento) para o
+mesmo objeto.
 
-# input
+## input()
 
-> É uma função de entrada de dados pelo teclado (STDIN), cujos dados são
-> interpretados como string. Opcionalmente podemos colocar uma mensagem
-> para pedir uma entrada de teclado.
+É uma função de entrada de dados pelo teclado (`STDIN`), cujos dados são 
+interpretados como string. Opcionalmente podemos colocar uma mensagem para
+pedir uma entrada de teclado.
 
 ``` python
 # Entrada de dados sem prompt
@@ -1240,10 +1239,10 @@ print(foo)
 . . .
 ```
 
-# min e max
+# min() e max()
 
-> Dada uma coleção, seja ela uma lista, tupla, conjunto ou string, as
-> funções min e max trazem, respectivamente, o valor mínimo e o máximo.
+Dada uma coleção, seja ela uma lista, tupla, conjunto ou string, as funções
+`min()` e `max()` trazem, respectivamente, o valor mínimo e o máximo.  
 
 ``` python
 # Valor mínimo entre inteiros
@@ -1272,9 +1271,9 @@ max('c', 'x', 'k')
 'x'
 ```
 
-# enumerate
+# enumerate()
 
-> Função que retorna um objeto iterável.
+Função que retorna um objeto iterável.
 
 ``` python
 # Criação de uma tupla
@@ -1308,7 +1307,7 @@ for i, j in y:
 y = enumerate(x)
 ```
 
-| Método \_\_next\_\_() que traz uma tupla com o índice e o valor.
+| Método __next__() que traz uma tupla com o índice e o valor.
 | Executar 3 (três) vezes:
 
 ``` python
