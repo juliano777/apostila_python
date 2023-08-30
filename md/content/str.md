@@ -679,7 +679,7 @@ type(b.decode('utf-8'))
 str
 ```
 
-Ao ser decodificado passa a ser uma string.
+Ao ser decodificado passa a ser uma *string*.
 
 ### Format strings
 
@@ -796,9 +796,9 @@ print(msg)
 Marca: Fiat - Modelo: 147 - Ano: 1985 - Cor: azul
 ```
 
-Raw Strings (r) \~\~\~\~\~\~\~\~\~\~\~\~\~\~
+### Raw strings (r)
 
-> É o tipo de string cujo conteúdo é interpretado literalmente.
+É o tipo de string cujo conteúdo é interpretado literalmente.
 
 ``` python
 # Exemplo de print com raw string
@@ -814,8 +814,8 @@ de tab (t), ou seja, não houve qualquer interpretação.
 
 ### Unicode strings (u)
 
-> É o padrão para uma string em Python, não há a necessidade de
-> adicionar o sufixo \"u\" antes do apóstrofo ou aspas.
+É o padrão para uma *string* em Python, não há a necessidade de adicionar o
+sufixo "`u`" antes do apóstrofo ou aspas.  
 
 ``` python
 # Comparação de strings
@@ -826,7 +826,7 @@ u'Foo' == 'Foo'
 True
 ```
 
-Das duas strings, somente a primeira tem o sufixo \"u\".
+Das duas *strings*, somente a primeira tem o sufixo "`u`".
 
 ## Operações de Strings
 
@@ -875,10 +875,10 @@ print('<' + 'Python'.__mul__(3) + '>')
 
 ### Split
 
-> Quebra a string em palavras formando uma lista.
+Quebra a *string* em palavras formando uma lista.
 
 ``` python
-# 
+# Por padrão a divisão é feita por espaços
 print('Curso de Python'.split())
 ```
 
@@ -887,7 +887,7 @@ print('Curso de Python'.split())
 ```
 
 ``` python
-# 
+# Pode-se também especificar uma string customizada como delimitador
 print('Curso de Python'.split('de'))
 ```
 
@@ -1180,8 +1180,8 @@ print(s)
 
 Para cada iteração a referência do objeto antigo é retirada e sendo criado um
 novo a partir do resultado da concatenação do valor antigo com o valor de do
-atual e o garbage collector é acionado. Isso faz muita alocação de memória, o
-que torna o desempenho horrível para coisas maiores.
+atual e o *garbage collector* é acionado. Isso faz muita alocação de memória,
+o que torna o desempenho horrível para coisas maiores.
 
 ### Método 2 - eficaz
 
@@ -1214,15 +1214,17 @@ print(s)
 012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849
 ```
 
-Foi criada uma lista de strings no loop em que a cada iteração é
-utilizado o método append da lista para adicionar o item atual. No final
-é utilizado o método de string join que utiliza como separador uma
-string vazia (\'\') juntando em uma string (o novo s) todos os valores
-da lista. A estrutura de dados de uma lista Python é mais eficiente para
-crescer, pois o método append apenas adiciona um novo elemento, de forma
-rápida e eficiente. O método join, que é escrito em C, que faz a junção
-de todos elementos concatenando em um único passo.Muito melhor do que o
-método anterior em que um novo objeto é criado a cada iteração.
+Foi criada uma lista de *strings* no *loop* em que a cada iteração é utilizado
+o método append da lista para adicionar o item atual.  
+No final é utilizado o método de *string* `join()` que utiliza como separador
+uma string vazia (`''`) juntando em uma *string* (o novo s) todos os valores
+da lista.  
+A estrutura de dados de uma lista Python é mais eficiente para crescer, pois o
+método `append()` apenas adiciona um novo elemento, de forma rápida e
+eficiente.  
+O método `join()`, que é escrito em C, que faz a junção de todos elementos
+concatenando em um único passo. Muito melhor do que o método anterior em que
+um novo objeto é criado a cada iteração.
 
 ## Métodos de strings
 
@@ -1289,7 +1291,7 @@ Qual é a diferença entre eles?
 foo = 'Python FreeBSD PostgreSQL'
 ```
 
-Temos seus caracteres e suas respectivas posições: :
+Temos seus caracteres e suas respectivas posições:
 
     P|y|t|h|o|n| |F|r|e|e |B |S |D |  |P |o |s |t |g |r |e |S |Q |L
     0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24
@@ -1324,9 +1326,9 @@ foo.find('Linux')
 -1
 ```
 
-Nota-se que que index lança uma exceção, enquanto find retorna -1 ao não
-encontrar o que foi pedido. O -1 não deve ser confundido como último
-elemento.
+Nota-se que que `index()` lança uma exceção, enquanto `find()` retorna `-1` ao
+não encontrar o que foi pedido.  
+O `-1` não deve ser confundido como último elemento.
 
 ### count()
 
