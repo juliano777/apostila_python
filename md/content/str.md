@@ -109,7 +109,7 @@ e nove caracteres da PEP8 (Python Enhancement Proposal),
 Proposta de aprimoramento do Python, que visa boas práticas de programação.
 ```
 
-# Caracteres especiais
+## Caracteres especiais
 
 ```
 | Escape             | Descrição                                             | Exemplo      | Saída         |
@@ -897,10 +897,13 @@ print('Curso de Python'.split('de'))
 
 ### Slice
 
-|   Corte de string - `'string'[inicio:fim - 1:incremento]`. É
-  importante salientar que no intervalo início:fim começam por zero, o
-  ínício é fechado e o fim é aberto \[início:fim). Por padrão o
-  incremento é 1.
+Corte / fatiamento de *string*.  
+   
+`'string'[inicio:fim - 1:incremento]`  
+   
+É importante salientar que no intervalo `início:fim` começam por zero, o 
+ínício é fechado e o fim é aberto **[início:fim)**.  
+Por padrão o incremento é 1.
 
 ``` python
 # Primeira posição (começa com zero) da string:
