@@ -1,6 +1,4 @@
----
-title: O Módulo decimal
----
+# O Módulo decimal
 
 > O módulo decimal fornece suporte para aritmética de ponto flutuante
 > decimal. Ele oferece muitas vantagens sobre o tipo float. O módulo

@@ -1,6 +1,5 @@
----
-title: Tipos Numéricos - int, float e complex
----
+# Tipos Numéricos - int, float e complex
+
 
 # int
 

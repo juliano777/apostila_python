@@ -1,18 +1,16 @@
----
-title: Módulos
----
+# Módulos
 
 > Módulos são as bibliotecas de Python. São simples arquivos de código
 > Python (.py) e têm que estar dentro do PYTHONPATH.
 
 \> import sys
 
-\> dir(sys) \[\'\_\_displayhook\_\_\', \'\_\_doc\_\_\',
-\'\_\_excepthook\_\_\', \'\_\_interactivehook\_\_\', \'\_\_loader\_\_\',
-\'\_\_name\_\_\', \'\_\_package\_\_\', \'\_\_spe c\_\_\',
-\'\_\_stderr\_\_\', \'\_\_stdin\_\_\', \'\_\_stdout\_\_\',
-\'\_clear_type_cache\', \'\_current_frames\', \'\_debugmallocstats\',
-\'\_getframe\' , \'\_home\', \'\_mercurial\', \'\_xoptions\',
+\> dir(sys) \[\'__displayhook__\', \'__doc__\',
+\'__excepthook__\', \'__interactivehook__\', \'__loader__\',
+\'__name__\', \'__package__\', \'__spe c__\',
+\'__stderr__\', \'__stdin__\', \'__stdout__\',
+\'_clear_type_cache\', \'_current_frames\', \'_debugmallocstats\',
+\'_getframe\' , \'_home\', \'_mercurial\', \'_xoptions\',
 \'abiflags\', \'api_version\', \'argv\', \'base_exec_prefix\',
 \'base_prefix\', \'builtin_mo dule_names\', \'byteorder\',
 \'call_tracing\', \'callstats\', \'copyright\', \'displayhook\',
@@ -43,22 +41,22 @@ title: Módulos
 
 \$ vim foo.py
 
-\# \_*\_ encoding: utf-8 \_*\_
+\# _*_ encoding: utf-8 _*_
 
-print(\'Este arquivo, {} é um módulo!\'.format(\_\_file\_\_))
-print(\'Seu nome é {}.\'.format(\_\_name\_\_))
+print(\'Este arquivo, {} é um módulo!\'.format(__file__))
+print(\'Seu nome é {}.\'.format(__name__))
 
 \> import foo Este arquivo, /tmp/foo.py é um módulo! Seu nome é foo.
 
 \$ python3 foo.py .. code-block:: console
 
-> Este arquivo, foo.py é um módulo! Seu nome é \_\_main\_\_.
+> Este arquivo, foo.py é um módulo! Seu nome é __main__.
 
 \$ vim foo.py
 
-\# \_*\_ encoding: utf-8 \_*\_
+\# _*_ encoding: utf-8 _*_
 
-if \_\_name\_\_ == \'\_\_main\_\_\':
+if __name__ == \'__main__\':
 
 :   print(\'Executado a partir da linha de comando.\')
 
@@ -80,7 +78,7 @@ Recarregando um Módulo
 
 \$ vim foo.py
 
-\# \_*\_ encoding: utf-8 \_*\_
+\# _*_ encoding: utf-8 _*_
 
 class Pessoa(object):
 

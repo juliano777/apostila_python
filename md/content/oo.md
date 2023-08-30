@@ -63,15 +63,13 @@ print(s)
 Chiquinho da Silva tem 51 anos e 1.60m de altura
 ```
 
-|   Obs.: Em Python todos métodos e atributos são públicos.
-|   Há uma convenção que colocando um unerline como primeiro caractere
-  no nome
-| de um atributo ou um método o sinaliza como privado.
-|   Porém, isso é apenas uma convenção. Nada impede que sejam acessados
-| externamente.
-|   Para que haja um bloqueio efetivo há um recurso na linguagem chamado
-| \"property\".
-
+Obs.: Em Python todos métodos e atributos são públicos.  
+Há uma convenção que colocando um unerline como primeiro caractere no nome de
+um atributo ou um método o sinaliza como privado.  
+Porém, isso é apenas uma convenção. Nada impede que sejam acessados
+externamente.  
+Para que haja um bloqueio efetivo há um recurso na linguagem chamado "*property*".  
+   
 Criação de classe com método construtor e um método personalizado:
 
 ``` python

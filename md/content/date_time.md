@@ -1,6 +1,4 @@
----
-title: Data e Hora
----
+# Data e hora
 
 # O Módulo datetime
 

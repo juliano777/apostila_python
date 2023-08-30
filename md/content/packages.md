@@ -1,6 +1,4 @@
----
-title: Pacotes
----
+# Pacotes
 
 Criação de diretório (pacote):
 

@@ -1,6 +1,4 @@
----
-title: Expressões vs Statements
----
+# Expressões vs comandos (statements)
 
 > Expressão: é algo que pode ser reduzido para um valor.
 >

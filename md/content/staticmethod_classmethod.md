@@ -1,6 +1,4 @@
----
-title: Método de Classe e Método Estático
----
+# Método de classe e método estático
 
 |   Existem dois tipos de métodos que podem ser executados diretamente
   de uma

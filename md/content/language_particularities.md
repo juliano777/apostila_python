@@ -1,4 +1,4 @@
-# Particularidades da Linguagem
+# Particularidades da linguagem
 
 ## Palavras Reservadas
 

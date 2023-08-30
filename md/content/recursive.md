@@ -1,6 +1,4 @@
----
-title: Recursividade
----
+# Recursividade
 
 > De uma forma geral, recursividade é uma palavra cujo significado é a
 > capacidade de um objeto fazer uma chamada a si mesmo em profundidade.

@@ -1,7 +1,6 @@
----
-subtitle: while
-title: Loops - Laços de Repetição
----
+# Loops - laços de Repetição
+
+## while
 
 |   Executa em laço (loop) **enquanto** a condição for verdadeira.
 

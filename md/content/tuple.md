@@ -1,6 +1,4 @@
----
-title: Tupla
----
+# Tupla
 
 |   Tupla têm sua estrutura muito similar à da lista, no entanto, ela é
   imutável.

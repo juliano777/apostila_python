@@ -1,6 +1,4 @@
----
-title: Encapsulamento
----
+# Encapsulamento
 
 |   O conceito de encapsulamento no geral consiste em isolar atributos e
   / ou métodos de acesso externo deixando-os como privados.

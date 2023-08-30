@@ -1,4 +1,4 @@
-# Comandos e Funções Importantes
+# Comandos e funções importantes
 
 
 > Neste capítulo são abordados comandos e funções interessantes e / ou

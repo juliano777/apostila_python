@@ -1,6 +1,4 @@
----
-title: Funções
----
+# Funções
 
 |   Uma funçao é um recurso de linguagens de programação, que armazena
   instruções contidas em um bloco de forma a evitar escrever novamente

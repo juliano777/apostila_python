@@ -1,6 +1,4 @@
----
-title: Sequências
----
+# Sequências
 
 > Com sequências podemos fazer iteração, indexação, fatiamento (slice) e
 > operações de list comprehension.

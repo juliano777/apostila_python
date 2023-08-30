@@ -1,6 +1,5 @@
----
-title: set e frozenset
----
+# set e frozenset
+
 
 |    Similarmente a list e tuple, a diferença entre eles é que frozenset
   é um tipo imutável.

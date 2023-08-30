@@ -1,6 +1,4 @@
----
-title: Threads
----
+# Threads
 
 ``` python
 import threading

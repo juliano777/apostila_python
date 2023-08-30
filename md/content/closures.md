@@ -1,6 +1,5 @@
 # Closures
 
-
 Funções são objetos também. Closures são funções que constroem funções,
 retorna outra função. Sua estrutura é uma função dentro de outra. A
 função interna é também conhecida como função auxiliadora (helper).

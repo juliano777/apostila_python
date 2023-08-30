@@ -2,7 +2,7 @@
 # if / elif / else
 
 
-> O comando if, que inglês significa \"se\" indica uma condição.
+O comando if, que inglês significa \"se\" indica uma condição.
 
 Criação de dois objetos int:
 

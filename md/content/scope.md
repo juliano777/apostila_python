@@ -1,16 +1,14 @@
 # Escopo
 
-
-|   Por escopo entende-se o contexto onde um identificador será
-  considerado.
-|   Um identificador pode ser uma variável, um comando, uma função uma
-  clase ou um objeto.
-|   A ordem de busca de um identificador em escopos é a seguinte:
-
+Por escopo entende-se o contexto onde um identificador será considerado.  
+Um identificador pode ser uma variável, um comando, uma função uma classe ou
+um objeto.  
+A ordem de busca de um identificador em escopos é a seguinte:  
+  
 1.  Local ou dentro de função;
 2.  Função externa;
 3.  Global ou de módulo;
-4.  \_\_builtins\_\_
+4.  __builtins__
 
 # Escopo Local ou Dentro de Função
 
@@ -252,13 +250,13 @@ eggs
 |   A variável global a ser alterada deve ser declarada como global
   antes de sua atribuição.
 
-# Escopo \_\_builtins\_\_
+# Escopo __builtins__
 
-|   O escopo \_\_builtins\_\_ abrange identificadores que já estão
+|   O escopo __builtins__ abrange identificadores que já estão
   definidos antes mesmo do código a ser escrito.
 |   São funções, comandos e variáveis internas de Python.
 
-\"str\" é está em \_\_builtins\_\_?:
+\"str\" é está em __builtins__?:
 
 ``` python
 'str' in dir(__builtins__)
@@ -272,7 +270,7 @@ True
 |   E se sobescrevermos esse item localmente?
 
 Criando uma variável cujo identificador pertence ao escopo
-\_\_builtins\_\_:
+__builtins__:
 
 ``` python
 str = 1
@@ -359,7 +357,7 @@ dir(__builtins__)
 -   globals(): Retorna variáveis globais (escopo do módulo);
 -   locals(): Retorna variáveis locais (escopo local);
 -   vars(obj): sem argumentos é equivalente a locals(), com um
-    argumento, equivalente a objeto.\_\_dict\_\_.
+    argumento, equivalente a objeto.__dict__.
 
 Variável em um escopo global:
 

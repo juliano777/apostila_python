@@ -1,6 +1,4 @@
----
-title: open
----
+# open
 
 |   É a forma nativa de Python para manipular arquivos (leitura e
   escrita).

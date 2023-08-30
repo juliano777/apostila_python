@@ -1,6 +1,4 @@
----
-title: Exceções
----
+# Exceções
 
 **Blocos de Comandos**:
 
