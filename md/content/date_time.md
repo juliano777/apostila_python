@@ -1,6 +1,6 @@
 # Data e hora
 
-# O módulo datetime
+## O módulo datetime
 
 Módulo que fornece classes para manipular datas e horas de maneiras simples e
 complexas.  
@@ -55,7 +55,7 @@ datetime.strptime(dt_evento, '%Y-%m-%d %H:%M')
 datetime.datetime(2019, 12, 27, 19, 0)
 ```
 
-**strptime: str -> datetime**
+## strptime: str -> datetime
 
 ``` python
 # O tamanho em bytes do dado em datetime:
@@ -66,8 +66,7 @@ getsizeof(datetime.strptime(dt_evento, '%Y-%m-%d %H:%M'))
 48
 ```
 
-A mesma informação armazenada como datetime ocupa menos espaço que
-string.
+A mesma informação armazenada como datetime ocupa menos espaço que *string*.
 
 ``` python
 # Recriar a variável como datetime utilizando seu valor antigo de string:
@@ -81,10 +80,10 @@ type(dt_evento)
 datetime.datetime
 ```
 
-Pode ser necessário também fazer o caminho inverso, para transformar um
-dado datetime para string.
+Pode ser necessário também fazer o caminho inverso, para transformar um dado
+`datetime` para *string*.
 
-> Para isso pode-se usar strftime:
+Para isso pode-se usar `strftime()`:
 
 ``` python
 # Extrair como string de um dado datetime:
@@ -95,7 +94,7 @@ datetime.strftime(dt_evento, '%Y-%m-%d %H:%M')
 '2019-12-27 19:00'
 ```
 
-**strftime: datetime -\> str**
+## strftime: datetime -> str
 
 ``` python
 # Variável que contém apenas a data atual:
@@ -205,13 +204,10 @@ hoje.isoweekday()
 
 # O Módulo time
 
-> |   Módulo cujos objetos representam uma hora (local) de dia,
->   independente de
-> | qualquer dia em particular, e sujeito a ajustes via um objeto
->   tzinfo.
-> |   Fornece várias funções para manipular valores de hora. Não
->   confundir com
-> | a classe time do módulo datetime.
+Módulo cujos objetos representam uma hora (local) de dia, independente de
+qualquer dia em particular, e sujeito a ajustes via um objeto `tzinfo`.  
+Fornece várias funções para manipular valores de hora.  
+Não confundir com a classe `time` do módulo `datetime`.
 
 ``` python
 # Imports:

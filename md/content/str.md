@@ -650,7 +650,7 @@ print(type(b))
 <class 'bytes'>
 ```
 
-Uma byte string tem um tipo específico, bytes.
+Uma *byte string* tem um tipo específico, *bytes*.
 
 ``` python
 # Exibindo a byte string

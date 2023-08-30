@@ -1,16 +1,16 @@
 # Dicionário
 
-> Em Python um dicionário é uma estrutura de dados envolta por chaves
-> cujos elementos são compostos por chave e valor e separados por
-> vírgula.
-
+Em Python um dicionário é uma estrutura de dados envolta por chaves cujos
+elementos são compostos por chave e valor e separados por vírgula.  
+Muito similar a [JSON](https://www.json.org).  
+  
 Dicionário vazio:
 
 ``` python
 d = {}
 ```
 
-Criação de um dicionário utilizando a função dict:
+Criação de um dicionário utilizando a função `dict()`:
 
 ``` python
 d = dict(chave1 = 'valor2', chave2 = 1980)
@@ -237,10 +237,9 @@ d[l] = 0
 TypeError: unhashable type: 'list'
 ```
 
-Listas são \"unhashable\", portanto não podem ser chaves de um
-dicionário.
-
-Objeto da classe Funcionário como chave do dicionário:
+Listas são "*unhashable*", portanto não podem ser chaves de um dicionário.  
+  
+Objeto da classe `Funcionário` como chave do dicionário:
 
 ``` python
 d[f1] = 'Funcionário 1'
@@ -303,14 +302,14 @@ d.get('nome')
 'Chiquinho'
 ```
 
-Existe a chave \"nome\", então seu valor foi retornado.
+Existe a chave "nome", então seu valor foi retornado.
 
 ``` python
 d.get('endereco')
 ```
 
-Não existe a chave \"endereço\", por isso nada foi retornado, no
-entanto, não foi lançada exceção.
+Não existe a chave "endereço", por isso nada foi retornado, no entanto, não
+foi lançada exceção.
 
 ``` python
 d.get('endereco', 'R. do Cafezal, 30')
@@ -320,9 +319,8 @@ d.get('endereco', 'R. do Cafezal, 30')
 'R. do Cafezal, 30'
 ```
 
-Não existe a chave \"endereço\", mas no método get foi passado um
-segundo parâmetro, o qual foi retornado, porém não houve modificação no
-dicionário.
+Não existe a chave "endereço", mas no método get foi passado um segundo
+parâmetro, o qual foi retornado, porém não houve modificação no dicionário.
 
 ``` python
 d.get('nome', 'Zezinho')
@@ -332,8 +330,8 @@ d.get('nome', 'Zezinho')
 'Chiquinho'
 ```
 
-A chave \"nome\" já existia, sendo um valor diferente do valor da mesma,
-foi retornado o valor que pertence à chave.
+A chave "nome" já existia, sendo um valor diferente do valor da mesma, foi
+retornado o valor que pertence à chave.
 
 Criação de um dicionário:
 
@@ -384,8 +382,8 @@ carro.setdefault('modelo', 'Topazio')
 '147'
 ```
 
-Já havia uma chave \"modelo\", então foi retornado seu valor e não o
-segundo parâmetro fornecido.
+Já havia uma chave "modelo", então foi retornado seu valor e não o segundo
+parâmetro fornecido.
 
 ``` python
 carro.setdefault('cor', 'verde')
@@ -395,8 +393,7 @@ carro.setdefault('cor', 'verde')
 'verde'
 ```
 
-Não havia uma chave \"cor\", agora ela e seu valor fazem parte do
-dicionário.
+Não havia uma chave "cor", agora ela e seu valor fazem parte do dicionário.
 
 Verificando o conteúdo do dicionário:
 
@@ -408,8 +405,8 @@ carro
 {'cor': 'verde', 'marca': 'Fiat', 'modelo': '147'}
 ```
 
-Método update para alterar valores de chaves pré existentes ou mesmo
-para adicionar novos pares de chave-valor:
+Método update para alterar valores de chaves pré existentes ou mesmo para
+adicionar novos pares de chave-valor:
 
 ``` python
 carro.update(modelo = 'Topazio', cor = 'cinza')
@@ -455,7 +452,7 @@ carro.pop('ano')
 KeyError: 'ano'
 ```
 
-Método pop para uma chave que não existe, mas fornecendo um valor:
+Método `pop()` para uma chave que não existe, mas fornecendo um valor:
 
 ``` python
 carro.pop('ano', 1981)
@@ -467,7 +464,7 @@ carro.pop('ano', 1981)
 
 O dicionário continua sem a chave, mas não lançou uma exceção.
 
-Existe a chave \"marca\" no dicionário?:
+Existe a chave "marca" no dicionário?:
 
 ``` python
 'marca' in carro
@@ -477,7 +474,7 @@ Existe a chave \"marca\" no dicionário?:
 True
 ```
 
-Existe a chave \"cor\" no dicionário?:
+Existe a chave "cor" no dicionário?:
 
 ``` python
 'cor' in carro

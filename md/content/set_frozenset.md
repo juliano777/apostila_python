@@ -1,10 +1,10 @@
 # set e frozenset
 
 
-|    Similarmente a list e tuple, a diferença entre eles é que frozenset
-  é um tipo imutável.
-|    Seus elementos são únicos.
-|    Implementam operações matemáticas de conjuntos.
+Similarmente a `list` e `tuple`, a diferença entre eles é que `frozenset` é um
+tipo imutável.  
+Seus elementos são únicos.  
+Implementam operações matemáticas de conjuntos.
 
 ``` python
 # Set vazio:

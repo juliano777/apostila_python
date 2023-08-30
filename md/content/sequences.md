@@ -1,30 +1,20 @@
 # Sequências
 
-> Com sequências podemos fazer iteração, indexação, fatiamento (slice) e
-> operações de list comprehension.
+Com sequências podemos fazer iteração, indexação, fatiamento (*slice)* e
+operações de *list comprehension*.  
+Uma sequência pode ser mutável (listas) ou imutáveis (*strings* ou tuplas).  
+Uma sequência mutável é interessante pela sua flexibilidade, porém consome mais
+recursos.  
 
-Mútável:
+## Operações com Sequências
 
-**lista -\> list -\> \[0, \'string\', 7.0, 1000L\]**
+### Índices
 
-Imutáveis:
-
-**string -\> str -\> \'texto\'**
-
-**tupla -\> tuple -\> (0, \'string\', 7.0, 1000L)**
-
-Strings e tuplas funcionam de forma idêntica à lista, porém, seus itens
-são imutáveis, consomem menos recursos.
-
-# Operações com Sequências
-
--   Índices
-
-    > Toda sequência, seguindo a mesma idéia de vetores de outras
-    > linguagens, como C, por exemplo, começa com o índice 0 (zero).
-    > Para se obter um índice, fazemos da seguinte forma:
-    >
-    > sequencia\[indice\]
+Toda sequência, seguindo a mesma idéia de vetores de outras linguagens, como
+C, por exemplo, começa com o índice 0 (zero).  
+Para se obter um índice, fazemos da seguinte forma:  
+  
+`sequencia[indice]`
 
 Segundo elemento da string:
 
@@ -56,9 +46,9 @@ Quarto elemento da tupla:
 2.7
 ```
 
-# Iteráveis
+### Iterações
 
-> Sequências nos permite também fazer iteração sobre cada elemento.
+Sequências nos permite também fazer iteração sobre cada elemento.
 
 Definição de uma tupla:
 
@@ -113,11 +103,11 @@ for i in range(21):
 20
 ```
 
-# Fatiamento / Slicing
+### Fatiamento / Slicing
 
 > É o corte de uma sequência.
 >
-> **\[inicio:fim - 1:incremento\]**
+> **[inicio:fim - 1:incremento]**
 
 Fatiamento sem qualquer determinação:
 
@@ -232,93 +222,4 @@ linux_distros[0:3]
 
 ``` console
 ('Debian', 'RedHat', 'Slackware')
-```
-
-# List Comprehension
-
-> Ou em português, \"Compreensão de Lista\", fornece uma maneira concisa
-> para criar listas. Usos comuns são para fazer novas listas onde cada
-> elemento é o resultado de algumas operações aplicadas para cada membro
-> de outra sequência ou iterável, criar uma subsequência desses
-> elementos que satisfaçam uma certa condição. Sempre retornará uma
-> lista.
-
-Lista a partir de uma list comprehension do range:
-
-``` python
-[i for i in range(21)]
-```
-
-``` console
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-```
-
-Lista cujos elementos são a metade de cada elemento do range:
-
-``` python
-[i / 2.0 for i in range(10)]
-```
-
-``` console
-[0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
-```
-
-Lista com condição que seja 0 (zero) ou divisível por 5 (cinco):
-
-``` python
-[i for i in range(21) if (i % 5 == 0)]
-```
-
-``` console
-[0, 5, 10, 15, 20]
-```
-
-# Tuple Comprehension
-
-> Ou em português \"Compreenção de Tupla\" é similar a uma list
-> comprehension, no entanto resulta em um generator.
-
-Criação de um generator a partir de uma tuple comprehension:
-
-``` python
-x = (i for i in range(21))
-```
-
-Verificando o tipo do objeto:
-
-``` python
-type(x)
-```
-
-``` console
-generator
-```
-
-# Dict Comprehension
-
-> Ou também conhecido em português como \"Compreenção de Dicionário\"
-
-Objeto dicionário a ser criado:
-
-``` python
-d1 = {'a': 1, 'b':2, 'c': 3}
-```
-
-Novo dicionário criado a partir de dict comprehension:
-
-``` python
-d2 = {k.upper(): v * 10 for k, v in d1.items()}
-```
-
-Cada chave é o caractere maiúsculo das chave correspondente ao
-dicionário original e seus valores são multiplicados por 10 (dez).
-
-Exibindo o dicionário gerado a partir da dict comprehension:
-
-``` python
-print(d2)
-```
-
-``` console
-{'A': 10, 'B': 20, 'C': 30}
 ```

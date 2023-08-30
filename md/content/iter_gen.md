@@ -2,11 +2,11 @@
 
 ## Iterator
 
-> Um iterator (iterador) permite acessar elementos de uma coleção /
-> sequência, retornando cada elemento sequencialmente. Todo objeto que
-> tiver o método \_\_next\_\_() é um iterator.
+Um iterator (iterador) permite acessar elementos de uma coleção / sequência,
+retornando cada elemento sequencialmente.  
+Todo objeto que tiver o método `__next__()` é um iterator.  
 
-Criação de um iterator com uma string:
+Criação de um iterator com uma *string*:
 
 ``` python
 it = iter('bar')
@@ -22,7 +22,7 @@ repr(it)
 '<iterator object at 0x7f123cd62c50>'
 ```
 
-Executando o método \_\_next\_\_ até seu fim:
+Executando o método `__next__()` até seu fim:
 
 ``` python
 it.__next__()
@@ -58,23 +58,19 @@ StopIteration:
     Bla bla bla
 ```
 
-|   Nota-se que a iteração foi feita sobre a string declarada, de forma
-  a
-| retornar caractere por caractere e após o último foi lançada uma
-  exceção
-| indicando que não há mais elementos a serem retornados.
+Nota-se que a iteração foi feita sobre a *string* declarada, de forma a
+retornar caractere por caractere e após o último foi lançada uma exceção
+indicando que não há mais elementos a serem retornados.
 
 ## Classe Iterator
 
-|   É possível também implementar um iterador como um objeto de uma
-  classe
-| personalizada.
-|   É necessário implementar os métodos \_\_iter\_\_ e \_\_next\_\_.
-|   \_\_iter\_\_ retorna o objeto iterador por si.
-|   \_\_next\_\_ retorna o próximo item da coleção e ao alcançar o fim e
-  se
-| houver uma chamada sequente uma exceção é lançada (StopIteration).
-
+É possível também implementar um iterador como um objeto de uma classe
+personalizada.  
+É necessário implementar os métodos `__iter__()` e `__next__()`.  
+`__iter__()` retorna o objeto iterador por si.
+`__next__()` retorna o próximo item da coleção e ao alcançar o fim e se houver
+uma chamada sequente uma exceção é lançada (`StopIteration`).  
+  
 Criação da classe de iterador:
 
 ``` python
@@ -109,12 +105,12 @@ print(sum(FirstNumbers(10)))
 
 ## Generator
 
-Um generator é um objeto iterável assim como um iterator, mas nem todo
-iterator é um generator.  
-Funções de generator permite declarar uma função que se comporta como um
+Um *generator* é um objeto iterável assim como um *iterator*, mas nem todo
+*iterator* é um *generator*.  
+Funções de *generator* permite declarar uma função que se comporta como um
 iterador, podendo ser usadas em *loops*.  
-Um generator implementa o conceito de *lazy evaluation*, o que faz com que em
-determinadas situações economize-se recursos de processamento, pois cada 
+Um *generator* implementa o conceito de *lazy evaluation*, o que faz com que
+em determinadas situações economize-se recursos de processamento, pois cada
 elemento é processado conforme a demanda.  
    
 Criando um objeto range que vai de 0 a 9:
@@ -241,7 +237,7 @@ type(x)
 generator
 ```
 
-Execução do método \_\_next\_\_ até o fim:
+Execução do método __next__ até o fim:
 
 ``` python
 x.__next__()
