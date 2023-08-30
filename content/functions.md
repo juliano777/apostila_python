@@ -1,17 +1,17 @@
 # Funções
 
-|   Uma funçao é um recurso de linguagens de programação, que armazena
+Uma funçao é um recurso de linguagens de programação, que armazena
   instruções contidas em um bloco de forma a evitar escrever novamente
   essas mesmas instruções reaproveitando o código ali escrito.
-|   No âmbito (escopo) da função podem ser definidas variáveis que só
+No âmbito (escopo) da função podem ser definidas variáveis que só
   terão visibilidade dentro da função.
-|   Após definida a função, a mesma é invocada pelo seu nome e seus
+Após definida a função, a mesma é invocada pelo seu nome e seus
   argumentos (se ela requerir).
-|   Funções em Python são definidas a partir do comando def.
-|   Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar
+Funções em Python são definidas a partir do comando def.
+Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar
   mais legível além de ser uma boa prática.
 
-# Funções sem Argumentos
+## Funções sem argumentos
 
 Definição da função sem argumentos:
 
@@ -28,18 +28,18 @@ funcao()
 O quardrado de 7 é 49
 ```
 
-# O Comando return
+## O comando return
 
-> O comando return dá um retorno para a função. Uma função pode retornar
-> um ou mais valores (coleções). Deve ser o último comando da função,
-> pois se tiver algum código depois será ignorado. Vale lembrar que
-> return não é a mesma coisa que imprimir em tela. Quando se digita algo
-> que retorne um valor dentro de um shell interativo, esse valor por
-> conveniência é impresso em tela. Mas em um aplicativo ou script isso
-> não acontecerá, portanto se deseja imprimir um valor em tela, isso
-> deve ser explicitado, o que é mais comumente feito por print(). Quando
-> uma função não tem um comando return, seu retorno é None implícito, o
-> que para outras linguagens como C e Java é a mesma coisa que void.
+O comando return dá um retorno para a função. Uma função pode retornar
+um ou mais valores (coleções). Deve ser o último comando da função,
+pois se tiver algum código depois será ignorado. Vale lembrar que
+return não é a mesma coisa que imprimir em tela. Quando se digita algo
+que retorne um valor dentro de um shell interativo, esse valor por
+conveniência é impresso em tela. Mas em um aplicativo ou script isso
+não acontecerá, portanto se deseja imprimir um valor em tela, isso
+deve ser explicitado, o que é mais comumente feito por print(). Quando
+uma função não tem um comando return, seu retorno é None implícito, o
+que para outras linguagens como C e Java é a mesma coisa que void.
 
 Definição da função:
 
@@ -110,17 +110,17 @@ funcao()
 7
 ```
 
-|   Como pode-se notar, o código inserido após return foi completamente
+Como pode-se notar, o código inserido após return foi completamente
 | ignorado.
-|   Devido ao fato de os comandos serem digitados no shell interativo
+Devido ao fato de os comandos serem digitados no shell interativo
   foi
 | impresso em tela o valor de retorno da função.
 
-# Argumentos Simples (Argumentos Não Nomeados)
+## Argumentos simples (argumentos não nomeados)
 
-> Uma função pode ter um ou mais argumentos a serem pasados. Esses
-> argumentos podem ser ou não obrigatórios. Sendo que os argumentos não
-> obrigatórios têm um valor inicial.
+Uma função pode ter um ou mais argumentos a serem pasados. Esses
+argumentos podem ser ou não obrigatórios. Sendo que os argumentos não
+obrigatórios têm um valor inicial.
 
 Definição de uma função:
 
@@ -144,7 +144,7 @@ TypeError                                 Traceback (most recent call last)
 TypeError: funcao() takes exactly 1 argument (0 given)
 ```
 
-|   Devido ao fato de a função exigir que seja passado um argumento.
+Devido ao fato de a função exigir que seja passado um argumento.
 
 Execução da função passando um argumento:
 
@@ -156,12 +156,12 @@ funcao(7)
 7
 ```
 
-# Argumentos Nomeados
+## Argumentos nomeados
 
-> Podemos definir uma função em que um ou mais argumentos tenham valores
-> padrões de forma que ao invocar a função podemos omitir a declaração,
-> pois será considerado o padrão ou explicitando um valor. Quando houver
-> mais de um argumento, os argumentos obrigatórios devem vira primeiro.
+Podemos definir uma função em que um ou mais argumentos tenham valores
+padrões de forma que ao invocar a função podemos omitir a declaração,
+pois será considerado o padrão ou explicitando um valor. Quando houver
+mais de um argumento, os argumentos obrigatórios devem vira primeiro.
 
 Definição de função com um argumento:
 
@@ -207,7 +207,7 @@ def funcao(x = 7, y):
 SyntaxError: non-default argument follows default argument
 ```
 
-|   Houve um erro, pois primeiro são os argumentos não padrões.
+Houve um erro, pois primeiro são os argumentos não padrões.
 
 Definindo uma função com dois parâmetros:
 
@@ -289,15 +289,15 @@ funcao(10, z = 30, y = 50)
 90
 ```
 
-# Argumentos em Lista Não Nomeados
+## Argumentos em lista não nomeados
 
-|   É possível passar uma lista de argumentos sem nomear cada um deles,
+É possível passar uma lista de argumentos sem nomear cada um deles,
   ou
 | seja, atribuir uma variável.
-|   Essa lista, internamente é interpretada como uma tupla (tuple).
-|   Tal recurso nos possibilita passar uma quantidade indeterminada de
+Essa lista, internamente é interpretada como uma tupla (tuple).
+Tal recurso nos possibilita passar uma quantidade indeterminada de
 | argumentos.
-|   O identificador da variável que representa esse tipo de argumento
+O identificador da variável que representa esse tipo de argumento
   vem logo
 | depois do caractere asterisco (\*).
 
@@ -389,18 +389,18 @@ funcao(*spam)
 4
 ```
 
-|   Quando o caractere asterisco é posicionado antes de uma variável faz
+Quando o caractere asterisco é posicionado antes de uma variável faz
   com
 | que considere que aquela variável (coleções) seja \"desempacotada\".
-|   Seus elementos são passados como se fossem uma tupla, ou seja, uma
+Seus elementos são passados como se fossem uma tupla, ou seja, uma
 | sequência de valores estraídos separados por vírgulas.
 
-# Argumentos em Lista Nomeados
+## Argumentos em lista nomeados
 
-|   O identificador da variável desse tipo de argumento é precedido por
+O identificador da variável desse tipo de argumento é precedido por
   dois
 | asteriscos (\*\*).
-|   É uma lista com quantidade indeterminada e cada elemento da lista
+É uma lista com quantidade indeterminada e cada elemento da lista
   tem um
 | identificador próprio.
 
@@ -465,14 +465,14 @@ funcao(**eggs)
 {'a': 3, 'b': 5, 'c': 'x'}
 ```
 
-# Funções com Argumentos Variados
+## Funções com argumentos variados
 
-|   E se precisarmos fazer uma função que utilize tipos diferentes
+E se precisarmos fazer uma função que utilize tipos diferentes
   conforme
 | visto anteriormente?
-|   A ordem dos tipos de argumentos é a seguinte:
+A ordem dos tipos de argumentos é a seguinte:
 | 
-|   \**Simples,Nomeados,Lista de Não Nomeados*\* e **Lista de Nomeados**
+\**Simples,Nomeados,Lista de Não Nomeados*\* e **Lista de Nomeados**
 
 Definição e execução de uma função com parâmetros mistos:
 
@@ -498,9 +498,9 @@ foo(
 {'continente': 'Europa', 'hemisferio': 'Norte'}
 ```
 
-# Estruturas de Dados como Parâmetro para Funções
+## Estruturas de dados como parâmetro para Funções
 
-|   Em algumas situações pode ser útil utilizar uma estrutura de dados
+Em algumas situações pode ser útil utilizar uma estrutura de dados
   como
 | tupla (tuple), lista (list), dicionário (dict) ou mesmo um conjunto
 | (set / frozenset).
@@ -535,16 +535,16 @@ param_test(*conjunto)  # Conjunto (set) como parâmetro
 7
 ```
 
-# Boas Práticas: Função Main
+## Boas práticas: função main()
 
-|   Evite execuções globais, quebre seu código em funções o que facilita
+Evite execuções globais, quebre seu código em funções o que facilita
   o
 | reúso e teste de código.
-|   Crie uma função principal (main). Crie primeiro as outras funções e
+Crie uma função principal (main). Crie primeiro as outras funções e
   por
 | último a ser definida a função principal.
-|   Na função principal serão feitas as chamadas às outras funções.
-|   Outra coisa interessante a ser feita é colocar a função principal
+Na função principal serão feitas as chamadas às outras funções.
+Outra coisa interessante a ser feita é colocar a função principal
   dentro
 | de um if. Sendo que se for executado, terá a variável especial
   \"\_\_name\_\_\"
@@ -586,9 +586,9 @@ Função executada
 ==== Fim ====
 ```
 
-# Funções Geradoras
+## Funções geradoras
 
-|   Uma função geradora ao invés de utilizar o comando return, utiliza o
+Uma função geradora ao invés de utilizar o comando return, utiliza o
 | comando yield, que retorna um objeto generator.
 
 Criação de uma função geradora:
@@ -675,14 +675,14 @@ FIM
 StopIteration: . . .
 ```
 
-# Funções Lambda
+# Funções lambda
 
-|   São funções anônimas, ou seja, que não são associadas a um nome. Um
+São funções anônimas, ou seja, que não são associadas a um nome. Um
 | recurso similar às funções anônimas em PL/pgSQL (PostgreSQL).
-|   Sua estrutura é composta apenas por expressões, o que a torna muito
+Sua estrutura é composta apenas por expressões, o que a torna muito
 | limitada, no entanto consome menos recursos do que uma função
   convencional.
-|   Por só aceitar expressões, o comando return não é permitido em sua
+Por só aceitar expressões, o comando return não é permitido em sua
 | estrutura.
 
 Execução de uma função lambda:
