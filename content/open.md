@@ -1,8 +1,7 @@
 # open
 
-|   É a forma nativa de Python para manipular arquivos (leitura e
-  escrita).
-|   Um arquivo é iterável, cujas iterações são por linha.
+É a forma nativa de Python para manipular arquivos (leitura e escrita).  
+Um arquivo é iterável, cujas iterações são por linha.
 
 [open(file, mode=\'r\', buffering=-1, encoding=None, errors=None,
 newline=None, closefd=True, opener=None)]{.title-ref}
@@ -27,8 +26,7 @@ newline=None, closefd=True, opener=None)]{.title-ref}
              escrita).
   ---------- --------------------------------------------------------------
 
-Supondo que o arquivo não exista, criação do mesmo para leitura e
-escrita:
+Supondo que o arquivo não exista, criação do mesmo para leitura e escrita:
 
 ``` python
 f = open('/tmp/foo.txt', 'w+')
@@ -87,8 +85,8 @@ Fechamento de arquivo:
 f.close()
 ```
 
-No shell do sistema operacional usar o recurso heredoc para criar linhas
-em um novo arquivo:
+No shell do sistema operacional usar o recurso heredoc para criar linhas em um
+novo arquivo:
 
 ``` bash
 cat << EOF > /tmp/linhas.txt
@@ -144,24 +142,22 @@ f.readline().split()
 []
 ```
 
-|   O método readline interagiu para cada linha retornando-a até não ter
-  mais nada a ler no arquivo.
+O método `readline()` interagiu para cada linha retornando-a até não ter mais
+nada a ler no arquivo.
 
-Fechando o arquivo:
 
 ``` python
+# Fechando o arquivo
 f.close()
 ```
 
-Reabrindo o arquivo:
-
 ``` python
+# Reabrindo o arquivo
 f = open('/tmp/linhas.txt')
 ```
 
-Método readlines:
-
 ``` python
+# Método readlines()
 f.readlines()
 ```
 
@@ -169,7 +165,7 @@ f.readlines()
 ['linha_1\n', 'linha_2\n', 'linha_3\n']
 ```
 
-|   O método readlines retorna cada linha do arquivo como um elemento de
+O método readlines retorna cada linha do arquivo como um elemento de
   uma lista.
 
 Fechando o arquivo:
@@ -405,7 +401,7 @@ cat /tmp/cores.txt
 1 - Verde
 ```
 
-|   Todo o conteúdo foi substituído por essa linha\...
+Todo o conteúdo foi substituído por essa linha\...
 
 Exibir a localização do arquivo:
 

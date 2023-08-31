@@ -1,19 +1,16 @@
 
 # if / elif / else
 
-
-O comando if, que inglês significa \"se\" indica uma condição.
-
-Criação de dois objetos int:
-
+O comando if, que inglês significa "se" indica uma condição.  
+  
 ``` python
+# Criação de dois objetos int
 x = 7
 y = 5
 ```
 
-Bloco if teste se x é maior que y:
-
 ``` python
+# Bloco if teste se x é maior que y
 if x > y:
     print('X é maior')
 ```
@@ -22,25 +19,22 @@ if x > y:
 X é maior
 ```
 
-Bloco if teste se x é menor que y:
-
 ``` python
+# Bloco if teste se x é menor que y
 if x < y:
     print('Y é maior')
 ```
 
-|   Aqui nada aconteceu, pois a condição de if não foi satisfeita.
-
-Criação de duas variáveis booleanas:
+Aqui nada aconteceu, pois a condição de if não foi satisfeita.  
 
 ``` python
+# Criação de duas variáveis booleanas
 foo = True
 bar = False
 ```
 
-Modo \"pythônico\" de se testar um valor booleano:
-
 ``` python
+# Modo "pythônico" de se testar um valor booleano
 if foo:
     print('foo é verdadeiro!')
 ```
@@ -49,12 +43,10 @@ if foo:
 foo é verdadeiro!
 ```
 
-|   Note que não foi testado [foo == False]{.title-ref}, utilizou-se uma
-  maneira muito mais elegante.
-
-Testando uma Variável booleana com negação:
+Note que não foi testado `[foo == False]`, utilizou-se uma maneira muito mais elegante.  
 
 ``` python
+# Testando uma Variável booleana com negação
 if not bar:
     print('bar é falso!')
 ```
@@ -151,18 +143,18 @@ print(y)
 3
 ```
 
-## Operador Ternário
+## Operador ternário
 
 Um recurso bastante interessante em outras linguagens como em C, por
 exemplo.  
 Seu objetivo é abreviar um bloco if em apenas uma linha.  
   
-**Sintaxe**:
+Sintaxe:
   
-`retorno_se_verdadeiro` **`if`** `condição` **`else`** `retorno_se_falso`
+> `retorno_se_verdadeiro` **`if`** `condição` **`else`** `retorno_se_falso`
 
-Declaração de uma variável x com valor, atribui a y o resultado e exibe
-seu valor:
+Declaração de uma variável x com valor, atribui a y o resultado e exibe seu
+valor:
 
 ``` python
 x = 10  # Variável int
@@ -178,9 +170,8 @@ print(y)
 50
 ```
 
-Variável float para receber a nota:
-
 ``` python
+# Variável float para receber a nota
 nota = float(input('Digite a nota do aluno: '))
 ```
 
@@ -188,15 +179,11 @@ nota = float(input('Digite a nota do aluno: '))
 Digite a nota do aluno: 8
 ```
 
-Atribuição condicional:
-
 ``` python
+# Atribuição condicional
 estado = 'aprovado' if nota >= 7 else 'reprovado'
-```
 
-Exibe a mensagem:
-
-``` python
+# Exibe a mensagem
 print(f'Aluno {estado}!')
 ```
 
@@ -204,9 +191,8 @@ print(f'Aluno {estado}!')
 Aluno aprovado!
 ```
 
-Variável int:
-
 ``` python
+# Variável int
 num = int(input('Digite um número: '))
 ```
 
@@ -214,15 +200,11 @@ num = int(input('Digite um número: '))
 Digite um número: -2
 ```
 
-Atribuição condicional:
-
 ``` python
+# Atribuição condicional
 sinal = 'positivo' if num > 0 else 'negativo' if num < 0 else 'zero'
-```
 
-Exibe mensagem:
-
-``` python
+# Exibe mensagem
 print(f'O número é {sinal}'
 ```
 

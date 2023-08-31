@@ -437,7 +437,7 @@ Sim, o arquivo existe!
 
 Se deu certo ou errado, o programa termina aqui :/
 
-# raise
+## raise
 
 O comando [raise]{.title-ref} é uma facilidade dada ao programador para
 forçar uma exceção específica. Muito útil para testar tratamentos de
@@ -541,7 +541,7 @@ ZeroDivisionError                         Traceback (most recent call last)
 ZeroDivisionError: Erro de divisão por zero
 ```
 
-# Exceção Personalizada
+## Exceção Personalizada
 
 Para criarmos uma exceção personalizada preciamos criar uma classe que
 herde de uma outra classe de exceção, cuja raiz é Exception.

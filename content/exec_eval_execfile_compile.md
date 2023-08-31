@@ -1,10 +1,10 @@
 # Expressões vs comandos (statements)
 
-> Expressão: é algo que pode ser reduzido para um valor.
->
-> Statement: sinônimo de comando.
+Expressão: é algo que pode ser reduzido para um valor.
 
-# exec
+Statement: sinônimo de comando.
+
+## exec
 
 > É uma função que executa um comando (statement) passado como string.
 
@@ -42,7 +42,7 @@ exec('5')  # does nothing and returns nothing.
 exec('x = 7')  # does nothing and returns nothing.
 ```
 
-# eval
+## eval
 
 > É uma função que retorna o resultado de uma expressão.
 
@@ -103,18 +103,18 @@ execfile('/tmp/foo.py')
 hello, world!
 ```
 
-# compile
+## compile
 
 compile is a lower level version of exec and eval. It does not execute
 or evaluate your statements or expressions, but returns a code object
 that can do it. The modes are as follows:
 
-> compile(string, \'\', \'eval\') returns the code object that would
-> have been executed had you done eval(string). Note that you cannot use
-> statements in this mode; only a (single) expression is valid.
-> compile(string, \'\', \'exec\') returns the code object that would
-> have been executed had you done exec(string). You can use any number
-> of statements here. compile(string, \'\', \'single\') is like the exec
-> mode, but it will ignore everything except for the first statement.
-> Note that an if/else statement with its results is considered a single
-> statement.
+compile(string, \'\', \'eval\') returns the code object that would
+have been executed had you done eval(string). Note that you cannot use
+statements in this mode; only a (single) expression is valid.
+compile(string, \'\', \'exec\') returns the code object that would
+have been executed had you done exec(string). You can use any number
+of statements here. compile(string, \'\', \'single\') is like the exec
+mode, but it will ignore everything except for the first statement.
+Note that an if/else statement with its results is considered a single
+statement.

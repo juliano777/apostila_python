@@ -1,14 +1,14 @@
-# Loops - laços de Repetição
+# Loops - laços de repetição
 
 ## while
 
-|   Executa em laço (loop) **enquanto** a condição for verdadeira.
-
-Enquanto i for menor que 5, exiba i:
+Executa em laço (loop) **enquanto** a condição for verdadeira.
 
 ``` python
+# Cria variável inteira
 i = 0
 
+# Enquanto i for menor que 5, exiba i
 while i < 5:
     print(i)
     i += 1
@@ -22,16 +22,17 @@ while i < 5:
 4
 ```
 
-# O else no loop while
+### O else no loop while
 
-|   Opcionalmente, pode-se adicionar um else ao while em Python.
-|   A idéia é que se caso o loop seja executado sem interrupção, um
-  break, por exemplo, o que estiver dentro do bloco else será executado.
-
-Loop while com else sem interrupção:
+Opcionalmente, pode-se adicionar um else ao while em Python.  
+A idéia é que se caso o loop seja executado sem interrupção, um `break`, por
+exemplo, o que estiver dentro do bloco else será executado.
 
 ``` python
+# Variável inteira
 i = 0
+
+Loop while com else sem interrupção
 while i < 5:
     print(i)
     i += 1
@@ -48,11 +49,11 @@ else:
 Fim
 ```
 
-Loop while com else com interrupção (break):
-
 ``` python
+# Variável inteira
 i = 0
 
+# Loop while com else com interrupção (break)
 while i <= 10:
     if i == 5: break       
     print(i)
@@ -69,11 +70,11 @@ else:
 4
 ```
 
-Loop while com else e sem break:
-
 ``` python
+# Variável inteira
 i = 0
 
+# Loop while com else e sem break
 while i <= 10:
     if (i % 2 == 0): 
         i += 1
@@ -93,18 +94,15 @@ else:
 Fim
 ```
 
-# Loop Infinito
+## Loop infinito
 
-|   Em determinadas situações se faz necessário o uso de um loop sem
-  fim.
-|   Para que esse loop infinito seja rompido é preciso que uma ação
-  externa ocorra, como uma interrupção com a combinação de teclas
-  \<Ctrl\> + C.
-
-Enquanto não houver uma interrupção externa, o loop abaixo exibirá \"x\"
-eternamente:
-
+Em determinadas situações se faz necessário o uso de um *loop* sem fim.  
+Um *loop* é infinito quando sua condição de laço é sempre satisfeita.  
+Para que esse *loop* infinito seja rompido é preciso que uma ação externa
+ocorra, como uma interrupção com a combinação de teclas `<Ctrl> + C`.  
+   
 ``` python
+# Loop infinito para exibir "x" na tela
 while True:
     print('x')
 ```
@@ -116,13 +114,12 @@ x
 . . .
 ```
 
-# for
+## for
 
-|   O loop for interage sobre cada membro de um objeto iterável.
-
-Um simples loop for com a função range:
+O *loop* `for` interage sobre cada membro de um objeto iterável.
 
 ``` python
+# Loop for com a função range
 for i in range(5):
     print(i)
 ```
@@ -135,11 +132,11 @@ for i in range(5):
 4
 ```
 
-Loop sobre os elementos de uma tupla:
-
 ``` python
+# Criação da tupla
 lor = ('Gandalf', 'Bilbo', 'Frodo', 'Sauron', 'Aragorn', 'Legolas')
 
+# Loop sobre os elementos de uma tupla
 for i in lor:
     print(i)
 ```
@@ -153,9 +150,8 @@ Aragorn
 Legolas
 ```
 
-Loop sobr os elementos da tupla enumerados:
-
 ``` python
+# Loop sobre os elementos enumerados da tupla
 for i, personagem in enumerate(lor):
     print(f'{i} - {personagem}')
 ```
@@ -169,9 +165,8 @@ for i, personagem in enumerate(lor):
 5 - Legolas
 ```
 
-Enumerando a tupla e convertendo-a para uma lista:
-
 ``` python
+# Enumerando a tupla e convertendo-a para uma lista
 list(enumerate(lor))
 ```
 
@@ -179,12 +174,11 @@ list(enumerate(lor))
 [(0, 'Gandalf'), (1, 'Bilbo'), (2, 'Frodo'), (3, 'Sauron'), (4, 'Aragorn'), (5, 'Legolas')]
 ```
 
-Lista cujos elementos são tuplas cujos elementos representam chave e
-valor, e por fim loop:
-
 ``` python
+# Lista cujos elementos são tuplas cujos elementos representam chave e  valor
 dados =  [('Nome', 'Chiquinho'), ('Sobrenome', 'da Silva'), ('Idade', 50)]
 
+# Loop sobre a lista
 for k, v in dados:
     print(f'{k}: {v}')
 ```
@@ -195,19 +189,15 @@ Sobrenome: da Silva
 Idade: 50
 ```
 
-Criação de um dicionário:
-
 ``` python
+# Criação de um dicionário
 dados = {
     'Nome': 'Chiquinho',
     'Sobrenome': 'da Silva',
     'Idade': 50
 }
-```
 
-Loop sobre um dicionário:
-
-``` python
+# Loop sobre um dicionário
 for k, v in dados.items():
     print(f'{k}: {v}')
 ```
@@ -218,9 +208,8 @@ Idade: 50
 Nome: Chiquinho
 ```
 
-Loop for com else e sem interrupção:
-
 ``` python
+# Loop for com else e sem interrupção
 for i in range(5):
     print(i)
 else:
@@ -236,9 +225,8 @@ else:
 Fim
 ```
 
-Loop for com else e com interrupção:
-
 ``` python
+# Loop for com else e com interrupção
 for i in range(10):
     if i == 6:
         break
@@ -256,9 +244,8 @@ else:
 5
 ```
 
-Loop for com else e sem interrupção:
-
 ``` python
+# Loop for com else e sem interrupção
 for i in range(10):
     if i % 2 == 0:
         continue

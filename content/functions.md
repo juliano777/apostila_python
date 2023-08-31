@@ -1,15 +1,22 @@
 # Funções
 
-Uma funçao é um recurso de linguagens de programação, que armazena
-  instruções contidas em um bloco de forma a evitar escrever novamente
-  essas mesmas instruções reaproveitando o código ali escrito.
-No âmbito (escopo) da função podem ser definidas variáveis que só
-  terão visibilidade dentro da função.
-Após definida a função, a mesma é invocada pelo seu nome e seus
-  argumentos (se ela requerir).
-Funções em Python são definidas a partir do comando def.
-Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar
-  mais legível além de ser uma boa prática.
+Uma funçao é um recurso de linguagens de programação, que armazena instruções
+contidas em um bloco de forma a evitar escrever novamente essas mesmas
+instruções reaproveitando o código escrito.  
+No âmbito (escopo) da função podem ser definidas variáveis que só terão
+visibilidade dentro da função.  
+Após definida a função, a mesma é invocada pelo seu nome e seus argumentos
+(se ela requerir).  
+Funções em Python são definidas a partir do comando `def`.  
+Funções ajudam o código a dividir, agrupar, reusar, reduzir, deixar mais
+legível além de ser uma boa prática.  
+
+## Argumentos de uma função
+
+São parâmetros que passamos a uma função e o resultado variará conforme eles.  
+Os argumentos de uma função podem ser obrigatórios ou não, sendo que uma
+função pode simplesmente não ter argumentos e então seu resultado não terá
+variação, a não ser que internamente a mesma capture dados externos.  
 
 ## Funções sem argumentos
 
@@ -30,25 +37,24 @@ O quardrado de 7 é 49
 
 ## O comando return
 
-O comando return dá um retorno para a função. Uma função pode retornar
-um ou mais valores (coleções). Deve ser o último comando da função,
-pois se tiver algum código depois será ignorado. Vale lembrar que
-return não é a mesma coisa que imprimir em tela. Quando se digita algo
-que retorne um valor dentro de um shell interativo, esse valor por
-conveniência é impresso em tela. Mas em um aplicativo ou script isso
-não acontecerá, portanto se deseja imprimir um valor em tela, isso
-deve ser explicitado, o que é mais comumente feito por print(). Quando
-uma função não tem um comando return, seu retorno é None implícito, o
-que para outras linguagens como C e Java é a mesma coisa que void.
-
-Definição da função:
-
+O comando `return` dá um retorno para a função.  
+Uma função pode retornar um ou mais valores (coleções). Deve ser o último
+comando da função, pois se tiver algum código depois será ignorado.  
+Vale lembrar que `return` não é a mesma coisa que imprimir em tela. Quando se
+digita algo que retorne um valor dentro de um *shell* interativo, esse valor
+por conveniência é impresso em tela. Mas em um programa ou *script* isso não
+acontecerá. Se for necessário imprimir um valor em tela, isso deve ser
+explicitado, o que é mais comumente feito por `print()`.  
+Quando uma função não tem um comando `return`, seu retorno é `None` implícito,
+o que para outras linguagens como C e Java é a mesma coisa que `void`.  
+  
 ``` python
+# Uma simples função que apenas retorna o valor 7
 def funcao():
     return 7
 ```
 
-Utilizando print para imprimir em tela o valor retornado pela função
+Utilizando `print()` para imprimir em tela o valor retornado pela função
 multiplicado por 3:
 
 ``` python
@@ -92,7 +98,7 @@ type(x)
 tuple
 ```
 
-Definição de uma função com código após return:
+Definição de uma função com código após `return`:
 
 ``` python
 def funcao():
@@ -110,28 +116,23 @@ funcao()
 7
 ```
 
-Como pode-se notar, o código inserido após return foi completamente
-| ignorado.
-Devido ao fato de os comandos serem digitados no shell interativo
-  foi
-| impresso em tela o valor de retorno da função.
+Como pode-se notar, o código inserido após `return` foi completamente
+ignorado.  
+Devido aos comandos serem digitados no *shell* interativo foi impresso em tela
+o valor de retorno da função.
 
 ## Argumentos simples (argumentos não nomeados)
 
-Uma função pode ter um ou mais argumentos a serem pasados. Esses
-argumentos podem ser ou não obrigatórios. Sendo que os argumentos não
+Uma função pode ter um ou mais argumentos a serem pasados.  
+Esses argumentos podem ser ou não obrigatórios. Sendo que os argumentos não
 obrigatórios têm um valor inicial.
 
-Definição de uma função:
-
 ``` python
+# Definição de uma função
 def funcao(x):
     return x
-```
 
-Execução da função sem passar argumentos:
-
-``` python
+# Execução da função sem passar argumentos
 funcao()
 ```
 
@@ -144,11 +145,10 @@ TypeError                                 Traceback (most recent call last)
 TypeError: funcao() takes exactly 1 argument (0 given)
 ```
 
-Devido ao fato de a função exigir que seja passado um argumento.
-
-Execução da função passando um argumento:
+Devido à função exigir que seja passado um argumento...
 
 ``` python
+# Execução da função passando um argumento
 funcao(7)
 ```
 
@@ -158,21 +158,18 @@ funcao(7)
 
 ## Argumentos nomeados
 
-Podemos definir uma função em que um ou mais argumentos tenham valores
-padrões de forma que ao invocar a função podemos omitir a declaração,
-pois será considerado o padrão ou explicitando um valor. Quando houver
-mais de um argumento, os argumentos obrigatórios devem vira primeiro.
-
-Definição de função com um argumento:
+Podemos definir uma função em que um ou mais argumentos tenham valores padrões
+de forma que ao invocar a função podemos omitir a declaração, pois será
+considerado o padrão ou explicitando um valor.
+Quando houver mais de um argumento, os argumentos obrigatórios devem vir
+primeiro.
 
 ``` python
-def funcao(x = 7):
+# Definição de função com um argumento
+def funcao(x=7):
     return x
-```
 
-Chamando a função sem declarar valor de argumento:
-
-``` python
+# Chamando a função sem declarar valor de argumento
 funcao()
 ```
 
@@ -180,26 +177,24 @@ funcao()
 7
 ```
 
-Chamando a função explicitando um valor de argumento:
-
 ``` python
+# Chamando a função explicitando um valor de argumento
 funcao(9)
 ```
 
 ou
 
 ``` python
-funcao(x = 9)    
+funcao(x=9)    
 ```
 
 ``` console
 9
 ```
 
-Definindo uma função mesclando argumentos padrão e obrigatórios:
-
 ``` python
-def funcao(x = 7, y):
+# Definindo uma função mesclando argumentos padrão e obrigatórios
+def funcao(x=7, y):
     return x + y
 ```
 
@@ -209,16 +204,14 @@ SyntaxError: non-default argument follows default argument
 
 Houve um erro, pois primeiro são os argumentos não padrões.
 
-Definindo uma função com dois parâmetros:
-
 ``` python
-def funcao(x, y = 7):
+# Definindo uma função com dois parâmetros
+def funcao(x, y=7):
     return x + y
 ```
 
-Execução da função passando apenas um parâmetro (o obrigatório):
-
 ``` python
+# Execução da função passando apenas um parâmetro (o obrigatório)
 funcao(3)
 ```
 
@@ -226,9 +219,8 @@ funcao(3)
 10
 ```
 
-Passando os dois parâmetros:
-
 ``` python
+# Passando os dois parâmetros
 funcao(2, 3)
 ```
 
@@ -236,9 +228,8 @@ funcao(2, 3)
 5
 ```
 
-Forçando um erro ao não passar sequer o parâmetro obrigatório:
-
 ``` python
+# Forçando um erro ao não passar sequer o parâmetro obrigatório
 funcao()
 ```
 
@@ -246,16 +237,14 @@ funcao()
 TypeError: funcao() takes at least 1 argument (0 given)
 ```
 
-Definindo uma função com dois parâmetros opcionais:
-
 ``` python
-def funcao(x, y = 1, z = 2):
+# Definindo uma função com dois parâmetros opcionais
+def funcao(x, y=1, z=2):
     return x + y + z
 ```
 
-Execução da função com um parâmetro (o obrigatório):
-
 ``` python
+# Execução da função com um parâmetro (o obrigatório)
 funcao(0)
 ```
 
@@ -263,9 +252,8 @@ funcao(0)
 3
 ```
 
-Execução da função com um parâmetro obrigatório e um opcional:
-
 ``` python
+# Execução da função com um parâmetro obrigatório e um opcional
 funcao(1, 2)
 ```
 
@@ -273,9 +261,8 @@ funcao(1, 2)
 5
 ```
 
-Execução da função com um parâmetro obrigatório e dois opcionais:
-
 ``` python
+# Execução da função com um parâmetro obrigatório e dois opcionais
 funcao(1, 2, 90)
 ```
 
@@ -283,7 +270,7 @@ funcao(1, 2, 90)
 93
 ```
 
-funcao(10, z = 30, y = 50)
+funcao(10, z=30, y=50)
 
 ``` console
 90
@@ -291,17 +278,16 @@ funcao(10, z = 30, y = 50)
 
 ## Argumentos em lista não nomeados
 
-É possível passar uma lista de argumentos sem nomear cada um deles,
-  ou
-| seja, atribuir uma variável.
-Essa lista, internamente é interpretada como uma tupla (tuple).
+É possível passar uma lista de argumentos sem nomear cada um deles, ou seja,
+atribuir uma variável.  
+Essa lista, internamente é interpretada como uma tupla.  
 Tal recurso nos possibilita passar uma quantidade indeterminada de
-| argumentos.
-O identificador da variável que representa esse tipo de argumento
-  vem logo
-| depois do caractere asterisco (\*).
+argumentos.  
+O identificador da variável que representa esse tipo de argumento vem logo
+depois do caractere asterisco (`*`).
 
 ``` python
+# Definição de uma função com argumentos em lista não nomeados
 def funcao(*args): 
     qtd = len(args) 
     primeiro = args[0] 
@@ -310,10 +296,11 @@ def funcao(*args):
     print(f'O primeiro é {primeiro}') 
     print(f'O último é {ultimo}') 
     print(f'Os argumentos passados foram: {args}')
-```
 
-``` console
+# Execução da função
 funcao('abacaxi', 3, 'p', 8.3, 5 + 9j)
+```
+```
 Foram passados 5 argumentos
 O primeiro é "abacaxi"
 O último é "(5+9j)"
@@ -349,9 +336,8 @@ Argumento 2 = 7
 Argumento 3 = 99
 ```
 
-Definição de uma função com um parâmetro arbitrário não nomeado:
-
 ``` python
+# Definição de uma função com um parâmetro arbitrário não nomeado
 def funcao(*args):
     print(args)
     for i in args:
@@ -389,21 +375,18 @@ funcao(*spam)
 4
 ```
 
-Quando o caractere asterisco é posicionado antes de uma variável faz
-  com
-| que considere que aquela variável (coleções) seja \"desempacotada\".
-Seus elementos são passados como se fossem uma tupla, ou seja, uma
-| sequência de valores estraídos separados por vírgulas.
+Quando o caractere asterisco é posicionado antes de uma variável faz com que
+considere que aquela variável (coleções) seja "desempacotada".  
+Seus elementos são passados como se fossem uma tupla, ou seja, uma sequência
+de valores estraídos separados por vírgulas.
 
 ## Argumentos em lista nomeados
 
-O identificador da variável desse tipo de argumento é precedido por
-  dois
-| asteriscos (\*\*).
-É uma lista com quantidade indeterminada e cada elemento da lista
-  tem um
-| identificador próprio.
-
+O identificador da variável desse tipo de argumento é precedido por dois
+asteriscos (`**`).  
+É uma lista com quantidade indeterminada e cada elemento da lista tem um
+identificador próprio.  
+  
 Definição de uma função com parâmetros arbitrários nomeados:
 
 ``` python
@@ -467,21 +450,23 @@ funcao(**eggs)
 
 ## Funções com argumentos variados
 
-E se precisarmos fazer uma função que utilize tipos diferentes
-  conforme
-| visto anteriormente?
-A ordem dos tipos de argumentos é a seguinte:
-| 
-\**Simples,Nomeados,Lista de Não Nomeados*\* e **Lista de Nomeados**
-
-Definição e execução de uma função com parâmetros mistos:
+E se precisarmos fazer uma função que utilize tipos diferentes conforme visto
+anteriormente?  
+ordem dos tipos de argumentos é a seguinte:  
+   
+- Simples;
+- Nomeados;
+- Lista de não nomeados;
+- Lista de nomeados.
 
 ``` python
+# Definição e execução de uma função com parâmetros mistos
 def foo(a, b = 3, *c, **d):
     print(a + b)
     print(c)
     print(d)
 
+# Execução da função
 foo(
     4,
     5,
@@ -500,22 +485,18 @@ foo(
 
 ## Estruturas de dados como parâmetro para Funções
 
-Em algumas situações pode ser útil utilizar uma estrutura de dados
-  como
-| tupla (tuple), lista (list), dicionário (dict) ou mesmo um conjunto
-| (set / frozenset).
-
-Criação da função de teste:
+Em algumas situações pode ser útil utilizar uma estrutura de dados como tupla,
+lista, dicionário ou mesmo um conjunto (*set* / *frozenset*).
 
 ``` python
+# Criação da função de teste
 def param_test(x, y):
     return x + y
 ```
 
-Declaração das variáveis de estrutura de dados que serão utilizadas como
-parâmetro para a função:
-
 ``` python
+# Declaração das variáveis de estrutura de dados que serão utilizadas como
+# parâmetro para a função:
 tupla = (5, 2)
 lista = [5, 2]
 dicio = {'x': 5, 'y': 2}
@@ -537,19 +518,16 @@ param_test(*conjunto)  # Conjunto (set) como parâmetro
 
 ## Boas práticas: função main()
 
-Evite execuções globais, quebre seu código em funções o que facilita
-  o
-| reúso e teste de código.
-Crie uma função principal (main). Crie primeiro as outras funções e
-  por
-| último a ser definida a função principal.
-Na função principal serão feitas as chamadas às outras funções.
-Outra coisa interessante a ser feita é colocar a função principal
-  dentro
-| de um if. Sendo que se for executado, terá a variável especial
-  \"\_\_name\_\_\"
-| como valor \"\_\_main\_\_\".
-
+Evite execuções globais, quebre seu código em funções o que facilita o reúso e
+teste de código.  
+Crie uma função principal (`main()`).  
+Crie primeiro as outras funções e por último a ser definida a função
+principal.  
+Na função principal serão feitas as chamadas às outras funções.  
+Outra coisa interessante a ser feita é colocar a função principal dentro de um
+`if`.  
+Sendo que se for executado, terá a variável especial `__name__` como valor `__main__`.  
+  
 Editando um script Python de teste:
 
 ``` bash
@@ -588,12 +566,11 @@ Função executada
 
 ## Funções geradoras
 
-Uma função geradora ao invés de utilizar o comando return, utiliza o
-| comando yield, que retorna um objeto generator.
-
-Criação de uma função geradora:
+Uma função geradora ao invés de utilizar o comando `return`, utiliza o comando
+`yield`, que retorna um objeto *generator*.  
 
 ``` python
+# Criação de uma função geradora
 def f_gen(var):
     print('INÍCIO')
 
@@ -601,12 +578,11 @@ def f_gen(var):
         yield i
 
     print('FIM')
-```
 
-Criação de um generator pela função geradora e verificando seu tipo:
-
-``` python
+# Criação de um generator pela função geradora
 g = f_gen('Python')
+
+# Verificando o tipo
 type(g)
 ```
 
@@ -677,25 +653,63 @@ StopIteration: . . .
 
 # Funções lambda
 
-São funções anônimas, ou seja, que não são associadas a um nome. Um
-| recurso similar às funções anônimas em PL/pgSQL (PostgreSQL).
-Sua estrutura é composta apenas por expressões, o que a torna muito
-| limitada, no entanto consome menos recursos do que uma função
-  convencional.
-Por só aceitar expressões, o comando return não é permitido em sua
-| estrutura.
+São funções anônimas, ou seja, que não são associadas a um nome.  
+Sua estrutura é composta apenas por expressões, o que a torna muito limitada,
+no entanto consome menos recursos do que uma função convencional.  
+Por só aceitar expressões, o comando `return` não é permitido em sua
+estrutura.  
 
-Execução de uma função lambda:
+Sintaxe geral:  
+
+**`lambda [argumentos] : expressão`**  
+  
+``` python
+# Função lambda sem parâmetrose não atribuída a nenhuma variável
+lambda : 'Hello, World!'
+```
+
+```
+<function __main__.<lambda>()>
+```
+
+A função lambda foi criada, executada e posteriormente destruída pelo
+*garbage collector*, pois não foi atribuída a nenhuma variável.  
+Neste caso uma execução sem utilidade.  
+
 
 ``` python
+# Função lambda sem parâmetrose e atribuída a nenhuma variável
+x = lambda : 'Hello, World!'
+
+# Execução da função lambda
+x()
+```
+```
+'Hello, World!'
+```
+
+``` python
+# Função lambda com parâmetrose e atribuída a nenhuma variável
+foo = lambda num1, num2 : num1 ** num2
+
+# Execução
+foo(3, 2)
+```
+
+```
+9
+```
+
+``` python
+# Execução de uma função lambda "on the fly"
 (lambda x, y: x + y)(5, 2)
 ```
 
 ``` console
 7
 ```
+Os parâmetros `x` e `y` foram passados dentro do segundo parênteses.
 
-Criando uma função através de uma função lambda e execução:
 
 ``` python
 foo = lambda x, y: x ** y
@@ -704,4 +718,14 @@ print(foo(2, 5))
 
 ``` console
 32
+```
+
+``` python
+# Criação de uma lista contendo cubos de cada número de 1 a 10
+# utlizando list comprehension e lambda
+cubos_1_10 = list((lambda n : n ** 3)(n)  for n in range(1, 11))
+```
+
+```
+[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 ```

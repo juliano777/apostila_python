@@ -4,9 +4,8 @@ Python suporta herança múltipla.
 Tudo em Python é objeto (inclusive classes).  
 O método construtor é o método inicializador, o método mágico `__init__`.
 
-Exemplo de criação de uma classe:
-
 ``` python
+# Exemplo de criação de uma classe
 class NomeClasse(ClasseMae):
     # Método construtor ou método inicializador (sem parâmetro)
     def __init__(self):        
@@ -70,9 +69,8 @@ Porém, isso é apenas uma convenção. Nada impede que sejam acessados
 externamente.  
 Para que haja um bloqueio efetivo há um recurso na linguagem chamado "*property*".  
    
-Criação de classe com método construtor e um método personalizado:
-
 ``` python
+# Criação de classe com método construtor e um método personalizado
 class Carro(object):
     motor_ligado = False    
 
@@ -92,9 +90,8 @@ class Carro(object):
 O método construtor requer que sejam passados dois parâmetros: marca e
 modelo.  
   
-Tentativa de criar uma instância da classe sem passar parâmetros:
-
 ``` python
+# Tentativa de criar uma instância da classe sem passar parâmetros
 c1 = Carro()
 ```
 
@@ -108,9 +105,10 @@ TypeError                                 Traceback (most recent call last)
 TypeError: __init__() takes exactly 3 arguments (1 given)
 ```
 
-Instanciação correta da classe Carro:
+A tentativa de criação do objeto falhou por não passar os argumentos necessários.
 
 ``` python
+# Instanciação correta da classe Carro
 c1 = Carro('Fiat', '147')
 c1.ignicao()
 ```
@@ -157,13 +155,17 @@ parâmetro.
 
 ### Diferenças entre __str__ e __repr__
 
-\- Se não houver implementação de __str__ então __repr__ será
-chamado no lugar. Por outro lado se __repr__ não for implementado,
-nada fará seu papel; - Se o método __repr__ retornar uma string,
-pode-se pular a implementação de __str__. - Costuma-se dizer que
-__str__ é um método para usuários enquanto __repr__ é um método
-para desenvolvedores.
+- Se não houver implementação de `__str__()` então `__repr__()` será chamado
+  no lugar. Por outro lado se `__repr__()` não for implementado, nada fará seu
+  papel;
 
+- Se o método `__repr__()` retornar uma *string*, pode-se pular a
+  implementação de `__str__()`;
+  
+- Costuma-se dizer que `__str__()` é um método para usuários enquanto
+  `__repr__()` é um método para desenvolvedores.  
+  
+  
 Aproveitando o exercício anterior, usando a função print no objeto:
 
 ``` python
@@ -184,13 +186,11 @@ repr(c1)
 '<__main__.Carro object at 0x7f1f6313eed0>'
 ```
 
-|   Nem __str__ nem __repr__ originais foram humanamente
-  amigáveis\...
+Nem `__str__()` nem `__repr__()` originais foram amigáveis...
 
-Criação da classe carro com implementação do método __str__ e teste
-com objeto:
 
 ``` python
+# Criação da classe carro com implementação do método __str__()
 class Carro(object):
     motor_ligado = False    
 
@@ -209,7 +209,10 @@ class Carro(object):
             self.motor_ligado = True
             print('Motor ligado!')
 
+# Criação de objeto
 c1 = Carro('Fiat', '147')
+
+# Teste do método __str__() com print()
 print(c1)
 ```
 
@@ -217,7 +220,7 @@ print(c1)
 Fiat - 147
 ```
 
-Função repr com o objeto:
+Função repr() com o objeto:
 
 ``` python
 repr(c1)
@@ -227,10 +230,8 @@ repr(c1)
 '<__main__.Carro object at 0x7f1f631273d0>'
 ```
 
-Criação da classe carro com implementação do método __repr__ e teste
-com objeto:
-
 ``` python
+# Criação da classe carro com implementação do método __repr__()
 class Carro(object):
     motor_ligado = False    
 
@@ -249,7 +250,10 @@ class Carro(object):
             self.motor_ligado = True
             print('Motor ligado!')
 
+# Instanciação da classe
 c1 = Carro('Fiat', '147')
+
+# Teste do método __str__() com print()
 print(c1)
 ```
 
@@ -257,7 +261,11 @@ print(c1)
 Fiat - 147
 ```
 
-Função repr com o objeto:
+Como o método `__str__()` não foi implementado, foi utilizada a implementação
+de `__repr__()`.  
+  
+    
+Função repr() com o objeto:
 
 ``` python
 repr(c1)
@@ -267,10 +275,10 @@ repr(c1)
 Fiat - 147
 ```
 
-Criação da classe carro com implementação dos métodos __repr__ e
-__str__ e teste com objeto:
+  
 
 ``` python
+# Criação da classe carro com implementação dos métodos __repr__() e __str__()
 class Carro(object):
     motor_ligado = False    
 
@@ -292,7 +300,10 @@ class Carro(object):
             self.motor_ligado = True
             print('Motor ligado!')
 
+# Criação de objeto
 c1 = Carro('Fiat', '147')
+
+# Teste do método __str__() com print()
 print(c1)
 ```
 
@@ -300,9 +311,8 @@ print(c1)
 Fiat - 147
 ```
 
-Método __repr__ do objeto:
-
 ``` python
+# Método __repr__ ()do objeto
 c1.__repr__()
 ```
 
@@ -310,7 +320,7 @@ c1.__repr__()
 {'marca': 'Fiat', 'modelo': '147'}
 ```
 
-Função repr com o objeto:
+Função repr() com o objeto:
 
 ``` python
 repr(c1)
@@ -325,10 +335,10 @@ TypeError                                 Traceback (most recent call last)
 TypeError: __repr__ returned non-string (type dict)
 ```
 
-|   A função repr exige que seja passado como string\...
-
-Como o método __repr__ tem seu retorno como um dicionário ele pode
-ser aproveitado:
+A função `repr()` exige que seja passado como *string*...  
+  
+Como o método `__repr__()` tem seu retorno como um dicionário ele pode ser
+aproveitado:
 
 ``` python
 print(c1.__repr__()['modelo'])
@@ -338,35 +348,25 @@ print(c1.__repr__()['modelo'])
 147
 ```
 
-# Método Definido Externamente à Classe
+## Método definido externamente à classe
 
-|   Após criarmos uma classe é possível adicionar novos métodos a ela
-| definindo-os externamente.
-
-Criação de uma classe se, métodos:
+Após criarmos uma classe é possível adicionar novos métodos a ela definindo-os
+externamente.  
 
 ``` python
+# Criação de uma classe sem métodos
 class MinhaClasse(object):
     pass
-```
 
-Criação de uma função:
-
-``` python
+# Criação de uma classe sem métodos
 def metodo_externo(self, frase, numero):
     self.numero = numero
     print(frase)
-```
 
-Instanciação da classe:
-
-``` python
+# Instanciação da classe
 o = MinhaClasse()
-```
 
-Atribuindo um novo método à classe através da função externa criada:
-
-``` python
+# Atribuindo um novo método à classe através da função externa criada
 MinhaClasse.metodo = metodo_externo
 ```
 
@@ -390,23 +390,18 @@ print(o.numero)
 800
 ```
 
-# Objetos com Atributos Dinâmicos
+## Objetos com Atributos Dinâmicos
 
-|   Sua serventia está em poder definir um objeto com atributos
-  definidos
-| arbitrariamente.
-
-Criação da classe Carro:
+Sua serventia está em poder definir um objeto com atributos definidos
+arbitrariamente.  
 
 ``` python
+# Criação da classe Carro
 class Carro(object):
     marca = ''
     modelo = ''
-```
 
-Criação de um objeto da classe Carro:
-
-``` python
+# Criação de um objeto da classe Carro
 c1 = Carro()
 ```
 
@@ -420,32 +415,35 @@ print(c1.__dict__)
 {}
 ```
 
-|   O atributo especial __dict__, em um objeto, é um dicionário que
-  é usado
-| para guardar atributos e seus respectivos valores.
-|   O dicionário em questão apresentou um conjunto vazio.
-
-Agora vamos preencher os atributos:
+O atributo especial `__dict__`, em um objeto, é um dicionário que é usado para
+guardar atributos e seus respectivos valores.  
+O dicionário em questão apresentou um conjunto vazio.  
 
 ``` python
+# Dando valores aos atributos
 c1.marca = 'Porsche'
 c1.modelo = '911'
 ```
 
 Consulta ao dicionário do objeto novamente:
 
+``` python
 print(c1.__dict__)
+```
 
 ``` console
 {'modelo': '911', 'marca': 'Porsche'}
 ```
 
-Com os atributos preenchidos com valores agora o dicionário não está
-mais vazio. Python é tão flexível que nos permite até criar um atributo
-"on the fly":
+Com os atributos preenchidos com valores agora o dicionário não está mais
+vazio.  
+Python é tão flexível que nos permite até criar um atributo "*on the fly*":
 
 ``` python
+# Adicionando o atributo "ano" ao objeto
 c1.ano = 1993
+
+# Verificando o dicionário de atributos
 print(c1.__dict__)
 ```
 
@@ -453,35 +451,28 @@ print(c1.__dict__)
 {'ano': 1993, 'modelo': '911', 'marca': 'Porsche'}
 ```
 
-|   E se no momento da criação do objeto, além de atribuir valores aos
-| atributos existentes, também ser possível criar atributos que não
-  existem
-| na classe?
-
-Criação da classe Carro agora utilizando o método construtor
-(__init__()), o qual fará o trabalho de associar ao objeto
-instanciado cada par chave / valor declarado:
+E se no momento da criação do objeto, além de atribuir valores aos atributos
+existentes, também ser possível criar atributos que não existem na classe?  
+  
+Criação da classe `Carro` agora utilizando o método construtor `__init__()`,
+o qual fará o trabalho de associar ao objeto instanciado cada par
+chave / valor declarado:
 
 ``` python
+# Criação da classe com atributos dinâmicos
 class Carro(object):
     marca = ''
     modelo = ''
 
     # Metodo construtor
     def __init__(self, **kargs):
-        for chave,valor in kargs.items():
+        for chave, valor in kargs.items():
             self.__dict__[chave] = valor
-```
 
-Criação do objeto com atributos dinâmicos:
-
-``` python
+# Criação do objeto com atributos dinâmicos
 c1 = Carro(marca = 'Porsche', modelo = '911', cor = 'verde', ano = 1991)
-```
 
-Verificando o dicionário do objeto:
-
-``` python
+# Verificando o dicionário do objeto:
 print(c1.__dict__)
 ```
 
@@ -489,28 +480,33 @@ print(c1.__dict__)
 {'ano': 1991, 'modelo': '911', 'marca': 'Porsche', 'cor': 'verde'}
 ```
 
-# super()
+## A função super()
 
-|   É uma função built-in que retorna o objeto proxy que nos permite
-| referenciar à uma classe superior (uma classe herdada).
-|   super() pode ser usada para ter acesso a métodos herdados que são da
-| classe superior.
-
-Uma herança simples na qual a classe filha chama o métod da classe mãe:
+Função *built-in* que retorna o objeto *proxy* que permite referenciar à uma
+classe superior (uma classe herdada).  
+A função `super()` pode ser usada para ter acesso a métodos herdados que são
+da classe superior.  
 
 ``` python
+# ============================================================================
+# Uma herança simples na qual a classe filha chama o métod da classe mãe
+# ============================================================================
+
+# Criação da classe mãe
 class Mae(object):
     def metodo(self):
         print('Método da classe Mae')
 
+# Criação da classe filha
 class Filha(Mae):
     def metodo(self):
         super().metodo() # Chamando o método da classe mãe
         print('Método da classe Filha')
 
-
+# Instância da classe filha
 o = Filha()
 
+# Execução do método
 o.metodo()
 ```
 
@@ -519,12 +515,11 @@ Método da classe Mae
 Método da classe Filha
 ```
 
-## Herança de Nível Múltiplo
+## Herança de nível múltiplo
 
-|   Podem ter casos em que uma classe que deriva de outra tenha uma
-  classe que
-| deriva dela.
-
+Podem ter casos em que uma classe que deriva de outra tenha uma classe que
+deriva dela.  
+   
 A classe C herda de B, que por sua vez herda de A:
 
 ``` python
@@ -544,11 +539,8 @@ class C(B):
     def __init__(self):
         print('__init__ da classe C')
         super().__init__()
-```
 
-Instanciação da classe de nível mais baixo:
-
-``` python
+# Instanciação da classe de nível mais baixo
 c = C()
 ```
 
@@ -558,15 +550,15 @@ __init__ da classe B
 __init__ da classe A
 ```
 
-|   Nota-se que ordem de chamada do método __init__.
+Nota-se que ordem de chamada do método `__init__()`.
 
 ## MRO - Method Resolution Order / Ordem de Resolução de Método
 
-|   MRO é a forma que Python utiliza para determinar a ordem de busca em
-| classes.
-
-Definição de duas classes primárias e mais duas derivadas delas com
-múltipla herança:
+MRO é a forma que Python utiliza para determinar a ordem de busca em
+classes.  
+  
+Definição de duas classes primárias e mais duas derivadas delas com múltipla
+herança:
 
 ``` python
 # Classe primária A
@@ -595,11 +587,8 @@ class D(B, A):
     def metodo(self):
         super().metodo()
         print('Método da classe D')
-```
 
-Instanciação de dois objetos, respectivamente das classes C e D:
-
-``` python
+# Instanciação de dois objetos, respectivamente das classes C e D
 c = C()
 d = D()
 ```
@@ -624,10 +613,9 @@ Método da classe B
 Método da classe D
 ```
 
-Nota-se que prevaleceu a lógica de Ordem de Resolução de Método (em inglês
-MRO).  
+Nota-se que prevaleceu a lógica MRO.  
 Tal ordem foi conforme a ordem de definição de herança da classe.  
-  
+
 Agora além do primeiro método, igual ao exercício anterior, vamos definir um
 método particular para a cada classe primária:  
 
@@ -676,18 +664,12 @@ class D(B, A):
     def metodo2(self):
         super().metodo_alpha()
         super().metodo_beta()
-```
 
-Instanciação das classes derivadas:
-
-``` python
+# Instanciação das classes derivadas
 c = C()
 d = D()
-```
 
-Execução dos métodos:
-
-``` python
+# Execução dos métodos
 c.metodo()
 ```
 
@@ -705,10 +687,9 @@ Método da classe B
 Método da classe D
 ```
 
-|   Até aqui, na execução do método está igual ao exercício anterior.
-
-Agora em cada objeto vamos chamar o segundo método, o qual faz chamada a
-métodos de nomes diferentes que são próprios à sua respectiva classe:
+Nas execuções do método está igual ao exercício anterior.  
+A seguir, em cada objeto chamar o segundo método, o qual faz chamada a métodos
+de nomes diferentes que são próprios à sua respectiva classe:
 
 ```python
 c.metodo2()
@@ -728,6 +709,6 @@ Método alpha da classe A
 Método beta da classe B
 ```
 
-Mais uma vez notamos a aplicação do conceito de MRO.  
-Quando super chamou os métodos metodo_alpha e metodo_beta não havia uma menção
-explícita onde estavam.
+Mais uma vez nota-se a aplicação do conceito de MRO.  
+Quando `super()` chamou os métodos `metodo_alpha()` e metodo_beta não havia
+uma menção explícita onde estavam.

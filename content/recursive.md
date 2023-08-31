@@ -1,17 +1,17 @@
 # Recursividade
 
-> De uma forma geral, recursividade é uma palavra cujo significado é a
-> capacidade de um objeto fazer uma chamada a si mesmo em profundidade.
-> Como exemplo podemos citar aqui um espelho de frente para outro. A
-> palavra recursividade tem como origem o latim, do verbo \"recurrere\",
-> cujo significado é algo como correr de volta. Essa característica de
-> correr de volta é algo similar a um bumerangue, em que, obedecendo uma
-> condição, ao chegar no fundo, esse \"bumerangue\" volta com o
-> resultado desejado. Em linguagem de programação, recursividade é a
-> capacidade de uma função fazer uma chamada a si mesma dentro de sua
-> definição. Uma função recursiva precisa de uma condição de término
-> para não rodar em um loop infinito, o que causaria efeitos
-> indesejados.
+De uma forma geral, recursividade é uma palavra cujo significado é a
+capacidade de um objeto fazer uma chamada a si mesmo em profundidade.
+Como exemplo podemos citar aqui um espelho de frente para outro. A
+palavra recursividade tem como origem o latim, do verbo \"recurrere\",
+cujo significado é algo como correr de volta. Essa característica de
+correr de volta é algo similar a um bumerangue, em que, obedecendo uma
+condição, ao chegar no fundo, esse \"bumerangue\" volta com o
+resultado desejado. Em linguagem de programação, recursividade é a
+capacidade de uma função fazer uma chamada a si mesma dentro de sua
+definição. Uma função recursiva precisa de uma condição de término
+para não rodar em um loop infinito, o que causaria efeitos
+indesejados.
 
 ``` python
 # _*_ coding: utf-8 _*_
@@ -79,7 +79,7 @@ fib
 
 print(fib(7))
 
-# Memoização
+## Memoização
 
 É uma técnica de otimização usada principalmente para acelerar
 aplicativos pelo armazenamento de resultados de chamadas de função que

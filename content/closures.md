@@ -75,7 +75,7 @@ funcao_principal(5)(2)
 25
 ```
 
-# Closures com Lambda
+## Closures com lambda
 
 Criação de uma closure com lambda:
 

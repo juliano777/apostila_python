@@ -8,21 +8,17 @@ A ordem de busca de um identificador em escopos é a seguinte:
 1.  Local ou dentro de função;
 2.  Função externa;
 3.  Global ou de módulo;
-4.  __builtins__
+4.  \_\_builtins\_\_
 
-# Escopo Local ou Dentro de Função
+## Escopo local ou dentro de função
 
-> É o escopo que tem a maior prioridade.
-
-Declaração de uma variável com seu valor:
+É o escopo que tem a maior prioridade.  
 
 ``` python
+# Declaração de uma variável com seu valor
 foo = 7
-```
 
-Exibindo na tela o valor da variável:
-
-``` python
+# Exibindo na tela o valor da variável
 print(foo)
 ```
 
@@ -30,15 +26,14 @@ print(foo)
 7
 ```
 
-## Função locals
+### Função locals()
 
-|   A função locals() retorna um dicionário com os identificadores
-  locais e seus respectivos valores.
-| Então é pedido o valor dada a chave que é o nome da variável local.
-
-Usando locals para retornar o valor de uma variável:
+A função locals() retorna um dicionário com os identificadores locais e seus
+respectivos valores.  
+Então é pedido o valor dada a chave que é o nome da variável local.  
 
 ``` python
+# Usando locals() para retornar o valor de uma variável
 locals()['foo']
 ```
 
@@ -48,30 +43,24 @@ locals()['foo']
 
 ## Escopo Interno de uma Função
 
-|   Diz respeito ao espaço delimitado de alcance, dentro de uma função.
-
-Declaração de uma variável externamente ao escopo da função:
+Diz respeito ao espaço delimitado de alcance, dentro de uma função.
 
 ``` python
+# Declaração de uma variável externamente ao escopo da função
 foo = 7
-```
 
-Definição de uma função:
-
-``` python
+# Definição de uma função
 def funcao():
     foo = 9
     print(id(foo))
     print(foo)
 ```
 
-|   Nota-se que dentro da função também há uma variável chamada \"foo\".
-  Essa função imprime o ID desse identificador e depois imprime seu
-  valor.
-
-Exibindo o ID de foo:
+Nota-se que dentro da função também há uma variável chamada `foo`.  
+Essa função imprime o ID desse identificador e depois imprime seu valor.  
 
 ``` python
+# Exibindo o ID de foo
 print(id(foo))
 ```
 
@@ -79,9 +68,8 @@ print(id(foo))
 162857064
 ```
 
-Exibindo o valor de foo:
-
 ``` python
+# Exibindo o valor de foo
 print(foo)
 ```
 
@@ -100,32 +88,31 @@ funcao()
 9
 ```
 
-|   Nota-se também que bem como o ID e o valor retornados pela função,
-  da variável interna foo são diferentes da variável externa de mesmo
-  nome.
+Nota-se também que bem como o ID e o valor retornados pela função, da
+variável interna `foo` são diferentes da variável externa de mesmo nome.
 
 # Escopo de Função Externa
 
-|   Ao se criar uma função dentro de outra, a função mais interna pode
-  utilizar um identificador que esteja no nível mais acima.
+Ao se criar uma função dentro de outra, a função mais interna pode utilizar um
+identificador que esteja no nível mais acima.  
 
-Definição de uma função com uma função interna:
 
 ``` python
+# Definição de uma função com uma função interna
 def funcao_principal():
     x = 1
+    # Função interna
     def funcao_secundaria():
         print(x)
     funcao_secundaria()
 ```
 
-|   A função principal tem uma variável x, cujo valor é impresso em tela
-  pela função secundária.
-|   A função principal invoca a função secundária.
-
-Chamando a função:
+A função principal tem uma variável `x`, cujo valor é impresso em tela pela
+função secundária.  
+A função principal invoca a função secundária.
 
 ``` python
+# Chamando a função
 funcao_principal()
 ```
 
@@ -133,9 +120,8 @@ funcao_principal()
 1
 ```
 
-Uma nova definição da função:
-
 ``` python
+# Nova definição da função
 def funcao_principal():
     x = 1
     def funcao_secundaria():
@@ -144,12 +130,11 @@ def funcao_principal():
     funcao_secundaria()
 ```
 
-|   Diferente do exemplo anterior, a função secundária declarou sua
-  própria variável \"x\".
-
-Testando a função:
+Diferente do exemplo anterior, a função secundária declarou sua própria
+variável `x`.
 
 ``` python
+# Testando a função
 funcao_principal()
 ```
 
@@ -157,35 +142,30 @@ funcao_principal()
 2
 ```
 
-|   Nota-se que o valor considerado foi o de \"x\", que é o
+Nota-se que o valor considerado foi o de "x", que é o
   identificador mais interno.
 
-# Escopo Global ou Escopo do Módulo
+## Escopo global ou escopo do módulo
 
-|   É também conhecido como escopo de módulo devido ao fato de estar na
-  endentação do mesmo.
-
-Criação de variável:
+É também conhecido como escopo de módulo devido ao fato de estar na endentação
+do mesmo.
 
 ``` python
+# Criação de variável
 foo = 'bar'
-```
 
-Criação de função:
-
-``` python
+# Criação de função
 def funcao():
     foo = 'eggs'
     print(foo)
 ```
 
-|   A função criada tem uma variável com o mesmo nome que uma variável
-  global, a ela dá um valor e imprime esse valor em tela.
-|   Será que isso altera o valor da variável global?
-
-Execução da função:
+A função criada tem uma variável com o mesmo nome que uma variável  global, a
+ela dá um valor e imprime esse valor em tela.  
+Será que isso altera o valor da variável global?  
 
 ``` python
+# Execução da função
 funcao()
 ```
 
@@ -193,14 +173,11 @@ funcao()
 eggs
 ```
 
-|   Nota-se que o valor impresso é igual ao da variável \"foo\" dentro
-  da função.
-|   Pra saber se a variável global foi alterada, vamos testar com a
-  função print.
-
-Imprimindo o valor da variável global:
+Nota-se que o valor impresso é igual ao da variável `foo` dentro da função.  
+Pra saber se a variável global foi alterada será usada a função `print()`.
 
 ``` python
+# Imprimindo o valor da variável global
 print(foo)
 ```
 
@@ -208,23 +185,18 @@ print(foo)
 bar
 ```
 
-|   Pode-se concluir que a função criada não interferiu na variável
-  global.
-|   Para alterar uma variável global em um contexto local precisamos
-  utilizar o comando global.
-
-Criação de função que altera a variável global:
+Pode-se concluir que a função criada não interferiu na variável global.  
+Para alterar uma variável global em um contexto local precisamos utilizar o
+comando `global`.  
 
 ``` python
+# Criação de função que altera a variável global
 def funcao():
     global foo
     foo = 'eggs'
     print(foo)
-```
 
-Executar função:
-
-``` python
+# Executar função
 funcao()
 ```
 
@@ -232,12 +204,11 @@ funcao()
 eggs
 ```
 
-|   OK, a função imprimiu o valor local da função.
-|   Mas será que a variável global também foi alterada?
-
-Imprimir o valor da variável global:
+OK, a função imprimiu o valor local da função.  
+Mas será que a variável global também foi alterada?  
 
 ``` python
+# Imprimir o valor da variável global
 print(foo)
 ```
 
@@ -245,20 +216,19 @@ print(foo)
 eggs
 ```
 
-|   Agora a função pôde alterar a variável global. Isso se deve ao fato
-  do comando global ter sido empregado.
-|   A variável global a ser alterada deve ser declarada como global
-  antes de sua atribuição.
+A função pôde alterar a variável global porque o comando `global` foi
+empregado.  
+A variável global a ser alterada deve ser declarada como antes de sua
+atribuição.
 
-# Escopo __builtins__
+# Escopo \_\_builtins\_\_
 
-|   O escopo __builtins__ abrange identificadores que já estão
-  definidos antes mesmo do código a ser escrito.
-|   São funções, comandos e variáveis internas de Python.
-
-\"str\" é está em __builtins__?:
-
+Abrange identificadores que já estão definidos antes mesmo do código a ser
+escrito.  
+São funções, comandos e variáveis internas de Python.  
+  
 ``` python
+# str é está em __builtins__?
 'str' in dir(__builtins__)
 ```
 
@@ -266,19 +236,14 @@ eggs
 True
 ```
 
-|   Resposta afirmativa (True), ou seja, \"str\" faz parte desse escopo.
-|   E se sobescrevermos esse item localmente?
-
-Criando uma variável cujo identificador pertence ao escopo
-__builtins__:
+Resposta afirmativa (`True`), ou seja, `str` faz parte desse escopo.  
+Mas e se esse item for escrito localmente?
 
 ``` python
+# Criando uma variável cujo identificador pertence ao escopo __builtins__
 str = 1
-```
 
-Qual é o tipo?:
-
-``` python
+# Qual é o tipo?
 type(str)
 ```
 
@@ -286,13 +251,13 @@ type(str)
 int
 ```
 
-|   \"str\" que inicialmente era um identificador para o tipo de strings
-  em Python, aqui agora virou uma variável de inteiro.
-|   Mas e o tipo \"str\" deixou de existir?
-
-Qual tipo?
+`str` inicialmente era um identificador para o tipo de *strings* em Python,
+virou uma variável de inteiro.  
+  
+Mas e o tipo `str` deixou de existir?  
 
 ``` python
+# Qual tipo?
 type(__builtins__.str)
 ```
 
@@ -300,11 +265,10 @@ type(__builtins__.str)
 type
 ```
 
-|   É do tipo \"tipo\"
-
-Valor de str?:
+É do tipo "tipo"
 
 ``` python
+# Valor de str?
 str
 ```
 
@@ -312,9 +276,8 @@ str
 1
 ```
 
-Chamar a str built-in para converter a str redefinida:
-
 ``` python
+# Chamar str built-in para converter a str redefinida
 __builtins__.str(str)
 ```
 
@@ -322,15 +285,13 @@ __builtins__.str(str)
 '1'
 ```
 
-Apagando a variável:
-
 ``` python
+# Apagando a variável
 del str
 ```
 
-Função built-in str:
-
 ``` python
+# Função built-in str
 str(7)
 ```
 
@@ -338,46 +299,38 @@ str(7)
 '7'
 ```
 
-|   Observe que a função não foi removida, apenas a variável criada por
-  redefinição.
+Observe que a função não foi removida, apenas a variável criada por
+redefinição.  
 
-Verificar todos identificadores built-ins:
 
 ``` python
+# Verificar todos identificadores built-ins
 dir(__builtins__)
 ```
 
-|   . . .
+. . .
 
-# Funções globals(), locals() e vars() e Comando global
+# Funções globals(), locals() e vars() e comando global
 
-|   Cada uma das funções retornam dicionários de variáveis e seus
-  respectivos valores.
-
--   globals(): Retorna variáveis globais (escopo do módulo);
--   locals(): Retorna variáveis locais (escopo local);
--   vars(obj): sem argumentos é equivalente a locals(), com um
-    argumento, equivalente a objeto.__dict__.
-
-Variável em um escopo global:
+Cada uma das funções retornam dicionários de variáveis e seus respectivos
+valores.  
+  
+- `globals()`: Retorna variáveis globais (escopo do módulo);
+- `locals()`: Retorna variáveis locais (escopo local);
+- `vars()`: Sem argumentos é equivalente a 'locals()', com um argumento, equivalente a `objeto.__dict__`.
 
 ``` python
+# Variável em um escopo global
 foo = 'escopo global'
-```
 
-Função de teste:
-
-``` python
+# Função de teste
 def f():
     foo = 'escopo local'
     bar = 'uma variável qualquer...'
     print(globals()['foo'])  # Valor do identificador global
     print(locals()['foo'])  # Valor do identificador local
-```
 
-Chamada da função:
-
-``` python
+# Chamada da função
 f()
 ```
 
@@ -386,16 +339,14 @@ escopo global
 escopo local
 ```
 
-Criação de uma classe de teste:
-
 ``` python
+# Criação de uma classe de teste
 class Spam(object):
-    foo = ''
-    bar = ''
+  foo = ''
+  bar = ''
 ```
 
-\"foo\" e \"bar\" ambos identificadores estão contidos em
-\"vars(Spam)\"?:
+`foo` e `bar` ambos identificadores estão contidos em `vars(Spam)`?:
 
 ``` python
 set(('foo', 'bar')).issubset(vars(Spam))
@@ -405,17 +356,13 @@ set(('foo', 'bar')).issubset(vars(Spam))
 True
 ```
 
-Função de teste:
-
 ``` python
+# Função de teste
 def f():
     global x
     x = 7
-```
 
-Verificando o tipo:
-
-``` python
+# Verificando o tipo
 type(x)
 ```
 
@@ -423,17 +370,13 @@ type(x)
 NameError: name 'x' is not defined
 ```
 
-|   A variável \"x\" não existe ainda.
-
-Executando a função:
+A variável "x" não existe ainda.
 
 ``` python
+# Executando a função
 f()
-```
 
-Verificando o tipo:
-
-``` python
+# Verificando o tipo
 type(x)
 ```
 
@@ -441,9 +384,8 @@ type(x)
 int
 ```
 
-Exibir o valor da variável:
-
 ``` python
+# Exibir o valor da variável
 print(x)
 ```
 
