@@ -10,9 +10,8 @@ Decoradores podem ser definidos como classes ou funções.
 
 ## Decoradores de funções
 
-Classe como decorador:
-
 ``` python
+# Classe como decorador
 class Decorador(object):
 
     def __init__(self, funcao):
@@ -25,11 +24,8 @@ class Decorador(object):
 
     def __call__(self):    
         print('Método __call__() do decorador')
-```
 
-Definição da classe com decorador:
-
-``` python
+# Definição da classe com decorador
 @Decorador
 def funcao_decorada():
     print('Dentro da função decorada')
@@ -40,9 +36,10 @@ Método __init__() do decorador
 Dentro da função decorada
 ```
 
-O método construtor do decorador é invocado logo após da definição da
-função decorada. No exemplo, a própria função, que é usada como
-parâmetro, é invocada pelo método construtor __init__().
+O método construtor do decorador é invocado logo após da definição da função
+decorada.  
+No exemplo, a própria função, que é usada como parâmetro, é invocada pelo
+método construtor `__init__()`.  
 
 Execução da função decorada:
 
