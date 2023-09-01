@@ -12,90 +12,92 @@
 
 -   | \`finally\`: Tendo exceção ou não é executado de qualquer jeito.
 
-```{=html}
-<!-- -->
+```                     try:
+                         | 
+                   Lançou exceção?   
+                        / \                    
+                  Sim  /   \  Não
+                      /     \
+                     /       \
+                  except:   else: 
+                     \       /
+                      \     /
+                       \   /
+                        \ /
+                      finally:
+``````
+
+[Hierarquia de classes built-in de exceções](https://docs.python.org/3/library/exceptions.html):
+
 ```
-    try:
-     | 
-    Lançou exceção?   
-    / \                    
-    Sim  /   \  Não
-    /     \
-    /       \
-    except:   else: 
-    \       /
-    \     /
-    \   /
-    \ /
-    finally:
-
-[Hierarquia de classes built-in de
-exceções](https://docs.python.org/3/library/exceptions.html):
-
-    BaseException
-    +-- SystemExit
-    +-- KeyboardInterrupt
-    +-- GeneratorExit
-    +-- Exception
-        +-- StopIteration
-        +-- StopAsyncIteration
-        +-- ArithmeticError
-        |    +-- FloatingPointError
-        |    +-- OverflowError
-        |    +-- ZeroDivisionError
-        +-- AssertionError
-        +-- AttributeError
-        +-- BufferError
-        +-- EOFError
-        +-- ImportError
-        |    +-- ModuleNotFoundError
-        +-- LookupError
-        |    +-- IndexError
-        |    +-- KeyError
-        +-- MemoryError
-        +-- NameError
-        |    +-- UnboundLocalError
-        +-- OSError
-        |    +-- BlockingIOError
-        |    +-- ChildProcessError
-        |    +-- ConnectionError
-        |    |    +-- BrokenPipeError
-        |    |    +-- ConnectionAbortedError
-        |    |    +-- ConnectionRefusedError
-        |    |    +-- ConnectionResetError
-        |    +-- FileExistsError
-        |    +-- FileNotFoundError
-        |    +-- InterruptedError
-        |    +-- IsADirectoryError
-        |    +-- NotADirectoryError
-        |    +-- PermissionError
-        |    +-- ProcessLookupError
-        |    +-- TimeoutError
-        +-- ReferenceError
-        +-- RuntimeError
-        |    +-- NotImplementedError
-        |    +-- RecursionError
-        +-- SyntaxError
-        |    +-- IndentationError
-        |         +-- TabError
-        +-- SystemError
-        +-- TypeError
-        +-- ValueError
-        |    +-- UnicodeError
-        |         +-- UnicodeDecodeError
-        |         +-- UnicodeEncodeError
-        |         +-- UnicodeTranslateError
-        +-- Warning
-            +-- DeprecationWarning
-            +-- PendingDeprecationWarning
-            +-- RuntimeWarning
-            +-- SyntaxWarning
-            +-- UserWarning
-            +-- FutureWarning
-            +-- ImportWarning
-            +-- UnicodeWarning
-            +-- BytesWarning
-            +-- ResourceWarning
+BaseException
+ ├── BaseExceptionGroup
+ ├── GeneratorExit
+ ├── KeyboardInterrupt
+ ├── SystemExit
+ └── Exception
+      ├── ArithmeticError
+      │    ├── FloatingPointError
+      │    ├── OverflowError
+      │    └── ZeroDivisionError
+      ├── AssertionError
+      ├── AttributeError
+      ├── BufferError
+      ├── EOFError
+      ├── ExceptionGroup [BaseExceptionGroup]
+      ├── ImportError
+      │    └── ModuleNotFoundError
+      ├── LookupError
+      │    ├── IndexError
+      │    └── KeyError
+      ├── MemoryError
+      ├── NameError
+      │    └── UnboundLocalError
+      ├── OSError
+      │    ├── BlockingIOError
+      │    ├── ChildProcessError
+      │    ├── ConnectionError
+      │    │    ├── BrokenPipeError
+      │    │    ├── ConnectionAbortedError
+      │    │    ├── ConnectionRefusedError
+      │    │    └── ConnectionResetError
+      │    ├── FileExistsError
+      │    ├── FileNotFoundError
+      │    ├── InterruptedError
+      │    ├── IsADirectoryError
+      │    ├── NotADirectoryError
+      │    ├── PermissionError
+      │    ├── ProcessLookupError
+      │    └── TimeoutError
+      ├── ReferenceError
+      ├── RuntimeError
+      │    ├── NotImplementedError
+      │    └── RecursionError
+      ├── StopAsyncIteration
+      ├── StopIteration
+      ├── SyntaxError
+      │    └── IndentationError
+      │         └── TabError
+      ├── SystemError
+      ├── TypeError
+      ├── ValueError
+      │    └── UnicodeError
+      │         ├── UnicodeDecodeError
+      │         ├── UnicodeEncodeError
+      │         └── UnicodeTranslateError
+      └── Warning
+           ├── BytesWarning
+           ├── DeprecationWarning
+           ├── EncodingWarning
+           ├── FutureWarning
+           ├── ImportWarning
+           ├── PendingDeprecationWarning
+           ├── ResourceWarning
+           ├── RuntimeWarning
+           ├── SyntaxWarning
+           ├── UnicodeWarning
+           └── UserWarning
+```
 
 Forçando um erro dividindo por zero:
 

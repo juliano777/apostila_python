@@ -1,40 +1,26 @@
 # open
 
 É a forma nativa de Python para manipular arquivos (leitura e escrita).  
-Um arquivo é iterável, cujas iterações são por linha.
+Um arquivo é iterável, cujas iterações são por linha.  
 
-[open(file, mode=\'r\', buffering=-1, encoding=None, errors=None,
-newline=None, closefd=True, opener=None)]{.title-ref}
+> **`open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)`**
 
-  ---------- --------------------------------------------------------------
-  **Modo**   **Descrição**
+| **Modo** | **Descrição**                                                            |
+|----------|--------------------------------------------------------------------------|
+| `r`      | Leitura (padrão)                                                         |
+| `w`      | Escrita (novo arquivo, ou se o mesmo existir será truncado)              |
+| `x`      | Cria um novo arquivo e o abre para escrita                               |
+| `a`      | Escrita (*append*; o novo conteúdo é adicionado ao arquivo preexistente) |
+| `b`      | Modo binário                                                             |
+| `t`      | Modo de texto (padrão)                                                   |
+| `+`      | Abre um arquivo em disco para a atualização (leitura e escrita)          |
 
-  r          Leitura (padrão).
-
-  w          Escrita (novo arquivo, ou se o mesmo existir será truncado).
-
-  x          Cria um novo arquivo e o abre para escrita.
-
-  a          Escrita (append; o novo conteúdo é adicionado ao arquivo pré
-             existente).
-
-  b          Modo binário.
-
-  t          Modo de texto (padrão).
-
-  \+         Abre um arquivo em disco para a atualização (leitura e
-             escrita).
-  ---------- --------------------------------------------------------------
-
-Supondo que o arquivo não exista, criação do mesmo para leitura e escrita:
 
 ``` python
+# Supondo que o arquivo não exista, criação do mesmo para leitura e escrita
 f = open('/tmp/foo.txt', 'w+')
-```
 
-Verificando o tipo de f:
-
-``` python
+# Verificando o tipo de f
 type(f)
 ```
 
@@ -42,51 +28,39 @@ type(f)
 _io.TextIOWrapper
 ```
 
-Escrevendo no arquivo com a função print:
-
 ``` python
+# Escrevendo no arquivo com a função print
 print('Teste de escrita em arquivo', file=f)
-```
 
-Uma linha em branco:
-
-``` python
+# Uma linha em branco
 print(' ', file=f)
-```
 
-Mais uma linha\...:
-
-``` python
+# Mais uma linha\...
 print('Uma linha qualquer', file=f)
-```
 
-Fechando o objeto e aplicando todas as escritas feitas:
-
-``` python
+# Fechando o objeto e aplicando todas as escritas feitas
 f.close()
-```
 
-Reabrindo o arquivo para somente leitura:
-
-``` python
+# Reabrindo o arquivo para somente leitura
 f = open('/tmp/foo.txt', 'r')
-```
 
-Imprimir o arquivo em tela linha por linha:
-
-``` python
+# Imprimir o arquivo em tela linha por linha
 for line in f:
     print(line.strip('\n'))
 ```
 
-Fechamento de arquivo:
-
+```
+Teste de escrita em arquivo
+ 
+Uma linha qualquer
+```
 ``` python
+# Fechamento de arquivo
 f.close()
 ```
 
-No shell do sistema operacional usar o recurso heredoc para criar linhas em um
-novo arquivo:
+No shell do sistema operacional usar o recurso *heredoc* para criar linhas em
+um novo arquivo:
 
 ``` bash
 cat << EOF > /tmp/linhas.txt
@@ -112,12 +86,10 @@ Em um shell Python abrir o arquivo:
 
 ``` python
 f = open('/tmp/linhas.txt')
-```
 
-Método readline:
-
-``` python
+# Método readline
 f.readline()
+
 ```
 
 ``` console
@@ -149,14 +121,10 @@ nada a ler no arquivo.
 ``` python
 # Fechando o arquivo
 f.close()
-```
 
-``` python
 # Reabrindo o arquivo
 f = open('/tmp/linhas.txt')
-```
 
-``` python
 # Método readlines()
 f.readlines()
 ```
@@ -165,17 +133,16 @@ f.readlines()
 ['linha_1\n', 'linha_2\n', 'linha_3\n']
 ```
 
-O método readlines retorna cada linha do arquivo como um elemento de
-  uma lista.
-
-Fechando o arquivo:
+O método `readlines()` retorna cada linha do arquivo como um elemento de uma
+lista.
 
 ``` python
+# Fechando o arquivo
 f.close()
 ```
 
-Criar um script Python cujo comportamento é o mesmo do utilitário shell
-cat:
+Criar um script Python cujo comportamento é o mesmo do utilitário *shell*
+`cat`:
 
 ``` bash
 vim /tmp/cat.py
@@ -231,15 +198,11 @@ cat << EOF > /tmp/cores.txt
 EOF
 ```
 
-Abrir o arquivo em modo somente leitura:
-
 ``` python
+# Abrir o arquivo em modo somente leitura
 f = open('/tmp/cores.txt', 'r')
-```
 
-Um simples loop for sobre o arquivo:
-
-``` python
+# Um simples loop for sobre o arquivo
 for i in f:
     print(i.strip())
 ```
@@ -250,22 +213,15 @@ for i in f:
 3 - Branco
 ```
 
-Nova execução do loop:
-
 ``` python
+# Nova execução do loop
 for i in f:
     print(i.strip())
-```
 
-Método seek; posição 0 do cursor:
-
-``` python
+# Método seek; posição 0 do cursor
 f.seek(0)
-```
 
-Nova execução do loop:
-
-``` python
+# Nova execução do loop
 for i in f:
     print(i.strip())
 ```
@@ -276,15 +232,11 @@ for i in f:
 3 - Branco
 ```
 
-Posição 1:
-
 ``` python
+# Posição 1
 f.seek(1)
-```
 
-Nova execução do loop:
-
-``` python
+# Nova execução do loop
 for i in f:
     print(i.strip())
 ```
@@ -295,15 +247,11 @@ for i in f:
 3 - Branco
 ```
 
-Posição 0 (zero) do cursor:
-
 ``` python
+# Posição 0 (zero) do cursor
 f.seek(0)
-```
 
-Lê as 7 (sete) primeiras posições:
-
-``` python
+# Ler as 7 (sete) primeiras posições
 f.read(7)
 ```
 
@@ -312,7 +260,6 @@ f.read(7)
 ```
 
 Ler as próximas 7 (sete) posições (repetir):
-
 ``` python
 f.read(7)
 ```
@@ -329,15 +276,11 @@ f.read(7)
 ' - Bran'
 ```
 
-Fechar o arquivo:
-
 ``` python
+# Fechar o arquivo
 f.close()
-```
 
-Verificar se o arquivo está fechado como o atributo closed:
-
-``` python
+# Verificar se o arquivo está fechado como o atributo closed
 f.closed
 ```
 
@@ -345,15 +288,11 @@ f.closed
 True
 ```
 
-Abrir o arquivo como escrita:
-
 ``` python
+# Abrir o arquivo como escrita
 f = open('/tmp/cores.txt', 'w')
-```
 
-Verificar se o arquivo está fechado como o atributo closed:
-
-``` python
+# Verificar se o arquivo está fechado como o atributo closed
 f.closed
 ```
 
@@ -361,9 +300,8 @@ f.closed
 False
 ```
 
-Fechar o arquivo:
-
 ``` python
+# Fechar o arquivo
 f.close()
 ```
 
@@ -373,25 +311,18 @@ Verificar o conteúdo do arquivo via shell do sistema operacional:
 cat /tmp/cores.txt
 ```
 
-Abrir p arquivo como escrita:
-
 ``` python
+# Abrir p arquivo como escrita
 f = open('/tmp/cores.txt', 'w')
-```
 
-Escrever no arquivo:
-
-``` python
+# Escrever no arquivo
 f.write('1 - Verde\n')
-```
 
-Fechar o arquivo:
-
-``` python
+# Fechar o arquivo
 f.close()
 ```
 
-Verificar o conteúdo do arquivo via shell do sistema operacional:
+Verificar o conteúdo do arquivo via *shell* do sistema operacional:
 
 ``` bash
 cat /tmp/cores.txt
@@ -401,11 +332,10 @@ cat /tmp/cores.txt
 1 - Verde
 ```
 
-Todo o conteúdo foi substituído por essa linha\...
-
-Exibir a localização do arquivo:
+Todo o conteúdo foi substituído por essa linha...
 
 ``` python
+# Exibir a localização do arquivo
 print(f.name)
 ```
 
@@ -413,26 +343,19 @@ print(f.name)
 /tmp/cores.txt
 ```
 
-Abrir o arquivo em modo append:
-
 ``` python
+# Abrir o arquivo em modo append
 f = open('/tmp/cores.txt', 'a')
-```
 
-Adicionar novas linhas ao arquivo:
-
-``` python
+# Adicionar novas linhas ao arquivo
 f.write('2 - Preto\n')
 f.write('3 - Branco\n')
-```
 
-Efetivar a escrita no arquivo sem fechá-lo:
-
-``` python
+# Efetivar a escrita no arquivo sem fechá-lo
 f.flush()
 ```
 
-Verificar o conteúdo do arquivo via shell do sistema operacional:
+Verificar o conteúdo do arquivo via *shell* do sistema operacional:
 
 ``` bash
 cat /tmp/cores.txt
@@ -444,21 +367,14 @@ cat /tmp/cores.txt
 3 - Branco
 ```
 
-Fechar o arquivo:
-
 ``` python
+# Fechar o arquivo
 f.close()
-```
 
-Abrir o arquivo em modo leitura:
-
-``` python
+# Abrir o arquivo em modo leitura
 f = open('/tmp/cores.txt', 'r')
-```
 
-Método tell; retorna a posição atual:
-
-``` python
+# Método tell; retorna a posição atual
 f.tell()
 ```
 
@@ -466,9 +382,8 @@ f.tell()
 0
 ```
 
-Método read:
-
 ``` python
+# Método read
 f.read()
 ```
 
@@ -476,9 +391,8 @@ f.read()
 '1 - Verde\n2 - Preto\n3 - Branco\n'
 ```
 
-Veriricando a atual posição:
-
 ``` python
+# Veriricando a atual posição
 f.tell()
 ```
 
@@ -486,9 +400,8 @@ f.tell()
 31
 ```
 
-Método seek recoloca o cursor na posição 0 (zero):
-
 ``` python
+# Método seek recoloca o cursor na posição 0 (zero)
 f.seek(0)
 ```
 
@@ -496,9 +409,8 @@ f.seek(0)
 0
 ```
 
-Método tell confirma:
-
 ``` python
+# Método tell confirma
 f.tell()
 ```
 
@@ -506,9 +418,8 @@ f.tell()
 0
 ```
 
-Ler 7 (sete) posições adiante:
-
 ``` python
+# Ler 7 (sete) posições adiante
 f.read(7)
 ```
 
@@ -516,9 +427,8 @@ f.read(7)
 '1 - Ver'
 ```
 
-Método tell:
-
 ``` python
+# Método tell
 f.tell()
 ```
 
@@ -526,37 +436,24 @@ f.tell()
 7
 ```
 
-Fechar o arquivo:
-
 ``` python
+# Fechar o arquivo
 f.close()
-```
 
-Criar um novo arquivo como escrita:
-
-``` python
+# Criar um novo arquivo como escrita
 f = open('/tmp/planetas.txt', 'w')
-```
 
-Tupla com 3 (três) elementos:
-
-``` python
+# Tupla com 3 (três) elementos
 planetas = ('Saturno\n', 'Urano\n', 'Netuno\n')
-```
 
-Escreve linhas no arquivo com os elementos da tupla:
-
-``` python
+# Escreve linhas no arquivo com os elementos da tupla
 f.writelines(planetas)
-```
 
-Efetiva a escrita:
-
-``` python
+# Efetiva a escrita
 f.flush()
 ```
 
-Verificando o conteúdo do arquivo via shell do sistema operacional:
+Verificando o conteúdo do arquivo via *shell* do sistema operacional:
 
 ``` bash
 cat /tmp/planetas.txt
@@ -568,21 +465,14 @@ Urano
 Netuno
 ```
 
-Redefinindo a tupla com outros elementos:
-
 ``` python
+# Redefinindo a tupla com outros elementos
 planetas = ('Marte\n', 'Vênus\n', 'Plutão\n', 'Júpiter\n')
-```
 
-Escrevendo (adicionando) linhas:
-
-``` python
+# Escrevendo (adicionando) linhas
 f.writelines(planetas)
-```
 
-Fechar o arquivo:
-
-``` python
+# Fechar o arquivo
 f.close()
 ```
 

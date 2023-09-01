@@ -1,32 +1,11 @@
 # Módulos
 
-Módulos são as bibliotecas de Python. São simples arquivos de código
-Python (.py) e têm que estar dentro do `PYTHONPATH`.
+Módulos são as bibliotecas de Python.  
+São simples arquivos de código Python (.py) e têm que estar dentro do `PYTHONPATH`.
 
 \> import sys
 
-\> dir(sys) \[\'__displayhook__\', \'__doc__\',
-\'__excepthook__\', \'__interactivehook__\', \'__loader__\',
-\'__name__\', \'__package__\', \'__spe c__\',
-\'__stderr__\', \'__stdin__\', \'__stdout__\',
-\'_clear_type_cache\', \'_current_frames\', \'_debugmallocstats\',
-\'_getframe\' , \'_home\', \'_mercurial\', \'_xoptions\',
-\'abiflags\', \'api_version\', \'argv\', \'base_exec_prefix\',
-\'base_prefix\', \'builtin_mo dule_names\', \'byteorder\',
-\'call_tracing\', \'callstats\', \'copyright\', \'displayhook\',
-\'dont_write_bytecode\', \'exc_info\', \' excepthook\', \'exec_prefix\',
-\'executable\', \'exit\', \'flags\', \'float_info\',
-\'float_repr_style\', \'getallocatedblocks\', \'get checkinterval\',
-\'getdefaultencoding\', \'getdlopenflags\', \'getfilesystemencoding\',
-\'getprofile\', \'getrecursionlimit\', \'ge trefcount\', \'getsizeof\',
-\'getswitchinterval\', \'gettrace\', \'hash_info\', \'hexversion\',
-\'implementation\', \'int_info\', \'int ern\', \'last_traceback\',
-\'last_type\', \'last_value\', \'maxsize\', \'maxunicode\',
-\'meta_path\', \'modules\', \'path\', \'path_hooks \',
-\'path_importer_cache\', \'platform\', \'prefix\', \'setcheckinterval\',
-\'setdlopenflags\', \'setprofile\', \'setrecursionlimit\' ,
-\'setswitchinterval\', \'settrace\', \'stderr\', \'stdin\', \'stdout\',
-\'thread_info\', \'version\', \'version_info\', \'warnoptions\' \]
+...
 
 \> print(sys.path)
 
@@ -36,8 +15,7 @@ Python (.py) e têm que estar dentro do `PYTHONPATH`.
 \'/usr/local/lib/python3.4/dist-packages\',
 \'/usr/lib/python3/dist-packages\'\]
 
-> A primeira incidência é uma string vazia (\'\'), o que significa ser o
-> diretório corrente.
+A primeira incidência é uma string vazia (`''`), o que significa ser o diretório corrente.
 
 \$ vim foo.py
 

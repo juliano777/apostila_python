@@ -1,9 +1,9 @@
 # with
 
-O comando with é usado para encapsular a execução de um bloco com métodos
+O comando `with` é usado para encapsular a execução de um bloco com métodos
 definidos por um gerenciador de contexto.  
   
-Criação de um arquivo via shell do sistema operacional:
+Criação de um arquivo via *shell* do sistema operacional:
 
 ``` bash
 cat << EOF > /tmp/numbers.txt
@@ -13,12 +13,11 @@ cat << EOF > /tmp/numbers.txt
 EOF
 ```
 
-Abrir o arquivo em modo leitura:
-
 ``` python
+# Abrir o arquivo em modo leitura
 f = open('/tmp/numbers.txt', 'r')
 
-# Loop:
+# Loop para ler as linhas
 for line in f:
     print(int(line))
 
@@ -32,9 +31,8 @@ f.close()
 3
 ```
 
-O arquivo foi fechado?:
-
 ``` python
+# O arquivo foi fechado?
 print(f.closed)
 ```
 
@@ -42,10 +40,11 @@ print(f.closed)
 True
 ```
 
-Bla bla bla:
-
 ``` python
-f = open('/tmp/numbers_str.txt', 'r')
+# Criar um novo arquivo
+f = open('/tmp/numbers.txt', 'r')
+
+# Loop para ler as linhas do arquivo
 for line in f:
     print(int(line))
 f.close()
