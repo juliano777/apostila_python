@@ -3,10 +3,34 @@
 Curso de programação em Python.  
 Teoria e prática.  
 
-0. [**Sobre**](content/about/00.md)
+0. [**Sobre**](content/about/00.md)  
+   0.1 [**Características**](content/about/01.md)  
+   0.2 [**Licença**](content/about/02.md)  
+   0.3 [**O interpretador Python**](content/about/03.md)  
+   0.4 [**A filosofia de Python**](content/about/04.md)  
+    
 1. [**Particularidades da linguagem**](content/language_particularities/00.md)
-2. [**Comandos e funções importantes**](content/built-ins/00.md)
-3. [**Tipos de dados**](content/data_types/00.md)
+   1.1 [**Palavras reservadas**](content/language_particularities/01.md)  
+   1.2 [**Definição do interpretador de comandos**](content/language_particularities/02.md)  
+   1.3 [**Codificação (conjunto de caracteres - encoding)**](content/language_particularities/03.md)  
+   1.4 [**Case sensitive**](content/language_particularities/04.md)  
+   1.5 [**Não suporta sobrecarga de funções / métodos**](content/language_particularities/05.md)  
+   1.6 [**Orientada a objetos**](content/language_particularities/06.md)  
+   1.7 [**Tipagem dinâmica**](content/language_particularities/07.md)  
+   1.8 [**Tipagem forte**](content/language_particularities/08.md)  
+   1.9 [**Bytecode**](content/language_particularities/09.md)  
+   1.10 [**Blocos**](content/language_particularities/10.md)  
+   1.11 [**Comentários**](content/language_particularities/11.md)  
+   1.12 [**Docstrings ou strings de múltiplas linhas**](content/language_particularities/12.md)  
+   1.13 [**Operadores**](content/language_particularities/13.md)  
+   1.14 [**O comando del**](content/language_particularities/14.md)  
+   1.15 [**print**](content/language_particularities/15.md)  
+   1.16 [**Referência de identificadores**](content/language_particularities/16.md)     
+
+2. [**Comandos e funções importantes**](content/built-ins/00.md)  
+   
+3. [**Tipos de dados**](content/data_types/00.md)  
+   
 4. [**Strings**](content/str/00.md)  
    4.1 [**Strings em Python**](content/str/01.md)  
    4.2 [**Apóstrofos ou aspas? Qual utilizar?**](content/str/02.md)  
@@ -18,6 +42,7 @@ Teoria e prática.
    4.8 [**Imutabilidade**](content/str/08.md)  
    4.9 [**Concatenação de strings em loops**](content/str/09.md)  
    4.10 [**Métodos de strings**](content/str/10.md)  
+   
 5. [**Tipos Numéricos - int, float e complex**](content/numeric_data_types/00.md)
 6. [**Booleanos**](content/boolean/00.md)
 7. [**O Módulo decimal**](content/decimal_module/00.md)
