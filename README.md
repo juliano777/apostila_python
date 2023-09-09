@@ -53,7 +53,8 @@ Teoria e prática.
    2.23 [**enumerate()**](content/built-ins/23.md)   
    
 3. [**Tipos de dados**](content/data_types/00.md)  
-   
+   3.1 [**Variáveis**](content/data_types/01.md)  
+     
 4. [**Strings**](content/str/00.md)  
    4.1 [**Strings em Python**](content/str/01.md)  
    4.2 [**Apóstrofos ou aspas? Qual utilizar?**](content/str/02.md)  
