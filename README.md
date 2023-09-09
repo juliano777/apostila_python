@@ -82,30 +82,57 @@ Teoria e prática.
    8.3 [**strftime: datetime -> str**](content/date_time/03.md)  
    8.4 [**O módulo time**](content/date_time/04.md)  
    
-9.  [**Sequências**](content/sequences/00.md)
-10. [**Lista**](content/list/00.md)
-11. [**Tupla**](content/tuple/00.md)
-12. [**set e frozenset**](content/set_frozenset/00.md)
-13. [**Dicionário**](content/dict/00.md)
-14. [**Compreensão de lista, tupla e dicionário**](content/list_tuple_dict_comprehension/00.md)
-15. [**Iteratoradores e geradores**](content/iter_gen/00.md)
-16. [**Funções**](content/functions/00.md)
-17. [**Orientação a objetos**](content/oo/00.md)
-18. [**Método de classe e método estático**](content/staticmethod_classmethod/00.md)
-19. [**Encapsulamento**](content/property/00.md)
-20. [**Escopo**](content/scope/00.md)
-21. [**if / elif / else**](content/if/00.md)
-22. [**Loops - laços de Repetição**](content/loops/00.md)
-23. [**open**](content/open/00.md)
-24. [**with**](content/with/00.md)
-25. [**Módulos**](content/modules/00.md)
-26. [**Pacotes**](content/packages/00.md)
-27. [**Exceções**](content/except/00.md)
-28. [**Closures**](content/closures/00.md)
-29. [**Decoradores em Python**](content/decorators/00.md)
-30. [**Expressões vs comandos (statements)**](content/exec_eval_execfile_compile/00.md)
-31. [**Recursividade**](content/recursive/00.md)
-32. [**Threads**](content/threads/00.md)
+9. [**Sequências**](content/sequences/00.md)  
+   9.1 [**Índices de sequências**](content/sequences/01.md)  
+   9.2 [**Iterações em sequências**](content/sequences/02.md)  
+   9.3 [**Fatiamento / slicing**](content/sequences/02.md)  
+    
+10. [**Lista**](content/list/00.md)  
+    
+11. [**Tupla**](content/tuple/00.md)  
+    
+12. [**set e frozenset**](content/set_frozenset/00.md)  
+    
+13. [**Dicionário**](content/dict/00.md)  
+    
+14. [**Compreensão de lista, tupla e dicionário**](content/list_tuple_dict_comprehension/00.md)  
+    
+15. [**Iteratoradores e geradores**](content/iter_gen/00.md)  
+    
+16. [**Funções**](content/functions/00.md)  
+    
+17. [**Orientação a objetos**](content/oo/00.md)  
+    
+18. [**Método de classe e método estático**](content/staticmethod_classmethod/00.md)  
+    
+19. [**Encapsulamento**](content/property/00.md)  
+    
+20. [**Escopo**](content/scope/00.md)  
+    
+21. [**if / elif / else**](content/if/00.md)  
+    
+22. [**Loops - laços de Repetição**](content/loops/00.md)  
+    
+23. [**open**](content/open/00.md)  
+    
+24. [**with**](content/with/00.md)  
+    
+25. [**Módulos**](content/modules/00.md)  
+    
+26. [**Pacotes**](content/packages/00.md)  
+    
+27. [**Exceções**](content/except/00.md)  
+    
+28. [**Closures**](content/closures/00.md)  
+    
+29. [**Decoradores em Python**](content/decorators/00.md)  
+    
+30. [**Expressões vs comandos (statements)**](content/exec_eval_execfile_compile/00.md)  
+    
+31. [**Recursividade**](content/recursive/00.md)  
+    
+32. [**Threads**](content/threads/00.md)  
+    
 33. [**pytest**](content/pytest/00.md)
 
 
