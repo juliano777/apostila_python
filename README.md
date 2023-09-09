@@ -68,9 +68,20 @@ Teoria e prática.
    4.10 [**Métodos de strings**](content/str/10.md)  
 
 5. [**Tipos Numéricos - int, float e complex**](content/numeric_data_types/00.md)
-6. [**Booleanos**](content/boolean/00.md)
-7. [**O Módulo decimal**](content/decimal_module/00.md)
-8. [**Data e hora**](content/date_time/00.md)
+   5.1 [**int**](content/numeric_data_types/01.md)  
+   5.2 [**float**](content/numeric_data_types/02.md)  
+   5.3 [**complex**](content/numeric_data_types/03.md)  
+   
+6. [**Booleanos**](content/boolean/00.md)  
+   
+7. [**O Módulo decimal**](content/decimal_module/00.md)  
+   
+8. [**Data e hora**](content/date_time/00.md)  
+   8.1 [**O módulo datetime**](content/date_time/01.md)  
+   8.2 [**strptime: str -> datetime**](content/date_time/02.md)  
+   8.3 [**strftime: datetime -> str**](content/date_time/03.md)  
+   8.4 [**O módulo time**](content/date_time/04.md)  
+   
 9.  [**Sequências**](content/sequences/00.md)
 10. [**Lista**](content/list/00.md)
 11. [**Tupla**](content/tuple/00.md)
