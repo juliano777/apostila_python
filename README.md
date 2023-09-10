@@ -96,12 +96,35 @@ Teoria e prática.
 13. [**Dicionário**](content/dict/00.md)  
     
 14. [**Compreensão de lista, tupla e dicionário**](content/list_tuple_dict_comprehension/00.md)  
-    
-15. [**Iteratoradores e geradores**](content/iter_gen/00.md)  
+    14.1 [**List comprehension**](content/list_tuple_dict_comprehension/01.md)  
+    14.2 [**Tuple comprehension**](content/list_tuple_dict_comprehension/02.md)  
+    14.3 [**Dict comprehension**](content/list_tuple_dict_comprehension/03.md)  
+   
+15. [**Iteradores e geradores**](content/iter_gen/00.md)  
+    15.1 [**Iterator**](content/iter_gen/01.md)  
+    15.2 [**Generator**](content/iter_gen/02.md)  
+    15.3 [**Iterator vs generator**](content/iter_gen/03.md)  
     
 16. [**Funções**](content/functions/00.md)  
+    16.1 [**Argumentos de uma função**](content/functions/01.md)  
+    16.2 [**Funções sem argumentos**](content/functions/02.md)  
+    16.3 [**O comando return**](content/functions/03.md)  
+    16.4 [**Argumentos nomeados**](content/functions/04.md)  
+    16.5 [**Argumentos em lista não nomeados**](content/functions/05.md)  
+    16.6 [**Argumentos em lista nomeados**](content/functions/06.md)  
+    16.7 [**Funções com argumentos variados**](content/functions/07.md)  
+    16.8 [**Estruturas de dados como parâmetro para funções**](content/functions/08.md)  
+    16.9 [**Boas práticas: função main()**](content/functions/09.md)  
+    16.10 [**Funções geradoras**](content/functions/10.md)  
+    16.11 [**Funções lambda**](content/functions/11.md)  
     
 17. [**Orientação a objetos**](content/oo/00.md)  
+    17.1 [**Métodos __str__ e __repr__**](content/oo/01.md)  
+    17.2 [**Método definido externamente à classe**](content/oo/02.md)  
+    17.3 [**Objetos com Atributos Dinâmicos**](content/oo/03.md)  
+    17.4 [**A função super()**](content/oo/04.md)  
+    17.5 [**Herança de nível múltiplo**](content/oo/05.md)  
+    17.6 [**MRO - Method Resolution Order / Ordem de Resolução de Método**](content/oo/06.md)  
     
 18. [**Método de classe e método estático**](content/staticmethod_classmethod/00.md)  
     
