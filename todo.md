@@ -1,3 +1,11 @@
 - Módulo os
-- Módulo pdb
+- Módulo pdb / breakpoint() 
+  - help <comando>
+  - Para evitar conflitos com os comandos internos do pdb é aconselhável evitar variáveis cujos nomes sejam apeans um caractere.
+  - PYTHONBREAKPOINT
+  - ipdb
+    - PYTHONBREAKPOINT=ipdb.set_trace  
+  - rpdb
 - Módulo logging
+- match
+- test
