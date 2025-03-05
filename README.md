@@ -25,7 +25,8 @@ Teoria e prática.
    1.13 [**Operadores**](content/language_particularities/13.md)  
    1.14 [**O comando del**](content/language_particularities/14.md)  
    1.15 [**print**](content/language_particularities/15.md)  
-   1.16 [**Referência de identificadores**](content/language_particularities/16.md)     
+   1.16 [**Referência de identificadores**](content/language_particularities/16.md)  
+   1.17 [**Quebra de linhas**](content/language_particularities/17.md)
 
 2. [**Comandos e funções importantes**](content/built-ins/00.md)   
    2.1 [**all() e any()**](content/built-ins/01.md)  
